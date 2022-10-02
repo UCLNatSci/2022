@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Data | Statistics for Natural Sciences</title>
+<meta name="author" content="Natural Sciences">
+<meta name="description" content="2.1 Describing Data The cats data set contains anatomical measurements from 144 cats. The data was originally recorded by the statistician R. A. Fisher in 1947 for the purpose of explaining...">
+<meta name="generator" content="bookdown 0.28 with bs4_book()">
+<meta property="og:title" content="Chapter 2 Data | Statistics for Natural Sciences">
+<meta property="og:type" content="book">
+<meta property="og:description" content="2.1 Describing Data The cats data set contains anatomical measurements from 144 cats. The data was originally recorded by the statistician R. A. Fisher in 1947 for the purpose of explaining...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 Data | Statistics for Natural Sciences">
+<meta name="twitter:description" content="2.1 Describing Data The cats data set contains anatomical measurements from 144 cats. The data was originally recorded by the statistician R. A. Fisher in 1947 for the purpose of explaining...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Statistics for Natural Sciences</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
+<li><a class="active" href="data.html"><span class="header-section-number">2</span> Data</a></li>
+<li><a class="" href="distributions.html"><span class="header-section-number">3</span> Distributions</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="data" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Data<a class="anchor" aria-label="anchor" href="#data"><i class="fas fa-link"></i></a>
+</h1>
+<div id="describing-data" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Describing Data<a class="anchor" aria-label="anchor" href="#describing-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <code>cats</code> data set contains anatomical measurements from 144 cats. The data was originally recorded by the statistician R. A. Fisher in 1947 for the purpose of explaining various statistical techniques that he was developing at the time. Below is some information about the data set and the first six rows of data:</p>
+<div class="rmdnote">
+<p><strong>Example: Cats</strong></p>
+<pre><code><a href="http://www.stats.ox.ac.uk/pub/MASS4/">library(MASS)
+?cats</a></code></pre>
+<p><strong>Description</strong></p>
+<p>The heart and body weights of samples of male and female cats used for <em>digitalis</em> experiments. The cats were all adult, over 2 kg body weight.</p>
+<p><strong>Usage</strong></p>
+<p><code>cats</code></p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p><code>Sex</code><br>
+sex: Factor with levels “F” and “M”.</p>
+<p><code>Bwt</code><br>
+body weight in kg.</p>
+<p><code>Hwt</code><br>
+heart weight in g.</p>
+<p><strong>Source</strong></p>
+<p>R. A. Fisher (1947) The analysis of covariance method for the relation between a part and the whole, <em>Biometrics</em> 3, 65–68.</p>
+<p><strong>References</strong></p>
+<p>Venables, W. N. and Ripley, B. D. (2002) <em>Modern Applied Statistics with S.</em> Fourth edition. Springer.</p>
+<pre><code>head(cats)</code></pre>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Sex</th>
+<th align="right">Bwt</th>
+<th align="right">Hwt</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">F</td>
+<td align="right">2.0</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="even">
+<td align="left">F</td>
+<td align="right">2.0</td>
+<td align="right">7.4</td>
+</tr>
+<tr class="odd">
+<td align="left">F</td>
+<td align="right">2.0</td>
+<td align="right">9.5</td>
+</tr>
+<tr class="even">
+<td align="left">F</td>
+<td align="right">2.1</td>
+<td align="right">7.2</td>
+</tr>
+<tr class="odd">
+<td align="left">F</td>
+<td align="right">2.1</td>
+<td align="right">7.3</td>
+</tr>
+<tr class="even">
+<td align="left">F</td>
+<td align="right">2.1</td>
+<td align="right">7.6</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Number of rows:</strong> 144</p>
+</div>
+<p>The data set comprises horizontal <strong>rows</strong> and vertical <strong>columns</strong>. The values lying at the intersection of the rows and columns are the <strong>data points</strong>.</p>
+<p>Each <strong>row</strong> corresponds to one experimental subject (in this case a cat). Each <strong>column</strong> represents a measurement or observation. Each <strong>data point</strong> is the value of a measurement against a specific subject.</p>
+<p>We can describe the <strong>data type</strong> of each column as follows.</p>
+<p><strong>Qualitative</strong> data cannot be counted, measured or easily expressed using numbers. In the <code>cats</code> data set, <code>Sex</code> is qualitative since it can only take on the values ‘Male’ or ‘Female’. <strong>Factor</strong> or <strong>Categorical</strong> are other words used to describe Qualitative data.</p>
+<p><strong>Quantitative</strong> data can counted or measured using numbers and often answer questions such as ‘How many?’ or ‘How much?’. Quantitative data can either be continuous or discrete.</p>
+<p><strong>Continuous data</strong> can take on any value within a range and is usually expressed as a decimal value. The heart weight column in the <code>cats</code> data set is continuous.</p>
+<p><strong>Discrete</strong> data can only take on a limited number of values, typically whole numbers. ‘number of teeth’ would be a discrete column if it were included in the <code>cats</code> data.</p>
+</div>
+<div id="data-visualisation" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Data Visualisation<a class="anchor" aria-label="anchor" href="#data-visualisation"><i class="fas fa-link"></i></a>
+</h2>
+<p>If we would like examine the data in order to draw some scientific conclusions, we can <strong>visualise</strong> the data in the form of a graph or plot. For example, we might expect heavier cats to have heavier hearts. Let’s see if such a correlation exists by creating a scatter plot.</p>
+<div id="scatter-plot" class="section level3" number="2.2.1">
+<h3>
+<span class="header-section-number">2.2.1</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>A scatter plot is a very efficient way of presenting data. Making use of the human eye’s ability to discern patterns we can clearly see a strong correlation between the two variables. But notice that we have of course lost some information - we can no longer discern the sex of the animals. When we visualise data, we usually lose some data too, so our choice of how we visualise data involves a trade-off.</p>
+<pre><code>plot(cats$Bwt, cats$Hwt)</code></pre>
+<div class="inline-figure"><img src="01-data_files/figure-html/unnamed-chunk-2-1.png" width="672"></div>
+<div class="rmdimportant">
+<p><strong>Question</strong></p>
+<p>In the scatter plot, Why are the points lined up in columns? What does this tell you about the data? Do you think the body weight variable is continuous or discrete?</p>
+</div>
+</div>
+<div id="dot-plot" class="section level3" number="2.2.2">
+<h3>
+<span class="header-section-number">2.2.2</span> Dot Plot<a class="anchor" aria-label="anchor" href="#dot-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>A dot plot is a very simple means to present the values of a single variable. In the dot plot below we show the height weight variable, separated the data into two subsets Male and Female.</p>
+<pre><code>stripchart(Hwt~Sex, data=cats)</code></pre>
+<div class="inline-figure"><img src="01-data_files/figure-html/unnamed-chunk-3-1.png" width="672"></div>
+<div class="rmdimportant">
+<p><strong>Question</strong></p>
+<p>What information about the data have we lost by presenting it in this way? Do you think this is a good way to present this data?</p>
+</div>
+</div>
+<div id="histogram" class="section level3" number="2.2.3">
+<h3>
+<span class="header-section-number">2.2.3</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
+</h3>
+<pre><code>hist(cats$Hwt)</code></pre>
+<div class="figure">
+<span style="display:block;" id="fig:hist-compare-fig"></span>
+<img src="01-data_files/figure-html/hist-compare-fig-1.png" alt="A histogram of female cat heart weights (top) compared to male cat heart weights (bottom)." width="672"><p class="caption">
+Figure 2.1: A histogram of female cat heart weights (top) compared to male cat heart weights (bottom).
+</p>
+</div>
+<p>Varying bin widths changes histogram appearance.</p>
+<div class="figure">
+<span style="display:block;" id="fig:histogram-bins-fig"></span>
+<img src="01-data_files/figure-html/histogram-bins-fig-1.png" alt="A histogram of female cat heart weights with a bin width of 2 (left) and 0.5 (right)." width="50%"><img src="01-data_files/figure-html/histogram-bins-fig-2.png" alt="A histogram of female cat heart weights with a bin width of 2 (left) and 0.5 (right)." width="50%"><p class="caption">
+Figure 2.2: A histogram of female cat heart weights with a bin width of 2 (left) and 0.5 (right).
+</p>
+</div>
+</div>
+</div>
+<div id="summary-statistics" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Summary Statistics<a class="anchor" aria-label="anchor" href="#summary-statistics"><i class="fas fa-link"></i></a>
+</h2>
+<p>A <strong>summary statistic</strong> is a number which describes a property of a data sample. Example of summary statistics that should already be familiar with are the mean, median and standard deviation.</p>
+<div id="median" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> Median<a class="anchor" aria-label="anchor" href="#median"><i class="fas fa-link"></i></a>
+</h3>
+<p>The (sample) median is a value which divides the higher and lower half of a sample of data. You can think of it as the ‘middle’ value of the data. Along with the (sample) mean, it is a measure of <strong>central tendency</strong> (or <strong>location</strong>) which attempts to capture a typical ‘central value’ of the data.</p>
+</div>
+<div id="how-to-calculate-the-median" class="section level3" number="2.3.2">
+<h3>
+<span class="header-section-number">2.3.2</span> How to calculate the Median<a class="anchor" aria-label="anchor" href="#how-to-calculate-the-median"><i class="fas fa-link"></i></a>
+</h3>
+<p>Arrange <span class="math inline">\(n\)</span> values in increasing order.</p>
+<p>if <span class="math inline">\(n\)</span> is odd: median is the middle value<br>
+if <span class="math inline">\(n\)</span> is even: average of the two middle values</p>
+<div class="rmdnote">
+<p><strong>Example 1</strong></p>
+<p>1, 3, 3, <strong>6</strong>, 7, 8, 9</p>
+<p>Median = <span class="math inline">\(6\)</span></p>
+<p><strong>Example 2</strong></p>
+<p>1, 3, 3, <strong>6</strong>, <strong>7</strong>, 8, 9, 10</p>
+<p>Median = <span class="math inline">\((6 + 7)/2 = 6.5\)</span></p>
+</div>
+</div>
+<div id="inter-quartile-range" class="section level3" number="2.3.3">
+<h3>
+<span class="header-section-number">2.3.3</span> Inter Quartile Range<a class="anchor" aria-label="anchor" href="#inter-quartile-range"><i class="fas fa-link"></i></a>
+</h3>
+<p>The <strong>inter quartile range</strong> (or <strong>IQR</strong>) is the difference between the medians of the upper-half and lower-half of the data. The IQR measures how closely the data clusters around the median and, along with the variance and standard deviation, is a measure of <strong>dispersion</strong> or <strong>spread</strong>.</p>
+</div>
+<div id="how-to-calculate-the-iqr" class="section level3" number="2.3.4">
+<h3>
+<span class="header-section-number">2.3.4</span> How to calculate the IQR<a class="anchor" aria-label="anchor" href="#how-to-calculate-the-iqr"><i class="fas fa-link"></i></a>
+</h3>
+<p>Suppose we have <span class="math inline">\(n\)</span> values <span class="math inline">\(x_1 \ldots x_n\)</span>.</p>
+<p><strong>Lower Quartile</strong> <span class="math inline">\(Q_\mathrm{L}\)</span></p>
+<p>Let <span class="math inline">\(i = \frac{1}{4}(n+1)\)</span>.</p>
+<p>If <span class="math inline">\(i\)</span> is integer then <span class="math inline">\(Q_\mathrm{L} = x_i\)</span>.<br>
+Otherwise round <span class="math inline">\(i\)</span> down to integer, then <span class="math inline">\(Q_\mathrm{L} = \frac{1}{2}\left(x_i+x_{i+1}\right)\)</span>.</p>
+<p><strong>Upper Quartile</strong> <span class="math inline">\(Q_\mathrm{U}\)</span></p>
+<p>Let <span class="math inline">\(i = \frac{3}{4}(n+1)\)</span>.</p>
+<p>If <span class="math inline">\(i\)</span> is integer then <span class="math inline">\(Q_\mathrm{U} = x_i\)</span>.<br>
+Otherwise round <span class="math inline">\(i\)</span> down to integer, then <span class="math inline">\(Q_\mathrm{U} = \frac{1}{2}\left(x_i+x_{i+1}\right)\)</span>.</p>
+<p><strong>Interquartile Range (IQR)</strong></p>
+<p>The interquartile range is the difference between the upper and lower quartiles:</p>
+<p><span class="math inline">\(\mathrm{IQR} = Q_\mathrm{U} - Q_\mathrm{L}\)</span>.</p>
+<div class="rmdnote">
+<p><strong>Example</strong></p>
+<p>1, 3, 3, 6, 7, 8, 9, 10</p>
+<p><span class="math display">\[\begin{align*}
+Q_\mathrm{L} &amp;= \frac{1}{2}\left(3+3\right) = 3\\
+Q_\mathrm{U} &amp;=  \frac{1}{2}\left(8+9\right) = 8.5\\
+\mathrm{IQR} &amp;=  Q_\mathrm{U} - Q_\mathrm{L} = 8.5 - 3 = 5.5.
+\end{align*}\]</span></p>
+</div>
+<p>We can think of the IQR as defining the ‘typical’ values of the data set. Values lying within the lower and upper quartiles are ‘close’ to the median and are ‘typical’ values.</p>
+</div>
+<div id="quantiles" class="section level3" number="2.3.5">
+<h3>
+<span class="header-section-number">2.3.5</span> Quantiles<a class="anchor" aria-label="anchor" href="#quantiles"><i class="fas fa-link"></i></a>
+</h3>
+<p>We calculate quartiles by dividing the data evenly into four. We can generalise this by dividing the data into evenly into <strong>quantitles</strong> each of which contain the same proportion <span class="math inline">\(p\)</span> of the data points.</p>
+<p><span class="math inline">\(p=\)</span> proportion of the quantile<br><span class="math inline">\(n=\)</span> sample size</p>
+<p>If <span class="math inline">\(p(n+1)\)</span> is an integer then <span class="math inline">\(i=p(n+1)\)</span> and <span class="math inline">\(Q(p) = x_i\)</span></p>
+<p>Otherwise round <span class="math inline">\(i\)</span> down and <span class="math inline">\(Q(p) = \frac{x_i+x_{i+1}}{2}\)</span>.</p>
+<p>Quartiles are a special case of quintiles where <span class="math inline">\(p = 0.25\)</span>.</p>
+<div class="rmdnote">
+<p><strong>Note</strong></p>
+<p>The method shown here is just one way to calculate quartiles and quintiles. Other methods vary in how the rounding and averaging is performed. There are 9 options in R, and each will give a slightly different result for the IQR!</p>
+</div>
+</div>
+<div id="box-plots" class="section level3" number="2.3.6">
+<h3>
+<span class="header-section-number">2.3.6</span> Box Plots<a class="anchor" aria-label="anchor" href="#box-plots"><i class="fas fa-link"></i></a>
+</h3>
+<p>A very compact means to visualise these summary statistics is the <strong>box plot</strong>. A box plot presents the median and upper and lower quartiles as well as any outlying values.</p>
+<p>An <strong>outlier</strong> is a data point which lies far outside the ‘reasonable extremes’ of the data. This is of course a rather subjective definition! It is common practice to define outliers in terms of the quantiles - for example we might define any value lying further than 1.5 IQRs from the upper quartile to be an outlier.</p>
+<p>The box plots consists of a box representing the median and upper and lower quartiles. Extending from the box are two ‘whiskers’ which terminate at the farthest non-outlying point. Any values lying outside these extremes are considered outliers.</p>
+<div class="figure">
+<span style="display:block;" id="fig:boxplot-fig"></span>
+<img src="eda-boxplot.png" alt="A box plot (right)." width="100%"><p class="caption">
+Figure 2.3: A box plot (right).
+</p>
+</div>
+<p>Box plots are commonly used to compare subsets of a data set. For example, we can compare the heart weights of male and female cats.</p>
+<pre><code>boxplot(Hwt~Sex, data=cats)</code></pre>
+<div class="inline-figure"><img src="01-data_files/figure-html/unnamed-chunk-4-1.png" width="672"></div>
+<p>From this box plot we can quickly see that the male cats have (in general) heavier hearts than female cats. But we can also see that this is not true in every case: some female cats have heavier hearts than male cats. Furthermore, by comparing the upper and lower quartiles we can see that some ‘typical’ female cats have heavier hearts than some ‘typical’ male cats.</p>
+<p>The box plot helps us to answer the question ‘do male cats have heavier hearts than female cats?’ but is not able to give us a definitive answer. In later lectures we will use quantitative techniques to help us address these kinds of questions in more detail.</p>
+<div class="rmdimportant">
+<p><strong>Question (Important!)</strong></p>
+<p>We have used three types of plot (dot plot, histogram and box plot) to compare the heart weights of a sample of male and female cats.</p>
+<p>Which type of plot do you think is best for answering the question ‘do male cats have heavier hearts than female cats?’ ?</p>
+</div>
+</div>
+<div id="mean-variance-standard-deviation" class="section level3" number="2.3.7">
+<h3>
+<span class="header-section-number">2.3.7</span> Mean, Variance, Standard Deviation<a class="anchor" aria-label="anchor" href="#mean-variance-standard-deviation"><i class="fas fa-link"></i></a>
+</h3>
+<p>The <strong>sample mean</strong> <span class="math inline">\(\bar{x}\)</span> is another measure of central tendency (or location) which attempts to represent a ‘typical’ value of the data set.</p>
+<p><span class="math display">\[\bar{x} = \frac{x_1 + \ldots + x_n}{n} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span></p>
+<p>The <strong>sample variance</strong> <span class="math inline">\(s^2\)</span> and <strong>standard deviation</strong> <span class="math inline">\(s\)</span> are measures of spread (or ‘dispersion’)</p>
+<p><strong>Sample variance:</strong></p>
+<p><span class="math display">\[\mathrm{var} = s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(\bar{x}-x_i)^2\]</span></p>
+<p>The terms <span class="math inline">\(\bar{x} - x_i\)</span> in the calculation of sample variance are called <strong>deviations</strong> which measure how far each data point is from the mean. We can think of the variance as a kind of ‘average’ deviation. Squaring the deviations ensures that they are all positive - otherwise positive and negative deviations would cancel out. It also ensures that the variance has some ‘nice’ mathematical properties that we will take advantage of later.</p>
+<p>Notice that we divide by <span class="math inline">\(n-1\)</span> rather than <span class="math inline">\(n\)</span>. The <span class="math inline">\(n-1\)</span> term is called the <strong>degrees of freedom</strong> in calculating the sample variance. The reason for dividing by <span class="math inline">\(n-1\)</span> rather than <span class="math inline">\(n\)</span> is rather technical, but essentially it accounts for the fact that <span class="math inline">\(\bar{x}\)</span> is only an <em>estimate</em> of the mean. We will see degrees of freedom again later when we study hypothesis tests.</p>
+<p><strong>Standard Deviation:</strong></p>
+<p><span class="math display">\[s = \sqrt{s^2}\]</span>
+The standard deviation is simply the square root of the variance.</p>
+<div class="rmdnote">
+<p><strong>Note</strong></p>
+<p>the symbols <span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(s\)</span> and <span class="math inline">\(s^2\)</span> are standard symbols used in statistical analysis. If you see them in a report, you can be sure they are referring to sample mean, standard deviation and variance.</p>
+</div>
+</div>
+<div id="interpreting-the-standard-deviation" class="section level3" number="2.3.8">
+<h3>
+<span class="header-section-number">2.3.8</span> Interpreting the Standard Deviation<a class="anchor" aria-label="anchor" href="#interpreting-the-standard-deviation"><i class="fas fa-link"></i></a>
+</h3>
+<p>The standard deviation of a sample gives us a measure of dispersion of the data and is measured in the same units as the data. In Figure <a href="data.html#fig:sd-fig">2.4</a> the heart weights of female cats are plotted along with the mean <span class="math inline">\(\bar{x}\)</span> and one and two standard deviations either side. Notice that the majority of points lie within one standard deviation of the mean, and very few lie more than two standard deviations of the mean. In fact this is a general property of many data sets - most points lie near the mean, with few lying further away. We can use the standard deviation serves as a ‘yardstick’ to determine how ‘typical’ a datapoint is.</p>
+<div class="figure">
+<span style="display:block;" id="fig:sd-fig"></span>
+<img src="01-data_files/figure-html/sd-fig-1.png" alt="Heart weights of a sample of female cats." width="672"><p class="caption">
+Figure 2.4: Heart weights of a sample of female cats.
+</p>
+</div>
+<div class="rmdnote">
+<p><strong>Example</strong></p>
+<p>The heart weights of the sample of female cats has <span class="math inline">\(\bar{x} = 9.2~\mathrm{g}\)</span> and <span class="math inline">\(s = 1.36~\mathrm{g}\)</span>. Suppose we weigh one more female heart and find that its weight is <span class="math inline">\(14.4~\mathrm{g}\)</span>. How many standard deviations from the mean is it?</p>
+<p><span class="math display">\[\frac{14.4 - \bar{x}}{s} =  \frac{14.4 - 9.2}{1.36} = 3.83. \]</span></p>
+<p>The new data point is almost 4 standard deviations from the mean. This suggests that the data point is quite atypical - perhaps we should check this value carefully!</p>
+</div>
+</div>
+</div>
+<div id="shape-of-histograms" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> Shape of Histograms<a class="anchor" aria-label="anchor" href="#shape-of-histograms"><i class="fas fa-link"></i></a>
+</h2>
+<p>Consider the histogram shown in Figure <a href="data.html#fig:symmetric-fig">2.5</a>. Its shape is typical for a data set we might encounter when taking scientific measurements. The majority of values are close to the mean, with fewer values in the ‘tails’, and the histogram is symmetrical about the mean. We say that data set is <strong>symmetric</strong> and <strong>uni-modal</strong> (single peak).</p>
+<p>The mean and median of such a sample both coincide with the main peak.</p>
+<div class="figure">
+<span style="display:block;" id="fig:symmetric-fig"></span>
+<img src="01-data_files/figure-html/symmetric-fig-1.png" alt="A symmetric distribution" width="672"><p class="caption">
+Figure 2.5: A symmetric distribution
+</p>
+</div>
+<p>In contrast, the histogram shown in Figure <a href="data.html#fig:skewed-fig">2.6</a> is asymmetric, with a long tail of values lying to the right of the peak. We say that it is <strong>right-skewed</strong>. The median of such a distribution is closer to the peak than the mean.</p>
+<div class="figure">
+<span style="display:block;" id="fig:skewed-fig"></span>
+<img src="01-data_files/figure-html/skewed-fig-1.png" alt="A skewed distribution" width="672"><p class="caption">
+Figure 2.6: A skewed distribution
+</p>
+</div>
+<p>Finally, consider the histogram in Figure <a href="data.html#fig:bimodal-fig">2.7</a>. Such a distribution with peaks is called <strong>bimodal</strong>. This can be a characteristic of two distinct datasets combined into one.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bimodal-fig"></span>
+<img src="01-data_files/figure-html/bimodal-fig-1.png" alt="A bimodal distribution" width="672"><p class="caption">
+Figure 2.7: A bimodal distribution
+</p>
+</div>
+<div class="rmdimportant">
+<p><strong>Question</strong></p>
+<p>Suppose we took a random sample of UK household incomes. Do you think the corresponding histogram would be<br>
+1. Symmetric or skewed?<br>
+2. Unimodal or bimodal?</p>
+<p>See if you can find a histogram of UK household incomes, and the mean and median household income. Do you think the mean or the median is more representative?</p>
+</div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html"><span class="header-section-number">1</span> About</a></div>
+<div class="next"><a href="distributions.html"><span class="header-section-number">3</span> Distributions</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data"><span class="header-section-number">2</span> Data</a></li>
+<li><a class="nav-link" href="#describing-data"><span class="header-section-number">2.1</span> Describing Data</a></li>
+<li>
+<a class="nav-link" href="#data-visualisation"><span class="header-section-number">2.2</span> Data Visualisation</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#scatter-plot"><span class="header-section-number">2.2.1</span> Scatter Plot</a></li>
+<li><a class="nav-link" href="#dot-plot"><span class="header-section-number">2.2.2</span> Dot Plot</a></li>
+<li><a class="nav-link" href="#histogram"><span class="header-section-number">2.2.3</span> Histogram</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#summary-statistics"><span class="header-section-number">2.3</span> Summary Statistics</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#median"><span class="header-section-number">2.3.1</span> Median</a></li>
+<li><a class="nav-link" href="#how-to-calculate-the-median"><span class="header-section-number">2.3.2</span> How to calculate the Median</a></li>
+<li><a class="nav-link" href="#inter-quartile-range"><span class="header-section-number">2.3.3</span> Inter Quartile Range</a></li>
+<li><a class="nav-link" href="#how-to-calculate-the-iqr"><span class="header-section-number">2.3.4</span> How to calculate the IQR</a></li>
+<li><a class="nav-link" href="#quantiles"><span class="header-section-number">2.3.5</span> Quantiles</a></li>
+<li><a class="nav-link" href="#box-plots"><span class="header-section-number">2.3.6</span> Box Plots</a></li>
+<li><a class="nav-link" href="#mean-variance-standard-deviation"><span class="header-section-number">2.3.7</span> Mean, Variance, Standard Deviation</a></li>
+<li><a class="nav-link" href="#interpreting-the-standard-deviation"><span class="header-section-number">2.3.8</span> Interpreting the Standard Deviation</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#shape-of-histograms"><span class="header-section-number">2.4</span> Shape of Histograms</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/01-data.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/01-data.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Statistics for Natural Sciences</strong>" was written by Natural Sciences. It was last built on 2022-10-02.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

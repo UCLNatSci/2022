@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 4 Sampling | Statistics for Natural Sciences</title>
+<meta name="author" content="Natural Sciences">
+<meta name="description" content="4.1 Definitions Recall that the population is the universe of possible experiments we would like to generalise. We suppose that the population has a certain distribution which is determined by...">
+<meta name="generator" content="bookdown 0.28 with bs4_book()">
+<meta property="og:title" content="Chapter 4 Sampling | Statistics for Natural Sciences">
+<meta property="og:type" content="book">
+<meta property="og:description" content="4.1 Definitions Recall that the population is the universe of possible experiments we would like to generalise. We suppose that the population has a certain distribution which is determined by...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4 Sampling | Statistics for Natural Sciences">
+<meta name="twitter:description" content="4.1 Definitions Recall that the population is the universe of possible experiments we would like to generalise. We suppose that the population has a certain distribution which is determined by...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Statistics for Natural Sciences</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> About</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">2</span> Data</a></li>
+<li><a class="" href="distributions.html"><span class="header-section-number">3</span> Distributions</a></li>
+<li><a class="active" href="sampling-1.html"><span class="header-section-number">4</span> Sampling</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sampling-1" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Sampling<a class="anchor" aria-label="anchor" href="#sampling-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="definitions" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Definitions<a class="anchor" aria-label="anchor" href="#definitions"><i class="fas fa-link"></i></a>
+</h2>
+<p>Recall that the <strong>population</strong> is the universe of possible experiments we would like to generalise. We suppose that the population has a certain distribution which is determined by <strong>parameters</strong>: true fixed values we would like to estimate. For example if we suppose that the population is normally distributed then the population parameters are the mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>.</p>
+<div class="rmdnote">
+<p><strong>Important</strong></p>
+<p>We can never know the actual population distribution! We only every observe a sample of data which has been measured through observation or experiment. The goal of statistical inference is to <strong>infer</strong> properties of the population by examining the sample.</p>
+<p>It is important to keep this in mind during this section. Whenever we refer to the ‘population distribution’ we are in fact referring to an <em>assumed</em> distribution of the population.</p>
+</div>
+<p><strong>Sample</strong><br>
+The finite set of experiments sampled from the population.<br>
+From the sample we calculate a (point) <strong>estimate</strong> of a population parameter.</p>
+<p>E.g. sample mean <span class="math inline">\(\bar{x}\)</span>, sample standard deviation <span class="math inline">\(s\)</span>
+<strong>Point Estimate</strong><br>
+Estimate the value of a population parameter.<br>
+E.g. What is the best estimate of the concentration of lead in the River Lea?</p>
+<p><strong>Confidence Interval</strong><br>
+Estimate the precision of an estimate.<br>
+E.g. Identify a range of values which (according to some measure of probability) contains the concentration of lead in the River Lea?</p>
+<p><strong>Hypothesis Test</strong><br>
+Determine whether a particular estimate could have occurred by chance.<br>
+E.g. Could the elevated concentration of lead in the River Lea be attributed to chance (according to some measure of probability)?</p>
+</div>
+<div id="estimates-and-parameters" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> Estimates and Parameters<a class="anchor" aria-label="anchor" href="#estimates-and-parameters"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Inference</strong> is trying to draw conclusions about the population based on a sample from that population.</p>
+<p><strong>Estimation</strong> is using a statistic calculated from the sample as a point estimate of the population parameter.</p>
+<blockquote>
+<p>But how do we know how ‘good’ the estimate is…?</p>
+</blockquote>
+</div>
+<div id="sampling-distribution" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> Sampling Distribution<a class="anchor" aria-label="anchor" href="#sampling-distribution"><i class="fas fa-link"></i></a>
+</h2>
+<p>Our sample distribution varies from one sample to another. Therefore our sample mean (which is the point estimate of the population mean) also varies from sample to sample.</p>
+<p>This variation is described by the <strong>sampling distribution</strong> of the point estimate.</p>
+<p>Understanding this variation allows us to determine how much (or little) our point estimate tells us about our population.</p>
+</div>
+<div id="example" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> Example<a class="anchor" aria-label="anchor" href="#example"><i class="fas fa-link"></i></a>
+</h2>
+<p>Let us suppose that our population of interest is measurements of cat heart weights. We will assume that the population is normally distributed with mean <span class="math inline">\(\mu = 12.4~\mathrm{g}\)</span> and s.d. <span class="math inline">\(\sigma = 2.9~\mathrm{g}\)</span>.</p>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-2-1.png" width="672"></div>
+</div>
+<div id="single-sample-of-size-n-10." class="section level2" number="4.5">
+<h2>
+<span class="header-section-number">4.5</span> Single sample of size <span class="math inline">\(n = 10\)</span>.<a class="anchor" aria-label="anchor" href="#single-sample-of-size-n-10."><i class="fas fa-link"></i></a>
+</h2>
+<p>10.58, 12.93, 9.98, 17.03, 13.36, 10.02, 13.81, 14.54, 14.07, 11.51
+<span class="math display">\[\bar{x} = 12.78\]</span></p>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-5-1.png" width="672"></div>
+</div>
+<div id="multiple-samples-of-size-n10" class="section level2" number="4.6">
+<h2>
+<span class="header-section-number">4.6</span> Multiple samples of size <span class="math inline">\(n=10\)</span><a class="anchor" aria-label="anchor" href="#multiple-samples-of-size-n10"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-6-1.png" width="672"></div>
+</div>
+<div id="sampling-distribution-of-the-mean" class="section level2" number="4.7">
+<h2>
+<span class="header-section-number">4.7</span> Sampling Distribution of the Mean<a class="anchor" aria-label="anchor" href="#sampling-distribution-of-the-mean"><i class="fas fa-link"></i></a>
+</h2>
+<p>10000 samples of size <span class="math inline">\(n=10\)</span>.</p>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-8-1.png" width="672"></div>
+</div>
+<div id="standard-error" class="section level2" number="4.8">
+<h2>
+<span class="header-section-number">4.8</span> Standard Error<a class="anchor" aria-label="anchor" href="#standard-error"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <strong>standard error of the mean</strong> is the standard deviation of the distribution of sample means, given by the following important formula:</p>
+<p><span class="math display">\[\mathrm{S.E.} = \frac{\sigma}{\sqrt{n}}\]</span></p>
+<p>where <span class="math inline">\(\sigma\)</span> is the population standard deviation and <span class="math inline">\(n\)</span> is the sample size.</p>
+<p>The standard error gives an estimate of the <strong>precision</strong> of our estimate.</p>
+<p><strong>BUT</strong></p>
+<p>We don’t know the population standard deviation <span class="math inline">\(\sigma\)</span>.</p>
+</div>
+<div id="standard-error-approximation" class="section level2" number="4.9">
+<h2>
+<span class="header-section-number">4.9</span> Standard Error (Approximation)<a class="anchor" aria-label="anchor" href="#standard-error-approximation"><i class="fas fa-link"></i></a>
+</h2>
+<p>If <span class="math inline">\(n\)</span> is large, then the sample standard deviation is a good approximation to the population standard deviation.</p>
+<p><span class="math display">\[n \geq 30 \implies \sigma \approx s\]</span></p>
+<p><span class="math display">\[\mathrm{S.E.} \approx \frac{s}{\sqrt{n}}\]</span></p>
+</div>
+<div id="summary" class="section level2" number="4.10">
+<h2>
+<span class="header-section-number">4.10</span> Summary<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p><strong>Sampling variation</strong> means that repeated sampling results in different sample means</p></li>
+<li><p>The <strong>sampling distribution</strong> describes the distribution of sample means with repeated sampling</p></li>
+<li><p>The <strong>standard error</strong> is the standard deviation of the sampling distribution and is a measure of the precision of the point estimate</p></li>
+</ul>
+</div>
+<div id="confidence-intervals" class="section level2" number="4.11">
+<h2>
+<span class="header-section-number">4.11</span> Confidence Intervals<a class="anchor" aria-label="anchor" href="#confidence-intervals"><i class="fas fa-link"></i></a>
+</h2>
+<p>A confidence interval is a numerical representation of the precision of our point estimate.</p>
+<p><span class="math display">\[ \mathrm{CI} = \bar{x} \pm z_{\alpha/2} \times \mathrm{S.E.} = \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \]</span>
+where <span class="math inline">\(z_{\alpha/2}\)</span> is the z-score for the <span class="math inline">\(1-\alpha\)</span> confidence interval of the normal distribution*.</p>
+<p>*assuming the distribution of sample means is normally distributed. We will come back to this important point shortly.</p>
+</div>
+<div id="confidence-interval-construction" class="section level2 smaller" number="4.12">
+<h2>
+<span class="header-section-number">4.12</span> Confidence Interval Construction<a class="anchor" aria-label="anchor" href="#confidence-interval-construction"><i class="fas fa-link"></i></a>
+</h2>
+<p>An experiment is performed repeatedly resulting in <span class="math inline">\(50\)</span> measurements for a certain quantity. Given the sample mean <span class="math inline">\(\bar{x} = 14.4\)</span> and sample standard deviation <span class="math inline">\(s = 1.71\)</span>, construct a 95% confidence interval for the mean of the quantity.</p>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-10-1.png" width="672"></div>
+<p><strong>1. Calculate the sample mean <span class="math inline">\(\bar{x}\)</span> and sample standard deviation <span class="math inline">\(s\)</span>.</strong>
+<br><br><br><strong>2. Calculate the standard error </strong>
+<br><br><br><strong>3. Calculate the percentile <span class="math inline">\(z_{\alpha/2}\)</span> where <span class="math inline">\(\alpha=1-0.95=0.05\)</span></strong>
+<br><br><br><strong>4. Calculate CI</strong></p>
+</div>
+<div id="interpretation-of-confidence-intervals" class="section level2" number="4.13">
+<h2>
+<span class="header-section-number">4.13</span> Interpretation of Confidence Intervals<a class="anchor" aria-label="anchor" href="#interpretation-of-confidence-intervals"><i class="fas fa-link"></i></a>
+</h2>
+<p>population mean <span class="math inline">\(\mu = 100\)</span>, population s.d. <span class="math inline">\(\sigma = 8\)</span>.
+sample size <span class="math inline">\(n = 16\)</span>.
+<span class="math display">\[\mathrm{S.E.} = \sigma/\sqrt{n}  = 8/4 = 2\]</span>
+<img src="03-sampling_files/figure-html/unnamed-chunk-12-1.png" width="672"></p>
+<p>100 95% confidence intervals sampled from population <span class="math inline">\(\mu=100\)</span>, <span class="math inline">\(\sigma=8\)</span>.</p>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-14-1.png" width="672"></div>
+<div class="rmdnote">
+<p><strong>CORRECT</strong><br>
+“95% of all confidence intervals constructed by this method will contain the population mean”</p>
+<p><strong>CORRECT</strong><br>
+“The probability that a randomly-sampled confidence interval will contain the population mean is 95%”</p>
+<p><strong>INCORRECT/AMBIGUOUS/SLOPPY</strong><br>
+“The probability that the population mean lies in my confidence interval is 95%”</p>
+<p><strong>NB</strong><br>
+A confidence interval is a statement about a method of random sampling from a (theoretical) population - it is not a statement about data!</p>
+</div>
+</div>
+<div id="example-1" class="section level2" number="4.14">
+<h2>
+<span class="header-section-number">4.14</span> Example<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Q</strong> The legal upper limit for a certain pollutant is 12.0 ppm. 35 samples were taken and the following sample statistics calculated:</p>
+<p><span class="math display">\[\bar{x} = 12.2~\mathrm{ppm},\quad s = 0.55~\mathrm{ppm}\]</span>
+Calculate a 95% confidence interval for the mean pollutant concentration. Can we conclude that the upper limit was exceeded?</p>
+</div>
+<div id="central-limit-theorem" class="section level2" number="4.15">
+<h2>
+<span class="header-section-number">4.15</span> Central Limit Theorem<a class="anchor" aria-label="anchor" href="#central-limit-theorem"><i class="fas fa-link"></i></a>
+</h2>
+<p>Why is the Normal Distribution so important?</p>
+<ol style="list-style-type: decimal">
+<li>Experimental measurements are very often Normally Distributed (to a good approximation)</li>
+<li>Sample means are very often Normally Distributed (to a good approximation) <em>even if the population is not normally distributed</em>
+</li>
+</ol>
+</div>
+<div id="sampling-distribution-normal-population" class="section level2" number="4.16">
+<h2>
+<span class="header-section-number">4.16</span> Sampling Distribution (Normal Population)<a class="anchor" aria-label="anchor" href="#sampling-distribution-normal-population"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-15-1.png" width="672"></div>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-16-1.png" width="672"></div>
+</div>
+<div id="sampling-distribution-skewed-population" class="section level2" number="4.17">
+<h2>
+<span class="header-section-number">4.17</span> Sampling Distribution (Skewed Population)<a class="anchor" aria-label="anchor" href="#sampling-distribution-skewed-population"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure"><img src="03-sampling_files/figure-html/unnamed-chunk-17-1.png" width="672"></div>
+</div>
+<div id="central-limit-theorem-1" class="section level2" number="4.18">
+<h2>
+<span class="header-section-number">4.18</span> Central Limit Theorem<a class="anchor" aria-label="anchor" href="#central-limit-theorem-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>If <span class="math inline">\(x_i \ldots x_n\)</span> are <span class="math inline">\(n\)</span> independent random samples drawn from a population with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> then
+<span class="math display">\[\lim_{n \to \infty} \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}\]</span>
+is a standard normal distribution.</p>
+<ul>
+<li><p>The distribution of sample means is approximately a normal distribution <em>even if the population distribution not normal</em></p></li>
+<li><p>If the population is normally distributed, then the distribution of sample means is normal regardless of sample size</p></li>
+<li><p>If the population is not normally distributed, then the distribution of sample means is normal if the sample size <span class="math inline">\(n\)</span> is large (<span class="math inline">\(n\geq 30\)</span>)</p></li>
+</ul>
+</div>
+<div id="implications-of-central-limit-theorem" class="section level2" number="4.19">
+<h2>
+<span class="header-section-number">4.19</span> Implications of Central Limit Theorem<a class="anchor" aria-label="anchor" href="#implications-of-central-limit-theorem"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>The confidence interval calculation uses z-scores, which are based on the standard normal distribution</p></li>
+<li><p>The Central Limit Theorem implies that we can use the method from the previous section to calculate confidence intervals, regardless of the population distribution</p></li>
+<li><p>However, for a skewed population distribution, or where the population distribution is unknown, the sample size must be large</p></li>
+<li><p>The more normal the population distribution, the smaller our sample size needs to be</p></li>
+<li><p>To determine if the population distribution is normal, use your judgement or look at the data</p></li>
+</ul>
+</div>
+<div id="summary-1" class="section level2" number="4.20">
+<h2>
+<span class="header-section-number">4.20</span> Summary<a class="anchor" aria-label="anchor" href="#summary-1"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Confidence intervals are an important tool to understand the precision of point estimates</p></li>
+<li><p>We can calculate a confidence interval based on a single sample using the standard error</p></li>
+<li><p>We need to carefully examine our assumptions about the population when interpreting the confidence interval</p></li>
+<li><p>Coming next: t-distribution and hypothesis testing</p></li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="distributions.html"><span class="header-section-number">3</span> Distributions</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sampling-1"><span class="header-section-number">4</span> Sampling</a></li>
+<li><a class="nav-link" href="#definitions"><span class="header-section-number">4.1</span> Definitions</a></li>
+<li><a class="nav-link" href="#estimates-and-parameters"><span class="header-section-number">4.2</span> Estimates and Parameters</a></li>
+<li><a class="nav-link" href="#sampling-distribution"><span class="header-section-number">4.3</span> Sampling Distribution</a></li>
+<li><a class="nav-link" href="#example"><span class="header-section-number">4.4</span> Example</a></li>
+<li><a class="nav-link" href="#single-sample-of-size-n-10."><span class="header-section-number">4.5</span> Single sample of size \(n = 10\).</a></li>
+<li><a class="nav-link" href="#multiple-samples-of-size-n10"><span class="header-section-number">4.6</span> Multiple samples of size \(n=10\)</a></li>
+<li><a class="nav-link" href="#sampling-distribution-of-the-mean"><span class="header-section-number">4.7</span> Sampling Distribution of the Mean</a></li>
+<li><a class="nav-link" href="#standard-error"><span class="header-section-number">4.8</span> Standard Error</a></li>
+<li><a class="nav-link" href="#standard-error-approximation"><span class="header-section-number">4.9</span> Standard Error (Approximation)</a></li>
+<li><a class="nav-link" href="#summary"><span class="header-section-number">4.10</span> Summary</a></li>
+<li><a class="nav-link" href="#confidence-intervals"><span class="header-section-number">4.11</span> Confidence Intervals</a></li>
+<li><a class="nav-link" href="#confidence-interval-construction"><span class="header-section-number">4.12</span> Confidence Interval Construction</a></li>
+<li><a class="nav-link" href="#interpretation-of-confidence-intervals"><span class="header-section-number">4.13</span> Interpretation of Confidence Intervals</a></li>
+<li><a class="nav-link" href="#example-1"><span class="header-section-number">4.14</span> Example</a></li>
+<li><a class="nav-link" href="#central-limit-theorem"><span class="header-section-number">4.15</span> Central Limit Theorem</a></li>
+<li><a class="nav-link" href="#sampling-distribution-normal-population"><span class="header-section-number">4.16</span> Sampling Distribution (Normal Population)</a></li>
+<li><a class="nav-link" href="#sampling-distribution-skewed-population"><span class="header-section-number">4.17</span> Sampling Distribution (Skewed Population)</a></li>
+<li><a class="nav-link" href="#central-limit-theorem-1"><span class="header-section-number">4.18</span> Central Limit Theorem</a></li>
+<li><a class="nav-link" href="#implications-of-central-limit-theorem"><span class="header-section-number">4.19</span> Implications of Central Limit Theorem</a></li>
+<li><a class="nav-link" href="#summary-1"><span class="header-section-number">4.20</span> Summary</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-sampling.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-sampling.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Statistics for Natural Sciences</strong>" was written by Natural Sciences. It was last built on 2022-09-21.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
