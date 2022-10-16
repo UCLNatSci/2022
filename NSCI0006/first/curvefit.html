@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>4. Curve fitting &#8212; Mathematics for Natural Sciences B</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Placeholder" href="../second/placeholder.html" />
+    <link rel="prev" title="3. Exponential trends" href="exponentials.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA TRENDS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   1. Representing numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotstuff.html">
+   2. Graphing data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exponentials.html">
+   3. Exponential trends
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Curve fitting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  RATES OF CHANGE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DYNAMIC MODELS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE STUDIES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/chemicals.html">
+   1. Chemical concentrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/freshwater.html">
+   2. Freshwater sustainability
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffirst/curvefit.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/first/curvefit.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-temperature-anomaly">
+   4.1. Global temperature anomaly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radiation-therapy">
+   4.2. Radiation therapy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#earthquakes">
+   4.3. Earthquakes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#heart-rate-monitoring">
+   4.4. Heart rate monitoring
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Curve fitting</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-temperature-anomaly">
+   4.1. Global temperature anomaly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radiation-therapy">
+   4.2. Radiation therapy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#earthquakes">
+   4.3. Earthquakes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#heart-rate-monitoring">
+   4.4. Heart rate monitoring
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="curve-fitting">
+<h1><span class="section-number">4. </span>Curve fitting<a class="headerlink" href="#curve-fitting" title="Permalink to this heading">#</a></h1>
+<p>This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.</p>
+<p>The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.</p>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.ucl.ac.uk/impact/case-studies/2022/apr/single-dose-radiotherapy-transforms-breast-cancer-patient-care">Single-dose radiotherapy transforms breast cancer patient care</a></p>
+<p>UCL clinicians have pioneered a single-shot targeted radiotherapy for breast cancer, delivered in the same operation as tumour surgery, removing the need for follow-ups and reducing side-effects.</p>
+</div>
+<section id="global-temperature-anomaly">
+<h2><span class="section-number">4.1. </span>Global temperature anomaly<a class="headerlink" href="#global-temperature-anomaly" title="Permalink to this heading">#</a></h2>
+<p>Loosely speaking, radiative forcing refers to the amount of additional solar energy (Watts per square metre, Wm-2) absorbed by the Earth due to climate factors.</p>
+<p>An estimate of radiative forcing due to atmospheric <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> concentrations was given by the Swedish scientist <a class="reference external" href="https://en.wikipedia.org/wiki/Svante_Arrhenius">Svante Arrhenius</a>, who received the Nobel prize for Chemistry in 1903. The relationship can be written in the following form</p>
+<div class="math notranslate nohighlight" id="equation-arrhenius">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-arrhenius" title="Permalink to this equation">#</a></span>\[\Delta F=\alpha \ln(C/C_0),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C\)</span> is the atmospheric concentration of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> at time <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_0\)</span> is the atmospheric concentration of <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> at reference time</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta F\)</span> is the amount of additional solar energy due to radiative forcing</p></li>
+</ul>
+<div class="exercise admonition" id="first/curvefit-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
+<section id="exercise-content">
+<p>Estimates have placed the value of <span class="math notranslate nohighlight">\(\alpha\)</span> in <a class="reference internal" href="#equation-arrhenius">(4.1)</a> at around 5.35Wm-2 for Earth’s atmosphere. Calculate the amount of additional solar energy due to radiative forcing between pre-industrial levels (CO2 approx 275ppm) to present day (CO2 approx 410ppm).</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\Delta F = 5.35\times \ln\left(\frac{410}{275}\right) \simeq 2.14 \text{Wm-2}
+\end{equation*}\]</div>
+</div>
+<p>Multiplying <span class="math notranslate nohighlight">\(\Delta F\)</span> by the Earth’s total area gets the total warming energy in Watts. This results in a figure that is approximately 60 times larger than the global annual energy consumption (~18TW). But what impact does it have on temperature?</p>
+<p>We will assume that the change in temperature <span class="math notranslate nohighlight">\(\Delta T\)</span> is linearly proportional to the increase in energy, which we may write as:</p>
+<div class="math notranslate nohighlight" id="equation-arrhenius-2">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-arrhenius-2" title="Permalink to this equation">#</a></span>\[\Delta T = \lambda \Delta F = \hat{\alpha}\ln(C/C_0)\]</div>
+<p>The value of the constant <span class="math notranslate nohighlight">\(\hat{\alpha}\)</span> may be estimated from data.</p>
+<div class="exercise admonition" id="first/curvefit-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p>The dataset <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change-2.csv?d=wa78acfaf46614d0db87f10b435bc5752&amp;csf=1&amp;web=1&amp;e=YOVb1H"><code class="docutils literal notranslate"><span class="pre">climate-change-2.csv</span></code></a> shows <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> levels (<span class="math notranslate nohighlight">\(C\)</span>) alongside the global temperature anomaly <span class="math notranslate nohighlight">\(\Delta T\)</span>. Produce a plot of <span class="math notranslate nohighlight">\(\Delta T\)</span> against <span class="math notranslate nohighlight">\(\ln(C/C_0)\)</span>, taking <span class="math notranslate nohighlight">\(C_0\)</span> to be the first value in the dataset.</p>
+<p>Data for this question were obtained from <a class="reference external" href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.org</a>.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Code to import and plot the datapoints is given below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;climate-change-2.csv&#39;</span><span class="p">)</span>
+<span class="n">C</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CO2 (ppm)&#39;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temp anom (K)&#39;</span><span class="p">]</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>     <span class="c1">#x=log(C/C0)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>    <span class="c1">#plot</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;log($C/C_0$)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temp anomaly (K)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<p>We can fit the function <span class="math notranslate nohighlight">\(y=\hat{\alpha} x\)</span> to the data to estimate the value of <span class="math notranslate nohighlight">\(\hat{\alpha}\)</span> in <a class="reference internal" href="#equation-arrhenius-2">(4.2)</a>. This is done below using the <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to fit, with unknown parameters</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="n">coeffs</span><span class="o">=</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">alpha_hat</span> <span class="o">=</span> <span class="n">coeffs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;alpha_hat = &quot;</span> <span class="p">,</span> <span class="n">alpha_hat</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_hat</span> <span class="pre">=</span>&#160; <span class="pre">4.3208138030469385</span></code></p>
+<p>A plot of the fitted line together with the curve is shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">xx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">alpha_hat</span><span class="o">*</span><span class="n">xx</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;log($C/C_0$)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temp anomaly (K)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="arrhenius-fit">
+<img alt="../_images/anomaly.png" src="../_images/anomaly.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Fitting data to Arrhenius’ relationship <a class="reference internal" href="#equation-arrhenius-2">(4.2)</a></span><a class="headerlink" href="#arrhenius-fit" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="first/curvefit-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
+<section id="exercise-content">
+<p>Use the calculated value of <span class="math notranslate nohighlight">\(\hat{\alpha}\)</span> to produce a crude estimate of how much higher global average surface temperatures will be compared to pre-industrial levels if <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> levels rise to twice pre-industrial levels.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Taking <span class="math notranslate nohighlight">\(C/C_0=2\)</span> and <span class="math notranslate nohighlight">\(\hat{\alpha}=4.321\)</span> in <a class="reference internal" href="#equation-arrhenius-2">(4.2)</a> gives <span class="math notranslate nohighlight">\(\Delta T=2.99^{\circ}C\)</span>.</p>
+<p>This result is within the <a class="reference external" href="https://www.nature.com/articles/d41586-021-02179-1#:~:text=the%20IPCC%E2%80%99s%20best%20estimate">range of estimates</a> produced by the Intergovernmental Panel on Climate Change [IPCC].</p>
+</div>
+</section>
+<section id="radiation-therapy">
+<h2><span class="section-number">4.2. </span>Radiation therapy<a class="headerlink" href="#radiation-therapy" title="Permalink to this heading">#</a></h2>
+<p>Radiation therapy aims to treat cancers by exposure to radiation. The SI unit for a dose of absorbed radiation is the “Gray” (Gy), corresponding to the absorption of 1joule of radiation per kg of matter. Higher levels of radiation exposure result in greater clinical effect, but also increased damage to surrounding tissues.</p>
+<p>In a research paper on <a class="reference external" href="https://doi.org/10.1016/j.jtbi.2005.11.015">Mathematical Modelling of Radiotherapy Strategies for Early Breast Cancer</a>, an electron-beam driven x-ray source was used to deliver radiation to a taget site. The following experimental values were quoted in the research paper, illustrating how the amount of radiation at the site depends on the distance between the x-ray source and the target:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>distance (cm)</p></th>
+<th class="head"><p>dose (Gy)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.1</p></td>
+<td><p>15.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.2</p></td>
+<td><p>12.50</p></td>
+</tr>
+<tr class="row-even"><td><p>0.5</p></td>
+<td><p>8.75</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0</p></td>
+<td><p>5.00</p></td>
+</tr>
+<tr class="row-even"><td><p>2.7</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="first/curvefit-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
+<section id="exercise-content">
+<p>Demonstrate graphically that the (distance,dose) data approximately fits the function <span class="math notranslate nohighlight">\(y=A e^{k x}\)</span>, and find values of the constants <span class="math notranslate nohighlight">\(A,k\)</span> that give a good fit.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>To demonstrate that <span class="math notranslate nohighlight">\((x,y)\)</span> data approximately fit an exponential relationship we can show that a plot of <span class="math notranslate nohighlight">\(\log(y)\)</span> against <span class="math notranslate nohighlight">\(x\)</span> follow a linear trend. This can be understood by taking the log of both sides of the exponential relationship:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\log(y)&amp;=\log(Ae^{kx})\\
+       &amp;=\log(A)+kx.
+\end{align*}\]</div>
+<p>The relationship is of the form <span class="math notranslate nohighlight">\((Y=kx+c)\)</span>, where <span class="math notranslate nohighlight">\(Y=\log(y)\)</span> and <span class="math notranslate nohighlight">\(c=\log(A)\)</span>.</p>
+<p>To find the constants we could <em>either</em> :</p>
+<ul class="simple">
+<li><p>fit a straight line to the <span class="math notranslate nohighlight">\(\log(y)\)</span> data</p></li>
+<li><p>fit the exponential function to the <span class="math notranslate nohighlight">\(y\)</span> data</p></li>
+</ul>
+<p>The two approaches are not equivalent due to the statistical way that curve fitting is done. However, they will give similar results.</p>
+<p>Here, the exponential fit has been carried out using the <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">2.7</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">15.00</span><span class="p">,</span><span class="mf">12.50</span><span class="p">,</span><span class="mf">8.75</span><span class="p">,</span><span class="mf">5.00</span><span class="p">,</span><span class="mf">4.00</span><span class="p">,</span><span class="mf">2.00</span><span class="p">,</span><span class="mf">1.00</span><span class="p">])</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>                          <span class="c1">#exponential function to fit</span>
+  <span class="k">return</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">coeffs</span><span class="o">=</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>    <span class="c1">#best fit for y</span>
+
+<span class="n">xx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>                   <span class="c1">#values for plot</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="o">*</span><span class="n">coeffs</span><span class="p">)</span>                       <span class="c1">#apply fit to xx values</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;distance (cm)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;log(dose)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;dose (Gy)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/smexamples_1_0.png"><img alt="fitted data" class="align-center" src="../_images/smexamples_1_0.png" style="width: 80%;" /></a>
+<p>For comparison the results of the linear fit approach are shown below. Only the curve fitting part of the code needs to be replaced with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>                               <span class="c1">#linear function to fit</span>
+  <span class="k">return</span> <span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">c</span>
+
+<span class="n">coeffs</span><span class="o">=</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#best fit for log(y)</span>
+
+<span class="n">xx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>                        <span class="c1">#values for plot</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="o">*</span><span class="n">coeffs</span><span class="p">))</span>                    <span class="c1">#apply fit to xx values</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/smexamples_1_01.png"><img alt="fitted data" class="align-center" src="../_images/smexamples_1_01.png" style="width: 80%;" /></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> function from the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library can also be used to fit a straight line. However, this function can only be used to fit polynomials and is therefore less powerful than <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code>. Its use is exemplified below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#fit a degree 1 polynomial</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">xx</span><span class="p">)</span>       <span class="c1">#convert log(y) --&gt; y</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<p>A dose of radiation is often delivered in smaller amounts called <a class="reference external" href="https://radiopaedia.org/articles/fractionation-radiation-therapy">fractions</a>. This can allow healthy cells to repair sub-lethal damage to their DNA between fractions. A treatment plan may be developed that depends on the type of cancer and proximity to organs.</p>
+<p>The clinical effect of treatment can be modelled by the following “Linear-Quadratic” (LQ) relationship</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a506cc44-dd0e-45b6-932c-8c22d304ea55">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-a506cc44-dd0e-45b6-932c-8c22d304ea55" title="Permalink to this equation">#</a></span>\[\begin{equation}
+E = n(\alpha d +\beta d^2) = \alpha D\left(1+\frac{d}{\alpha/\beta}\right),
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(D\)</span> is the total dose, <span class="math notranslate nohighlight">\(d\)</span> is the dose per fraction, <span class="math notranslate nohighlight">\(n\)</span> is the number of fractions. The first term represents lethal damage due to single-hit double strand chromsome breaks, and the second term represents lethal damage due to a combination of two sub-lethal single strand chromasome breaks. The coeffcicients <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> depend on the <a class="reference external" href="https://ro-journal.biomedcentral.com/articles/10.1186/s13014-018-1040-z">tumour site and histology</a>. Notice that if the same dose <span class="math notranslate nohighlight">\(D\)</span> is delivered in a larger number of fractions (thereby reducing <span class="math notranslate nohighlight">\(d\)</span>) the clinical effect <span class="math notranslate nohighlight">\(E\)</span> is reduced, with the amount of sparing depending on the <span class="math notranslate nohighlight">\(\alpha/\beta\)</span> ratio.</p>
+<p>By assuming that lethal damage is Poisson distributed with rate constant <span class="math notranslate nohighlight">\(E\)</span>, we obtain that the probability of cell survival is given by</p>
+<div class="math notranslate nohighlight" id="equation-survivalp">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-survivalp" title="Permalink to this equation">#</a></span>\[e^{-E}=e^{-n(\alpha d +\beta d^2)} = e^{-\alpha D\left(1+\frac{d}{\alpha/\beta}\right)}.\]</div>
+<p>Clinical data on radiotherapy often refers to one of two quantities related to the clinical effect, which are EQD2 and BED. These quantifications are used to compare a given treatment plan to either the equivalent dose required in 2Gy fractions (EQD2) or the effective hypothetical dose if the treatment was delivered over an infinite number of “zero fractions” (BED).</p>
+<p>For EQD2 we may write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-85f88d7d-ad0f-444e-b25a-000ce95eebe1">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-85f88d7d-ad0f-444e-b25a-000ce95eebe1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+E = \alpha D\left(1+\frac{d}{\alpha/\beta}\right) =  \alpha \text{EQD2}\left(1+\frac{2}{\alpha/\beta}\right) \quad \Rightarrow \quad \text{EQD2}=D\left(\frac{d+\frac{\alpha}{\beta}}{2+\frac{\alpha}{\beta}}\right).
+\end{equation}\]</div>
+<p>For BED we may write</p>
+<div class="math notranslate nohighlight" id="equation-bed-defn">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-bed-defn" title="Permalink to this equation">#</a></span>\[E = \alpha D\left(1+\frac{d}{\alpha/\beta}\right) =  \alpha \text{BED}\left(1+\frac{0}{\alpha/\beta}\right) \quad \Rightarrow \quad \text{BED}=D\left(1+\frac{d}{\alpha/\beta}\right).\]</div>
+<p>These two quantities have sometimes been <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0360301610006334?via%3Dihub">confused</a> in published research papers, which could have serious prescription consequences.</p>
+<div class="readmore admonition">
+<p class="admonition-title">Read more</p>
+<p>If you want to read more about this model, see (for example)</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.degruyter.com/document/doi/10.1515/9783110442069-005/html?lang=en">Radiation Biology (textbook) chapter 5</a></p></li>
+<li><p><a class="reference external" href="https://iopscience.iop.org/article/10.1088/1361-6560/aaf26a/pdf">Physics in Medicine &amp; Biology topical review</a></p></li>
+</ul>
+</div>
+<div class="exercise admonition" id="first/curvefit-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
+<section id="exercise-content">
+<p>The following experimental parameter values were quoted in the research paper on Mathematical Modelling of Radiotherapy Strategies for Early Breast Cancer:</p>
+<p><span class="math notranslate nohighlight">\(\begin{alignat*}{5}
+&amp;\bullet\ \text{Tumour: }\quad &amp;&amp;\alpha=0.30,\quad   &amp;&amp;\alpha/\beta=10\\
+&amp;\bullet\ \text{Tissue: }      &amp;&amp;\alpha=0.15,        &amp;&amp;\alpha/\beta=3
+&amp;\end{alignat*}\)</span></p>
+<p>Use these values to estimate the BED <a class="reference internal" href="#equation-bed-defn">(4.6)</a> and survival probabilities <a class="reference internal" href="#equation-survivalp">(4.4)</a> for a single dose of radiation at each of the following doses (Gray):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+D=(15.00,12.50,8.75,5.00,4.00,2.00,1.00)
+\end{align*}\]</div>
+<p>Your calculated values should approximately match those given in Table 1 of the <a class="reference external" href="https://doi.org/10.1016/j.jtbi.2005.11.015">research paper</a>.</p>
+<p>If you wish, you can also calculate <span class="math notranslate nohighlight">\(S^*_{tissue}\)</span> according to equation (2b) in the paper, and therefore reproduce Figure 4 from the paper.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>We can apply the given formulae as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">15.00</span><span class="p">,</span><span class="mf">12.50</span><span class="p">,</span><span class="mf">8.75</span><span class="p">,</span><span class="mf">5.00</span><span class="p">,</span><span class="mf">4.00</span><span class="p">,</span><span class="mf">2.00</span><span class="p">,</span><span class="mf">1.00</span><span class="p">])</span>
+
+<span class="c1"># definitions</span>
+<span class="k">def</span> <span class="nf">radioth</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="n">BED</span><span class="o">=</span><span class="n">d</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">d</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">));</span> <span class="n">S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">BED</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">BED</span><span class="p">,</span><span class="n">S</span><span class="p">]</span>
+
+<span class="n">a1</span><span class="o">=</span><span class="mf">0.30</span><span class="p">;</span> <span class="n">b1</span><span class="o">=</span><span class="n">a1</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>              <span class="c1">#tumour</span>
+<span class="p">[</span><span class="n">BEDtum</span><span class="p">,</span><span class="n">Stum</span><span class="p">]</span><span class="o">=</span><span class="n">radioth</span><span class="p">(</span><span class="n">dvals</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">)</span>
+
+<span class="n">a2</span><span class="o">=</span><span class="mf">0.15</span><span class="p">;</span> <span class="n">b2</span><span class="o">=</span><span class="n">a2</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>               <span class="c1">#tissue</span>
+<span class="p">[</span><span class="n">BEDtis</span><span class="p">,</span><span class="n">Stis</span><span class="p">]</span><span class="o">=</span><span class="n">radioth</span><span class="p">(</span><span class="n">dvals</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">b2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then use <code class="docutils literal notranslate"><span class="pre">print</span></code> to display the results.</p>
+<p>The following code can be used to calculate the adjusted probabilities. The <a class="reference external" href="https://www.w3schools.com/python/ref_func_zip.asp"><code class="docutils literal notranslate"><span class="pre">zip</span></code> function</a> is used here to apply the <code class="docutils literal notranslate"><span class="pre">adjst</span></code> function to the pairs of values defined by the arrays <code class="docutils literal notranslate"><span class="pre">dvals</span></code> and <code class="docutils literal notranslate"><span class="pre">Stis</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># adjust S for tissue repair</span>
+<span class="k">def</span> <span class="nf">adjst</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">S</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">d</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+    <span class="n">S</span><span class="o">=</span><span class="n">S</span><span class="o">+</span><span class="mf">0.98</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">S</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">S</span>
+
+<span class="n">Ssta</span><span class="o">=</span><span class="p">[</span><span class="n">adjst</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">S</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">S</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dvals</span><span class="p">,</span><span class="n">Stis</span><span class="p">)]</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">2.7</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Stum</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;tumour cells&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Ssta</span><span class="p">,</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;tissue cells&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;distance (cm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;survival probability&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/smexamples_1_02.png"><img alt="reproduction-image" class="align-center" src="../_images/smexamples_1_02.png" style="width: 80%;" /></a>
+<p>Here are the results:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dose_</p></th>
+<th class="head"><p>BED_a</p></th>
+<th class="head"><p>S_tumour</p></th>
+<th class="head"><p>BED_b</p></th>
+<th class="head"><p>S_tissue</p></th>
+<th class="head"><p>S*tissue</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>15.00</p></td>
+<td><p>37.50</p></td>
+<td><p>1.30e-05</p></td>
+<td><p>90.00</p></td>
+<td><p>1.37e-06</p></td>
+<td><p>1.37e-06</p></td>
+</tr>
+<tr class="row-odd"><td><p>12.50</p></td>
+<td><p>28.12</p></td>
+<td><p>2.17e-04</p></td>
+<td><p>64.58</p></td>
+<td><p>6.21e-05</p></td>
+<td><p>6.21e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>8.75</p></td>
+<td><p>16.41</p></td>
+<td><p>7.29e-03</p></td>
+<td><p>34.27</p></td>
+<td><p>5.85e-03</p></td>
+<td><p>5.85e-03</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.00</p></td>
+<td><p>7.50</p></td>
+<td><p>1.05e-01</p></td>
+<td><p>13.33</p></td>
+<td><p>1.35e-01</p></td>
+<td><p>1.35e-01</p></td>
+</tr>
+<tr class="row-even"><td><p>4.00</p></td>
+<td><p>5.60</p></td>
+<td><p>1.86e-01</p></td>
+<td><p>9.33</p></td>
+<td><p>2.47e-01</p></td>
+<td><p>9.85e-01</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.00</p></td>
+<td><p>2.40</p></td>
+<td><p>4.87e-01</p></td>
+<td><p>3.33</p></td>
+<td><p>6.07e-01</p></td>
+<td><p>9.92e-01</p></td>
+</tr>
+<tr class="row-even"><td><p>1.00</p></td>
+<td><p>1.10</p></td>
+<td><p>7.19e-01</p></td>
+<td><p>1.33</p></td>
+<td><p>8.19e-01</p></td>
+<td><p>9.96e-01</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="earthquakes">
+<h2><span class="section-number">4.3. </span>Earthquakes<a class="headerlink" href="#earthquakes" title="Permalink to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt?csf=1&amp;web=1&amp;e=qfu9QE"><code class="docutils literal notranslate"><span class="pre">calmag.txt</span></code> dataset</a> contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey <span class="xref myst">www.usgs.gov</span>.</p>
+<p>We can produce a histogram of this data as shown below. The <code class="docutils literal notranslate"><span class="pre">hist</span></code> function produces a histogram, and also outputs the frequencies <code class="docutils literal notranslate"><span class="pre">n</span></code> and edge values <code class="docutils literal notranslate"><span class="pre">bin</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">calmag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;data/calmag.txt&quot;</span><span class="p">)</span>
+<span class="n">n</span><span class="p">,</span> <span class="nb">bin</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">calmag</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>  
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnitude M / Richter&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="earthquakes-california">
+<img alt="../_images/smexamples_1_03.png" src="../_images/smexamples_1_03.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Frequency of Richter magnitude earthquakes in California, 1960-2014</span><a class="headerlink" href="#earthquakes-california" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Gutenberg-Richter (GR) law predicts that in any given region and time period, the number of earthquakes that are at <em>least</em> Richter magnitude <span class="math notranslate nohighlight">\(x\)</span> is given by the following relationship, where <span class="math notranslate nohighlight">\(\alpha,\beta\)</span> are constants:</p>
+<div class="math notranslate nohighlight">
+\[N_x=\alpha e^{-\beta x}\]</div>
+<p>Therefore a plot of <span class="math notranslate nohighlight">\(\ln(N_x)\)</span> against <span class="math notranslate nohighlight">\(x\)</span> is expected to follow a decreasing linear trend.</p>
+<div class="exercise admonition" id="first/curvefit-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.6 </span></p>
+<section id="exercise-content">
+<p>Use the <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">bin</span></code> values calculated above to produce a plot of <span class="math notranslate nohighlight">\(\ln(N_x)\)</span> against <span class="math notranslate nohighlight">\(x\)</span> and fit a trendline to the data. Do the data support the GR law?</p>
+<p>Hint: what result is given by <code class="docutils literal notranslate"><span class="pre">np.cumsum(n[::-1])[::-1]</span></code> ?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Taking the natural logarithm of the proposed relationship gives</p>
+<div class="math notranslate nohighlight">
+\[\ln(N_x)=\ln(\alpha)-\beta x\]</div>
+<p>In the below code I used <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> to obtain the trendline, but you could also use <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code>. The data appear to fit the GR law very well!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="nb">bin</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                        <span class="c1">#ignore rightmost edge</span>
+<span class="n">Nx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">n</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>      <span class="c1">#reverse cumsum</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Nx</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>             <span class="c1">#plot the data</span>
+
+<span class="c1">#fit and plot the trendline</span>
+<span class="n">coeffs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Nx</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">xx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coeffs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">xx</span><span class="o">+</span><span class="n">coeffs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnitude M / Richter&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# occurrences $\geq M$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/gr-law.png"><img alt="gr-fitted-data" class="align-center" src="../_images/gr-law.png" style="width: 80%;" /></a>
+</div>
+<hr class="docutils" />
+<div class="exercise admonition" id="first/curvefit-exercise-6">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.7 </span></p>
+<section id="exercise-content">
+<p>According to the GR law with the parameters we calculated, how many magnitude 8+ earthquakes can be expected in a 30 year period?<br>
+<em>Hint: The expected number of earthquakes is a value less than one.</em></p>
+<p>By assuming that magnitude 8+ earthquakes are Poisson-distributed, estimate the probability of a magnitude 8+ earthquake occurring in the next 30 years in California.</p>
+<p><em>Hint: Taking <span class="math notranslate nohighlight">\(X\sim\text{Po}(\lambda)\)</span> where the expected number of events is <span class="math notranslate nohighlight">\(\lambda\)</span>, the probability of no events is given by</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\text{Pr}(X\neq 0)=1-e^{-\lambda}\end{equation*}\]</div>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="o">-</span><span class="n">coeffs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coeffs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Expected number of earthquakes in data time period</span>
+<span class="n">N8</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># The dataset covers a 54 year period, so in 30 years:</span>
+<span class="n">L</span><span class="o">=</span><span class="n">N8</span><span class="o">*</span><span class="mi">30</span><span class="o">/</span><span class="mi">54</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Expectation of 8+ earthquakes in 30 years&quot;</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+
+<span class="c1"># Pr(x&gt;0) = 1-Pr(x=0)</span>
+<span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estimated probabilty : </span><span class="si">{0:.1%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Expectation</span> <span class="pre">of</span> <span class="pre">8+</span> <span class="pre">earthquakes</span> <span class="pre">in</span> <span class="pre">30</span> <span class="pre">years</span> <span class="pre">0.39837</span></code><br>
+<code class="docutils literal notranslate"><span class="pre">Estimated</span> <span class="pre">probabilty</span> <span class="pre">:</span> <span class="pre">32.9%</span></code></p>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We should be extremely careful when making estimates based on extrapolation beyond the domain of the available data. A comic illustration of this warning can be found at
+<a class="reference external" href="https://xkcd.com/1007/">https://xkcd.com/1007/</a></p>
+</div>
+</section>
+<section id="heart-rate-monitoring">
+<h2><span class="section-number">4.4. </span>Heart rate monitoring<a class="headerlink" href="#heart-rate-monitoring" title="Permalink to this heading">#</a></h2>
+<p>Many wearable devices allow heart rate and activity data to be tracked and downloaded as txt or csv files. It may be possible to estimate <a class="reference external" href="https://nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx">circadian rhythms</a> from this data.</p>
+<p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/hrdata2.csv?d=w30f852f1fa3e471a92661dfb7dd70ba2&amp;csf=1&amp;web=1&amp;e=ew8gGA">hrdata2.csv</a> dataset contains “fitbit” measurements of activity and heart rate (HR) for a single individual, obtained from a <a class="reference external" href="https://doi.org/10.1016/j.crmeth.2021.100058">recent research paper</a>. The data are for a period of 96 hours, averaged every five minutes. The HR is measured in beats per minute (bpm), and the activity level is measured in steps per minute.</p>
+<p>The heart rate can be modelled by the equation</p>
+<div class="amsmath math notranslate nohighlight" id="equation-87ef619d-f38f-46f3-8c2d-bde954e00bc9">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-87ef619d-f38f-46f3-8c2d-bde954e00bc9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\text{HR} = \mu + A\sin\left(\frac{\pi}{12}t\right)+E(a)+\epsilon
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the average background HR, <span class="math notranslate nohighlight">\(A\)</span> is the amplitude of the 24hr circadian cycle, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is statistical error (e.g. due to measurement inaccuracies).</p>
+<p>The activity effect <span class="math notranslate nohighlight">\(E(a)\)</span> is the increase in HR due to activity <span class="math notranslate nohighlight">\(a\)</span>. To estimate the background circadian rhythm, we will attempt to remove the activity effect from the data.</p>
+<p>We begin by selecting the data for waking periods only. Plotting the activity <span class="math notranslate nohighlight">\(a\)</span> against <span class="math notranslate nohighlight">\((\text{HR}-\mu)\)</span> shows the effect of the activity.</p>
+<p>Due to background noise and circadian variation there is a wide band of HR measurements, which need to be statistically averaged. Doing this calculation is beyond the scope of the course, so the activity effect has been estimated for you. The <code class="docutils literal notranslate"><span class="pre">Activity_effect</span></code> column in the dataset gives the estimated effect size <span class="math notranslate nohighlight">\(E(a)\)</span>. The predicted relationship is plotted below in red, with the measured data shown in blue.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hrdata2.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># get waking data</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sleep&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Activity&#39;</span><span class="p">)</span>
+
+<span class="c1">#average resting waking heart rate</span>
+<span class="n">mu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Activity&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;HR&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resting HR (awake) : &quot;</span><span class="p">,</span><span class="n">mu</span><span class="p">)</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Activity&#39;</span><span class="p">]</span>           <span class="c1">#activity</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HR&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">mu</span>              <span class="c1">#adjusted HR</span>
+<span class="n">z</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Activity_effect&#39;</span><span class="p">]</span>    <span class="c1">#activity effect</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>          <span class="c1">#(activity,HR data)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>          <span class="c1">#(activity,effect) estimates</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Activity, a&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;HR effect, E(a)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Resting</span> <span class="pre">HR</span> <span class="pre">(awake)</span> <span class="pre">:</span>&#160; <span class="pre">62.71232876712329</span></code></p>
+<figure class="align-default" id="hr-activity">
+<img alt="../_images/heart-activity.png" src="../_images/heart-activity.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Heart rate increase due to activity (bpm)</span><a class="headerlink" href="#hr-activity" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The plot suggests that the effect of additional activity on HR is not linear. The good news is that light activity such as a gentle walk results in an appreciable heart rate effect. At a level of just 20 steps per minute this person’s HR increased by around 20bpm. However, further increases in activity level resulted in a smaller HR effect until around 100 steps per minute (a moderate walk). At more vigorous levels of activity corresponding to a vigorous walk or light jog we again start to see greater effect of additional activity. Can you use your knowledge of the cardiovascular system to suggest why this might be?</p>
+<div class="exercise admonition" id="first/curvefit-exercise-7">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.8 </span></p>
+<section id="exercise-content">
+<p>Using the given dataset, plot the adjusted HR against time.</p>
+<p>On the same axes, plot the curve</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\mu+A\sin\left(\frac{\pi}{12} t\right),
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,\mu\)</span> are “best fit” estimates for the data.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hrdata2.csv&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sec&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">60</span>          <span class="c1">#time</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HR_adjusted&#39;</span><span class="p">]</span>     <span class="c1">#adjusted heart rate</span>
+
+
+<span class="c1">#plot the data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+<span class="c1"># Fitted curve</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span><span class="o">/</span><span class="mf">12.0</span><span class="p">)</span>
+
+<span class="n">coeffs</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span>
+
+<span class="n">tfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">96</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">yfit</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">tfit</span><span class="p">,</span><span class="o">*</span><span class="n">coeffs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tfit</span><span class="p">,</span><span class="n">yfit</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit&#39;</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (hrs)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Heart rate (bpm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">96</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">[61.56597222,</span>&#160; <span class="pre">4.04033287]</span></code></p>
+<img alt="Estimating the circadian heart rate cycle" class="align-center" src="../_images/hr-circadian.png" />
+<p>Although the plotted data still contains a large amount of variation/noise, we appear to have done a reasonable job of identifying a circadian rhythm, with the basal heart rate for this person being around 61-62bpm with a daily (resting) variation of <span class="math notranslate nohighlight">\(\pm\)</span>4bpm.</p>
+<p>In their research paper, the authors found that the circadian rhythms for some of their volunteers did not align with the sleep-wake cycle. For instance, one of their participants was undertaking shift work, but their daily heart-rate cycle remained aligned to a standard day/night pattern.</p>
+<hr class="docutils" />
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./first"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="exponentials.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Exponential trends</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../second/placeholder.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Placeholder</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

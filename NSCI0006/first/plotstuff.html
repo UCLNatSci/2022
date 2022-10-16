@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>2. Graphing data &#8212; Mathematics for Natural Sciences B</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Exponential trends" href="exponentials.html" />
+    <link rel="prev" title="1. Representing numbers" href="numbers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA TRENDS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   1. Representing numbers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Graphing data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exponentials.html">
+   3. Exponential trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="curvefit.html">
+   4. Curve fitting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  RATES OF CHANGE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DYNAMIC MODELS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE STUDIES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/chemicals.html">
+   1. Chemical concentrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/freshwater.html">
+   2. Freshwater sustainability
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/first/plotstuff.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffirst/plotstuff.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/first/plotstuff.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/first/plotstuff.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greenhouse-emissions">
+   2.1. Greenhouse emissions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trust-in-government">
+   2.2. Trust in government
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gini-coefficient">
+   2.3. Gini coefficient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#molecular-binding">
+   2.4. Molecular binding
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Graphing data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greenhouse-emissions">
+   2.1. Greenhouse emissions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trust-in-government">
+   2.2. Trust in government
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gini-coefficient">
+   2.3. Gini coefficient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#molecular-binding">
+   2.4. Molecular binding
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="graphing-data">
+<h1><span class="section-number">2. </span>Graphing data<a class="headerlink" href="#graphing-data" title="Permalink to this heading">#</a></h1>
+<p>This chapter provides some examples of importing and plotting data. After completing the chapter you should be able to:</p>
+<ul class="simple">
+<li><p>Use line and scatter graphs to create a visual representation of data</p></li>
+<li><p>Estimate rates of change using the midpoint rule</p></li>
+<li><p>Estimate area under a curve by using trapezia</p></li>
+<li><p>Produce a graph where one or both axes is on a log scale and recognise when this may be useful</p></li>
+</ul>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.callingbullshit.org/tools/tools_misleading_axes.html">Calling Bullsh*t</a></p>
+<p>[D]ata visualizations tell stories. Relatively subtle choices, such as the range of the axes in a bar chart or line graph, can have a big impact on the story that a figure tells. When you look at data graphics, you want to ask yourself whether the graph has been designed to tell a story that accurately reflects the underlying data, or whether it has been designed to tell a story more closely aligned with what the designer would like you to believe.</p>
+</div>
+<section id="greenhouse-emissions">
+<h2><span class="section-number">2.1. </span>Greenhouse emissions<a class="headerlink" href="#greenhouse-emissions" title="Permalink to this heading">#</a></h2>
+<p>The plot below uses data from <a class="reference external" href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#how-have-global-co2-emissions-changed-over-time">Our World in Data</a> to show how measurements of CO2 concentration in Earth’s atmosphere have changed since 1960. You can download the dataset used to make this plot from <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change.csv?d=w8d56219a23104bee98f755c9e28cc230&amp;csf=1&amp;web=1&amp;e=Rks0TP"><code class="docutils literal notranslate"><span class="pre">climate-change.csv</span></code></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;climate-change.csv&#39;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CO2 concentrations&#39;</span><span class="p">]</span>
+
+<span class="c1">#plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CO2 Concentration (ppm)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1960</span><span class="p">,</span><span class="mi">2022</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">300</span><span class="p">,</span><span class="mi">420</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="co2-data">
+<img alt="../_images/co2-ppm.png" src="../_images/co2-ppm.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Atmospheric concentration of CO2 (world data)</span><a class="headerlink" href="#co2-data" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="first/plotstuff-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.1 </span></p>
+<section id="exercise-content">
+<p>Notice that the range of values shown on the y-axis does not start at zero. Do you think this is appropriate for this type of data?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Sometimes, omitting the part of the plot range that starts from zero can be misleading, because it can make a relatively small change appear to be much larger. However, making a line graph’s axis go to zero can sometimes obscure data trends. For an interesting discussion on these points, see [<a class="reference external" href="https://www.callingbullshit.org/tools/tools_proportional_ink.html">Calling Bullsh*t</a>].</p>
+</div>
+<div class="exercise admonition" id="first/plotstuff-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.2 </span></p>
+<section id="exercise-content">
+<p>The dataset that the plot is based on includes estimates of the historic CO2 levels going back as far as 800,000BC. Reproduce the plot so that the older historic data is included. Does this second plot make you feel any differently about the trend in atmospheric concentrations of CO2?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Using the same code from above but changing the <code class="docutils literal notranslate"><span class="pre">xlim</span></code> values gives the following result</p>
+<img alt="Historic CO2 data" class="align-center" src="../_images/CO2-historic.png" />
+<p>The increase in CO2 concentrations over the last 60 years is even more striking when contrasted against the historic trend over a period of almost a million years.</p>
+</div>
+</section>
+<section id="trust-in-government">
+<h2><span class="section-number">2.2. </span>Trust in government<a class="headerlink" href="#trust-in-government" title="Permalink to this heading">#</a></h2>
+<p>“Do you trust the government?”</p>
+<p>This question (or some variant of it) is reported on by many major organisations including the <a class="reference external" href="https://www.oecd.org/governance/trust-in-government/">OECD</a>, <a class="reference external" href="https://news.gallup.com/poll/1597/confidence-institutions.aspx">Gallup (US)</a> and <a class="reference external" href="https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/trustingovernmentuk/2022">ONS (UK)</a>. The dataset used in this example are obtained from <a class="reference external" href="https://www.natcen.ac.uk/">NatCen (UK)</a>. Responses are shown for the percentage of survey respondents who answered that they trust government to place needs of the nation above the interests of their party “just about always” or “most of the time”. The data used to produce this plot (which you will need to answer the exercise) can be found at <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/gov-trust.csv?d=wf0977ce993904f62952171eb08f42588&amp;csf=1&amp;web=1&amp;e=avdQXj"><code class="docutils literal notranslate"><span class="pre">gov-trust.csv</span></code></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gov-trust.csv&#39;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% a</span><span class="s1">gree&#39;</span><span class="p">]</span>
+
+<span class="c1">#plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2">gree&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1986</span><span class="p">,</span><span class="mi">2021</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="gov-trust">
+<img alt="../_images/gov-trust.png" src="../_images/gov-trust.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Percentage of UK survey respondents who answered that they trust government to place needs of the nation above the interests of their party “just about always” or “most of the time” <a class="reference external" href="https://www.bsa.natcen.ac.uk/media/39436/bsa38_democracy.pdf">Democracy</a>.</span><a class="headerlink" href="#gov-trust" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="first/plotstuff-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.3 </span></p>
+<section id="exercise-content">
+<p>By looking at the values in the dataset, answer the following questions:</p>
+<ul class="simple">
+<li><p>By how many points did the %agree response change between 1987 and 1991?</p></li>
+<li><p>What was the yearly average change in %agree between 1987 and 1991?</p></li>
+<li><p>What should we say was the yearly average change in %agree for the year 1991?</p></li>
+</ul>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Between 1987 to 1991 the %agree fell by 14 points. The average yearly change (yearly “rate of change”) in this period was -3.5 points, which is the slope of the line connecting the two data points.</p>
+<p>We can calculate the slope of every line using the code below. Then <code class="docutils literal notranslate"><span class="pre">k[1]</span></code> gives the slope of the second line segment, which we were interested in here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1">#array of differences between each pair of x values</span>
+<span class="n">dy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1">#array of differences between each pair of y values</span>
+<span class="n">k</span><span class="o">=</span><span class="n">dy</span><span class="o">/</span><span class="n">dx</span>        <span class="c1">#ratio of differences</span>
+</pre></div>
+</div>
+<p>A sensible answer to the yearly average change (yearly rate of change) in %agree for the year 1991 might be to take the average of the yearly average changes either side of it. This best estimate is known as the midpoint rule.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">k</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-3.25</span></code></p>
+</div>
+<p>If you want to practice plotting and investigating some more sociological datasets, there are several in the NatCen reports on [<a class="reference external" href="https://www.bsa.natcen.ac.uk/media/39436/bsa38_democracy.pdf">Democracy</a>], [<a class="reference external" href="https://www.bsa.natcen.ac.uk/media/39478/bsa39_culture-wars.pdf">Culture Wars</a>] and [<a class="reference external" href="https://www.bsa.natcen.ac.uk/media/39481/bsa39_taxation-welfare-and-inequality.pdf">Taxation, Welfare and Inequality</a>].</p>
+</section>
+<section id="gini-coefficient">
+<h2><span class="section-number">2.3. </span>Gini coefficient<a class="headerlink" href="#gini-coefficient" title="Permalink to this heading">#</a></h2>
+<p>The Gini coefficient is a measure of income inequality. It is based on the share of income received by each income bracket.</p>
+<p>By way of example we will consider UK statistics for the year 2017, which are given in the table below. Data were obtained from <a class="reference external" href="http://wdi.worldbank.org/table">World Bank</a> Poverty and Shared Prosperity information, Table 1.3. If you wish, you can repeat this exercise using data from another country. A plot of the UK data are shown in <a class="reference internal" href="#gini-plot"><span class="std std-numref">Fig. 2.3</span></a>, along with the “line of equality”.</p>
+<table class="table" id="gini-data">
+<caption><span class="caption-number">Table 2.1 </span><span class="caption-text">Distribution of income in the United Kingdom</span><a class="headerlink" href="#gini-data" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>% of population</p></th>
+<th class="head"><p>% of income</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bottom 10%</p></td>
+<td><p>2.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bottom 20%</p></td>
+<td><p>6.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Bottom 40%</p></td>
+<td><p>18.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bottom 60%</p></td>
+<td><p>35.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Bottom 80%</p></td>
+<td><p>57.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bottom 90%</p></td>
+<td><p>73.3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#UK dataset</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.6</span><span class="p">,</span><span class="mf">6.8</span><span class="p">,</span><span class="mf">18.6</span><span class="p">,</span><span class="mf">35.1</span><span class="p">,</span><span class="mf">57.9</span><span class="p">,</span><span class="mf">73.3</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="c1">#plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;UK population data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;line of equality&#39;</span><span class="p">)</span> <span class="c1"># y=x</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f population&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f income&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="gini-plot">
+<img alt="../_images/gini-plot.png" src="../_images/gini-plot.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Income equality in the United Kingdom</span><a class="headerlink" href="#gini-plot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="first/plotstuff-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.4 </span></p>
+<section id="exercise-content">
+<p>Explain why the line <span class="math notranslate nohighlight">\(y=x\)</span> is called the line of equality.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>In an equal society each percentage bracket of the population should earn the same share of income.</p>
+</div>
+<hr class="docutils" />
+<p>The difference between the line of equality and population data is due to income inequality. Thus, to quantify the size of the inequality we can measure the difference between the line of equality and the actual population data. The larger the area enclosed, the greater the inequality.</p>
+<p>Technically, by calculating area we <em>accumulate</em> the difference between the two curves, treating the data as continuous.</p>
+<div class="exercise admonition" id="first/plotstuff-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.5 </span></p>
+<section id="exercise-content">
+<p>Calculate the area under the enclosed between the two curves shown in <a class="reference internal" href="#gini-plot"><span class="std std-numref">Fig. 2.3</span></a>.</p>
+<p><em>Hint: The formula for area of a trapezium will come in handy here.</em></p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>The area between the two curves can be calculated by subtracting the area under the data curve from the area under the line of equality.</p>
+<p>The area under the line of equality is simply the triangle area</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A=\frac{1}{2}(100\times 100)=5000.
+\end{equation*}\]</div>
+<p>The area under the data curve is given by adding up the areas of the trapezia shown</p>
+<img alt="area under data curve" class="align-center" src="../_images/gini-trapz.png" />
+<p>The area of a trapezium is given by the average height multiplied by width, which can be written as <span class="math notranslate nohighlight">\(\frac{1}{2}(a+b)h\)</span> with reference to the trapezium below:</p>
+<img alt="trapezium area" class="align-center" src="../_images/trapz.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># area of a single trapezium</span>
+<span class="k">def</span> <span class="nf">trap</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+  <span class="n">h</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="c1">#width</span>
+  <span class="n">a</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>         <span class="c1">#left y value</span>
+  <span class="n">b</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>       <span class="c1">#right y value</span>
+  <span class="n">A</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span>
+  <span class="k">return</span> <span class="n">A</span>
+
+<span class="c1"># get each trapezium area</span>
+<span class="n">T</span><span class="o">=</span><span class="p">[</span><span class="n">trap</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="c1">#total area</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">3303.5</span></code></p>
+<p>The same result can also be obtained by using the <code class="docutils literal notranslate"><span class="pre">trapz</span></code> function from the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">3303.5</span></code></p>
+<p>Therefore the area between the two curves is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+5000-3303.5=1696.5
+\end{equation*}\]</div>
+</div>
+<hr class="docutils" />
+<p>The area between the two curves cannot be larger than the total area under the line <span class="math notranslate nohighlight">\(y=x\)</span>. Therefore, we can <em>scale</em> the result to a value in the range [0,1] by dividing by this area. The scaled value is called the <a class="reference external" href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/theginicoefficient">Gini coefficient</a>. A larger value of the Gini coefficient implies greater inequality. Our estimate for the UK data gives a Gini coefficient of 33.93. This result is quite close to the value of given by the World Bank, which is 35.1.</p>
+<p>Historic Gini coefficient values can be downloaded from <a class="reference external" href="https://data.worldbank.org/indicator/SI.POV.GINI">The World Bank</a>. The dataset is not complete, but for many countries these is enough information available to recognise trends. The UK data are shown in the plot below.</p>
+<figure class="align-default" id="uk-time-gini">
+<img alt="../_images/gini.png" src="../_images/gini.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">UK Gini index over time. Dashed lines indicate changes of government.</span><a class="headerlink" href="#uk-time-gini" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="molecular-binding">
+<h2><span class="section-number">2.4. </span>Molecular binding<a class="headerlink" href="#molecular-binding" title="Permalink to this heading">#</a></h2>
+<p>A biological sample with a concentration of <span class="math notranslate nohighlight">\(N\)</span> receptors per mg of tissue is immersed in a solution containing a drug (ligand) at concentration <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>According to the ‘lock and key’ model, the ligand (key) binds to the receptors (locks) in proportion to the concentration of receptors that remain free and to the ligand concentration. We may write this as follows where <span class="math notranslate nohighlight">\(N_b\)</span> is the concentration of bound receptors, <span class="math notranslate nohighlight">\(N_f\)</span> is the concentration of free receptors, and <span class="math notranslate nohighlight">\(k_a\)</span> is the constant of proportionality for the reaction, which is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Binding_constant">affinity constant</a>:</p>
+<div class="math notranslate nohighlight" id="equation-mass-action">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-mass-action" title="Permalink to this equation">#</a></span>\[N_b = k_a c N_f.\]</div>
+<p>Since <span class="math notranslate nohighlight">\(N=(N_b+N_f)\)</span>, we may rearrange this formula to obtain</p>
+<div class="math notranslate nohighlight" id="equation-nb">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-nb" title="Permalink to this equation">#</a></span>\[N_b=\frac{k_a c N}{1+k_a c} =\frac{c N}{k_d+c}, \qquad k_d=1/k_a.\]</div>
+<p>The value <span class="math notranslate nohighlight">\(k_d\)</span> appearing in the rearrangement is called the <em>dissociation constant</em>. Notice that <span class="math notranslate nohighlight">\(k_d\)</span> must have the same dimensional units as <span class="math notranslate nohighlight">\(c\)</span> in order for the units in the equation to balance. The concentration is typically measured in molarities (M=mol/l). For more information, see (e.g) <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000649/">this paper</a></p>
+<div class="exercise admonition" id="first/plotstuff-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.6 </span></p>
+<section id="exercise-content">
+<p>Taking <span class="math notranslate nohighlight">\(k_d=0.05\text{ nM}\)</span> and <span class="math notranslate nohighlight">\(N=1.4\text{ pmol/mg}\)</span> :</p>
+<ul class="simple">
+<li><p>Make a plot of <span class="math notranslate nohighlight">\(N_b\)</span> against <span class="math notranslate nohighlight">\(c\)</span></p></li>
+<li><p>Estimate the concentration <span class="math notranslate nohighlight">\(c\)</span> when half the receptors are occupied</p></li>
+</ul>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#parameters</span>
+<span class="n">N</span><span class="o">=</span><span class="mf">1.4</span><span class="p">;</span> <span class="n">kd</span><span class="o">=</span><span class="mf">0.05</span>
+
+<span class="c1">#plot</span>
+<span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">Nb</span><span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">kd</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">Nb</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$c$ (nM)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$N_b$ (pmol/mg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.45</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Molecular binding as a function of concentration" class="align-center" src="../_images/mol-bind.png" />
+<p>It can be seen that the receptors approach full occupancy <span class="math notranslate nohighlight">\(N_b=N\)</span> as the concentration increases. This can be anticipated from <a class="reference internal" href="#equation-nb">(2.2)</a>, by writing</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+N_b = \frac{cN}{k_d+c} = \frac{N}{1+k_d/c}
+\end{equation*}\]</div>
+<p>As <span class="math notranslate nohighlight">\(c\)</span> becomes very large, the ratio <span class="math notranslate nohighlight">\(k_d/c\)</span> becomes very small. For instance, when <span class="math notranslate nohighlight">\(k_d=0.05\)</span> and <span class="math notranslate nohighlight">\(c=10\)</span> this ratio is just 0.005 and so <span class="math notranslate nohighlight">\(N_b=N/1.005\)</span>. As <span class="math notranslate nohighlight">\(c\)</span> gets larger, <span class="math notranslate nohighlight">\(N_b\)</span> gets closer to <span class="math notranslate nohighlight">\(N\)</span>. We will examine this idea in more detail when we study limits.</p>
+<p>At half occupancy, <span class="math notranslate nohighlight">\(N_b=N/2\)</span>, which gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{2}=\frac{c}{k_d+c} \quad \Rightarrow k_d=c
+\end{equation*}\]</div>
+<p>We see that the dissociation constant has the nice property that it is equal to the concentration at which half the receptors are bound.</p>
+<p>It would be nice to illustrate this on the plot, but everything is bunched up near to the left-hand side. We can spread things out by plotting the horizontal axis values on a <em>logarithmic</em> scale, as shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot</span>
+<span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># range [10^-4 to 10^1]</span>
+<span class="n">Nb</span><span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">kd</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">Nb</span><span class="p">)</span>        <span class="c1"># display on a log scale</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">1e-4</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">*</span><span class="n">N</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span><span class="n">N</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Molecular binding as a function of logscale concentration" class="align-center" src="../_images/mol-bind-log.png" />
+<p>The <code class="docutils literal notranslate"><span class="pre">semilogx</span></code> plot type scales the horizontal axis so that powers of 10 are equally spaced<span class="math notranslate nohighlight">\(^*\)</span>. This is useful for reading off data at lower concentrations.</p>
+<p>The red lines have been added to the plot to indicate the concentrations required for <span class="math notranslate nohighlight">\(N_b=N/2\)</span> and <span class="math notranslate nohighlight">\(N_b=N/4\)</span>. The code to produce them has been omitted. Could you figure out how to do it?</p>
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\(^*\)</span> <code class="docutils literal notranslate"><span class="pre">semilogy</span></code> scales the vertical axis and <code class="docutils literal notranslate"><span class="pre">loglog</span></code> scales both axes.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./first"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="numbers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Representing numbers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="exponentials.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Exponential trends</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
