@@ -624,8 +624,8 @@ k=\frac{D_{step}}{T_{step}}=\frac{D_b-D_a}{T_b-T_a}
 <section id="exponential-relationships">
 <h2><span class="section-number">3.2. </span>Exponential relationships<a class="headerlink" href="#exponential-relationships" title="Permalink to this heading">#</a></h2>
 <p>An exponential relationship has the following form, where <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are constants:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d6016fc-e8c8-42fb-8ec4-5f165e49c735">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-2d6016fc-e8c8-42fb-8ec4-5f165e49c735" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3d433408-8643-4d03-8523-4c7acda2f2a5">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-3d433408-8643-4d03-8523-4c7acda2f2a5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y=y_0 k^x.
 \end{equation}\]</div>
 <p>In the previous section on student loans we saw an example with <span class="math notranslate nohighlight">\(k=1.168.\)</span> The plot below shows how the exponential curve looks for some other values of <span class="math notranslate nohighlight">\(k\)</span>, taking <span class="math notranslate nohighlight">\(y_0=1\)</span>. By putting <span class="math notranslate nohighlight">\(x=0\)</span> we obtain <span class="math notranslate nohighlight">\(y=y_0\)</span>, so this is the value at which the curve meets the vertical axis.</p>
@@ -647,8 +647,8 @@ y=y_0 k^x.
 </figcaption>
 </figure>
 <p>Notice that the plots for <span class="math notranslate nohighlight">\(k=0.5\)</span> and <span class="math notranslate nohighlight">\(k=2.0\)</span> are mirror images in the vertical axis. This can be understood from the laws of exponents:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33a9c2fc-4a05-4405-80b7-459e0bf2cbaf">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-33a9c2fc-4a05-4405-80b7-459e0bf2cbaf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0b7f7ae3-b897-4144-a34b-28e85eb922d9">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-0b7f7ae3-b897-4144-a34b-28e85eb922d9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
 \end{equation}\]</div>
 <p>We can describe the shape of the exponential curve for values of the positive constant <span class="math notranslate nohighlight">\(k\)</span> :</p>
@@ -753,7 +753,7 @@ k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
 </figcaption>
 </figure>
 <p>Notice that in python, we obtain <span class="math notranslate nohighlight">\(e^x\)</span> by typing <code class="docutils literal notranslate"><span class="pre">exp(x)</span></code>. It is helpful to think of exponentiation as a <em>function</em>, which takes an input value <span class="math notranslate nohighlight">\(x\)</span> and returns an output value <span class="math notranslate nohighlight">\(y\)</span> as illustrated in the schematic diagram below. A graph <span class="math notranslate nohighlight">\((x,y)\)</span> can depict the (input,output) relationship.</p>
-<img alt="exp-box" class="align-center" src="first/imgs/flow1.drawio.png" />
+<img alt="exp-box" class="align-center" src="../_images/flow1.drawio.png" />
 <br>
 <p>Exponentiation is not unique in this way: any mathematical (input,output) operation can be imagined as a function. For example, we might define the “squared” function that gives the area of a square with side-lengths <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -860,13 +860,13 @@ y=\text{log10}(x) \quad \iff \quad 10^y=x \quad \iff \quad \left(e^{\ln(10)}\rig
 y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
 \end{equation*}\]</div>
 <p>Since we originally defined <span class="math notranslate nohighlight">\(y\)</span> as the base 10 logarithm of <span class="math notranslate nohighlight">\(x\)</span> we have the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3fefa6c8-00e7-4922-8f6b-f469f27d695f">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-3fefa6c8-00e7-4922-8f6b-f469f27d695f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-53101bb4-a6f8-47e5-bc65-4cb58e0650a6">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-53101bb4-a6f8-47e5-bc65-4cb58e0650a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{log10}(x) = \frac{\ln(x)}{\ln(10)}.
 \end{equation}\]</div>
 <p>By using exactly the same algebra we can dwmonstrate that the analogous result applies to the logarithm in any base:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4131dac8-b71e-4b2c-beb9-e35522288288">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-4131dac8-b71e-4b2c-beb9-e35522288288" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-783a5980-9832-45e7-b2ea-fa3f82fdc84b">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-783a5980-9832-45e7-b2ea-fa3f82fdc84b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \log_k(x) = \frac{\ln(x)}{\ln(k)}.
 \end{equation}\]</div>
 <p>We can also use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base:</p>
