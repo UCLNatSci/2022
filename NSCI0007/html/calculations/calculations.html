@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2. Tutorial 1: Computations &#8212; Scientific Computing Workbook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3. Homework" href="calculations_homework.html" />
+    <link rel="prev" title="1.1. Python Fundamentals" href="calculations_notes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/nsci0007_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing Workbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Before You Begin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Before_you_begin/getting_started.html">
+   Introduction to Cocalc and Notebooks
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Scientific Computing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="calculations_intro.html">
+   1. Computations
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="calculations_notes.html">
+     1.1. Do this first
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Tutorial 1: Computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="calculations_homework.html">
+     1.3. Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="calculations_homework_solutions.html">
+     1.4. Homework solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../rate_equations/rate_equations_intro.html">
+   2. Arrays and Plotting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rate_equations/rate_equations_notes.html">
+     2.1. Modelling Change
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rate_equations/rate_equations.html">
+     2.2. Tutorial 2: Modelling Change
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rate_equations/rate_equations_homework.html">
+     2.3. Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rate_equations/rate_equations_answers.html">
+     2.4. Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../functions/functions_intro.html">
+   3. Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../functions/functions_notes.html">
+     3.1. Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../functions/functions.html">
+     3.2. Tutorial 3: Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../functions/functions_homework.html">
+     3.3. Homework
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+   4. Tutorial 4: Measuring Space
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
+     4.4. Further Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cellular_automata/cellular_automata.html">
+   5. Tutorial 5: Cellular Automata
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/calculations/calculations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/calculations/calculations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1.2.1. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radioactive-decay">
+   1.2.2. Radioactive Decay
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-collatz-problem">
+   1.2.3. The Collatz Problem
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tutorial 1: Computations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1.2.1. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radioactive-decay">
+   1.2.2. Radioactive Decay
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-collatz-problem">
+   1.2.3. The Collatz Problem
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tutorial-1-computations">
+<h1><span class="section-number">1.2. </span>Tutorial 1: Computations<a class="headerlink" href="#tutorial-1-computations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2><span class="section-number">1.2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>We’ll start with a simple example of a Python program which simulates the growth in population of a colony of bacteria. Suppose we start with 100 cells and the population doubles every hour. How many hours will it take to reach a population of 10000 cells?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="c1"># double the population</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+400
+800
+1600
+3200
+6400
+12800
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s examine each line in turn. First, we define a <strong>variable</strong> <code class="docutils literal notranslate"><span class="pre">pop</span></code> and set its value to 100:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<p>Then we define a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop repeats a section of code while the specified condition is true:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>The code in the indented block below this line is then executed repeatedly. The line <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">double</span> <span class="pre">the</span> <span class="pre">population</span></code> is a comment and is ignored by the Python interpreter. Next, multiply <code class="docutils literal notranslate"><span class="pre">pop</span></code> by 2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal notranslate"><span class="pre">print</span></code> the value of <code class="docutils literal notranslate"><span class="pre">pop</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Execution terminates once the condition <code class="docutils literal notranslate"><span class="pre">pop</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> becomes false.</p>
+<p>When we run the code, we can see that it prints 7 values, so it must take 7 hours for the population to exceed 10000. But let’s adapt the code so that it prints this number. We’ll need to introduce a second variable to keep track of the number of hours:</p>
+<div class="exercise admonition" id="exercise_1_6">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.6 </span></p>
+<div class="section" id="exercise-content">
+<p>Replace the two comments in the code below so that it correctly prints the number of hours.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># set i to zero</span>
+<span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="c1"># increase i by one</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of hours:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, suppose the the population growth rate is <span class="math notranslate nohighlight">\(1.02\)</span> rather than <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<div class="exercise admonition" id="exercise_1_7">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.7 </span></p>
+<div class="section" id="exercise-content">
+<p>Change the code above so that the growth rate is <span class="math notranslate nohighlight">\(1.02\)</span>.</p>
+</div>
+</div>
+<p>Because the growth rate is much slower, we’re getting to an enormous list of numbers. So let’s print it only once every 24 hours instead.</p>
+<div class="exercise admonition" id="exercise_1_8">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.8 </span></p>
+<div class="section" id="exercise-content">
+<p>Replace the line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">24</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>so that the population size is only displayed every 24 hours.</p>
+</div>
+</div>
+</div>
+<div class="section" id="radioactive-decay">
+<h2><span class="section-number">1.2.2. </span>Radioactive Decay<a class="headerlink" href="#radioactive-decay" title="Permalink to this headline">¶</a></h2>
+<p>The half-life of a radioactive sample is the time taken for the activity of the sample (measured in Becquerels, Bq) to reduce by one-half. For example, Iodine-131 is a radioisotope with a half-life <span class="math notranslate nohighlight">\(t_\mathrm{half} = 8.02\)</span> days. If a sample of I-131 has an initial activity of  <span class="math notranslate nohighlight">\(5.00 \times 10^{12}~\mathrm{Bq}\)</span> then after <span class="math notranslate nohighlight">\(8.02\)</span> days its activity will be <span class="math notranslate nohighlight">\(2.50 \times 10^{12}~\mathrm{Bq}\)</span>, and after <span class="math notranslate nohighlight">\(16.04\)</span> days its activity will be  <span class="math notranslate nohighlight">\(1.25 \times 10^{12}~\mathrm{Bq}\)</span> and so on.</p>
+<p>In order to model the decay of Iodine-131 we first need to convert the half-life to the daily decay rate, i.e. the proportion of a sample that decays in one day. We can do this using the following formula:</p>
+<div class="math notranslate nohighlight">
+\[r = \left(\frac{1}{2}\right) ^ {1/t_\mathrm{half}}\]</div>
+<div class="exercise admonition" id="exercise_1_9">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.9 </span></p>
+<div class="section" id="exercise-content">
+<p>Use the formula above to calculate the daily decay rate of Iodine-131.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">half_life</span> <span class="o">=</span> <span class="mf">8.02</span>
+<span class="n">r</span> <span class="o">=</span> <span class="c1"># your calculation </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s suppose we have a sample of I-131 with an initial activity of <span class="math notranslate nohighlight">\(1.67 \times 10^{12}~\mathrm{Bq}\)</span>.</p>
+<div class="exercise admonition" id="exercise_1_10">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.10 </span></p>
+<div class="section" id="exercise-content">
+<p>Write a program which calculates the number of days it takes for the sample to reach an activity of <span class="math notranslate nohighlight">\(10000\)</span> Becquerels. What is the activity after <span class="math notranslate nohighlight">\(8\)</span> days? What value would you expect?</p>
+</div>
+</div>
+<div class="exercise admonition" id="exercise_1_11">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.11 </span></p>
+<div class="section" id="exercise-content">
+<p>Change your code so that it prints the activity of the sample once every 7 days.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-collatz-problem">
+<h2><span class="section-number">1.2.3. </span>The Collatz Problem<a class="headerlink" href="#the-collatz-problem" title="Permalink to this headline">¶</a></h2>
+<p>Given a positive integer <span class="math notranslate nohighlight">\(n\)</span>, the <em>Collatz Operation</em> is defined as follows:</p>
+<ul class="simple">
+<li><p>If the <span class="math notranslate nohighlight">\(n\)</span> is even, divide it by two</p></li>
+<li><p>If the <span class="math notranslate nohighlight">\(n\)</span> is odd, triple it and add one</p></li>
+</ul>
+<p>Repeatedly applying the Collatz Operation results in a sequence of integers which eventually reaches the number 1.</p>
+<p>For example, the <em>Collatz Sequence</em> for <span class="math notranslate nohighlight">\(n = 5\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[5, 16, 8, 4, 2, 1.\]</div>
+<div class="exercise admonition" id="exercise_1_12">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.12 </span></p>
+<div class="section" id="exercise-content">
+<p>Write a program which generates the Collatz Sequence for any given positive integer <span class="math notranslate nohighlight">\(n\)</span>. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># your code to generate the Collatz Sequence</span>
+</pre></div>
+</div>
+<p>should produce the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="mi">16</span>
+<span class="mi">8</span>
+<span class="mi">4</span>
+<span class="mi">2</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Given a positive integer <span class="math notranslate nohighlight">\(n\)</span>, define the <em>Collatz Number</em> to be the length of the Collatz Sequence for <span class="math notranslate nohighlight">\(n\)</span>. For example, the Collatz number of 5 is 6.</p>
+<div class="exercise admonition" id="exercise_1_13">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.13 </span></p>
+<div class="section" id="exercise-content">
+<p>Write a program which calculates and prints the Collatz number of a given number <span class="math notranslate nohighlight">\(n\)</span>. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># your code to generate the Collatz Number</span>
+</pre></div>
+</div>
+<p>should produce the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Collatz</span> <span class="n">number</span> <span class="n">of</span> <span class="mi">5</span> <span class="ow">is</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="exercise_1_14">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.14 </span></p>
+<div class="section" id="exercise-content">
+<p>Challenge!</p>
+<p>Write a program which finds the smallest number <span class="math notranslate nohighlight">\(n\)</span> whose Collatz Number is greater than 200.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./calculations"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="calculations_notes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.1. </span>Python Fundamentals</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="calculations_homework.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Homework</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
