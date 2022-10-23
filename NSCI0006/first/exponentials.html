@@ -1,0 +1,996 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>3. Exponential trends &#8212; Mathematics for Natural Sciences B</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Curve fitting" href="curvefit.html" />
+    <link rel="prev" title="2. Graphing data" href="plotstuff.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA TRENDS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   1. Representing numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotstuff.html">
+   2. Graphing data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Exponential trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="curvefit.html">
+   4. Curve fitting
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  RATES OF CHANGE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/pfrac.html">
+   5. Rational functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/limits.html">
+   6. Know your limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/placeholder.html">
+   7. Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DYNAMIC MODELS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE STUDIES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/chemicals.html">
+   8. Chemical concentrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/freshwater.html">
+   9. Freshwater sustainability
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffirst/exponentials.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/first/exponentials.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#student-debt-in-england">
+   3.1. Student debt in England
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exponential-relationships">
+   3.2. Exponential relationships
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-natural-exponent">
+   3.3. The natural exponent
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-natural-logarithm">
+   3.4. The natural logarithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-tremendously-useful-result">
+   3.5. A tremendously useful result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-your-base-are-belong-to-us">
+   3.6. All your base are belong to us
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problems-for-you-to-try">
+   3.7. Problems for you to try
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exponential trends</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#student-debt-in-england">
+   3.1. Student debt in England
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exponential-relationships">
+   3.2. Exponential relationships
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-natural-exponent">
+   3.3. The natural exponent
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-natural-logarithm">
+   3.4. The natural logarithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-tremendously-useful-result">
+   3.5. A tremendously useful result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-your-base-are-belong-to-us">
+   3.6. All your base are belong to us
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problems-for-you-to-try">
+   3.7. Problems for you to try
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exponential-trends">
+<h1><span class="section-number">3. </span>Exponential trends<a class="headerlink" href="#exponential-trends" title="Permalink to this heading">#</a></h1>
+<p>This chapter introduces the natural exponent and natural logarithm. After working through this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>Calculate absolute and relative growth rates from a given dataset</p></li>
+<li><p>Understand the relationship between exponential behaviour and growth rates</p></li>
+<li><p>Manipulate exponentials and logarithms algebraically</p></li>
+</ul>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://commonslibrary.parliament.uk/research-briefings/sn01079/#:~:text=%C2%A3460%20billion">Scale of student loans in England</a></p>
+<p>The Government forecasts the value of outstanding loans to reach around £460 billion (2021-22 prices) by the mid2040s.</p>
+</div>
+<section id="student-debt-in-england">
+<h2><span class="section-number">3.1. </span>Student debt in England<a class="headerlink" href="#student-debt-in-england" title="Permalink to this heading">#</a></h2>
+<p>The table below shows how the amount of student debt in England has changed since 2005. Data are obtained from <a class="reference external" href="https://researchbriefings.files.parliament.uk/documents/SN01079/SN01079.pdf">House of Commons Student Loan Statistics</a> [page 35, table 2].</p>
+<table class="table" id="debt-table">
+<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Public student loan debt of English domiciled students and EU students studying in England (£ million)</span><a class="headerlink" href="#debt-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>2005 <th>2006</th> <th>2007</th> <th>2008</th> <th>2009</th> <th>2010</th> <th>2011</th> <th>2012</th> <th>2013</th> </tr><tr><td>13033</td> <td>15322</td> <td>18116</td> <td>21944</td> <td>25963</td> <td>30489</td> <td>35186</td> <td>40272</td> <td>45903</td></tr><tr><th>2014</th> <th>2015</th> <th>2016</th> <th>2017</th> <th>2018</th> <th>2019</th> <th>2020</th> <th>2021</th> <th>2022</th></tr><tr><td>54355</td> <td>64735</td> <td>76253</td> <td>89344</td> <td>104457</td> <td>121813</td> <td>140093</td> <td>160594</td> <td>181612</td></tr></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="first/exponentials-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
+<section id="exercise-content">
+<p>Calculate the yearly ratios of student loan debt, and hence calculate the average (mean) annual growth in student loan debt since 2005 as a percentage figure.</p>
+<p>If the historic growth trend continues, in what year will student loan debt reach twice the figure that it is today?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Code to calculate and print the results is given below. The yearly ratios are quite consistent, ranging from a minimum of 1.131 to a maximum of 1.211. The mean ratio is 1.168, and so the mean annual growth in student loan debt since 2005 is 16.8%.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#Copy the data</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">2022</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">13033</span><span class="p">,</span> <span class="mi">15322</span><span class="p">,</span> <span class="mi">18116</span><span class="p">,</span> <span class="mi">21944</span><span class="p">,</span> <span class="mi">25963</span><span class="p">,</span> <span class="mi">30489</span><span class="p">,</span> <span class="mi">35186</span><span class="p">,</span> <span class="mi">40272</span><span class="p">,</span> <span class="mi">45903</span><span class="p">,</span>
+  <span class="mi">54355</span><span class="p">,</span> <span class="mi">64735</span><span class="p">,</span> <span class="mi">76253</span><span class="p">,</span> <span class="mi">89344</span><span class="p">,</span> <span class="mi">104457</span><span class="p">,</span> <span class="mi">121813</span><span class="p">,</span> <span class="mi">140093</span><span class="p">,</span> <span class="mi">160594</span><span class="p">,</span> <span class="mi">181612</span><span class="p">])</span>
+
+<span class="c1">#Calculate the ratios</span>
+<span class="n">r</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">/</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calculte the mean increase as a fraction</span>
+<span class="n">mu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean annual growth: </span><span class="si">{:&lt;5.1%}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mu</span><span class="p">))</span>
+
+<span class="c1">#---------------------------------------------------------------------------</span>
+<span class="c1">#The following lines are just to print the results in &quot;pretty&quot; format</span>
+
+<span class="nb">dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">),</span><span class="s1">&#39;ratio&#39;</span><span class="p">:</span><span class="n">r</span><span class="p">}</span>         <span class="c1">#create data dictionary</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>                           <span class="c1">#convert to dataframe (table)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="c1">#adjust format of ratio column</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+<p>Inspecting the data in <a class="reference internal" href="#debt-table"><span class="std std-numref">Table 3.1</span></a> we can see that the debt figure doubled roughly every five years. If the growth rate remains roughly constant (as it has over the last 17 years) we can expect that the student loan debt will reach twice its current value by 2027.</p>
+<p>The five-year result can be related to the annual growth figure that we calculated. If we take the amount in a given year to be <span class="math notranslate nohighlight">\(D_0\)</span> then the amount in the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> subsequent year should be given by the expression</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D=D_0(1.168)^n.
+\end{equation*}\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(n=4\)</span> gives a result a bit less than <span class="math notranslate nohighlight">\(2D_0\)</span>, whilst taking <span class="math notranslate nohighlight">\(n=5\)</span> gives a result a bit bigger than <span class="math notranslate nohighlight">\(2D_0\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="exercise admonition" id="first/exponentials-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
+<section id="exercise-content">
+<p>Plot the student loan data <span class="math notranslate nohighlight">\((t,D)\)</span> given in <a class="reference internal" href="#debt-table"><span class="std std-numref">Table 3.1</span></a> together with the curve defined by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D=D_0 (1+r)^{t-t_0}
+\end{equation*}\]</div>
+<p>with <span class="math notranslate nohighlight">\(r=0.168\)</span>, <span class="math notranslate nohighlight">\(t_0=2005\)</span>, <span class="math notranslate nohighlight">\(D_0=13033\)</span>.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">D0</span><span class="o">=</span><span class="mi">13033</span><span class="p">;</span> <span class="n">t0</span><span class="o">=</span><span class="mi">2005</span><span class="p">;</span> <span class="n">r</span><span class="o">=</span><span class="mf">0.168</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">2022</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">D0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;ok&#39;</span><span class="p">)</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">D</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">2005</span><span class="p">,</span><span class="mi">2010</span><span class="p">,</span><span class="mi">2015</span><span class="p">,</span><span class="mi">2020</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Student debt (£ million)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="student-debt" class="align-center" src="../_images/student-debt.png" />
+<p>Notice that when plotting the curve we have evaluated the expression for <span class="math notranslate nohighlight">\(D\)</span> not only at the whole-number values of <span class="math notranslate nohighlight">\(t\)</span>, but also in between. We have used a <em>continuous</em> function to represent <em>discrete</em> data.</p>
+</div>
+<hr class="docutils" />
+<div class="exercise admonition" id="ex-33">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
+<section id="exercise-content">
+<p>Using the function <span class="math notranslate nohighlight">\(D=D_0 (1.168)^T\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is measured in years, give estimates of the monthly, daily and hourly fractional growth. Convert your answers to fractional growth rates by dividing by the timescale.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>The fractional growth in an amount of time <span class="math notranslate nohighlight">\(T_{step}\)</span> is given by the formula below:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\frac{D_{step}}{D}=\frac{D_0(1.168)^{T+T_{step}} - D_0(1.168)^T}{D_0(1.168)^T}=(1.168)^{T_{step}}-1.\end{equation*}\]</div>
+<p>To convert to a rate we divide the result by <span class="math notranslate nohighlight">\(T_{step}\)</span></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Timescale</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T_{step}\)</span></p></th>
+<th class="head"><p>growth fraction</p></th>
+<th class="head"><p>growth rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Monthly</p></td>
+<td><p><span class="math notranslate nohighlight">\(1/12\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.30\times 10^{-2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.156302\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Daily</p></td>
+<td><p><span class="math notranslate nohighlight">\(1/365\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.26\times 10^{-4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.155326\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Hourly</p></td>
+<td><p><span class="math notranslate nohighlight">\(1/8760\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.77\times 10^{-7}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.155294\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>We can represent what we have done graphically:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<img alt="rise-over-run" class="align-center" src="../_images/rat-grow.png" />
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>The slope of the line connecting points shown on the curve is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+k=\frac{D_{step}}{T_{step}}=\frac{D_b-D_a}{T_b-T_a}
+\end{equation*}\]</div>
+<p>This value is the absolute growth rate. Dividing by the initial value <span class="math notranslate nohighlight">\(D_a\)</span> gives the relative (fractional) growth rate.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="exponential-relationships">
+<h2><span class="section-number">3.2. </span>Exponential relationships<a class="headerlink" href="#exponential-relationships" title="Permalink to this heading">#</a></h2>
+<p>An exponential relationship has the following form, where <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are constants:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-890e2163-1780-4153-83fd-8f0bb3eaf52b">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-890e2163-1780-4153-83fd-8f0bb3eaf52b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y=y_0 k^x.
+\end{equation}\]</div>
+<p>In the previous section on student loans we saw an example with <span class="math notranslate nohighlight">\(k=1.168.\)</span> The plot below shows how the exponential curve looks for some other values of <span class="math notranslate nohighlight">\(k\)</span>, taking <span class="math notranslate nohighlight">\(y_0=1\)</span>. By putting <span class="math notranslate nohighlight">\(x=0\)</span> we obtain <span class="math notranslate nohighlight">\(y=y_0\)</span>, so this is the value at which the curve meets the vertical axis.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">0.5</span><span class="o">**</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">1.5</span><span class="o">**</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">2.0</span><span class="o">**</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="exp-demo">
+<img alt="../_images/exponentials_1_0.png" src="../_images/exponentials_1_0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Exponential function <span class="math notranslate nohighlight">\(y=k^x\)</span> for <span class="math notranslate nohighlight">\(k=0.5\)</span> [black], <span class="math notranslate nohighlight">\(k=1.5\)</span> [red], <span class="math notranslate nohighlight">\(k=2.0\)</span> [blue].</span><a class="headerlink" href="#exp-demo" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Notice that the plots for <span class="math notranslate nohighlight">\(k=0.5\)</span> and <span class="math notranslate nohighlight">\(k=2.0\)</span> are mirror images in the vertical axis. This can be understood from the laws of exponents:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fabe9b73-09dd-4570-8353-082726e7de94">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-fabe9b73-09dd-4570-8353-082726e7de94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
+\end{equation}\]</div>
+<p>We can describe the shape of the exponential curve for values of the positive constant <span class="math notranslate nohighlight">\(k\)</span> :</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(k&gt;1\)</span> it starts off quite flat, but grows quickly as <span class="math notranslate nohighlight">\(x\)</span> increases.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(k&lt;1\)</span> it first decreases quickly towards zero before a slow decline.</p></li>
+</ul>
+<p>A more precise description is given by looking again at the growth rate. As discussed in <a class="reference internal" href="#ex-33"><span class="std std-numref">Exercise 3.3</span></a>, the absolute growth rate is given by</p>
+<div class="math notranslate nohighlight" id="equation-rgr">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-rgr" title="Permalink to this equation">#</a></span>\[\frac{y_{step}}{x_{step}}=\frac{k^x(k^{x_{step}}-1)}{x_{step}}=y\left(\frac{k^{x_{step}}-1}{x_{step}}\right)\]</div>
+<p>The final value in brackets is the relative growth rate, which is constant for a particular value of <span class="math notranslate nohighlight">\(x_{step}\)</span>. Therefore the absolute growth rate for this function is proportional to <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>This is why we see exponential growth in problems where the <em>rate of change</em> in a quantity is proportional to the quantity itself. Examples include :</p>
+<ul class="simple">
+<li><p>compound interest, where the amount of interest is proportional to the cash amount</p></li>
+<li><p>population growth<span class="math notranslate nohighlight">\(^*\)</span>, where the number of births is proportional to the population size.</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(^*\)</span> This is only true to an extent. Populations typically do not grow exponentially over the medium-to-long term. See (for example) <a class="reference external" href="https://ourworldindata.org/world-population-growth#:~:text=A%20common%20question%20we%27re,in%20the%20number%20of%20people.">ourworldindata.org</a></p>
+<p>The expression <a class="reference internal" href="#equation-rgr">(3.3)</a> depends on <span class="math notranslate nohighlight">\(x_{step}\)</span>, but we are interested in the <em>instantaneous</em> growth rate  as <span class="math notranslate nohighlight">\(x_{step}\)</span> approaches zero. Numerically we cannot take <span class="math notranslate nohighlight">\(x_{step}=0\)</span> since “0/0” is indeterminate. However, we can try some small values.</p>
+<div class="exercise admonition" id="first/exponentials-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.4 </span></p>
+<section id="exercise-content">
+<p>Calculate the relative growth rate for some values of <span class="math notranslate nohighlight">\(k\)</span> with <code class="docutils literal notranslate"><span class="pre">xstep=1e-10</span></code>. For what value of <span class="math notranslate nohighlight">\(k\)</span> is the relative growth rate equal to one? See of you can find this value to 3 decimal places.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>A plot can help us see the relative growth rate for different values of <span class="math notranslate nohighlight">\(k\)</span> at a glance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">xstep</span> <span class="o">=</span> <span class="mf">1e-10</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">**</span><span class="n">xstep</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">xstep</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="quick-plot" class="align-center" src="../_images/exponentials_1_01.png" />
+<p>From the plot we can see that the value giving a relative growth rate of one is around <span class="math notranslate nohighlight">\(k=2.7\)</span>. Trying some different values of <span class="math notranslate nohighlight">\(k\)</span> allows us to bracket the value to within the range <span class="math notranslate nohighlight">\((2.7182, 2.7183)\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.7182</span><span class="p">,</span> <span class="mf">2.7183</span><span class="p">])</span>
+<span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">**</span><span class="n">xstep</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">xstep</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">[0.999969</span>&#160;&#160; <span class="pre">1.00000674]</span></code></p>
+<p>Therefore we can say that to 3dp, <span class="math notranslate nohighlight">\(k=2.718\)</span>.</p>
+</div>
+</section>
+<section id="the-natural-exponent">
+<h2><span class="section-number">3.3. </span>The natural exponent<a class="headerlink" href="#the-natural-exponent" title="Permalink to this heading">#</a></h2>
+<p>The natural exponent <span class="math notranslate nohighlight">\(e\)</span> can be defined as the constant for which the relative growth rate of <span class="math notranslate nohighlight">\(e^x\)</span> is equal to one. In the previous section you found this value to three decimal places. Its value can be obtained to higher precision in python by using the <code class="docutils literal notranslate"><span class="pre">exp</span></code>  function from the numpy library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">2.718281828459045</span></code></p>
+<p>If you need the value of <span class="math notranslate nohighlight">\(e\)</span> to even higher precision, this is possible with the mpmath library, but for almost all practical purposes the numpy library value has plenty of accuracy. Computations with more digits are slower to carry out due to the way that computer memory is allocated, and so we should only use higher accuracy when <em>really</em> necessary. Here are the first 1000 digits of <span class="math notranslate nohighlight">\(e\)</span> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mpmath</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="n">m</span><span class="o">.</span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">mp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921817413596629043572900334295260595630738132328627943490763233829880753195251019011573834187930702154089149934884167509244761460668082264800168477411853742345442437107539077744992069551702761838606261331384583000752044933826560297606737113200709328709127443747047230696977209310141692836819025515108657463772111252389784425056953696770785449969967946864454905987931636889230098793127736178215424999229576351482208269895193668033182528869398496465105820939239829488793320362509443117301238197068416140397019837679320683282376464804295311802328782509819455815301756717361332069811250996181881593041690351598888519345807273866738589422879228499892086805825749279610484198444363463244968487560233624827041978623209002160990235304369941849146314093431738143640546253152096183690888707016768396424378140592714563549061303107208510383750510115747704171898610687396965521267154688957035035</span></code></p>
+<p>The natural exponent can be used to capture exponential relationships with relative growth rates that are not equal to one. Consider an expression of the following form, where <span class="math notranslate nohighlight">\(\lambda\)</span> is a constant:</p>
+<div class="math notranslate nohighlight">
+\[y=e^{\lambda x}.\]</div>
+<p>The relative growth rate is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+
+\frac{1}{y}\frac{y_{step}}{x_{step}}&amp;=\frac{e^{\lambda x_{step}}-1}{x_{step}}\\
+                         &amp;=\lambda \frac{e^q-1}{q}, \quad q=\lambda x_{step}
+
+\end{align*}\]</div>
+<p>We want to evaluate this expression as <span class="math notranslate nohighlight">\(x_{step}\)</span> approaches zero, which is the same as allowing <span class="math notranslate nohighlight">\(q\)</span> to approach zero. Therefore, the relative growth rate of <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> is found to be <span class="math notranslate nohighlight">\(\lambda\)</span>. This helps us to recognise why <span class="math notranslate nohighlight">\(e\)</span> is the “natural” exponent.</p>
+<p>We can also relate other exponential forms to the natural exponent. By way of example, the plot below shows a comparison between</p>
+<div class="math notranslate nohighlight">
+\[y_1=e^{0.693 x}, \qquad y_2=2^{x}.\]</div>
+<p>It can be seen that the two functions are very close over the range of values plotted. By adjusting the value of <span class="math notranslate nohighlight">\(\lambda\)</span> in the expression <span class="math notranslate nohighlight">\(y=e^{\lambda x}\)</span> it is possible to make the result identical to <span class="math notranslate nohighlight">\(2^x\)</span>. We will see how this can be done in the next section.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">y1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.693</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y2</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="n">x</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">y1</span><span class="o">-</span><span class="n">y2</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="exp02">
+<img alt="../_images/exponentials_1_02.png" src="../_images/exponentials_1_02.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text"><span class="item"> <strong>Top :</strong><br> <strong>Bottom :</strong>  </span><span class="item"><span class="math notranslate nohighlight">\(y_1=e^{0.693x}\)</span> and <span class="math notranslate nohighlight">\(y_2=2^x\)</span> (overlapping)<br><span class="math notranslate nohighlight">\(|y_2-y_1|\)</span></span></span><a class="headerlink" href="#exp02" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Notice that in python, we obtain <span class="math notranslate nohighlight">\(e^x\)</span> by typing <code class="docutils literal notranslate"><span class="pre">exp(x)</span></code>. It is helpful to think of exponentiation as a <em>function</em>, which takes an input value <span class="math notranslate nohighlight">\(x\)</span> and returns an output value <span class="math notranslate nohighlight">\(y\)</span> as illustrated in the schematic diagram below. A graph <span class="math notranslate nohighlight">\((x,y)\)</span> can depict the (input,output) relationship.</p>
+<img alt="exp-box" class="align-center" src="../_images/flow1.drawio.png" />
+<br>
+<p>Exponentiation is not unique in this way: any mathematical (input,output) operation can be imagined as a function. For example, we might define the “squared” function that gives the area of a square with side-lengths <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">9</span></code></p>
+<div class="exercise admonition" id="first/exponentials-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.5 </span></p>
+<section id="exercise-content">
+<p>If you want to approximate the time it takes for an exponentially growing quantity to double, you can divide 70 by the percentage growth rate. For example, a population growing at 2% a year has a doubling time of about 35 years. Find an exact equation for the doubling time and explain why the rule of 70 works as an approximation.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Let <span class="math notranslate nohighlight">\(T\)</span> be the doubling time:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+2=e^{\lambda T} \quad \Rightarrow \quad T=\frac{\ln(2)}{\lambda}
+\end{equation*}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(\lambda\)</span> is the growth rate given as a fraction.</p>
+<p>If <span class="math notranslate nohighlight">\(\hat{\lambda}\)</span> is the percentage growth rate then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+T=\frac{100\ln(2)}{\hat{\lambda}}.
+\end{equation*}\]</div>
+<p>The value of 70 is a whole number approximation to <span class="math notranslate nohighlight">\(100\ln(2)\)</span>.</p>
+</div>
+</section>
+<section id="the-natural-logarithm">
+<h2><span class="section-number">3.4. </span>The natural logarithm<a class="headerlink" href="#the-natural-logarithm" title="Permalink to this heading">#</a></h2>
+<p>We now turn our interest to the <em>inverse</em> of the exponential function, which poses the following problem:</p>
+<blockquote>
+<div><p>Given a certain value <span class="math notranslate nohighlight">\(y\)</span>, what value of <span class="math notranslate nohighlight">\(x\)</span> satisfies the relationship <span class="math notranslate nohighlight">\(y=e^x\)</span> ?</p>
+</div></blockquote>
+<p>We will need to solve this problem to do algebra involving exponentials. Defining the exponential without its inverse would be like defining multiplication without division. In non-mathematical terms it would be like having the ability to put your shoes on but no way to take them off again!</p>
+<p>Thinking about the (input,output) relationship of the exponential function, we can see that the (output,input) graph can be obtained by swapping the x and y axes. This is equivalent to a reflection in the line <span class="math notranslate nohighlight">\(y=x\)</span>, as shown in the figure below. This relationship with the inverse is true for all functions. For example, the graph of the square root function can be obtained by reflecting the squared function in the line <span class="math notranslate nohighlight">\(y=x\)</span>.</p>
+<p>We call the inverse of the (natural) exponential function the natural logarithm, and we denote it by <span class="math notranslate nohighlight">\(\ln(x)\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$y=e^x$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$y=\ln(x)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="s1">&#39;k&#39;</span><span class="p">)</span> <span class="c1">#y=x</span>
+
+<span class="c1">#prettify</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="exp03">
+<img alt="../_images/exponentials_3_0.png" src="../_images/exponentials_3_0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">The exponential function together with its inverse.</span><a class="headerlink" href="#exp03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can get an estimate of the natural logarithm by reading off from the graph. For instance, we can see that <span class="math notranslate nohighlight">\(e^x=2\)</span> is obtained when <span class="math notranslate nohighlight">\(x\)</span> is roughly equal to 0.7. We can obtain a more precise result by bracketing the value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">([</span><span class="mf">0.6931</span><span class="p">,</span><span class="mf">0.6932</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">[1.99990564,</span> <span class="pre">2.00010564]</span></code></p>
+<p>The value lies between (0.6931,0.6932) so we can conclude that it is 0.693 to 3 decimal places. Its value can be obtained to higher precision in python by using the <code class="docutils literal notranslate"><span class="pre">log</span></code> function from the numpy library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">0.6931471805599453</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">log</span></code> function from the numpy library gives the natural logarithm. This can confuse some students who have previously encountered the logarithm in base 10. The logarithm in base 10 can be found using the <code class="docutils literal notranslate"><span class="pre">log10</span></code> function from the numpy library. We will discuss different base logarithms in <a class="reference internal" href="#sec-base"><span class="std std-numref">Section 3.6</span></a>.</p>
+</section>
+<section id="a-tremendously-useful-result">
+<h2><span class="section-number">3.5. </span>A tremendously useful result<a class="headerlink" href="#a-tremendously-useful-result" title="Permalink to this heading">#</a></h2>
+<p>Due to the way that we have defined the logarithm as the inverse of the exponential function we can say that the following two expressions are logically equivalent, as indicated by the symbol <span class="math notranslate nohighlight">\(\iff\)</span>, which can be read as “implies and implies that”:</p>
+<div class="math notranslate nohighlight" id="equation-expln">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-expln" title="Permalink to this equation">#</a></span>\[y=e^x \quad \iff \quad x=\ln(y)\]</div>
+<p>We can also combine these equivalent statements into a single result, which highlights the way that inverse functions work:</p>
+<div class="math notranslate nohighlight" id="equation-lnexp">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-lnexp" title="Permalink to this equation">#</a></span>\[x=e^{\ln(x)} \qquad \text{ or } \qquad x=\ln(e^{x}).\]</div>
+<p>In either of the two forms above, we see that applying one function followed by its inverse takes us back to where we started. In non-mathematical terms it’s like putting your shoes on and then taking them off again.</p>
+<p>The result <a class="reference internal" href="#equation-lnexp">(3.5)</a> can be used to make the following comparison:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+k^x=\left(e^{\ln(k)}\right)^x = e^{\ln(k)x}
+\end{equation*}\]</div>
+<p>The result on the RHS is of the form <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> with <span class="math notranslate nohighlight">\(\lambda=\ln(k)\)</span>. We have learned that <span class="math notranslate nohighlight">\(k^x\)</span> is equivalent to “natural” exponential growth with a relative growth rate factor <span class="math notranslate nohighlight">\(\lambda=\ln(k)\)</span>. This now explains the value <span class="math notranslate nohighlight">\(\ln(2)\simeq 0.693\)</span> that was used to match the curves in <a class="reference internal" href="#exp02"><span class="std std-numref">Fig. 3.2</span></a>.</p>
+</section>
+<section id="all-your-base-are-belong-to-us">
+<span id="sec-base"></span><h2><span class="section-number">3.6. </span>All your base are belong to us<a class="headerlink" href="#all-your-base-are-belong-to-us" title="Permalink to this heading">#</a></h2>
+<p>The natural logarithm is not the only logarithm that we can define. We could find the inverse of any expression of the form <span class="math notranslate nohighlight">\(k^x\)</span>. A commonly used example is the logarithm corresponding to <span class="math notranslate nohighlight">\(y=10^x\)</span>, which we call the logarithm in base 10. It is often used because of our decimal number system, which uses powers of 10.</p>
+<p>The logarithm in base 10 can also be related to the logarithm in base <span class="math notranslate nohighlight">\(e\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\text{log10}(x) \quad \iff \quad 10^y=x \quad \iff \quad \left(e^{\ln(10)}\right)^y=x \quad \iff \quad e^{y\ln(10)}=x.
+\end{equation*}\]</div>
+<p>Taking logarithm of both sides in the final expression:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
+\end{equation*}\]</div>
+<p>Since we originally defined <span class="math notranslate nohighlight">\(y\)</span> as the base 10 logarithm of <span class="math notranslate nohighlight">\(x\)</span> we have the result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-af0b70ed-126c-45e3-8c7d-6e1006d72ee7">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-af0b70ed-126c-45e3-8c7d-6e1006d72ee7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\text{log10}(x) = \frac{\ln(x)}{\ln(10)}.
+\end{equation}\]</div>
+<p>By using exactly the same algebra we can dwmonstrate that the analogous result applies to the logarithm in any base:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-83bb3e3c-8240-4aa3-bdfd-d8700eb004dd">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-83bb3e3c-8240-4aa3-bdfd-d8700eb004dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\log_k(x) = \frac{\ln(x)}{\ln(k)}.
+\end{equation}\]</div>
+<p>We can also use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base:</p>
+<div class="admonition-laws-of-logarithms admonition">
+<p class="admonition-title">Laws of logarithms</p>
+<p>The following useful results can be derived:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\log(ab) = \log(a)+\log(b)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\log(x^n) = n\log(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\log(a/b) = \log(a)-\log(b)\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="problems-for-you-to-try">
+<h2><span class="section-number">3.7. </span>Problems for you to try<a class="headerlink" href="#problems-for-you-to-try" title="Permalink to this heading">#</a></h2>
+<p><strong>[1]</strong> Write the expression <span class="math notranslate nohighlight">\(\log(32)-3\log(4)+\log(3)\)</span> as a single logarithm</p>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(\log\left(\frac{32\times 3}{4^4}\right)=\log\left(\frac{3}{2}\right)\)</span></p>
+</div>
+<p><strong>[2]</strong> Find the value of <span class="math notranslate nohighlight">\(x\)</span> for which <span class="math notranslate nohighlight">\(\log_2(x^2+4x+3)-\log_2(x^2+x)=4\)</span></p>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(\log_2\left(\frac{x^2+4x+3}{x^2+x}\right)=4\)</span> gives <span class="math notranslate nohighlight">\(\frac{x^2+4x+3}{x^2+x}=2^4\)</span>.</p>
+<p>This which rearranges to a quadratic with solutions <span class="math notranslate nohighlight">\(x=-1\)</span>, <span class="math notranslate nohighlight">\(x=1/5\)</span>.</p>
+<p>The negative solution is not applicable. Why?</p>
+</div>
+<p><strong>[3]</strong> Solve the problem <span class="math notranslate nohighlight">\(3^x=8\)</span> by taking logarithms</p>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(x\log(3)=\log(8)\)</span> gives <span class="math notranslate nohighlight">\(x=\frac{\log(8)}{\log(3)}=1.89\)</span> (3sf)</p>
+</div>
+<p><strong>[4]</strong> Calculate the result <span class="math notranslate nohighlight">\(\log_7(29)\)</span> in terms of the natural logarithm</p>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(\log_7(29)=\frac{\ln(20)}{\ln(7)}\)</span> or we can solve this problem as follows:</p>
+<p>Let <span class="math notranslate nohighlight">\(y=\log_7(29)\)</span>. Then <span class="math notranslate nohighlight">\(7^y=29\)</span>.</p>
+<p>Using <span class="math notranslate nohighlight">\(7=e^{\ln(7)}\)</span> gives <span class="math notranslate nohighlight">\(y\ln(7)=29\)</span> from which the result is immediately obtained.</p>
+</div>
+<p><strong>[5]</strong> Solve the problem <span class="math notranslate nohighlight">\(\log(x)+\ln(x)=2\)</span></p>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(\frac{\ln(x)}{\ln(10)}+\ln(x)=2\)</span> gives <span class="math notranslate nohighlight">\(\ln(x)=\frac{2\ln(10)}{1+\ln(10)}\)</span>,</p>
+<p>So <span class="math notranslate nohighlight">\(x=\exp\left(\frac{2\ln(10)}{1+\ln(10)}\right)=4.03\)</span> (3sf)</p>
+</div>
+<p><strong>[6]</strong> The hyperbolic cosine function is defined as <span class="math notranslate nohighlight">\(\cosh(x)=\frac{1}{2}(e^x+e^{-x})\)</span>. By rewriting the equation <span class="math notranslate nohighlight">\(\cosh(x)=4\)</span> as a disguised quadratic in <span class="math notranslate nohighlight">\(e^x\)</span>, solve to find the two possible values of <span class="math notranslate nohighlight">\(x\)</span>. Give your answers as exact values involving the natural logarithm.</p>
+<div class="toggle docutils container">
+<p>The given problem is <span class="math notranslate nohighlight">\(\frac{1}{2}(e^x+e^{-x})=4\)</span>.</p>
+<p>By taking <span class="math notranslate nohighlight">\(y=e^{x}\)</span> we can write this as <span class="math notranslate nohighlight">\(y+\frac{1}{y}=8\)</span>.</p>
+<p>This can be rearranged as <span class="math notranslate nohighlight">\(y^2-8y+1=0\)</span> with solutions <span class="math notranslate nohighlight">\(y=4\pm \sqrt{15}\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(y=e^{x}\)</span> the solutions to the given problem are <span class="math notranslate nohighlight">\(x=\ln(4\pm\sqrt{15})\)</span>.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./first"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="plotstuff.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Graphing data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="curvefit.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Curve fitting</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
