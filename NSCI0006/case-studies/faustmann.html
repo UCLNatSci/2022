@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>7. Placeholder &#8212; Mathematics for Natural Sciences B</title>
+    <title>Faustmann model &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,10 +54,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Placeholder" href="../third/placeholder.html" />
-    <link rel="prev" title="6. Know your limits" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -149,19 +149,19 @@ const thebe_selector_output = ".output, .cell_output"
   RATES OF CHANGE
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="pfrac.html">
+  <a class="reference internal" href="../second/pfrac.html">
    5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="limits.html">
+  <a class="reference internal" href="../second/limits.html">
    6. Know your limits
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/placeholder.html">
    7. Placeholder
   </a>
  </li>
@@ -185,12 +185,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../case-studies/chemicals.html">
+  <a class="reference internal" href="chemicals.html">
    8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../case-studies/freshwater.html">
+  <a class="reference internal" href="freshwater.html">
    9. Freshwater sustainability
   </a>
  </li>
@@ -284,7 +284,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsecond/placeholder.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcase-studies/faustmann.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -312,7 +312,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/second/placeholder.md"
+        <a href="../_sources/case-studies/faustmann.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -361,7 +361,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Placeholder</h1>
+                <h1>Faustmann  model</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -373,11 +373,180 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="placeholder">
-<h1><span class="section-number">7. </span>Placeholder<a class="headerlink" href="#placeholder" title="Permalink to this heading">#</a></h1>
-<p>DATA TRENDS = Representing numbers, Graphing data, Exponential trends, Curve fitting</p>
-<p>RATES OF CHANGE = Know your limits, Measuring change, Iterative models, Accumulated change</p>
-<p>DYNAMIC MODELS = Studying flow, Simulated answers, Equilibrium</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="faustmann-model">
+<h1>Faustmann  model<a class="headerlink" href="#faustmann-model" title="Permalink to this heading">#</a></h1>
+<p>See pp261 Growth and aging [Clark, Mathematical Bioeconomics]</p>
+<p>Commercial value of a tree <span class="math notranslate nohighlight">\(V(t)\)</span>.</p>
+<p>Trees of age <span class="math notranslate nohighlight">\(t&lt;t^*\)</span> have no commercial value. The value increases with age as volume of useable timber increases until approaching biological maturity the value plateaus.</p>
+<p>Ultimately, decay sets in and the value of the trees begin to decline to zero. However, many commercial trees continue to grow and increase in value for several hundred years.</p>
+<p>Let <span class="math notranslate nohighlight">\(\hat{V}\)</span> denote the present value of a future payment</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5fc8bed8-f6e6-4aef-9d68-d683c5c26a91">
+<span class="eqno">()<a class="headerlink" href="#equation-5fc8bed8-f6e6-4aef-9d68-d683c5c26a91" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=e^{-\delta t}(V(t)-c)
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is the cost of felling, and <span class="math notranslate nohighlight">\(\delta\)</span> is the annual rate of interest.</p>
+<p>Then,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\hat{V}^{\prime}=e^{-\delta t}(V^{\prime}-\delta(V-c))
+\end{equation*}\]</div>
+<p>To maximise <span class="math notranslate nohighlight">\(\hat{V}\)</span> we must set <span class="math notranslate nohighlight">\(\delta=\frac{V^{\prime}}{V-c}\)</span>.</p>
+<p>However, this neglects the opportunity to replant. When replanting is taken into account we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-861726bd-c252-4a39-a085-3a2188173e74">
+<span class="eqno">()<a class="headerlink" href="#equation-861726bd-c252-4a39-a085-3a2188173e74" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=e^{-\delta T_1}[V(T_1)-c]+e^{-\delta T_2}[V(T_2-T_1)-c]+e^{-\delta T_3}[V(T_3-T_2)-c]+\dots
+\end{equation}\]</div>
+<p>Since the second rotation problem is identical to the first (and so on) we an assume that all rotation periods are equal and so <span class="math notranslate nohighlight">\(T_k=kT\)</span>, <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span></p>
+<p>Thus,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ddc17496-969a-4db4-8e3b-e6dfe493a8d1">
+<span class="eqno">()<a class="headerlink" href="#equation-ddc17496-969a-4db4-8e3b-e6dfe493a8d1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=\sum_{k=1}^{\infty}e^{-k\delta T}[V(T)-c]=[V(t)-c]\sum_{k=1}^{\infty}e^{-k\delta T}
+\end{equation}\]</div>
+<p>The sum is a geometric progression. With first term and common difference both equal to <span class="math notranslate nohighlight">\(e^{-\delta T}\)</span>.</p>
+<p>We obtain</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0506e12b-2ba5-40d3-9f44-1b92f76ae9a6">
+<span class="eqno">()<a class="headerlink" href="#equation-0506e12b-2ba5-40d3-9f44-1b92f76ae9a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=\frac{V(T)-c}{e^{\delta T}-1}
+\end{equation}\]</div>
+<p>To maximise,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-14772f82-c0bd-43e7-8f50-70b64d0316ee">
+<span class="eqno">()<a class="headerlink" href="#equation-14772f82-c0bd-43e7-8f50-70b64d0316ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}^{\prime}=\frac{(e^{\delta T}-1)V^{\prime}-(V-c)\delta e^{\delta T}}{(e^{\delta T}-1)^2}
+\end{equation}\]</div>
+<p><span class="math notranslate nohighlight">\(\hat{V}^{\prime}=0\)</span> gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-43f16649-4288-4142-8562-26912a82cce3">
+<span class="eqno">()<a class="headerlink" href="#equation-43f16649-4288-4142-8562-26912a82cce3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{V^{\prime}}{V-c}=\frac{\delta}{1-e^{-\delta T}}
+\end{equation}\]</div>
+<p>This is the Faustmann formula.</p>
+<p><span class="math notranslate nohighlight">\((V-c)\)</span> is the net stumpage value, which can be determined from data tables.</p>
+<p>We can plot <span class="math notranslate nohighlight">\(\frac{V^{\prime}}{V-c}\)</span> against <span class="math notranslate nohighlight">\(\frac{\delta}{1-e^{-\delta T}}\)</span> and calculate their intersection.</p>
+<table class="table" id="id1">
+<caption><span class="caption-text">Yield tables for Douglas fir, multiplied by cost (in cents per cubic foot!)</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Year</p></th>
+<th class="head"><p>30</p></th>
+<th class="head"><p>40</p></th>
+<th class="head"><p>50</p></th>
+<th class="head"><p>60</p></th>
+<th class="head"><p>70</p></th>
+<th class="head"><p>80</p></th>
+<th class="head"><p>90</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>110</p></th>
+<th class="head"><p>120</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V-c\)</span></p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>143</p></td>
+<td><p>303</p></td>
+<td><p>497</p></td>
+<td><p>650</p></td>
+<td><p>805</p></td>
+<td><p>913</p></td>
+<td><p>1002</p></td>
+<td><p>1076</p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\(V-c\)</span> is the net stump value.</p>
+<div class="exercise admonition" id="case-studies/faustmann-exercise-0">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
+<p>Determine the relative growth rate <span class="math notranslate nohighlight">\(V^{\prime}/(V-c)\)</span> and the average yield <span class="math notranslate nohighlight">\((V-c)/T\)</span></p>
+<p>Note: to estimate <span class="math notranslate nohighlight">\(V^{\prime}\)</span> use the central differences formula</p>
+</section>
+</div>
+<p>Soln:</p>
+<table class="table" id="id2">
+<caption><span class="caption-text">Solution</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Year</p></th>
+<th class="head"><p>30</p></th>
+<th class="head"><p>40</p></th>
+<th class="head"><p>50</p></th>
+<th class="head"><p>60</p></th>
+<th class="head"><p>70</p></th>
+<th class="head"><p>80</p></th>
+<th class="head"><p>90</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>110</p></th>
+<th class="head"><p>120</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>net stump val</p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>143</p></td>
+<td><p>303</p></td>
+<td><p>497</p></td>
+<td><p>650</p></td>
+<td><p>805</p></td>
+<td><p>913</p></td>
+<td><p>1002</p></td>
+<td><p>1076</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rel gr rate %</p></td>
+<td><p>-</p></td>
+<td><p>16.6</p></td>
+<td><p>9.1</p></td>
+<td><p>5.8</p></td>
+<td><p>3.5</p></td>
+<td><p>2.4</p></td>
+<td><p>1.6</p></td>
+<td><p>1.1</p></td>
+<td><p>0.8</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Avg yield</p></td>
+<td><p>0</p></td>
+<td><p>1.08</p></td>
+<td><p>2.86</p></td>
+<td><p>5.05</p></td>
+<td><p>7.10</p></td>
+<td><p>8.12</p></td>
+<td><p>8.94</p></td>
+<td><p>9.13</p></td>
+<td><p>9.11</p></td>
+<td><p>8.97</p></td>
+</tr>
+</tbody>
+</table>
+<p>Fit a Weibull function to the net stumpage value. The Weibull function is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0f199727-8904-4a1e-8850-0eb268e70626">
+<span class="eqno">()<a class="headerlink" href="#equation-0f199727-8904-4a1e-8850-0eb268e70626" title="Permalink to this equation">#</a></span>\[\begin{equation}
+w(t) = 1-e^{-(t/\mu)^L}
+\end{equation}\]</div>
+<p>Note: this is hard. The data need to be transformed to the range [0,1] on both axes to perform the fit, and then the inverse transform needs to be performed. It’s worth it though, as the data fit very nicely!</p>
+<p>Plot the following function for different values of the discount <span class="math notranslate nohighlight">\(\delta\)</span>. Use the following values:
+<span class="math notranslate nohighlight">\(\delta = [0,0.05,0.1,0.15]\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-e4430b97-df20-404c-9322-5be0fe77fb16">
+<span class="eqno">()<a class="headerlink" href="#equation-e4430b97-df20-404c-9322-5be0fe77fb16" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\delta}{1-e^{-\delta t}}
+\end{equation}\]</div>
+<figure class="align-default" id="will-replace">
+<img alt="../_images/wbll-temp.png" src="../_images/wbll-temp.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot</span><a class="headerlink" href="#will-replace" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The intersections give the optimal rotation age (years) for different values of the discount</p>
+<p>| Annual discount <span class="math notranslate nohighlight">\(\delta\)</span>    | 0.00 | 0.03 | 0.05 | 0.07 | 0.10 | 0.15 | 0.20 |
+| Optimal rotation age T (yr) | 99   | 73   | 63   | 56   | 50   | 44   | 40   |
+| Avg annual yield            | 9.23 | 7.41 | 5.63 | 4.13 | 2.80 | 1.56 | 0.86 |</p>
+<p>Note: because <span class="math notranslate nohighlight">\(1-e^{-\delta T}&lt;1\)</span>, taking rotation into account leads to a decrease in the age of cutting.</p>
+<p>Note 2: The Faustmann formula can be understood by rearrangement to:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e9904a82-8091-44b0-afff-1460fd794a9b">
+<span class="eqno">()<a class="headerlink" href="#equation-e9904a82-8091-44b0-afff-1460fd794a9b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
+\end{equation}\]</div>
+<p>The first term represents the interest earned if revenue from cutting is invested at interest rate <span class="math notranslate nohighlight">\(\delta\)</span></p>
+<p>The second term represents the rotation aspect of the problem.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -393,7 +562,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./second"
+            path: "./case-studies"
         },
         predefinedOutput: true
     }
@@ -407,20 +576,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="limits.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Know your limits</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../third/placeholder.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Placeholder</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

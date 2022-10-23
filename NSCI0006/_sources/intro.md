@@ -4,11 +4,11 @@ A traditional mathematics course starts with the introduction of a method or tec
 
 This course is different. Most of the methods and techniques are introduced to you through examples derived from research and policy applications. Many of the examples and problems are designed to be tackled on the computer using Python. This will allow you to work with real data and to produce visualisations of the sort used professionally. However, you will also need to do some pen and paper calculations!
 
-The problems have been grouped together to illustrate key mathematical ideas, which are indicated by the chapter titles. However, problems in one section might also relate to mathematical ideas in another section. For example, some of the problems on *graphing data* introduce ideas of differentiation and integration that are discussed later.
+The problems have been grouped together to illustrate key mathematical ideas, which are indicated by the chapter titles. Problems in one section might also relate to mathematical ideas in another section. For example, some of the problems on *graphing data* introduce ideas of differentiation and integration that are discussed later.
 
 You will often be asked to test out your own ideas about a problem or topic before you have been told "how to do it". The aim is for you to become confident at applying your existing knowledge to new problems of the sort that you might encounter in your studies and independent research.
 
-Answers are provided for most of the problems. However, you are strongly encouraged to *attempt* the questions before inspecting the answers. This is the only way that you will gain confindence and skill in problem solving.
+Answers are provided for most of the problems, but you are strongly encouraged to *attempt* the questions before inspecting the answers. This is the only way that you will gain confindence and skill in problem solving.
 
 Throughout the book there are links to further reading. Please do not feel that you have to do extensive reading on every topic! The links are provided so that if you are particularly interested in one of the problems you can investigate further on your own. You may also re-encounter some of the problems in your later studies and wish to revisit these notes.
 

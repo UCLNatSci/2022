@@ -482,7 +482,7 @@ The following useful results can be derived:
 
 ```
 
-## Calculations for you to try
+## Problems for you to try
 
 **[1]** Write the expression $\log(32)-3\log(4)+\log(3)$ as a single logarithm
 

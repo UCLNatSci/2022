@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>7. Placeholder &#8212; Mathematics for Natural Sciences B</title>
+    <title>Coronavirus modelling &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,10 +54,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Placeholder" href="../third/placeholder.html" />
-    <link rel="prev" title="6. Know your limits" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -149,19 +149,19 @@ const thebe_selector_output = ".output, .cell_output"
   RATES OF CHANGE
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="pfrac.html">
+  <a class="reference internal" href="../second/pfrac.html">
    5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="limits.html">
+  <a class="reference internal" href="../second/limits.html">
    6. Know your limits
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/placeholder.html">
    7. Placeholder
   </a>
  </li>
@@ -185,12 +185,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../case-studies/chemicals.html">
+  <a class="reference internal" href="chemicals.html">
    8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../case-studies/freshwater.html">
+  <a class="reference internal" href="freshwater.html">
    9. Freshwater sustainability
   </a>
  </li>
@@ -284,7 +284,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsecond/placeholder.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcase-studies/coronavirus.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -312,7 +312,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/second/placeholder.md"
+        <a href="../_sources/case-studies/coronavirus.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -361,7 +361,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Placeholder</h1>
+                <h1>Coronavirus modelling</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -373,11 +373,50 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="placeholder">
-<h1><span class="section-number">7. </span>Placeholder<a class="headerlink" href="#placeholder" title="Permalink to this heading">#</a></h1>
-<p>DATA TRENDS = Representing numbers, Graphing data, Exponential trends, Curve fitting</p>
-<p>RATES OF CHANGE = Know your limits, Measuring change, Iterative models, Accumulated change</p>
-<p>DYNAMIC MODELS = Studying flow, Simulated answers, Equilibrium</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="coronavirus-modelling">
+<h1>Coronavirus modelling<a class="headerlink" href="#coronavirus-modelling" title="Permalink to this heading">#</a></h1>
+<p>Download data from <a class="reference external" href="https://coronavirus.data.gov.uk/details/cases?areaType=nation&amp;areaName=England">coronavirus.data.gov.uk</a></p>
+<p>The below plots are based on data to 22 Aug 2022. First we simply show the plots of daily reported cases. The background shading indicates periods of lockdown (red) and significant restriction (yellow).</p>
+<figure class="align-default" id="will-replace">
+<img alt="../_images/covid_cases.png" src="../_images/covid_cases.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot</span><a class="headerlink" href="#will-replace" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>By smoothing the data we can estimate daily growth rates in reporting over the period (as percentages). Despite being calculated by  crude methodology, the figures shown here roughly match official statistics.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/covid_gr.png" src="../_images/covid_gr.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot. Add axis labels!</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Estimating the R-number is a much more complicated business. Government values are based on aggregating calculations produced by mathematical models from several UK institutions. However, we can obtain a very rough-and-ready estimate of what the R value was a week ago by using the  formula <span class="math notranslate nohighlight">\(R_{est} = (1+6G)\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the current growth rate as a decimal. Compare this plot with Fig 18 from a <a class="reference external" href="https://royalsociety.org/-/media/policy/projects/set-c/set-covid-19-R-estimates.pdf">Royal Society paper</a></p>
+<figure class="align-default" id="id2">
+<img alt="../_images/covid_rEst.png" src="../_images/covid_rEst.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now let’s try to fit the data for the number of cases to a mathematical model. We will do this separately for each wave of the infection. The shading in the below plot is used to identify the infection waves that we will look at.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/covid_waves.png" src="../_images/covid_waves.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We fit the data to the derivative of logistic function</p>
+<div class="math notranslate nohighlight">
+\[\frac{L}{1+e^{-\lambda(t-\kappa)}}\]</div>
+<p>Exception has been made for the first wave, which has been fitted to the derivative of the Frechet function, as it gives a slightly better fit than the logistic function where there is a very flat initial stage.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/covid_wave_fits.png" src="../_images/covid_wave_fits.png" />
+<figcaption>
+<p><span class="caption-text">Will be replaced with a Python plot</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Task is to identify one of the infection waves and fit a sigmoid to the data. The fitting will work better if you rescale the data so that it lies between 0 and 1 on each axis. You can either fit the derivative or you can fit to the accumulated data. The two approaches will give slightly different results, but either is acceptable.</p>
+<p>Additional comment:</p>
+<p>The unfitted period between the identified third and fourth waves is a strange one. The sharp drop in cases coincides with the announcement of 19 July when legal limits on social contact were removed in England, including re-opening of nightclubs. For a timeline of restrictions, see <a class="reference external" href="https://www.instituteforgovernment.org.uk/sites/default/files/chart-images/timeline-coronavirus-lockdown-december-2021_0.png">this website</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -393,7 +432,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./second"
+            path: "./case-studies"
         },
         predefinedOutput: true
     }
@@ -407,20 +446,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="limits.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Know your limits</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../third/placeholder.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Placeholder</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
