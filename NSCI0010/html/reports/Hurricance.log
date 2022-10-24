@@ -37,10 +37,10 @@ print("x-coords:", x)
 print("y-coords:", y)
 ------------------
 
-[1;36m  File [1;32m"C:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_7256/2262081961.py"[1;36m, line [1;32m17[0m
+[1;36m  File [1;32m"C:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_3684/2262081961.py"[1;36m, line [1;32m17[0m
 [1;33m    print("x-coords:", x)[0m
 [1;37m        ^[0m
 [1;31mSyntaxError[0m[1;31m:[0m invalid syntax
 
-SyntaxError: invalid syntax (Temp/ipykernel_7256/2262081961.py, line 17)
+SyntaxError: invalid syntax (Temp/ipykernel_3684/2262081961.py, line 17)
 

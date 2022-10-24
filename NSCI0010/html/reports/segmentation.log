@@ -22,7 +22,7 @@ print(A[0, 8])
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mIndexError[0m                                Traceback (most recent call last)
-[1;32mC:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_2304/161630308.py[0m in [0;36m<module>[1;34m[0m
+[1;32mC:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_10864/161630308.py[0m in [0;36m<module>[1;34m[0m
 [1;32m----> 1[1;33m [0mprint[0m[1;33m([0m[0mA[0m[1;33m[[0m[1;36m0[0m[1;33m,[0m [1;36m8[0m[1;33m][0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
 [0m
 [1;31mIndexError[0m: index 8 is out of bounds for axis 1 with size 8
