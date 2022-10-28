@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Sequences and Series &#8212; Mathematics for Natural Sciences A</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="2. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Mathematics for Natural Sciences A
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   2. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Sequences and Series
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/sequences_and_series/series.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sequences_and_series/series.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsequences_and_series/series.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/sequences_and_series/series.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences">
+   3.1. Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recurrence-relationships">
+     3.1.1. Recurrence relationships
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   3.2. Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summations">
+     3.2.1. Summations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
+   3.3. Arithmetic and Geometric Progressions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-progression">
+     3.3.1. Arithmetic progression
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
+       3.3.1.1. Solving the series of arithmetic progessions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-progression">
+     3.3.2. Geometric Progression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
+     3.3.3. Solving the series of geometric progessions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-of-differences">
+   3.4. Method of Differences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#partial-fractions">
+     3.4.1. Partial Fractions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-out-the-series-method">
+     3.4.2. Writing out the series method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
+     3.4.3. Rewriting the summation index method
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sequences and Series</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences">
+   3.1. Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recurrence-relationships">
+     3.1.1. Recurrence relationships
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   3.2. Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summations">
+     3.2.1. Summations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
+   3.3. Arithmetic and Geometric Progressions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-progression">
+     3.3.1. Arithmetic progression
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
+       3.3.1.1. Solving the series of arithmetic progessions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-progression">
+     3.3.2. Geometric Progression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
+     3.3.3. Solving the series of geometric progessions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-of-differences">
+   3.4. Method of Differences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#partial-fractions">
+     3.4.1. Partial Fractions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-out-the-series-method">
+     3.4.2. Writing out the series method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
+     3.4.3. Rewriting the summation index method
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="sequences-and-series">
+<h1><span class="section-number">3. </span>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sequences">
+<h2><span class="section-number">3.1. </span>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>sequence</strong> is a set of terms where order matters, written as follows:</p>
+<div class="math notranslate nohighlight" id="equation-sequencedef">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-sequencedef" title="Permalink to this equation">¶</a></span>\[    u_1, u_2, \dots, u_n\]</div>
+<p>Here, the size of the sequence (the number of terms) is <span class="math notranslate nohighlight">\(n\)</span>.
+The <span class="math notranslate nohighlight">\(i\)</span>-th term in the sequence may be denoted by <span class="math notranslate nohighlight">\(u_i\)</span> where <span class="math notranslate nohighlight">\(i = 1, 2, \dots, n\)</span>.</p>
+<p>The labels <span class="math notranslate nohighlight">\(u\)</span>, and <span class="math notranslate nohighlight">\(i\)</span> are arbitrary, and we could just as well use other letters to represent them.
+Sequences can have finite <span class="math notranslate nohighlight">\(n&lt;\infty\)</span> (e.g. telephone numbers) or infinite sizes
+<span class="math notranslate nohighlight">\(n \to \infty\)</span> (e.g. the prime numbers).</p>
+</div>
+<p>The sequences that we will examine in this course are numerical patterns.  Much of mathematics is concerned with patterns in both mathematical constructs and nature, and the study of sequences
+provides a firm grounding for this endeavour.</p>
+<p>Mathematical patterns can generally be expressed as formula for the <span class="math notranslate nohighlight">\(i\)</span>th term. For instance, the formula below generates the sequence <span class="math notranslate nohighlight">\(-1, 2, 5, 8, 11, 14, 17, 20\)</span> by taking <span class="math notranslate nohighlight">\(i=1,\dots 8\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[u_i = 2 + 3 (i-2)\]</div>
+<p>Notice that the size of the terms in this sequence grows without bound as the number of terms is increased.</p>
+<div class="section" id="recurrence-relationships">
+<h3><span class="section-number">3.1.1. </span>Recurrence relationships<a class="headerlink" href="#recurrence-relationships" title="Permalink to this headline">¶</a></h3>
+<p>It is sometimes possible to express a sequence as a formula that relates the <span class="math notranslate nohighlight">\(n\)</span>th term of the sequence as some combination of the previous terms. This is known as a
+recurrence relation.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A well-know example that arises in many natural systems is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci sequence</a>:</p>
+<div class="math notranslate nohighlight">
+\[1, 1, 2, 3, 5, 8, 13, 21, 34, \dots\]</div>
+</div>
+<p>This sequence is generated by starting with the sequence <span class="math notranslate nohighlight">\(1,1\)</span> and finding the next number in the sequence by adding the two previous numbers together,
+e.g. <span class="math notranslate nohighlight">\(0+1=\mathbf{1}\)</span>, <span class="math notranslate nohighlight">\(1+1=\mathbf{2}\)</span>, <span class="math notranslate nohighlight">\(1+2=\mathbf{3}\)</span>, <span class="math notranslate nohighlight">\(2+3=\mathbf{5}\)</span>, <span class="math notranslate nohighlight">\(3+5=\mathbf{8}\)</span>, etc.</p>
+<p>The sequence can be expressed with the recurrence relation</p>
+<div class="math notranslate nohighlight" id="equation-recreldef">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-recreldef" title="Permalink to this equation">¶</a></span>\[u_i=u_{i-1}+u_{i-2}\]</div>
+<p>The recurrence relation <a class="reference internal" href="#equation-recreldef">(3.2)</a> specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
+It is because of this formula that it is necessary to provide the first two terms of the sequence, <span class="math notranslate nohighlight">\(u_1=0\)</span> and <span class="math notranslate nohighlight">\(u_2=1\)</span>,
+to find the rest of the sequence.</p>
+<div class="tip admonition">
+<p class="admonition-title">Python code for Fibonacci sequence</p>
+<p>Note that the Fibonnaci recurrence relation will generate a different sequence to the Fibonacci sequence when the
+starting terms are different (e.g. <span class="math notranslate nohighlight">\(u_1=10\)</span> and <span class="math notranslate nohighlight">\(u_2=11\)</span>).</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u1</span><span class="p">,</span> <span class="n">u2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="c1"># first two values</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">nth</span> <span class="o">=</span> <span class="n">u1</span> <span class="o">+</span> <span class="n">u2</span> <span class="c1"># recurrence relation             </span>
+       <span class="n">u1</span> <span class="o">=</span> <span class="n">u2</span> <span class="c1"># update values       </span>
+       <span class="n">u2</span> <span class="o">=</span> <span class="n">nth</span> <span class="c1"># update values       </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Question</p>
+<ol class="simple">
+<li><p>What sort of numbers does the recurrence relation <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span> produce when <span class="math notranslate nohighlight">\(u_1=2\)</span> and when <span class="math notranslate nohighlight">\(u_1=1\)</span>?</p></li>
+<li><p>A sequence is defined by the recurrence relation <span class="math notranslate nohighlight">\(u_{n+1} = 3u_{n}\)</span> with <span class="math notranslate nohighlight">\(u_1 = 1\)</span>, determine the formula for <span class="math notranslate nohighlight">\(u_n\)</span>.</p></li>
+</ol>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>We can write a Python script to generate the recurrence relation <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># first value</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">u</span> <span class="o">=</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># recurrence relation                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>If we run the code, we will see that this recurrence relation produces odd numbers if <span class="math notranslate nohighlight">\(u_1 = 1\)</span> and even numbers if <span class="math notranslate nohighlight">\(u_1 = 2\)</span>.</p></li>
+<li><p>If we run the code, we will see that this recurrence relation produces <span class="math notranslate nohighlight">\(u_n = 3^n\)</span>.</p></li>
+</ol>
+</div>
+<p>Recurrence relations, although simple, can produce surprisingly complicated behaviours.
+For further reading you may like to study the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_map">logistic map</a>:</p>
+<div class="math notranslate nohighlight" id="equation-logisticmap">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-logisticmap" title="Permalink to this equation">¶</a></span>\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is a constant.
+This equation (which models amongst other things animal population growth) opened up the field of chaos theory.</p>
+</div>
+</div>
+<div class="section" id="series">
+<h2><span class="section-number">3.2. </span>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<p>Series play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>series</strong> is the sum of a sequence of terms, written as follows:</p>
+<div class="math notranslate nohighlight" id="equation-seriesdef">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
+<p>where <span class="math notranslate nohighlight">\(m \le n\)</span>, and usually <span class="math notranslate nohighlight">\(m=1\)</span>.</p>
+</div>
+<p>In short, a series is simply the sum of a sequence.
+We can replace the upper value <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(\infty\)</span> for an [infinite series.  To give an example, the series of the infinite sequence <span class="math notranslate nohighlight">\((u_1,u_2,u_3,\dots)\)</span> is written as <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=1}^\infty u_i\)</span>.</p>
+<p>We say that <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=m}^n u_i\)</span> for <span class="math notranslate nohighlight">\(n &lt; \infty\)</span> is a partial sum because the series is partially added up to just the <span class="math notranslate nohighlight">\(n\)</span>-th term.</p>
+<div class="tip admonition">
+<p class="admonition-title">Python Code</p>
+<p>Here is some Python code for a sequence defined by the recurrence relation <span class="math notranslate nohighlight">\(u_k = u_{k-1}+\frac{1}{2}\)</span> with <span class="math notranslate nohighlight">\(u_1=0\)</span>.  It calculates the first ten terms of the sequence and the resulting series.</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">ser</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="c1"># update sequence</span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update series                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
+0.5 0.5
+1.0 1.5
+1.5 3.0
+2.0 5.0
+2.5 7.5
+3.0 10.5
+3.5 14.0
+4.0 18.0
+4.5 22.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="summations">
+<h3><span class="section-number">3.2.1. </span>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h3>
+<p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and denotes a summation.</p>
+<p>We would read <span class="math notranslate nohighlight">\(\sum_{i=1}^n u_i\)</span> as “the sum of <span class="math notranslate nohighlight">\(u_i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=n\)</span>”.</p>
+<p>For example</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^4 i = 1 + 2 + 3 + 4 = 10\]</div>
+<p>is the sum of <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span></p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^4 2 i = 2 + 4 + 6 + 8 = 20.\]</div>
+<p>is the sum of <span class="math notranslate nohighlight">\(2 i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span></p>
+<p>From this example it should be clear that, in general:</p>
+<div class="math notranslate nohighlight" id="equation-summationrule">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant.</p>
+<div class="warning admonition">
+<p class="admonition-title">Warning!</p>
+<p>Take note that</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n (a + u_i) \neq a + \sum_{i=1}^n u_i\]</div>
+<p>For example, <span class="math notranslate nohighlight">\(\displaystyle \sum_{i=1}^4 (1+i) = 2 + 3 + 4 + 5 = 14\)</span>.</p>
+<p>The correct way to read this is:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n (a + u_i) \neq \sum_{i=1}^n a + \sum_{i=1}^n u_i = na  + \sum_{i=1}^n u_i\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>Write the following expressions using as a sum (<span class="math notranslate nohighlight">\(\Sigma\)</span> notation) without evaluating the sum:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 + 5 + 9 + 13 + 17 +21\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(64-32+16-8+4-2+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots + \frac{1}{99} \)</span></p></li>
+</ol>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=1}^6 (4n - 3)\)</span></p>
+<p>or equivalently <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=0}^5 (4n + 1)\)</span>.</p>
+<p>2. <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=0}^6 (-1)^n 2^{6 - n}\)</span></p>
+<p>or equivalently <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=0}^6 (-1)^n 2^n\)</span>, by reversing the order of the summation.</p>
+<p>3. <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=3}^{99} \frac{1}{n}\)</span></p>
+<p>or equivalently <span class="math notranslate nohighlight">\(\displaystyle\sum_{i=1}^{97} \frac{1}{n+2}\)</span>.</p>
+<p>other answers are also possible!</p>
+</div>
+</div>
+</div>
+<div class="section" id="arithmetic-and-geometric-progressions">
+<h2><span class="section-number">3.3. </span>Arithmetic and Geometric Progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
+<p>We now introduce the arithmetic progression (or the arithmetic sequence) and the geometric progression (or geometric sequence).
+These sequences have the nice property that their series can be found straightforwardly.</p>
+<div class="section" id="arithmetic-progression">
+<h3><span class="section-number">3.3.1. </span>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which all have a “common
+difference” <span class="math notranslate nohighlight">\(d\)</span>, written as follows:</p>
+<div class="math notranslate nohighlight" id="equation-apdef">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
+</div>
+<p>An example of an arithmetic progression is the sequence <span class="math notranslate nohighlight">\(3,5,7,9,11,13\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=3\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span> and the
+number of terms is <span class="math notranslate nohighlight">\(n=6\)</span>.
+An infinite arithmetic progression is given by the case where <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
+<p>The <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression can be expressed as the following recurrence relation:</p>
+<div class="math notranslate nohighlight" id="equation-aprrdef">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Python code for arithmetic progression</p>
+<p>You can play around with the behaviour of different arithmetic progessions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>:</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># first value</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="n">d</span> <span class="c1"># update sequence                 </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+26
+22
+18
+14
+10
+6
+2
+-2
+-6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="solving-the-series-of-arithmetic-progessions">
+<h4><span class="section-number">3.3.1.1. </span>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
+<p>Series of arithmetic progessions can be solved (i.e. reduced to a number).
+The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression with recurrence relation <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-seriessol">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
+<p>where <span class="math notranslate nohighlight">\(L = a + (n-1) d\)</span> is the last term in the series.</p>
+<p>As <span class="math notranslate nohighlight">\(n\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>, the arithmetic progession approaches <span class="math notranslate nohighlight">\(\infty\)</span> if <span class="math notranslate nohighlight">\(d&gt;0\)</span> and approaches <span class="math notranslate nohighlight">\(-\infty\)</span> if
+<span class="math notranslate nohighlight">\(d&lt;0\)</span>.
+In these cases we say that the series diverges (more on this later!).
+Infinite arithmetic progressions always diverge, the proof of which can be found via
+<a class="reference external" href="https://math.stackexchange.com/questions/3334553/proof-that-arithmetic-series-diverges">this link</a>
+(although further reading is required!).</p>
+<div class="note admonition">
+<p class="admonition-title">Python code for the series of the arithmetic progression</p>
+<p>You can use this code to convince yourself that the series of arithmetic progressions grow without bound for large <span class="math notranslate nohighlight">\(n\)</span>.  In this ecxample we pick <span class="math notranslate nohighlight">\(a = 30\)</span>, <span class="math notranslate nohighlight">\(d=-4\)</span>.</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># first value</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="n">d</span> <span class="c1"># update sequence</span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update series                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+56
+78
+96
+110
+120
+126
+128
+126
+120
+</pre></div>
+</div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Proof of the solution of the series of arithmetic progressions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_n = a + (a+d) + (a+2d) + \dots + \Big( a + (n-3) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-1) d \Big) \\
+\\
+S_n = \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d \Big) + \dots + (a+2d) + (a+d) + a \ .\end{split}\]</div>
+<p>Adding these two expressions gives:</p>
+<div class="math notranslate nohighlight">
+\[2 S_n =  \Big( 2 a + (n-1) d \Big) + \Big( 2 a + (n-1) d \Big) + \dots + \Big( 2 a + (n-1) d \Big) \ .\]</div>
+<p>Since there are <span class="math notranslate nohighlight">\(n\)</span> terms, this equations simplifies to the final result:</p>
+<div class="math notranslate nohighlight">
+\[S_n =  \frac{n}{2} \Big( 2 a + (n-1) d \Big)  \ .\]</div>
+<p><a class="reference external" href="https://www.americanscientist.org/article/gausss-day-of-reckoning">There is a legend</a>,
+that Gauss (a famous mathematician) used a similar approach as a schoolboy back in the 1780s to find the answer to
+<span class="math notranslate nohighlight">\(1+2+\dots+99+100\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<ol class="simple">
+<li><p>How many terms are in the sequence <span class="math notranslate nohighlight">\(54, 52, 50,\dots, 18\)</span>?</p></li>
+<li><p>Find the sum of the first 30 terms of the arithmetic progression with the first three terms <span class="math notranslate nohighlight">\(3,9,15\)</span>.</p></li>
+<li><p>Find the sum of the arithmetic progression with first term 2, last term 10 and common difference 2.</p></li>
+<li><p>Evaluate <span class="math notranslate nohighlight">\(\sum_{n=1}^{10} (5n-1)\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=100}^{1000} n\)</span> .</p></li>
+<li><p>In an arithmetic progression the 3rd term is 26 and the 8th term is 46. Find the 1st term, the common difference and <span class="math notranslate nohighlight">\(S_{50}\)</span>.</p></li>
+<li><p>Find the sum of the integers between 1 and 100 which are divisible by 6.</p></li>
+</ol>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>1. This is an arithmetic progression (AP) with first term <span class="math notranslate nohighlight">\(a=54\)</span>, common difference <span class="math notranslate nohighlight">\(d=-2\)</span>, and last term <span class="math notranslate nohighlight">\(L=18\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(L = a + (n-1)d\)</span>, we have <span class="math notranslate nohighlight">\(n = \frac{18-54}{-2} = 19\)</span> terms.</p>
+<p>2. For an AP with first term <span class="math notranslate nohighlight">\(a=3\)</span>, and common difference <span class="math notranslate nohighlight">\(d=6\)</span>, the sum of the first <span class="math notranslate nohighlight">\(30\)</span> terms is given by</p>
+<div class="math notranslate nohighlight">
+\[S_{30} = \frac{n}{2}(2a+(n-1)d = \frac{30}{2} (6 + 29 \times 6) = 2700\]</div>
+<p>3. For this AP the first term is <span class="math notranslate nohighlight">\(a=2\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span>.</p>
+<p>The last term is given by <span class="math notranslate nohighlight">\(a+(n-1)d=10\)</span>, so we find that <span class="math notranslate nohighlight">\(n=5\)</span>.</p>
+<p>The sum is given by <span class="math notranslate nohighlight">\(S_5 = \frac{5}{2} (2+10) = 30\)</span>.</p>
+<p>4. The first expression is an AP with first term <span class="math notranslate nohighlight">\(a=4\)</span>, last term <span class="math notranslate nohighlight">\(L=49\)</span> and <span class="math notranslate nohighlight">\(n=10\)</span> terms.</p>
+<p>The sum is <span class="math notranslate nohighlight">\(\frac{n}{2}(a+L)=265\)</span>.</p>
+<p>The second expression is an AP with first term <span class="math notranslate nohighlight">\(n=100\)</span>, last term <span class="math notranslate nohighlight">\(L=1000\)</span> and <span class="math notranslate nohighlight">\(n=901\)</span> (take care!).</p>
+<p>The sum is <span class="math notranslate nohighlight">\(\frac{n}{2} (a+L) = 495550\)</span>.</p>
+<p>You could also calculate this using <span class="math notranslate nohighlight">\(\frac{1000}{2}(1+1000)−\frac{99}{2}(1+99)\)</span>.</p>
+<p>5. Let the first term of this AP be denoted by <span class="math notranslate nohighlight">\(a\)</span>, and the common difference be denoted by <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>We have that <span class="math notranslate nohighlight">\(a+2d=26\)</span> and <span class="math notranslate nohighlight">\(a+7d=46\)</span>. Solving these two equations simultaneously gives <span class="math notranslate nohighlight">\(a=18\)</span> and <span class="math notranslate nohighlight">\(d=4\)</span>.</p>
+<p>The sum of the first <span class="math notranslate nohighlight">\(50\)</span> terms is given by:</p>
+<div class="math notranslate nohighlight">
+\[S_{50}=\frac{50}{2}(2a+49d)=5800\]</div>
+<p>6. The series is given by <span class="math notranslate nohighlight">\(S=6+12+18+...+96 = \sum_{n=1}^{16} 6 n\)</span>.</p>
+<p>This is the sum of an AP with first term <span class="math notranslate nohighlight">\(a=6\)</span>, last term <span class="math notranslate nohighlight">\(L=96\)</span> and <span class="math notranslate nohighlight">\(n=16\)</span> terms.</p>
+<p>The result is <span class="math notranslate nohighlight">\(S= \frac{16}{2}(6+96)=816\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="geometric-progression">
+<h3><span class="section-number">3.3.2. </span>Geometric Progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A geometric progression (otherwise known as an geometric sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which have “common ratio”
+<span class="math notranslate nohighlight">\(r\)</span>, written as follows:</p>
+<div class="math notranslate nohighlight" id="equation-gpdef">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
+</div>
+<p>Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the geometric progression is
+<span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.
+In other words, the next term in the geometric progression can be found by multiplying the previous term by the common
+ratio <span class="math notranslate nohighlight">\(r\)</span>, given by the recurrence relation <span class="math notranslate nohighlight">\(u_i = r u_{i-1}\)</span> where <span class="math notranslate nohighlight">\(u_1=a\)</span>.
+An example is the sequence <span class="math notranslate nohighlight">\(24,−12,6,−3,1.5\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=2\)</span>, the common ratio is <span class="math notranslate nohighlight">\(r=−\frac{1}{2}\)</span> and
+the number of terms is <span class="math notranslate nohighlight">\(n=5\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Python code for a geometric progression</p>
+<p>We can use some python code to examine this geometric progression, start at <span class="math notranslate nohighlight">\(a=24\)</span> and <span class="math notranslate nohighlight">\(r = -0.5\)</span>:</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># first value</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">*</span> <span class="n">r</span> <span class="c1"># update sequence                  </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+-12.0
+6.0
+-3.0
+1.5
+-0.75
+0.375
+-0.1875
+0.09375
+-0.046875
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="solving-the-series-of-geometric-progessions">
+<h3><span class="section-number">3.3.3. </span>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h3>
+<p>Like arithmetic progessions, the series of geometric progressions can be solved (i.e. reduced to a number).
+The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of a geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-gpseriessol">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Python code for the series of the geometric progression</p>
+<p>We can use some python code to examine the series of a geometric progression, start at <span class="math notranslate nohighlight">\(a=24\)</span> and <span class="math notranslate nohighlight">\(r = -0.5\)</span>:</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># first value</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">seq</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">*</span> <span class="n">r</span> <span class="c1"># update sequence   </span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update sequence               </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+-12.0
+6.0
+-3.0
+1.5
+-0.75
+0.375
+-0.1875
+0.09375
+-0.046875
+</pre></div>
+</div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Proof for the definition of a geometric series</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} \\
+= a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + r^{n-1} \big) \ ,\end{split}\]</div>
+<p>we multiply by <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[r S_n = a \big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .\]</div>
+<p>Subtracting <span class="math notranslate nohighlight">\(r S_n\)</span> from <span class="math notranslate nohighlight">\(S_n\)</span> and cancelling the terms provides:</p>
+<div class="math notranslate nohighlight">
+\[ S_n - r S_n = a \big(1 - r^{n} \big) \ \]</div>
+<p>And then dividing both sides by <span class="math notranslate nohighlight">\(1-r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_n = a \frac{1 - r^n}{1-r}\]</div>
+<p>QED</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<ol class="simple">
+<li><p>Find the sum of the first five terms in a geometric progression with first term 27 and common ratio is <span class="math notranslate nohighlight">\(2/3\)</span>?</p></li>
+<li><p>Evaluate:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty 729 \Big(\frac{1}{3} \Big)^{n-1}\]</div>
+<ol class="simple">
+<li><p>The first term of a geometric progression is <span class="math notranslate nohighlight">\(8\)</span> and the sum of the first three terms is 38.</p></li>
+</ol>
+<p>Given this find the two possible values of the common ratio.</p>
+<ol class="simple">
+<li><p>A geometric progression has first term <span class="math notranslate nohighlight">\(27\)</span> and common ratio of <span class="math notranslate nohighlight">\(r=\frac{4}{3}\)</span>.</p></li>
+</ol>
+<p>Find the least number of terms that the sequence can have if its sum exceeds <span class="math notranslate nohighlight">\(550\)</span>.</p>
+<ol class="simple">
+<li><p>By writing the recurring decimal <span class="math notranslate nohighlight">\(0.123123123\dots\)</span> as a geometric progression, show that it can be expressed as the fraction <span class="math notranslate nohighlight">\(\frac{41}{333}\)</span>.</p></li>
+</ol>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. <span class="math notranslate nohighlight">\(a=27\)</span>, <span class="math notranslate nohighlight">\(r=\frac{2}{3}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[S_5 = a \frac{1 - r^5}{1-r} = 27 \frac{1 - (2/3)^5}{1 - 2/3} = \frac{211}{3}\]</div>
+<p>2. The given expression represents the sum of a geometric progression (GP) with first term <span class="math notranslate nohighlight">\(a=729\)</span> and common ratio <span class="math notranslate nohighlight">\(r=\frac{1}{3}\)</span>.</p>
+<p>The sum over all integers n is given by <span class="math notranslate nohighlight">\(S_{\infty}=\frac{729}{1−1/3}=\frac{2187}{2}\)</span>.</p>
+<p>3. Let the first term of this GP be denoted by <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(=8\)</span>), and the common ratio be denoted by <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>We have the sum of the first 3 terms is <span class="math notranslate nohighlight">\(8(1+r+r^2)=38\)</span>.</p>
+<p>4. The sum of the first <span class="math notranslate nohighlight">\(n\)</span> terms in this GP is given by <span class="math notranslate nohighlight">\(S_n= 27 \frac{1−(4/3)^n}{1−4/3}\)</span>.</p>
+<p>We require that <span class="math notranslate nohighlight">\(S_n&gt;550\)</span>. The problem could be tackled by trial and error, but we will solve it analytically.</p>
+<p>The problem rearranges to give <span class="math notranslate nohighlight">\((\frac{4}{3})^n&gt;\frac{631}{81}\)</span> (take care with the direction of the inequality!).</p>
+<p>By taking the natural logarithm we obtain</p>
+<div class="math notranslate nohighlight">
+\[n &gt; \frac{\ln \big( \frac{631}{81} \big)}{ \ln \big( \frac{4}{3} \big)}=7.136 \text{(4sf)}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(n\)</span> is an integer, the least number of terms required is <span class="math notranslate nohighlight">\(8\)</span>.</p>
+<p>5. Recurring decimals can we written as a series of fracitions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp; 0.123123123\dots = \frac{123}{1000} + \frac{123}{1000000} + \dots = 123\Big(\frac{1}{1000} + \frac{1}{1000000} +\dots\Big)\\
+&amp;&amp; = 123\Big(\frac{1}{1000} + \frac{1}{1000^2}  + \dots\Big)\end{split}\]</div>
+<p>which we can read as a geometris series, with <span class="math notranslate nohighlight">\(a = 123/1000\)</span> and <span class="math notranslate nohighlight">\(r = 1/1000\)</span>, which means that:</p>
+<div class="math notranslate nohighlight">
+\[S = \frac{a}{1-r} = \frac{\frac{123}{1000}}{1 - \frac{1}{1000}} = \frac{\frac{123}{1000}}{\frac{999}{1000}} = \frac{41}{333}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="method-of-differences">
+<h2><span class="section-number">3.4. </span>Method of Differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
+<p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
+to compute the desired result.  This is a handy trick to find the value of partial (finite) sums.</p>
+<div class="section" id="partial-fractions">
+<h3><span class="section-number">3.4.1. </span>Partial Fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h3>
+<p>Consider the problem of adding different fractions, for example:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2} + \frac{1}{3} = \frac{?}{??}\]</div>
+<p>the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.<br />
+To find the common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM<span class="math notranslate nohighlight">\((2,3) = 6\)</span> and hence:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2} = \frac{3}{6},   \quad\frac{1}{3} = \frac{2}{6} \Rightarrow \frac{1}{2} + \frac{1}{3} = \frac{2 + 3}{6} = \frac{5}{6}\]</div>
+<p>If we have two algebraic fractions, we can follow a similar process.</p>
+<p>An example:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{n+1} + \frac{3}{n+2} = \frac{2(n+2) + 3(n+1)}{(n+1)(n+2)} = \frac{5n + 7}{(n+1)(n+2)} \]</div>
+<p>The idea behind partial fractions is to reverse this process, breaking up a composite fraction into its smaller fractional parts.</p>
+<p>An example:</p>
+<div class="math notranslate nohighlight">
+\[\frac{3}{(n-1)(n+2)}\]</div>
+<p>first split this up into:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{(n-1)(n+2)} = \frac{A}{n-1} + \frac{B}{n+2} \]</div>
+<p>and then recombine to set up equations to find the unknown coefficients:</p>
+<div class="math notranslate nohighlight">
+\[\frac{3}{(n-1)(n+2)} = \frac{A(n+2) + B(n-1)}{(n-1)(n+2)} \Rightarrow 3 = A(n+2) + B(n-1)\]</div>
+<p>There are two (equally valid) methods to use at this point to find <span class="math notranslate nohighlight">\(A,\, B\)</span>:</p>
+<ol class="simple">
+<li><p>We can substitute in <span class="math notranslate nohighlight">\(n=1, \,-2\)</span> into the equation, in each case:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rlcl}
+    n = 1: &amp; 3  = 3A &amp;\Rightarrow &amp; A = 1 \\ 
+    n = -2: &amp; 3 = -3B &amp; \Rightarrow&amp; B  = -1
+\end{array}\end{split}\]</div>
+<ol class="simple">
+<li><p>We can compare coefficients of <span class="math notranslate nohighlight">\(n^0\)</span> and <span class="math notranslate nohighlight">\(n^1\)</span> (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rlcl}
+    n^1: &amp; A + B = 0 &amp;\Rightarrow&amp; B = -A\\ 
+    n^0: &amp; 2A - B = 3 &amp;\Rightarrow&amp; 2A + A = 3\\
+         &amp;  &amp;\Rightarrow&amp; A = 1,\, B = -1 
+\end{array}\end{split}\]</div>
+<p>If we have repeated roots in the denominator,  the decomposition now has terms for each of the roots and an additional one for the repeated root.</p>
+<p>An example:</p>
+<div class="math notranslate nohighlight">
+\[g(n) = \frac{9}{(n+2)(n+5)^2} = \frac{A}{n+2} + \frac{B}{n+5} + \frac{C}{(n+5)^2} \]</div>
+<p>To find the partial fractions, recall we first combine:</p>
+<div class="math notranslate nohighlight">
+\[g(n) = \frac{A(n+5)^2 + B(n+2)(n+5) + C(n+2)}{(n+2)(n+5)^2}\]</div>
+<p>and then substitute in values:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\begin{array}{rlcl}
+n=-5: &amp; (-3)C = 9 &amp; \Rightarrow &amp; C = - 3 \\ 
+n = -2: &amp; (3)^2A = 9 &amp; \Rightarrow &amp; A = 1 \\ 
+n=0: &amp; 25A + 10B + 2C = 9 &amp; \Rightarrow &amp; B=-1 
+\end{array}\\
+&amp;&amp;\Rightarrow g(n) = \frac{1}{n+2} - \frac{1}{n+5} - \frac{3}{(n+5)^2} \end{split}\]</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">An Application with Prime Factors</p>
+<p>For a fraction like <span class="math notranslate nohighlight">\( \frac{1}{18}\)</span>, can we decompose this into fractions of the prime factors <span class="math notranslate nohighlight">\( 18 = 2\cdot 3^2\)</span> ? The full partial fraction decomposition would have the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{18} = \frac{A}{2} + \frac{B}{3} + \frac{C}{3^2}\]</div>
+<p>First we have to present the system in a way that is meaningful to use partial fractions:</p>
+<div class="math notranslate nohighlight">
+\[f(n) = \frac{1}{(n+2)(n+3)^2} = \frac{A}{n+2} + \frac{B}{n+3} + \frac{C}{(n+3)^2}\]</div>
+<p>so that we reduce to the original problem at <span class="math notranslate nohighlight">\(f(0)\)</span>.  Now we just follow the process</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{(n+2)(n+3)^2} = \frac{A(n+3)^2 + B(n+2)(n+3) + C(n+2)}{(n+2)(n+3)^2}\]</div>
+<p>Substituting in values we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rlcl}
+     n=-3: &amp; (-1)C = 1 &amp;\Rightarrow&amp; C = -1 \\
+      n = -2: &amp; (1)^2 A = 1&amp;\Rightarrow&amp; A = 1\\
+      n = 0: &amp; 9A + 6B + 2C = 1 &amp;\Rightarrow&amp; B = -1
+\end{array}\end{split}\]</div>
+<p>giving the final decomposition:</p>
+<div class="math notranslate nohighlight">
+\[f(n) = \frac{1}{n+2} - \frac{1}{n+3} - \frac{1}{(n+3)^2} \Rightarrow 
+f(0) = \frac{1}{18} = \frac{1}{2} - \frac{1}{3} - \frac{1}{3^2}\]</div>
+</div>
+</div>
+<div class="section" id="writing-out-the-series-method">
+<h3><span class="section-number">3.4.2. </span>Writing out the series method<a class="headerlink" href="#writing-out-the-series-method" title="Permalink to this headline">¶</a></h3>
+<p>Lets start with a simple example:</p>
+<div class="math notranslate nohighlight">
+\[S_1 = \sum_{n=1}^5 \left( \frac{1}{n} - \frac{1}{n+1}\right)\]</div>
+<p>we can expand out this series term by term and see some cancellation occurs:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rcccrccl}
+       S_1 = \frac{1}{1} - \frac{1}{2} &amp;&amp;&amp;&amp; S_1 = \frac{1}{1} \,- \not{\frac{1}{2}}&amp;&amp;\\
+        + \frac{1}{2} - \frac{1}{3} &amp;&amp;&amp;&amp;  + \not{\frac{1}{2}} \,- \not{\frac{1}{3}}&amp;&amp;  \\
+        + \frac{1}{3} - \frac{1}{4} &amp;&amp;\Rightarrow&amp;&amp;  + \not{\frac{1}{3}}\, - \not{\frac{1}{4}} &amp;&amp; \Rightarrow S_1 = 1 - \frac{1}{6} = \frac{5}{6}  \\
+        + \frac{1}{4} - \frac{1}{5} &amp;&amp;&amp;&amp;  + \not{\frac{1}{4}} \,- \not{\frac{1}{5}}&amp;&amp;  \\
+        + \frac{1}{5} - \frac{1}{6} &amp;&amp;&amp;&amp;  + \not{\frac{1}{5}} \,- \frac{1}{6}&amp;&amp; \\
+\end{array}\end{split}\]</div>
+<p>A question may appear not to have an obvious difference set out, such as:</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \sum_{n=1}^{5}\frac{2}{n(n+2)}\]</div>
+<p>For a fraction of this form however, we can make use of partial fractions:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{n(n+2)} = \frac{A}{n} + \frac{B}{n+2} = \frac{A(n+2)+Bn}{n(n+2)} \]</div>
+<p>Equating numerators gives:</p>
+<div class="math notranslate nohighlight">
+\[(A+B)n + 2A = 2 \Rightarrow A = 1, B = -1\]</div>
+<p>and so looking again at the series:</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \sum_{n=1}^{5} \left( \frac{1}{n} - \frac{1}{n+2} \right)\]</div>
+<p>which is now in the form of method of differences.<br />
+Expanding out the first few and last few terms allows us to spot the pattern:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}    \begin{array}{rcccrccl}
+       S_2 = \frac{1}{1} - \frac{1}{3} &amp;&amp;&amp;&amp; S_2 = \frac{1}{1} \,- \not{\frac{1}{3}}&amp;&amp;\\
+        + \frac{1}{2} - \frac{1}{4} &amp;&amp;&amp;&amp;  + \frac{1}{2} \,- \not{\frac{1}{4}}&amp;&amp; \\
+       + \frac{1}{3} - \frac{1}{5} &amp;&amp;\Rightarrow&amp;&amp;  + \not{\frac{1}{3}} \,- \not{\frac{1}{5}}&amp;&amp; \Rightarrow S_2 = 1 + \frac{1}{2} - \frac{1}{6} - \frac{1}{7} = \frac{25}{21} \\
+        + \frac{1}{4} - \frac{1}{6} &amp;&amp;&amp;&amp;  + \not{\frac{1}{4}} \,- \frac{1}{6}&amp;&amp; \\
+        + \frac{1}{5} - \frac{1}{7} &amp;&amp;&amp;&amp;  + \not{\frac{1}{5}} \,- \frac{1}{7}&amp;&amp; 
+    \end{array}\end{split}\]</div>
+<p>If we have a series which is composed of an infinite number of terms, it is possible to apply the method of differences to see if it converges.  An example:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \sum_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1}\right)\]</div>
+<p>which we can rewrite as:</p>
+<div class="math notranslate nohighlight">
+\[S_4 = \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1}\right)\]</div>
+<p>and after solving by method of differences, take the limit <span class="math notranslate nohighlight">\(N \rightarrow \infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_4 = 1 - \frac{1}{N+1} \Rightarrow S_3 = \lim_{N \rightarrow \infty} \left(1 - \frac{1}{N+1}\right) = 1\]</div>
+</div>
+<div class="section" id="rewriting-the-summation-index-method">
+<h3><span class="section-number">3.4.3. </span>Rewriting the summation index method<a class="headerlink" href="#rewriting-the-summation-index-method" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to demonstrate the cancellation of terms without writing out the terms in the series.</p>
+<p>In general, rewriting the summation index provides:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(f(r)\)</span> is an arbitrary function of summation index <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(c\)</span> is a postive integer number.</p>
+<p>This can be also used for negative integer values:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{r=1}^N f(r-c) = \sum_{r=1-c}^{N-c} f(r) \ .\]</div>
+<p>You will find that this technique can drastically simplify summations we wish to solve.</p>
+<p>For example:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{r=1}^N \frac{2^{r+5}}{ \sqrt{r+5}} = \sum_{r=6}^{N+5} \frac{2^{r}}{ \sqrt{r}} \ .\]</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<ol class="simple">
+<li><p>Use the result <span class="math notranslate nohighlight">\((r+1)^2 - (r-1)^2 = 4r\)</span> to calculate <span class="math notranslate nohighlight">\(\sum_{r = 1}^{N} r\)</span> using both the writing out series and rewring the summation methods.</p></li>
+<li><p>By using partial fractions or otherwise, rewrite the summand and use method of differences to show that:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\sum_{r = 1}^n \frac{2}{r (r+1) (r+2)} = \frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2} \ .\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\sum_{r=1}^N r = \frac{1}{4}\sum_{r=1}^N \Big[ (r+1)^2 - (r-1)^2\Big] \\
+&amp;&amp;= \frac{1}{4}\Big[2^2 + 3^2 + 4^2 + \dots + (N-1)^2 + N^2 + (N+1)^2 \\
+&amp;&amp;- 0^2 - 1^2 - 2^2 - \dots - (N-2)^2 - (N-1)^2\Big]\\
+&amp;&amp;= \frac{1}{4}(N^2 + (N+1)^2 - 1) = \frac{1}{4}(2N^2 + 2N)\\
+&amp;&amp;= \frac{1}{2}N(N+1)\end{split}\]</div>
+<p>OR</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\sum_{r=1}^N r = \frac{1}{4}\sum_{r=1}^N \Big[ (r+1)^2 - (r-1)^2\Big] \\
+&amp;&amp;= \frac{1}{4}\sum_{r=1}^N (r+1)^2 - \frac{1}{4}\sum_{r=1}^N(r-1)^2 \\
+&amp;&amp;= \frac{1}{4}\sum_{r=2}^{N+1} r^2 - \frac{1}{4}\sum_{r=0}^{N-1}r^2 \\
+&amp;&amp;= \frac{1}{4}\sum_{r=2}^{N-1} r^2 + \frac{1}{4}\sum_{r=N}^{N+1} r^2 - \Big(\frac{1}{4}\sum_{r=0}^{1}r^2  + \frac{1}{4}\sum_{r=2}^{N-1}r^2\Big)\\
+&amp;&amp;= \frac{1}{4}\sum_{r=N}^{N+1} r^2 - \frac{1}{4}\sum_{r=N}^{N+1} r^2 = \frac{1}{4}\Big(N^2+ (N+1)^2 - 1\Big)\\
+&amp;&amp; = \frac{1}{2}N(N+1)\end{split}\]</div>
+<p>2.
+Let</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{2(r+1)(r+2)}  = \frac{A}{r} + \frac{B}{r+1} + \frac{C}{r+2}= \frac{A(r+1)(r+2) + B r (r+2) + Cr (r+1)}{ r (r+1) (r+2)}\]</div>
+<p>By equating coefficients of <span class="math notranslate nohighlight">\(r^0\)</span>, <span class="math notranslate nohighlight">\(r^1\)</span> and <span class="math notranslate nohighlight">\(r^2\)</span>, we obtain <span class="math notranslate nohighlight">\(A=1\)</span>, <span class="math notranslate nohighlight">\(B=-2\)</span>, <span class="math notranslate nohighlight">\(C=1\)</span> and so:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{r=1}^n \frac{2}{2(r+1)(r+2)} =\sum_{r=1}^n \frac{1}{r} - 2 \sum_{r=1}^n \frac{1}{r+1} + \sum_{r=1}^n \frac{1}{r+2}\]</div>
+<p>We can use either method to find the method of differences, using the rewriting the summation method:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\sum_{r=1}^n \frac{1}{r} - 2 \sum_{r=1}^n \frac{1}{r+1} + \sum_{r=1}^n \frac{1}{r+2}\\
+&amp;&amp;= \sum_{r=1}^n \frac{1}{r} - 2 \sum_{r=2}^{n+1} \frac{1}{r} + \sum_{r=3}^{n+2} \frac{1}{r}\\
+&amp;&amp;= \sum_{r=1}^2 \frac{1}{r} + \sum_{r=3}^n \frac{1}{r} - 2\Big(\sum_{r=2}^2 \frac{1}{r} + \sum_{r=3}^n \frac{1}{r} + \sum_{r=n+1}^{n+1} \frac{1}{r}\Big) + \sum_{r=3}^n \frac{1}{r} + \sum_{r=n+1}^{n+2} \frac{1}{r}\\
+&amp;&amp;= (1-2+1) \sum_{r=3}^n \frac{1}{r} + \Big( \frac{1}{1} + \frac{1}{2} \Big) -2 \Big( \frac{1}{2} + \frac{1}{n+1} \Big) +\big( \frac{1}{n+1} + \frac{1}{n+2} \big)\\
+&amp;&amp;=\frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2}\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sequences_and_series"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Complex Numbers</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
