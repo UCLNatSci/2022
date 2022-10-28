@@ -206,7 +206,7 @@ For example, $\displaystyle \sum_{i=1}^4 (1+i) = 2 + 3 + 4 + 5 = 14$.
 
 The correct way to read this is:
 ```{math}
-\sum_{i=1}^n (a + u_i) \neq \sum_{i=1}^n a + \sum_{i=1}^n u_i = na  + \sum_{i=1}^n u_i
+\sum_{i=1}^n (a + u_i) = na  + \sum_{i=1}^n u_i
 ```
 
 ````
