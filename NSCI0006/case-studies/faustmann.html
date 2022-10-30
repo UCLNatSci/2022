@@ -152,17 +152,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../second/pfrac.html">
-   5. Rational functions
+   1. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/limits.html">
-   6. Know your limits
+   2. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/placeholder.html">
-   7. Placeholder
+   3. Placeholder
   </a>
  </li>
 </ul>
@@ -186,12 +186,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chemicals.html">
-   8. Chemical concentrations
+   1. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="freshwater.html">
-   9. Freshwater sustainability
+   2. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coronavirus.html">
+   3. Viral trends
   </a>
  </li>
 </ul>
@@ -380,8 +385,8 @@ title="Print to PDF"
 <p>Trees of age <span class="math notranslate nohighlight">\(t&lt;t^*\)</span> have no commercial value. The value increases with age as volume of useable timber increases until approaching biological maturity the value plateaus.</p>
 <p>Ultimately, decay sets in and the value of the trees begin to decline to zero. However, many commercial trees continue to grow and increase in value for several hundred years.</p>
 <p>Let <span class="math notranslate nohighlight">\(\hat{V}\)</span> denote the present value of a future payment</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5fc8bed8-f6e6-4aef-9d68-d683c5c26a91">
-<span class="eqno">()<a class="headerlink" href="#equation-5fc8bed8-f6e6-4aef-9d68-d683c5c26a91" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a8047d65-2366-4ed0-a4a9-cd7981bb8289">
+<span class="eqno">()<a class="headerlink" href="#equation-a8047d65-2366-4ed0-a4a9-cd7981bb8289" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta t}(V(t)-c)
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the cost of felling, and <span class="math notranslate nohighlight">\(\delta\)</span> is the annual rate of interest.</p>
@@ -392,30 +397,30 @@ title="Print to PDF"
 \end{equation*}\]</div>
 <p>To maximise <span class="math notranslate nohighlight">\(\hat{V}\)</span> we must set <span class="math notranslate nohighlight">\(\delta=\frac{V^{\prime}}{V-c}\)</span>.</p>
 <p>However, this neglects the opportunity to replant. When replanting is taken into account we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-861726bd-c252-4a39-a085-3a2188173e74">
-<span class="eqno">()<a class="headerlink" href="#equation-861726bd-c252-4a39-a085-3a2188173e74" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-15be1dd8-0898-47bf-b8b3-9f9f0dbd659e">
+<span class="eqno">()<a class="headerlink" href="#equation-15be1dd8-0898-47bf-b8b3-9f9f0dbd659e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta T_1}[V(T_1)-c]+e^{-\delta T_2}[V(T_2-T_1)-c]+e^{-\delta T_3}[V(T_3-T_2)-c]+\dots
 \end{equation}\]</div>
 <p>Since the second rotation problem is identical to the first (and so on) we an assume that all rotation periods are equal and so <span class="math notranslate nohighlight">\(T_k=kT\)</span>, <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span></p>
 <p>Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ddc17496-969a-4db4-8e3b-e6dfe493a8d1">
-<span class="eqno">()<a class="headerlink" href="#equation-ddc17496-969a-4db4-8e3b-e6dfe493a8d1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0d23acbe-f597-46fe-8788-3be5b95b940a">
+<span class="eqno">()<a class="headerlink" href="#equation-0d23acbe-f597-46fe-8788-3be5b95b940a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\sum_{k=1}^{\infty}e^{-k\delta T}[V(T)-c]=[V(t)-c]\sum_{k=1}^{\infty}e^{-k\delta T}
 \end{equation}\]</div>
 <p>The sum is a geometric progression. With first term and common difference both equal to <span class="math notranslate nohighlight">\(e^{-\delta T}\)</span>.</p>
 <p>We obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0506e12b-2ba5-40d3-9f44-1b92f76ae9a6">
-<span class="eqno">()<a class="headerlink" href="#equation-0506e12b-2ba5-40d3-9f44-1b92f76ae9a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5f2feb29-4ae3-47cb-875f-2d958d580fe2">
+<span class="eqno">()<a class="headerlink" href="#equation-5f2feb29-4ae3-47cb-875f-2d958d580fe2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\frac{V(T)-c}{e^{\delta T}-1}
 \end{equation}\]</div>
 <p>To maximise,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-14772f82-c0bd-43e7-8f50-70b64d0316ee">
-<span class="eqno">()<a class="headerlink" href="#equation-14772f82-c0bd-43e7-8f50-70b64d0316ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ce813d5e-78d0-4e43-ae13-a49149825e27">
+<span class="eqno">()<a class="headerlink" href="#equation-ce813d5e-78d0-4e43-ae13-a49149825e27" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}^{\prime}=\frac{(e^{\delta T}-1)V^{\prime}-(V-c)\delta e^{\delta T}}{(e^{\delta T}-1)^2}
 \end{equation}\]</div>
 <p><span class="math notranslate nohighlight">\(\hat{V}^{\prime}=0\)</span> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43f16649-4288-4142-8562-26912a82cce3">
-<span class="eqno">()<a class="headerlink" href="#equation-43f16649-4288-4142-8562-26912a82cce3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-842d4737-3954-4e7d-bf58-931aaa666b56">
+<span class="eqno">()<a class="headerlink" href="#equation-842d4737-3954-4e7d-bf58-931aaa666b56" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{V^{\prime}}{V-c}=\frac{\delta}{1-e^{-\delta T}}
 \end{equation}\]</div>
 <p>This is the Faustmann formula.</p>
@@ -518,15 +523,15 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Fit a Weibull function to the net stumpage value. The Weibull function is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0f199727-8904-4a1e-8850-0eb268e70626">
-<span class="eqno">()<a class="headerlink" href="#equation-0f199727-8904-4a1e-8850-0eb268e70626" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-85a20632-ad51-40d5-8dde-89422c20ecff">
+<span class="eqno">()<a class="headerlink" href="#equation-85a20632-ad51-40d5-8dde-89422c20ecff" title="Permalink to this equation">#</a></span>\[\begin{equation}
 w(t) = 1-e^{-(t/\mu)^L}
 \end{equation}\]</div>
 <p>Note: this is hard. The data need to be transformed to the range [0,1] on both axes to perform the fit, and then the inverse transform needs to be performed. It’s worth it though, as the data fit very nicely!</p>
 <p>Plot the following function for different values of the discount <span class="math notranslate nohighlight">\(\delta\)</span>. Use the following values:
 <span class="math notranslate nohighlight">\(\delta = [0,0.05,0.1,0.15]\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4430b97-df20-404c-9322-5be0fe77fb16">
-<span class="eqno">()<a class="headerlink" href="#equation-e4430b97-df20-404c-9322-5be0fe77fb16" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bf76f3d4-d622-4a93-ae72-25ef0bf118c6">
+<span class="eqno">()<a class="headerlink" href="#equation-bf76f3d4-d622-4a93-ae72-25ef0bf118c6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\delta}{1-e^{-\delta t}}
 \end{equation}\]</div>
 <figure class="align-default" id="will-replace">
@@ -541,8 +546,8 @@ w(t) = 1-e^{-(t/\mu)^L}
 | Avg annual yield            | 9.23 | 7.41 | 5.63 | 4.13 | 2.80 | 1.56 | 0.86 |</p>
 <p>Note: because <span class="math notranslate nohighlight">\(1-e^{-\delta T}&lt;1\)</span>, taking rotation into account leads to a decrease in the age of cutting.</p>
 <p>Note 2: The Faustmann formula can be understood by rearrangement to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9904a82-8091-44b0-afff-1460fd794a9b">
-<span class="eqno">()<a class="headerlink" href="#equation-e9904a82-8091-44b0-afff-1460fd794a9b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a71fc8a6-a6d0-4034-a588-16101c36237d">
+<span class="eqno">()<a class="headerlink" href="#equation-a71fc8a6-a6d0-4034-a588-16101c36237d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 \end{equation}\]</div>
 <p>The first term represents the interest earned if revenue from cutting is invested at interest rate <span class="math notranslate nohighlight">\(\delta\)</span></p>
