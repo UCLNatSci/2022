@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>6. Know your limits &#8212; Mathematics for Natural Sciences B</title>
+    <title>2. Know your limits &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Placeholder" href="placeholder.html" />
-    <link rel="prev" title="5. Rational functions" href="pfrac.html" />
+    <link rel="next" title="3. Placeholder" href="placeholder.html" />
+    <link rel="prev" title="1. Rational functions" href="pfrac.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -154,17 +154,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="pfrac.html">
-   5. Rational functions
+   1. Rational functions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. Know your limits
+   2. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="placeholder.html">
-   7. Placeholder
+   3. Placeholder
   </a>
  </li>
 </ul>
@@ -188,12 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   8. Chemical concentrations
+   1. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   9. Freshwater sustainability
+   2. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/coronavirus.html">
+   3. Viral trends
   </a>
  </li>
 </ul>
@@ -375,32 +380,32 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#informal-notion-of-limit">
-   6.1. Informal notion of limit
+   2.1. Informal notion of limit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#finite-limits">
-   6.2. Finite limits
+   2.2. Finite limits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#asymptotic-equivalence">
-   6.3. Asymptotic equivalence
+   2.3. Asymptotic equivalence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-little-help-from-python">
-   6.4. A little help from Python
+   2.4. A little help from Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#do-limits-always-exist">
-   6.5. Do limits always exist?
+   2.5. Do limits always exist?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#limiting-sums">
-   6.6. Limiting sums
+   2.6. Limiting sums
   </a>
  </li>
 </ul>
@@ -424,32 +429,32 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#informal-notion-of-limit">
-   6.1. Informal notion of limit
+   2.1. Informal notion of limit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#finite-limits">
-   6.2. Finite limits
+   2.2. Finite limits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#asymptotic-equivalence">
-   6.3. Asymptotic equivalence
+   2.3. Asymptotic equivalence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-little-help-from-python">
-   6.4. A little help from Python
+   2.4. A little help from Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#do-limits-always-exist">
-   6.5. Do limits always exist?
+   2.5. Do limits always exist?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#limiting-sums">
-   6.6. Limiting sums
+   2.6. Limiting sums
   </a>
  </li>
 </ul>
@@ -463,7 +468,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="know-your-limits">
-<h1><span class="section-number">6. </span>Know your limits<a class="headerlink" href="#know-your-limits" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>Know your limits<a class="headerlink" href="#know-your-limits" title="Permalink to this heading">#</a></h1>
 <p>In this chapter we introduce the concept of a limit by studying some examples. We do not provide a formal or in-depth treatment of this topic, but by the end of the chapter you should be able to:</p>
 <ul class="simple">
 <li><p>use correct mathematical notation and language to describe a limit</p></li>
@@ -476,14 +481,14 @@ title="Print to PDF"
 <p>And what are these Fluxions? The Velocities of evanescent Increments? And what are these same evanescent Increments? They are neither finite Quantities nor Quantities infinitely small, nor yet nothing. May we not call them the ghosts of departed quantities?</p>
 </div>
 <section id="informal-notion-of-limit">
-<h2><span class="section-number">6.1. </span>Informal notion of limit<a class="headerlink" href="#informal-notion-of-limit" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>Informal notion of limit<a class="headerlink" href="#informal-notion-of-limit" title="Permalink to this heading">#</a></h2>
 <p>In the last chapter we saw that there are times when we may want to describe the behaviour of a function as its argument <em>approaches</em> a value without actually being equal to it. This is the idea that lies behind the mathematical definition of a limit.</p>
 <p>By way of example, let us consider one of the functions that we looked at previously:</p>
 <div class="math notranslate nohighlight" id="equation-thefrac">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-thefrac" title="Permalink to this equation">#</a></span>\[y=\frac{3x^2+2x}{1-2x}.\]</div>
-<p>In the last chapter we described the behaviour of this function as <span class="math notranslate nohighlight">\(x\)</span> approaches (“tends to”) the value of 1/2. We saw that the result is different as we approach from either the left or the right side of the <span class="math notranslate nohighlight">\(x\)</span>-axis [see <a class="reference internal" href="pfrac.html#asymptotes-03"><span class="std std-numref">Fig. 5.2</span></a>]. We may mathematically denote this by writing:</p>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-thefrac" title="Permalink to this equation">#</a></span>\[y=\frac{3x^2+2x}{1-2x}.\]</div>
+<p>In the last chapter we described the behaviour of this function as <span class="math notranslate nohighlight">\(x\)</span> approaches (“tends to”) the value of 1/2. We saw that the result is different as we approach from either the left or the right side of the <span class="math notranslate nohighlight">\(x\)</span>-axis [see <a class="reference internal" href="pfrac.html#asymptotes-03"><span class="std std-numref">Fig. 1.2</span></a>]. We may mathematically denote this by writing:</p>
 <div class="math notranslate nohighlight" id="equation-oneside">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-oneside" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-oneside" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
 \lim_{x\rightarrow \left(\frac{1}{2}\right)^{-}}y=+\infty\\
 \lim_{x\rightarrow \left(\frac{1}{2}\right)^{+}}y=-\infty
 \end{align*}\end{split}\]</div>
@@ -492,15 +497,15 @@ title="Print to PDF"
 <li><p>from the left, <span class="math notranslate nohighlight">\(y\)</span> tends to positive infinity</p></li>
 <li><p>from the right, <span class="math notranslate nohighlight">\(y\)</span> tends to negative infinity</p></li>
 </ul>
-<p>These are <em>one-sided</em> limits. Since the left- and right- sided limits are not the same, we cannot meaningfully speak of the limit as <span class="math notranslate nohighlight">\(x\)</span> tends to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> without specifying the direction, as indicated by the superscript <span class="math notranslate nohighlight">\(+/-\)</span> used in <a class="reference internal" href="#equation-oneside">(6.2)</a>.</p>
+<p>These are <em>one-sided</em> limits. Since the left- and right- sided limits are not the same, we cannot meaningfully speak of the limit as <span class="math notranslate nohighlight">\(x\)</span> tends to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> without specifying the direction, as indicated by the superscript <span class="math notranslate nohighlight">\(+/-\)</span> used in <a class="reference internal" href="#equation-oneside">(2.4)</a>.</p>
 <p>For comparison, consider the function <span class="math notranslate nohighlight">\(1/x^2\)</span>. As <span class="math notranslate nohighlight">\(x\)</span> tends to zero the left- and right- sided limits of this function are both positive infinity and so we can simply say:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e5435c5f-51c4-488c-a43f-b0cd5d86e258">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-e5435c5f-51c4-488c-a43f-b0cd5d86e258" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-91dee69f-9af3-4cac-b2dd-271064533384">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-91dee69f-9af3-4cac-b2dd-271064533384" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \lim_{x\rightarrow 0}\frac{1}{x^2} = \infty.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/limits-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.7 </span></p>
 <section id="exercise-content">
 <p>What do you think is the correct result for:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -523,8 +528,8 @@ So this limit appears to be infinity. This can be demonstrated by factorisation:
 </section>
 <hr class="docutils" />
 <section id="finite-limits">
-<h2><span class="section-number">6.2. </span>Finite limits<a class="headerlink" href="#finite-limits" title="Permalink to this heading">#</a></h2>
-<p>The limits in the examples above are infinite, but it doesn’t have to be that way. We saw an example in the previous chapter of a function with a horizontal asymptote (<a class="reference internal" href="pfrac.html#horiz-ass"><span class="std std-numref">Exercise 5.2</span></a>):</p>
+<h2><span class="section-number">2.2. </span>Finite limits<a class="headerlink" href="#finite-limits" title="Permalink to this heading">#</a></h2>
+<p>The limits in the examples above are infinite, but it doesn’t have to be that way. We saw an example in the previous chapter of a function with a horizontal asymptote (<a class="reference internal" href="pfrac.html#horiz-ass"><span class="std std-numref">Exercise 1.12</span></a>):</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \lim_{x\to\infty}\frac{x^2+3x+1}{(2x-3)(2x+3)}=\frac{1}{4}.
@@ -532,7 +537,7 @@ So this limit appears to be infinity. This can be demonstrated by factorisation:
 <p>Although both the numerator and denominator here can get arbitrarily large, they do so at a similar rate (like <span class="math notranslate nohighlight">\(x^2/4x^2\)</span>) and so their ratio remains finite.</p>
 <div class="exercise admonition" id="second/limits-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.8 </span></p>
 <section id="exercise-content">
 <p>Determine the following limit:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -550,7 +555,7 @@ So this limit appears to be infinity. This can be demonstrated by factorisation:
 </div>
 <div class="exercise admonition" id="second/limits-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.3 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.9 </span></p>
 <section id="exercise-content">
 <p>Find the following limits:</p>
 <p><span class="math notranslate nohighlight">\(\qquad \displaystyle\lim_{x\to\infty} \frac{x+2}{x^2-2}, \qquad \qquad \lim_{x\to\infty} \frac{x-2}{x+2}\)</span>.</p>
@@ -587,9 +592,9 @@ y=\frac{1-e^{-x}}{x}.
 <p>This is possible because whilst both the numerator and denominator tend to zero they do so at exactly the same rate (like <span class="math notranslate nohighlight">\(x/x\)</span>). In the next section we will learn how to find limits of this type.</p>
 </section>
 <section id="asymptotic-equivalence">
-<h2><span class="section-number">6.3. </span>Asymptotic equivalence<a class="headerlink" href="#asymptotic-equivalence" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Asymptotic equivalence<a class="headerlink" href="#asymptotic-equivalence" title="Permalink to this heading">#</a></h2>
 <p>Whereas the <em>limit</em> of a function refers to tendency towards a single value, asymptotic equivalence refers to tendency towards a relationship.</p>
-<p>In the last chapter we learned how to construct asymptotes for rational fractions as <span class="math notranslate nohighlight">\(x\to \pm\infty\)</span>. For example, returning to <a class="reference internal" href="#equation-thefrac">(6.1)</a>, for large positive <span class="math notranslate nohighlight">\(x\)</span> the function has</p>
+<p>In the last chapter we learned how to construct asymptotes for rational fractions as <span class="math notranslate nohighlight">\(x\to \pm\infty\)</span>. For example, returning to <a class="reference internal" href="#equation-thefrac">(2.3)</a>, for large positive <span class="math notranslate nohighlight">\(x\)</span> the function has</p>
 <ul class="simple">
 <li><p>a <em>limit</em> of negative infinity</p></li>
 <li><p>an <em>asymptote</em> <span class="math notranslate nohighlight">\(y=-\frac{3x}{2}-\frac{7}{4}\)</span>.</p></li>
@@ -610,7 +615,7 @@ y=\frac{1-e^{-x}}{x}.
 </div>
 <div class="exercise admonition" id="second/limits-exercise-3">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.4 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.10 </span></p>
 <section id="exercise-content">
 <p>Using the result given above, write down the first three terms in the power series expression for <span class="math notranslate nohighlight">\((1+x)^{1/2}\)</span>. Estimate the maximum relative error in this expansion over the range <span class="math notranslate nohighlight">\([-0.2,0.2]\)</span>.</p>
 </section>
@@ -645,7 +650,7 @@ y=\frac{1-e^{-x}}{x}.
 </div>
 <div class="exercise admonition" id="second/limits-exercise-4">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.11 </span></p>
 <section id="exercise-content">
 <p>The sinc function appears often in engineering applications. It is defined for <span class="math notranslate nohighlight">\(x\neq 0\)</span> by</p>
 <div class="amsmath math notranslate nohighlight">
@@ -688,7 +693,7 @@ y=\frac{1-e^{-x}}{x}.
 </section>
 <hr class="docutils" />
 <section id="a-little-help-from-python">
-<h2><span class="section-number">6.4. </span>A little help from Python<a class="headerlink" href="#a-little-help-from-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>A little help from Python<a class="headerlink" href="#a-little-help-from-python" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library to find limits or asymptotically equivalent power series. The two expressions you can use to explore a function <span class="math notranslate nohighlight">\(y(x)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow x_0\)</span> are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">limit(y,x,x0)</span></code></p></li>
@@ -718,7 +723,7 @@ y=\frac{1-e^{-x}}{x}.
 \end{alignat}\)</span></p>
 <div class="exercise admonition" id="second/limits-exercise-5">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.12 </span></p>
 <section id="exercise-content">
 <p>Find an <span class="math notranslate nohighlight">\(\mathcal{O}(x)\)</span> power series expansion for the following function, and deduce the limit as <span class="math notranslate nohighlight">\(x\)</span> tends to zero:</p>
 <p><span class="math notranslate nohighlight">\(\qquad \displaystyle y=\frac{\sqrt{1-x^2}-\sqrt{1+x}}{x}\)</span>.</p>
@@ -752,7 +757,7 @@ y &amp;= \frac{\left(1-\frac{x^2}{2}\right)-\left(1+\frac{1}{2}x -\frac{1}{8}x^2
 <hr class="docutils" />
 <div class="exercise admonition" id="second/limits-exercise-6">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.13 </span></p>
 <section id="exercise-content">
 <p>Find an <span class="math notranslate nohighlight">\(\mathcal{O}(1/x)\)</span> power series expansion for the following function, and deduce the limit as <span class="math notranslate nohighlight">\(x\)</span> tends to infinity:</p>
 <p><span class="math notranslate nohighlight">\(\qquad \displaystyle\lim_{x \to \infty} \big( \sqrt{x^2-2} - \sqrt{x^2+x} \big)\)</span>.</p>
@@ -780,9 +785,9 @@ y &amp;= \frac{\left(1-\frac{x^2}{2}\right)-\left(1+\frac{1}{2}x -\frac{1}{8}x^2
 </section>
 <hr class="docutils" />
 <section id="do-limits-always-exist">
-<h2><span class="section-number">6.5. </span>Do limits always exist?<a class="headerlink" href="#do-limits-always-exist" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.5. </span>Do limits always exist?<a class="headerlink" href="#do-limits-always-exist" title="Permalink to this heading">#</a></h2>
 <p>Not all functions have a limit at all points. For example, consider the square root function <span class="math notranslate nohighlight">\(\sqrt{x}\)</span>, which is not real-valued for <span class="math notranslate nohighlight">\(x&lt;0\)</span>. This function only has a limit from the right at <span class="math notranslate nohighlight">\(x=0\)</span> and does not have a limit for negative values of <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>A more exotic example is given by the function shown in <a class="reference internal" href="#sinxminus1"><span class="std std-numref">Fig. 6.1</span></a>. The function oscillates faster approaching zero and does not approach a particular value, so it does not have a limit as <span class="math notranslate nohighlight">\(x\to 0\)</span>.</p>
+<p>A more exotic example is given by the function shown in <a class="reference internal" href="#sinxminus1"><span class="std std-numref">Fig. 2.5</span></a>. The function oscillates faster approaching zero and does not approach a particular value, so it does not have a limit as <span class="math notranslate nohighlight">\(x\to 0\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -795,12 +800,12 @@ y &amp;= \frac{\left(1-\frac{x^2}{2}\right)-\left(1+\frac{1}{2}x -\frac{1}{8}x^2
 <figure class="align-default" id="sinxminus1">
 <img alt="../_images/sinxminus1.png" src="../_images/sinxminus1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(\sin(1/x)\)</span>.</span><a class="headerlink" href="#sinxminus1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(\sin(1/x)\)</span>.</span><a class="headerlink" href="#sinxminus1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="second/limits-exercise-7">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.14 </span></p>
 <section id="exercise-content">
 <p>Do either of the following limits exist?</p>
 <div class="amsmath math notranslate nohighlight">
@@ -815,7 +820,7 @@ y &amp;= \frac{\left(1-\frac{x^2}{2}\right)-\left(1+\frac{1}{2}x -\frac{1}{8}x^2
 </div>
 </section>
 <section id="limiting-sums">
-<h2><span class="section-number">6.6. </span>Limiting sums<a class="headerlink" href="#limiting-sums" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6. </span>Limiting sums<a class="headerlink" href="#limiting-sums" title="Permalink to this heading">#</a></h2>
 <p>The power series expansions that we saw above are examples of <em>infinite sums</em>. Although we usually keep only the first few terms in these sums, we can in principle keep going in the expansion up to arbitrarily high powers of <span class="math notranslate nohighlight">\(x\)</span>. It may be difficult to believe that when we add an infinite number of terms we can obtain a finite result. However, a relatively simple example may convince you of this fact.</p>
 <p>Consider the sum below, containing <span class="math notranslate nohighlight">\(n\)</span> terms:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -824,7 +829,7 @@ S_n = \frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+\dots+\frac{1}{4^n}
 \end{equation*}\]</div>
 <p>In mathematical notation this would usually be written as follows, representing the sum from <span class="math notranslate nohighlight">\(k=1\)</span> to <span class="math notranslate nohighlight">\(n\)</span> of the given expression :</p>
 <div class="math notranslate nohighlight" id="equation-geom-ser1">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-geom-ser1" title="Permalink to this equation">#</a></span>\[\sum_{k=1}^{n}\left(\frac{1}{4}\right)^k.\]</div>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-geom-ser1" title="Permalink to this equation">#</a></span>\[\sum_{k=1}^{n}\left(\frac{1}{4}\right)^k.\]</div>
 <p>A curious person could investigate this sum by calculating a result for the first few values of <span class="math notranslate nohighlight">\(n\)</span>. We could even plot the results to see if there is a visible pattern:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
 <span class="n">t</span><span class="o">=</span><span class="p">[</span><span class="n">r</span><span class="o">**</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span> <span class="c1">#terms in series</span>
@@ -844,7 +849,7 @@ S_n = \frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+\dots+\frac{1}{4^n}
 <p class="admonition-title">Warning</p>
 <p>This result is not a proof. Sometimes a sum that that appears to be numerically converging to a finite limit may in fact be growing to infinity at an extremely slow rate, as demonstrated in the following example. Conversely, a sum that appears to be growing extremely large may be converging towards an extremely large (but finite) limit.</p>
 </div>
-<p>Sometimes the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library in Python may be able to give us the limit of a sum <span class="math notranslate nohighlight">\(S_n\)</span> as the number of terms <span class="math notranslate nohighlight">\(n\)</span> tends to infinity. We can do it here for the sum given in <a class="reference internal" href="#equation-geom-ser1">(6.4)</a>. The result agrees with our numerical estimate:</p>
+<p>Sometimes the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library in Python may be able to give us the limit of a sum <span class="math notranslate nohighlight">\(S_n\)</span> as the number of terms <span class="math notranslate nohighlight">\(n\)</span> tends to infinity. We can do it here for the sum given in <a class="reference internal" href="#equation-geom-ser1">(2.6)</a>. The result agrees with our numerical estimate:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
@@ -856,7 +861,7 @@ S_n = \frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+\dots+\frac{1}{4^n}
 <figure class="align-default" id="geometric-series">
 <img alt="../_images/geometric_series.png" src="../_images/geometric_series.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">A graphical representation of <span class="math notranslate nohighlight">\(\displaystyle\sum_{k=1}^{\infty}\left(\frac{1}{4}\right)^k\)</span></span><a class="headerlink" href="#geometric-series" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">A graphical representation of <span class="math notranslate nohighlight">\(\displaystyle\sum_{k=1}^{\infty}\left(\frac{1}{4}\right)^k\)</span></span><a class="headerlink" href="#geometric-series" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The sum we just considered is an example of a <em>geometric sum</em>, which means that it has the form</p>
@@ -872,8 +877,8 @@ r S_n &amp;=     &amp;&amp; ar+ar^2+\dots +ar^{n-1}+ar^n\\
 &amp;&amp;&amp;\implies      S_n = \frac{a(1-r^n)}{1-r}
 \end{alignat}\)</span></p>
 <p>If <span class="math notranslate nohighlight">\(r&lt;1\)</span> then as <span class="math notranslate nohighlight">\(n\to \infty\)</span>, <span class="math notranslate nohighlight">\(r^n\to 0\)</span> and so we obtain the famous geometric series formula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e6eabf0-ee1e-4db3-840b-13a71ea5ccde">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-1e6eabf0-ee1e-4db3-840b-13a71ea5ccde" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b4cf84bb-ddca-4846-b21b-d83941a114ca">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-b4cf84bb-ddca-4846-b21b-d83941a114ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
 S_{\infty} = \frac{a}{1-r}.
 \end{equation}\]</div>
 <p>For example, when <span class="math notranslate nohighlight">\(r=1/4\)</span>, the result is <span class="math notranslate nohighlight">\(S_\infty=1/3\)</span>.</p>
@@ -943,13 +948,13 @@ S_{\infty} = \frac{a}{1-r}.
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Rational functions</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Rational functions</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="placeholder.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Placeholder</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Placeholder</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
