@@ -6,7 +6,7 @@ As we said last week, our objective is to delay and flatten the peak of the epid
 ```
 
 
-In this case study we will experiment with fitting some data to the logistic and the Fréchet distributions. Each of these has a characteristic "sigmoidal" S-shape, which maxes them typically suitable for fitting viral data. What we see with viruses is:
+In this case study we will experiment with fitting some data to the logistic and the Fréchet distributions. Each of these has a characteristic "sigmoidal" S-shape, which makes them typically suitable for fitting viral data. What we see with viruses is:
 
 * an initial "flat" period of little growth (the lag phase)
 * a period of exponential growth
@@ -237,5 +237,5 @@ Fit a Fréchet function to the cumulative search interest for the call me maybe 
 ```{exercise}
 Use Google trends to obtain search data for your own choice of meme/viral video and fit either the logistic function or the Fréchet function to the cumulative data.
 
-You can choose between Worldwide or specific country, you can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?
+You can choose between Worldwide or specific country. You can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?
 ```

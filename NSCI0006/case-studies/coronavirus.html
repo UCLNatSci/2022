@@ -466,15 +466,15 @@ title="Print to PDF"
 <p class="admonition-title"><a class="reference external" href="https://www.gov.uk/government/speeches/pm-statement-on-coronavirus-16-march-2020">Prime Minister’s statement</a></p>
 <p>As we said last week, our objective is to delay and flatten the peak of the epidemic by bringing forward the right measures at the right time, so that we minimise suffering and save lives. And everything we do is based scrupulously on the best scientific advice.</p>
 </div>
-<p>In this case study we will experiment with fitting some data to the logistic and the Fréchet distributions. Each of these has a characteristic “sigmoidal” S-shape, which maxes them typically suitable for fitting viral data. What we see with viruses is:</p>
+<p>In this case study we will experiment with fitting some data to the logistic and the Fréchet distributions. Each of these has a characteristic “sigmoidal” S-shape, which makes them typically suitable for fitting viral data. What we see with viruses is:</p>
 <ul class="simple">
 <li><p>an initial “flat” period of little growth (the lag phase)</p></li>
 <li><p>a period of exponential growth</p></li>
 <li><p>a terminating plateau where transmission has almost reached the maximum possible</p></li>
 </ul>
 <p>We will explore these features and the models that describe them later in this course. For now, we simply state the equations for the two distributions, which are given below. The effect of the parameters in each model is similar, with <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(K\)</span> determining the location and scale of the distribution, and <span class="math notranslate nohighlight">\(s\)</span> determining the shape.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f577910e-7159-4c53-a5a3-7d06989c8a22">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-f577910e-7159-4c53-a5a3-7d06989c8a22" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5985fe3e-3a23-478f-908d-0284e14a26f5">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-5985fe3e-3a23-478f-908d-0284e14a26f5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Logistic :} \quad &amp;y = \frac{K}{1+e^{-(x-x_0)/s}}\\
 \text{Fréchet :} \quad  &amp;y = e^{-\left(\frac{x-x_0}{K}\right)^{-s}}
 \end{align}\]</div>
@@ -672,7 +672,7 @@ title="Print to PDF"
 <p class="admonition-title"><span class="caption-number">Exercise 3.8 </span></p>
 <section id="exercise-content">
 <p>Use Google trends to obtain search data for your own choice of meme/viral video and fit either the logistic function or the Fréchet function to the cumulative data.</p>
-<p>You can choose between Worldwide or specific country, you can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?</p>
+<p>You can choose between Worldwide or specific country. You can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?</p>
 </section>
 </div>
 </section>
