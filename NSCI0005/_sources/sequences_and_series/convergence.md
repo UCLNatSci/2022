@@ -152,17 +152,17 @@ Use the ratio test to determine if the following series converges:
 
 2\. $\displaystyle \sum_{k=1}^n \frac{(2 k)!}{2^k k!}$,
 
-3\. $\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots$.
+3\. $\displaystyle \sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots$.
 ````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
 
-1\. Let $\displaystyle u_k = {2^k}{\frac{k!}}$.
+1\. Let $\displaystyle u_k = \frac{2^k}{k!}$.
 ```{math}
 \frac{u_{k+1}}{u_k} = \frac{2^{k+1}}{(k+1)!}\frac{k!}{2^k} = \frac{k!}{(k+1)!}\frac{2^{k+1}}{2^k} = \frac{2}{k+1}
 ```
-so $\displaystyle \lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|\frac{2}{k+1}\Big| = 0 < 1$.
+so $\displaystyle \lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \lim_{k \to \infty} \Big|\frac{2}{k+1}\Big| = 0 < 1$.
 
 Thus we conclude that the series converges.
 
@@ -172,7 +172,7 @@ Thus we conclude that the series converges.
 \frac{u_{k+1}}{u_k} &= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!} \\
 &= \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!} = \frac{(2k+2)(2k+1)}{2 (k+1)} = 2k+1
 ```
-So, $\displaystyle\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|2k+1\Big| > 1$.
+So, $\displaystyle\lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \lim_{k \to \infty} \Big|2k+1\Big| > 1$.
 
 Thus we conclude that the series diverges.
 
@@ -181,7 +181,7 @@ Thus we conclude that the series diverges.
 ```{math}
 \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert= \big\lvert \frac{k}{k+1} \big\rvert  = \frac{1}{1+1/k}
 ```
-So, $\displaystyle\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \Big|\frac{1}{1+1/k}\Big| = 1$.
+So, $\displaystyle\lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \Big|\frac{1}{1+1/k}\Big| = 1$.
 
 Thus we conclude that the test is inconclusive! Further tests are required to determine convergence/divergence.
 ````

@@ -459,25 +459,25 @@ be explicitly taken!</p></li>
 <p>Use the ratio test to determine if the following series converges:</p>
 <p>1. <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{k!}{2^k}\)</span>,</p>
 <p>2. <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{(2 k)!}{2^k k!}\)</span>,</p>
-<p>3. <span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p>
+<p>3. <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
-<p>1. Let <span class="math notranslate nohighlight">\(\displaystyle u_k = {2^k}{\frac{k!}}\)</span>.</p>
+<p>1. Let <span class="math notranslate nohighlight">\(\displaystyle u_k = \frac{2^k}{k!}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\frac{u_{k+1}}{u_k} = \frac{2^{k+1}}{(k+1)!}\frac{k!}{2^k} = \frac{k!}{(k+1)!}\frac{2^{k+1}}{2^k} = \frac{2}{k+1}\]</div>
-<p>so <span class="math notranslate nohighlight">\(\displaystyle \lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|\frac{2}{k+1}\Big| = 0 &lt; 1\)</span>.</p>
+<p>so <span class="math notranslate nohighlight">\(\displaystyle \lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \lim_{k \to \infty} \Big|\frac{2}{k+1}\Big| = 0 &lt; 1\)</span>.</p>
 <p>Thus we conclude that the series converges.</p>
 <p>2. Let <span class="math notranslate nohighlight">\(\displaystyle u_k = \frac{(2k)!}{2^k k!}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{u_{k+1}}{u_k} &amp;= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!} \\
 &amp;= \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!} = \frac{(2k+2)(2k+1)}{2 (k+1)} = 2k+1\end{split}\]</div>
-<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|2k+1\Big| &gt; 1\)</span>.</p>
+<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \lim_{k \to \infty} \Big|2k+1\Big| &gt; 1\)</span>.</p>
 <p>Thus we conclude that the series diverges.</p>
 <p>3. Let <span class="math notranslate nohighlight">\(\displaystyle u_k \frac{(-1)^{k-1}}{k}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert= \big\lvert \frac{k}{k+1} \big\rvert  = \frac{1}{1+1/k}\]</div>
-<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \Big|\frac{1}{1+1/k}\Big| = 1\)</span>.</p>
+<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \Big| \frac{u_{k+1}}{u_k} \Big| =  \Big|\frac{1}{1+1/k}\Big| = 1\)</span>.</p>
 <p>Thus we conclude that the test is inconclusive! Further tests are required to determine convergence/divergence.</p>
 </div>
 </div>
