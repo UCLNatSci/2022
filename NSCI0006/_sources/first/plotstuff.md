@@ -271,6 +271,7 @@ name: uk-time-gini
 UK Gini index over time. Dashed lines indicate changes of government.
 ```
 
+(molbind)=
 ## Molecular binding
 
 A biological sample with a concentration of $N$ receptors per mg of tissue is immersed in a solution containing a drug (ligand) at concentration $c$.

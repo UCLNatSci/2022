@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>5. Rational functions &#8212; Mathematics for Natural Sciences B</title>
+    <title>1. Rational functions &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Know your limits" href="limits.html" />
+    <link rel="next" title="2. Know your limits" href="limits.html" />
     <link rel="prev" title="4. Curve fitting" href="../first/curvefit.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -154,17 +154,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Rational functions
+   1. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="limits.html">
-   6. Know your limits
+   2. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="placeholder.html">
-   7. Placeholder
+   3. Placeholder
   </a>
  </li>
 </ul>
@@ -188,12 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   8. Chemical concentrations
+   1. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   9. Freshwater sustainability
+   2. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/coronavirus.html">
+   3. Viral trends
   </a>
  </li>
 </ul>
@@ -375,24 +380,24 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#partial-fractions">
-   5.1. Partial fractions
+   1.1. Partial fractions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     5.1.1. Technique
+     1.1.1. Technique
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
-     5.1.2. Examples
+     1.1.2. Examples
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting-rational-fractions">
-   5.2. Plotting rational fractions
+   1.2. Plotting rational fractions
   </a>
  </li>
 </ul>
@@ -416,24 +421,24 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#partial-fractions">
-   5.1. Partial fractions
+   1.1. Partial fractions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     5.1.1. Technique
+     1.1.1. Technique
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
-     5.1.2. Examples
+     1.1.2. Examples
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting-rational-fractions">
-   5.2. Plotting rational fractions
+   1.2. Plotting rational fractions
   </a>
  </li>
 </ul>
@@ -447,7 +452,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rational-functions">
-<h1><span class="section-number">5. </span>Rational functions<a class="headerlink" href="#rational-functions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Rational functions<a class="headerlink" href="#rational-functions" title="Permalink to this heading">#</a></h1>
 <p>In this chapter we will look at functions of the form <span class="math notranslate nohighlight">\(P(x)/Q(x)\)</span>, where <span class="math notranslate nohighlight">\(P,Q\)</span> are polynomials. The material will require us to use partial fractions and so an overview of that technique is provided as background material.</p>
 <p>After completing the chapter you should be able to plot rational functions and identify any vertical, horizontal or oblique asymptotes.</p>
 <div class="quote admonition">
@@ -455,10 +460,10 @@ title="Print to PDF"
 <p>What part of “inverse tangent function approaching an asymptote” did you not understand?</p>
 </div>
 <section id="partial-fractions">
-<h2><span class="section-number">5.1. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this heading">#</a></h2>
 <p>Composing fractions means putting everything together over a common denominator. For example:</p>
 <div class="math notranslate nohighlight" id="equation-pfrac1">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-pfrac1" title="Permalink to this equation">#</a></span>\[\frac{2}{x+1}+\frac{3}{x+2} = \frac{2(x+2)+3(x+1)}{(x+1)(x+2)}=\frac{5x+7}{x^2+3x+2}\]</div>
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-pfrac1" title="Permalink to this equation">#</a></span>\[\frac{2}{x+1}+\frac{3}{x+2} = \frac{2(x+2)+3(x+1)}{(x+1)(x+2)}=\frac{5x+7}{x^2+3x+2}\]</div>
 <p>Decomposition is the reverse process (taking the fraction apart). We can get Python to do this for us by using the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library, as demonstrated for this example below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
@@ -476,7 +481,7 @@ title="Print to PDF"
 </div>
 <p>Although we can get Python (or Wolfram Alpha) to do partial fraction decomposition for us, it may be helpful to understand a little about how it works.</p>
 <section id="technique">
-<h3><span class="section-number">5.1.1. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>If the degree of the numerator <span class="math notranslate nohighlight">\(m\)</span> is greater than the degree of the denominator <span class="math notranslate nohighlight">\(n\)</span>, we can split off a polynomial of degree <span class="math notranslate nohighlight">\((m-n)\)</span></p></li>
 <li><p>The remaining fraction can be decomposed so that the factors of the denominator each appear in a fraction by themselves</p></li>
@@ -484,7 +489,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="examples">
-<h3><span class="section-number">5.1.2. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.2. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(\begin{alignat}{4}
 \mathbf{[1]}\quad &amp;\frac{11x+3}{x^2+3x+2} &amp;&amp; = \frac{A}{x+1}+\frac{B}{x+2}\\
 \mathbf{[2]}\quad &amp;\frac{2}{(x^2-1)(x+2)} &amp;&amp; =\frac{Px+Q}{x^2-1}+\frac{C}{x+2}=\frac{A}{x+1}+\frac{B}{x-1}+\frac{C}{x+2}\\
@@ -542,7 +547,7 @@ x+2+\frac{3}{x-1}+\frac{1}{(x-1)^2}
 \end{equation*}\]</div>
 <div class="exercise admonition" id="second/pfrac-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 1.11 </span></p>
 <section id="exercise-content">
 <p>Determine which of the following fractions can be further decomposed:</p>
 <p>a. <span class="math notranslate nohighlight">\(\displaystyle \frac{x}{x^2+1}\quad\)</span>
@@ -566,12 +571,12 @@ h. <span class="math notranslate nohighlight">\(\displaystyle\frac{x^3}{x^2-1}\)
 </section>
 </section>
 <section id="plotting-rational-fractions">
-<h2><span class="section-number">5.2. </span>Plotting rational fractions<a class="headerlink" href="#plotting-rational-fractions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Plotting rational fractions<a class="headerlink" href="#plotting-rational-fractions" title="Permalink to this heading">#</a></h2>
 <p>A rational fraction is a quotient of two polynomials (a polynomial over polynomial). Expressions of this type appear very frequently in science and mathematics, since polynomials are often used to approximate the behaviour of other functions over a range of values. Being able to graph expressions of this type can help us to identify key features, which may be of interest.</p>
 <p>We will start by taking a look at the following fraction:</p>
 <div class="math notranslate nohighlight" id="equation-frac01">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-frac01" title="Permalink to this equation">#</a></span>\[y = \frac{3x^2+2x}{1-2x}\]</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library offers a quick way to construct a plot of the function, as shown in <a class="reference internal" href="#asymptotes-01"><span class="std std-numref">Fig. 5.1</span></a>, from which we may notice the following features:</p>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-frac01" title="Permalink to this equation">#</a></span>\[y = \frac{3x^2+2x}{1-2x}\]</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library offers a quick way to construct a plot of the function, as shown in <a class="reference internal" href="#asymptotes-01"><span class="std std-numref">Fig. 1.1</span></a>, from which we may notice the following features:</p>
 <p><strong>[1]</strong> The function appears to “jump” from a large positive value to a large negative value for a particular value of <span class="math notranslate nohighlight">\(x\)</span><br>
 <strong>[2]</strong> The function appears to approximately follow a linear trend away from <span class="math notranslate nohighlight">\(x=0\)</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
@@ -583,10 +588,10 @@ h. <span class="math notranslate nohighlight">\(\displaystyle\frac{x^3}{x^2-1}\)
 <figure class="align-default" id="asymptotes-01">
 <img alt="../_images/asy01.png" src="../_images/asy01.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Plotting the function <span class="math notranslate nohighlight">\((3x^2+2x)/(1-2x)\)</span> using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</span><a class="headerlink" href="#asymptotes-01" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Plotting the function <span class="math notranslate nohighlight">\((3x^2+2x)/(1-2x)\)</span> using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</span><a class="headerlink" href="#asymptotes-01" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can understand the “jump” feature by looking at the denominator of the fraction <a class="reference internal" href="#equation-frac01">(5.2)</a>, which has a root at <span class="math notranslate nohighlight">\(x=1/2\)</span>. The function is undefined at this point. The graph below shows the behaviour of the numerator and denominator around <span class="math notranslate nohighlight">\(x=1/2\)</span>.</p>
+<p>We can understand the “jump” feature by looking at the denominator of the fraction <a class="reference internal" href="#equation-frac01">(1.3)</a>, which has a root at <span class="math notranslate nohighlight">\(x=1/2\)</span>. The function is undefined at this point. The graph below shows the behaviour of the numerator and denominator around <span class="math notranslate nohighlight">\(x=1/2\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -610,8 +615,8 @@ h. <span class="math notranslate nohighlight">\(\displaystyle\frac{x^3}{x^2-1}\)
 <li><p>As we approach <span class="math notranslate nohighlight">\(x=1/2\)</span> from the right by decreasing <span class="math notranslate nohighlight">\(x\)</span>, the denominator gets closer to zero whilst remaining <em>negative</em>.</p></li>
 </ul>
 <p>Meanwhile, the numerator approaches <span class="math notranslate nohighlight">\(7/4\)</span> in both cases. Thus, as the denominator shrinks in size the rational fraction “blows up”. The blow-up direction is positive or negative according to the sign of the denominator, which changes sign at <span class="math notranslate nohighlight">\(x=1/2\)</span>.</p>
-<p>The line connecting the positive and negative sections of the curve on the symbolic plot <a class="reference internal" href="#asymptotes-01"><span class="std std-numref">Fig. 5.1</span></a> is not a true feature of the function. It occurs because python produces a set of points and joins them up. In reality, the function is <em>discontinuous</em> at <span class="math notranslate nohighlight">\(x=1/2\)</span>.</p>
-<p>A more “proper” plot of the function is shown in <a class="reference internal" href="#asymptotes-03"><span class="std std-numref">Fig. 5.2</span></a>. To produce the plot we force python to recognise the discontinuity by inserting <code class="docutils literal notranslate"><span class="pre">nan</span></code> (not-a-number) in the correct positions in the data series. The <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.roots.html"><code class="docutils literal notranslate"><span class="pre">roots</span></code></a> function from the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library can be used to find the roots of the denominator.</p>
+<p>The line connecting the positive and negative sections of the curve on the symbolic plot <a class="reference internal" href="#asymptotes-01"><span class="std std-numref">Fig. 1.1</span></a> is not a true feature of the function. It occurs because python produces a set of points and joins them up. In reality, the function is <em>discontinuous</em> at <span class="math notranslate nohighlight">\(x=1/2\)</span>.</p>
+<p>A more “proper” plot of the function is shown in <a class="reference internal" href="#asymptotes-03"><span class="std std-numref">Fig. 1.2</span></a>. To produce the plot we force python to recognise the discontinuity by inserting <code class="docutils literal notranslate"><span class="pre">nan</span></code> (not-a-number) in the correct positions in the data series. The <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.roots.html"><code class="docutils literal notranslate"><span class="pre">roots</span></code></a> function from the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library can be used to find the roots of the denominator.</p>
 <p>The line of values <span class="math notranslate nohighlight">\(x=1/2\)</span> is called a “vertical asymptote” of the function. Notice that the function value approaches the asymptote from either side.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -648,7 +653,7 @@ h. <span class="math notranslate nohighlight">\(\displaystyle\frac{x^3}{x^2-1}\)
 <figure class="align-default" id="asymptotes-03">
 <img alt="../_images/asy03.png" src="../_images/asy03.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Plotting the function <span class="math notranslate nohighlight">\((3x^2+2x)/(1-2x)\)</span> using <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</span><a class="headerlink" href="#asymptotes-03" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Plotting the function <span class="math notranslate nohighlight">\((3x^2+2x)/(1-2x)\)</span> using <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</span><a class="headerlink" href="#asymptotes-03" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To understand why the function follows a linear trend, we look at the partial fraction decomposition:</p>
@@ -670,7 +675,7 @@ y=-\frac{3}{2}x-\frac{7}{4}
 <p>The sign of <span class="math notranslate nohighlight">\(1/(2x-1)\)</span> determines whether the function approaches the asymptote from above or below.</p>
 <div class="exercise admonition" id="horiz-ass">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 1.12 </span></p>
 <section id="exercise-content">
 <p>Produce a plot of the following function and identify any asymptotes:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -768,7 +773,7 @@ y=\frac{x^2+3x+1}{(2x-3)(2x+3)}
     <a class='right-next' id="next-link" href="limits.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Know your limits</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Know your limits</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -154,17 +154,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../second/pfrac.html">
-   5. Rational functions
+   1. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/limits.html">
-   6. Know your limits
+   2. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/placeholder.html">
-   7. Placeholder
+   3. Placeholder
   </a>
  </li>
 </ul>
@@ -188,12 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   8. Chemical concentrations
+   1. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   9. Freshwater sustainability
+   2. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/coronavirus.html">
+   3. Viral trends
   </a>
  </li>
 </ul>
@@ -634,8 +639,8 @@ k=\frac{D_{step}}{T_{step}}=\frac{D_b-D_a}{T_b-T_a}
 <section id="exponential-relationships">
 <h2><span class="section-number">3.2. </span>Exponential relationships<a class="headerlink" href="#exponential-relationships" title="Permalink to this heading">#</a></h2>
 <p>An exponential relationship has the following form, where <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are constants:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-890e2163-1780-4153-83fd-8f0bb3eaf52b">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-890e2163-1780-4153-83fd-8f0bb3eaf52b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ed6c6dbd-d7ac-440b-aec4-7ba71f5ffb8f">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-ed6c6dbd-d7ac-440b-aec4-7ba71f5ffb8f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y=y_0 k^x.
 \end{equation}\]</div>
 <p>In the previous section on student loans we saw an example with <span class="math notranslate nohighlight">\(k=1.168.\)</span> The plot below shows how the exponential curve looks for some other values of <span class="math notranslate nohighlight">\(k\)</span>, taking <span class="math notranslate nohighlight">\(y_0=1\)</span>. By putting <span class="math notranslate nohighlight">\(x=0\)</span> we obtain <span class="math notranslate nohighlight">\(y=y_0\)</span>, so this is the value at which the curve meets the vertical axis.</p>
@@ -657,8 +662,8 @@ y=y_0 k^x.
 </figcaption>
 </figure>
 <p>Notice that the plots for <span class="math notranslate nohighlight">\(k=0.5\)</span> and <span class="math notranslate nohighlight">\(k=2.0\)</span> are mirror images in the vertical axis. This can be understood from the laws of exponents:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fabe9b73-09dd-4570-8353-082726e7de94">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-fabe9b73-09dd-4570-8353-082726e7de94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ac3dfe4d-a480-4e1a-aa84-55cbf3013272">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-ac3dfe4d-a480-4e1a-aa84-55cbf3013272" title="Permalink to this equation">#</a></span>\[\begin{equation}
 k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
 \end{equation}\]</div>
 <p>We can describe the shape of the exponential curve for values of the positive constant <span class="math notranslate nohighlight">\(k\)</span> :</p>
@@ -870,13 +875,13 @@ y=\text{log10}(x) \quad \iff \quad 10^y=x \quad \iff \quad \left(e^{\ln(10)}\rig
 y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
 \end{equation*}\]</div>
 <p>Since we originally defined <span class="math notranslate nohighlight">\(y\)</span> as the base 10 logarithm of <span class="math notranslate nohighlight">\(x\)</span> we have the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af0b70ed-126c-45e3-8c7d-6e1006d72ee7">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-af0b70ed-126c-45e3-8c7d-6e1006d72ee7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f3657637-6333-42e0-aa85-21948484bdec">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-f3657637-6333-42e0-aa85-21948484bdec" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{log10}(x) = \frac{\ln(x)}{\ln(10)}.
 \end{equation}\]</div>
 <p>By using exactly the same algebra we can dwmonstrate that the analogous result applies to the logarithm in any base:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-83bb3e3c-8240-4aa3-bdfd-d8700eb004dd">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-83bb3e3c-8240-4aa3-bdfd-d8700eb004dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c8644863-8ad0-4471-a8e0-3c02845c15a3">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-c8644863-8ad0-4471-a8e0-3c02845c15a3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \log_k(x) = \frac{\ln(x)}{\ln(k)}.
 \end{equation}\]</div>
 <p>We can also use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base:</p>
