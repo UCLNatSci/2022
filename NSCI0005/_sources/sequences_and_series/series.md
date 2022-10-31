@@ -904,6 +904,27 @@ p(x;\,a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...
 Notice that this series satisfies $\displaystyle \frac{\mathrm{d}p}{\mathrm{d}x}=p$, which we would expect for $p = e^x$.
 ````
 
+We different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:
+```{math}
+\int_0^x f'(x-t)\,\text{d}t = -f(0) + f(x) \Longrightarrow f(x) = f(0) + \int_0^x f'(x-t) \,\text{d}t 
+```
+Integrating by parts, we find:
+```{math}
+u'(t) = 1, &\,\, v(t) = f'(x-t) \\
+u(t) = t, &\,\, v'(t) = -f''(x-t) \\
+\Rightarrow \int_0^x f'(x-t)\,\text{d}t &= \bigg[t\,f'(x-t) \bigg]^x_0 + \int_0^x t\,f''(x-t)\,\text{d}t \\
+\Rightarrow f(x) &= f(0) + x\,f'(0) + \int_0^x t\,f''(x-t)\,\text{d}t
+```
+We can then apply integration by parts repeatedly we find an infinite series for $f(x)$ around $x = 0$:
+```{math}
+f(x) = f(0) + x\,f'(0) + \frac{1}{2!}\,x^2\,f''(0) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}x^n f^{(n)}(0)
+```
+
+If we want to generalise this to *any* point $x=a$, then we start with $\displaystyle \int_0^{x-a} f'(x-t)\,\text{d}t$ :
+```{math}
+f(x) = f(a) + (x-a)\,f'(a) + \frac{1}{2!}\,(x-a)^2\,f''(a) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}(x-a)^n f^{(n)}(a)
+```
+
 ````{admonition} More examples
 :class: seealso, dropdown
 The Maclaurin expansions of $\sin$, $\cos$,  $e^x$, and $\ln(1+x)$ are particularly important:

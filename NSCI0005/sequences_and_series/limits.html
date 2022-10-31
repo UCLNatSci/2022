@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Limits of Functions and Sequences &#8212; Mathematics for Natural Sciences A</title>
+    <title>4. Limits of Functions and Sequences &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Sequences and Series" href="series.html" />
-    <link rel="prev" title="2. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
+    <link rel="next" title="5. Sequences and Series" href="series.html" />
+    <link rel="prev" title="3. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,23 +105,28 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   3. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Limits of Functions and Sequences
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="series.html">
-   4. Sequences and Series
+   5. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="convergence.html">
-   5. Convergence of Series
+   6. Convergence of Series
   </a>
  </li>
 </ul>
@@ -213,41 +218,41 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#limit-of-a-function">
-   3.1. Limit of a function
+   4.1. Limit of a function
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technical-definition">
-     3.1.1. Technical definition
+     4.1.1. Technical definition
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-one-sided-limit">
-   3.2. The one-sided limit
+   4.2. The one-sided limit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combination-of-limits">
-   3.3. Combination of limits
+   4.3. Combination of limits
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions-that-tend-to-finite-values">
-     3.3.1. Functions that tend to finite values
+     4.3.1. Functions that tend to finite values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions-that-tend-to-infinite-values">
-     3.3.2. Functions that tend to infinite values
+     4.3.2. Functions that tend to infinite values
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#l-hopital-s-rule">
-   3.4. L’Hôpital’s Rule
+   4.4. L’Hôpital’s Rule
   </a>
  </li>
 </ul>
@@ -272,41 +277,41 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#limit-of-a-function">
-   3.1. Limit of a function
+   4.1. Limit of a function
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technical-definition">
-     3.1.1. Technical definition
+     4.1.1. Technical definition
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-one-sided-limit">
-   3.2. The one-sided limit
+   4.2. The one-sided limit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combination-of-limits">
-   3.3. Combination of limits
+   4.3. Combination of limits
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions-that-tend-to-finite-values">
-     3.3.1. Functions that tend to finite values
+     4.3.1. Functions that tend to finite values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions-that-tend-to-infinite-values">
-     3.3.2. Functions that tend to infinite values
+     4.3.2. Functions that tend to infinite values
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#l-hopital-s-rule">
-   3.4. L’Hôpital’s Rule
+   4.4. L’Hôpital’s Rule
   </a>
  </li>
 </ul>
@@ -319,16 +324,16 @@
               <div>
                 
   <div class="section" id="limits-of-functions-and-sequences">
-<h1><span class="section-number">3. </span>Limits of Functions and Sequences<a class="headerlink" href="#limits-of-functions-and-sequences" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>Limits of Functions and Sequences<a class="headerlink" href="#limits-of-functions-and-sequences" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="limit-of-a-function">
-<h2><span class="section-number">3.1. </span>Limit of a function<a class="headerlink" href="#limit-of-a-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Limit of a function<a class="headerlink" href="#limit-of-a-function" title="Permalink to this headline">¶</a></h2>
 <p>The mathematics of limits are used to describe the behaviour of a function or sequence that is <em>approaching</em> a point, rather than being defined at it.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked Example 1</p>
 <p>We start with a simple example, the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> near to the point (2,4).</p>
 <div class="figure align-default" id="x-squared">
 <img alt="../_images/x_squared.png" src="../_images/x_squared.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> together with the point <span class="math notranslate nohighlight">\((2,4)\)</span>.</span><a class="headerlink" href="#x-squared" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> together with the point <span class="math notranslate nohighlight">\((2,4)\)</span>.</span><a class="headerlink" href="#x-squared" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this example, it is apparent that we can trace along the <span class="math notranslate nohighlight">\(x^2\)</span> curve towards the point, from either direction.</p>
 <p>Mathematically, we say that we can make <span class="math notranslate nohighlight">\(f(x)\)</span> arbitrarily close (“as close as you like”) to 4 by making <span class="math notranslate nohighlight">\(x\)</span>
@@ -353,7 +358,7 @@ sufficiently close to 2.</p>
 For example, consider the behaviour of <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{1}{x}\)</span>,</p>
 <div class="figure align-default" id="reciprocal-x">
 <img alt="../_images/reciprocal_x.png" src="../_images/reciprocal_x.png" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x) = 1/x\)</span>.</span><a class="headerlink" href="#reciprocal-x" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x) = 1/x\)</span>.</span><a class="headerlink" href="#reciprocal-x" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this case, as <span class="math notranslate nohighlight">\(x\)</span> becomes very large, <span class="math notranslate nohighlight">\(f(x)\)</span> approaches zero and so we can write:</p>
 <div class="math notranslate nohighlight">
@@ -366,7 +371,7 @@ positive and negative infinity respectively.  Likewise we see that:</p>
 \lim_{x \to 0^-} \frac{1}{x}&amp;\to -\infty \end{split}\]</div>
 </div>
 <div class="section" id="technical-definition">
-<h3><span class="section-number">3.1.1. </span>Technical definition<a class="headerlink" href="#technical-definition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.1. </span>Technical definition<a class="headerlink" href="#technical-definition" title="Permalink to this headline">¶</a></h3>
 <p>Formally speaking the limit of a function <span class="math notranslate nohighlight">\(\lim_{x \to c} f(x) = L\)</span> is defined as for every real <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a real <span class="math notranslate nohighlight">\(\delta &gt;0\)</span> such that for all real <span class="math notranslate nohighlight">\(x\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[0 &lt; |x - c | &lt; \delta \Rightarrow | f(x) - L| &lt; \epsilon\]</div>
@@ -375,7 +380,7 @@ the error in measuring that the value at the limit point <span class="math notra
 </div>
 </div>
 <div class="section" id="the-one-sided-limit">
-<h2><span class="section-number">3.2. </span>The one-sided limit<a class="headerlink" href="#the-one-sided-limit" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>The one-sided limit<a class="headerlink" href="#the-one-sided-limit" title="Permalink to this headline">¶</a></h2>
 <p>We can motivate the idea of a one-sided limit from <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{1}{x}\)</span>, where:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\lim_{x \to 0^+} \frac{1}{x} &amp;= + \infty \\
@@ -392,12 +397,12 @@ interval over which it is continuous, just not over all <span class="math notran
 \end{cases} \ ,\end{split}\]</div>
 <div class="figure align-default" id="heaviside">
 <img alt="../_images/heaviside.png" src="../_images/heaviside.png" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">A plot of the Heaviside function <span class="math notranslate nohighlight">\(H(x)\)</span>.</span><a class="headerlink" href="#heaviside" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">A plot of the Heaviside function <span class="math notranslate nohighlight">\(H(x)\)</span>.</span><a class="headerlink" href="#heaviside" title="Permalink to this image">¶</a></p>
 </div>
 <p>We see that this function has a finite jump (or discontinuity) at <span class="math notranslate nohighlight">\(x=0\)</span> and therefore a one sided limit is needed for <span class="math notranslate nohighlight">\(x = 0\)</span>.</p>
 </div>
 <div class="section" id="combination-of-limits">
-<h2><span class="section-number">3.3. </span>Combination of limits<a class="headerlink" href="#combination-of-limits" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Combination of limits<a class="headerlink" href="#combination-of-limits" title="Permalink to this headline">¶</a></h2>
 <p>It is useful to know how to solve the limit of combinations of functions (or “functions of functions”), such as:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\]</div>
@@ -405,7 +410,7 @@ interval over which it is continuous, just not over all <span class="math notran
 <p>The approach we take to solve these depends on whether the limits of the inidividual functions <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} f(x)\)</span>
 and <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} g(x)\)</span> are finite or infinite.</p>
 <div class="section" id="functions-that-tend-to-finite-values">
-<h3><span class="section-number">3.3.1. </span>Functions that tend to finite values<a class="headerlink" href="#functions-that-tend-to-finite-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.1. </span>Functions that tend to finite values<a class="headerlink" href="#functions-that-tend-to-finite-values" title="Permalink to this headline">¶</a></h3>
 <p>First consider the case where the limit of all the functions are finite. <strong>If and only if</strong> the limits of the individual functions
 are <em>finite</em> then we can use the <em>combination theorem</em> to solve the combination of functions.</p>
 <div class="admonition-definition-of-the-combination-theorem admonition">
@@ -438,7 +443,7 @@ the equation as:</p>
 </div>
 </div>
 <div class="section" id="functions-that-tend-to-infinite-values">
-<h3><span class="section-number">3.3.2. </span>Functions that tend to infinite values<a class="headerlink" href="#functions-that-tend-to-infinite-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.2. </span>Functions that tend to infinite values<a class="headerlink" href="#functions-that-tend-to-infinite-values" title="Permalink to this headline">¶</a></h3>
 <p>We now consider the case where the limit of all the individual functions are infinite, such as
 <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to \infty} x^2\)</span> or <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to 0^-} \frac{1}{x}\)</span>.</p>
 <div class="warning admonition">
@@ -500,7 +505,7 @@ should not think of <span class="math notranslate nohighlight">\(\infty\)</span>
 </div>
 </div>
 <div class="section" id="l-hopital-s-rule">
-<h2><span class="section-number">3.4. </span>L’Hôpital’s Rule<a class="headerlink" href="#l-hopital-s-rule" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>L’Hôpital’s Rule<a class="headerlink" href="#l-hopital-s-rule" title="Permalink to this headline">¶</a></h2>
 <p>A tricky, yet common, problem involves finding the limit of a ratio of two functions that both approach zero.</p>
 <p>For example, what is the value of the following limit?</p>
 <div class="math notranslate nohighlight">
@@ -579,13 +584,13 @@ Numeric rounding errors can lead to very badly behaved results!</em></p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Complex Numbers</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Complex Numbers</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="series.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Sequences and Series</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Sequences and Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
