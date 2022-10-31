@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convergence of Series &#8212; Mathematics for Natural Sciences A</title>
+    <title>5. Convergence of Series &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="4. Sequences and Series" href="series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +97,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Prelim/notationfunctions.html">
    1. Mathematical Prelimaries
@@ -108,8 +109,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="limits.html">
+   3. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="series.html">
-   3. Sequences and Series
+   4. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Convergence of Series
   </a>
  </li>
 </ul>
@@ -200,99 +211,53 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-preliminary-introduction-to-convergence-and-divergence">
-   A preliminary introduction to convergence and divergence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#infinite-series-as-limit-of-partial-sums">
-   Infinite series as limit of partial sums
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fundamental-concept">
-   Fundamental concept
+   5.1. Fundamental concept
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preliminary-test-for-divergence">
-   Preliminary test for divergence
+   5.2. Preliminary test for divergence
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definition">
-     Definition
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-the-harmonic-series">
-     Example: the harmonic series
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-alembert-s-ratio-test">
-   D’Alembert’s ratio test
+   5.3. D’Alembert’s ratio test
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prelimaries">
-     Prelimaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#statement">
-     Statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interval-of-convergence">
+   5.4. Interval of convergence
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparison-test">
-   Comparison Test
+   5.5. Comparison Test
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Prelimaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Example
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#absolute-v-s-conditional-convergence">
-   Absolute v’s Conditional Convergence
+  <a class="reference internal nav-link" href="#absolute-and-conditional-convergence">
+   5.6. Absolute and Conditional Convergence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harmonic-series">
+   5.7. Harmonic Series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomial-series">
+   5.8. Binomial Series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-remainder-theorem">
+   5.9. Lagrange remainder theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#motivation">
-     Motivation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#explanation-of-conditional-convergence">
-     Explanation of conditional convergence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Example
+    <a class="reference internal nav-link" href="#composite-function-expansion">
+     5.9.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -318,99 +283,53 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-preliminary-introduction-to-convergence-and-divergence">
-   A preliminary introduction to convergence and divergence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#infinite-series-as-limit-of-partial-sums">
-   Infinite series as limit of partial sums
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fundamental-concept">
-   Fundamental concept
+   5.1. Fundamental concept
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preliminary-test-for-divergence">
-   Preliminary test for divergence
+   5.2. Preliminary test for divergence
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definition">
-     Definition
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-the-harmonic-series">
-     Example: the harmonic series
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-alembert-s-ratio-test">
-   D’Alembert’s ratio test
+   5.3. D’Alembert’s ratio test
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prelimaries">
-     Prelimaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#statement">
-     Statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interval-of-convergence">
+   5.4. Interval of convergence
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparison-test">
-   Comparison Test
+   5.5. Comparison Test
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Prelimaries
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Example
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#absolute-v-s-conditional-convergence">
-   Absolute v’s Conditional Convergence
+  <a class="reference internal nav-link" href="#absolute-and-conditional-convergence">
+   5.6. Absolute and Conditional Convergence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harmonic-series">
+   5.7. Harmonic Series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomial-series">
+   5.8. Binomial Series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-remainder-theorem">
+   5.9. Lagrange remainder theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#motivation">
-     Motivation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#explanation-of-conditional-convergence">
-     Explanation of conditional convergence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Example
+    <a class="reference internal nav-link" href="#composite-function-expansion">
+     5.9.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -425,275 +344,422 @@
               <div>
                 
   <div class="section" id="convergence-of-series">
-<h1>Convergence of Series<a class="headerlink" href="#convergence-of-series" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="a-preliminary-introduction-to-convergence-and-divergence">
-<h2>A preliminary introduction to convergence and divergence<a class="headerlink" href="#a-preliminary-introduction-to-convergence-and-divergence" title="Permalink to this headline">¶</a></h2>
-<p>The behaviour of a geometric progression for “large” numbers of terms <span class="math notranslate nohighlight">\(n\)</span> depends on the value of the common ratio <span class="math notranslate nohighlight">\(r\)</span>.
-This can be deduced by the following reasoning.</p>
-<p>If <span class="math notranslate nohighlight">\(r &gt; 1\)</span> or <span class="math notranslate nohighlight">\(r &lt; -1\)</span> (which is to say that the absolute value <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>) then the <span class="math notranslate nohighlight">\(i\)</span>-th term of the
-geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very large positive or negative number.
-In this case we say that the series <strong>diverges</strong>.</p>
-<p>Conversely, if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>  then <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very small positive or negative number.
-In this case we say that the series <strong>converges</strong>.</p>
-<p>The topics of divergence and convergence are explored in detail later in the course.</p>
-<p>Thus we conclude that:</p>
+<h1><span class="section-number">5. </span>Convergence of Series<a class="headerlink" href="#convergence-of-series" title="Permalink to this headline">¶</a></h1>
+<p>Whilst we have tools to figure out what to do with a finite series, infinite series also require some thought.  In the case of some infinite series, we see that a
+lthough there will be an infinite number of terms, they <strong>converge</strong> towards a specific value.  We can see this in the case of geometric series,</p>
 <ul class="simple">
-<li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> converges and approaches <span class="math notranslate nohighlight">\(\frac{a}{1-r}\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>,</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> converges and approaches <span class="math notranslate nohighlight">\(\displaystyle \frac{a}{1-r}\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>,</p></li>
 <li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &gt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> diverges and approaches <span class="math notranslate nohighlight">\(\infty\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>.</p></li>
 </ul>
-</div>
-<div class="section" id="infinite-series-as-limit-of-partial-sums">
-<h2>Infinite series as limit of partial sums<a class="headerlink" href="#infinite-series-as-limit-of-partial-sums" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
 <p>The value of a infinite series can be defined as the value of the limit (if exists) of the sequence defined by it partial
 sums, that is:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=1}^\infty u_k = \lim_{n \to \infty} \sum_{k=1}^n u_k \ .\]</div>
-<p>Alternatively we could write that <span class="math notranslate nohighlight">\(S_n = \sum_{k=1}^n u_k\)</span> and that <span class="math notranslate nohighlight">\(\displaystyle\lim_{n \to \infty} S_n = S_\infty\)</span>.</p>
-<p>For example, consider the series of the geometric progression <span class="math notranslate nohighlight">\((a, a r, a r^2, a r^3, \dots , a r^{n-1})\)</span> where <span class="math notranslate nohighlight">\(1 &gt; r &gt; 0\)</span>
-and <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary constant:</p>
+<p>Alternatively we could write that:</p>
 <div class="math notranslate nohighlight">
-\[S_n = \sum_{k=1}^n a r^{k -1} = a \frac{1 - r^n}{1-r}\]</div>
-<p>The infinite series of the geometric progression for <span class="math notranslate nohighlight">\(n \to \infty\)</span> is thus:</p>
+\[S_n = \sum_{k=1}^n u_k\]</div>
+<p>and therefore:</p>
 <div class="math notranslate nohighlight">
-\[S_\infty = \lim_{n \to \infty} S_n =  a \lim_{n \to \infty} \frac{1 - r^n}{1-r} = \frac{a}{1-r} \ ,\]</div>
-<p>because <span class="math notranslate nohighlight">\(\displaystyle\lim_{n\to \infty} r^n = 0\)</span> since <span class="math notranslate nohighlight">\(r&lt;1\)</span>.</p>
+\[\lim_{n \to \infty} S_n = S_\infty \]</div>
 </div>
 <div class="section" id="fundamental-concept">
-<h2>Fundamental concept<a class="headerlink" href="#fundamental-concept" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Fundamental concept<a class="headerlink" href="#fundamental-concept" title="Permalink to this headline">¶</a></h2>
 <p>We have already seen in the sections on geometric progression and method of differences that some series can approach
-a finite value as the number of terms grows infinitely large.
-Series of this type are called <strong>convergent</strong>.
-For instance, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \left(\frac{1}{4}\right)^n\)</span> approaches (converges) to <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> as <span class="math notranslate nohighlight">\(N\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>
-(<span class="math notranslate nohighlight">\(N \to \infty\)</span>).</p>
-<p>On the other hand, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N n\)</span> can be made as big as we like by adding additional terms.
-We say that this series <strong>diverges</strong>.</p>
-<p>We may start to understand this behaviour by looking at what happens to the size of the terms in the long run.
-In the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N n\)</span>, the terms in the series are themselves growing, but this growing behaviour is not
-necessary for the series to diverge.</p>
-<p>For instance, in the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{1}{4}\)</span> the terms remain finite, but we can make the sum as big as we
-like by adding more terms; so this series also diverges.</p>
-<p>Less obviously, if we look at the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}\)</span> then it may be shown that the terms
-(<span class="math notranslate nohighlight">\(\frac{n^2}{4n^2 + 3 n + 1}\)</span>) in the series approach 1/4 as <span class="math notranslate nohighlight">\(n \to \infty\)</span>.
-This means that in the long run the series starts to resemble<span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{1}{4}\)</span>.
-Hence, this series also diverges.</p>
+a finite value as the number of terms grows infinitely large, series of this type are called <strong>convergent</strong>.</p>
+<p>For instance, the value of the series:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^N \left(\frac{1}{4}\right)^n\]</div>
+<p>approaches, or converges, to a fixed value of <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> as <span class="math notranslate nohighlight">\(N \to \infty\)</span>.</p>
+<p>On the other hand, the series:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^N n\]</div>
+<p>can be made as big as we like by adding additional terms.  We say that this series <strong>diverges</strong>.</p>
+<p>We can draw up some criterion that series need to follow in order to be convergent:</p>
+<div class="note admonition">
+<p class="admonition-title">Criterion for convergence</p>
+<p>1. <em>Terms in a convergent series need to decrease in size</em> - in order to converge to a fixed value, the limit of the partial sums of a series must be
+slowing down towards a fixed value, if they do not then there is no chance that the series will converge.</p>
+<p>2. <em>Terms in a convergent series need to get “small enough quick enough”</em> - it turns out that strictly decreasing series are not sufficient for
+convergence, the “rate of decline” is also important.  If the</p>
+<p>3 . <em>For any convergent series, there is a corresponding geometric series that converges to the same or a larger value</em> - since the expression for
+<span class="math notranslate nohighlight">\(S_\infty = a/(1-r)\)</span>, there are actually a infinite number of corresponding geometric series given a free choice of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(r\)</span>.</p>
+</div>
+<p>We may start to understand this behaviour by looking at what happens to the size of the terms in a series in the long run (i.e. for large <span class="math notranslate nohighlight">\(n\)</span>).</p>
+<p>In the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N n\)</span>, the terms in the series are themselves growing and therefore this series will diverge.  But in order to make a series diverge,
+the terms themsleves do not necessarily need this growing behaviour. For instance, in the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N \frac{1}{4}\)</span> the terms remain finite,
+but we can make the sum as big as we like by adding more terms - so this series also diverges.</p>
+<p>Less obviously, if we look at the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}\)</span> then it may be shown that in the limit of <span class="math notranslate nohighlight">\(n \to \infty\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{n^2}{4n^2 + 3 n + 1} = \frac{1}{4 + \frac{3}{n} + \frac{1}{n^2}} \\
+\lim_{n \to \infty} \frac{n^2}{4n^2 + 3 n + 1} = \frac{1}{4}
+\end{split}\]</div>
+<p>This means that in the long run the series starts to resemble <span class="math notranslate nohighlight">\(\displaystyle\sum_{n=1}^N \frac{1}{4}\)</span> and therefore also diverges.</p>
 </div>
 <div class="section" id="preliminary-test-for-divergence">
-<h2>Preliminary test for divergence<a class="headerlink" href="#preliminary-test-for-divergence" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="definition">
-<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
-<p>The ideas of the previous section lead us to the following “preliminary test for divergence”.</p>
-<div class="admonition-preliminary-test-for-divergence admonition">
-<p class="admonition-title">Preliminary test for divergence</p>
-<p>If the terms <span class="math notranslate nohighlight">\(u_n\)</span> in a series do not approach zero as <span class="math notranslate nohighlight">\(n \to \infty\)</span> then the series diverges.</p>
-</div>
-<p>Note well that the preliminary test cannot conclusively identify a series as convergent, we require further tests in
-our toolbox.
-However it does test whether a series is divergent.</p>
-<p>This test should intuitively make sense; if the terms in a infinite sequences diverges then the series (the sum of the
-sequence) must also diverge.
-However, the case where the terms in the series approach zero may not match our intuition.
-It is NOT necessarily true that if the terms in the series approach zero then the series will converge.</p>
-</div>
-<div class="section" id="example-the-harmonic-series">
-<h3>Example: the harmonic series<a class="headerlink" href="#example-the-harmonic-series" title="Permalink to this headline">¶</a></h3>
-<p>For example, consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)">harmonic series</a></p>
+<h2><span class="section-number">5.2. </span>Preliminary test for divergence<a class="headerlink" href="#preliminary-test-for-divergence" title="Permalink to this headline">¶</a></h2>
+<p>The first criterion here can be written into a “preliminary test” for convergence/divergence.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A convergent series <em>must</em> satisy the following result:</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^N \frac{1}{n} \ .\]</div>
-<p>As <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the denominator of the fraction becomes arbitrarily large and so the fraction shrinks away to zero.
-It may appear, then that the series will converge since in the end we are just adding on a bunch of nothings!
-However, a clever re-grouping of the terms shows that the series is divergent.
-<a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Comparison_test">The trick</a>, which was proved in 1350 by
-the French Mathematician Nicole Oresme, relies on grouping the terms in the following way:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{n=1}^N \frac{1}{n} = \frac{1}{2} + \Big( \frac{1}{3} + \frac{1}{4} \Big) +
- \Big( \frac{1}{5}  + \frac{1}{6} + \frac{1}{7}  + \frac{1}{8} \Big) + \dots\]</div>
-<p>so that each new group has twice as many terms as the previous one.
-It can be shown that each group of terms is then bigger than <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, and so the sum must be larger than
-<span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \frac{1}{2}\)</span>, which diverges.
-Hence, this sum also diverges.</p>
-<p>On the other hand, the terms in the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \frac{1}{4^n}\)</span> approach zero, and this sum converges.
-The preliminary test cannot distinguish between these cases, and so further tests are needed to determine the behaviour
-of the sum if the terms approach zero in the long run.
-One such test is D’Alembert’s ratio test, outined below.</p>
+\[\lim_{n \to \infty}\Big| u_n\Big | = 0\]</div>
 </div>
+<p>Note that the preliminary test cannot conclusively identify a series as convergent, we require further tests in order to do this, but it does test whether a series
+is divergent.</p>
 </div>
 <div class="section" id="d-alembert-s-ratio-test">
-<h2>D’Alembert’s ratio test<a class="headerlink" href="#d-alembert-s-ratio-test" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="prelimaries">
-<h3>Prelimaries<a class="headerlink" href="#prelimaries" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Ratio_test">D’Alembert’s ratio test</a> (sometimes simply referred to as the “ratio test”)
-looks at the <strong>ratio</strong> of each terms of an infinite sequence of numbers (<span class="math notranslate nohighlight">\(u_1,u_2,u_3,\dots\)</span>)</p>
-<div class="math notranslate nohighlight" id="equation-daratio">
-<span class="eqno">()<a class="headerlink" href="#equation-daratio" title="Permalink to this equation">¶</a></span>\[ \rho = \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,\]</div>
-<p>to determine if the infinite series converges or diverges.
-The notation |•| is used for the magnitude (otherwise known as the absolute value, e.g. <span class="math notranslate nohighlight">\(\lvert -2 \rvert = 2\)</span>) of the
-expression - the test thus only considers the relative size of the terms in the series.
-D’Alembert’s ratio test is more powerful than the preliminary test, but is usually a bit harder to apply and so we should use the
-preliminary test first (the clue is in the name!).</p>
-</div>
-<div class="section" id="statement">
-<h3>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h3>
-<p>To determine if an infinite series <span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n\)</span> diverges (<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n = \infty\)</span>) of converges
-(<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n&lt;\infty\)</span>) we look at the behaviour of the ratio in equation <a class="reference internal" href="#equation-daratio">()</a> in the limit
-<span class="math notranslate nohighlight">\(n \to \infty\)</span>, written as:</p>
-<div class="admonition-d-alembert-s-ratio-test admonition">
-<p class="admonition-title">D’Alembert’s ratio test</p>
-<p>For the magnitude of the ratio of sucessive terms in a series,
-<span class="math notranslate nohighlight">\(\rho = \lim_{n \to \infty} \lvert \frac{u_{n+1}}{u_n} \rvert\)</span>, then if:</p>
+<h2><span class="section-number">5.3. </span>D’Alembert’s ratio test<a class="headerlink" href="#d-alembert-s-ratio-test" title="Permalink to this headline">¶</a></h2>
+<p>D’Alembert’s ratio test, also caleld the Cauchy ratio test or just the ratio test, looks at the <strong>ratio</strong> of subsequent terms in a series to determine if it
+converges or diverges, this is based on our second criterion.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>To determine if an infinite series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^\infty u_n\)</span> converges or diverges, we can look at the behaviour of the ratio of consecutive terms in the limit
+<span class="math notranslate nohighlight">\(n \to \infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \lim_{n \to \infty}\Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,\]</div>
+<p>This gives us three cases:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\rho &lt; 1\)</span> then the series converges absolutely,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\rho&gt;1\)</span> then the series diverges absolutely,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rho=1\)</span> then the test is inconclusive.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho&gt;1\)</span> then the series diverges absolutely,</p></li>
 </ul>
 </div>
-<p>Note well that the <span class="math notranslate nohighlight">\(n+1\)</span> term is the numerator and the <span class="math notranslate nohighlight">\(n\)</span> term is the denominator!</p>
-<p>Intuitively, D’Alembert’s ratio test tells us that if the ratio of suquential terms is less than 1 then the
-terms are <strong>shrinking</strong> and hence the series converges.
-If the converse is true the the terms are <strong>growing</strong> and hence the series diverges.</p>
-<p>The proof of the ratio test (not shown here) relies on comparing the series to a convergent/divergent geometric progression.</p>
-<p>Cases where the ratio test is inconclusive will not be dealt with in this course, although there are further tests that
-can be used for such problems.
-One of the most straightforward to use is the <a class="reference external" href="https://en.wikipedia.org/wiki/Squeeze_theorem">sandwich theorem</a>
-(also known as the “squeeze theorem”), which can be used not only to demonstrate that a series is convergent, but also
-to find upper and lower bounds for the value of the sum or even to find the value of the sum exactly.</p>
-</div>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>We will use D’Alembert’s ratio test to determine whether <span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{k^2}{k!}\)</span> converges.</p>
-<p>Letting <span class="math notranslate nohighlight">\(u_k = \frac{k^2}{k!}\)</span>, the ratio <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span> simplifies to:</p>
+<p>The ratio test is more powerful than the preliminary test, it will tell us definitively if a series converges, but is often a bit harder to apply
+and so we should use the preliminary test first (the clue is in the name!), if a series fail this then no point to apply the ratio test.</p>
+<p>Intuitively, D’Alembert’s ratio test tells us that if the ratio of sequential terms is less than 1 then the terms are <strong>shrinking</strong> and hence the
+series converges.  If the converse is true the the terms are <strong>growing</strong> and hence the series diverges.</p>
+<p>Cases where the ratio test is inconclusive will require further tests.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>We will use D’Alembert’s ratio test to determine whether <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{k^2}{k!}\)</span> converges.</p>
+<p>Letting <span class="math notranslate nohighlight">\(\displaystyle u_k = \frac{k^2}{k!}\)</span>, the ratio <span class="math notranslate nohighlight">\(\displaystyle\frac{u_{k+1}}{u_k}\)</span> simplifies to:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{u_{k+1}}{u_k} &amp;= \frac{(k+1)^2}{k^2} \frac{k!}{(k+1)!} \\
 &amp;= \frac{(k+1)^2 k!}{k^2 (k+1) k!} \\
 &amp; = \frac{k+1}{k^2} \ .\end{split}\]</div>
-<p>Here we have used the definition of the <a class="reference external" href="https://en.wikipedia.org/wiki/Factorial">factorial</a> to write <span class="math notranslate nohighlight">\((k+1)! = (k+1) k!\)</span>.
-By recalling the combination theorem, we have that:</p>
+<p>Where we have used the definition of the factorial to write <span class="math notranslate nohighlight">\((k+1)! = (k+1) k!\)</span>, such that we have:</p>
 <div class="math notranslate nohighlight">
-\[\rho = \lim_{k\to\infty} \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert = \lim_{k \to \infty} \frac{k+1}{k^2} = 0 \ ,\]</div>
-<p>and thus the series converges absolutely.</p>
-<p>Note:</p>
+\[\rho = \lim_{k\to\infty} \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert = \lim_{k \to \infty} \Big|\frac{k+1}{k^2}\Big| 
+= \lim_{k \to \infty} \Big| \frac{1}{k} + \frac{1}{k^2} \Big|= 0 &lt; 1 \ ,\]</div>
+<p>and thus the series converges.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tips</p>
 <ol class="simple">
 <li><p>It is very important to get the algebra correct in the division step. This is often done carelessly and can cost a lot of marks.</p></li>
-<li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must be explicitly taken!</p></li>
+<li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must
+be explicitly taken!</p></li>
+<li><p>Do not drop the moulus signs unexpectly, otherwise you might get an answer <span class="math notranslate nohighlight">\(&lt; -1\)</span> and then conclude that <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>, when it should have actually been <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>.</p></li>
 </ol>
-<p><strong>Questions</strong><br></p>
-<p>Use D’Alembert’s ratio test to determine if the following series converges:</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(2 k)!}{2^k k!}\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p></li>
-</ol>
-<p><strong>Solutions</strong><br></p>
-<ol class="simple">
-<li><p>Let <span class="math notranslate nohighlight">\(u_k = \frac{(2k)!}{2^k k!}\)</span>.
-Then <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span>
-<span class="math notranslate nohighlight">\(= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!}\)</span>
-<span class="math notranslate nohighlight">\( = \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!}\)</span>
-<span class="math notranslate nohighlight">\( = \frac{(2k+2)(2k+1)}{2 (k+1)}\)</span>
-<span class="math notranslate nohighlight">\( = 2k+1\)</span>.
-So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} (2k+1) &gt; 1\)</span>.
-Thus we conclude that the series diverges.</p></li>
-<li><p>Let <span class="math notranslate nohighlight">\(u_k \frac{(-1)^{k-1}}{k}\)</span>.
-Then <span class="math notranslate nohighlight">\( \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert\)</span>
-<span class="math notranslate nohighlight">\(= \big\lvert \frac{k}{k+1} \big\rvert\)</span>
-<span class="math notranslate nohighlight">\( = \frac{1}{1+1/k}\)</span>.
-So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert\)</span>
-<span class="math notranslate nohighlight">\( =  \frac{1}{1+1/k} \)</span>
-<span class="math notranslate nohighlight">\( = 1\)</span>.
-Thus we conclude that the test is inconclusive!
-Further tests are required to determine convergence/divergence, which is beyond the scope of the course.</p></li>
-</ol>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>Use the ratio test to determine if the following series converges:</p>
+<p>1. <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{k!}{2^k}\)</span>,</p>
+<p>2. <span class="math notranslate nohighlight">\(\displaystyle \sum_{k=1}^n \frac{(2 k)!}{2^k k!}\)</span>,</p>
+<p>3. <span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Let <span class="math notranslate nohighlight">\(\displaystyle u_k = {2^k}{\frac{k!}}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{u_{k+1}}{u_k} = \frac{2^{k+1}}{(k+1)!}\frac{k!}{2^k} = \frac{k!}{(k+1)!}\frac{2^{k+1}}{2^k} = \frac{2}{k+1}\]</div>
+<p>so <span class="math notranslate nohighlight">\(\displaystyle \lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|\frac{2}{k+1}\Big| = 0 &lt; 1\)</span>.</p>
+<p>Thus we conclude that the series converges.</p>
+<p>2. Let <span class="math notranslate nohighlight">\(\displaystyle u_k = \frac{(2k)!}{2^k k!}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u_{k+1}}{u_k} &amp;= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!} \\
+&amp;= \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!} = \frac{(2k+2)(2k+1)}{2 (k+1)} = 2k+1\end{split}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} \Big|2k+1\Big| &gt; 1\)</span>.</p>
+<p>Thus we conclude that the series diverges.</p>
+<p>3. Let <span class="math notranslate nohighlight">\(\displaystyle u_k \frac{(-1)^{k-1}}{k}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert= \big\lvert \frac{k}{k+1} \big\rvert  = \frac{1}{1+1/k}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \Big|\frac{1}{1+1/k}\Big| = 1\)</span>.</p>
+<p>Thus we conclude that the test is inconclusive! Further tests are required to determine convergence/divergence.</p>
+</div>
+</div>
+<div class="section" id="interval-of-convergence">
+<h2><span class="section-number">5.4. </span>Interval of convergence<a class="headerlink" href="#interval-of-convergence" title="Permalink to this headline">¶</a></h2>
+<p>Some series can be parameterised <span class="math notranslate nohighlight">\(S[x,\, p,\, \dots]\)</span> so that it is not clear if they converge or not, in which case there can be an <strong>interval</strong> of <span class="math notranslate nohighlight">\(x\)</span> values
+in which the series can be shown to converge and outside of which it is divergent.  The ratio test results can help us to find this interval.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Argue if the following series converges and find the interval of convergence:</p>
+<div class="math notranslate nohighlight">
+\[S_1 = \sum_n^\infty \Big(\frac{x}{2}\Big)^n  \]</div>
+<p>Using the ratio test we find :</p>
+<div class="math notranslate nohighlight">
+\[\rho = \lim_{n \to \infty}\Bigg| \frac{x^{n+1}}{2^{n+1}}\frac{2^n}{x^n}\Bigg| = \Bigg|\frac{x}{2}\Bigg|\]</div>
+<p>If we want to have a convergent series, then we require <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>,</p>
+<p>hence <span class="math notranslate nohighlight">\(\displaystyle \Big|\frac{x}{2}\Big| &lt; 1 \Rightarrow \Big|x\Big| &lt; 2\)</span>, which we can convert into
+an interval:</p>
+<div class="math notranslate nohighlight">
+\[-2 &lt; x &lt; 2\]</div>
 </div>
 </div>
 <div class="section" id="comparison-test">
-<h2>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Prelimaries<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>This test aims to compare the terms in our unknown series with terms of a well understood series - typically we will compare to series involving powers of 2 here.  If for instance we write a geometric series that term by term is greater than or equal to the terms in an unknown series, we can typically argue that our unkown series converges and even offer an upper limit on the total value of the series.</p>
+<h2><span class="section-number">5.5. </span>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
+<p>Often called the sandwich or squeeze theorem, this test is based on our third criterion, we will look to find a convergent series,
+which when compared term by the term our series of interest will be same size or larger.  This means that our smaller series will <em>also</em> be convergent.
+Typically we will compare to geometric series involving powers of two - by the same principles to a geometric series with a different base of powers.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>A series <span class="math notranslate nohighlight">\(S_1 = \sum_n a_n\)</span> can be shown to converge if there exists a series <span class="math notranslate nohighlight">\(S_1' = \sum_n b_n\)</span> such that <span class="math notranslate nohighlight">\(\forall n\)</span>, <span class="math notranslate nohighlight">\(|b_n| \geq |a_n|\)</span>.</p>
+<p>If series <span class="math notranslate nohighlight">\(S_1'\)</span> is known to converge (e.g. an infinite geometric series), then series <span class="math notranslate nohighlight">\(S_1\)</span> <strong>must</strong> also converge.</p>
 </div>
-<div class="section" id="id2">
-<h3>Statement<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>We argue that a series <span class="math notranslate nohighlight">\(S_1 = \sum_n a_n\)</span> can be shown to converge if there exists a series <span class="math notranslate nohighlight">\(S_2 = \sum_n b_n\)</span> such that for all terms <span class="math notranslate nohighlight">\(|b_n| \geq |a_n|\)</span> where series <span class="math notranslate nohighlight">\(S_2\)</span> is known to converge, therefore series <span class="math notranslate nohighlight">\(S_1\)</span> must also converge.</p>
-</div>
-<div class="section" id="id3">
-<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
 <p>Show that the following series converges</p>
 <div class="math notranslate nohighlight">
-\[S_1 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
+\[S_1 = \sum_n^\infty \frac{1}{(2n)^2}= \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots 
 \]</div>
-<p>We can compare this series to the following series, which we can find by rounding down every denominator to nearest power of two (before applying the squared):</p>
+<p>Lets think how we can make a series which has terms that are greater than or equal to the terms in <span class="math notranslate nohighlight">\(S_1\)</span>.  If we round down every terms denominator to the nearest power
+of two (before applying the squared), we will get:</p>
 <div class="math notranslate nohighlight">
-\[S_2 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots\]</div>
-<p>We can see that every term in <span class="math notranslate nohighlight">\(S_2\)</span> is greater than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>, therefore if both <span class="math notranslate nohighlight">\(S_1, S_2\)</span> converge, the value of <span class="math notranslate nohighlight">\(S_2 &gt; S_1\)</span>.</p>
-<p>We can rewrite <span class="math notranslate nohighlight">\(S_2\)</span> by collecting together like terms:</p>
+\[S_1' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots\]</div>
+<p>We can rewrite <span class="math notranslate nohighlight">\(S_1'\)</span> by collecting together like terms:</p>
 <div class="math notranslate nohighlight">
-\[S_2 = \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots\]</div>
+\[\begin{split}S_1' &amp;= \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots \\
+&amp;= 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots\end{split}\]</div>
 <p>which we can see is a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^2}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, which means that</p>
 <div class="math notranslate nohighlight">
-\[S_2 = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}\]</div>
-<p>and since <span class="math notranslate nohighlight">\(S_2\)</span> converges, then by the comparison test <span class="math notranslate nohighlight">\(S_1\)</span> also converges.</p>
-<p>The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure can often be followed by a rounding up procecure, which will give us upper and lower bounds for a series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
+\[S_1' = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}\]</div>
+<p>So we have shown that <span class="math notranslate nohighlight">\(S_1'\)</span> converges.  But since <span class="math notranslate nohighlight">\(S_1 \leq S_1'\)</span>,, then by the comparison test this means that <span class="math notranslate nohighlight">\(S_1\)</span> also converges.</p>
+<p>The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure could be exhanged for a rounding up
+procecure, which will give us upper and lower bounds for a series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
 <div class="math notranslate nohighlight">
-\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots\]</div>
-<p>which we can see gives every term less than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>.  By a similar process to finding the value of <span class="math notranslate nohighlight">\(S_2\)</span> we find:</p>
+\[S_1'' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots\]</div>
+<p>which we can see gives every term less than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>.  By a similar process to finding the value of <span class="math notranslate nohighlight">\(S_1'\)</span> we find:</p>
 <div class="math notranslate nohighlight">
-\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots\]</div>
+\[S_1'' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots\]</div>
 <p>and if we skip the first term here, this is also a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^4}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, therfore:</p>
 <div class="math notranslate nohighlight">
-\[S_3 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}\]</div>
-<p>and since <span class="math notranslate nohighlight">\(S_2 &gt; S_1 &gt; S_3\)</span> we have <span class="math notranslate nohighlight">\(\frac{4}{8} &gt; S_1 &gt; \frac{3}{8}\)</span>.</p>
+\[S_1'' = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(S_1' &gt; S_1 &gt; S_1''\)</span> we have <span class="math notranslate nohighlight">\(\frac{4}{8} &gt; S_1 &gt; \frac{3}{8}\)</span> or <span class="math notranslate nohighlight">\(0.5 &gt; S_1 &gt; 0.375\)</span>.</p>
+<p>It turns out that <span class="math notranslate nohighlight">\(\displaystyle S_1 = \sum_n^\infty \frac{1}{(2n)^2} = \frac{\pi^2}{24} \simeq 0.41123\)</span>, which is indeed between these limits.</p>
 </div>
 </div>
-<div class="section" id="absolute-v-s-conditional-convergence">
-<h2>Absolute v’s Conditional Convergence<a class="headerlink" href="#absolute-v-s-conditional-convergence" title="Permalink to this headline">¶</a></h2>
-<p>See also Chapter 25 of “The Calculus Story: A Mathematical Adventure” by David Acheson.</p>
-<div class="section" id="motivation">
-<h3>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
-<p>D’Alembert’s ratio test looks at the absolute value of the ratio to determine whether the terms are growing or decaying
-in size without recourse to their sign.
-This allows us to make a statement about the <a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_convergence">absolute convergence</a>
-of the series.
-That is, series that converge to a single, finite number.
-However there are series that do not absolutely converge, but can be “rearranged” to converge to any value at all,
-including <span class="math notranslate nohighlight">\(\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span>.
-This statement should not be immediately clear as it is quite unintuitive.
-These series are called <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergence</a>, and are
-explained in what follows.</p>
-</div>
-<div class="section" id="explanation-of-conditional-convergence">
-<h3>Explanation of conditional convergence<a class="headerlink" href="#explanation-of-conditional-convergence" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-conditional-convergence admonition">
-<p class="admonition-title">Conditional convergence</p>
-<p>If a series is <strong>absolutely convergent</strong> then it will converge to the same value for any rearrangement of the terms.
-If the series is not absolutely convergent, then it may be <strong>conditionally convergent</strong>, in which case it can be summed
-to an arbitrary value (finite or infinite) depending on the arrangement of the terms in the series.</p>
-</div>
-<p>Conditionally convergent series have terms with alternating signs.
-In some of the previous examples that we looked at, all of the terms in the series were the same sign
-(all positive or all negative).
-In these cases: (i) we did not need to distinguish between absolute and conditional convergence, and (ii)
-looking at the relative size of the terms (as in D’Alembert’s ratio test) were sufficient to determine the
-convergence properties.
-But in the case where the signs in the series alternate, the behaviour is much more peculiar/subtle.</p>
-</div>
-<div class="section" id="id4">
-<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>Consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Alternating_harmonic_series">alternating harmonic series</a>:</p>
+<div class="section" id="absolute-and-conditional-convergence">
+<h2><span class="section-number">5.6. </span>Absolute and Conditional Convergence<a class="headerlink" href="#absolute-and-conditional-convergence" title="Permalink to this headline">¶</a></h2>
+<p>The preliminary and ratio tests look at the absolute value of the terms in the series to determine whether they are growing or decaying in absolute size terms,
+but with without recourse to their sign.</p>
 <div class="math notranslate nohighlight">
-\[\sum_{k=1}^n \frac{(-1)^{k+1}}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,\]</div>
-<p>It can be shown (see later a chapter on Taylor series) that this series converges to the natural logarithm of 2, <span class="math notranslate nohighlight">\(\ln(2)\)</span>.</p>
-<p>However, a regrouping of the terms gives:</p>
+\[\begin{split}S_c &amp;= \sum_{n=1}^\infty a_n\\
+S_{ac} &amp;= \sum_{n=1}^\infty |a_n|\end{split}\]</div>
+<p>This allows us to make a statement about the <strong>absolute convergence</strong> of the series. That is, series that converge to a single, finite number.  Any series which
+converges absolutely must also converge - the value of <span class="math notranslate nohighlight">\(S_{c} \leq S_{ac}\)</span>.</p>
+<p>There are however there are series that do not absolutely converge, but still do converge, these series are said to be <strong>conditionally convergent</strong>.</p>
+<p>It further turns out that such series can be “rearranged” to converge to any value at all.  This statement although quite unintuitive is true, thanks to something
+called the Riemann series theorem.</p>
+<p>Thankfully in this course we will only look at absolute convergence.</p>
+</div>
+<div class="section" id="harmonic-series">
+<h2><span class="section-number">5.7. </span>Harmonic Series<a class="headerlink" href="#harmonic-series" title="Permalink to this headline">¶</a></h2>
+<p>The elephant in the room when it comes to series is the harmonic series:</p>
+<div class="note admonition">
+<p class="admonition-title">Definition of the harmonic series</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\sum_{k=1}^n \frac{(-1)^k}{k} &amp;= \Big( 1 - \frac{1}{2} \Big)  - \frac{1}{4} + \Big(\frac{1}{3} - \frac{1}{6}\Big) - \frac{1}{8} +
+\[S_h = \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots\]</div>
+<p>We can also make an alternating harmonic series:</p>
+<div class="math notranslate nohighlight">
+\[S_{ah} = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\]</div>
+</div>
+<p>The harmonic series is divergent, although the alternating harmomnic series is convergent.  In order to show these facts, lets look at the convergence tests in turn:</p>
+<p>1. <em>Preliminary Test (PT)</em>:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \Big| \frac{1}{n}\Big| = 0\]</div>
+<p>hence both the harmonic and alternating harmonic series pass the PT.</p>
+<p>2. <em>Ratio Test (RT)</em>:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \lim_{n \to \infty} \Big| \frac{n}{n+1}\Big| = \lim_{n \to \infty} \Big| \frac{1}{1+\frac{1}{n}}\Big| = 1\]</div>
+<p>so the RT is inconclusive for both the harmonic and alternating harmonic series.</p>
+<p>3. <em>Comparision Test (CT)</em>:
+If we apply the rounding the denominator down to the nearest power of two procedure,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_h &amp;= \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots\\
+S_h'&amp;= 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \dots\\
+&amp;= 1 + \frac{2}{2} + \frac{4}{4} + \dots \\
+&amp;= 1 + 1 + 1 + \dots = \sum_{n=1}^\infty n\end{split}\]</div>
+<p>This means that there is an infinite series that is larger than <span class="math notranslate nohighlight">\(S_1\)</span> - this does not rule out <span class="math notranslate nohighlight">\(S_1\)</span> converging though, since <span class="math notranslate nohighlight">\(S_h &lt; S_h'\)</span>.  Let’s try the related
+procedure of rounding the denominator up to the nearest power of two, this will give us a lower bound on the size of <span class="math notranslate nohighlight">\(S_h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_h'' &amp;= 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \frac{1}{8} + \dots\\
+&amp;= 1 + \frac{1}{2} + \frac{2}{4} + \frac{4}{8} + \dots \\
+&amp;= 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots = 1 + \sum_{n=1}^\infty \frac{n}{2}\end{split}\]</div>
+<p>This is also infinite - hence we can see that the harmonic series is bounded from above and below by two divergent series, hence it is also divergent!</p>
+<p>What about the alternating harmonic series?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{ah} &amp;= \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots\\
+S_{ah}'&amp;= 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{4} + \frac{1}{4} - \dots\\
+&amp;= 1 + 0 + 0 + \dots =1 \\
+S_{ah}'' &amp;= 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{4} + \frac{1}{8} - \dots\\
+&amp; = 1 - \frac{1}{2} + 0 + 0 + \dots = \frac{1}{2}\end{split}\]</div>
+<p>So the alternative harmonic series is bounded from above and below by two finite values:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2} &lt; S_{ah} &lt; 1\]</div>
+<p>and therefore it <em>is</em> a convergent series - it is however a conditionally convergent series and not an absolutely convergent one.</p>
+<p>However, if we do a regrouping of the terms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{ah} = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} &amp;= \Big( 1 - \frac{1}{2} \Big)  - \frac{1}{4} + \Big(\frac{1}{3} - \frac{1}{6}\Big) - \frac{1}{8} +
 \Big( \frac{1}{5} - \frac{1}{10} \Big) - \frac{1}{12} + \dots \\
 &amp;= \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \frac{1}{10} - \frac{1}{12} \\
 &amp;= \frac{1}{2} \Big( 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \Big) \ ,\end{split}\]</div>
-<p>which is half of the original series!</p>
-<p>In fact, it can be shown that this series can be made equal to any value by a suitable rearrangement of the terms…</p>
-<p>This series is an example of a <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergent</a> series
--i.e. a series that does not converge absolutely, but can be made to converge to (any) value which depends on the
-arrangement of the terms.
-This is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Riemann_series_theorem">Riemann’s paradox</a>.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=-EtHF5ND3_s">Here is a short video explanation</a>.</p>
-<p>In this course we will only look at absolute convergence.</p>
+<p>we can find a result which appears to suggest that the series can be written as half of the original series - in fact, it can be shown that this series can be
+made equal to <strong>any</strong> value by a suitable rearrangement of the terms!  This is known as Riemann’s paradox and explains why we need to be very careful when handling
+infinite series.  These sorts of issues lead to statements like <span class="math notranslate nohighlight">\(\displaystyle 1 + 2 + 3 + 4 + \dots = -\frac{1}{12}\)</span>!</p>
+<p>We do not have any such issues with series that converge absolutely - any rearrangement does not change the value they converge to.</p>
+<p>Another way to see the behaviour of the harmonic series is through a re-grouping of the terms, this trick, which was proved in 1350 by the French mathematician
+Nicole Oresme, relies on grouping the terms in the following way:</p>
+<div class="math notranslate nohighlight">
+\[S_h = \sum_{n=1}^N \frac{1}{n} = \frac{1}{2} + \Big( \frac{1}{3} + \frac{1}{4} \Big) +
+ \Big( \frac{1}{5}  + \frac{1}{6} + \frac{1}{7}  + \frac{1}{8} \Big) + \dots\]</div>
+<p>so that each new group has twice as many terms as the previous one.</p>
+<p>It can be shown that each group of terms is then bigger than <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2}\)</span>, and so the sum must be larger than
+<span class="math notranslate nohighlight">\(\displaystyle S_{1/2}\sum_{n=1}^\infty \frac{1}{2}\)</span>.  The issue is that <span class="math notranslate nohighlight">\(S_{1/2}\)</span> diverges - hence <span class="math notranslate nohighlight">\(S_h\)</span> must also diverge.</p>
+</div>
+<div class="section" id="binomial-series">
+<h2><span class="section-number">5.8. </span>Binomial Series<a class="headerlink" href="#binomial-series" title="Permalink to this headline">¶</a></h2>
+<p>A well known example of a finite series is the binomial series:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(a + b)^n &amp;= a^n + n\,a^{n-1}\,b^1 + \frac{n(n-1)}{2!}\,a^{n-2}\,b^2 + \dots + n\,a^1\,b^{n-1} + b^n \\
+&amp;= \sum_{r=0}^{n}\frac{n!}{r!(n-r)!}a^{n-r}\,b^r,\, n \in \mathbb{N}\end{split}\]</div>
+<p>We can extend this to a series with <span class="math notranslate nohighlight">\(n \in \mathbb{Q}\)</span> which by the first definition means that the series is now infinite:</p>
+<div class="math notranslate nohighlight">
+\[(a + b)^n = \sum_{r=0}^\infty\frac{n(n-1)(n-2)\dots(n-r+1)}{r!}a^{n-r}\,b^r\]</div>
+<p>But will this series converge?</p>
+<p>To begin with lets start with a simpler series:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{1-x} = \Big( 1 - x \Big)^{-1}\]</div>
+<p>which using a binomial series (ex[ansion) will be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Big( 1 - x \Big)^{-1} &amp;= 1 + (-1)(-x) + \frac{(-1)(-2)}{2!}(-x)^2 + \frac{(-1)(-2)(-3)}{3!}(-x)^3 + \dots\\
+&amp;= 1 + x + x^2 + x^3 + \dots\end{split}\]</div>
+<p>which is also a geometric series, with <span class="math notranslate nohighlight">\(a=1\)</span>, <span class="math notranslate nohighlight">\(r=x\)</span>, which we know will converge, provided that <span class="math notranslate nohighlight">\(|r|=|x|&lt;1\)</span>.</p>
+<p>But does this mean that we can’t represent <span class="math notranslate nohighlight">\(|x|&gt;1\)</span> with <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{1-x}\)</span> using a binomial series? No, we just have to be careful which way
+round we look at the function, say <span class="math notranslate nohighlight">\(x = 3/2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{1-\frac{3}{2}} &amp;= -\frac{1}{1/2} = -2 \\
+&amp;= \frac{1}{-\frac{3}{2}\Big(1-\frac{2}{3}\Big)} = -\frac{2}{3} \frac{1}{1-\frac{2}{3}}\end{split}\]</div>
+<p>which clearly we can represent using a geometric series now as <span class="math notranslate nohighlight">\(|r|&lt;1\)</span>.</p>
+<p>If we go back to the full binomial series:</p>
+<div class="math notranslate nohighlight">
+\[(a+b)^n = a^n \Big(1 + \frac{b}{a}\Big)^n\]</div>
+<p>where we have picked <span class="math notranslate nohighlight">\(a\)</span> here out of the two terms such that <span class="math notranslate nohighlight">\(\displaystyle \Big|\frac{b}{a}\Big| &lt; 1\)</span>.  Expanding out we find:</p>
+<div class="math notranslate nohighlight">
+\[S_b = \Big(1 + \frac{b}{a}\Big)^n = 1 + n\frac{b}{a} + \frac{n(n-1)}{2!}\Big(\frac{b}{a}\Big)^2 + \dots \]</div>
+<p>and if we think about a related geometric series, where <span class="math notranslate nohighlight">\(a=1, \, r = nb/a\)</span> and <span class="math notranslate nohighlight">\(|r|&lt;1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_b' = 1 + n\frac{b}{a} + n^2\Big(\frac{b}{a}\Big)^2 + \dots = \frac{1}{1-\frac{nb}{a}} = \Big( 1 - \frac{nb}{a}\Big)^{-1}\]</div>
+<p>we can see that term by term that <span class="math notranslate nohighlight">\(S_b \leq S_b'\)</span> and since <span class="math notranslate nohighlight">\(S_b'\)</span> is a convergent geometric series, then <span class="math notranslate nohighlight">\(S_b\)</span> must also a convergent series.</p>
+<p>From the ratio test we can see that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho &amp;=\lim_{r \to \infty} \Big| \frac{n(n-1)(n-2)\dots(n-r+1)(n-r)}{(r+1)!}\frac{r!}{n(n-1)(n-2)\dots(n-r+1)}\frac{a^{n-r-1}\,b^{r+1}}{a^{n-r}\,b^r} \Big|\\
+&amp;=\lim_{r \to \infty} \Big| \frac{n-r}{r+1} \frac{b}{a} \Big| = \Big|\frac{b}{a}\Big|\lim_{r \to \infty} \Big| \frac{\frac{n}{r}-1}{1 + \frac{1}{r}}\Big| = \Big|\frac{b}{a}\Big|\end{split}\]</div>
+<p>hence for a convergent infinite binomial expansion we just need <span class="math notranslate nohighlight">\(\displaystyle \Big|\frac{b}{a}\Big|&lt;1\)</span>.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>1. The energy mass relation of a massive particle in special relativity is given by:</p>
+<div class="math notranslate nohighlight">
+\[E = \frac{m_0\,c^2}{\sqrt{1 - \frac{v^2}{c^2}}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c \gg v\)</span>.  Find the leading order and next to leading order term in the energy of the particle.</p>
+<p>2. A conical pendulum consists of a bob suspended on a string which oscillates round in a circular path. with a frequency of:</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{\sqrt{g}}{2\pi(L^2 - R^2)^{1/4}}\]</div>
+<p>wher <span class="math notranslate nohighlight">\(L\)</span> is the string length and <span class="math notranslate nohighlight">\(R\)</span> is the raius of the circular path at the base of the cone.  For <span class="math notranslate nohighlight">\(R\)</span> this pendulum mimics a simple
+pendulum with <span class="math notranslate nohighlight">\(f = \frac{1}{2\pi}\sqrt{\frac{g}{L}}\)</span>, find the size of the correction term.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Using <span class="math notranslate nohighlight">\(c \gg v \Rightarrow v/c \ll 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E = \frac{m_0\,c^2}{\sqrt{1 - \frac{v^2}{c^2}}} &amp;= m_0\,c^2\,\Big(1 - \frac{v^2}{c^2}\Big)^{-1/2}\\
+&amp;= m_0\,c^2\,\Big(1 - \Big(-\frac{1}{2}\Big)\frac{v^2}{c^2} + \dots\Big) = m_0\,c^2 + \frac{1}{2}m_0\,v^2 + \dots\end{split}\]</div>
+<p>which we should recognise as rest mass energy and kinetic energy!</p>
+<p>2. If we take <span class="math notranslate nohighlight">\(L &gt; R \rightarrow R/L &lt; 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f &amp;= \frac{\sqrt{g}}{2\pi(L^2 - R^2)^{1/4}} = \frac{\sqrt{g}}{2\pi}(L^2 - R^2)^{-1/4} = \frac{\sqrt{g}}{2\pi\,L^{1/4}}\Big(1 - \frac{R^2}{L^2}\Big)^{-1/4}\\
+&amp;= \frac{\sqrt{g}}{2\pi\,(L^2)^{1/4}}\Big(1 - \Big(-\frac{1}{4}\Big)\frac{R^2}{L^2} + \dots \Big) = \frac{1}{2\pi}\sqrt{\frac{g}{L}}\Big( 1 +  \frac{R^2}{4\,L^2} +\dots \Big)\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="lagrange-remainder-theorem">
+<h2><span class="section-number">5.9. </span>Lagrange remainder theorem<a class="headerlink" href="#lagrange-remainder-theorem" title="Permalink to this headline">¶</a></h2>
+<p>The Lagrange remainder theorem allows us to place precise bounds on the size of the error.</p>
+<div class="note admonition">
+<p class="admonition-title">Lagrange remainder theorem</p>
+<p>Let <span class="math notranslate nohighlight">\(p_n(x;a)\)</span> be the truncated Taylor expansion of <span class="math notranslate nohighlight">\(f(x)\)</span> about point <span class="math notranslate nohighlight">\(x=a\)</span>, up to and including the term in <span class="math notranslate nohighlight">\((x-a)^n\)</span>.</p>
+<p>The remainder (error) in the truncated expansion is given by</p>
+<div class="math notranslate nohighlight">
+\[R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+1)!}\biggr|, \qquad \xi\in(a,x)\]</div>
+</div>
+<p>The result shows that the error in the  truncated expansion is proportional to the next power of <span class="math notranslate nohighlight">\((x-a)\)</span>.We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series
+has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy”, and we may write:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})\]</div>
+<p>where the big-<span class="math notranslate nohighlight">\(\mathcal{O}\)</span> notation describes the order of the error terms.</p>
+<p>The power-relationship in Lagrange’s theorem can be anticipated when <span class="math notranslate nohighlight">\((x-a)\)</span> is small, and for larger differences by noting that the factorial growth of the
+coefficient denominators is much faster than polynomial growth.</p>
+<div class="tip admonition">
+<p class="admonition-title">Big idea : Local approximation of a function</p>
+<p>We can compute a series expansion for a function in powers of <span class="math notranslate nohighlight">\(x\)</span> using Taylor series. The resulting truncated polynomial gives a good local approximation to
+a function in a sense made precise by the Lagrange remainder theorem. If the truncated polynomial is used near the expansion point <span class="math notranslate nohighlight">\(a\)</span> then its accuracy
+“goes like” the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> power of the distance from <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<p>The proof of the Lagrange remainder theorem, and derivation of the coefficient of <span class="math notranslate nohighlight">\((x-a)^n\)</span> is found by using another result called the <em>mean value
+theorem</em>. It won’t be of much benefit for our practical purposes to show the proof here. Instead, let us take a look at an illustrative example.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Use the Lagrange remainder theorem to compute an upper bound for the size of the error in the quadratic expansion of <span class="math notranslate nohighlight">\(\sin(x)\)</span> about <span class="math notranslate nohighlight">\(\displaystyle x=\frac{\pi}{3}\)</span>, at
+a nearby point <span class="math notranslate nohighlight">\(\displaystyle x=\frac{\pi}{2}\)</span>.</p>
+<p>The series expansion is found to be:</p>
+<div class="math notranslate nohighlight">
+\[p_2(x;\pi/3)=\frac{\sqrt{3}}{2}+\frac{1}{2}\biggr(x-\frac{\pi}{3}\biggr)-\frac{\sqrt{3}}{4}\biggr(x-\frac{\pi}{3}\biggr)^2\]</div>
+<p>And from Lagrange’s formula, the error in the expansion at <span class="math notranslate nohighlight">\(\displaystyle x=\frac{\pi}{2}\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[R(\xi)= \biggr|\frac{\cos(\xi)(\frac{\pi}{2}-\frac{\pi}{3})^3}{6}\biggr|\]</div>
+<p>Since <span class="math notranslate nohighlight">\(|\cos(\xi)|\)</span> is bounded above by <span class="math notranslate nohighlight">\(1\)</span> on the given domain, Lagrange’s remainder theorem gives an upper bound of <span class="math notranslate nohighlight">\(\displaystyle \frac{\pi^3}{6^4}=0.0239246\)</span></p>
+<p>The exact error is given by:</p>
+<div class="math notranslate nohighlight">
+\[\biggr|\sin\left(\frac{\pi}{2}\right)-p_2\left(\frac{\pi}{2};\frac{\pi}{3}\right)\biggr| = 0.0091119\]</div>
+</div>
+<div class="section" id="composite-function-expansion">
+<h3><span class="section-number">5.9.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively</p>
+<p>Then:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(aP(x) + bQ(x)\)</span> converges to <span class="math notranslate nohighlight">\(af(x)+ bg(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(x)Q(x)\)</span> converges to <span class="math notranslate nohighlight">\(f(x)g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(Q(x))\)</span> converges to <span class="math notranslate nohighlight">\(f(g(x))\)</span></p></li>
+</ul>
+<p>It means that we can construct the Taylor series for a composite function by using known results for elementary functions
+(although we need to take care to check the region of validity)</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Example</p>
+<p>Find the Maclaurin series for <span class="math notranslate nohighlight">\(\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)\)</span>, and determine the interval of convergence for this expansion.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution :</p>
+<p>The series expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> can be found by taking <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> in the general formula, about the point <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>We can use the result to obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ln\left(\frac{1+x}{1-x}\right) &amp;= \ln(1+x)-\ln(1-x) \\
+&amp;= \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) 
+- \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\\
+&amp;= 2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = 2\Big(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots\Big)\\
+&amp;= \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}\end{split}\]</div>
+<p>To find the radius of convergence, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u_{n+1}}{u_n} &amp;= \frac{2x^{2n+1}}{2n+1}\frac{2n-1}{2x^{2n-1}} = x^2\frac{2n-1}{2n+1} = x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}} \\
+\rho &amp;= \lim_{n\rightarrow\infty}\Big|\frac{u_{n+1}}{u_n}\Big| = \lim_{n\rightarrow\infty}\Big|x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\Big|=\Big|x^2\Big|\end{split}\]</div>
+<p>Thus for <span class="math notranslate nohighlight">\(\rho &lt;1\)</span>, the series converges for <span class="math notranslate nohighlight">\(|x^2|&lt;1 \Rightarrow -1&lt;x&lt;1\)</span>.</p>
+<p>When <span class="math notranslate nohighlight">\(x=\pm 1\)</span>, the series expansion is equal to</p>
+<div class="math notranslate nohighlight">
+\[\pm 2\Big(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots\Big)\]</div>
+<p>which does not converge - it is actually the harmonic series in disguise!</p>
+<p>For these values of <span class="math notranslate nohighlight">\(x\)</span>, the function <span class="math notranslate nohighlight">\(f(x)\)</span> is also not finite.</p>
+</div>
 </div>
 </div>
 </div>
@@ -722,7 +788,14 @@ This is known as <a class="reference external" href="https://en.wikipedia.org/wi
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="series.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Sequences and Series</p>
+        </div>
+    </a>
 </div>
             
         </div>

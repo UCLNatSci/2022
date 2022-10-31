@@ -237,7 +237,7 @@ or equivalently $\displaystyle\sum_{i=1}^{97} \frac{1}{n+2}$.
 other answers are also possible!
 ````
 
-## Arithmetic and Geometric Progressions
+## Arithmetic and geometric progressions
 
 We now introduce the arithmetic progression (or the arithmetic sequence) and the geometric progression (or geometric sequence).
 These sequences have the nice property that their series can be found straightforwardly.
@@ -411,7 +411,7 @@ The result is $S= \frac{16}{2}(6+96)=816$.
 ````
 
 
-### Geometric Progression
+### Geometric progression
 
 ````{admonition} Definition
 :class: note
@@ -499,11 +499,11 @@ while count < nterms: # while loop
 :class: note
 ```{math}
 S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} \\
-= a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + r^{n-1} \big) \ ,
+= a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + r^{n-1} \Big) \ ,
 ```
 we multiply by $r$:
 ```{math}
-r S_n = a \big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
+r S_n = a \big(r + r^2 + r^3 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
 ```
 Subtracting $r S_n$ from $S_n$ and cancelling the terms provides:
 ```{math}
@@ -513,10 +513,48 @@ Subtracting $r S_n$ from $S_n$ and cancelling the terms provides:
 And then dividing both sides by $1-r$:
 
 ```{math}
-S_n = a \frac{1 - r^n}{1-r}
+S_n = a \Big(\frac{1 - r^n}{1-r}\Big)
 ```
 QED
 ````
+
+If we have to deal with infinite geometric series, we argue that as $n \rightarrow \infty$, $S_n$ can either blow up or approach a finite value, this will depending whether $r$ is large or small, 
+but how to we define these more mathematically here?  
+
+One way to see this is to think about the proof for a geometric series:
+
+```{math}
+S_n = a \Big(1 + r + r^2 + \dots + \Big) \\
+r S_n = a \Big(r + r^2 + r^3 + \dots \Big)
+```
+Subtracting $r S_n$ from $S_n$ and cancelling the terms here means that almost **all** the terms cancel (this is only really true if the terms being cancelled add up to something finite):
+```{math}
+ S_n - r S_n = a 
+```
+And then dividing both sides by $1-r$:
+
+```{math}
+S_n = a \Big(\frac{1}{1-r}\Big)
+
+```
+Another perspective is to think about the real number line, any numbers that are in the range $0 < x < 1$, which are raised to an integer power, will definitely stay within this range.  The 
+same is also true if we extend this range out to positive and negative 1, i.e. formally:
+```{math}
+\forall \, r \in \big[ -1, \, 1 \big],\, \forall \,n \in \mathbb{Z}, \,r^n \in \big[ -1,\, 1 \big]
+```
+(if we take any positive real power, then at least the real part will remain within this range).  
+
+This means that small and large here are determined by:
+
+* if $\lvert r \rvert < 1$ then $S_n$ converges as $n\to \infty$,
+* if $\lvert r \rvert > 1$ then $S_n$ diverges as $n\to \infty$.
+
+If $|r|<1$ then $|r^n|<1$ and in the limit of $n \rightarrow \infty$, $|r|^n \rightarrow 0$, this makes the sum of an infinite geometric series:
+
+```{math}
+S_\infty = a \Big(\frac{1}{1-r}\Big), \, |r|< 1
+```
+We will make this more explicit when we discuss limits and convergence.
 
 
 ````{admonition} Practice Questions
@@ -577,12 +615,12 @@ S = \frac{a}{1-r} = \frac{\frac{123}{1000}}{1 - \frac{1}{1000}} = \frac{\frac{12
 ```
 ````
 
-## Method of Differences
+## Method of differences
 
 The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
 to compute the desired result.  This is a handy trick to find the value of partial (finite) sums.
 
-### Partial Fractions
+### Partial fractions
 
 Consider the problem of adding different fractions, for example: 
 ```{math} 
@@ -807,3 +845,135 @@ We can use either method to find the method of differences, using the rewriting 
 &&=\frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2}
 ```
 ````
+
+
+## Taylor and Maclaurin series
+
+Lets consider more complicated functions like $\sin(x)$ or $\ln(x)$, a question that we could ask is can we find simpler representation of these, albeit one that might not 
+be valid in all intervals of $x$ - an expansion around a point for instance.  We call such Polynomial series Taylor series in general.
+
+````{admonition} Definition of a Taylor series
+:class: notice
+
+We can write a formula for sum of polynomials about $x=a$, in which we seek to express $f(x)$ as an infinite polynomial of the form
+```{math}
+p(x;\,a)=\sum_{n=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots
+```
+We choose the coefficients $c_n$ to ensure that the $n^{\text{th}}$ derivative of the polynomial is equal to the $n^{\text{th}}$ derivative of the function at the 
+point $x=a$. In this sense, the Taylor series gives the best possible local polynomial approximation to $f(x)$ of specified degree.
+
+By repeatedly differentiating and evaluating the polynomial, we obtain
+```{math}
+c_n=\frac{f^{(n)}(a)}{n!}
+```
+
+Therefore our definition looks like:
+
+```{math}
+p(x;\,a) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
+```
+
+The special case when $a=0$ is known as the **Maclaurin** series for historical reasons.
+````
+We can see how the Taylor series can be seen as a polynomial approximation of a function by looking at higher and higher order series for $\sin(x)$:
+```{figure} macplot.png
+---
+name: macplot
+---
+A plot of the curve $\sin(x)$ together with Maclaurin series expansion retaining successively greater numbers of terms, $p_1,p_3,p_5,p_7,p_{13},p_{21}$.
+```
+
+As we can see. the degree 21 Maclaurin expansion represents $\sin(x)$ rather faithfully in the range $[-2\pi,2\pi]$, but it is less accurate further away 
+from the expansion point.
+
+````{admonition} An example
+:class: seealso
+
+Lets find the Taylor expansion of $f(x)=e^x$ about $x=0$ i.e. the Maclaurin series.  We first need to find the derivatives, which here is easy:
+```{math}
+f'(x)  &= e^x \\
+f''(x) &= e^x \\
+f^{(3)} &= e^x \dots
+```
+
+Therefore the series looks like:
+
+```{math}
+p(x;\,a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...
+```
+Notice that this series satisfies $\displaystyle \frac{\mathrm{d}p}{\mathrm{d}x}=p$, which we would expect for $p = e^x$.
+````
+
+````{admonition} More examples
+:class: seealso, dropdown
+The Maclaurin expansions of $\sin$, $\cos$,  $e^x$, and $\ln(1+x)$ are particularly important:
+
+```{math}
+\sin(x) &= x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n)!} \\
+\cos(x) &= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!} \\
+e^x &= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
+\ln(1+x) &= x-\frac{x^2}{2}+\frac{x^3}{3}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{n+1}}{n+1}
+```
+
+You should also be able to calculate the first few terms in the expansion of an arbitrary function $f(x)$.
+
+````
+
+````{admonition} Pratice Question
+:class: seealso, dropdown
+By regrouping the terms in the Maclaurin series for $e^{i\theta}$, derive Euler's formula.
+````
+
+````{admonition} Solution
+:class: seealso, dropdown
+
+```{math}
+e^{i\theta}&=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
+&=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)
+```
+
+We can write this out rigorously as follows:
+
+```{math}
+ e^{i\theta}&=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!} = \sum_{n=0,2,4,...}\frac{(i\theta)^n}{n!} + \sum_{n=1,3,5,...}\frac{(i\theta)^n}{n!} 
+ =\sum_{n=0}^{\infty}\frac{(i\theta)^{2n}}{(2n)!} + \sum_{n=0}^{\infty}\frac{(i\theta)^{2n+1}}{(2n+1)!}\\
+ &= \sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n}}{(2n)!} + i\sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n+1}}{(2n+1)!} = \cos(\theta)+i\sin(\theta).
+```
+````
+
+```{admonition} A disclaimer!
+:class: danger
+Not all functions are faithfully represented by their Taylor Series. We have only guaranteed that the polynomial has the "correct" behaviour in the 
+immediate vicinity of the point $x=a$. Two things should be checked:
+
+1\.	*Does the series converge to a finite value for all $x$?* - If not then it is important to find the radius of convergence. This can be achieved 
+by using the ratio test
+
+2\.	*Does it converge to $f(x)$?* - Even if the series converges, there is no guarantee that it converges to $f(x)$.  We would need to show that 
+$\displaystyle \lim_{k\rightarrow \infty}|f(x)-p_k(x;a)|=0$, which may only be true for some values of $x$.  (This can be done by making use of the 
+Lagrange remainder theorem.)
+```
+Functions which converge to their Taylor series for a range of values are called *analytic*, and functions which converge to their Taylor series everywhere 
+are called *entire*. The Taylor series for functions like sine, cosine exponeital are entire, but the Maclaurin series for $\ln(1+x)$ is analytic for $|x|<1$.
+
+The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to "truncate" the expansion, 
+meaning that we retain only the terms up to a specified $n^{\text{th}}$ power of $x$.
+
+````{admonition} Example: The two-term expansion
+:class: note
+
+Let us examine what happens if we retain just the first two terms in the Taylor series:
+
+```{math}
+p(x;a)=f(a)+f'(a)(x-a)
+```
+
+This defines a straight line - $y = f'(a)x + (f(a) - af'(a))$.  Since the line passes through the point $(a, \,f(a))$ it touches the curve f(x) at the point 
+$x = a$.  The line has slope $f^{\prime}(a)$, which is the gradient of the curve at $x = a$, therefore, the two-term Taylor series is just the tangent to the curve at 
+$x = a$.  The tangent is the best possible approximation that we can obtain for the curve near the point $x = a$ using only two terms.
+````
+
+As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical 
+use. If the series converges very slowly, then it may not be much good!
+
+
