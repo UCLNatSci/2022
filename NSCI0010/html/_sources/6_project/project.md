@@ -10,6 +10,10 @@ It is well known that the value of [acceleration due to gravity at the Earth's s
 Perform an experiment to determine an estimate of the value of $g$, using a handheld camera to capture the experimental results and Python to perform the analysis.
 :::
 
+*More details of the project will appear here soon*.
+
+<!--
+
 ## Instructions
 
 These instructions are one suggested way to meet the project goal. There may be other equally valid ways to achieve the goal, so feel free to adapt them as you wish.
@@ -36,7 +40,7 @@ By plotting this curve against the experimental results determined in step 2, fi
 
 ### Optional Extension Activities
 
-To achieve the highest mark for this assessment, you should complete an extention activity which goes beyond the project goal. For example, you could use the techniques to measure another physical parameter (e.g. coefficient of friction) or perform error analysis to quantify the accuracy of your results. You can discuss your extension activity ideas with one of the tutors.
+You could use the techniques to measure another physical parameter (e.g. coefficient of friction) or perform error analysis to quantify the accuracy of your results. You can discuss your extension activity ideas with one of the tutors.
 
 ## Submission
 
@@ -52,3 +56,4 @@ Each project group will be awarded a mark as follows.
 |70%|Merit|A solution to the problem which meets the project goal by correctly determining a value for $g$|
 |39%|Fail|Failed to solve the problem or notebook does not run correctly|
 
+-->
