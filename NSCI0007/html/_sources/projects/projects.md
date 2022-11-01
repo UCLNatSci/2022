@@ -1,3 +1,3 @@
 # Projects
 
-About the projects.
+*Details of the group project will appear here.*

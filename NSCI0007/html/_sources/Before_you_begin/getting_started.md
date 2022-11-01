@@ -1,4 +1,4 @@
-# Introduction to Cocalc and Notebooks
+# Cocalc and Jupyter Notebooks
 
 We will be using an online platform called `Cocalc` to run and edit `notebooks` which run `Python` code. `Cocalc` is a collaborative computing platform, which means that you can interactively share your code with other users of the platform.
 
@@ -11,8 +11,10 @@ After completing this worksheet, you will be able to:
 - Create a Jupyter Notebook from scratch
 ```
 
-```{note}
-While you can complete this worksheet on your own, you are encouraged to do it in collaboration with a partner. You will later be working on a collaborative group project, so understanding Cocalc's many collaboration features will be important.
+```{attention}
+ALL students must do Part 1 Step 1 to set up a new Cocalc project for NSCI0007.
+
+The remainder was included in last year's module NSCI0010 so you only need to do this if you didn't do that course or if you want to refresh your understanding.
 ```
 
 ## Part 1: Editing and Running Notebooks
