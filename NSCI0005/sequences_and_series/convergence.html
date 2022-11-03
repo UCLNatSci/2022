@@ -504,6 +504,38 @@ an interval:</p>
 <div class="math notranslate nohighlight">
 \[-2 &lt; x &lt; 2\]</div>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Example with Taylor series</p>
+<p>Find the Maclaurin series for <span class="math notranslate nohighlight">\(\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)\)</span>, and determine the interval of convergence for this expansion.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution :</p>
+<p>The series expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> can be found by taking <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> and using the formula for a Maclaurin series
+as we are about the point <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) &amp;= \ln(1+x) \Rightarrow f(0) = \ln(1) = 0\\
+f'(x) &amp;= \frac{1}{1+x} \Rightarrow f'(0) = \frac{1}{1+0} = 1\\
+f''(x) &amp;= -\frac{1}{(1+x)^2} \Rightarrow f''(0) = -\frac{1}{(1+0)^2} = 2\\
+f''(x) &amp;= \frac{2}{(1+x)^3} \Rightarrow f'''(0) = \frac{2}{(1+0)^3} = 2\\
+\Rightarrow f(x) &amp;= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\end{split}\]</div>
+<p>We can use the result to obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ln\left(\frac{1+x}{1-x}\right) &amp;= \ln(1+x)-\ln(1-x) \\
+&amp;= \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) 
+- \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\\
+&amp;= 2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = 2\Big(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots\Big)\\
+&amp;= \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}\end{split}\]</div>
+<p>To find the radius of convergence, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u_{n+1}}{u_n} &amp;= \frac{2x^{2n+1}}{2n+1}\frac{2n-1}{2x^{2n-1}} = x^2\frac{2n-1}{2n+1} = x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}} \\
+\rho &amp;= \lim_{n\rightarrow\infty}\Big|\frac{u_{n+1}}{u_n}\Big| = \lim_{n\rightarrow\infty}\Big|x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\Big|=\Big|x^2\Big|\end{split}\]</div>
+<p>Thus for <span class="math notranslate nohighlight">\(\rho &lt;1\)</span>, the series converges for <span class="math notranslate nohighlight">\(|x^2|&lt;1 \Rightarrow -1&lt;x&lt;1\)</span>.</p>
+<p>When <span class="math notranslate nohighlight">\(x=\pm 1\)</span>, the series expansion is equal to</p>
+<div class="math notranslate nohighlight">
+\[\pm 2\Big(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots\Big)\]</div>
+<p>which does not converge - it is actually the harmonic series in disguise!</p>
+<p>For these values of <span class="math notranslate nohighlight">\(x\)</span>, the function <span class="math notranslate nohighlight">\(f(x)\)</span> is also not finite.</p>
+</div>
 </div>
 <div class="section" id="comparison-test">
 <h2><span class="section-number">6.5. </span>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
@@ -622,8 +654,10 @@ Nicole Oresme, relies on grouping the terms in the following way:</p>
 \[S_h = \sum_{n=1}^N \frac{1}{n} = \frac{1}{2} + \Big( \frac{1}{3} + \frac{1}{4} \Big) +
  \Big( \frac{1}{5}  + \frac{1}{6} + \frac{1}{7}  + \frac{1}{8} \Big) + \dots\]</div>
 <p>so that each new group has twice as many terms as the previous one.</p>
-<p>It can be shown that each group of terms is then bigger than <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2}\)</span>, and so the sum must be larger than
-<span class="math notranslate nohighlight">\(\displaystyle S_{1/2}\sum_{n=1}^\infty \frac{1}{2}\)</span>.  The issue is that <span class="math notranslate nohighlight">\(S_{1/2}\)</span> diverges - hence <span class="math notranslate nohighlight">\(S_h\)</span> must also diverge.</p>
+<p>It can be shown that each group of terms is then bigger than <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2}\)</span>, and so the sum must be larger than</p>
+<div class="math notranslate nohighlight">
+\[S_{1/2} = \sum_{n=1}^\infty \frac{1}{2} = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots\]</div>
+<p>The issue is that <span class="math notranslate nohighlight">\(S_{1/2}\)</span> diverges and <span class="math notranslate nohighlight">\(S_h \geq S_{1/2}\)</span> - hence <span class="math notranslate nohighlight">\(S_h\)</span> must also diverge.</p>
 </div>
 <div class="section" id="binomial-series">
 <h2><span class="section-number">6.8. </span>Binomial Series<a class="headerlink" href="#binomial-series" title="Permalink to this headline">¶</a></h2>
@@ -673,7 +707,7 @@ round we look at the function, say <span class="math notranslate nohighlight">\(
 <p>2. A conical pendulum consists of a bob suspended on a string which oscillates round in a circular path. with a frequency of:</p>
 <div class="math notranslate nohighlight">
 \[f = \frac{\sqrt{g}}{2\pi(L^2 - R^2)^{1/4}}\]</div>
-<p>wher <span class="math notranslate nohighlight">\(L\)</span> is the string length and <span class="math notranslate nohighlight">\(R\)</span> is the raius of the circular path at the base of the cone.  For <span class="math notranslate nohighlight">\(R\)</span> this pendulum mimics a simple
+<p>wher <span class="math notranslate nohighlight">\(L\)</span> is the string length and <span class="math notranslate nohighlight">\(R\)</span> is the radius of the circular path at the base of the cone.  For <span class="math notranslate nohighlight">\(R\)</span> this pendulum mimics a simple
 pendulum with <span class="math notranslate nohighlight">\(f = \frac{1}{2\pi}\sqrt{\frac{g}{L}}\)</span>, find the size of the correction term.</p>
 </div>
 <div class="seealso dropdown admonition">
@@ -740,31 +774,6 @@ a nearby point <span class="math notranslate nohighlight">\(\displaystyle x=\fra
 </ul>
 <p>It means that we can construct the Taylor series for a composite function by using known results for elementary functions
 (although we need to take care to check the region of validity)</p>
-<div class="seealso dropdown admonition">
-<p class="admonition-title">Example</p>
-<p>Find the Maclaurin series for <span class="math notranslate nohighlight">\(\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)\)</span>, and determine the interval of convergence for this expansion.</p>
-</div>
-<div class="seealso dropdown admonition">
-<p class="admonition-title">Solution :</p>
-<p>The series expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> can be found by taking <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> in the general formula, about the point <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
-<p>We can use the result to obtain:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\ln\left(\frac{1+x}{1-x}\right) &amp;= \ln(1+x)-\ln(1-x) \\
-&amp;= \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) 
-- \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\\
-&amp;= 2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = 2\Big(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots\Big)\\
-&amp;= \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}\end{split}\]</div>
-<p>To find the radius of convergence, we have:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{u_{n+1}}{u_n} &amp;= \frac{2x^{2n+1}}{2n+1}\frac{2n-1}{2x^{2n-1}} = x^2\frac{2n-1}{2n+1} = x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}} \\
-\rho &amp;= \lim_{n\rightarrow\infty}\Big|\frac{u_{n+1}}{u_n}\Big| = \lim_{n\rightarrow\infty}\Big|x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\Big|=\Big|x^2\Big|\end{split}\]</div>
-<p>Thus for <span class="math notranslate nohighlight">\(\rho &lt;1\)</span>, the series converges for <span class="math notranslate nohighlight">\(|x^2|&lt;1 \Rightarrow -1&lt;x&lt;1\)</span>.</p>
-<p>When <span class="math notranslate nohighlight">\(x=\pm 1\)</span>, the series expansion is equal to</p>
-<div class="math notranslate nohighlight">
-\[\pm 2\Big(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots\Big)\]</div>
-<p>which does not converge - it is actually the harmonic series in disguise!</p>
-<p>For these values of <span class="math notranslate nohighlight">\(x\)</span>, the function <span class="math notranslate nohighlight">\(f(x)\)</span> is also not finite.</p>
-</div>
 </div>
 </div>
 </div>

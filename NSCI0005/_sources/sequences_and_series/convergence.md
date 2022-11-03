@@ -214,6 +214,57 @@ an interval:
 
 ````
 
+````{admonition} Example with Taylor series
+:class: seealso, dropdown
+
+Find the Maclaurin series for $\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)$, and determine the interval of convergence for this expansion.
+````
+
+````{admonition} Solution :
+:class: seealso, dropdown
+
+The series expansion of $\ln(1+x)$ can be found by taking $f(x)=\ln(1+x)$ and using the formula for a Maclaurin series
+as we are about the point $x=0$.
+
+```{math}
+f(x) &= \ln(1+x) \Rightarrow f(0) = \ln(1) = 0\\
+f'(x) &= \frac{1}{1+x} \Rightarrow f'(0) = \frac{1}{1+0} = 1\\
+f''(x) &= -\frac{1}{(1+x)^2} \Rightarrow f''(0) = -\frac{1}{(1+0)^2} = 2\\
+f''(x) &= \frac{2}{(1+x)^3} \Rightarrow f'''(0) = \frac{2}{(1+0)^3} = 2\\
+\Rightarrow f(x) &= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots
+```
+
+We can use the result to obtain:
+
+```{math}
+\ln\left(\frac{1+x}{1-x}\right) &= \ln(1+x)-\ln(1-x) \\
+&= \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) 
+- \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\\
+&= 2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = 2\Big(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots\Big)\\
+&= \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}
+```
+
+To find the radius of convergence, we have:
+
+
+```{math}
+\frac{u_{n+1}}{u_n} &= \frac{2x^{2n+1}}{2n+1}\frac{2n-1}{2x^{2n-1}} = x^2\frac{2n-1}{2n+1} = x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}} \\
+\rho &= \lim_{n\rightarrow\infty}\Big|\frac{u_{n+1}}{u_n}\Big| = \lim_{n\rightarrow\infty}\Big|x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\Big|=\Big|x^2\Big|
+```
+
+Thus for $\rho <1$, the series converges for $|x^2|<1 \Rightarrow -1<x<1$.
+
+When $x=\pm 1$, the series expansion is equal to 
+```{math}
+\pm 2\Big(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots\Big)
+```
+which does not converge - it is actually the harmonic series in disguise!
+
+For these values of $x$, the function $f(x)$ is also not finite.
+
+````
+
+
 ## Comparison Test
 
 Often called the sandwich or squeeze theorem, this test is based on our third criterion, we will look to find a convergent series, 
@@ -389,7 +440,10 @@ S_h = \sum_{n=1}^N \frac{1}{n} = \frac{1}{2} + \Big( \frac{1}{3} + \frac{1}{4} \
 so that each new group has twice as many terms as the previous one.
 
 It can be shown that each group of terms is then bigger than $\displaystyle \frac{1}{2}$, and so the sum must be larger than
-$\displaystyle S_{1/2}\sum_{n=1}^\infty \frac{1}{2}$.  The issue is that $S_{1/2}$ diverges - hence $S_h$ must also diverge.
+```{math}
+S_{1/2} = \sum_{n=1}^\infty \frac{1}{2} = \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots
+```
+The issue is that $S_{1/2}$ diverges and $S_h \geq S_{1/2}$ - hence $S_h$ must also diverge.
 
 
 ## Binomial Series
@@ -473,7 +527,7 @@ where $c \gg v$.  Find the leading order and next to leading order term in the e
 ```{math}
 f = \frac{\sqrt{g}}{2\pi(L^2 - R^2)^{1/4}}
 ```
-wher $L$ is the string length and $R$ is the raius of the circular path at the base of the cone.  For $R$ this pendulum mimics a simple 
+wher $L$ is the string length and $R$ is the radius of the circular path at the base of the cone.  For $R$ this pendulum mimics a simple 
 pendulum with $f = \frac{1}{2\pi}\sqrt{\frac{g}{L}}$, find the size of the correction term.
 ````
 
@@ -566,45 +620,3 @@ Then:
 
 It means that we can construct the Taylor series for a composite function by using known results for elementary functions
 (although we need to take care to check the region of validity)
-
-````{admonition} Example
-:class: seealso, dropdown
-
-Find the Maclaurin series for $\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)$, and determine the interval of convergence for this expansion.
-````
-
-````{admonition} Solution :
-:class: seealso, dropdown
-
-The series expansion of $\ln(1+x)$ can be found by taking $f(x)=\ln(1+x)$ in the general formula, about the point $x=0$.
-
-We can use the result to obtain:
-
-```{math}
-\ln\left(\frac{1+x}{1-x}\right) &= \ln(1+x)-\ln(1-x) \\
-&= \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) 
-- \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\\
-&= 2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = 2\Big(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots\Big)\\
-&= \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}
-```
-
-To find the radius of convergence, we have:
-
-
-```{math}
-\frac{u_{n+1}}{u_n} &= \frac{2x^{2n+1}}{2n+1}\frac{2n-1}{2x^{2n-1}} = x^2\frac{2n-1}{2n+1} = x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}} \\
-\rho &= \lim_{n\rightarrow\infty}\Big|\frac{u_{n+1}}{u_n}\Big| = \lim_{n\rightarrow\infty}\Big|x^2\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\Big|=\Big|x^2\Big|
-```
-
-Thus for $\rho <1$, the series converges for $|x^2|<1 \Rightarrow -1<x<1$.
-
-When $x=\pm 1$, the series expansion is equal to 
-```{math}
-\pm 2\Big(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots\Big)
-```
-which does not converge - it is actually the harmonic series in disguise!
-
-For these values of $x$, the function $f(x)$ is also not finite.
-
-````
-
