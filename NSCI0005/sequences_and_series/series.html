@@ -271,8 +271,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
-       5.3.1.1. Solving the series of arithmetic progessions
+      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progressions">
+       5.3.1.1. Solving the series of arithmetic progressions
       </a>
      </li>
     </ul>
@@ -315,6 +315,13 @@
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
    5.5. Taylor and Maclaurin series
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-function-expansion">
+     5.5.1. Composite function expansion
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -371,8 +378,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
-       5.3.1.1. Solving the series of arithmetic progessions
+      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progressions">
+       5.3.1.1. Solving the series of arithmetic progressions
       </a>
      </li>
     </ul>
@@ -415,6 +422,13 @@
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
    5.5. Taylor and Maclaurin series
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-function-expansion">
+     5.5.1. Composite function expansion
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -644,7 +658,7 @@ An infinite arithmetic progression is given by the case where <span class="math 
 <span class="eqno">(5.7)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Python code for arithmetic progression</p>
-<p>You can play around with the behaviour of different arithmetic progessions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>:</p>
+<p>You can play around with the behaviour of different arithmetic progressions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>:</p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -675,9 +689,9 @@ An infinite arithmetic progression is given by the case where <span class="math 
 </div>
 </div>
 </div>
-<div class="section" id="solving-the-series-of-arithmetic-progessions">
-<h4><span class="section-number">5.3.1.1. </span>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
-<p>Series of arithmetic progessions can be solved (i.e. reduced to a number).
+<div class="section" id="solving-the-series-of-arithmetic-progressions">
+<h4><span class="section-number">5.3.1.1. </span>Solving the series of arithmetic progressions<a class="headerlink" href="#solving-the-series-of-arithmetic-progressions" title="Permalink to this headline">¶</a></h4>
+<p>Series of arithmetic progressions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression with recurrence relation <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-seriessol">
 <span class="eqno">(5.8)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
@@ -1092,7 +1106,7 @@ Expanding out the first few and last few terms allows us to spot the pattern:</p
 <p>In general, rewriting the summation index provides:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,\]</div>
-<p>where <span class="math notranslate nohighlight">\(f(r)\)</span> is an arbitrary function of summation index <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(c\)</span> is a postive integer number.</p>
+<p>where <span class="math notranslate nohighlight">\(f(r)\)</span> is an arbitrary function of summation index <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(c\)</span> is a positive integer number.</p>
 <p>This can be also used for negative integer values:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N f(r-c) = \sum_{r=1-c}^{N-c} f(r) \ .\]</div>
@@ -1232,7 +1246,7 @@ by using the ratio test</p>
 Lagrange remainder theorem.)</p>
 </div>
 <p>Functions which converge to their Taylor series for a range of values are called <em>analytic</em>, and functions which converge to their Taylor series everywhere
-are called <em>entire</em>. The Taylor series for functions like sine, cosine exponeital are entire, but the Maclaurin series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> is analytic for <span class="math notranslate nohighlight">\(|x|&lt;1\)</span>.</p>
+are called <em>entire</em>. The Taylor series for functions like sine, cosine exponential are entire, but the Maclaurin series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> is analytic for <span class="math notranslate nohighlight">\(|x|&lt;1\)</span>.</p>
 <p>The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to “truncate” the expansion,
 meaning that we retain only the terms up to a specified <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> power of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="note admonition">
@@ -1246,6 +1260,18 @@ meaning that we retain only the terms up to a specified <span class="math notran
 </div>
 <p>As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical
 use. If the series converges very slowly, then it may not be much good!</p>
+<div class="section" id="composite-function-expansion">
+<h3><span class="section-number">5.5.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively</p>
+<p>Then:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(aP(x) + bQ(x)\)</span> converges to <span class="math notranslate nohighlight">\(af(x)+ bg(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(x)Q(x)\)</span> converges to <span class="math notranslate nohighlight">\(f(x)g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(Q(x))\)</span> converges to <span class="math notranslate nohighlight">\(f(g(x))\)</span></p></li>
+</ul>
+<p>It means that we can construct the Taylor series for a composite function by using known results for elementary functions
+(although we need to take care to check the region of validity)</p>
+</div>
 </div>
 </div>
 

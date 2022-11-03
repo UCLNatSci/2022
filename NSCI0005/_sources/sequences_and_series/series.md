@@ -268,7 +268,7 @@ u_i=a+(i-1)d
 
 ````{admonition} Python code for arithmetic progression
 :class: tip
-You can play around with the behaviour of different arithmetic progessions by changing the values of $a$ and $d$:
+You can play around with the behaviour of different arithmetic progressions by changing the values of $a$ and $d$:
 ````
 
 ```{code-cell}
@@ -292,9 +292,9 @@ while count < n: # while loop
 
 
 
-#### Solving the series of arithmetic progessions
+#### Solving the series of arithmetic progressions
 
-Series of arithmetic progessions can be solved (i.e. reduced to a number).
+Series of arithmetic progressions can be solved (i.e. reduced to a number).
 The series (or the sum) $S_n$ of an arithmetic progression with recurrence relation $u_i=a+(i-1)d$ is:
 ```{math}
 :label: seriessol
@@ -784,7 +784,7 @@ In general, rewriting the summation index provides:
 ```{math}
 \sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,
 ```
-where $f(r)$ is an arbitrary function of summation index $r$ and $c$ is a postive integer number.
+where $f(r)$ is an arbitrary function of summation index $r$ and $c$ is a positive integer number.
 
 This can be also used for negative integer values:
 ```{math}
@@ -975,7 +975,7 @@ $\displaystyle \lim_{k\rightarrow \infty}|f(x)-p_k(x;a)|=0$, which may only be t
 Lagrange remainder theorem.)
 ```
 Functions which converge to their Taylor series for a range of values are called *analytic*, and functions which converge to their Taylor series everywhere 
-are called *entire*. The Taylor series for functions like sine, cosine exponeital are entire, but the Maclaurin series for $\ln(1+x)$ is analytic for $|x|<1$.
+are called *entire*. The Taylor series for functions like sine, cosine exponential are entire, but the Maclaurin series for $\ln(1+x)$ is analytic for $|x|<1$.
 
 The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to "truncate" the expansion, 
 meaning that we retain only the terms up to a specified $n^{\text{th}}$ power of $x$.
@@ -997,4 +997,16 @@ $x = a$.  The tangent is the best possible approximation that we can obtain for 
 As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical 
 use. If the series converges very slowly, then it may not be much good!
 
+
+### Composite function expansion
+
+Let $P(x)$, $Q(x)$, be two power series that converge to $f(x)$ and $g(x)$ respectively
+
+Then:
+* $aP(x) + bQ(x)$ converges to $af(x)+ bg(x)$
+* $ P(x)Q(x)$ converges to $f(x)g(x)$
+* $ P(Q(x))$ converges to $f(g(x))$
+
+It means that we can construct the Taylor series for a composite function by using known results for elementary functions
+(although we need to take care to check the region of validity)
 

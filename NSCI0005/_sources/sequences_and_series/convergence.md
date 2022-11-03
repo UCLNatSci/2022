@@ -1,7 +1,7 @@
 # Convergence of Series
 
-Whilst we have tools to figure out what to do with a finite series, infinite series also require some thought.  In the case of some infinite series, we see that a
-lthough there will be an infinite number of terms, they **converge** towards a specific value.  We can see this in the case of geometric series, 
+Whilst we have tools to figure out what to do with a finite series, infinite series also require some thought.  In the case of some infinite series, we see that 
+although there will be an infinite number of terms, they **converge** towards a specific value.  We can see this in the case of geometric series, 
 
 * if $\lvert r \rvert < 1$ then $S_n$ converges and approaches $\displaystyle \frac{a}{1-r}$ as $n\to \infty$,
 * if $\lvert r \rvert > 1$ then $S_n$ diverges and approaches $\infty$ as $n\to \infty$.
@@ -58,7 +58,7 @@ $S_\infty = a/(1-r)$, there are actually a infinite number of corresponding geom
 We may start to understand this behaviour by looking at what happens to the size of the terms in a series in the long run (i.e. for large $n$).
 
 In the series $\displaystyle \sum_{n=1}^N n$, the terms in the series are themselves growing and therefore this series will diverge.  But in order to make a series diverge,
-the terms themsleves do not necessarily need this growing behaviour. For instance, in the series $\displaystyle \sum_{n=1}^N \frac{1}{4}$ the terms remain finite, 
+the terms themselves do not necessarily need this growing behaviour. For instance, in the series $\displaystyle \sum_{n=1}^N \frac{1}{4}$ the terms remain finite, 
 but we can make the sum as big as we like by adding more terms - so this series also diverges.
 
 Less obviously, if we look at the series $\displaystyle \sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}$ then it may be shown that in the limit of $n \to \infty$,
@@ -87,7 +87,7 @@ is divergent.
 
 ## D'Alembert's ratio test
 
-D'Alembert's ratio test, also caleld the Cauchy ratio test or just the ratio test, looks at the **ratio** of subsequent terms in a series to determine if it 
+D'Alembert's ratio test, also called the Cauchy ratio test or just the ratio test, looks at the **ratio** of subsequent terms in a series to determine if it 
 converges or diverges, this is based on our second criterion.
 
 ````{admonition} Definition
@@ -113,7 +113,7 @@ The ratio test is more powerful than the preliminary test, it will tell us defin
 and so we should use the preliminary test first (the clue is in the name!), if a series fail this then no point to apply the ratio test.
 
 Intuitively, D'Alembert's ratio test tells us that if the ratio of sequential terms is less than 1 then the terms are **shrinking** and hence the 
-series converges.  If the converse is true the the terms are **growing** and hence the series diverges.
+series converges.  If the converse is true the terms are **growing** and hence the series diverges.
 
 Cases where the ratio test is inconclusive will require further tests.  
 
@@ -137,10 +137,11 @@ and thus the series converges.
 
 ````{admonition} Tips
 :class: tip
-1. It is very important to get the algebra correct in the division step. This is often done carelessly and can cost a lot of marks.
-2. The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as $n \to \infty$. The limit must 
-be explicitly taken!
-3. Do not drop the moulus signs unexpectly, otherwise you might get an answer $< -1$ and then conclude that $\rho < 1$, when it should have actually been $\rho > 1$.
+1. It is very important to get the algebra correct in the division step. This is often done carelessly and can 
+cost a lot of marks.
+2. The limit step is important! We are interested to know what happens to the terms in the series in the long 
+run - i.e. as $n \to \infty$. The limit must be explicitly taken!
+3. Do not drop the modulus signs unexpectedly, otherwise you might get an answer $< -1$ and then conclude that $\rho < 1$, when it should have actually been $\rho > 1$.
 ````
 
 ````{admonition} Practice Questions
@@ -309,8 +310,9 @@ S_1' = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}
 So we have shown that $S_1'$ converges.  But since $S_1 \leq S_1'$,, then by the comparison test this means that $S_1$ also converges.
 
 
-The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure could be exhanged for a rounding up 
-procecure, which will give us upper and lower bounds for a series.  For the sum $S_1$, we can have:
+The comparison test can also be used to put bounds on the values of some series, since the rounding down 
+procedure could be exchanged for a rounding up procecure, which will give us upper and lower bounds for a 
+series.  For the sum $S_1$, we can have:
 ```{math}
 S_1'' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots
 ```
@@ -370,7 +372,7 @@ S_{ah} = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} 
 
 ````
 
-The harmonic series is divergent, although the alternating harmomnic series is convergent.  In order to show these facts, lets look at the convergence tests in turn:
+The harmonic series is divergent, although the alternating harmonic series is convergent.  In order to show these facts, lets look at the convergence tests in turn:
 
 1\. *Preliminary Test (PT)*:
 ```{math}
@@ -384,7 +386,7 @@ hence both the harmonic and alternating harmonic series pass the PT.
 ```
 so the RT is inconclusive for both the harmonic and alternating harmonic series.
 
-3\. *Comparision Test (CT)*:
+3\. *Comparison Test (CT)*:
 If we apply the rounding the denominator down to the nearest power of two procedure, 
 ```{math}
 S_h &= \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots\\
@@ -468,7 +470,7 @@ To begin with lets start with a simpler series:
 \frac{1}{1-x} = \Big( 1 - x \Big)^{-1}
 ```
 
-which using a binomial series (ex[ansion) will be:
+which using a binomial series (or expansion) will be:
 
 ```{math}
 \Big( 1 - x \Big)^{-1} &= 1 + (-1)(-x) + \frac{(-1)(-2)}{2!}(-x)^2 + \frac{(-1)(-2)(-3)}{3!}(-x)^3 + \dots\\
@@ -512,7 +514,12 @@ From the ratio test we can see that:
 &=\lim_{r \to \infty} \Big| \frac{n-r}{r+1} \frac{b}{a} \Big| = \Big|\frac{b}{a}\Big|\lim_{r \to \infty} \Big| \frac{\frac{n}{r}-1}{1 + \frac{1}{r}}\Big| = \Big|\frac{b}{a}\Big|
 ```
 
-hence for a convergent infinite binomial expansion we just need $\displaystyle \Big|\frac{b}{a}\Big|<1$.  
+hence for a convergent infinite binomial expansion we just need $\displaystyle \Big|\frac{b}{a}\Big|<1$.  This is good for two reasons:
+
+1\. It produces a convergent series expansion for the binomial term
+
+2\. It allows us to do an expansion where the order parameter (the variable we expand out in) is getting smaller and smaller - it provides a 
+great way to approximate the complicated binomial functions with a one or two parameter expansion - this is VERY useful.
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -565,7 +572,7 @@ R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+
 ```
 ````
 
-The result shows that the error in the  truncated expansion is proportional to the next power of $(x-a)$.We say that the degree $n$ series 
+The result shows that the error in the truncated expansion is proportional to the next power of $(x-a)$.We say that the degree $n$ series 
 has "order $(x-a)^n$ accuracy", and we may write:
 ```{math}
 f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})
@@ -608,15 +615,3 @@ The exact error is given by:
 ````
 
 
-
-### Composite function expansion
-
-Let $P(x)$, $Q(x)$, be two power series that converge to $f(x)$ and $g(x)$ respectively
-
-Then:
-* $aP(x) + bQ(x)$ converges to $af(x)+ bg(x)$
-* $ P(x)Q(x)$ converges to $f(x)g(x)$
-* $ P(Q(x))$ converges to $f(g(x))$
-
-It means that we can construct the Taylor series for a composite function by using known results for elementary functions
-(although we need to take care to check the region of validity)

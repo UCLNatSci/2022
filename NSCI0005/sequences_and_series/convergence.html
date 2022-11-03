@@ -259,13 +259,6 @@
   <a class="reference internal nav-link" href="#lagrange-remainder-theorem">
    6.9. Lagrange remainder theorem
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#composite-function-expansion">
-     6.9.1. Composite function expansion
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -331,13 +324,6 @@
   <a class="reference internal nav-link" href="#lagrange-remainder-theorem">
    6.9. Lagrange remainder theorem
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#composite-function-expansion">
-     6.9.1. Composite function expansion
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -350,8 +336,8 @@
                 
   <div class="section" id="convergence-of-series">
 <h1><span class="section-number">6. </span>Convergence of Series<a class="headerlink" href="#convergence-of-series" title="Permalink to this headline">¶</a></h1>
-<p>Whilst we have tools to figure out what to do with a finite series, infinite series also require some thought.  In the case of some infinite series, we see that a
-lthough there will be an infinite number of terms, they <strong>converge</strong> towards a specific value.  We can see this in the case of geometric series,</p>
+<p>Whilst we have tools to figure out what to do with a finite series, infinite series also require some thought.  In the case of some infinite series, we see that
+although there will be an infinite number of terms, they <strong>converge</strong> towards a specific value.  We can see this in the case of geometric series,</p>
 <ul class="simple">
 <li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> converges and approaches <span class="math notranslate nohighlight">\(\displaystyle \frac{a}{1-r}\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>,</p></li>
 <li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &gt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> diverges and approaches <span class="math notranslate nohighlight">\(\infty\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>.</p></li>
@@ -393,7 +379,7 @@ convergence, the “rate of decline” is also important.  If the</p>
 </div>
 <p>We may start to understand this behaviour by looking at what happens to the size of the terms in a series in the long run (i.e. for large <span class="math notranslate nohighlight">\(n\)</span>).</p>
 <p>In the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N n\)</span>, the terms in the series are themselves growing and therefore this series will diverge.  But in order to make a series diverge,
-the terms themsleves do not necessarily need this growing behaviour. For instance, in the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N \frac{1}{4}\)</span> the terms remain finite,
+the terms themselves do not necessarily need this growing behaviour. For instance, in the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N \frac{1}{4}\)</span> the terms remain finite,
 but we can make the sum as big as we like by adding more terms - so this series also diverges.</p>
 <p>Less obviously, if we look at the series <span class="math notranslate nohighlight">\(\displaystyle \sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}\)</span> then it may be shown that in the limit of <span class="math notranslate nohighlight">\(n \to \infty\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -416,7 +402,7 @@ is divergent.</p>
 </div>
 <div class="section" id="d-alembert-s-ratio-test">
 <h2><span class="section-number">6.3. </span>D’Alembert’s ratio test<a class="headerlink" href="#d-alembert-s-ratio-test" title="Permalink to this headline">¶</a></h2>
-<p>D’Alembert’s ratio test, also caleld the Cauchy ratio test or just the ratio test, looks at the <strong>ratio</strong> of subsequent terms in a series to determine if it
+<p>D’Alembert’s ratio test, also called the Cauchy ratio test or just the ratio test, looks at the <strong>ratio</strong> of subsequent terms in a series to determine if it
 converges or diverges, this is based on our second criterion.</p>
 <div class="note admonition">
 <p class="admonition-title">Definition</p>
@@ -434,7 +420,7 @@ converges or diverges, this is based on our second criterion.</p>
 <p>The ratio test is more powerful than the preliminary test, it will tell us definitively if a series converges, but is often a bit harder to apply
 and so we should use the preliminary test first (the clue is in the name!), if a series fail this then no point to apply the ratio test.</p>
 <p>Intuitively, D’Alembert’s ratio test tells us that if the ratio of sequential terms is less than 1 then the terms are <strong>shrinking</strong> and hence the
-series converges.  If the converse is true the the terms are <strong>growing</strong> and hence the series diverges.</p>
+series converges.  If the converse is true the terms are <strong>growing</strong> and hence the series diverges.</p>
 <p>Cases where the ratio test is inconclusive will require further tests.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked Example</p>
@@ -453,10 +439,11 @@ series converges.  If the converse is true the the terms are <strong>growing</st
 <div class="tip admonition">
 <p class="admonition-title">Tips</p>
 <ol class="simple">
-<li><p>It is very important to get the algebra correct in the division step. This is often done carelessly and can cost a lot of marks.</p></li>
-<li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must
-be explicitly taken!</p></li>
-<li><p>Do not drop the moulus signs unexpectly, otherwise you might get an answer <span class="math notranslate nohighlight">\(&lt; -1\)</span> and then conclude that <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>, when it should have actually been <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>.</p></li>
+<li><p>It is very important to get the algebra correct in the division step. This is often done carelessly and can
+cost a lot of marks.</p></li>
+<li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long
+run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must be explicitly taken!</p></li>
+<li><p>Do not drop the modulus signs unexpectedly, otherwise you might get an answer <span class="math notranslate nohighlight">\(&lt; -1\)</span> and then conclude that <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>, when it should have actually been <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>.</p></li>
 </ol>
 </div>
 <div class="seealso dropdown admonition">
@@ -565,8 +552,9 @@ of two (before applying the squared), we will get:</p>
 <div class="math notranslate nohighlight">
 \[S_1' = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}\]</div>
 <p>So we have shown that <span class="math notranslate nohighlight">\(S_1'\)</span> converges.  But since <span class="math notranslate nohighlight">\(S_1 \leq S_1'\)</span>,, then by the comparison test this means that <span class="math notranslate nohighlight">\(S_1\)</span> also converges.</p>
-<p>The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure could be exhanged for a rounding up
-procecure, which will give us upper and lower bounds for a series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
+<p>The comparison test can also be used to put bounds on the values of some series, since the rounding down
+procedure could be exchanged for a rounding up procecure, which will give us upper and lower bounds for a
+series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
 <div class="math notranslate nohighlight">
 \[S_1'' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots\]</div>
 <p>which we can see gives every term less than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>.  By a similar process to finding the value of <span class="math notranslate nohighlight">\(S_1'\)</span> we find:</p>
@@ -604,7 +592,7 @@ called the Riemann series theorem.</p>
 <div class="math notranslate nohighlight">
 \[S_{ah} = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\]</div>
 </div>
-<p>The harmonic series is divergent, although the alternating harmomnic series is convergent.  In order to show these facts, lets look at the convergence tests in turn:</p>
+<p>The harmonic series is divergent, although the alternating harmonic series is convergent.  In order to show these facts, lets look at the convergence tests in turn:</p>
 <p>1. <em>Preliminary Test (PT)</em>:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} \Big| \frac{1}{n}\Big| = 0\]</div>
@@ -613,7 +601,7 @@ called the Riemann series theorem.</p>
 <div class="math notranslate nohighlight">
 \[\rho = \lim_{n \to \infty} \Big| \frac{n}{n+1}\Big| = \lim_{n \to \infty} \Big| \frac{1}{1+\frac{1}{n}}\Big| = 1\]</div>
 <p>so the RT is inconclusive for both the harmonic and alternating harmonic series.</p>
-<p>3. <em>Comparision Test (CT)</em>:
+<p>3. <em>Comparison Test (CT)</em>:
 If we apply the rounding the denominator down to the nearest power of two procedure,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}S_h &amp;= \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots\\
@@ -672,7 +660,7 @@ Nicole Oresme, relies on grouping the terms in the following way:</p>
 <p>To begin with lets start with a simpler series:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{1-x} = \Big( 1 - x \Big)^{-1}\]</div>
-<p>which using a binomial series (ex[ansion) will be:</p>
+<p>which using a binomial series (or expansion) will be:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\Big( 1 - x \Big)^{-1} &amp;= 1 + (-1)(-x) + \frac{(-1)(-2)}{2!}(-x)^2 + \frac{(-1)(-2)(-3)}{3!}(-x)^3 + \dots\\
 &amp;= 1 + x + x^2 + x^3 + \dots\end{split}\]</div>
@@ -697,7 +685,10 @@ round we look at the function, say <span class="math notranslate nohighlight">\(
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho &amp;=\lim_{r \to \infty} \Big| \frac{n(n-1)(n-2)\dots(n-r+1)(n-r)}{(r+1)!}\frac{r!}{n(n-1)(n-2)\dots(n-r+1)}\frac{a^{n-r-1}\,b^{r+1}}{a^{n-r}\,b^r} \Big|\\
 &amp;=\lim_{r \to \infty} \Big| \frac{n-r}{r+1} \frac{b}{a} \Big| = \Big|\frac{b}{a}\Big|\lim_{r \to \infty} \Big| \frac{\frac{n}{r}-1}{1 + \frac{1}{r}}\Big| = \Big|\frac{b}{a}\Big|\end{split}\]</div>
-<p>hence for a convergent infinite binomial expansion we just need <span class="math notranslate nohighlight">\(\displaystyle \Big|\frac{b}{a}\Big|&lt;1\)</span>.</p>
+<p>hence for a convergent infinite binomial expansion we just need <span class="math notranslate nohighlight">\(\displaystyle \Big|\frac{b}{a}\Big|&lt;1\)</span>.  This is good for two reasons:</p>
+<p>1. It produces a convergent series expansion for the binomial term</p>
+<p>2. It allows us to do an expansion where the order parameter (the variable we expand out in) is getting smaller and smaller - it provides a
+great way to approximate the complicated binomial functions with a one or two parameter expansion - this is VERY useful.</p>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice Questions</p>
 <p>1. The energy mass relation of a massive particle in special relativity is given by:</p>
@@ -733,7 +724,7 @@ pendulum with <span class="math notranslate nohighlight">\(f = \frac{1}{2\pi}\sq
 <div class="math notranslate nohighlight">
 \[R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+1)!}\biggr|, \qquad \xi\in(a,x)\]</div>
 </div>
-<p>The result shows that the error in the  truncated expansion is proportional to the next power of <span class="math notranslate nohighlight">\((x-a)\)</span>.We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series
+<p>The result shows that the error in the truncated expansion is proportional to the next power of <span class="math notranslate nohighlight">\((x-a)\)</span>.We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series
 has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy”, and we may write:</p>
 <div class="math notranslate nohighlight">
 \[f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})\]</div>
@@ -762,18 +753,6 @@ a nearby point <span class="math notranslate nohighlight">\(\displaystyle x=\fra
 <p>The exact error is given by:</p>
 <div class="math notranslate nohighlight">
 \[\biggr|\sin\left(\frac{\pi}{2}\right)-p_2\left(\frac{\pi}{2};\frac{\pi}{3}\right)\biggr| = 0.0091119\]</div>
-</div>
-<div class="section" id="composite-function-expansion">
-<h3><span class="section-number">6.9.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively</p>
-<p>Then:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(aP(x) + bQ(x)\)</span> converges to <span class="math notranslate nohighlight">\(af(x)+ bg(x)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( P(x)Q(x)\)</span> converges to <span class="math notranslate nohighlight">\(f(x)g(x)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( P(Q(x))\)</span> converges to <span class="math notranslate nohighlight">\(f(g(x))\)</span></p></li>
-</ul>
-<p>It means that we can construct the Taylor series for a composite function by using known results for elementary functions
-(although we need to take care to check the region of validity)</p>
 </div>
 </div>
 </div>
