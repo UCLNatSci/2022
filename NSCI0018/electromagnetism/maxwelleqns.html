@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21. Differential Forms and Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="22. Solutions to Maxwell’s Equations" href="solvingmaxwell.html" />
+    <link rel="prev" title="20. Faraday’s Law" href="faradayslaw.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Waves
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/wavemaths.html">
+   2. Mathematical Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/SHM.html">
+   3. Harmonic and Oscillatory Motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/longitudinal.html">
+   4. Longitudinal Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/waveequationsolns.html">
+   5. Solutions to the Wave Equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/transverse.html">
+   6. Transverse Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/dispersionrelations.html">
+   7. Dispersion Relations and Wave Energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/polarisation.html">
+   8. Polarisation of Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/standingwaves.html">
+   9. Standing Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/matterwaves.html">
+   10. Matter Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/dopplershift.html">
+   11. Doppler Shift
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Electromagnetism
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   12. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EMmaths.html">
+   13. Mathematical Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrostatics.html">
+   14. Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solvingEsystems.html">
+   15. Solving Electrostatic Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Efieldenergy.html">
+   16. Energy in an Electric Field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magneticfields.html">
+   17. Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magneticforces.html">
+   18. Magnetic Forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ampereslaw.html">
+   19. Ampère’s Circuital Law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faradayslaw.html">
+   20. Faraday’s Law
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   21. Differential Forms and Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solvingmaxwell.html">
+   22. Solutions to Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EMenergy.html">
+   23. Energy in an Electromagnetic field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EMpotentials.html">
+   24. Electromagnetic Scalar and Vector Potentials
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Fluids
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/intro.html">
+   25. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/mathideas.html">
+   26. Mathematical background
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/visualise.html">
+   27. Visualising fluid motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/helmholtz.html">
+   28. Divergence and vorticity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   29. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/conservation.html">
+   30. Conservation law derivations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/navstok.html">
+   31. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/steadysoln.html">
+   32. Steady solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/bernoulli.html">
+   33. Bernoulli’s equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   34. Scaling arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   35. Perturbations and asymptotics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/vorticity.html">
+   36. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/waterwaves.html">
+   37. Unsteady: Water waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/soundwaves.html">
+   38. Unsteady: Sound waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/rotfram.html">
+   39. Rotational reference frames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/ekman.html">
+   40. Geophysical phenomena
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/electromagnetism/maxwelleqns.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/maxwelleqns.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gausss-law-in-differential-form">
+   21.1. Gauss’s Law in Differential Form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amperes-law-in-differential-form">
+   21.2. Ampère’s Law in Differential Form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faradays-law-in-differential-form">
+   21.3. Faraday’s Law in Differential Form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maxwells-equations-in-vacuum">
+   21.4. Maxwell’s Equations in Vacuum
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maxwells-equations-in-matter">
+   21.5. Maxwell’s Equations in Matter*
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-monopoles">
+   21.6. Magnetic Monopoles*
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="differential-forms-and-maxwells-equations">
+<h1><span class="section-number">21. </span>Differential Forms and Maxwell’s Equations<a class="headerlink" href="#differential-forms-and-maxwells-equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gausss-law-in-differential-form">
+<h2><span class="section-number">21.1. </span>Gauss’s Law in Differential Form<a class="headerlink" href="#gausss-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
+<p>Lets revisit what we have learnt about Gauss’s law for electric charges</p>
+<div class="math notranslate nohighlight">
+\[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \frac{Q_{encl}}{\epsilon_0}\]</div>
+<p>since the charge <span class="math notranslate nohighlight">\(Q_{encl}\)</span> is enclosed within some closed surface area, that is the boundary to a volume, we can equally think about a charge density inside that
+volume:</p>
+<div class="math notranslate nohighlight">
+\[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \iiint_V \frac{\rho}{\epsilon_0}\,\mathrm{d} V\]</div>
+<p>If we recall the divergence theorem, it states that the flux of a vector field passing a closed surface area is related to the divergence of the vector field
+within the volume, so for an electric field</p>
+<div class="math notranslate nohighlight">
+\[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \iiint_V \nabla \cdot {\bf E}\,\mathrm{d} V\]</div>
+<p>so we can write that, up to a boundary term</p>
+<div class="math notranslate nohighlight">
+\[\iiint_V \left(\nabla \cdot {\bf E} - \frac{\rho}{\epsilon_0}\right)\,\mathrm{d} V = 0\]</div>
+<p>in order for this expression to be true for <em> any </em>  volume <span class="math notranslate nohighlight">\(V\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
+<div class="math notranslate nohighlight" id="equation-dive">
+<span class="eqno">(21.1)<a class="headerlink" href="#equation-dive" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf E} = \frac{\rho}{\epsilon_0} \]</div>
+<p>Likewise we can do the same for magnetic fields, which in the absence of magnetic monopoles will look like:</p>
+<div class="math notranslate nohighlight" id="equation-divb">
+<span class="eqno">(21.2)<a class="headerlink" href="#equation-divb" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf B} = 0 \]</div>
+</div>
+<div class="section" id="amperes-law-in-differential-form">
+<h2><span class="section-number">21.2. </span>Ampère’s Law in Differential Form<a class="headerlink" href="#amperes-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
+<p>We can revisit Amp`ere’s law, with the displacement current:</p>
+<div class="math notranslate nohighlight">
+\[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\cdot\mathrm{d}{\bf A}\]</div>
+<p>Given we know the Stoke’s theorem tells us that the summing of a vector field around a closed loop will be related to the curl of the field, for the magnetic field:</p>
+<div class="math notranslate nohighlight">
+\[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \iint_A \left(\nabla \times {\bf B}\right)\cdot\mathrm{d}{\bf A}\]</div>
+<p>Also we can think about the current <span class="math notranslate nohighlight">\(I\)</span> in terms of a current density <span class="math notranslate nohighlight">\({\bf J}\)</span> through some conductor with surface area <span class="math notranslate nohighlight">\(A\)</span>, meaning that:</p>
+<div class="math notranslate nohighlight">
+\[I = \iint_A {\bf J}\cdot\mathrm{d}{\bf A}\]</div>
+<p>which all put together gives:</p>
+<div class="math notranslate nohighlight">
+\[\iint_A \left( \nabla \times {\bf B} - \mu_0 {\bf J} - \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\right)\cdot\mathrm{d}{\bf A} = 0\]</div>
+<p>in order for this expression to be true for <em> any </em> bounding area <span class="math notranslate nohighlight">\(A\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
+<div class="math notranslate nohighlight" id="equation-curlb">
+<span class="eqno">(21.3)<a class="headerlink" href="#equation-curlb" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf B} = \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\]</div>
+</div>
+<div class="section" id="faradays-law-in-differential-form">
+<h2><span class="section-number">21.3. </span>Faraday’s Law in Differential Form<a class="headerlink" href="#faradays-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
+<p>Finally looking at Faraday’s law again:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E} = -\frac{\partial}{\partial t}\iint_A {\bf B}\cdot \mathrm{d} {\bf A} = -\iint_A \frac{\partial {\bf B}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
+<p>The EMF <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> can be thought of as a potential difference induced by the changing magnetic flux - in a circuit this potential difference pushes charges,
+causing a current to flow.  We can write <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> as a contour integral, summing up each of the infinitesimal electric field segments
+<span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> in the circuit:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} = \oint_c {\bf E} \cdot \mathrm{d}{\bf \ell}\]</div>
+<p>where the final sign on the integral is given by the convention for clockwise conventional current.  <a class="reference internal" href="faradayslaw.html#magnetinacoil"><span class="std std-numref">Fig. 20.1</span></a> shows that a positive
+change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventually produces current in a negative direction.</p>
+<p>We can rewrite this using Stoke’s theorem:</p>
+<div class="math notranslate nohighlight">
+\[\oint_\ell {\bf E} \cdot \mathrm{d} \ell= \iint_A \left(\nabla \times {\bf E}\right)\cdot \mathrm{d} {\bf A} \nonumber\]</div>
+<p>and so this can all be written as:</p>
+<div class="math notranslate nohighlight">
+\[\iint_A \left(\nabla \times {\bf E} + \frac{\partial {\bf B}}{\partial t}\right)\cdot \mathrm{d} {\bf A} = 0\]</div>
+<p>in order for this expression to be true for <em> any </em> bounding volume <span class="math notranslate nohighlight">\(A\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
+<div class="math notranslate nohighlight" id="equation-curle">
+<span class="eqno">(21.4)<a class="headerlink" href="#equation-curle" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf E} = - \frac{\partial {\bf B}}{\partial t} \]</div>
+</div>
+<div class="section" id="maxwells-equations-in-vacuum">
+<h2><span class="section-number">21.4. </span>Maxwell’s Equations in Vacuum<a class="headerlink" href="#maxwells-equations-in-vacuum" title="Permalink to this headline">¶</a></h2>
+<p>We can collect together Equations <a class="reference internal" href="#equation-dive">(21.1)</a>, <a class="reference internal" href="#equation-divb">(21.2)</a>, <a class="reference internal" href="#equation-curlb">(21.3)</a> and <a class="reference internal" href="#equation-curle">(21.4)</a> and present as Maxwell’s equations:</p>
+<div class="math notranslate nohighlight" id="equation-maxwellseqns">
+<span class="eqno">(21.5)<a class="headerlink" href="#equation-maxwellseqns" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;= \frac{\rho}{\epsilon_0}    \\
+\nabla \cdot {\bf B} &amp;= 0   \\
+\nabla \times {\bf E} &amp;= -\frac{\partial {\bf B}}{\partial t}   \\
+\nabla \times {\bf B} &amp;= \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t} \end{split}\]</div>
+<p>These are <b>local</b> equations, they can be solved at points in space <span class="math notranslate nohighlight">\({\bf r}\)</span>, rather than the integral form of each which are <b>global</b> equations - this
+is because they require us to think in terms of the bounding surfaces <span class="math notranslate nohighlight">\(\bf A\)</span>.  Another thing to notice is that the second / third of Maxwell’s equations
+are <em>homogeneous</em>, they are sourced only by the <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> fields, whereas the first / fourth equations are <em>inhomogeneous</em>, being
+sourced by additional scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}\)</span>.</p>
+</div>
+<div class="section" id="maxwells-equations-in-matter">
+<h2><span class="section-number">21.5. </span>Maxwell’s Equations in Matter*<a class="headerlink" href="#maxwells-equations-in-matter" title="Permalink to this headline">¶</a></h2>
+<p>Recall that all the Maxwell equations in <a class="reference internal" href="#equation-maxwellseqns">(21.5)</a> are only valid in vacuum, within matter however electromagnetic fields are better described in terms of the
+<span class="math notranslate nohighlight">\({\bf E} \rightarrow {\bf D}\)</span> and <span class="math notranslate nohighlight">\({\bf B} \rightarrow {\bf H}\)</span> fields, which we use to rewrite Maxwell’s equations in matter as:</p>
+<div class="math notranslate nohighlight" id="equation-maxwellseqnsmatter">
+<span class="eqno">(21.6)<a class="headerlink" href="#equation-maxwellseqnsmatter" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf D} &amp;= \rho_{free}   \\
+\nabla \cdot {\bf H} &amp;= 0   \\
+\nabla \times {\bf E} &amp;= -\frac{\partial {\bf B}}{\partial t} \\
+\nabla \times {\bf H} &amp;=  {\bf J}_{free} + \frac{\partial {\bf D}}{\partial t} \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_{free}\)</span> and <span class="math notranslate nohighlight">\({\bf J}_{free}\)</span> represent charges that move within matter.</p>
+</div>
+<div class="section" id="magnetic-monopoles">
+<h2><span class="section-number">21.6. </span>Magnetic Monopoles*<a class="headerlink" href="#magnetic-monopoles" title="Permalink to this headline">¶</a></h2>
+<p>If magnetic monopoles were found to exist, then we could add the additional terms to Maxwell’s equations that would need to be present:</p>
+<div class="math notranslate nohighlight" id="equation-maxwellseqnsbmonopole">
+<span class="eqno">(21.7)<a class="headerlink" href="#equation-maxwellseqnsbmonopole" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;= \frac{1}{\epsilon_0}\,\rho_E  \\
+\nabla \cdot {\bf B} &amp;= \mu_0 \,\rho_B  \\
+\nabla \times {\bf E} &amp;= - {\bf J}_B -\frac{\partial {\bf B}}{\partial t}  \\
+\nabla \times {\bf B} &amp;= \mu_0 {\bf J}_E + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_B\)</span> is the monopole charge density and <span class="math notranslate nohighlight">\(\bf J_B\)</span> is the monopole current density, which are the magnetic couterparts to the familar electric field
+<span class="math notranslate nohighlight">\(\rho_E,\, {\bf J_E}\)</span>.  We notice the increase degree of symmetry between the equations here now - all the equations are now inhomogeneous.</p>
+<p>Additionally if there are <span class="math notranslate nohighlight">\(Q_B = \iiint \rho_B\,\mathrm{d}V\)</span> which could move under magnetic (and therefore also electric) fields, we would have to amend the expression
+for the Lorentz force law in Equation <a class="reference internal" href="magneticforces.html#equation-lorentzforce">(18.1)</a> :</p>
+<div class="math notranslate nohighlight">
+\[{\bf F} = Q_E\left( {\bf E} + {\bf v} \times {\bf B} \right) + Q_B\left( {\bf B} - \frac{1}{c^2}{\bf v} \times {\bf E} \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_B\)</span> is a magnetic charge. No current evidence of these in nature, but symmetry breaking of GUT theories suggest they <em>should have existed</em> and ideas like
+cosmic inflation are proposed to explain the non-observation just as a vast dilution within our observable universe.  The observed quantisation of electric charge, into
+chunks no smaller than <span class="math notranslate nohighlight">\(\pm e\)</span> can be explained by the presence of a <em>single</em> magnetic monopole in our universe, as Dirac proposed in 1931.  A good paper on magnetic
+monopoles is <a class="reference external" href="https://doi.org/10.1080/00107514.2012.685693">here</a>, Dirac’s paper can be found <a class="reference external" href="https://doi.org/10.1098/rspa.1931.0130">here</a> and for more on
+cosmic inflation, check out any good lecture course on, such as these from <a class="reference external" href="http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf">DMTP</a>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./electromagnetism"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="faradayslaw.html" title="previous page"><span class="section-number">20. </span>Faraday’s Law</a>
+    <a class='right-next' id="next-link" href="solvingmaxwell.html" title="next page"><span class="section-number">22. </span>Solutions to Maxwell’s Equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

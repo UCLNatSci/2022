@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Mathematical Preliminaries &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Harmonic and Oscillatory Motion" href="SHM.html" />
+    <link rel="prev" title="1. Introduction" href="introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Waves
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Mathematical Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SHM.html">
+   3. Harmonic and Oscillatory Motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="longitudinal.html">
+   4. Longitudinal Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="waveequationsolns.html">
+   5. Solutions to the Wave Equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="transverse.html">
+   6. Transverse Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dispersionrelations.html">
+   7. Dispersion Relations and Wave Energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polarisation.html">
+   8. Polarisation of Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standingwaves.html">
+   9. Standing Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matterwaves.html">
+   10. Matter Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dopplershift.html">
+   11. Doppler Shift
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Electromagnetism
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/introduction.html">
+   12. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/EMmaths.html">
+   13. Mathematical Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/electrostatics.html">
+   14. Electrostatics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+   15. Solving Electrostatic Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
+   16. Energy in an Electric Field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/magneticfields.html">
+   17. Magnetism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/magneticforces.html">
+   18. Magnetic Forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/ampereslaw.html">
+   19. Ampère’s Circuital Law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/faradayslaw.html">
+   20. Faraday’s Law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
+   21. Differential Forms and Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+   22. Solutions to Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/EMenergy.html">
+   23. Energy in an Electromagnetic field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electromagnetism/EMpotentials.html">
+   24. Electromagnetic Scalar and Vector Potentials
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Fluids
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/intro.html">
+   25. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/mathideas.html">
+   26. Mathematical background
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/visualise.html">
+   27. Visualising fluid motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/helmholtz.html">
+   28. Divergence and vorticity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   29. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/conservation.html">
+   30. Conservation law derivations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/navstok.html">
+   31. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/steadysoln.html">
+   32. Steady solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/bernoulli.html">
+   33. Bernoulli’s equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   34. Scaling arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   35. Perturbations and asymptotics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/vorticity.html">
+   36. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/waterwaves.html">
+   37. Unsteady: Water waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/soundwaves.html">
+   38. Unsteady: Sound waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/rotfram.html">
+   39. Rotational reference frames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/ekman.html">
+   40. Geophysical phenomena
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/waves/wavemaths.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwaves/wavemaths.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomial-series">
+   2.1. Binomial Series
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="mathematical-preliminaries">
+<h1><span class="section-number">2. </span>Mathematical Preliminaries<a class="headerlink" href="#mathematical-preliminaries" title="Permalink to this headline">¶</a></h1>
+<p>Since waves involve changes in both space and time <span class="math notranslate nohighlight">\(u(x,\,t)\)</span>, the definitions of first and second partial derivatives in terms of limits
+are useful here.  Recall that partial derivatives are found when we have two or more variables that can change and we are interested in
+how the machinery of calculus works in this case.  Partial derivatives typically involve allowing one variable to change whilst keeping
+all other variables constant.</p>
+<p>First derivative of a function <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> is found from taking the limit:</p>
+<div class="math notranslate nohighlight" id="equation-partialderiv">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-partialderiv" title="Permalink to this equation">¶</a></span>\[\frac{\partial u(x,\,t)}{\partial x} = \lim_{\Delta x \rightarrow 0} \frac{u(x + \Delta x,t) - u(x,t)}{\Delta x} \]</div>
+<p>Notice that this defintion keeps the variable <span class="math notranslate nohighlight">\(t\)</span> constant whilst this limit is taken.  Likewise if we took the <span class="math notranslate nohighlight">\(t\)</span> derivative here:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u(x,\,t)}{\partial t} = \lim_{\Delta t \rightarrow 0} \frac{u(x,\,t + \Delta t) - u(x,\,t)}{\Delta t} \]</div>
+<p>The second derivative can be thought of as a derivative of a derivative:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial^2 u(x,\,t)}{\partial x^2} &amp;=&amp;\, \frac{\partial}{\partial x}\left(\frac{\partial u(x,\,t)}{\partial x}\right) \\
+&amp;=&amp;\, \lim_{\Delta x \rightarrow 0} \frac{1}{\Delta x}\left[\frac{\partial u(x+\Delta x,\,t)}{\partial x} - \frac{\partial u(x,\,t)}{\partial x} \right] \\
+&amp;=&amp;\, \lim_{\Delta x \rightarrow 0} \frac{1}{\Delta x}\left[\frac{u(x + 2\Delta x,\,t) - u(x+ \Delta x,\,t)}{\Delta x} - \frac{u(x + \Delta x,\, t) - u(x,\, t)}{\Delta x} \right] \\\end{split}\]</div>
+<p>Which means we can write a second partial derivative using a limit definition as:</p>
+<div class="math notranslate nohighlight" id="equation-2ndpartialderiv">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-2ndpartialderiv" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2 u(x,\,t)}{\partial x^2} = \lim_{\Delta x \rightarrow 0} \frac{u(x+2\Delta x,t) - 2u(x+\Delta x,t) + u(x,t)}{{\Delta x}^2} \]</div>
+<div class="section" id="binomial-series">
+<h2><span class="section-number">2.1. </span>Binomial Series<a class="headerlink" href="#binomial-series" title="Permalink to this headline">¶</a></h2>
+<p>It is sometimes useful to think about taking binomial expansion of terms in a series (this is formally equivalent to taking a Taylor expansion, but it’s a little
+easier to actually find the terms this way)!</p>
+<p>Recall that for <span class="math notranslate nohighlight">\(a,\, b \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, the following binomial series holds and gives exactly <span class="math notranslate nohighlight">\(n+1\)</span> terms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(a+b)^n &amp;=&amp; a^n\,b^0 + n\,a^{n-1}\,b^1 + \frac{n(n-1)}{2!}\,a^{n-2}\,b^2 + \dots + n\,a^{1}\,b^{n-1} + a^0\,b^n \\
+&amp;=&amp; \sum_{r=0}^n \frac{n!}{(n-r)!\,r!}\,a^{n-r}\,b^{r}\end{split}\]</div>
+<p>However if we have <span class="math notranslate nohighlight">\(n \in \mathbb{R}\)</span>, it is still possible to find a converent series, although the seris itself must be of the form:</p>
+<div class="math notranslate nohighlight">
+\[(1 + x)^n,\, |x|&lt;1\]</div>
+<p>i.e. the radius of convergence of the series requires a restriction on the size of <span class="math notranslate nohighlight">\(x\)</span>.  This means that if we are presented with a binomimal of the
+original form, we have to transform it into:</p>
+<div class="math notranslate nohighlight">
+\[(a + b)^n = a^n\left( a + \frac{b}{a}\right)^n\]</div>
+<p>where <span class="math notranslate nohighlight">\(|a| &gt; |b|\)</span> such that <span class="math notranslate nohighlight">\(|b / a| &lt; 1\)</span>.</p>
+<p>Consider the example from special relativity, for the energy matter relation <span class="math notranslate nohighlight">\(E = \gamma\,m_0\,c^2 = m_0\,c^2/\sqrt{1 - v^2/c^2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[E = \frac{m_0\,c^2}{\sqrt{1-\frac{v^2}{c^2}}} = m_0\,c^2\left(1-\frac{v^2}{c^2}\right)^{-1/2} \]</div>
+<p>Since <span class="math notranslate nohighlight">\(|v| &lt; |c|\)</span> here, then the second term is of the form <span class="math notranslate nohighlight">\(v^2/c^2 &lt; 1\)</span> and hence we can do a binomial expansion:</p>
+<div class="math notranslate nohighlight">
+\[E = m_0\,c^2\left( 1 -\frac{1}{2}\left(-\frac{v^2}{c^2}\right) + \dots \right)\]</div>
+<p>and we can see that this means:</p>
+<div class="math notranslate nohighlight">
+\[E \simeq m_0\,c^2 + \frac{1}{2}m_0v^2 \]</div>
+<p>i.e. the two main contributions to a particles energy are the rest mass-energy and then the classical kinetric energy (the higher order corrections
+occcur when <span class="math notranslate nohighlight">\(v/c\)</span> are a larger fraction.</p>
+<p>This usually allows us to approximate more complication functions with one or two order series expansions.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page"><span class="section-number">1. </span>Introduction</a>
+    <a class='right-next' id="next-link" href="SHM.html" title="next page"><span class="section-number">3. </span>Harmonic and Oscillatory Motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
