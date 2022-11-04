@@ -290,35 +290,35 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fractions">
+   5.4. Partial fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   5.4. Method of differences
+   5.5. Method of differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partial-fractions">
-     5.4.1. Partial fractions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#writing-out-the-series-method">
-     5.4.2. Writing out the series method
+     5.5.1. Writing out the series method
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
-     5.4.3. Rewriting the summation index method
+     5.5.2. Rewriting the summation index method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
-   5.5. Taylor and Maclaurin series
+   5.6. Taylor and Maclaurin series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#composite-function-expansion">
-     5.5.1. Composite function expansion
+     5.6.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -397,35 +397,35 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fractions">
+   5.4. Partial fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   5.4. Method of differences
+   5.5. Method of differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partial-fractions">
-     5.4.1. Partial fractions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#writing-out-the-series-method">
-     5.4.2. Writing out the series method
+     5.5.1. Writing out the series method
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
-     5.4.3. Rewriting the summation index method
+     5.5.2. Rewriting the summation index method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
-   5.5. Taylor and Maclaurin series
+   5.6. Taylor and Maclaurin series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#composite-function-expansion">
-     5.5.1. Composite function expansion
+     5.6.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -970,25 +970,27 @@ same is also true if we extend this range out to positive and negative 1, i.e. f
 </div>
 </div>
 </div>
-<div class="section" id="method-of-differences">
-<h2><span class="section-number">5.4. </span>Method of differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
-<p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
-to compute the desired result.  This is a handy trick to find the value of partial (finite) sums.</p>
 <div class="section" id="partial-fractions">
-<h3><span class="section-number">5.4.1. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">5.4. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h2>
 <p>Consider the problem of adding different fractions, for example:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{2} + \frac{1}{3} = \frac{?}{??}\]</div>
-<p>the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.<br />
-To find the common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM<span class="math notranslate nohighlight">\((2,3) = 6\)</span> and hence:</p>
+<p>the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.  To find the
+common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM<span class="math notranslate nohighlight">\((2,3) = 6\)</span> and hence:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{2} = \frac{3}{6},   \quad\frac{1}{3} = \frac{2}{6} \Rightarrow \frac{1}{2} + \frac{1}{3} = \frac{2 + 3}{6} = \frac{5}{6}\]</div>
-<p>If we have two algebraic fractions, we can follow a similar process.</p>
-<p>An example:</p>
+<p>If we have two algebraic fractions, we can follow a similar process:</p>
 <div class="math notranslate nohighlight">
-\[\frac{2}{n+1} + \frac{3}{n+2} = \frac{2(n+2) + 3(n+1)}{(n+1)(n+2)} = \frac{5n + 7}{(n+1)(n+2)} \]</div>
-<p>The idea behind partial fractions is to reverse this process, breaking up a composite fraction into its smaller fractional parts.</p>
-<p>An example:</p>
+\[\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}\]</div>
+<div class="tip admonition">
+<p class="admonition-title">An algorithm for finding partial fractions</p>
+<p>1. If the degree of the numerator <span class="math notranslate nohighlight">\(m\)</span> is greater than (or equal to) the degree of the denominator <span class="math notranslate nohighlight">\(n\)</span>, split off the leading terms in the form of a polynomial of degree <span class="math notranslate nohighlight">\(m-n\)</span>.</p>
+<p>2. Split up the remaining fraction so that the degree of each numerator is one less than the degree of the denominator.</p>
+<p>3. To find the unknown constants, combine the fractions on the right hand side and equate the coefficients in the numerators on the left and right.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Worked Examples</p>
+<p>1.</p>
 <div class="math notranslate nohighlight">
 \[\frac{3}{(n-1)(n+2)}\]</div>
 <p>first split this up into:</p>
@@ -998,17 +1000,13 @@ To find the common denominator, we need to find the lowest common multiple (LCM)
 <div class="math notranslate nohighlight">
 \[\frac{3}{(n-1)(n+2)} = \frac{A(n+2) + B(n-1)}{(n-1)(n+2)} \Rightarrow 3 = A(n+2) + B(n-1)\]</div>
 <p>There are two (equally valid) methods to use at this point to find <span class="math notranslate nohighlight">\(A,\, B\)</span>:</p>
-<ol class="simple">
-<li><p>We can substitute in <span class="math notranslate nohighlight">\(n=1, \,-2\)</span> into the equation, in each case:</p></li>
-</ol>
+<p>a. We can substitute in <span class="math notranslate nohighlight">\(n=1, \,-2\)</span> into the equation, in each case:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{rlcl}
     n = 1: &amp; 3  = 3A &amp;\Rightarrow &amp; A = 1 \\ 
     n = -2: &amp; 3 = -3B &amp; \Rightarrow&amp; B  = -1
 \end{array}\end{split}\]</div>
-<ol class="simple">
-<li><p>We can compare coefficients of <span class="math notranslate nohighlight">\(n^0\)</span> and <span class="math notranslate nohighlight">\(n^1\)</span> (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations:</p></li>
-</ol>
+<p>b. We can compare coefficients of <span class="math notranslate nohighlight">\(n^0\)</span> and <span class="math notranslate nohighlight">\(n^1\)</span> (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{rlcl}
     n^1: &amp; A + B = 0 &amp;\Rightarrow&amp; B = -A\\ 
@@ -1016,7 +1014,7 @@ To find the common denominator, we need to find the lowest common multiple (LCM)
          &amp;  &amp;\Rightarrow&amp; A = 1,\, B = -1 
 \end{array}\end{split}\]</div>
 <p>If we have repeated roots in the denominator,  the decomposition now has terms for each of the roots and an additional one for the repeated root.</p>
-<p>An example:</p>
+<p>2.</p>
 <div class="math notranslate nohighlight">
 \[g(n) = \frac{9}{(n+2)(n+5)^2} = \frac{A}{n+2} + \frac{B}{n+5} + \frac{C}{(n+5)^2} \]</div>
 <p>To find the partial fractions, recall we first combine:</p>
@@ -1030,9 +1028,47 @@ n = -2: &amp; (3)^2A = 9 &amp; \Rightarrow &amp; A = 1 \\
 n=0: &amp; 25A + 10B + 2C = 9 &amp; \Rightarrow &amp; B=-1 
 \end{array}\\
 &amp;&amp;\Rightarrow g(n) = \frac{1}{n+2} - \frac{1}{n+5} - \frac{3}{(n+5)^2} \end{split}\]</div>
+<p>3. Lets try to decompose <span class="math notranslate nohighlight">\(\displaystyle \frac{11x+3}{x^2 + 3x + 2}\)</span> into partial fractions:</p>
+<div class="math notranslate nohighlight">
+\[\frac{11x+3}{x^2 + 3x + 2} = \frac{A}{x+1}+\frac{B}{x+2}=\frac{A(x+2)+B(x+1)}{(x+1)(x+2)}=\frac{(A+B)x+(2A+B)}{x^2+3x+2}\]</div>
+<p>To obtain the required fraction, we need <span class="math notranslate nohighlight">\((A+B)x+(2A+B)=11x+3\)</span>, which by comparing coefficients of <span class="math notranslate nohighlight">\(x\)</span> we find two simultaneous equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A+B &amp;= 11 \\
+2A + B &amp;= 3\end{split}\]</div>
+<p>We can solve these by choosing <span class="math notranslate nohighlight">\(A=-8,\ B=19\)</span>, hence the result is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{11x+3}{x^2+3x+2}=\frac{-8}{x+1}+\frac{19}{x+2}\]</div>
+<p>This technique allows us to easily integrate:</p>
+<div class="math notranslate nohighlight">
+\[\int\frac{11x+3}{x^2+3x+2}\mathrm{d}x= \int\left(\frac{-8}{x+1}+\frac{19}{x+2}\right)\mathrm{d}x=-\ln|x+1|+19\ln|x+2|+c\]</div>
+<p>4. Consider the function:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{2}{(x^2-1)(x+2)}\]</div>
+<p>It can be decomposed as follows:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{(x^2-1)(x+2)}=\frac{Ax+B}{x^2-1}+\frac{C}{x+2}\]</div>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[(Ax+B)(x+2)+C(x^2-1)=2\]</div>
+<p>and by expanding out:</p>
+<div class="math notranslate nohighlight">
+\[(A+C)x^2 + (2A+B)x + 2B - C = 2 \]</div>
+<p>Equating coefficients on the left and right sides we obtain simultaneous equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A + C  &amp;= 0\\
+2A + B &amp;= 0\\
+2B - C &amp;= 2\end{split}\]</div>
+<p>which is solved by <span class="math notranslate nohighlight">\(A = -2/3,\, B = 4/3,\, C = 2/3\)</span>.  This means that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{(x^2-1)(x+2)}=\frac{2(2-x)}{3(x^2-1)}+\frac{2}{3(x+2)}\]</div>
+<p>However, we can decompose this fraction further by noting that <span class="math notranslate nohighlight">\((x^2-1)=(x+1)(x-1)\)</span>, therefore the full decomposition is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{(x^2-1)(x+2)}=\frac{1}{3(x-1)}+\frac{1}{1+x}+\frac{2}{3(x+2)}\]</div>
+</div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">An Application with Prime Factors</p>
-<p>For a fraction like <span class="math notranslate nohighlight">\( \frac{1}{18}\)</span>, can we decompose this into fractions of the prime factors <span class="math notranslate nohighlight">\( 18 = 2\cdot 3^2\)</span> ? The full partial fraction decomposition would have the form:</p>
+<p>For a fraction like <span class="math notranslate nohighlight">\( \frac{1}{18}\)</span>, can we decompose this into fractions of the prime factors <span class="math notranslate nohighlight">\( 18 = 2\cdot 3^2\)</span> ? The full partial fraction
+decomposition would have the form:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{18} = \frac{A}{2} + \frac{B}{3} + \frac{C}{3^2}\]</div>
 <p>First we have to present the system in a way that is meaningful to use partial fractions:</p>
@@ -1053,9 +1089,71 @@ n=0: &amp; 25A + 10B + 2C = 9 &amp; \Rightarrow &amp; B=-1
 \[f(n) = \frac{1}{n+2} - \frac{1}{n+3} - \frac{1}{(n+3)^2} \Rightarrow 
 f(0) = \frac{1}{18} = \frac{1}{2} - \frac{1}{3} - \frac{1}{3^2}\]</div>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>Decompose the following into partial fractions:</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{x^2-1}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+3x+4}{x^2 + 4x + 3}\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[\frac{3x^3+3}{x^2 + 4x + 3} \]</div>
+<p>4.</p>
+<div class="math notranslate nohighlight">
+\[\frac{2x+3}{(x+1)^2}\]</div>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{2}{x^2-1} &amp;= \frac{A}{x-1} + \frac{B}{x+1} \\
+&amp;= \frac{A(x+1) + B(x-1)}{x^2-1}\end{split}\]</div>
+<p>Therefore by equating numerators:</p>
+<div class="math notranslate nohighlight">
+\[2= A(x+1) + B(x-1) \Rightarrow A = 1,\ B = -1\]</div>
+<p>so we find:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2}{x^2-1} = \frac{1}{x-1} - \frac{1}{x+1}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{x^2+3x+4}{x^2 + 4x + 3} &amp;= A + \frac{B}{x+1} + \frac{C}{x+3} \\
+&amp;= \frac{x^2+4x+3 - x + 1}{x^2 + 4x + 3} = 1 + \frac{1-x}{(x+1)(x+3)} \end{split}\]</div>
+<p>Which means that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{B}{x+1} + \frac{C}{x+3} = \frac{B(x+3) + C(x+1)}{(x+1)(x+3)} =  \frac{(B+C)x + 3B + C}{(x+1)(x+3)}\]</div>
+<p>and therefore by equating numerators:</p>
+<div class="math notranslate nohighlight">
+\[1 - x = B(x+3) + C(x+1) \Rightarrow B = 1,\ C = -2\]</div>
+<p>so we find:</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+3x+4}{x^2 + 4x + 3} = 1 + \frac{1}{x+1} - \frac{2}{x+3}\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{3x^3+3}{x^2 + 4x + 3} &amp;= (Ax +B) + \frac{C}{x+1}+ \frac{D}{x+3} \\
+&amp;= \frac{3x^3 + 12x^2 + 9x - 12x^2 - 9x + 3}{x^2 + 4x + 3} = 3x - \frac{12x^2 + 9x - 3}{x^2 + 4x + 3} \\
+&amp;= 3x - \frac{12x^2 + 48x + 36 - 39x - 39}{x^2 + 4x + 3} = 3x - 12 + 39\frac{x + 1}{(x+1)(x+3)}\\
+&amp;= 3x - 12 + \frac{39}{x+3}\end{split}\]</div>
+<p>4.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{2x+3}{(x+1)^2} &amp;= \frac{A}{(x+1)^2}+\frac{B}{x+1}\\
+&amp;= \frac{A + B(x+1)}{(x+1)^2} = \frac{Bx + A+B}{(x+1)^2}\end{split}\]</div>
+<p>and therefore by equating numerators:</p>
+<div class="math notranslate nohighlight">
+\[2x+3 = Bx + A+B\]</div>
+<p>which means that <span class="math notranslate nohighlight">\(A = 1,\, B = 2\)</span> and so:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2x+3}{(x+1)^2} = \frac{1}{(x+1)^2}+\frac{2}{x+1}\]</div>
+</div>
+</div>
+<div class="section" id="method-of-differences">
+<h2><span class="section-number">5.5. </span>Method of differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
+<p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
+to compute the desired result.  This is a handy trick to find the value of partial (finite) sums .</p>
 <div class="section" id="writing-out-the-series-method">
-<h3><span class="section-number">5.4.2. </span>Writing out the series method<a class="headerlink" href="#writing-out-the-series-method" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.1. </span>Writing out the series method<a class="headerlink" href="#writing-out-the-series-method" title="Permalink to this headline">¶</a></h3>
 <p>Lets start with a simple example:</p>
 <div class="math notranslate nohighlight">
 \[S_1 = \sum_{n=1}^5 \left( \frac{1}{n} - \frac{1}{n+1}\right)\]</div>
@@ -1101,7 +1199,7 @@ Expanding out the first few and last few terms allows us to spot the pattern:</p
 \[S_4 = 1 - \frac{1}{N+1} \Rightarrow S_3 = \lim_{N \rightarrow \infty} \left(1 - \frac{1}{N+1}\right) = 1\]</div>
 </div>
 <div class="section" id="rewriting-the-summation-index-method">
-<h3><span class="section-number">5.4.3. </span>Rewriting the summation index method<a class="headerlink" href="#rewriting-the-summation-index-method" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.2. </span>Rewriting the summation index method<a class="headerlink" href="#rewriting-the-summation-index-method" title="Permalink to this headline">¶</a></h3>
 <p>It is possible to demonstrate the cancellation of terms without writing out the terms in the series.</p>
 <p>In general, rewriting the summation index provides:</p>
 <div class="math notranslate nohighlight">
@@ -1158,7 +1256,7 @@ Let</p>
 </div>
 </div>
 <div class="section" id="taylor-and-maclaurin-series">
-<h2><span class="section-number">5.5. </span>Taylor and Maclaurin series<a class="headerlink" href="#taylor-and-maclaurin-series" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Taylor and Maclaurin series<a class="headerlink" href="#taylor-and-maclaurin-series" title="Permalink to this headline">¶</a></h2>
 <p>Lets consider more complicated functions like <span class="math notranslate nohighlight">\(\sin(x)\)</span> or <span class="math notranslate nohighlight">\(\ln(x)\)</span>, a question that we could ask is can we find simpler representation of these, albeit one that might not
 be valid in all intervals of <span class="math notranslate nohighlight">\(x\)</span> - an expansion around a point for instance.  We call such Polynomial series Taylor series in general.</p>
 <div class="notice admonition">
@@ -1261,7 +1359,7 @@ meaning that we retain only the terms up to a specified <span class="math notran
 <p>As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical
 use. If the series converges very slowly, then it may not be much good!</p>
 <div class="section" id="composite-function-expansion">
-<h3><span class="section-number">5.5.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.6.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively</p>
 <p>Then:</p>
 <ul class="simple">

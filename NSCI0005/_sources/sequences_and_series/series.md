@@ -615,31 +615,37 @@ S = \frac{a}{1-r} = \frac{\frac{123}{1000}}{1 - \frac{1}{1000}} = \frac{\frac{12
 ```
 ````
 
-## Method of differences
-
-The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
-to compute the desired result.  This is a handy trick to find the value of partial (finite) sums.
-
-### Partial fractions
+## Partial fractions
 
 Consider the problem of adding different fractions, for example: 
 ```{math} 
 \frac{1}{2} + \frac{1}{3} = \frac{?}{??}
 ``` 
-the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.  
-To find the common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM$(2,3) = 6$ and hence:
+the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.  To find the 
+common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM$(2,3) = 6$ and hence:
 ```{math} 
 \frac{1}{2} = \frac{3}{6},   \quad\frac{1}{3} = \frac{2}{6} \Rightarrow \frac{1}{2} + \frac{1}{3} = \frac{2 + 3}{6} = \frac{5}{6}
 ```
-If we have two algebraic fractions, we can follow a similar process.  
+If we have two algebraic fractions, we can follow a similar process:
 
-An example: 
-```{math} 
-\frac{2}{n+1} + \frac{3}{n+2} = \frac{2(n+2) + 3(n+1)}{(n+1)(n+2)} = \frac{5n + 7}{(n+1)(n+2)} 
+```{math}
+\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}
 ```
-The idea behind partial fractions is to reverse this process, breaking up a composite fraction into its smaller fractional parts.
 
-An example: 
+````{admonition} An algorithm for finding partial fractions
+:class: tip
+
+1\. If the degree of the numerator $m$ is greater than (or equal to) the degree of the denominator $n$, split off the leading terms in the form of a polynomial of degree $m-n$.
+
+2\. Split up the remaining fraction so that the degree of each numerator is one less than the degree of the denominator.
+
+3\. To find the unknown constants, combine the fractions on the right hand side and equate the coefficients in the numerators on the left and right.
+
+````
+
+````{admonition} Worked Examples
+:class: seealso, dropdown
+1\. 
 ```{math} \frac{3}{(n-1)(n+2)}
 ``` 
 first split this up into:
@@ -652,14 +658,14 @@ and then recombine to set up equations to find the unknown coefficients:
 ``` 
 There are two (equally valid) methods to use at this point to find $A,\, B$: 
 
-1. We can substitute in $n=1, \,-2$ into the equation, in each case: 
+a\. We can substitute in $n=1, \,-2$ into the equation, in each case: 
 ```{math}
 \begin{array}{rlcl}
     n = 1: & 3  = 3A &\Rightarrow & A = 1 \\ 
     n = -2: & 3 = -3B & \Rightarrow& B  = -1
 \end{array}
 ``` 
-2. We can compare coefficients of $n^0$ and $n^1$ (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations: 
+b\. We can compare coefficients of $n^0$ and $n^1$ (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations: 
 ```{math} 
 \begin{array}{rlcl}
     n^1: & A + B = 0 &\Rightarrow& B = -A\\ 
@@ -670,7 +676,7 @@ There are two (equally valid) methods to use at this point to find $A,\, B$:
 
 If we have repeated roots in the denominator,  the decomposition now has terms for each of the roots and an additional one for the repeated root.  
 
-An example: 
+2\. 
 ```{math} 
 g(n) = \frac{9}{(n+2)(n+5)^2} = \frac{A}{n+2} + \frac{B}{n+5} + \frac{C}{(n+5)^2} 
 ``` 
@@ -687,10 +693,79 @@ n=0: & 25A + 10B + 2C = 9 & \Rightarrow & B=-1
 \end{array}\\
 &&\Rightarrow g(n) = \frac{1}{n+2} - \frac{1}{n+5} - \frac{3}{(n+5)^2} 
 ```
+
+3\. Lets try to decompose $\displaystyle \frac{11x+3}{x^2 + 3x + 2}$ into partial fractions:
+
+```{math}
+\frac{11x+3}{x^2 + 3x + 2} = \frac{A}{x+1}+\frac{B}{x+2}=\frac{A(x+2)+B(x+1)}{(x+1)(x+2)}=\frac{(A+B)x+(2A+B)}{x^2+3x+2}
+```
+
+To obtain the required fraction, we need $(A+B)x+(2A+B)=11x+3$, which by comparing coefficients of $x$ we find two simultaneous equations:
+
+```{math}
+A+B &= 11 \\
+2A + B &= 3
+```
+
+We can solve these by choosing $A=-8,\ B=19$, hence the result is:
+
+```{math}
+\frac{11x+3}{x^2+3x+2}=\frac{-8}{x+1}+\frac{19}{x+2}
+```
+
+This technique allows us to easily integrate:
+
+```{math}
+\int\frac{11x+3}{x^2+3x+2}\mathrm{d}x= \int\left(\frac{-8}{x+1}+\frac{19}{x+2}\right)\mathrm{d}x=-\ln|x+1|+19\ln|x+2|+c
+```
+
+4\. Consider the function:
+
+```{math}
+f(x) = \frac{2}{(x^2-1)(x+2)}
+```
+
+It can be decomposed as follows:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{Ax+B}{x^2-1}+\frac{C}{x+2}
+```
+
+This gives:
+```{math}
+(Ax+B)(x+2)+C(x^2-1)=2
+``` 
+and by expanding out:
+```{math}
+(A+C)x^2 + (2A+B)x + 2B - C = 2 
+```
+Equating coefficients on the left and right sides we obtain simultaneous equations:
+
+```{math}
+A + C  &= 0\\
+2A + B &= 0\\
+2B - C &= 2
+```
+which is solved by $A = -2/3,\, B = 4/3,\, C = 2/3$.  This means that:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{2(2-x)}{3(x^2-1)}+\frac{2}{3(x+2)}
+```
+
+However, we can decompose this fraction further by noting that $(x^2-1)=(x+1)(x-1)$, therefore the full decomposition is:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{1}{3(x-1)}+\frac{1}{1+x}+\frac{2}{3(x+2)}
+```
+
+````
+
+
 ````{admonition} An Application with Prime Factors
 :class: seealso, dropdown
 
-For a fraction like $ \frac{1}{18}$, can we decompose this into fractions of the prime factors $ 18 = 2\cdot 3^2$ ? The full partial fraction decomposition would have the form: 
+For a fraction like $ \frac{1}{18}$, can we decompose this into fractions of the prime factors $ 18 = 2\cdot 3^2$ ? The full partial fraction 
+decomposition would have the form: 
 ```{math} 
 \frac{1}{18} = \frac{A}{2} + \frac{B}{3} + \frac{C}{3^2}
 ``` 
@@ -716,6 +791,98 @@ f(n) = \frac{1}{n+2} - \frac{1}{n+3} - \frac{1}{(n+3)^2} \Rightarrow
 f(0) = \frac{1}{18} = \frac{1}{2} - \frac{1}{3} - \frac{1}{3^2}
 ```
 ````
+
+````{admonition} Practice Questions
+:class: seealso, dropdown
+Decompose the following into partial fractions:
+
+1\. 
+```{math}
+\frac{2}{x^2-1}
+```
+
+2\. 
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3}
+```
+
+3\. 
+```{math}
+\frac{3x^3+3}{x^2 + 4x + 3} 
+```
+
+4\.
+```{math}
+\frac{2x+3}{(x+1)^2}
+```
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+1\. 
+```{math}
+\frac{2}{x^2-1} &= \frac{A}{x-1} + \frac{B}{x+1} \\
+&= \frac{A(x+1) + B(x-1)}{x^2-1}
+```
+Therefore by equating numerators:
+```{math}
+2= A(x+1) + B(x-1) \Rightarrow A = 1,\ B = -1
+```
+so we find:
+```{math}
+\frac{2}{x^2-1} = \frac{1}{x-1} - \frac{1}{x+1}
+```
+
+2\. 
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3} &= A + \frac{B}{x+1} + \frac{C}{x+3} \\
+&= \frac{x^2+4x+3 - x + 1}{x^2 + 4x + 3} = 1 + \frac{1-x}{(x+1)(x+3)} 
+```
+Which means that:
+```{math}
+\frac{B}{x+1} + \frac{C}{x+3} = \frac{B(x+3) + C(x+1)}{(x+1)(x+3)} =  \frac{(B+C)x + 3B + C}{(x+1)(x+3)}
+```
+and therefore by equating numerators:
+```{math}
+1 - x = B(x+3) + C(x+1) \Rightarrow B = 1,\ C = -2
+```
+so we find:
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3} = 1 + \frac{1}{x+1} - \frac{2}{x+3}
+```
+
+3\. 
+```{math}
+\frac{3x^3+3}{x^2 + 4x + 3} &= (Ax +B) + \frac{C}{x+1}+ \frac{D}{x+3} \\
+&= \frac{3x^3 + 12x^2 + 9x - 12x^2 - 9x + 3}{x^2 + 4x + 3} = 3x - \frac{12x^2 + 9x - 3}{x^2 + 4x + 3} \\
+&= 3x - \frac{12x^2 + 48x + 36 - 39x - 39}{x^2 + 4x + 3} = 3x - 12 + 39\frac{x + 1}{(x+1)(x+3)}\\
+&= 3x - 12 + \frac{39}{x+3}
+```
+
+
+4\.
+```{math}
+\frac{2x+3}{(x+1)^2} &= \frac{A}{(x+1)^2}+\frac{B}{x+1}\\
+&= \frac{A + B(x+1)}{(x+1)^2} = \frac{Bx + A+B}{(x+1)^2}
+```
+and therefore by equating numerators:
+```{math}
+2x+3 = Bx + A+B
+```
+which means that $A = 1,\, B = 2$ and so:
+```{math}
+\frac{2x+3}{(x+1)^2} = \frac{1}{(x+1)^2}+\frac{2}{x+1}
+```
+
+````
+
+
+
+## Method of differences
+
+The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
+to compute the desired result.  This is a handy trick to find the value of partial (finite) sums .
 
 ### Writing out the series method
 
