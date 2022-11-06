@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. Integration &#8212; Mathematics for Natural Sciences A</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Multivariable Calculus" href="partialdifferentiation.html" />
+    <link rel="prev" title="9. Differentiation" href="differentiation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Mathematics for Natural Sciences A
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   3. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   4. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/series.html">
+   5. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   6. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/matrices.html">
+   7. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
+   8. Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="differentiation.html">
+   9. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="partialdifferentiation.html">
+   11. Multivariable Calculus
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/differentiation_and_integration/integration.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdifferentiation_and_integration/integration.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducing-integration">
+   10.1. Introducing Integration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-anti-derivative">
+     10.1.1. The “anti-derivative”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-under-the-curve">
+     10.1.2. Area under the curve
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#signed-and-unsigned-areas">
+     10.1.3. Signed and unsigned areas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-between-two-curves">
+     10.1.4. Area between two curves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-substitution">
+   10.2. Integration by substitution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integral-of-displaystyle-frac-1-x">
+   10.3. Integral of
+   <span class="math notranslate nohighlight">
+    \(\displaystyle \frac{1}{x}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-parts">
+   10.4. Integration by parts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-partial-fractions">
+   10.5. Integration by partial fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduction-formula">
+   10.6. Reduction formula
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-value-of-a-function">
+   10.7. Mean value of a function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arc-length">
+   10.8. Arc Length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surfaces-of-revolution">
+   10.9. Surfaces of Revolution
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Integration</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducing-integration">
+   10.1. Introducing Integration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-anti-derivative">
+     10.1.1. The “anti-derivative”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-under-the-curve">
+     10.1.2. Area under the curve
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#signed-and-unsigned-areas">
+     10.1.3. Signed and unsigned areas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-between-two-curves">
+     10.1.4. Area between two curves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-substitution">
+   10.2. Integration by substitution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integral-of-displaystyle-frac-1-x">
+   10.3. Integral of
+   <span class="math notranslate nohighlight">
+    \(\displaystyle \frac{1}{x}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-parts">
+   10.4. Integration by parts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration-by-partial-fractions">
+   10.5. Integration by partial fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduction-formula">
+   10.6. Reduction formula
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-value-of-a-function">
+   10.7. Mean value of a function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arc-length">
+   10.8. Arc Length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surfaces-of-revolution">
+   10.9. Surfaces of Revolution
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="integration">
+<h1><span class="section-number">10. </span>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introducing-integration">
+<h2><span class="section-number">10.1. </span>Introducing Integration<a class="headerlink" href="#introducing-integration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-anti-derivative">
+<h3><span class="section-number">10.1.1. </span>The “anti-derivative”<a class="headerlink" href="#the-anti-derivative" title="Permalink to this headline">¶</a></h3>
+<p>Consider the function <span class="math notranslate nohighlight">\(\cos(x)\)</span>.  We know that this function can be obtained by differentiating <span class="math notranslate nohighlight">\(\sin(x)\)</span>.  Therefore, we could think of <span class="math notranslate nohighlight">\(\sin(x)\)</span> as the
+“anti-derivative” of <span class="math notranslate nohighlight">\(\cos(x)\)</span>.  After differentiating <span class="math notranslate nohighlight">\(\sin(x)\)</span>, the “anti-derivative” takes us back to where we started.</p>
+<p>Well… nearly.
+We could also obtain <span class="math notranslate nohighlight">\(\cos(x)\)</span> by differentiating <span class="math notranslate nohighlight">\(\sin(x)+2\)</span>, so we cannot say that <span class="math notranslate nohighlight">\(\sin(x)\)</span> is the unique anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>In general, for a given function <span class="math notranslate nohighlight">\(f(x)\)</span>,</p>
+<p>if <span class="math notranslate nohighlight">\(\frac{\mathrm{d}F}{\mathrm{d}x} = f(x)\)</span>, then <span class="math notranslate nohighlight">\(F(x)+c\)</span> is an antiderivative of <span class="math notranslate nohighlight">\(x\)</span>,</p>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is an arbitrary constant.</p>
+<p>Being able to “spot” anti-derivatives is a tremendously useful (and often under-utilised) trick.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p><em>Note: these are not “integration questions”, you only need to use your knowledge of differentiation, and the concept of the anti-derivative, as described above.</em></p>
+<p>1. <span class="math notranslate nohighlight">\(\sec^2(x)\)</span></p>
+<p>2. <span class="math notranslate nohighlight">\(x^3\)</span></p>
+<p>3. <span class="math notranslate nohighlight">\(\sin(3x)\)</span></p>
+<p>4. <span class="math notranslate nohighlight">\(e^{a x}\)</span></p>
+<p>5. <span class="math notranslate nohighlight">\(x \sqrt{x^2-1}\)</span></p>
+<p>6. <span class="math notranslate nohighlight">\(\frac{x}{x^2+1}\)</span></p>
+<p>7. <span class="math notranslate nohighlight">\(\displaystyle \frac{\sin(x)}{\cos(x)}\)</span></p>
+<p>8. <span class="math notranslate nohighlight">\(\cosh(x)\sinh^2(x)\)</span></p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. We should recognise that <span class="math notranslate nohighlight">\(\sec^2(x)\)</span> is obtained by differentiating <span class="math notranslate nohighlight">\(\tan(x)\)</span> and so the anti-derivative is <span class="math notranslate nohighlight">\(F(x)=\tan(x)+c\)</span>.</p>
+<p>2. If we differentiate <span class="math notranslate nohighlight">\(x^4\)</span> we obtain <span class="math notranslate nohighlight">\(4x^3\)</span> which is nearly what we want, but not quite.  Trying <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \left(\frac{1}{4} x^4\right)\)</span>
+instead gets the result <span class="math notranslate nohighlight">\(x^3\)</span> and so the anti-derivative of <span class="math notranslate nohighlight">\(x^3\)</span> is <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{4} x^4+c\)</span>.</p>
+<p>3. By the chain rule, <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{d}x} \cos(3x)=-3\sin(3x)\)</span>, and so the anti-derivative is <span class="math notranslate nohighlight">\(\displaystyle -\frac{1}{3}\cos(3x)+c\)</span>.</p>
+<p>4. Since <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}e^{a x}=a e^{a x}\)</span> and so the anti-derivative is <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{a} e^{a x}+c\)</span>.</p>
+<p>5. Now we rely on our expertise with the chain rule.</p>
+<p>The chain rule tells us that <span class="math notranslate nohighlight">\(f(g(x))^{\prime}=g^{\prime}(x)f^{\prime}(g)\)</span> and so the anti-derivative of <span class="math notranslate nohighlight">\(g^{\prime}(x)f^{\prime}(g)\)</span> is <span class="math notranslate nohighlight">\(f(g(x))+c\)</span>. In particular,
+if we differentiate <span class="math notranslate nohighlight">\(g^{3/2}\)</span> where <span class="math notranslate nohighlight">\(g=x^2-1\)</span>, we obtain <span class="math notranslate nohighlight">\((2 x) \frac{3}{2} g^{1/2}\)</span> and so the anti-derivative of <span class="math notranslate nohighlight">\(x g^{1/2}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{3} g^{3/2}+c =\frac{1}{3} (x^2-1)^{3/2}+c\]</div>
+<p><em>CHECK YOUR ANSWER: you need to be awesome at differentiation to be good at integration!</em></p>
+<p>6. By the same rationale as question 5, we try <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \ln(x^2+1)=\frac{2x}{x^2+1}\)</span> and so the anti-derivative
+is <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2} \ln(x^2+1)+c\)</span>.</p>
+<p>7. The anti-derivative is <span class="math notranslate nohighlight">\(\displaystyle -\ln(\cos(x))+c\)</span>. In general, the anti-derivative of an expression of the form <span class="math notranslate nohighlight">\(\displaystyle \frac{f^{\prime}(x)}{f(x)}\)</span> is <span class="math notranslate nohighlight">\(\ln(f(x))+c\)</span>.</p>
+<p>8. The anti-derivative is <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{3} \sinh^3(x)+c\)</span>.</p>
+</div>
+</div>
+<div class="section" id="area-under-the-curve">
+<h3><span class="section-number">10.1.2. </span>Area under the curve<a class="headerlink" href="#area-under-the-curve" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p><a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 10.1</span></a> shows how the area under a curve <span class="math notranslate nohighlight">\(f(x)\)</span> between <span class="math notranslate nohighlight">\(x=a,b\)</span> may be estimated by drawing rectangles of equal width <span class="math notranslate nohighlight">\(\Delta x\)</span>.
+Formally, we may write that:</p>
+<div class="math notranslate nohighlight" id="equation-areaundercurve">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-areaundercurve" title="Permalink to this equation">¶</a></span>\[\textrm{Area} = \sum_{j=0}^{n-1}f(x_n)\Delta x \textrm{,  where  }x_0=a, x_n=b,  \Delta x = \frac{b-a}{n}\]</div>
+<p>The expression simply states that we add up the rectangles with width <span class="math notranslate nohighlight">\(\Delta x\)</span> and height <span class="math notranslate nohighlight">\(f(x_n)\)</span>.
+As <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> the area approximation becomes more accurate.</p>
+<p>We call:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{\Delta x \rightarrow 0}\sum_{j=0}^{n-1}f(x_j)\Delta x\]</div>
+<p>the integral of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> and we denote it by:</p>
+<div class="math notranslate nohighlight" id="equation-integral">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-integral" title="Permalink to this equation">¶</a></span>\[ \displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
+</div>
+<div class="figure align-default" id="areaunderthecurve">
+<img alt="../_images/areaUnderTheCurve.png" src="../_images/areaUnderTheCurve.png" />
+<p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Rectangles drawn under the curve <span class="math notranslate nohighlight">\(f(x)\)</span> can be used to approximate the area. The thinner the rectangles, the better the approximation. Integration is the
+equivalent to this approach as the width of the rectangles, <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>.</span><a class="headerlink" href="#areaunderthecurve" title="Permalink to this image">¶</a></p>
+</div>
+<p>It can be proved that integration and anti-differentiation are essentially the same thing. This result is known as the <strong>Fundamental Theorem of Calculus</strong>. In fact, the theorem comes in two parts. The first part, given in the box below, allows the definite integral to be determined by evaluating an anti-derivative at integration limits. The second part (not given here) essentially proves that every continuous function has an anti-derivative, which can be found by integration. For some functions, such as <span class="math notranslate nohighlight">\(e^{-x^2}\)</span>, we might not be able to express the integral in terms of elementary functions, but we know it exists
+(and we can use successive approximation techniques either analytically or numerically to estimate them).</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p><strong>The First Fundamental Theorem of Calculus (FTC1)</strong></p>
+<p>If <span class="math notranslate nohighlight">\(F\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f\)</span>, then <span class="math notranslate nohighlight">\(\displaystyle \int_a^b f(x) \textrm{d}x = F(b) - F(a)\)</span> gives the area between the curve <span class="math notranslate nohighlight">\(f(x)\)</span> and the x-axis between <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(x=b\)</span>.</p>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><strong>Symbol</strong></p></th>
+<th class="text-align:left head"><p><strong>Meaning</strong></p></th>
+<th class="text-align:left head"><p><strong>Notes</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\textrm{d}x\)</span></p></td>
+<td class="text-align:left"><p>“with respect to x” The integration is along the x-axis. We say that x is the “integration variable”</p></td>
+<td class="text-align:left"><p>Do not forget to write this, or the integral has no meaning.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\displaystyle \int\)</span></p></td>
+<td class="text-align:left"><p>Integration operator</p></td>
+<td class="text-align:left"><p>An operator acs on a function in some way. For example, <span class="math notranslate nohighlight">\(\frac{\textrm{d}}{\textrm{d}x}\)</span> is also an operator.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(f(x)\)</span></p></td>
+<td class="text-align:left"><p>Integrand</p></td>
+<td class="text-align:left"><p>The function to be integrated.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(a, b\)</span></p></td>
+<td class="text-align:left"><p>The limits of integration.</p></td>
+<td class="text-align:left"><p>If the integral has limits then it is called a definite integral and has a single value for the solution. If the integration does not have limits then it is called an indefinite integral, and you can only compute the result to within an arbitrary constant.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signed-and-unsigned-areas">
+<h3><span class="section-number">10.1.3. </span>Signed and unsigned areas<a class="headerlink" href="#signed-and-unsigned-areas" title="Permalink to this headline">¶</a></h3>
+<p>Note that the heights of the rectangles in <a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 10.1</span></a> are given by <span class="math notranslate nohighlight">\(f(x)\)</span>, and so if <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> then the result will be negative. In many examples, positive and negative areas cancel. For instance,</p>
+<div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-0">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-differentiation-and-integration-integration-0" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}\sin(x)\mathrm{d}x = 0 \textrm{,  since } \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x = 2 \textrm{ and } \displaystyle \int_{\pi}^{2\pi}\sin(x)\mathrm{d}x = -2\]</div>
+<p>If you want the total (unsigned) area between the curve and the axis, then you can work with the modulus of the function,</p>
+<div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-1">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-differentiation-and-integration-integration-1" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_a^b |f(x)|\mathrm{d}x\]</div>
+<p>The easiest way to do this is to split up the region of integration into areas where <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> and areas where <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span>. For example,</p>
+<div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-2">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-differentiation-and-integration-integration-2" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}|\sin(x)|\mathrm{d}x = \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x+ \displaystyle \int_{\pi}^{2\pi}-\sin(x)\mathrm{d}x = 2+2 =4\]</div>
+<p>The results are illustrated in <a class="reference internal" href="#sinxplot"><span class="std std-numref">Fig. 10.2</span></a>:</p>
+<div class="figure align-default" id="sinxplot">
+<img alt="../_images/my_humps.png" src="../_images/my_humps.png" />
+<p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">The plot on the left shows <span class="math notranslate nohighlight">\(\sin(x)\)</span> for <span class="math notranslate nohighlight">\(x\in[0,2\pi]\)</span>. The black and red signed areas (2,-2) cancel when the integral is performed.
+The plot on the right shows <span class="math notranslate nohighlight">\(|\sin(x)|\)</span> for <span class="math notranslate nohighlight">\(x\in[0,2\pi]\)</span>. The black signed are both positive and so the integral is 2+2=4.</span><a class="headerlink" href="#sinxplot" title="Permalink to this image">¶</a></p>
+</div>
+<p>Similarly, if we perform the integration along the x-axis in the negative direction, then the quantities <span class="math notranslate nohighlight">\(\Delta x\)</span> are negative, and so we end up with a negative
+signed area when <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span>.</p>
+<p><strong>FTC1</strong> also confirms that <span class="math notranslate nohighlight">\(\displaystyle \int_b^a f(x) \textrm{d}x = -\displaystyle \int_a^b f(x) \textrm{d}x\)</span>.</p>
+</div>
+<div class="section" id="area-between-two-curves">
+<h3><span class="section-number">10.1.4. </span>Area between two curves<a class="headerlink" href="#area-between-two-curves" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="betweentwocurves">
+<img alt="../_images/between_curves.png" src="../_images/between_curves.png" />
+<p class="caption"><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Where <span class="math notranslate nohighlight">\(f(x) &gt;= g(x)\)</span> the integral <span class="math notranslate nohighlight">\(\displaystyle \int (f(x)-g(x)) \textrm{d}x\)</span> gives the area between the two curves.</span><a class="headerlink" href="#betweentwocurves" title="Permalink to this image">¶</a></p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>1.
+a. Find the tangent to the curve <span class="math notranslate nohighlight">\(y=25-x^2\)</span> at the point where <span class="math notranslate nohighlight">\(x=2\)</span>.</p>
+<p>b. Calculate the value of <span class="math notranslate nohighlight">\(x\)</span> where the tangent meets the x-axis.</p>
+<p>c. Find the area of the region bounded by the tangent, the curve and the x-axis.</p>
+<p>2. Calculate the area of the region bounded by the curves <span class="math notranslate nohighlight">\(x = -y^2 + 10\)</span> and <span class="math notranslate nohighlight">\(x = (y-2)^2\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<div class="figure align-default" id="q1">
+<img alt="../_images/Q1.png" src="../_images/Q1.png" />
+</div>
+<p>The tangent is <span class="math notranslate nohighlight">\(y=29-4x\)</span>, which intersect that x-axis at <span class="math notranslate nohighlight">\(x=29/4\)</span> see diagram <code class="xref std std-numref docutils literal notranslate"><span class="pre">Q2</span></code>:</p>
+<div class="figure align-default" id="q2">
+<img alt="../_images/Q2.png" src="../_images/Q2.png" />
+</div>
+<p>The required area is given by PQR:</p>
+<div class="math notranslate nohighlight">
+\[\int_2^5(25-x^2)\mathrm{d}x = \frac{1}{2}\left(\frac{21}{4}21 - \left[25x-\frac{x^3}{3}\right]_2^5\right) = \frac{153}{8}\]</div>
+<p>The curves intersect at (1,3) and (9,-1) and it is easier to calculate the enclosed area by integrating parallel to the y-axis.</p>
+<div class="math notranslate nohighlight">
+\[R = \int_{y=1}^3\left[(10-y^2)-(y-2)^2\right]\mathrm{d}y = \int_1^3(-2y^2+4y+6)\mathrm{d}y =\frac{64}{3}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="integration-by-substitution">
+<h2><span class="section-number">10.2. </span>Integration by substitution<a class="headerlink" href="#integration-by-substitution" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>For an indefinite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int f(x) \textrm{d}x = \int f(x) \frac{\mathrm{d}x}{\mathrm{d}u}\mathrm{d}u+c\]</div>
+<p>For a definite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f\mathrm{d}x= \int_{u(a)}^{u(b)}f\frac{\mathrm{d}x}{\mathrm{d}u}\mathrm{d}u\]</div>
+<p><em>Don’t forget to change the limits for definite integration!</em></p>
+<p>These results can be proved using the chain rule and fundamental theorem of calculus.</p>
+</div>
+<p>The idea of using a substitution is that we convert a difficult integral w.r.t <span class="math notranslate nohighlight">\(x\)</span> to an easier one w.r.t <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\displaystyle f \frac{\mathrm{d}x}{\mathrm{d}u}=f\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\)</span> and so the substitution <span class="math notranslate nohighlight">\(u\)</span> can be chosen to eliminate a factor from <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Examples</p>
+<p>1. To calculate <span class="math notranslate nohighlight">\( \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x\)</span> we can try the substitution <span class="math notranslate nohighlight">\(u=x^2-1\)</span>. This substitution will eliminate the factor <span class="math notranslate nohighlight">\(x\)</span> and
+will simplify the expression <span class="math notranslate nohighlight">\(\sqrt{x^2-1}\)</span>. We find that:</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle  \frac{\mathrm{d}u}{\mathrm{d}x}=2x\)</span> and so <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}x}{\mathrm{d}u}=\frac{1}{2x}\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\int x\sqrt{x^2-1}\mathrm{d}x=\displaystyle \int\frac{1}{2}u^{1/2}\mathrm{d}u=\frac{1}{3}u^{3/2}+c=\frac{1}{3}(x^2-1)^{3/2}+c\]</div>
+<p>This is the same result we can find by inspection.</p>
+<p>2. To calculate the definite integral <span class="math notranslate nohighlight">\( I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>, we will use the substitution <span class="math notranslate nohighlight">\(u=2x+1\)</span>. (This problem could also be
+solved by inspection).</p>
+<p>When <span class="math notranslate nohighlight">\(x=1\)</span>, <span class="math notranslate nohighlight">\(u=3\)</span> and when <span class="math notranslate nohighlight">\(x=3\)</span>, <span class="math notranslate nohighlight">\(u=7\)</span>, hence, the result is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I&amp;=\int_{u=3}^{u=7}\frac{1}{u}\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}u \\
+&amp;=\frac{1}{2} \int_3^7\frac{1}{u}\mathrm{d}u=\frac{1}{2}\biggr[\ln(u)\biggr]_3^7=\frac{1}{2}\ln\biggr(\frac{7}{3}\biggr)\end{split}\]</div>
+<p>3. To calculate an expression of the form <span class="math notranslate nohighlight">\( I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x\)</span> we can make the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span>, which gives:</p>
+<div class="math notranslate nohighlight">
+\[I=\int\left(a\frac{u-d}{c}+b\right)u^n\frac{1}{c}\mathrm{d}u=\frac{1}{c^2}e \int(au+bc-ad)u^n\mathrm{d}u\]</div>
+<p>By polynomial expansion:</p>
+<div class="math notranslate nohighlight">
+\[I=\frac{1}{c^2}\int(a u^{n+1}+(bc-ad)u^n)\mathrm{d}u=\frac{1}{c^2}\left[\frac{a u^{n+2}}{n+2}+\frac{bc-ad}{n+1}u^{n+1}\right]\]</div>
+<p>Rewriting in terms of <span class="math notranslate nohighlight">\(x\)</span> finally gives:</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{(cx+d)^{n+1}}{c^2}\left[\frac{a(cx+d)}{n+2}+\frac{bc-ad}{n+1}\right]\]</div>
+</div>
+</div>
+<div class="section" id="integral-of-displaystyle-frac-1-x">
+<h2><span class="section-number">10.3. </span>Integral of <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span><a class="headerlink" href="#integral-of-displaystyle-frac-1-x" title="Permalink to this headline">¶</a></h2>
+<p>The function <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span> falls into a special category, because it cannot be solved using the polyniomal antiderivative
+<span class="math notranslate nohighlight">\(\int x^n = \frac{x^{n+1}}{n+1}\)</span>, consider the plot <a class="reference internal" href="#oneoverx"><span class="std std-numref">Fig. 10.4</span></a>:</p>
+<div class="figure align-default" id="oneoverx">
+<img alt="../_images/oneOverx.png" src="../_images/oneOverx.png" />
+<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
+</div>
+<p>Hence we see that</p>
+<div class="math notranslate nohighlight">
+\[\int_{-b}^{-a}\frac{1}{x}\mathrm{d}x = -\int_a^b\frac{1}{x}\mathrm{d}x = \int_b^a\frac{1}{x}\mathrm{d}x = \int_{-b}^{-a}\frac{1}{|x|\mathrm{d}x}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(\displaystyle \int\frac{1}{x}=\ln(|x|)+\mathrm{const},\, \forall x\)</span>, provided that the range of integration does not cross the vertical axis.</p>
+<p>This is because formally <span class="math notranslate nohighlight">\(\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x\)</span> is undefined, although we can define what is called the <strong>Cauchy principal value</strong> of this integral as:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{\epsilon\rightarrow 0^{+}}\left( \int_{-a}^{-\epsilon}\frac{1}{x}\mathrm{d}x+ \int_{\epsilon}^a\frac{1}{x}\mathrm{d}x\right)=0\]</div>
+</div>
+<div class="section" id="integration-by-parts">
+<h2><span class="section-number">10.4. </span>Integration by parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>For an indefinite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int u\frac{\mathrm{d}v}{\mathrm{d}x}\mathrm{d}x = u\,v- \int v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c\]</div>
+<p>For a definite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b u\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x\]</div>
+<p>This result can be proved using the product rule and the fundamental theorem of calculus.</p>
+<div class="math notranslate nohighlight">
+\[\int \mathrm{d}(u\,v)=\int u\,\mathrm{d}\,v+\int v\,\mathrm{d}u \Rightarrow u\,v= \int u\,\mathrm{d}v= \int v\,\mathrm{d}u\]</div>
+</div>
+<p>For a handy rule of thumb for choosing which term to differentiate when applying this method, we can use <strong>LIATE</strong> method:</p>
+<ul class="simple">
+<li><p><strong>L</strong>ogarithmic Term</p></li>
+<li><p><strong>I</strong>nverse Term</p></li>
+<li><p><strong>A</strong>lgebraic Term</p></li>
+<li><p><strong>T</strong>rignometric Term</p></li>
+<li><p><strong>E</strong>xponential Term</p></li>
+</ul>
+<p>This list tells the order of preference for the term to be differentiated - <span class="math notranslate nohighlight">\(g(x) \rightarrow g'(x)\)</span>. The exponential function is at the bottom of the sit because it is
+usually the easiest to integrate, the logarithmic is usually the hardest.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Examples</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[I_a = \int x \ln(x)\,\mathrm{d}x \]</div>
+<p>Since <strong>L</strong> falls before <strong>A</strong> in <strong>LIATE</strong>, we pick:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = \ln(x),\quad &amp; v' = x\\ 
+u' = \frac{1}{x}, \quad &amp; v = \frac{1}{2}x^2\end{split}\]</div>
+<p>and so integrating by parts we find:</p>
+<div class="math notranslate nohighlight">
+\[I_a = \frac{1}{2} \,x^2 \,\ln(x) - \int \frac{1}{2} \,x \,\mathrm{d}x  = \frac{1}{2} \, x^2 \left(\ln(x) - \frac{1}{2} \right) + C\]</div>
+<p>2.  Sometimes it is not always obvious that there <em>are</em> two functions in the integration expression, however this can be remedied using a simple trick:</p>
+<div class="math notranslate nohighlight">
+\[I_b = \int \ln(x)\,\mathrm{d}x \]</div>
+<p>This should be seen as:</p>
+<div class="math notranslate nohighlight">
+\[I_b = \int x^0\,\ln(x)\,\mathrm{d}x \]</div>
+<p>Since <strong>L</strong> falls before <strong>A</strong> in <strong>LIATE</strong>, we pick:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = \ln(x),\quad &amp; v' = x^0 \\ 
+u' = \frac{1}{x},\quad &amp;v = x^1\end{split}\]</div>
+<p>and so integrating by parts we find:</p>
+<div class="math notranslate nohighlight">
+\[I_b = x \ln(x) - \int \frac{x}{x}\,\mathrm{d}x  = x\ln(x) - \int x^0\,\mathrm{d}x  = x\ln(x) - x + C \]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Problems</p>
+<p>Integrate the following problems by parts:</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\int x e^{-x}\mathrm{d}x\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\int x^2 e^{-x}\mathrm{d}x\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[I= \int \arcsin(x)\mathrm{d}x\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. To calculate <span class="math notranslate nohighlight">\(\displaystyle \int x e^{-x}\mathrm{d}x\)</span>,</p>
+<p>Let <span class="math notranslate nohighlight">\(u=x,\ v'=e^{-x}\)</span> then:</p>
+<p><span class="math notranslate nohighlight">\(u'=1\)</span>, which is simpler and <span class="math notranslate nohighlight">\(v=-e^{-x}\)</span> which is no more complicated, so:</p>
+<div class="math notranslate nohighlight">
+\[\int x e^{-x}\mathrm{d}x = -x e^{-x}+ \int e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\]</div>
+<p>2. To calculate <span class="math notranslate nohighlight">\(\displaystyle \int x^2 e^{-x}\mathrm{d}x\)</span>,</p>
+<p>Let <span class="math notranslate nohighlight">\(u=x^2,\, v'=e^{-x}\)</span>, then:</p>
+<p><span class="math notranslate nohighlight">\(u'=2x\)</span>, which is simpler and <span class="math notranslate nohighlight">\(v=-e^{-x}\)</span>, which is no more complicated, so:</p>
+<div class="math notranslate nohighlight">
+\[`int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x\]</div>
+<p>From the previous example, we know the result of this integrand <span class="math notranslate nohighlight">\(\displaystyle \int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[ \int x^2 e^{-x}\mathrm{d}x=-e^{-x}(x^2+2x+2)\]</div>
+<p>3. To calculate <span class="math notranslate nohighlight">\( I =\displaystyle \int \arcsin(x)\mathrm{d}x\)</span> we play a trick:</p>
+<p>Let <span class="math notranslate nohighlight">\(u=\arcsin(x)\)</span>, <span class="math notranslate nohighlight">\(v'=1\)</span>, then:</p>
+<p><span class="math notranslate nohighlight">\(x=\sin(u)\)</span>, so <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}x}{\mathrm{d}u}=\cos(u)=\pm\sqrt{1-x^2}\)</span></p>
+<p>We should be cautious here because of the <span class="math notranslate nohighlight">\(\pm\)</span> - the positive square root is chosen because <span class="math notranslate nohighlight">\(\sin(x)\)</span> is increasing throughout its domain.</p>
+<p>Also we have <span class="math notranslate nohighlight">\(v=x\)</span>, so this gives</p>
+<div class="math notranslate nohighlight">
+\[I=x\arcsin(x)- \int\frac{x}{\sqrt{1-x^2}}\mathrm{d}x\]</div>
+<p>The remaining integral can be calculated by inspection, or with the substitution <span class="math notranslate nohighlight">\(g=1-x^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I=x \arcsin(x)+\sqrt{1-x^2}+C\]</div>
+</div>
+</div>
+<div class="section" id="integration-by-partial-fractions">
+<h2><span class="section-number">10.5. </span>Integration by partial fractions<a class="headerlink" href="#integration-by-partial-fractions" title="Permalink to this headline">¶</a></h2>
+<p>Composing fractions means putting everything together, such as:</p>
+<div class="math notranslate nohighlight" id="equation-compfrac">
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-compfrac" title="Permalink to this equation">¶</a></span>\[\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}\]</div>
+<p>Decomposition is the reverse process, <em>i.e.</em> taking the fraction apart.  This very useful for integration, since the resulting partial fractions are much
+easier to integrate to logarithmic type terms.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Find the value of the integral</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{5x+7}{x^2+3x+2}\,\mathrm{d}x\]</div>
+<p>Since this is an algebraic fraction we can try to express as partial fractions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{5x+7}{x^2+3x+2} &amp;= \frac{5x+7}{(x+1)(x+2)}\\
+&amp;= \frac{A}{x+1}+\frac{B}{x+2} = \frac{A(x+2) + B(x+1)}{(x+1)(x+2)}\\
+&amp;= \frac{(A+B)x + 2A+B}{(x+1)(x+2)} \Rightarrow 5x + 7 = (A+B)x + 2A+B\end{split}\]</div>
+<p>Which leads to simultaneous equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A + B &amp;=5 \\
+2A + B &amp;= 7\end{split}\]</div>
+<p>which is solved by <span class="math notranslate nohighlight">\(A = 2,\, B = 3\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{5x+7}{x^2+3x+2} &amp;= \frac{2}{x+1}+\frac{3}{x+2} \\
+\, \\
+\int \frac{5x+7}{x^2+3x+2}\,\mathrm{d}x &amp;= 2\ln|x+1| + 3\ln|x+2| + C\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="reduction-formula">
+<h2><span class="section-number">10.6. </span>Reduction formula<a class="headerlink" href="#reduction-formula" title="Permalink to this headline">¶</a></h2>
+<p>Reduction formulae set up a recurrence relation between different integrands:</p>
+<div class="math notranslate nohighlight">
+\[I_{n} = f(n,x) + I_{n-a} \]</div>
+<p>where <span class="math notranslate nohighlight">\(a,\,n\)</span> are integers typically and <span class="math notranslate nohighlight">\(a &lt; n\)</span>.  Usually we solve these problems by integration by parts, which by spotting the required pattern,
+makes finding the solution more straightforward.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Find and evaluate the reduction formula for:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^\infty x^n\,e^{-x}\,\mathrm{d} x\]</div>
+<p>We can integrate by parts (using <strong>LIATE</strong> if necessary):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x^n &amp;&amp; v'(x) = e^{-x} \\
+u'(x) = nx^{n-1} &amp;&amp; v(x)  =  -e^{-x} 
+\end{array}\end{split}\]</div>
+<p>Which means that we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n  &amp;= \bigg[-x^n\,e^{-x}\bigg]_0^\infty + n\int_0^\infty x^{n-1}\, e^{-x}\,\mathrm{d} x \\ 
+I_n  &amp;= 0 + n I_{n-1}\end{split}\]</div>
+<p>If we were to repeat the integration by parts repeatedly we would find:</p>
+<div class="math notranslate nohighlight">
+\[I_n = nI_{n-1} = n(n-1)\,I_{n-2} = \dots = n(n-1)(n-2)\dots (2)(1)\,I_0 = n!\, I_0\]</div>
+<p><span class="math notranslate nohighlight">\(I_0\)</span> is a good place to stop, since we can evaluate it:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \int_0^\infty e^{-x}\,\mathrm{d} x = \bigg[-e^{-x}\bigg]_0^\infty = 0 - (-1) = 1\]</div>
+<p>Hence <span class="math notranslate nohighlight">\(I_n = n!\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>1.
+Find a reccurence relation for the integral:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int x^n e^x\mathrm{d}x\]</div>
+<p>and find a value for <span class="math notranslate nohighlight">\(I_4\)</span>.</p>
+<p>2.
+Find a reccurence relation for the integral:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^{\pi/2}\cos^{n}(x)\mathrm{d}x \]</div>
+<p>and find a value for <span class="math notranslate nohighlight">\(I_{10}\)</span>.</p>
+<p>3.
+Find the reduction formula for:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^1 (1  - x^3)^n\,\mathrm{d} x\]</div>
+<p>and evaluate <span class="math notranslate nohighlight">\(I_4\)</span>.</p>
+<p>4.
+Find the reduction formula for:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^{\pi/2}  \sin^n(x)\,\mathrm{d} x \]</div>
+<p>and evaluate <span class="math notranslate nohighlight">\(I_2, \, I_3\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int x^n e^x\mathrm{d}x \]</div>
+<p>Integrating by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x^n &amp;&amp; v'(x) = e^x \\
+u'(x) = nx^{n-1} &amp;&amp; v(x) = e^x
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int x^n e^x\mathrm{d}x = x^n e^x - n \int x^{n-1}e^x\mathrm{d}x\]</div>
+<p>Hence the reccurence relation is</p>
+<div class="math notranslate nohighlight">
+\[I_n = x^n e^x - n I_{n-1}\]</div>
+<p>Which means that:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \displaystyle \int e^x\mathrm{d}x = e^x + C\]</div>
+<p>and so <span class="math notranslate nohighlight">\(I_4\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_4 &amp;= e^x(x^4- 4x^3+4(3)x^2 - 4(3)(2)x +4(3)(2)(1))+C\\
+&amp;= e^x(x^4- 4x^3+12x^2 - 24x +24)+C\end{split}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^{\pi/2}\cos^{n}(x)\mathrm{d}x = \int_0^{\pi/2}\cos(x)\cos^{n-1}(x)\mathrm{d}x\]</div>
+<p>Integrating by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x)= \cos^{n-1}(x) &amp;&amp; v'(x) = \cos(x) \\
+u'(x) = -(n-1)\cos^{n-2}(x)\sin(x) &amp;&amp; v(x) = \sin(x)
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n &amp;= \left[\sin(x)\cos^{n-1}(x)\right]_0^{\pi/2} + (n-1) \int_0^{\pi/2}\sin(x)\cos^{n-2}(x)\sin(x)\mathrm{d}x \\
+&amp;=(0-0)+(n-1)\displaystyle \int\sin^2\cos^{n-2}(x)\mathrm{d}x \\
+&amp;=(n-1)\displaystyle \int(1-\cos^2(x)\cos^{n-2}(x)\mathrm{d}x \\
+&amp;=(n-1)(I_{n-2}-I_n)\end{split}\]</div>
+<p>Rearranging gives:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \frac{n-1}{n}I_{n-2}\]</div>
+<p>and so for <span class="math notranslate nohighlight">\(I_{10}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I_{10} = \frac{9}{10}I_8 = \frac{9}{10}\frac{7}{8}I_6 = \dots = \frac{9\times7\times5\times3\times1}{10\times8\times6\times4\times2}I_0\]</div>
+<p>and finally:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \int_0^{\pi/2}\mathrm{d}x = \frac{\pi}{2}\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight">
+\[I_{10} = \frac{63\pi}{256}\]</div>
+<p>3.
+There may be a temptation to try to expand out the bracket or integrate by parts straight away, however the easier
+method is to break up the integrand into <span class="math notranslate nohighlight">\((1-x^3)^{n-1}\,(1-x^3)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;= \int_0^1 (1-x^3)^{n-1}\,\mathrm{d} x -\int_0^1 x^3\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&amp;= I_{n-1} - \int_0^1 x\,x^2\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&amp;= I_{n-1} - \int_0^1 x\,\left(-\frac{1}{3}\right)(-3x^2)\,(1-x^3)^{n-1}\,\mathrm{d} x \end{split}\]</div>
+<p>and then integrate the second integrand by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x &amp;&amp; v'(x) = -\frac{1}{3} (-3x^2)(1-x^3)^{n-1}\\
+u'(x) = 1 &amp;&amp; v(x) = -\frac{1}{3n} (1-x^3)^{n}
+\end{array}\end{split}\]</div>
+<p>where we integrated <span class="math notranslate nohighlight">\(f'(x)\)</span> using the reverse chain rule.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Rightarrow I_n &amp;= I_{n-1} - \bigg[ -\frac{x}{3n} (1-x^3)^{n}\bigg]_0^1 - \frac{1}{3n}\int_0^1  (1-x^3)^{n}\,\mathrm{d} x \\
+I_n &amp;= I_{n-1} + 0 - \frac{1}{3n}I_{n} \Longrightarrow I_n = \frac{3n}{3n+1}I_{n-1} \\
+I_4 &amp;= \bigg(\frac{12}{13}\bigg)I_3 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)I_2 \\
+&amp;= \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)I_1 = 
+\bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)\bigg(\frac{3}{4}\bigg)I_0 \\
+I_0 &amp;= \int_0^1\mathrm{d} x = 1 \\
+\Rightarrow I_4 &amp;= \frac{243}{455} \end{split}\]</div>
+<p>4.
+Firstly break up the integrand into <span class="math notranslate nohighlight">\(\sin(x) \sin^{n-1}(x) \,\mathrm{d} x\)</span> and then integrate by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = \sin^{n-1}(x) &amp;&amp; v'(x) = \sin(x) \\
+u'(x) = (n-1)\cos(x)\sin^{n-2}(x) &amp;&amp; v(x) = -\cos(x)
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n &amp;= \bigg[-\cos(x)\sin^{n-1}(x)\bigg]_0^{\pi/2}  + (n-1)\int_0^{\pi/2}  \cos^2(x) \sin^{n-2}(x)\,\mathrm{d} x \\
+&amp;= 0 + (n-1)\int_0^{\pi/2} (1 - \sin^2(x))\sin^{n-2}(x)\,\mathrm{d} x \\
+&amp;= (n-1)\int_0^{\pi/2} \bigg(\sin^{n-2}(x) - \sin^{n}(x)\bigg)\,\mathrm{d} x  \\ 
+I_n &amp;= (n-1)I_{n-2} - (n-1)I_{n} \\  
+nI_n &amp;= (n-1)I_{n-2} \\
+\Rightarrow I_n &amp;= \frac{n-1}{n}I_{n-2} \\
+I_2 &amp;= \frac{1}{2}I_0 = \frac{1}{2}\bigg[x\bigg]_0^{\pi/2} = \frac{\pi}{4}\\
+I_3 &amp;= \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/2} = \frac{2}{3}\end{split}\]</div>
+<p>notice we evaluate <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_1\)</span> depending on whether <span class="math notranslate nohighlight">\(n\)</span> is odd or even.</p>
+</div>
+</div>
+<div class="section" id="mean-value-of-a-function">
+<h2><span class="section-number">10.7. </span>Mean value of a function<a class="headerlink" href="#mean-value-of-a-function" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="mean">
+<img alt="../_images/mean.png" src="../_images/mean.png" />
+<p class="caption"><span class="caption-number">Fig. 10.5 </span><span class="caption-text">The average of a discrete function is given by adding up the values and dividing by the number of points. We extend this concept to continuous functions in
+the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span>.</span><a class="headerlink" href="#mean" title="Permalink to this image">¶</a></p>
+</div>
+<p>As shown in <a class="reference internal" href="#mean"><span class="std std-numref">Fig. 10.5</span></a>, for any function <span class="math notranslate nohighlight">\(f(x)\)</span> we can obtain the average output <span class="math notranslate nohighlight">\(\bar{f(x)}\)</span> by adding up a series of outputs and dividing by the number of
+datapoints used. In this case, the spacing between datapoints is <span class="math notranslate nohighlight">\(\Delta x\)</span>. By taking the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we can obtain:</p>
+<div class="math notranslate nohighlight" id="equation-functionmean">
+<span class="eqno">(10.7)<a class="headerlink" href="#equation-functionmean" title="Permalink to this equation">¶</a></span>\[\bar{f} = \frac{1}{n}\displaystyle \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j) \rightarrow \frac{1}{b-a}\displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate the mean value of <span class="math notranslate nohighlight">\(\cos ^3(\theta)\)</span> on the interval <span class="math notranslate nohighlight">\(\displaystyle \left[-\frac{\pi}{3}, \frac{\pi}{3}\right]\)</span> by integration.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{\frac{\pi}{3} - \left(-\frac{\pi}{3}\right)} \int_{-\pi/3}^{\pi/3}\cos^{3}(\theta)\mathrm{d}\theta 
+&amp;= \frac{3}{2\pi}\displaystyle \int_{-\pi/3}^{\pi/3}\cos(\theta)(1-\sin^2(\theta))\mathrm{d}\theta\\
+&amp;=\frac{3}{2\pi}\left[\sin(\theta)-\frac{1}{3}\sin^3(\theta)\right]_{-\pi/3}^{\pi/3} = \frac{9\sqrt{3}}{8\pi}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="arc-length">
+<h2><span class="section-number">10.8. </span>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve:</p>
+<div class="figure align-default" id="functionarea">
+<img alt="../_images/FunctionArea.png" src="../_images/FunctionArea.png" />
+<p class="caption"><span class="caption-number">Fig. 10.6 </span><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\displaystyle \int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">¶</a></p>
+</div>
+<p>Another question that we could ask however is what is the length of the path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the range <span class="math notranslate nohighlight">\([a,\,b]\)</span>:</p>
+<div class="figure align-default" id="functionpathlength">
+<img alt="../_images/FunctionPathLength.png" src="../_images/FunctionPathLength.png" />
+<p class="caption"><span class="caption-number">Fig. 10.7 </span><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">¶</a></p>
+</div>
+<p>To find an expression for this length <span class="math notranslate nohighlight">\(S\)</span>, we can break up the path into infinitesimal segments and then integrate these over the whole function.  We can see this
+process breaking down the change in arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> by Pythagoras graphically as:</p>
+<div class="math notranslate nohighlight">
+\[(\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
+<div class="figure align-default" id="arclength">
+<img alt="../_images/ArcLength2.png" src="../_images/ArcLength2.png" />
+<p class="caption"><span class="caption-number">Fig. 10.8 </span><span class="caption-text"><strong>Left Pane:</strong> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> components <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>.  The distance <span class="math notranslate nohighlight">\(\Delta s\)</span> moved along a curve, corresponding
+to small changes <span class="math notranslate nohighlight">\(\Delta x \Delta y\)</span> can be calculated by Pythagoras’ formula.</span><a class="headerlink" href="#arclength" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p><strong>Right Pane:</strong> Effect of taking the limit of smaller <span class="math notranslate nohighlight">\(\Delta x\)</span> in finding the path length.  By decreasing the difference <span class="math notranslate nohighlight">\(\Delta x\)</span> between the joined up points, we
+obtain a better approximation.</p>
+</div>
+</div>
+<p>Taking the limit of <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}s = \mathrm{d}x\, \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\]</div>
+<p>and therefore to find the path length:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_{x=a}^{x=b} \mathrm{d}s = \int_a^b \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked examples</p>
+<p>1.  lets look at <span class="math notranslate nohighlight">\(y = \cosh(x)\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\,1]\)</span>, so we find <span class="math notranslate nohighlight">\(\mathrm{d}y/\mathrm{d}x = \sinh(x)\)</span>, and therefore:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots\]</div>
+<p>We might also have a function which is parameterised <span class="math notranslate nohighlight">\(y = y(t),\, x=x(t)\)</span>, it is also possible to find an expression for the path length, taking the limit of
+<span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta s &amp;=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
+\Rightarrow \mathrm{d}s &amp;=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\end{split}\]</div>
+<p>2.
+Consider a circle, parameterised by <span class="math notranslate nohighlight">\(x = R\cos(t),\, y = R\sin(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [0,\, 2\pi)\)</span>, giving
+<span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi} R\,\mathrm{d}x = \Big[ Rt \Big]_0^{2\pi} = 2\pi\,R\]</div>
+<p>which gives the result for the circumference of a circle!</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1.
+Find the length of the arc of the curve <span class="math notranslate nohighlight">\(x = 18t^2\)</span>, <span class="math notranslate nohighlight">\(y=(12t+9)^\frac{3}{2}\)</span> from <span class="math notranslate nohighlight">\((0,27)\)</span> to <span class="math notranslate nohighlight">\((32, 125)\)</span>.</p>
+<p>2.
+Calculate the arc length of the curve defined by <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>, between <span class="math notranslate nohighlight">\(t=\frac{\pi}{6}\)</span> and <span class="math notranslate nohighlight">\(t=\frac{\pi}{3}\)</span>.</p>
+<p>3.
+Calculate the length of the curve <span class="math notranslate nohighlight">\(y=2(x-1)^\frac{3}{2}\)</span> between <span class="math notranslate nohighlight">\(x=1\)</span> and <span class="math notranslate nohighlight">\(x=4\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.
+Find the length of the arc of the curve <span class="math notranslate nohighlight">\(x = 18t^2\)</span>, <span class="math notranslate nohighlight">\(y=(12t+9)^\frac{3}{2}\)</span> from <span class="math notranslate nohighlight">\((0,27)\)</span> to <span class="math notranslate nohighlight">\((32, 125)\)</span>.</p>
+<p>We have:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}x}{\mathrm{d}t}=36t, \quad \frac{\mathrm{d}y}{\mathrm{d}t}=\frac{3}{2} (12)(12t+9)^{1/2}=18(12t+9)^{1/2}\]</div>
+<p>Then, as all the lengths are positive:</p>
+<div class="math notranslate nohighlight">
+\[L =  \int_{t=0}^{4/3}\sqrt{(36t)^2+18^2(12t+9)}\mathrm{d}t = 18\int_{0}^{4/3}\sqrt{(3+2t)^2}\mathrm{d}t = 18\displaystyle \int_0^{4/3}(2t+3)\mathrm{d}t\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(\displaystyle L=18\biggr[t^2+3t\biggr]_0^{4/3}=104\)</span> units</p>
+<p>2.</p>
+<p>Calculate the arc length of the curve defined by <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>, between <span class="math notranslate nohighlight">\(t=\frac{\pi}{6}\)</span> and <span class="math notranslate nohighlight">\(t=\frac{\pi}{3}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\int_{\pi/6}^{\pi/3}\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2+\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\mathrm{d}t 
+=\int_{\pi/6}^{\pi/3}\sqrt{\sin^2(t)+\cos^2(t)}\mathrm{d}t =\left[t\right]_{\pi/6}^{\pi/3}=\frac{\pi}{6}\]</div>
+<p>The result simply gives the arc length of a portion of the unit circle (<span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>) between <span class="math notranslate nohighlight">\(\theta=\frac{\pi}{6}\)</span> and <span class="math notranslate nohighlight">\(\theta=\frac{\pi}{3}\)</span></p>
+<p>3.</p>
+<p>Calculate the length of the curve <span class="math notranslate nohighlight">\(y=2(x-1)^\frac{3}{2}\)</span> between <span class="math notranslate nohighlight">\(x=1\)</span> and <span class="math notranslate nohighlight">\(x=4\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=3\sqrt{x-1}, \quad \mathrm{d}S 
+= \sqrt{1+\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x=\sqrt{1+9(x-1)}\,\mathrm{d}x=\sqrt{9x-8}\,\mathrm{d}x\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[S= \int_{x=1}^{x=4}\sqrt{9x-8}\,\mathrm{d}x = \int_1^4(9x-8)^{1/2}\,\mathrm{d}x = \left[\frac{2}{27}(9x-8)^{3/2}\right]_1^4 = \frac{2}{27}(56\sqrt{7}-1)\]</div>
+</div>
+</div>
+<div class="section" id="surfaces-of-revolution">
+<h2><span class="section-number">10.9. </span>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">¶</a></h2>
+<p>Lets now go further, what happens if we take a function and rotate it around an axis:</p>
+<div class="figure align-default" id="areavolumerevolution">
+<img alt="../_images/AreaVolumeRevolution.png" src="../_images/AreaVolumeRevolution.png" />
+<p class="caption"><span class="caption-number">Fig. 10.9 </span><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
+<b>Right Pane:</b> Breaking down the volume into discrete slices, each of width <span class="math notranslate nohighlight">\(\mathrm{d} x\)</span>.</span><a class="headerlink" href="#areavolumerevolution" title="Permalink to this image">¶</a></p>
+</div>
+<p>To find the volume of such a rotated solid, we need to think about the cross sectional area along the range, which will be <span class="math notranslate nohighlight">\(\pi \,y^2\)</span> since the
+radius of each slice at <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(y(x)\)</span>.  Then we just need to integrate up these slices <span class="math notranslate nohighlight">\(\pi\,y^2\,\mathrm{d}x\)</span> over the range:</p>
+<div class="math notranslate nohighlight">
+\[V_x = \int_a^b \pi\,y^2\,\mathrm{d}x\]</div>
+<p>and we can swap round the axis we rotate over to the <span class="math notranslate nohighlight">\(y\)</span> axis and therefore the radius of each slice would be <span class="math notranslate nohighlight">\(\pi\,x^2\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[V_y = \int_{y(a)}^{y(b)} \pi\,x^2\,\mathrm{d}y\]</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Instead of using cylindrical slices, we could use “frustrums” (sections of cones). The result would be the same (in the limit <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>).</p>
+<p>Similarly, when calculating the area under the curve, we used rectangles, but we could have used parallelograms.</p>
+</div>
+<p>We can also find the surface area of this solid of revolution, if we rotate over the <span class="math notranslate nohighlight">\(x\)</span> acis then this surface area is the circumference of each
+slice <span class="math notranslate nohighlight">\(2\pi\,y\)</span> multiplied by the path length <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span> along the surface, so we find:</p>
+<div class="math notranslate nohighlight">
+\[A_x = \int_{x=a}^{x=b} 2\pi\,y\,\mathrm{d}s = \int_a^b 2\pi\,y\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
+<p>We could rotate over the <span class="math notranslate nohighlight">\(y\)</span> axis instead, in which case we just switch the circumference we are interested in to be <span class="math notranslate nohighlight">\(2\pi\,x\)</span> and integrate the
+path length over the <span class="math notranslate nohighlight">\(y\)</span> axis:</p>
+<div class="math notranslate nohighlight">
+\[A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Lets find the volume of a cone depicted in <a class="reference internal" href="#cone1"><span class="std std-numref">Fig. 10.10</span></a>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_x = \int_0^h \pi\,\left(\frac{R x}{h}\right)^2\,\mathrm{d}x = \frac{R^2 \,\pi}{h^2}\Big[ \frac{1}{3}x^3\Big]_0^h = \frac{1}{3}\pi \,R^2\,h\\\end{split}\]</div>
+<p>which matches the expression we expect and explains where this factor of <span class="math notranslate nohighlight">\(1/3\)</span> comes from!</p>
+<p>Likewise we can look at the surface area of this cone,  <span class="math notranslate nohighlight">\(y = R x / h \rightarrow \mathrm{d}y/\mathrm{d}x = R / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_x &amp;=  \int_0^h 2\pi\,\frac{R x}{h}\,\sqrt{1 + \left(\frac{R}{h}\right)^2}\,\mathrm{d}x \\
+&amp;=  2\pi \frac{R}{h}\sqrt{1 + \left(\frac{R}{h}\right)^2}\Bigg[ \frac{1}{2}x^2\Bigg]_0^h \\
+&amp;=  \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
+<div class="figure align-default" id="cone1">
+<img alt="../_images/cone.png" src="../_images/cone.png" />
+<p class="caption"><span class="caption-number">Fig. 10.10 </span><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Likewise if we have parametrised expressions <span class="math notranslate nohighlight">\(x = x(t),\, y = y(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [t_1,\, t_2]\)</span> then these expressions become:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_x &amp;=  \int_{t_1}^{t_2} \pi\,y^2\,\frac{\mathrm{d}x}{\mathrm{d}t}\,\mathrm{d}t \\
+V_y &amp;=  \int_{t_1}^{t_2} \pi\,x^2\,\frac{\mathrm{d}y}{\mathrm{d}t}\,\mathrm{d}t \\
+A_x &amp;=  \int_{t_1}^{t_2} 2\pi\,y\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t \\
+A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./differentiation_and_integration"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="differentiation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Differentiation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="partialdifferentiation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Multivariable Calculus</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

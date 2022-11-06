@@ -483,10 +483,9 @@ I_{n} = f(n,x) + I_{n-a}
 where $a,\,n$ are integers typically and $a < n$.  Usually we solve these problems by integration by parts, which by spotting the required pattern, 
 makes finding the solution more straightforward. 
 
-````{admonition} Worked examples
-:class: seealso, dropdown
+````{admonition} Worked example
+:class: seealso
 
-1\. 
 Find and evaluate the reduction formula for:
 ```{math} 
 I_n = \int_0^\infty x^n\,e^{-x}\,\mathrm{d} x
@@ -512,55 +511,9 @@ $I_0$ is a good place to stop, since we can evaluate it:
 I_0 = \int_0^\infty e^{-x}\,\mathrm{d} x = \bigg[-e^{-x}\bigg]_0^\infty = 0 - (-1) = 1
 ```
 Hence $I_n = n!$.  
-
-2\. 
-Find the reduction formula for:
-```{math} 
-I_n = \int_0^1 (1  - x^3)^n\,\mathrm{d} x
-``` 
-and evaluate $I_4$.  There may be a temptation to try to expand out the bracket or integrate by parts straight away, however the easier 
-method is to break up the integrand into $(1-x^3)^{n-1}\,(1-x^3)$:
-```{math} 
-I &=& \int_0^1 (1-x^3)^{n-1}\,\mathrm{d} x -\int_0^1 x^3\,(1-x^3)^{n-1}\,\mathrm{d} x \\ &=& I_{n-1} - \int_0^1 x\,x^2\,(1-x^3)^{n-1}\,\mathrm{d} x \\ &=& I_{n-1} - \int_0^1 x\,\left(-\frac{1}{3}\right)(-3x^2)\,(1-x^3)^{n-1}\,\mathrm{d} x 
-```
-and then integrate the second integrand by parts:
-```{math} 
-\begin{array}{lcl}
-u(x) = x && v'(x) = -\frac{1}{3} (-3x^2)(1-x^3)^{n-1}\\
-u'(x) = 1 && v(x) = -\frac{1}{3n} (1-x^3)^{n}
-\end{array}
-```
-where we integrated $f'(x)$ using the reverse chain rule.
-```{math} 
-\Rightarrow I_n &=& I_{n-1} - \bigg[ -\frac{x}{3n} (1-x^3)^{n}\bigg]_0^1 - \frac{1}{3n}\int_0^1  (1-x^3)^{n}\,\mathrm{d} x \\
-I_n &=& I_{n-1} + 0 - \frac{1}{3n}I_{n} \Longrightarrow I_n = \frac{3n}{3n+1}I_{n-1} \\
-I_4 &=& \bigg(\frac{12}{13}\bigg)I_3 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)I_2 \\&=& \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)I_1 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)\bigg(\frac{3}{4}\bigg)I_0 \\
-I_0 &=& \int_0^1\mathrm{d} x = 1 \Longrightarrow I_4 = \frac{243}{455} 
-```
-
-3\. 
-Find the reduction formula for:
-```{math} 
-I_n = \int_0^{\pi/2}  \sin^n(x)\,\mathrm{d} x 
-``` 
-and evaluate $I_2, \, I_3$.  Firstly break up the integrand into $\sin(x) \sin^{n-1}(x) \,\mathrm{d} x$ and then integrate by parts:
-```{math} 
-\begin{array}{lcl}
-u(x) = \sin^{n-1}(x) && v'(x) = \sin(x) \\
-u'(x) = (n-1)\cos(x)\sin^{n-2}(x) && v(x) = -\cos(x)
-\end{array}
-```
-and therefore:
-```{math} 
-I_n &=& \bigg[-\cos(x)\sin^{n-1}(x)\bigg]_0^{\pi/2}  + (n-1)\int_0^{\pi/2}  \cos^2(x) \sin^{n-2}(x)\,\mathrm{d} x \\
-&=& 0 + (n-1)\int_0^{\pi/2} (1 - \sin^2(x))\sin^{n-2}(x)\,\mathrm{d} x \\
-&=& (n-1)\int_0^{\pi/2} \bigg(\sin^{n-2}(x) - \sin^{n}(x)\bigg)\,\mathrm{d} x  \\ I_n &=& (n-1)I_{n-2} - (n-1)I_{n} \\  nI_n &=& (n-1)I_{n-2} 
-\Longrightarrow I_n = \frac{n-1}{n}I_{n-2} \\
-I_2 &=& \frac{1}{2}I_0 = \frac{1}{2}\bigg[x\bigg]_0^{\pi/2} = \frac{\pi}{4}, \quad I_3 = \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/2} = \frac{2}{3}
-```
-notice we evaluate $I_0$ and $I_1$ depending on whether $n$ is odd or even.
-
 ````
+
+
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -575,9 +528,25 @@ and find a value for $I_4$.
 2\.
 Find a reccurence relation for the integral:
 ```{math}
-I_n = int_0^{\pi/2}\cos^{n}(x)\mathrm{d}x 
+I_n = \int_0^{\pi/2}\cos^{n}(x)\mathrm{d}x 
 ```
 and find a value for $I_{10}$.
+
+3\. 
+Find the reduction formula for:
+```{math} 
+I_n = \int_0^1 (1  - x^3)^n\,\mathrm{d} x
+``` 
+and evaluate $I_4$.  
+
+
+4\. 
+Find the reduction formula for:
+```{math} 
+I_n = \int_0^{\pi/2}  \sin^n(x)\,\mathrm{d} x 
+``` 
+and evaluate $I_2, \, I_3$.  
+
 
 ````
 
@@ -591,7 +560,7 @@ I_n = \int x^n e^x\mathrm{d}x
 Integrating by parts:
 ```{math} 
 \begin{array}{lcl}
-u(x)= x^n && v'(x) = e^x \\
+u(x) = x^n && v'(x) = e^x \\
 u'(x) = nx^{n-1} && v(x) = e^x
 \end{array}
 ```
@@ -599,9 +568,18 @@ and therefore:
 ```{math}
 I_n = \int x^n e^x\mathrm{d}x = x^n e^x - n \int x^{n-1}e^x\mathrm{d}x
 ```
-That is, $I_n = x^n e^x - n I_{n-1}$, and $I_0 = \displaystyle \int e^x\mathrm{d}x = e^x + C$ and so $I_4$ is given by:
+Hence the reccurence relation is
 ```{math}
-I_4 = e^x(x^4- 4x^3+4(3)x^2 - 4(3)(2)x +4(3)(2)(1))+C
+I_n = x^n e^x - n I_{n-1}
+```
+Which means that:
+```{math}
+I_0 = \displaystyle \int e^x\mathrm{d}x = e^x + C
+```
+and so $I_4$ is given by:
+```{math}
+I_4 &= e^x(x^4- 4x^3+4(3)x^2 - 4(3)(2)x +4(3)(2)(1))+C\\
+&= e^x(x^4- 4x^3+12x^2 - 24x +24)+C
 ```
 
 
@@ -643,6 +621,53 @@ Thus:
 I_{10} = \frac{63\pi}{256}
 ```
 
+3\. 
+There may be a temptation to try to expand out the bracket or integrate by parts straight away, however the easier 
+method is to break up the integrand into $(1-x^3)^{n-1}\,(1-x^3)$:
+```{math} 
+I &= \int_0^1 (1-x^3)^{n-1}\,\mathrm{d} x -\int_0^1 x^3\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&= I_{n-1} - \int_0^1 x\,x^2\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&= I_{n-1} - \int_0^1 x\,\left(-\frac{1}{3}\right)(-3x^2)\,(1-x^3)^{n-1}\,\mathrm{d} x 
+```
+and then integrate the second integrand by parts:
+```{math} 
+\begin{array}{lcl}
+u(x) = x && v'(x) = -\frac{1}{3} (-3x^2)(1-x^3)^{n-1}\\
+u'(x) = 1 && v(x) = -\frac{1}{3n} (1-x^3)^{n}
+\end{array}
+```
+where we integrated $f'(x)$ using the reverse chain rule.
+```{math} 
+\Rightarrow I_n &= I_{n-1} - \bigg[ -\frac{x}{3n} (1-x^3)^{n}\bigg]_0^1 - \frac{1}{3n}\int_0^1  (1-x^3)^{n}\,\mathrm{d} x \\
+I_n &= I_{n-1} + 0 - \frac{1}{3n}I_{n} \Longrightarrow I_n = \frac{3n}{3n+1}I_{n-1} \\
+I_4 &= \bigg(\frac{12}{13}\bigg)I_3 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)I_2 \\
+&= \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)I_1 = 
+\bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)\bigg(\frac{3}{4}\bigg)I_0 \\
+I_0 &= \int_0^1\mathrm{d} x = 1 \\
+\Rightarrow I_4 &= \frac{243}{455} 
+```
+
+4\. 
+Firstly break up the integrand into $\sin(x) \sin^{n-1}(x) \,\mathrm{d} x$ and then integrate by parts:
+```{math} 
+\begin{array}{lcl}
+u(x) = \sin^{n-1}(x) && v'(x) = \sin(x) \\
+u'(x) = (n-1)\cos(x)\sin^{n-2}(x) && v(x) = -\cos(x)
+\end{array}
+```
+and therefore:
+```{math} 
+I_n &= \bigg[-\cos(x)\sin^{n-1}(x)\bigg]_0^{\pi/2}  + (n-1)\int_0^{\pi/2}  \cos^2(x) \sin^{n-2}(x)\,\mathrm{d} x \\
+&= 0 + (n-1)\int_0^{\pi/2} (1 - \sin^2(x))\sin^{n-2}(x)\,\mathrm{d} x \\
+&= (n-1)\int_0^{\pi/2} \bigg(\sin^{n-2}(x) - \sin^{n}(x)\bigg)\,\mathrm{d} x  \\ 
+I_n &= (n-1)I_{n-2} - (n-1)I_{n} \\  
+nI_n &= (n-1)I_{n-2} \\
+\Rightarrow I_n &= \frac{n-1}{n}I_{n-2} \\
+I_2 &= \frac{1}{2}I_0 = \frac{1}{2}\bigg[x\bigg]_0^{\pi/2} = \frac{\pi}{4}\\
+I_3 &= \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/2} = \frac{2}{3}
+```
+notice we evaluate $I_0$ and $I_1$ depending on whether $n$ is odd or even.
+
 ````
 
 ## Mean value of a function
@@ -651,10 +676,12 @@ I_{10} = \frac{63\pi}{256}
 ---
 name: mean
 ---
-The average of a discrete function is given by adding up the values and dividing by the number of points. We extend this concept to continuous functions in the limit as $\Delta x\rightarrow 0$.
+The average of a discrete function is given by adding up the values and dividing by the number of points. We extend this concept to continuous functions in 
+the limit as $\Delta x\rightarrow 0$.
 ```
 
-As shown in {numref}`mean`, for any function $f(x)$ we can obtain the average output $\bar{f(x)}$ by adding up a series of outputs and dividing by the number of datapoints used. In this case, the spacing between datapoints is $\Delta x$. By taking the limit as $\Delta x\rightarrow 0$ we can obtain:
+As shown in {numref}`mean`, for any function $f(x)$ we can obtain the average output $\bar{f(x)}$ by adding up a series of outputs and dividing by the number of 
+datapoints used. In this case, the spacing between datapoints is $\Delta x$. By taking the limit as $\Delta x\rightarrow 0$ we can obtain:
 
 ```{math}
 :label: functionMean
@@ -673,7 +700,7 @@ Calculate the mean value of $\cos ^3(\theta)$ on the interval $\displaystyle \le
 ````
 
 ## Arc Length
-Suppose that we have a function $y = f(x)$, we know through integration that we can find the area under the curve, as shown in {numref}`FunctionArea`.  
+Suppose that we have a function $y = f(x)$, we know through integration that we can find the area under the curve:
 
 ```{figure} ../figures/FunctionArea.png
 ---
@@ -681,8 +708,7 @@ name: FunctionArea
 ---
 The area (in blue) under a function $f(x)$ over the interval $x \in [a,\,b]$ given by the integral $\displaystyle \int_a^bf(x)\,\mathrm(d)x$.
 ```
-Another question that we could ask however is what is the length of the path traced out by the function $f(x)$ over the range $[a,\,b]$, as shown in 
-{numref}`FunctionPathLength`.
+Another question that we could ask however is what is the length of the path traced out by the function $f(x)$ over the range $[a,\,b]$:
 
 ```{figure} ../figures/FunctionPathLength.png
 ---
@@ -691,7 +717,7 @@ name: FunctionPathLength
 The path traced out by the function $f(x)$ over the interval $x \in [a,\,b]$.
 ```
 To find an expression for this length $S$, we can break up the path into infinitesimal segments and then integrate these over the whole function.  We can see this 
-process in {numref}`ArcLength`, where we break down the change in arc length $\Delta s$ by Pythagoras:
+process breaking down the change in arc length $\Delta s$ by Pythagoras graphically as:
 
 ```{math}
 (\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}
@@ -800,7 +826,7 @@ S= \int_{x=1}^{x=4}\sqrt{9x-8}\,\mathrm{d}x = \int_1^4(9x-8)^{1/2}\,\mathrm{d}x 
 
 ## Surfaces of Revolution
 
-Lets now go further, what happens if we take a function and rotate it around an axis, as shown in {numref}`AreaVolumeRevolution`.
+Lets now go further, what happens if we take a function and rotate it around an axis:
 
 ```{figure} ../figures/AreaVolumeRevolution.png
 ---

@@ -46,7 +46,7 @@ a (2x2) matrix, because it has two rows and two columns.
 
 The number of rows must be given first:
 
-$ \left( \begin{matrix} 1 & -3 & 5\\ 2 & -1 & 7\end{matrix} \right) $  is a (2 x 3) matrix, $ \left( \begin{matrix} 1 & -3 \\ 2 & -1 \\ 5 & 7\end{matrix} \right) $ is a (3 x 2) matrix.
+$ \left( \begin{matrix} 1 & -3 & 5\\ 2 & -1 & 7\end{matrix} \right) $  is a (2 x 3) matrix, whereas $ \left( \begin{matrix} 1 & -3 \\ 2 & -1 \\ 5 & 7\end{matrix} \right) $ is a (3 x 2) matrix.
 
 This measurement is properly referred to as the **order** of a matrix, but is also often referred to as the **size**.  The individual values in a matrix are called 
 **elements**, so in the matrix $ M = \left( \begin{matrix} 1 &2 &3 \\ 4& 5& 6\end{matrix} \right) $ we can say that the element in the $2^{nd}$ row and $3^{rd}$ column 
@@ -54,11 +54,11 @@ is the number 6. Subscripts can be used to refer to the elements, by writing $ M
 
 The **transpose** of a matrix, written with a superscript letter T, means that we swap the rows and columns,:
 
-$ M = \left( \begin{matrix} 1 &2 &3 \\ 4& 5& 6\end{matrix} \right) \Rightarrow M^T = \left( \begin{matrix} 1 & 4 \\ 2 & 5  \\ 3 & 6\end{matrix} \right)$
+```{math}
+M = \left( \begin{matrix} 1 &2 &3 \\ 4& 5& 6\end{matrix} \right) \Rightarrow M^T = \left( \begin{matrix} 1 & 4 \\ 2 & 5  \\ 3 & 6\end{matrix} \right)
+```
 
-In element notation, for any matrix $X$, we can write that $\left(X^T\right)_{i,j} = X_{j,i}$.
-
-That is, the element in the $i^{th}$ row and $j^{th}$ column of $X$ becomes the element in the $j^{th}$ row and $i^{th}$ column of $X^T$.
+In element notation, for any matrix $X$, we can write that $\left(X^T\right)_{i,j} = X_{j,i}$.  That is, the element in the $i^{th}$ row and $j^{th}$ column of $X$ becomes the element in the $j^{th}$ row and $i^{th}$ column of $X^T$.
 
 The order of a matrix is reversed when it it transposed.
 
@@ -73,14 +73,38 @@ A **diagonal matrix** is one in which all of the elements are zero apart from th
 
 1\. What is the order of each of the matrices shown?
 
-$A=\left(\begin{array}{cc}0 & -1 \\2 & 3 \\-1 & 0 \\\end{array}\right)$,   $b=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)$,   $c=0$.
+$A=\left(\begin{array}{cc}0 & -1 \\2 & 3 \\-1 & 0 \\\end{array}\right), \quad b=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right), \quad c=0$.
 
-2\. Given the matrix $X=\left(\begin{array}{ccc}-3 & 4 & 0 \\1 & 1 & 2 \\7 & -4 & 3 \\\end{array}\right)$, what element is represented by $(X^T)_{2,3}$ ?
+2\. Given the matrix:
+
+```{math}
+X=\left(\begin{array}{ccc}-3 & 4 & 0 \\1 & 1 & 2 \\7 & -4 & 3 \\\end{array}\right)
+```
+
+what element is represented by $(X^T)_{2,3}$ ?
 
 3\. Which of the following matrices is an upper-triangular matrix?
 
-$A=\left(\begin{array}{cccc}2&8&-1&0\\0&2&2&2\\0&0&1&-5\\0&0&0&3\end{array}\right)$, $B=\left(\begin{array}{cccc}1&-2&5&2\\3&6&-2&0\\8&2&0&0\\-2&0&0&0\end{array}\right)$, $C=\left(\begin{array}{ccc}6&0&0\\-3&-4&0\\2&7&7\end{array}\right)$.
+```{math}
+A=\left(\begin{array}{cccc}2&8&-1&0\\0&2&2&2\\0&0&1&-5\\0&0&0&3\end{array}\right), \quad B=\left(\begin{array}{cccc}1&-2&5&2\\3&6&-2&0\\8&2&0&0\\-2&0&0&0\end{array}\right), \quad C=\left(\begin{array}{ccc}6&0&0\\-3&-4&0\\2&7&7\end{array}\right)
+```
+````
 
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. Order of $A = $ (3x2)
+Order of $b = $ (3x1)
+Order of $c = $ (1x1)
+
+2\. 
+```{math}
+X^T=\left(\begin{array}{ccc}-3 & 1 & 7 \\4 & 1 & -4 \\0 & 2 & 3 \\\end{array}\right)
+```
+
+Hence $(X^T)_{2,3} = -4$
+
+3\. Matrix $A$ is in upper-triangular form.
 ````
 
 ## Matrix algebra
@@ -95,7 +119,10 @@ Let $\lambda$ be a scalar (a single number) and $M$ be a matrix. Then $\lambda M
 
 $$ (\lambda M)_{i,j} = \lambda M_{i,j}$$
 
-For example, $ -3\left( \begin{matrix} 0 & -2 \\ 1 & 5 \\ -1 & 3 \end{matrix} \right) = \left( \begin{matrix} 0 & 6 \\ -3 & -15 \\ 3 & -9 \end{matrix} \right) $.
+For example:
+```{math}
+-3\left( \begin{matrix} 0 & -2 \\ 1 & 5 \\ -1 & 3 \end{matrix} \right) = \left( \begin{matrix} 0 & 6 \\ -3 & -15 \\ 3 & -9 \end{matrix} \right)
+```
 
 ### Addition
 
@@ -105,23 +132,38 @@ $$\left(A + B\right)_{i,j} = A_{i,j} + B_{i,j}$$
 
 The expression states that to add two matrices, we add together the corresponding elements. This type of operation on two matrices can be referred to as an element-wise operation.
 
-For example, $ \left( \begin{matrix} 1 & -3 \\ 3 & 0 \\ 5 & -7 \end{matrix} \right) + \left( \begin{matrix} 0 & 6 \\ -3 & -15 \\ 3 & -9 \end{matrix} \right) = \left( \begin{matrix} 1 & 3 \\ 0 & -15 \\ 8 & -16 \end{matrix} \right) $.
-
+For example:
+```{math}
+\left( \begin{matrix} 1 & -3 \\ 3 & 0 \\ 5 & -7 \end{matrix} \right) + \left( \begin{matrix} 0 & 6 \\ -3 & -15 \\ 3 & -9 \end{matrix} \right) 
+= \left( \begin{matrix} 1 & 3 \\ 0 & -15 \\ 8 & -16 \end{matrix} \right)
+```
 
 The element-wise property means that only matrices of the same order can be added, and the expressions below are both meaningless:
 
-$$ \left( \begin{matrix} 1 & 2 \end{matrix} \right) + \left( \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \right) $$
-
-$$\left( \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \right) + 1 $$
+```{math}
+\left( \begin{matrix} 1 & 2 \end{matrix} \right) &+ \left( \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \right)\\
+\left( \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \right) &+ 1
+```
 
 Matrix addition can be combined with multiplication by a scalar to add multiples of one matrix to another.
 
-For example, $ \left( \begin{matrix} 1 & -3 \\ 3 & 0 \\ 5 & -7 \end{matrix} \right) - 3\left( \begin{matrix} 0 & -2 \\ 1 & 5 \\ -1 & 3 \end{matrix} \right) = \left( \begin{matrix} 1 & 3 \\ 0 & -15 \\ 8 & -16 \end{matrix} \right) $.
+For example:
+```{math}
+\left( \begin{matrix} 1 & -3 \\ 3 & 0 \\ 5 & -7 \end{matrix} \right) - 3\left( \begin{matrix} 0 & -2 \\ 1 & 5 \\ -1 & 3 \end{matrix} \right) 
+= \left( \begin{matrix} 1 & 3 \\ 0 & -15 \\ 8 & -16 \end{matrix} \right)
+```
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
 
-Given the matrices $A=\left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array}\right)$, $B=\left(\begin{array}{cc}-4 & 1 \\1 & 2 \\-2 & 3 \\\end{array}\right)$, $C=\left(\begin{array}{cc}0 & 3 \\4 & 2 \\1 & 1 \\\end{array}\right)$, $D=\left(\begin{array}{cc}5 & 1 \\3 & 2 \\\end{array}\right)$, what will be the result of the following expressions?
+Given the matrices:
+```{math}
+A=\left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array}\right), 
+\quad B=\left(\begin{array}{cc}-4 & 1 \\1 & 2 \\-2 & 3 \\\end{array}\right), 
+\quad C=\left(\begin{array}{cc}0 & 3 \\4 & 2 \\1 & 1 \\\end{array}\right),
+\quad D=\left(\begin{array}{cc}5 & 1 \\3 & 2 \\\end{array}\right)
+```
+What will be the result of the following expressions?
 
 1. $\left(A+B\right)+C$
 2. $(C+B)+A$
@@ -129,6 +171,33 @@ Given the matrices $A=\left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array
 4. $A+D$
 
 ````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\.
+```{math}
+\left(A+B\right)+C=\left(\begin{array}{cc}-3 & 3 \\0 & 2 \\1 & 4 \\\end{array}\right) + \left(\begin{array}{cc}0 & 3 \\4 & 2 \\1 & 1 \\\end{array}\right) = 
+\left(\begin{array}{cc}-3 & 6 \\4 & 4 \\2 & 5 \\\end{array}\right)
+```
+
+2\.
+```{math}
+\left(A+B\right)+C=\left(\begin{array}{cc}-4 & 4 \\5 & 4 \\-1 & 4 \\\end{array}\right) + \left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array}\right) = 
+\left(\begin{array}{cc}-3 & 6 \\4 & 4 \\2 & 5 \\\end{array}\right)
+```
+
+3\.
+```{math}
+A-2B+\frac{1}{2}C = \left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array}\right) + \left(\begin{array}{cc}-8 & 2 \\2 & 4 \\-4 & 6 \\\end{array}\right) + 
+\left(\begin{array}{cc}0 & 3/2 \\2 & 1 \\1/2 & 1/2 \\\end{array}\right) = \left(\begin{array}{cc}-7 & 11/2 \\3 & 5 \\-1/2 & 15/2 \\\end{array}\right)
+```
+
+4\. Cannot add matrices of different orders together.
+
+
+````
+
 
 ### Matrix multiplication
 
@@ -168,12 +237,14 @@ The $(i,\,j)$th element in the product $AB$ is given by the product sum of row $
 
 Given that
 
-$A=\left(\begin{array}{ccc}3 & 1 & -2 \\0 & 2 & 4 \\\end{array}\right)$,   
-$B=\left(\begin{array}{cc}2 & 3 \\-3 & 0 \\1 & 1 \\\end{array}\right)$,   
-$C=\left(\begin{array}{cccc}1 & -8 & 2 & 11 \\0 & 4 & -3 & -7 \\6 & 1 & 8 & 1 \\\end{array}\right)$,    
-$D=\left(\begin{array}{ccc}1 & 2 & 3 \\1 & 1 & 1 \\2 & 0 & 1 \end{array}\right)$,
+```{math}
+A&=\left(\begin{array}{ccc}3 & 1 & -2 \\0 & 2 & 4 \\\end{array}\right), \quad 
+B=\left(\begin{array}{cc}2 & 3 \\-3 & 0 \\1 & 1 \\\end{array}\right)\\
+C&=\left(\begin{array}{cccc}1 & -8 & 2 & 11 \\0 & 4 & -3 & -7 \\6 & 1 & 8 & 1 \\\end{array}\right),\quad   
+D=\left(\begin{array}{ccc}1 & 2 & 3 \\1 & 1 & 1 \\2 & 0 & 1 \end{array}\right)
+```
 
-1\. Calculate $AB$ and $BA$. Are these results the same?
+1\. Calculate $AB$ and $BA$, are these results the same?
 
 2\. Explain why the result $A\left(\begin{array}{c}1\\2\end{array}\right)$ cannot be calculated.
 
@@ -188,52 +259,61 @@ $D=\left(\begin{array}{ccc}1 & 2 & 3 \\1 & 1 & 1 \\2 & 0 & 1 \end{array}\right)$
 :class: seealso, dropdown
 
 1\. 
+```{math}
+AB &= \begin{pmatrix}3 & 1 & -2 \\0 & 2 & 4 \end{pmatrix}\begin{pmatrix}2 & 3 \\-3 & 0 \\1 & 1 \end{pmatrix}
+= \begin{pmatrix} 1 & 7  \\ -2 & 4 \end{pmatrix}\\
+BA &= \begin{pmatrix}2 & 3 \\-3 & 0 \\1 & 1 \end{pmatrix}\begin{pmatrix}3 & 1 & -2 \\0 & 2 & 4 \end{pmatrix}
+= \begin{pmatrix} 2 & 8 & 10\\ -9 & -3 & 6\\ 3 & 3 & 2\end{pmatrix}
+```
+Hence $AB \neq BA$!
 
-2\.
+2\. The nunber of columns in $A$ do not match the number of rows in $\left(\begin{array}{c}1\\2\end{array}\right)$, so 
+it is unclear what to do with the additional numbers in $A$!
 
-3\.
+3\. $AC$ is a $(2 \times 3) \times (3 \times 4) = (2 \times 4)$ matrix.
 
-4\.
+4\. $A_{2,3} = 4$
+
+5\.
+```{math}
+D^2=\left(\begin{array}{ccc}1 & 2 & 3 \\1 & 1 & 1 \\2 & 0 & 1 \end{array}\right)\left(\begin{array}{ccc}1 & 2 & 3 \\1 & 1 & 1 \\2 & 0 & 1 \end{array}\right)
+= \left(\begin{array}{ccc}10 & 3 & 8 \\4 & 3 & 5 \\4 & 4 & 7 \end{array}\right)
+```
 ````
 
-### Properties of Matrix Multiplication
+### Properties of matrix multiplication
 
-Matrix multiplication is **associative**, that is
+Matrix multiplication is **associative**, that is:
 
-$$A (B C)\equiv (A B)C$$
+```{math}
+A (B C)\equiv (A B)C
+```
 
-This can be proved by showing that the left and right hand sides are the same order, and that $(A(B C))_{i,j}=((A B)C)_{i,j}$.
+This can be proved by showing that the left and right hand sides are the same order, and that 
+```{math}
+(A(B C))_{i,j}=((A B)C)_{i,j}
+```
 
+````{warning}
 Matrix multiplication is **NOT commutative**, that is
-
-$$\begin{array}{c}A B\neq B A \end{array}$$
-
-(although the  $AB$ and $BA$ may be equal in some special cases).
-
-```{warning}
-For two matrices $A$ and $B$, in general $AB \neq BA$.
-
-Forgetting the matrix multiplication is non-commutative leads to disaster!
+```{math}
+\begin{array}{c}A B\neq B A \end{array}
 ```
+although $AB$ and $BA$ may be equal in some special cases, but not in general!
+````
 
-```{admonition} Worked Example
+````{admonition} Worked Example
 :class: seealso
-**Worked example illustrating non-commutative property**
 
-$$\left(\begin{array}{cc}1 & 2 \\-3 & 0 \end{array}\right) \left(\begin{array}{cc}2 & 1 \\1 & 2 \\\end{array}\right)=\left(\begin{array}{cc}1\ 2+2\ 1 & 1\ 1+2\ 2 \\0\ 1-3\ 2 & 0\ 2-3\ 1\end{array}\right)=\left(\begin{array}{cc}4 & 5 \\-6 & -3 \\\end{array}\right)$$
-
-$$\left(\begin{array}{cc}2 & 1 \\1 & 2 \\\end{array}\right) \left(\begin{array}{cc}1 & 2 \\-3 & 0 \end{array}\right)=\left(\begin{array}{cc}2\ 1+1 (-3) & 2\ 2+1\ 0 \\1\ 1+2 (-3) & 1\ 2+2\ 0 \end{array}\right)=\left(\begin{array}{cc}-1 & 4 \\-5 & 2 \\\end{array}\right)$$
+```{math}
+\left(\begin{array}{cc}1 & 2 \\-3 & 0 \end{array}\right) \left(\begin{array}{cc}2 & 1 \\1 & 2 \\\end{array}\right)
+&=\left(\begin{array}{cc}1\ 2+2\ 1 & 1\ 1+2\ 2 \\0\ 1-3\ 2 & 0\ 2-3\ 1\end{array}\right)=\left(\begin{array}{cc}4 & 5 \\-6 & -3 \\\end{array}\right) \\
+\left(\begin{array}{cc}2 & 1 \\1 & 2 \\\end{array}\right) \left(\begin{array}{cc}1 & 2 \\-3 & 0 \end{array}\right)
+&=\left(\begin{array}{cc}2\ 1+1 (-3) & 2\ 2+1\ 0 \\1\ 1+2 (-3) & 1\ 2+2\ 0 \end{array}\right)=\left(\begin{array}{cc}-1 & 4 \\-5 & 2 \\\end{array}\right)
 ```
+````
 
 ## The identity matrix
-
-The identity matrix $I_n$ is the unique $(n \times n)$ matrix which has the property
-
-$$I_n x = x $$
-
-for any $x \in \mathbb{R}^n$.
-
-The identity matrix transforms the vector $x$ to itself. It plays the same role in matrix multiplication as the number 1 does for multiplication of real numbers.
 
 ````{admonition} Definition
 
@@ -243,6 +323,15 @@ $$I_n = \begin{pmatrix}1 & 0 & \cdots & 0\\0 & 1 & \cdots & 0\\\vdots & \vdots &
 
 We usually drop the subscript $n$ when working with the identity matrix, because the order can be inferred.
 ````
+The identity matrix $I_n$ is the unique $(n \times n)$ matrix which has the property
+
+$$I_n x = x $$
+
+for any $x \in \mathbb{R}^n$.
+
+The identity matrix transforms the vector $x$ to itself. It plays the same role in matrix multiplication as the number 1 does for multiplication of real numbers.
+
+
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -270,11 +359,15 @@ AB + \lambda B = AB + \lambda I B = (A+\lambda I)B
 ```
 
 ````
-## Matrix equations
 
-In this section we make the connection between matrices and linear systems of equations. Our aim is to find the general solution to the equation
 
-$$Ax = b$$
+## Matrices and simultaneous equations
+
+We can make the connection between matrices and linear systems of equations, our aim is to find the general solution to the equation:
+
+```{math}
+Ax = B
+```
 
 where $A$ is an $(m \times n)$ matrix and $b \in \mathbb{R}^m$ and $x \in \mathbb{R}^n$ are vectors.
 
@@ -283,16 +376,25 @@ Such an equation is exactly equivalent to a linear system of $m$ equations in $n
 ```{math}
 \begin{alignat*}{4}
 2x_1 & {}+{} & 3x_2 & {}-{} & 2x_3 & {}={} & 7 \\
-  x_1 & {}-{} & x_2 & {}-{} & 3x_3 & {}={} & 5
+  x_1 & {}-{} & x_2 & {}-{} & 3x_3 & {}={} & 5 \\
+  -x_1 & {}-{} & 2x_2 & {}-{} & x_3 & {}={} & 1 \\
 \end{alignat*}
 ```
 as the matrix equation
 
 ```{math}
-\begin{pmatrix} 2 & 3 & -2\\
-1 & -1 & -3\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}7\\5\end{pmatrix}.
+\begin{pmatrix} 
+2 & 3 & -2\\
+1 & -1 & -3\\
+-1 & 2 & 1
+\end{pmatrix}
+\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} 
+= \begin{pmatrix}
+7\\
+5\\
+1
+\end{pmatrix}.
 ```
-
 
 ````{admonition} Matrix Equation
 
@@ -309,7 +411,7 @@ is equivalent to the matrix equation
 
 $$Ax=b$$
 
-where 
+where:
 $A=\begin{pmatrix}
 a_{1,1} & \cdots & a_{1,n}\\
 \vdots & \ddots & \vdots\\
@@ -319,24 +421,78 @@ a_{m,1} & \cdots & a_{m,n}
 
 This equivalence means that we can move freely between these two ways of writing and thinking about a linear system.
 
+## Matrix determinant
+
+The determinant is a single number calculated from a square matrix. The determinant tells us whether the matrix is invertible, as well as a lot of other 
+useful information about the matrix.  We find that calcualtign the determinant for (2×2) and (3×3) matrices most useful with a number of direct applications, 
+in this section we will study properties of the determinant and methods for calculating it.
+
+
+````{admonition} (2x2) Determinant
+For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal 
+elements. 
+
+Thus the determinant of a (2x2) matrix $A$: 
+```{math}
+A=\left(\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right)
+``` 
+is given by:
+```{math}
+\mathrm{det}(A)=\left|\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right|=a_{11} a_{22}-a_{12} a_{21}
+```
+This is also written as $\text{det}(A)$ and/or with the notation $|A|$.
+
+We note that $\text{det}(A)$ is a scalar quantity.
+````
+````{admonition} (3x3) Determinant
+For a (3x3) matrix $A$:
+```{math}
+A=\left(\begin{array}{ccc}a_{11} & a_{12} &a_{13}\\a_{21} & a_{22}& A_{23} \\ a_{31} & a_{23} & a_{33}\end{array}\right)
+``` 
+the matrix determinant can be found by finding the determinants of each minor of the matrix $A$:
+```{math}
+\begin{align}
+  |A| = \begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix}
+     &= a\,\begin{vmatrix} e & f \\ h & i \end{vmatrix} -
+        b\,\begin{vmatrix} d & f \\ g & i \end{vmatrix} +
+        c\,\begin{vmatrix} d & e \\ g & h \end{vmatrix} \\[3pt]
+     &= a(ei - fh) + b(fg - di) + c(dh - eg)
+\end{align}
+```
+This represents just one way to find the minor matrices, we could also pick any other row, column (or even diagonal) and construct the matrix of minors from $A$ 
+and then find these determinants.
+````
+
+
+
+### Properties of matrix determinants
+
+Let $A$ be an $(n \times n)$ matrix:
+
+1\. The determinant of the identity matrix is always 1.
+
+2\. The determinant reverses sign when any two rows are exchanged.
+
+3\. The determinant is a linear function of each of the rows.
+
+4\. If one row is equal to another row then $\det(A)=0$.
+
+5\. Adding a multiple of one row to another row leaves $\det(A)$ unchanged.
+
+6\. If $A$ has a zero row then $\det(A)=0$.
+
+7\. If $A$ is triangular then $\det(A)$ is the product of the diagonal elements.
+
+8\. $A$ is invertible if and only if $\det(A)\neq 0$.
+
+9\. $\det(AB) = \det(A)\det(B)$.
+
+10\. $\det(A^{T}) = \det(A).$
+
+
 
 ## Matrix Inverses
 
-Since a matrix represents a linear transformation, which is a function, we can consider if a matrix has an inverse. For example, consider the $(2 \times 2)$ matrix $R_{\pi/2}$ which represents a $\pi/2$ anticlockwise rotation about the origin:
-
-$$R_{\pi/2} = \begin{pmatrix}0 & -1 \\1 & 0\end{pmatrix}.$$
-
-Its inverse is a $\pi/2$ *clockwise* rotation about the origin, represented by the following matrix:
-
-$$R_{3\pi/2} = \begin{pmatrix}0 & 1 \\-1 & 0\end{pmatrix}.$$
-
-In general, if $A$ is an $n \times n$ matrix and $B$ is its inverse, then $B$ is also an $(n \times n)$ matrix which satisfies
-
-$$ABx = x$$
-
-for all $x \in \mathbb{R}^n$.
-
-In other words, $AB$ is a matrix which leaves $x$ unchanged. The only matrix which leaves $x$ unchanged is the identity matrix $I$, and so we have the following definition of the inverse matrix.
 
 ```{admonition} Definition
 
@@ -348,234 +504,225 @@ then $A$ is **invertible** and $B$ is the **inverse** of A.
 
 We write $B = A^{-1}$.
 ```
+In general, if $A$ is an $n \times n$ matrix and $B$ is its inverse, then $B$ is also an $(n \times n)$ matrix which satisfies
 
-```{figure} linear_transformations_8_0.png
----
-width: 600px
-name: inverse_transformation
----
-If the matrix $A = R_{\pi/2}$ is a $\pi/2$ anticlockwise rotation about the origin then its inverse $A^{-1} = R_{3\pi/2}$ is a $\pi/2$ clockwise rotation about the origin. The matrix $A^{-1}A = I$ represents the identity transformation.
-```
+$$ABx = x$$
 
-```{exercise}
-:label: q_matrix_inverse_1
+for all $x \in \mathbb{R}^n$.
 
-1. Show that $R_{3\pi/2}$ is the inverse of $R_{\pi/2}$.
-2. What is the inverse of the matrix $R_{\theta}$ representing an anticlockwise rotation about the origin by $\theta$? Calculate $R_{\theta}R_{\theta}^{-1}$ and show that it equals the identity matrix.
-3. Given that $C X D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$.
-```
+In other words, $AB$ is a matrix which leaves $x$ unchanged. The only matrix which leaves $x$ unchanged is the identity matrix $I$.
 
-## Solving Matrix Equations
+
+### Solving Matrix Equations
 
 Suppose that we are given the definitions below and asked to compute the result for $B$ :
 
-$$A=\left(\begin{array}{cc}1 & 2 \\2 & 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)$$ (a_ab)
+```{math}
+:label: a_ab
+A=\left(\begin{array}{cc}1 & 2 \\2 & 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)
+``` 
 
-If this was ordinary scalar algebra, then $B$ would be given by $\frac{AB}{A}$, but we have not defined the concept of division for matrices. Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems $Q X = P$ and $X Q=P$ do not generally have the same solution, and so the expression $X=\frac{P}{Q}$ would be ambiguous.
+If this was ordinary scalar algebra, then $B$ would be given by $\frac{AB}{A}$, but we have not defined the concept of division for matrices. 
+Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems $Q X = P$ and $X Q=P$ do not generally 
+have the same solution, and so the expression $X=\frac{P}{Q}$ would be ambiguous.  The difficulty could be addressed by introducing separate concepts 
+of "left-division" and "right-division", and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division 
+for matrices altogether, and consider what it means for matrix multiplication to be invertible.  To illustrate the use of the inverse matrix, we multiply each 
+side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
 
-The difficulty could be addressed by introducing separate concepts of "left-division" and "right-division", and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.
+```{math}
+:label: a_inverse_ab
+A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right) 
+```
 
-To illustrate the use of the inverse matrix, we multiply each side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
+It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the 
+left-hand side by $A^{-1}$, we must also pre-multiply the right-hand side by $A^{-1}$.  Due to the non-commutative nature of matrix multiplication, the 
+result $A^{-1}(A B)$ is not the same as the result $(A B)A^{-1}$.  Now, since matrix multiplication is associative, the left hand side of {eq}`a_inverse_ab` can be 
+rewritten as $(A^{-1} A)B$, and by the definitions of the inverse and identity matrix, we can write $(A^{-1} A)B=I B=B$ in order to obtain
 
-$$A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$$ (a_inverse_ab)
-
-It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the left-hand side by $A^{-1}$, we must also pre-multiply the right-hand side by $A^{-1}$.
-
-Due to the non-commutative nature of matrix multiplication, the result $A^{-1}(A B)$ is not the same as the result $(A B)A^{-1}$.
-
-Now, since matrix multiplication is associative, the left hand side of {eq}`a_inverse_ab` can be rewritten as $(A^{-1} A)B$, and by the definitions of the inverse and identity matrix, we can write $(A^{-1} A)B=I B=B$ in order to obtain
-
-$$B=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$$
+```{math}
+B=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)
+```
 
 Thus, the result for $B$ can be determined by performing a matrix multiplication, provided that we can find $A^{-1}$.
 
 ```{admonition} Solving $AX=B$ and $XA=B$
 
-Let $A$ be an invertible $(n \times n)$ square matrix and $B$ an ($n \times m)$ matrix. Then
+Let $A$ be an invertible $(n \times n)$ square matrix and $B$ an ($n \times m)$ matrix. Then:
 
 $A X = B$ has solution $X=A^{-1}B $
 
 $X A = B$ has solution $X=B A^{-1}$.
 ```
 
-## Matrix Inverse
-### Calculating the (2x2) inverse
+````{admonition} Worked example
+:class: seealso
 
-The (2x2) matrix that satisfies the definition $A A^{-1} = A^{-1}A=I$ is outlined in the box below. In section 3.6 we will examine how the result may be derived from first principles, but for now you may simply verify the claim by checking the result of the products $A A^{-1}$ and $A^{-1}A$.
+Given that $C\, X\, D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$.
 
-```{admonition} The inverse of a (2x2) matrix
+```{math} 
+C\,X\,D &= E\\
+C^{1} C\,X\,D &= X\,D = C^{-1}\,E\\
+X\,D\,D^{-1} &= X = C^{-1}\,E\,D^{-1}
+```
+````
+
+### Calculating the (2x2) inverse matrix
+````{admonition} The inverse of a (2x2) matrix
 
 The inverse of a (2x2) matrix $A=\left(\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right)$ is given by
 
 $$A^{-1}=\frac{1}{\mathrm{det}(A)}\mathrm{adj}(A)$$
 
-where
-
-$$\mathrm{det}(A)=\left|\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right|=a_{11} a_{22}-a_{12} a_{21}$$
-
 and
 
 $$\mathrm{adj}(A)=\left(\begin{array}{cc}a_{22} & -a_{12} \\-a_{21} & a_{11} \end{array}\right)$$
 
-Note that $\text{det}(A)$ is a scalar quantity.
+$\text{adj}(A)$ is known as the **adjugate matrix**. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and 
+multiplying the anti-diagonal elements by -1.
 
-$\text{det}(A)$ s referred to as the **determinant** of $A$. For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal elements.  
+````
 
-$\text{adj}(A)$ is known as the **adjugate matrix**. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and multiplying the anti-diagonal elements by -1.
-
-Notice the special notation $|A|$ that is used to denote the determinant of $A$.
-```
-
-```{exercise}
-:label: q_twobytwo_inverse
+````{admonition} Practice Questions
+:class: seealso, dropdown
 
 1\. 	Calculate the determinant of the matrix $M=\left(\begin{array}{cc}2 & -1 \\3 & 4 \end{array}\right)$.
 
 2\. 	Write the equations below in the form $Ax=b$:
+```{math}
 \begin{align*}
 2x-3y&=1\\
 3x-2y&=2
 \end{align*}
+```
+Calculate the coefficient matrix $A$ and hence obtain the solution for $x$
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. 	
+```{math}
+\det(M)=\left|\begin{array}{cc}2 & -1 \\3 & 4 \end{array}\right| = 2\times 4 - (-1)\times 3 = 11
+```
+
+2\. 	
+```{math}
+\begin{pmatrix}
+2 & -3 \\
+3 & -2 
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+= \begin{pmatrix}
+1 \\
+2
+\end{pmatrix} 
+```
+```{math}
+A^{-1} = \frac{1}{3}\begin{pmatrix}
+-2 & 3 \\
+-3 & 2
+\end{pmatrix} \Rightarrow 
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix} = A^{-1} = \frac{1}{5}\begin{pmatrix}
+-2 & 3 \\
+-3 & 2
+\end{pmatrix} \begin{pmatrix}
+1 \\
+2
+\end{pmatrix} =
+\begin{pmatrix}
+4/5 \\
+1/5
+\end{pmatrix} 
+
+```
 
 Calculate the coefficient matrix $A$ and hence obtain the solution for $x$
 
-3\.	Solve the problem given in {eq}`a_ab` to find B.
 
-```
+````
 
-### What it means if $\det(A)=0$
+### A derivation of the (2x2) matrix inverse 
 
-The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix $A$ is not **invertible** and the problem will not have a unique solution.
-
-To illustrate, we will consider two examples of a system of two equations in two unknowns:
-
-$$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=3 \end{array}$$ (inconsistent_1)
-$$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=-3 \end{array}$$ (inconsistent_2)
-
-Both sets of equations can be written in the form $Ax=b$, where $A=\left(\begin{array}{cc}2 & -3 \\-6 & 9 \end{array}\right)$. In that case, $\det(A)=18-18=0$, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for $x$.
-
-The two equations in {eq}`inconsistent_1` are inconsistent, and so there is no solution, whilst the two equations in {eq}`inconsistent_2` have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
-
-You can also think about this problem graphically. In general, the determinant of a (2x2) matrix $A$ is zero if and only if the second row is a constant multiple of the first row. For a problem of the form $Ax=b$, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.
-
-This brings us to an important theorem which ties together a lot of the ideas we have studied so far.
-
-### Derivation of the (2x2) inverse from first principles
-
-Consider the problem $A X = I$, which has solution $X=A^{-1}$. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix $\biggr[\begin{array}{c|c}A&I\end{array}\biggr]$.
-
-The algorithm proceeds as follows:
+Consider the problem $A X = I$, which has solution $X=A^{-1}$. To see how this arises in the (2x2) case, lets think back to simultaneous equations, trying to solve $Ax = B$:
 
 ```{math}
-\biggr[\begin{array}{c|c}A&I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c|c}U&L\end{array}\biggr] \quad 
-\rightarrow \quad \biggr[\begin{array}{c|c}I&A^{-1}\end{array}\biggr]
+:label: simuleq
+\begin{alignat*}{3}
+a_{11}x_1 & {}+{} & a_{12}x_2 & {}={} & b_1 \\
+a_{21}x_1 & {}+{} & a_{22}x_2 & {}={} & b_2 \\
+\end{alignat*}
 ```
-in which $U$ is an upper-diagonal matrix and $L$ is a lower-diagonal matrix.
-
-For the (2x2) problem we start with the augmented matrix:
-
-$$A=\left(\begin{array}{cc|cc}a_{11} & a_{12} & 1 & 0 \\a_{21} & a_{22} & 0 & 1 \\\end{array}\right)$$
-
-the following row operations can be used:
-
-1. $\hat{r}_2=r_2-r_1 a_{21}/a_{11}$
-1. $\hat{r}_1=r_1/a_{11}$,    $\hat{r}_2=r_2 a_{11}/(a_{11}a_{22}-a_{12}a_{21})$
-1. $\hat{r}_1=r_1-r_2 a_{12}/a_{11}$
-
-We obtain
+which we can write as a matrix equation:
 
 ```{math}
-\left[\begin{array}{cc|cc}a_{11}&a_{12}&1&0\\a_{21}&a_{22}&0&1\end{array}\right] \quad 
-\Rightarrow \quad \left[\begin{array}{cc|cc}1&0&\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&1&\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]
+\left(\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right)\,\begin{pmatrix}x_1\\x_2\end{pmatrix} 
+= \begin{pmatrix}
+b_1\\
+b_2
+\end{pmatrix}
+```
+Therefore to solve for $x = A^{-1}B$ we could just invert the siultaneous equations to find the solutions - in general this is best done with the process of row reduction 
+operations (also called Gaussian elimination), but you will study more on this in future courses.
+
+Taking {eq}`simuleq` and multiplying between lines to have a common factor in the $x_1$ term:
+```{math}
+\begin{alignat*}{3}
+a_{11}\,a_{21}x_1 & {}+{} & a_{12}\,a_{21}x_2 & {}={} & a_{21}\,b_1 \\
+a_{21}\,a_{11}x_1 & {}+{} & a_{22}\,a_{11}x_2 & {}={} & a_{11}\,b_2 \\
+\end{alignat*}
+```
+and then subtracting:
+```{math}
+x_2 = \frac{-a_{21}\,b_1+a_{11}\,b_2}{a_{11}\,a_{22}-a_{12}\,a_{21}}
+```
+and doing the same procedure to the $x_2$ term:
+```{math}
+\begin{alignat*}{3}
+a_{11}\,a_{22}x_1 & {}+{} & a_{12}\,a_{22}x_2 & {}={} & a_{22}\,b_1 \\
+a_{21}\,a_{12}x_1 & {}+{} & a_{22}\,a_{12}x_2 & {}={} & a_{12}\,b_2 \\
+\end{alignat*}
+```
+and then subtracting:
+```{math}
+x_1 = \frac{a_{22}\,b_1-a_{12}\,b_2}{a_{11}\,a_{22}-a_{12}\,a_{21}}
+```
+where we recognise that $\det(A) = a_{22}\,a_{11} - a_{12}\,a_{21}$ and therefore rewriting this as a set of matrix equations:
+
+```{math}
+\begin{pmatrix}x_1\\x_2\end{pmatrix} 
+= \frac{1}{\det{A}}\left(\begin{array}{cc}a_{22} & -a_{12} \\-a_{21} & a_{11} \end{array}\right)\,\begin{pmatrix}
+b_1\\
+b_2
+\end{pmatrix}
 ```
 
-from which the following result for the inverse matrix $A^{-1}$ is inferred:
+which is indeed the matrix inverse for a $(2x2)$ matrix.
 
-$$A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} & -a_{12} \\ -a_{22} & a_{11} \end{array}\right)$$
 
-The steps that were carried out here were purely algebraic manipulations, and so we can see that the result for $A^{-1}$ can always be computed, 
-providing that $a_{11} a_{22}-a_{12} a_{21}\neq 0$.
-
-### The (3x3) inverse
-
-We can extend the method used in the previous section to calculate the inverse of higher order matrices. For example, you could have a go at calculating the inverse of a general (3x3) matrix by Gaussian elimination. The algebra would get very tedious.
-
-However, given the systematic nature of Gaussian elimination, you may not be surprised that there is a pattern that can be spotted, which allows the inverse to be calculated by a recursive method. The result is given in the box below.
-
-```{admonition} The (3x3) inverse formula
-
-The inverse of a (3x3) matrix $A$ is given by
-
-$$A^{-1}=\frac{1}{\mathrm{det}(A)}\mathrm{adj}(A)=\frac{1}{\mathrm{det}(A)}C_A^T$$
-
-where $\mathrm{adj}(A)$ is called the **adjugate** matrix and $C_A$ is the (3x3) matrix of cofactors given by
-
-$$(C_A)_{i,j}=(-1)^{i+j}M_{i,j}.$$
-
-The **minors** $M_{i,j}$ are the determinants of the (2x2) matrices formed by deleting the $i$th row and $j$th column of $A$.
-
-The determinant satisfies both of the following results, so you can choose either:
-
-$\displaystyle\mathrm{det}(A)=\sum_{j=1}^3{a_{i,j}C_{i,j}}$ for any choice of row $i$     (expansion by the ith row)
-
-$\displaystyle\mathrm{det}(A)=\sum_{i=1}^3{a_{i,j}C_{i,j}}$ for any choice of row $j$     (expansion by the jth column)
-```
-
-Let's unpack this complicated definition by considering an example for
-
-$$A=\left(\begin{array}{ccc}3 & -2 & 4 \\2 & -2 & 3 \\5 & -1 & 7 \end{array}\right)$$
-
-Then, we have the following cofactors:
-
-$${\scriptsize C_{1,1}=(-1)^{1+1}\left|\begin{array}{cc}-2&3\\-1&7\end{array}\right|=-11, \quad C_{1,2}=(-1)^{1+2}\left|\begin{array}{cc}2&3\\5&7\end{array}\right|=1, \quad C_{1,3}=(-1)^{1+3}\left|\begin{array}{cc}2&-2\\5&-1\end{array}\right|=8,}$$
-
-$${\scriptsize C_{2,1}=(-1)^{2+1}\left|\begin{array}{cc}-2&4\\-1&7\end{array}\right|=10, \quad C_{2,2}=(-1)^{2+2}\left|\begin{array}{cc}3&4\\5&7\end{array}\right|=1, \quad C_{2,3}=(-1)^{2+3}\left|\begin{array}{cc}3&-2\\5&-1\end{array}\right|=-7,}$$
-
-$${\scriptsize C_{3,1}=(-1)^{3+1}\left|\begin{array}{cc}-2&4\\-2&3\end{array}\right|=2, \quad C_{3,2}=(-1)^{3+2}\left|\begin{array}{cc}3&4\\2&3\end{array}\right|=-1, \quad C_{3,3}=(-1)^{3+3}\left|\begin{array}{cc}3&-2\\2&-2\end{array}\right|=-2.}$$
-
-We can find the determinant by expansion of any row or column.
-
-For instance, if we choose to expand by the first row (i=1), we obtain
-
-$\mathrm{det}(A)=a_{1,1}C_{1,1}+a_{1,2}C_{1,2}+a_{1,3}C_{1,3} = 3(-11) -2(1) +4(8)=-3$
-
-You may pick any other row or column to expand and you will obtain the same result. For instance, expanding by the third column gives
-
-$\mathrm{det}(A)=a_{1,3}C_{1,3}+a_{2,3}C_{2,3}+a_{3,3}C_{3,3} = 4(8) +3(-7) +7(-2)=-3$
-
-The inverse matrix is given by
-
-$A^{-1}=\frac{-1}{3}\left(\begin{array}{ccc}-11&10&2\\1&1&-1\\8&-7&-2\end{array}\right)$
-
-```{exercise}
-:label: three_by_three_inverse
-
-Calculate the inverse of the matrices $A$ and $B$. Check your answer by checking that $A^{-1}A=I$ and $B^{-1}B=I$.
-
-1\.
-
-$$A = \begin{pmatrix}3&0&2\\2&0&-2\\
-0&1&1\end{pmatrix}$$
-
-2\.
-
-$$B = \begin{pmatrix}0&4&1\\0&2&1\\
-1&1&1\end{pmatrix}$$
-```
 
 ### Inverse of the Matrix Product
 
-By associativity of matrix multiplication,
+By associativity of matrix multiplication:
 
-$$(A^{-1}B^{-1})(BA) = A^{-1}(B^{-1}B)A = A^{-1}IA=A^{-1}A=I$$
+```{math}
+(A^{-1}B^{-1})(BA) = A^{-1}(B^{-1}B)A = A^{-1}IA=A^{-1}A=I
+```
 
-Therefore,
+Therefore we can see that:
 
-$$(BA)^{-1} = A^{-1}B^{-1}$$
+```{math}
+(BA)^{-1} = A^{-1}B^{-1}
+```
 
-This result satisfies the "common sense" idea (seen in function composition) that inversion comes in reverse order. If transform B follows transform A then we have to reverse transform B before reversing A. We remove the outer operation first.
+This result satisfies the "common sense" idea (seen in function composition) that inversion comes in reverse order. If transform $B$ follows transform $A$ 
+then we have to reverse transform B before reversing A. We remove the outer operation first.
 
-We can liken the result to the operation of getting dressed/undressed: If you put your socks on before your shoes, you have to take your shoes off before you can remove your socks!
-
-
+We can liken the result to the operation of getting dressed/undressed: If you put your socks on before your shoes, you have to take your shoes off before 
+you can remove your socks!
 

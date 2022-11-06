@@ -4,6 +4,7 @@ We can think of vectors at their heart as directions being given to get between 
 we can attempt to give directions.  At the heart of a any vector system are the <b>basis vectors</b>, these give us the funadmental possible directions within a vector space, which any vector can be
 decompsoed into a weighted sum of.
 
+````{admonition} Defintion
 In the Cartesian coordinate system, in three dimensions the basis vectors are given as:
 
 ```{math}
@@ -23,7 +24,9 @@ In the Cartesian coordinate system, in three dimensions the basis vectors are gi
  1 
 \end{pmatrix}
 ```
-and when we switch to different coordinate systems, we will consider how these change.  Note that a variety of different letters are employed for the Cartessian system:
+````
+
+When we switch to different coordinate systems, we will consider how these change.  Note that a variety of different letters are employed for the Cartessian system:
 ```{math}
 
 \hat{\bf x} &=  {\bf e_x} = \vec{x} = \hat{\bf i}\\
@@ -146,18 +149,19 @@ As an example lets consider $\bf v_1$:
 ## Normalised Vectors
 Each of the basis vectors is a normalised vector $|\hat{\bf x}| = |\hat{\bf y}| = |\hat{\bf z}| = 1$, however if we have a more general vector 
 ${\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}$ moving in some direction, we can also construct a normalised vector:
+````{admonition} Definition
 ```{math}
 \hat{\bf v} = \frac{\bf v}{|\bf v|} = \frac{a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}}{\sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2}}
 ```
-
-As an example lets consider $\bf v_1$:
-
+````
+````{admonition} Example
+:class: seealso
 ```{math}
 \hat{\bf v_1} = \frac{\bf v_1}{|\bf v_1|} = \frac{3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}}{\sqrt{3^2 + 4^2 + 12^2}} = \frac{1}{13}\left(3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}\right)
 ```
+````
 
 ## Scalar Product / Dot Product
-### Geometric Definiton
 Lets consider two vectors $\bf A,\, B$, as shown in {numref}`scalarprojection`.  We can consider the scalar projection of the vector $\bf B$ on to the vector $\bf A$, where we resolve the 
 parallel components of $\bf B$ in the direction of vector $\bf A$.
 
@@ -169,19 +173,21 @@ name: scalarprojection
 <b>Right Pane</b> The scalar projection of the vector $\bf B$ on to the vector $\bf A$, which by trigonometry gives the length $|{\bf B}| \cos\theta$.
 ```
 
-If we multiply these two distances, this is <b>Scalar Product</b> of the vectors:
+If we multiply these two distances, this is known as the **scalar** product of the vectors.
 
+````{admonition} Geometric definition
+The scalar product (also called the **dot** product) is given by:
 ```{math}
 {\bf A \cdot B} = |{\bf A}||{\bf B}|\cos(\theta)
 ```
-also known as the <b>Dot Product</b>.
+````
 
 So we can calculate the scalar projection of $\bf B$ onto vector $\bf A$ using ${\bf A \cdot B} / |{\bf A}|$.  Likewise we can think about the scalar projection of $\bf A$ onto the vector 
-$\bf B$, using ${\bf A \cdot B} / |{\bf B}|$.
+$\bf B$, using $\displaystyle \frac{\bf A \cdot B}{|{\bf B}|}$.
 
 We can also find the magntiude of a vector from $\bf A \cdot A = |A|^2 $.
 
-### Algebraic Definition
+````{admonition} Algebraic definition
 There is another perspective on the scalar product, which is for two vectors with components:
 ```{math}
 {\bf A} &=  a_x\,\hat{\bf x} + a_y\,\hat{\bf y} + a_z\,\hat{\bf z} = \begin{pmatrix}
@@ -195,40 +201,44 @@ There is another perspective on the scalar product, which is for two vectors wit
  b_z 
 \end{pmatrix}
 ```
-then the dot product can be found by:
+the dot product can be found algebraically by:
 ```{math}
 {\bf A \cdot B} = a_x\,b_x + a_y\,b_y + a_z\,b_z= \sum_{i=1}^3 a_i\,b_i
 ```
 where the last expression uses the index notation.
+````
 
 ### Properties of the Dot Product
 
 The dot product of two vectors $\bf a,\, b$ have the following mathematical properties:
 
-- <b>Commutative:
+1\. *Commutative:*
 $\mathbf {a} \cdot \mathbf {b} = \mathbf {b} \cdot \mathbf {a}$
 
-- Distributive over Vector Addition:
+2\. *Distributive over Vector Addition:*
 $  \mathbf {a} \cdot (\mathbf {b} +\mathbf {c} )=\mathbf {a} \cdot \mathbf {b} +\mathbf {a} \cdot \mathbf {c}$
 
-- Bilinear:
+3\. *Bilinear:*
 $ \mathbf {a} \cdot (r\mathbf {b} +\mathbf {c} )=r(\mathbf {a} \cdot \mathbf {b} )+(\mathbf {a} \cdot \mathbf {c} )$
 
-- Scalar Multiplication:
+4\. *Scalar Multiplication:*
 $ (c_{1}\mathbf {a} )\cdot (c_{2}\mathbf {b} )=c_{1}c_{2}(\mathbf {a} \cdot \mathbf {b} )$
 
-- Orthogonal:</b>
+5\. *Orthogonal:*
 Two non-zero vectors $\bf a,\, b$ are orthogonal if and only if $\bf a \cdot b = 0$.
 
 ## Vector Product / Cross Product
-### Geometric Definition
-Unsurprisingly we can also make a vector product that results in a vector, rather than a scalar.  This <b>Vector Product</b>, also known as the <b>Cross Product</b>,
-can be constructed from the basis vectors:
+
+Unsurprisingly we can also make a vector product that results in a vector, rather than a scalar, this is known as the **Vector** product, also caleed the **Cross** product.
+
+````{admonition} Geometric definition
+The cross product can be constructed from the basis vectors:
 ```{math}
 \hat{\bf x} \times \hat{\bf y} &=  \hat{\bf z} \\
 \hat{\bf y} \times \hat{\bf z} &=  \hat{\bf x} \\
 \hat{\bf z} \times \hat{\bf x} &=  \hat{\bf y} 
 ```
+````
 In general however we write the cross product between two vectors as a new vector, normal to the other two (following the right hand rule), as depicted in 
 {numref}`VectorProduct`.
 
@@ -270,7 +280,6 @@ the answer is zero:
 ```
 where $\bf 0$ is a zero vector.
 
-### Algebraic Definition
 Once again there is also an algebraic route to the cross product, this is based on the vector components.  
 
 Since the cross product is distributive over addition we find that:
@@ -289,7 +298,8 @@ If we follow through our rules for computing the cross products of basis vectors
 							= {} &(a_y\,b_z - a_z\,b_y)\hat{\bf x} + (a_z\,b_x - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
 ```
 
-Finding the cross product can also be found using a matrix determinant:
+````{admonition} Algebraic definition
+Finding the cross product can  be found using a matrix determinant:
 
 ```{math}
  \mathbf{a}\times\mathbf{b} = \begin{vmatrix}
@@ -314,6 +324,7 @@ which by the cofactor method along the first row produces:
 &=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
 ```
 which we find are equivalent definitions.
+````
 
 ## Triple Vector Products
 Now that we have multiplcation of two vectors formalised, we find that multiplying three vectors also leads to some further geometric and algebraic ideas.
@@ -507,17 +518,22 @@ So, we could write:
 ```
 
 
-By way of an example, lets find the equation of the plane through the point $(3,\,2,\,7)$ which is perpendicular to the vector 
-$\begin{pmatrix} 1\\-5\\8\end{pmatrix}$.
+````{admonition} Worked example
+:class: seealso
 
-In the scalar form we have:
+Find equation of the plane going through the point $(3,\,2,\,7)$ which is perpendicular to the vector:
+```{math}
+\begin{pmatrix} 1\\-5\\8\end{pmatrix}
+```
+
+In the scalar form we can write $({\bf r - r_0})\cdot {\bf n} = 0$ as:
 ```{math}
 \begin{pmatrix} x-3\\y-2\\z-7\end{pmatrix}\cdot \begin{pmatrix} 1 \\-5\\8\end{pmatrix} = 0
 ```
-which gives $x - 5y + 8z = 49$
+which gives the scalar equation $x - 5y + 8z = 49$
 
-Equally in the cector form, first we must find two vectors which lie in the plane - we can use our scalar equation to find these, 
-e.g. $(1,\,0,\,6)$ and $0,\,1,\,27/4)$, thus we can find the vectors:
+Equally in the vector form, firstly find two vectors which lie in the plane - we can use our scalar equation to find these, 
+e.g. $(1,\,0,\,6)$ and $\displaystyle \Big(0,\,1,\,\frac{27}{4}\Big)$, thus we can find the vectors:
 ```{math}
 {\bf v_1} &=  \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(1,\,0,\,6)} = \begin{pmatrix} -2 \\ -2 \\ -1\end{pmatrix}\\
 {\bf v_2} &=  \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(0,\,1,\,27/4)} = \begin{pmatrix} -3 \\ -1 \\ -1/4 \end{pmatrix}
@@ -528,6 +544,7 @@ and therefore we have:
 {\bf r} = \lambda\begin{pmatrix} -2\\-2\\-1 \end{pmatrix} + \mu\begin{pmatrix} -3\\-1\\-1/4\end{pmatrix} + \begin{pmatrix} 1\\-5\\8\end{pmatrix}
 ```
 which is just one of an infinite number of solutions!
+````
 
 ### Distance between a Point and a Line
 
@@ -556,8 +573,13 @@ Alternatively, we could use the scalar product, since
 
 in which the parallel component $\overrightarrow{AC}_{\parallel}$ is simply the projection of $\overrightarrow{AC}$ onto $\overrightarrow{AB}$.
 
-An example would be to find the shortest distance between the point $C:(5,0,5)$ and the line that passes through the points $A:(1,1,3)$ and 
-$B:(3,4,2)$.  By using the vector product:
+````{admonition} Worked example
+:class: seealso
+
+Find the shortest distance between the point $C:(5,0,5)$ and the line that passes through the points $A:(1,1,3)$ and 
+$B:(3,4,2)$.  
+
+By using the vector product:
 
 ```{math}
 \overrightarrow{AB}\times\overrightarrow{AC} &=  \begin{vmatrix}\hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\2&3&-1\\4&-1&2\end{vmatrix} =
@@ -568,12 +590,11 @@ d &=  \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}
 Or by using the scalar product:
 
 ```{math}
-\overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix}\\
-\overrightarrow{AC} &=  \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
-|\overrightarrow{AC}_{\parallel}| &=  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}
-d &=  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
+\overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix},\quad \overrightarrow{AC} =  \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
+|\overrightarrow{AC}_{\parallel}| =  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}&=\frac{3}{\sqrt{14}}
+d =  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
 ```
-
+````
    
 
 ### Shortest Distance to a Plane
@@ -605,21 +626,25 @@ The shortest distance between two skew lines illustrated.
 ```
    
 
-An example here would be to find the shortest distance between the planes:
+````{admonition} Worked example
+:class: seealso
+
+Find the shortest distance between the planes:
 
 ```{math}
 P_1:&&\, 3x-2y+4z=12 \\
 P_2:&&\, 6x-4y+8z=8
 ```
 
-Given that the two planes are parallel, with normal direction 
+Given that the two planes are parallel, with normal direction:
 ```{math}
 {\bf n}=\left(\begin{array}{c}3\\-2\\4\end{array}\right)
 ```
 
-We have to pick a point on each plane - For example, on $P_1$ lets pick the point $A:(0,0,3)$ and on $P_2$ lets pick the point $B:(0,0,1)$. 
-The distance between the two planes is therefore given by:
+We have to pick a point on each plane - e.g. on $P_1$ pick $A:(0,0,3)$ and on $P_2$ pick $B:(0,0,1)$, then the distance between the two planes is 
+given by:
 
 ```{math}
 |\overrightarrow{AB}.\hat{{\bf n}}|=\frac{|(0,0,-2).(3,2,-4)|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}
 ```
+````

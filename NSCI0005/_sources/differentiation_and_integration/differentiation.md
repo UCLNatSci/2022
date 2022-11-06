@@ -733,7 +733,7 @@ which is the same result we obtained in the examples earlier, where it was also 
 
 
 
-```{admonition} Further Practice Questions
+````{admonition} Further Practice Questions
 :class: seealso, dropdown
 
 1\. Given that $x(t)=2^t$, calculate $\ddot{x}$.
@@ -747,7 +747,7 @@ x=\cos(\theta), \quad y=\sin(\theta)
 
 calculate $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$ using parametric differentiation.
 
-```
+````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
