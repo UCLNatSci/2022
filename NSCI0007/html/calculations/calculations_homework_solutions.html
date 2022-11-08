@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.4.1. Homework Solutions &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Tutorial 3: Functions
+     3.2. Workshop 3: Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -288,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2d_arrays/2d_arrays.html">
-   4. Tutorial 4: Measuring Space
+  <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
+   4. Modelling Space
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -299,8 +303,32 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
-     4.4. Further Arrays
+     4.1. Notes
     </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+     4.2. Workshop
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
+     4.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
   </ul>
  </li>
@@ -551,7 +579,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="homework-solutions">
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-solutions">
 <span id="calculations-homework-answers"></span><h1><span class="section-number">1.4.1. </span>Homework Solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this headline">#</a></h1>
 <p>We can calculate how many digits there are in a number by repeatedly dividing by 10 until the number is less than one.</p>
 <ol class="simple">
@@ -560,7 +588,7 @@ title="Print to PDF"
 <li><p>Test your program with a variety of numbers.</p></li>
 <li><p>Extend your program so that it works for negative numbers.</p></li>
 </ol>
-<div class="section" id="pseudocode">
+<section id="pseudocode">
 <h2><span class="section-number">1.4.1.1. </span>Pseudocode<a class="headerlink" href="#pseudocode" title="Permalink to this headline">#</a></h2>
 <p>This is one way to write the pseudocode. Yours might be different. If you gave your pseudocode to your friend, could they easily turn it into a Python program?</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -575,8 +603,8 @@ Display n_digits</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="implementation">
+</section>
+<section id="implementation">
 <h2><span class="section-number">1.4.1.2. </span>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -604,8 +632,8 @@ Display n_digits</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="testing">
+</section>
+<section id="testing">
 <h2><span class="section-number">1.4.1.3. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h2>
 <p>When we write a program it is important to check that it works as expected in different scenarios. To do this, we need to consider different scenarios the program might encounter, and how we would expect a ‘correct’ program to behave.</p>
 <p>For this program, some scenarios we might like to test are:</p>
@@ -755,8 +783,8 @@ Display n_digits</p>
 </div>
 </div>
 <p>The number is less than one, so we don’t enter the while loop. In this case, -1 has 1 digit, so we need to change the program</p>
-</div>
-<div class="section" id="extending">
+</section>
+<section id="extending">
 <h2><span class="section-number">1.4.1.4. </span>Extending<a class="headerlink" href="#extending" title="Permalink to this headline">#</a></h2>
 <p>First, let’s think about how we can change the pseudo-code so that the program works for negative numbers.</p>
 <p>We know that a negative number, <span class="math notranslate nohighlight">\(-n\)</span>, has the same number of digits as the positive number <span class="math notranslate nohighlight">\(n\)</span>. So to make the program work for negative numbers, we just need to check whether the input is negative, and if it is, turn it into a positive number with the same number of digits.</p>
@@ -833,8 +861,8 @@ Display n_digits</p>
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

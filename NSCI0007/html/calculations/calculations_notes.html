@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.2. Fundamentals &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -493,9 +497,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fundamentals">
+  <section class="tex2jax_ignore mathjax_ignore" id="fundamentals">
 <h1><span class="section-number">1.2. </span>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">#</a></h1>
-<div class="section" id="arithmetic">
+<section id="arithmetic">
 <h2><span class="section-number">1.2.1. </span>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">#</a></h2>
 <p>Python supports basic arithmetic operations addition, subtraction, multiplication and division using the symbols <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">/</span></code>. Brackets are used to indicate the order in which the parts of an expression are computed. For example, in the following expression, the division is performed first and then the addition.</p>
 <div class="cell docutils container">
@@ -536,7 +540,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="arithmetic-operators">
+<section id="arithmetic-operators">
 <h3><span class="section-number">1.2.1.1. </span>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">#</a></h3>
 <p>The following arithmetic operators are available in Python. Modulo and Floor division are explained in <a class="reference internal" href="#fundamentals-modulo-arithmetic"><span class="std std-numref">Section 1.2.6</span></a>.</p>
 <table class="colwidths-auto table">
@@ -569,9 +573,9 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="number-types">
+</section>
+</section>
+<section id="number-types">
 <h2><span class="section-number">1.2.2. </span>Number Types<a class="headerlink" href="#number-types" title="Permalink to this headline">#</a></h2>
 <p>Every Python variable has a <strong>data type</strong> as well as a value. The type determines what operations can be performed on the variable and how it is stored in the computer’s memory. Python supports a number of primitive data types including numbers, strings, lists and files and in particular there are two number types: <strong>integers</strong> and <strong>floating point numbers</strong>. When we specify a number in code it is important to understand which type we are creating:</p>
 <table class="colwidths-auto table">
@@ -611,22 +615,22 @@ title="Print to PDF"
 <div class="exercise admonition" id="exercise_1_1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Use Python to calculate the value of <span class="math notranslate nohighlight">\(\frac{-5 + \sqrt{5^2 - 4}}{2}\)</span>.</p>
 <p>Hint: <span class="math notranslate nohighlight">\(\sqrt{x} = x^{0.5}\)</span>.</p>
-</div>
+</section>
 </div>
 <div class="solution dropdown admonition" id="calculations/calculations_notes-solution-1">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_1_1">Solution to Exercise 1.1</a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_1_1"> Exercise 1.1</a></p>
+<section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">-</span><span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
 </div>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="variables">
+</section>
+<section id="variables">
 <h2><span class="section-number">1.2.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
 <p>A <strong>variable</strong> is a named storage location in the computer’s memory. We store a value in a variable so that we can use it later in our computations.</p>
 <p>We use <strong>assignment</strong> to set the value of a variable:</p>
@@ -671,7 +675,7 @@ The value of double_speed: 70
 <div class="exercise admonition" id="exercise_1_2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Complete the following code so that it prints the <strong>two</strong> solutions to the quadratic equation <span class="math notranslate nohighlight">\(x^2 + 5x + 4 = 0\)</span>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
@@ -682,12 +686,12 @@ The value of double_speed: 70
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positive Solution:&quot;</span><span class="p">,</span> <span class="n">pos_solution</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+</section>
 </div>
 <div class="solution dropdown admonition" id="calculations/calculations_notes-solution-3">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_1_2">Solution to Exercise 1.2</a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_1_2"> Exercise 1.2</a></p>
+<section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mi">4</span>
@@ -699,7 +703,7 @@ The value of double_speed: 70
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Negative Solution:&quot;</span><span class="p">,</span> <span class="n">neg_solution</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+</section>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -719,8 +723,8 @@ The value of double_speed: 70
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="updating-variables">
+</section>
+<section id="updating-variables">
 <h2><span class="section-number">1.2.4. </span>Updating Variables<a class="headerlink" href="#updating-variables" title="Permalink to this headline">#</a></h2>
 <p>We can use assignment to change the value of a variable. In this case, the same variable appears on both sides of the equals sign:</p>
 <div class="cell docutils container">
@@ -744,7 +748,7 @@ New speed: 37
 <div class="exercise admonition" id="exercise_1_3">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.3 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Complete the code below so that it divides <code class="docutils literal notranslate"><span class="pre">v</span></code> by <code class="docutils literal notranslate"><span class="pre">5</span></code> three times, printing its value each time.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v:&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
@@ -760,12 +764,12 @@ New speed: 37
 <span class="n">v</span><span class="p">:</span> <span class="mf">8.0</span>
 </pre></div>
 </div>
-</div>
+</section>
 </div>
 <div class="solution dropdown admonition" id="calculations/calculations_notes-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_1_3">Solution to Exercise 1.3</a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_1_3"> Exercise 1.3</a></p>
+<section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v:&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="mi">5</span>
@@ -776,10 +780,10 @@ New speed: 37
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v:&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="getting-help">
+</section>
+<section id="getting-help">
 <h2><span class="section-number">1.2.5. </span>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">print</span></code> is the first of many Python in-built functions that we will study.</p>
 <p>You can find out more about Python functions by using the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function. Let’s learn about the <code class="docutils literal notranslate"><span class="pre">print</span></code> function.</p>
@@ -818,8 +822,8 @@ print(...)
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="modulo-arithmetic">
+</section>
+<section id="modulo-arithmetic">
 <span id="fundamentals-modulo-arithmetic"></span><h2><span class="section-number">1.2.6. </span>Modulo Arithmetic<a class="headerlink" href="#modulo-arithmetic" title="Permalink to this headline">#</a></h2>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator results in a floating-point (decimal) value:</p>
 <div class="cell docutils container">
@@ -860,7 +864,7 @@ print(...)
 </div>
 </div>
 </div>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3><span class="section-number">1.2.6.1. </span>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is useful to determine if a variable is divisible by a number. For example, if a number is even its remainder after dividing by 2 is zero; if it is odd its remainder after dividing by 2 is 1:</p>
 <div class="cell docutils container">
@@ -879,8 +883,8 @@ print(...)
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3><span class="section-number">1.2.6.2. </span>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
 <p>Suppose we have 1234 pennies in the piggy-bank. How much do we have in pounds and pence? First we divide by 100 to get the whole number of pounds:</p>
 <div class="cell docutils container">
@@ -911,9 +915,9 @@ print(...)
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="repeating-code-using-while">
+</section>
+</section>
+<section id="repeating-code-using-while">
 <h2><span class="section-number">1.2.7. </span>Repeating code using <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#repeating-code-using-while" title="Permalink to this headline">#</a></h2>
 <p>A <strong>loop</strong> is a sequence of instructions which is executed repeatedly until a goal is reached. The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop repeats a section of code while a specific condition is true.</p>
 <p>The following loop repeatedly divides the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> by <code class="docutils literal notranslate"><span class="pre">5</span></code> while the condition <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">&gt;</span> <span class="pre">10</span></code> is true.</p>
@@ -937,7 +941,7 @@ v: 40.0
 <div class="exercise admonition" id="exercise_1_4">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.4 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Write a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop which <strong>multiplies</strong> <code class="docutils literal notranslate"><span class="pre">v</span></code> by <code class="docutils literal notranslate"><span class="pre">5</span></code> while <code class="docutils literal notranslate"><span class="pre">v</span></code> is <strong>less</strong> than <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">10</span>
 
@@ -950,12 +954,12 @@ v: 40.0
 <span class="n">v</span><span class="p">:</span> <span class="mi">250</span>
 </pre></div>
 </div>
-</div>
+</section>
 </div>
 <div class="solution dropdown admonition" id="calculations/calculations_notes-solution-7">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_1_4">Solution to Exercise 1.4</a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_1_4"> Exercise 1.4</a></p>
+<section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="k">while</span> <span class="p">(</span><span class="n">v</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">):</span>
@@ -963,10 +967,10 @@ v: 40.0
     <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="mi">5</span>
 </pre></div>
 </div>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="if-statement">
+</section>
+<section id="if-statement">
 <h2><span class="section-number">1.2.8. </span><code class="docutils literal notranslate"><span class="pre">If</span></code> statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">#</a></h2>
 <p>The specific heat capacity of water depends on whether it is in a solid, liquid or gaseous state.</p>
 <table class="colwidths-auto table">
@@ -1041,7 +1045,7 @@ v: 40.0
 <div class="exercise admonition" id="exercise_1_5">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.5 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Complete the code below so that it prints</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">even</span></code></p>
 <p>if is <code class="docutils literal notranslate"><span class="pre">x</span></code> is divisible by <code class="docutils literal notranslate"><span class="pre">2</span></code> and prints</p>
@@ -1057,12 +1061,12 @@ v: 40.0
 </pre></div>
 </div>
 <p>Check that your code works by changing the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> and running the code again.</p>
-</div>
+</section>
 </div>
 <div class="solution dropdown admonition" id="calculations/calculations_notes-solution-9">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_1_5">Solution to Exercise 1.5</a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_1_5"> Exercise 1.5</a></p>
+<section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">53783</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -1071,10 +1075,10 @@ v: 40.0
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is odd&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

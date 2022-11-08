@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4. Further Practice &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Tutorial 3: Functions
+     3.2. Workshop 3: Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -288,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2d_arrays/2d_arrays.html">
-   4. Tutorial 4: Measuring Space
+  <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
+   4. Modelling Space
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -299,8 +303,32 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
-     4.4. Further Arrays
+     4.1. Notes
     </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+     4.2. Workshop
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
+     4.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
   </ul>
  </li>
@@ -484,34 +512,34 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="further-practice">
+  <section class="tex2jax_ignore mathjax_ignore" id="further-practice">
 <h1><span class="section-number">2.4. </span>Further Practice<a class="headerlink" href="#further-practice" title="Permalink to this headline">#</a></h1>
 <div class="exercise admonition" id="rate_equations_extra_loops">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.12 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to produce the following output:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">9,</span> <span class="pre">11,</span> <span class="pre">13,</span> <span class="pre">15</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">10,</span> <span class="pre">100,</span> <span class="pre">1000,</span> <span class="pre">10000,</span> <span class="pre">100000</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2</span></code> (hint: use the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator)</p></li>
 </ol>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="rate_equations_extra_weather">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.13 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Look up the predicted daily maximum and minimum temperatures for the next 10 days according to the BBC weather forecast.</p>
 <p><a class="reference external" href="https://www.bbc.co.uk/weather/2643743">https://www.bbc.co.uk/weather/2643743</a></p>
 <p>Create two arrays containing the maximum and minimum temperatures and plot them as two separate lines on a line graph, including axis labels and title. Look up how to add a legend in the <a class="reference external" href="https://matplotlib.org/stable/users/index.html">Matplotlib documentation</a>.</p>
 <a class="reference internal image-reference" href="../_images/temperatures.png"><img alt="../_images/temperatures.png" src="../_images/temperatures.png" style="width: 300px;" /></a>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="rate_equations_extra_moving_average">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.14 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Given an array of numbers, a moving average is an array containing the mean of <code class="docutils literal notranslate"><span class="pre">n</span></code> consecutive elements. For example, the moving average of <code class="docutils literal notranslate"><span class="pre">[1.</span> <span class="pre">2.</span> <span class="pre">3.</span> <span class="pre">4.]</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">2</span></code> is <code class="docutils literal notranslate"><span class="pre">[1.5</span> <span class="pre">2.5</span> <span class="pre">3.5]</span></code>.</p>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">pressure_data</span></code> is an array of atmospheric pressure readings in millibars.</p>
 <p>Create a second variable <code class="docutils literal notranslate"><span class="pre">pressure_smoothed</span></code> which contains the the moving average of <code class="docutils literal notranslate"><span class="pre">pressure_data</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">2</span></code> and plot the two lists on a graph. (The two arrays will not be the same length so you will have to determine what to do about that!)</p>
@@ -519,23 +547,23 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pressure_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1018.3</span><span class="p">,</span> <span class="mf">1018.3</span><span class="p">,</span> <span class="mf">1015.7</span><span class="p">,</span> <span class="mf">1014.3</span><span class="p">,</span> <span class="mf">1011.8</span><span class="p">,</span> <span class="mf">1011.4</span><span class="p">,</span> <span class="mf">1015.5</span><span class="p">,</span> <span class="mf">1016.0</span><span class="p">,</span> <span class="mf">1016.9</span><span class="p">,</span> <span class="mf">1016.8</span><span class="p">,</span> <span class="mf">1016.4</span><span class="p">,</span> <span class="mf">1017.5</span><span class="p">,</span> <span class="mf">1018.8</span><span class="p">,</span> <span class="mf">1018.1</span><span class="p">,</span> <span class="mf">1017.1</span><span class="p">,</span> <span class="mf">1018.4</span><span class="p">,</span> <span class="mf">1022.0</span><span class="p">,</span> <span class="mf">1022.8</span><span class="p">,</span> <span class="mf">1021.8</span><span class="p">,</span> <span class="mf">1020.5</span><span class="p">,</span> <span class="mf">1021.0</span><span class="p">,</span> <span class="mf">1019.8</span><span class="p">,</span> <span class="mf">1018.9</span><span class="p">,</span> <span class="mf">1018.4</span><span class="p">,</span> <span class="mf">1017.8</span><span class="p">,</span> <span class="mf">1018.1</span><span class="p">,</span> <span class="mf">1019.6</span><span class="p">,</span> <span class="mf">1017.4</span><span class="p">,</span> <span class="mf">1015.8</span><span class="p">,</span> <span class="mf">1015.5</span><span class="p">,</span> <span class="mf">1017.5</span><span class="p">,</span> <span class="mf">1018.9</span><span class="p">,</span> <span class="mf">1017.7</span><span class="p">,</span> <span class="mf">1014.4</span><span class="p">,</span> <span class="mf">1014.2</span><span class="p">,</span> <span class="mf">1016.0</span><span class="p">,</span> <span class="mf">1016.1</span><span class="p">,</span> <span class="mf">1015.6</span><span class="p">,</span> <span class="mf">1016.4</span><span class="p">,</span> <span class="mf">1015.7</span><span class="p">,</span> <span class="mf">1016.6</span><span class="p">,</span> <span class="mf">1019.6</span><span class="p">,</span> <span class="mf">1021.6</span><span class="p">,</span> <span class="mf">1021.4</span><span class="p">,</span> <span class="mf">1020.6</span><span class="p">,</span> <span class="mf">1017.6</span><span class="p">,</span> <span class="mf">1016.5</span><span class="p">,</span> <span class="mf">1016.2</span><span class="p">,</span> <span class="mf">1013.0</span><span class="p">,</span> <span class="mf">1005.4</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1012.2</span><span class="p">,</span> <span class="mf">1015.2</span><span class="p">,</span> <span class="mf">1016.1</span><span class="p">,</span> <span class="mf">1014.3</span><span class="p">,</span> <span class="mf">1012.4</span><span class="p">,</span> <span class="mf">1014.2</span><span class="p">,</span> <span class="mf">1013.1</span><span class="p">,</span> <span class="mf">1012.9</span><span class="p">,</span> <span class="mf">1012.1</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1010.0</span><span class="p">,</span> <span class="mf">1010.5</span><span class="p">,</span> <span class="mf">1010.3</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1008.9</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1006.9</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1014.8</span><span class="p">,</span> <span class="mf">1014.9</span><span class="p">,</span> <span class="mf">1016.6</span><span class="p">,</span> <span class="mf">1014.1</span><span class="p">,</span> <span class="mf">1011.1</span><span class="p">,</span> <span class="mf">1010.7</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1011.9</span><span class="p">,</span> <span class="mf">1012.6</span><span class="p">,</span> <span class="mf">1011.8</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1008.9</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1009.9</span><span class="p">,</span> <span class="mf">1010.2</span><span class="p">,</span> <span class="mf">1009.5</span><span class="p">,</span> <span class="mf">1009.0</span><span class="p">,</span> <span class="mf">1007.1</span><span class="p">,</span> <span class="mf">1007.1</span><span class="p">,</span> <span class="mf">1007.5</span><span class="p">,</span> <span class="mf">1005.0</span><span class="p">,</span> <span class="mf">1004.2</span><span class="p">,</span> <span class="mf">1004.2</span><span class="p">,</span> <span class="mf">1007.2</span><span class="p">,</span> <span class="mf">1005.0</span><span class="p">,</span> <span class="mf">1002.9</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1010.4</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1008.6</span><span class="p">,</span> <span class="mf">1006.2</span><span class="p">,</span> <span class="mf">1005.9</span><span class="p">,</span> <span class="mf">1006.8</span><span class="p">,</span> <span class="mf">1004.6</span><span class="p">,</span> <span class="mf">1002.4</span><span class="p">,</span> <span class="mf">1003.2</span><span class="p">,</span> <span class="mf">1004.4</span><span class="p">,</span> <span class="mf">1003.1</span><span class="p">,</span> <span class="mf">1000.9</span><span class="p">,</span> <span class="mf">998.6</span><span class="p">,</span> <span class="mf">999.9</span><span class="p">,</span> <span class="mf">1001.6</span><span class="p">,</span> <span class="mf">1002.1</span><span class="p">,</span> <span class="mf">1004.1</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="rate_equations_extra_cannon">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.15 </span> (Challenge)</p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>A cannon located at position <span class="math notranslate nohighlight">\(x = 0, y = 0\)</span> fires a cannonball at an angle <span class="math notranslate nohighlight">\(\theta\)</span> from the horizontal (measured in radians) and speed <span class="math notranslate nohighlight">\(s\)</span> m/s. Write a program which plots a graph of the cannonball’s trajectory.</p>
 <a class="reference internal image-reference" href="../_images/cannon.jpg"><img alt="cannon" src="../_images/cannon.jpg" style="width: 200px;" /></a>
 <p>(Hint: Create arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> for the x and y coordinates and <code class="docutils literal notranslate"><span class="pre">vx</span></code> and <code class="docutils literal notranslate"><span class="pre">vy</span></code> for the x and y velocities. Set the initial positions <code class="docutils literal notranslate"><span class="pre">x[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">y[0]</span></code> to zero and velocities <code class="docutils literal notranslate"><span class="pre">vx[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">vy[0]</span></code> to <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">*</span> <span class="pre">np.cos(theta)</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">*</span> <span class="pre">np.sin(theta)</span></code>. At each time step, update the positions using <code class="docutils literal notranslate"><span class="pre">x[i+1]</span> <span class="pre">=</span> <span class="pre">x[i]</span> <span class="pre">+</span> <span class="pre">vx[i]</span> <span class="pre">*</span> <span class="pre">DELTA_T</span></code> and <code class="docutils literal notranslate"><span class="pre">y[i+1]</span> <span class="pre">=</span> <span class="pre">y[i]</span> <span class="pre">+</span> <span class="pre">vy[i]</span> <span class="pre">*</span> <span class="pre">DELTA_T</span></code>. Update the velocity <code class="docutils literal notranslate"><span class="pre">vy[i+1]</span> <span class="pre">=</span> <span class="pre">vy[i]</span> <span class="pre">-</span> <span class="pre">g</span> <span class="pre">*</span> <span class="pre">DELTA_T</span></code>. The x velocity remains constant <code class="docutils literal notranslate"><span class="pre">vx[i+1]</span> <span class="pre">=</span> <span class="pre">vx[i]</span></code>).</p>
 <p>Extend your program so that it prints <code class="docutils literal notranslate"><span class="pre">hit</span></code> or <code class="docutils literal notranslate"><span class="pre">miss</span></code> depending if the cannonball lands less than 20m from a target placed at a distance <code class="docutils literal notranslate"><span class="pre">dis</span></code> from the cannon.</p>
 <a class="reference internal image-reference" href="../_images/cannon_output.png"><img alt="cannon output" src="../_images/cannon_output.png" style="width: 200px;" /></a>
 <p><code class="docutils literal notranslate"><span class="pre">hit</span></code></p>
-</div>
+</section>
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

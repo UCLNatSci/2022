@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.5. Further Practice &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -325,23 +329,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="further-practice">
+  <section class="tex2jax_ignore mathjax_ignore" id="further-practice">
 <h1><span class="section-number">1.5. </span>Further Practice<a class="headerlink" href="#further-practice" title="Permalink to this headline">#</a></h1>
 <div class="exercise admonition" id="calculations_extra_factorial">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.16 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Recall the definition of factorial of a number <span class="math notranslate nohighlight">\(n\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[n! = n \times (n-1) \times \ldots \times 2 \times 1.\]</div>
 <p>We can calculate the factorial of <span class="math notranslate nohighlight">\(n\)</span> by repeated multiplation.</p>
 <p>Write pseudocode for this computation then write Python code that calculates the factorial of any given number.</p>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="calculations_extra_quadratic">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.17 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Write a program which use the quadratic formula to print the solution to the quadratic equation <span class="math notranslate nohighlight">\(ax^2 + bx + c = 0\)</span>, given variables <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. Your program should print:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">solutions</span> <span class="n">are</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
@@ -355,12 +359,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>(Hint: first calculate the discriminant <span class="math notranslate nohighlight">\(b^2-4ac\)</span>).</p>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="calculations_extra_division">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.18 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Given two integers <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> it is possible to perform division-with-remainder by repeatedly subtracting <span class="math notranslate nohighlight">\(m\)</span> from <span class="math notranslate nohighlight">\(n\)</span> until the result is less than <span class="math notranslate nohighlight">\(m\)</span>. For example, to calculate 13 divided by 3:</p>
 <p>13 - 3 = 10<br />
 10 - 3 = 7<br />
@@ -372,12 +376,12 @@ title="Print to PDF"
 <li><p>Turn your pseudocode into a Python program. The result of the calculation should be displayed in words as above.</p></li>
 </ol>
 <p>(hint: you’ll need to create an extra variable to store the original value of <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
-</div>
+</section>
 </div>
 <div class="exercise admonition" id="calculations/calculations_extra-exercise-3">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.19 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>A duration <code class="docutils literal notranslate"><span class="pre">t</span></code> in seconds can be converted to days, hours, minutes and seconds using integer division:</p>
 <ol class="simple">
 <li><p>Divide <code class="docutils literal notranslate"><span class="pre">t</span></code> by 60; set <code class="docutils literal notranslate"><span class="pre">t</span></code> to the quotient and call the remainder <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p></li>
@@ -388,9 +392,9 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1000000</span> <span class="n">seconds</span> <span class="ow">is</span> <span class="n">xx</span> <span class="n">days</span> <span class="n">H</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">S</span>
 </pre></div>
 </div>
+</section>
 </div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

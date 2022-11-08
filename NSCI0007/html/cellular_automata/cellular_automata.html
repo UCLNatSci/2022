@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5. Tutorial 5: Cellular Automata &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -53,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Projects" href="../projects/projects.html" />
-    <link rel="prev" title="4.4. Further Arrays" href="../2d_arrays/2d_arrays_notes.html" />
+    <link rel="prev" title="4.3. Homework" href="../2d_arrays/2d_arrays_homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Tutorial 3: Functions
+     3.2. Workshop 3: Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -288,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2d_arrays/2d_arrays.html">
-   4. Tutorial 4: Measuring Space
+  <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
+   4. Modelling Space
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -299,8 +303,32 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
-     4.4. Further Arrays
+     4.1. Notes
     </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+     4.2. Workshop
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
+     4.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
   </ul>
  </li>
@@ -483,28 +511,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   5.1. Question 1
+  <a class="reference internal nav-link" href="#conway-s-game-of-life">
+   5.1. Conway’s Game of Life
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-the-game-of-life">
+   5.2. Programming the Game of Life
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-2">
-   5.2. Question 2
+   5.3. Question 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-3">
-   5.3. Question 3
+   5.4. Question 3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-4">
-   5.4. Question 4
+   5.5. Question 4
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-5">
-   5.5. Question 5
+   5.6. Question 5
   </a>
  </li>
 </ul>
@@ -527,28 +560,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   5.1. Question 1
+  <a class="reference internal nav-link" href="#conway-s-game-of-life">
+   5.1. Conway’s Game of Life
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-the-game-of-life">
+   5.2. Programming the Game of Life
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-2">
-   5.2. Question 2
+   5.3. Question 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-3">
-   5.3. Question 3
+   5.4. Question 3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-4">
-   5.4. Question 4
+   5.5. Question 4
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-5">
-   5.5. Question 5
+   5.6. Question 5
   </a>
  </li>
 </ul>
@@ -561,29 +599,50 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tutorial-5-cellular-automata">
+  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-5-cellular-automata">
 <h1><span class="section-number">5. </span>Tutorial 5: Cellular Automata<a class="headerlink" href="#tutorial-5-cellular-automata" title="Permalink to this headline">#</a></h1>
-<p>TODO: Introduction to Cellular Automata</p>
-<p>The Rules of the Game</p>
+<p>A cellular automaton is a collection of cells on a rectangular grid that evolves through a number of discrete time steps according to a set of rules based on the states of neighbouring cells. The rules are then applied iteratively for as many time steps as desired.</p>
+<p>You will investigate a cellular automaton model as part of your group project.</p>
+<figure class="align-default" id="epidemic-fig">
+<a class="reference internal image-reference" href="../_images/epidemic.png"><img alt="../_images/epidemic.png" src="../_images/epidemic.png" style="height: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Cellular automata models of the spread of an epidemic on a 2-dimensional grid of cells. Each timestep corresponds to one day <a class="footnote-reference brackets" href="#footcite-gagliardi2010small" id="id1">1</a>.</span><a class="headerlink" href="#epidemic-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="conway-s-game-of-life">
+<h2><span class="section-number">5.1. </span>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">#</a></h2>
+<p>The <strong>Game of Life</strong> is a simple cellular automaton devised by mathematician John Conway in 1970. The automaton mimics the dynamical evolution of “life-forms” existing in the grid of cells <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.2</span></a> shows an example evolution of the Game of Life for two iterations.</p>
+<div class="admonition-the-rules-of-conway-s-game-of-life admonition">
+<p class="admonition-title">The Rules of Conway’s Game of Life</p>
 <ol class="simple">
-<li><p>Start with a square grid of “cells”, each of which is “alive” (black) or “dead” (white).</p></li>
-<li><p>At each step, we count the number of each cell’s 8 immediate neighbours that are alive, and<br />
-a. any live cell with fewer than 2 live neighbours dies<br />
-b. any live cell with more than 3 live neighbours dies<br />
-c. any live cell with 2 or 3 live neighbours lives on<br />
-d. any dead cell with exactly three live neighbours becomes alive, and otherwise stays dead</p></li>
+<li><p>Start with a rectangular grid of cells, each of which is “alive” (black) or “dead” (white).</p></li>
+<li><p>Count the number of each cell’s 8 immediate neighbours that are alive, and<br />
+a. any live cell with fewer than 2 live neighbours dies;<br />
+b. any live cell with more than 3 live neighbours dies;<br />
+c. any live cell with 2 or 3 live neighbours lives on;<br />
+d. any dead cell with exactly three live neighbours becomes alive, and otherwise stays dead.</p></li>
+<li><p>Repeat step 2 as many times as desired.</p></li>
 </ol>
-<p><img alt="" src="../_images/game_of_life_example.png" /></p>
-<div class="section" id="question-1">
-<h2><span class="section-number">5.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
-<p>In this question, you will write code which implements Conway’s Game of Life on an <span class="math notranslate nohighlight">\(n\)</span> by <span class="math notranslate nohighlight">\(n\)</span> grid. Template code is given below - copy and paste this into a new notebook then replace the comments with your own code to get this working.</p>
-<p>NB <code class="docutils literal notranslate"><span class="pre">pass</span></code> is Python keyword which means ‘do nothing’. You will also need to delete this!</p>
-<p>Once you have got your code working, test it out with some of the patterns here.</p>
-<p>Hints</p>
-<ul class="simple">
-<li><p>First get <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> working and test it on specific cells</p></li>
-<li><p>if you’re struggling to get the full Game of Life rules working, first try a ‘simplified’ version. E.g a cell is alive in the next step if <em>any</em> of its neighbours is alive in the current step</p></li>
-</ul>
+</div>
+<figure class="align-default" id="game-of-life-fig">
+<a class="reference internal image-reference" href="../_images/game_of_life_example.png"><img alt="../_images/game_of_life_example.png" src="../_images/game_of_life_example.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Two iterations of the Game of Life on a 5 by 5 grid.</span><a class="headerlink" href="#game-of-life-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The remainder of this workshop involves constructing code to execute the Game of Life</p>
+<div class="exercise admonition" id="cellular_automata/cellular_automata-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
+<section id="exercise-content">
+<p>What would the next iteration of the Game of Life in <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.2</span></a> look like?</p>
+<p>Using pseudocode, sketch an algorithm for calculating one iteration of the Game of Life.</p>
+</section>
+</div>
+</section>
+<section id="programming-the-game-of-life">
+<h2><span class="section-number">5.2. </span>Programming the Game of Life<a class="headerlink" href="#programming-the-game-of-life" title="Permalink to this headline">#</a></h2>
+<p>Below is template code for a Python program which executes a single iteration of the game of life. The first function <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> calculates the number of live neighbours of single cell, whereas the function <code class="docutils literal notranslate"><span class="pre">advance</span></code> calculates the next iteration of the entire grid of cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -637,28 +696,56 @@ grid2:
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="cellular_automata/cellular_automata-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.2 </span></p>
+<section id="exercise-content">
+<p>Complete the function <code class="docutils literal notranslate"><span class="pre">count_neighbours(grid,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> so that it returns the total number of live neighbours of cell <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+<p><strong>Hint:</strong> for cells that aren’t on one of the edges, the following code will calculate the total number of neighours in the 3 by 3 grid of cells centred at <code class="docutils literal notranslate"><span class="pre">i,</span> </code>j`:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
 </div>
-<div class="section" id="question-2">
-<h2><span class="section-number">5.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
+<p>You will need to adapt this code for</p>
+</section>
+</div>
+<p>In this question, you will write code which implements Conway’s Game of Life on an <span class="math notranslate nohighlight">\(n\)</span> by <span class="math notranslate nohighlight">\(n\)</span> grid. Template code is given below - copy and paste this into a new notebook then replace the comments with your own code to get this working.</p>
+<p>NB <code class="docutils literal notranslate"><span class="pre">pass</span></code> is Python keyword which means ‘do nothing’. You will also need to delete this!</p>
+<p>Once you have got your code working, test it out with some of the patterns here.</p>
+<p>Hints</p>
+<ul class="simple">
+<li><p>First get <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> working and test it on specific cells</p></li>
+<li><p>if you’re struggling to get the full Game of Life rules working, first try a ‘simplified’ version. E.g a cell is alive in the next step if <em>any</em> of its neighbours is alive in the current step</p></li>
+</ul>
+</section>
+<section id="question-2">
+<h2><span class="section-number">5.3. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
 <p>Get this working on a 3-d <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">t</span></code> array where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the number of time steps.</p>
 <p>Generate embedded video</p>
-</div>
-<div class="section" id="question-3">
-<h2><span class="section-number">5.3. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="question-3">
+<h2><span class="section-number">5.4. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
 <p>You’ll have noticed that some starting patterns quickly die out, whereas some spawn a complicted series of activity which lasts a long time. To invesitage this, we’d like to generate a line graph which shows the total number of active cells at each timestep.</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">activity_graph(grid)</span></code> which plots a line graph as shown.</p>
-</div>
-<div class="section" id="question-4">
-<h2><span class="section-number">5.4. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="question-4">
+<h2><span class="section-number">5.5. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
 <p>Some starting patterns eventually settle down to an oscillating between states. Write a function which returns the number of states in the cycle.</p>
 <p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cycle_period(grid):</span></code></p>
-</div>
-<div class="section" id="question-5">
-<h2><span class="section-number">5.5. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="question-5">
+<h2><span class="section-number">5.6. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
 <p>Some starting patterns ‘gliders’ oscillate between states, but shifted by a cell in some direction. Write a function which idenfities if a starting pattern is a glider.</p>
 <p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">is_glider(grid):</span></code></p>
+<div class="docutils container" id="id2">
+<dl class="footnote brackets">
+<dt class="label" id="footcite-gagliardi2010small"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Henrique Fabricio Gagliardi and Domingos Alves. Small-world effect in epidemics using cellular automata. <em>Mathematical Population Studies</em>, 17(2):79–90, 2010.</p>
+</dd>
+</dl>
 </div>
-</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -687,11 +774,11 @@ grid2:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../2d_arrays/2d_arrays_notes.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../2d_arrays/2d_arrays_homework.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.4. </span>Further Arrays</p>
+            <p class="prev-next-title"><span class="section-number">4.3. </span>Homework</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../projects/projects.html" title="next page">

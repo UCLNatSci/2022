@@ -4,8 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Tutorial 4: Measuring Space &#8212; Scientific Computing Workbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.2. Workshop 4: Modelling Space &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -36,10 +37,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.4. Further Arrays" href="2d_arrays_notes.html" />
-    <link rel="prev" title="3.4. Homework solutions" href="../functions/functions_answers.html" />
+    <link rel="next" title="4.3. Homework" href="2d_arrays_homework.html" />
+    <link rel="prev" title="4.1. Modelling Space" href="2d_arrays_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -272,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Tutorial 3: Functions
+     3.2. Workshop 3: Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -288,19 +292,43 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   4. Tutorial 4: Measuring Space
+  <a class="reference internal" href="2d_arrays_intro.html">
+   4. Modelling Space
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="2d_arrays_notes.html">
-     4.4. Further Arrays
+     4.1. Notes
     </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     4.2. Workshop
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="2d_arrays_homework.html">
+     4.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
   </ul>
  </li>
@@ -372,35 +400,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2d_arrays/2d_arrays.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -483,18 +482,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   4.1. Question 1
+  <a class="reference internal nav-link" href="#moving-averages">
+   4.2.1. Moving Averages
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   4.2. Question 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   4.3. Question 3
+  <a class="reference internal nav-link" href="#diffusion">
+   4.2.2. Diffusion
   </a>
  </li>
 </ul>
@@ -506,7 +500,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial 4: Measuring Space</h1>
+                <h1>Workshop 4: Modelling Space</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -517,18 +511,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   4.1. Question 1
+  <a class="reference internal nav-link" href="#moving-averages">
+   4.2.1. Moving Averages
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   4.2. Question 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   4.3. Question 3
+  <a class="reference internal nav-link" href="#diffusion">
+   4.2.2. Diffusion
   </a>
  </li>
 </ul>
@@ -541,332 +530,165 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tutorial-4-measuring-space">
-<h1><span class="section-number">4. </span>Tutorial 4: Measuring Space<a class="headerlink" href="#tutorial-4-measuring-space" title="Permalink to this headline">#</a></h1>
-<p>[todo] About scalar fields in 2d and 3d. Eg in 3d the temperature of solid body, density of matter inside the brain. In 2d the atmospheric air pressure across a region. Can measure or calculate - and investigate by taking slices. Could be physical space, or time, or even parameters in another model.</p>
-<p>Suppose we have a 2-dimensional scalar field given by the following formula, which describes the height of a hemisphere embedded in a 2d-plane.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="workshop-4-modelling-space">
+<h1><span class="section-number">4.2. </span>Workshop 4: Modelling Space<a class="headerlink" href="#workshop-4-modelling-space" title="Permalink to this headline">#</a></h1>
+<section id="moving-averages">
+<h2><span class="section-number">4.2.1. </span>Moving Averages<a class="headerlink" href="#moving-averages" title="Permalink to this headline">#</a></h2>
+<p>A <strong>moving average</strong> is commonly used when visualising time series data in order to smooth out short-term fluctuations in the data. <a class="reference internal" href="#moving-average"><span class="std std-numref">Fig. 4.2</span></a> shows 113 days of atmospheric pressure are displayed along with the 10-day and 5-day moving averages.</p>
+<figure class="align-default" id="moving-average" style="width: 600px">
+<div class="cell_output docutils container">
+<img alt="../_images/2d_arrays_1_0.png" src="../_images/2d_arrays_1_0.png" />
+</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Atmospheric pressure measured for 113 consecutive days, along with 10-day and 5-day moving averages, where the <span class="math notranslate nohighlight">\(k\)</span>-day moving averages are taken over <span class="math notranslate nohighlight">\(2k+1\)</span> measurements centred at each day.</span><a class="headerlink" href="#moving-average" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In this workshop, we define the <strong>k-moving average</strong> of an array is the array formed by averaging <span class="math notranslate nohighlight">\(k\)</span> values on either side of each element (a total of <span class="math notranslate nohighlight">\(2k + 1\)</span> elements). For example, given a sequence of values <span class="math notranslate nohighlight">\(x_i\)</span> then the 1-moving average <span class="math notranslate nohighlight">\(y_i\)</span> is defined by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-  f(x, y) = 
-  \begin{cases}
-    \sqrt{R^2-\left(x^2+y^2\right)} &amp; \text{if } x^2 + y^2 &lt; R^2 \\
-    0 &amp; \text{otherwise }
-  \end{cases}
-\end{align}
-\end{split}\]</div>
-<div class="section" id="question-1">
-<h2><span class="section-number">4.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
-<p><strong>Complete the function <code class="docutils literal notranslate"><span class="pre">sphere_height(x_pos,</span> <span class="pre">y_pos,</span> <span class="pre">radius)</span></code> so that it returns the correct value of the function <span class="math notranslate nohighlight">\(f\)</span>.</strong></p>
-<p><strong>Check the two tests work and write a third test with values of <code class="docutils literal notranslate"><span class="pre">x_pos</span></code>, <code class="docutils literal notranslate"><span class="pre">y_pos</span></code>, and <code class="docutils literal notranslate"><span class="pre">radius</span></code> of your choice.</strong></p>
+\[y_i = (x_{i-1} + x_i + x_{i+1})/3.\]</div>
+<p>We can calculate the 1-moving average in Python as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="k">def</span> <span class="nf">sphere_height</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
-    <span class="n">val</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># replace this line with your code!</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">])</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1-moving average:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-moving average: [0.         3.13333333 3.5        4.         3.66666667 4.
+ 0.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A more compact way to calculate the sum of consecutive elements is using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> slice notation. We can replace <code class="docutils literal notranslate"><span class="pre">(x[i-1]</span> <span class="pre">+</span> <span class="pre">x[i]</span> <span class="pre">+</span> <span class="pre">x[i+1])/3</span></code> with <code class="docutils literal notranslate"><span class="pre">np.average(x[i-1:i+2])</span></code>. <code class="docutils literal notranslate"><span class="pre">x[a,</span> <span class="pre">b]</span></code> represents the subarray from <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">b</span></code> (<em>including</em> the lower limit but <em>excluding</em> the upper limt).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1-moving average:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 moving average: [0.         3.13333333 3.5        4.         3.66666667 4.
+ 0.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that when <code class="docutils literal notranslate"><span class="pre">i=0</span></code> or <code class="docutils literal notranslate"><span class="pre">i=n</span></code> the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1,i+2]</span></code> would include elements outside the bounds of the array <code class="docutils literal notranslate"><span class="pre">x</span></code>. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop therefore excludes the first and last element in its <code class="docutils literal notranslate"><span class="pre">range</span></code> function and we end up with zeros padding the start and end of the array.</p>
+<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p>Calculate the 5-moving average of <code class="docutils literal notranslate"><span class="pre">x</span></code>. You should get the following result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">3.6</span>  <span class="mf">3.88</span> <span class="mf">3.5</span>  <span class="mf">0.</span>   <span class="mf">0.</span>  <span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
+<section id="exercise-content">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">k)</span></code> which returns an array containing the <code class="docutils literal notranslate"><span class="pre">k</span></code>-moving average of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="c1"># your code</span>
     
-    <span class="n">w</span> <span class="o">=</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">x_pos</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y_pos</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">w</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Check that <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">2)</span></code> produce the correct 1- and 2-moving averages as previously calculated.</p>
+</section>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">):</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
     
-    <span class="k">return</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="n">y</span>
 
-<span class="n">h</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="c1"># should print 1</span>
-<span class="n">h</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="c1"># should print 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
-0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.   0.   3.6  3.88 3.5  0.   0.  ]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Next we will create a 2-dimensional array to store the value of the function across a range of values of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
-<p>First let’s create a length 10 array and</p>
-</div>
-<div class="section" id="question-2">
-<h2><span class="section-number">4.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
-<p><strong>Complete the following code so that it creates a <span class="math notranslate nohighlight">\(6\)</span> by <span class="math notranslate nohighlight">\(6\)</span> array containing the sphere height in the range <span class="math notranslate nohighlight">\(-12 &lt; x &lt; 12\)</span> and <span class="math notranslate nohighlight">\(-12 &lt; y &lt; 12\)</span>.</strong></p>
-<p>Hints: [TODO]</p>
-<ul class="simple">
-<li><p>change the <code class="docutils literal notranslate"><span class="pre">sphere</span></code> array from <code class="docutils literal notranslate"><span class="pre">N</span></code> by <code class="docutils literal notranslate"><span class="pre">1</span></code> rather than <code class="docutils literal notranslate"><span class="pre">N</span></code> by <code class="docutils literal notranslate"><span class="pre">N</span></code></p></li>
-<li><p>create an array <code class="docutils literal notranslate"><span class="pre">y_array</span></code> to store the range of <span class="math notranslate nohighlight">\(y\)</span> values</p></li>
-<li><p>Add another loop - you will have two loops, one nested inside the other</p></li>
-</ul>
+<p>Instead of padding the start and end of the array with zeros, we can simply average only the elements of the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1,i+2]</span></code> which lie within the bounds of <code class="docutils literal notranslate"><span class="pre">x</span></code>. In the case of the 1-moving average we can achieve this by replacing the lower limit with <code class="docutils literal notranslate"><span class="pre">max(i-1,</span> <span class="pre">0)</span></code> and the upper limit with <code class="docutils literal notranslate"><span class="pre">min(i+2,</span> <span class="pre">n)</span></code>. We also change the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to include the full range from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span><span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)])</span> 
 
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">sphere</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1-moving average:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-12.   -7.2  -2.4   2.4   7.2  12. ]
-sphere:
- [[0.        ]
- [6.93974063]
- [9.70772888]
- [9.70772888]
- [6.93974063]
- [0.        ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 moving average: [3.         3.13333333 3.5        4.         3.66666667 4.
+ 2.75      ]
 </pre></div>
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
+<section id="exercise-content">
+<p>Change your function <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">k)</span></code> to remove the zero-padding.</p>
+</section>
+</div>
+<p>The array <code class="docutils literal notranslate"><span class="pre">pressure_data</span></code> contains the atmospheric pressure (measured in millibars) shown in <a class="reference internal" href="#moving-average"><span class="std std-numref">Fig. 4.2</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">6</span>
-
-
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-                  
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y_array:&quot;</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y_array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-                  
-        <span class="n">sphere</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pressure_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1018.3</span><span class="p">,</span> <span class="mf">1018.3</span><span class="p">,</span> <span class="mf">1015.7</span><span class="p">,</span> <span class="mf">1014.3</span><span class="p">,</span> <span class="mf">1011.8</span><span class="p">,</span> <span class="mf">1011.4</span><span class="p">,</span> <span class="mf">1015.5</span><span class="p">,</span> <span class="mf">1016.0</span><span class="p">,</span> <span class="mf">1016.9</span><span class="p">,</span> <span class="mf">1016.8</span><span class="p">,</span> <span class="mf">1016.4</span><span class="p">,</span> <span class="mf">1017.5</span><span class="p">,</span> <span class="mf">1018.8</span><span class="p">,</span> <span class="mf">1018.1</span><span class="p">,</span> <span class="mf">1017.1</span><span class="p">,</span> <span class="mf">1018.4</span><span class="p">,</span> <span class="mf">1022.0</span><span class="p">,</span> <span class="mf">1022.8</span><span class="p">,</span> <span class="mf">1021.8</span><span class="p">,</span> <span class="mf">1020.5</span><span class="p">,</span> <span class="mf">1021.0</span><span class="p">,</span> <span class="mf">1019.8</span><span class="p">,</span> <span class="mf">1018.9</span><span class="p">,</span> <span class="mf">1018.4</span><span class="p">,</span> <span class="mf">1017.8</span><span class="p">,</span> <span class="mf">1018.1</span><span class="p">,</span> <span class="mf">1019.6</span><span class="p">,</span> <span class="mf">1017.4</span><span class="p">,</span> <span class="mf">1015.8</span><span class="p">,</span> <span class="mf">1015.5</span><span class="p">,</span> <span class="mf">1017.5</span><span class="p">,</span> <span class="mf">1018.9</span><span class="p">,</span> <span class="mf">1017.7</span><span class="p">,</span> <span class="mf">1014.4</span><span class="p">,</span> <span class="mf">1014.2</span><span class="p">,</span> <span class="mf">1016.0</span><span class="p">,</span> <span class="mf">1016.1</span><span class="p">,</span> <span class="mf">1015.6</span><span class="p">,</span> <span class="mf">1016.4</span><span class="p">,</span> <span class="mf">1015.7</span><span class="p">,</span> <span class="mf">1016.6</span><span class="p">,</span> <span class="mf">1019.6</span><span class="p">,</span> <span class="mf">1021.6</span><span class="p">,</span> <span class="mf">1021.4</span><span class="p">,</span> <span class="mf">1020.6</span><span class="p">,</span> <span class="mf">1017.6</span><span class="p">,</span> <span class="mf">1016.5</span><span class="p">,</span> <span class="mf">1016.2</span><span class="p">,</span> <span class="mf">1013.0</span><span class="p">,</span> <span class="mf">1005.4</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1012.2</span><span class="p">,</span> <span class="mf">1015.2</span><span class="p">,</span> <span class="mf">1016.1</span><span class="p">,</span> <span class="mf">1014.3</span><span class="p">,</span> <span class="mf">1012.4</span><span class="p">,</span> <span class="mf">1014.2</span><span class="p">,</span> <span class="mf">1013.1</span><span class="p">,</span> <span class="mf">1012.9</span><span class="p">,</span> <span class="mf">1012.1</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1010.0</span><span class="p">,</span> <span class="mf">1010.5</span><span class="p">,</span> <span class="mf">1010.3</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1008.9</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1006.9</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1014.8</span><span class="p">,</span> <span class="mf">1014.9</span><span class="p">,</span> <span class="mf">1016.6</span><span class="p">,</span> <span class="mf">1014.1</span><span class="p">,</span> <span class="mf">1011.1</span><span class="p">,</span> <span class="mf">1010.7</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1011.9</span><span class="p">,</span> <span class="mf">1012.6</span><span class="p">,</span> <span class="mf">1011.8</span><span class="p">,</span> <span class="mf">1009.8</span><span class="p">,</span> <span class="mf">1008.9</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1009.9</span><span class="p">,</span> <span class="mf">1010.2</span><span class="p">,</span> <span class="mf">1009.5</span><span class="p">,</span> <span class="mf">1009.0</span><span class="p">,</span> <span class="mf">1007.1</span><span class="p">,</span> <span class="mf">1007.1</span><span class="p">,</span> <span class="mf">1007.5</span><span class="p">,</span> <span class="mf">1005.0</span><span class="p">,</span> <span class="mf">1004.2</span><span class="p">,</span> <span class="mf">1004.2</span><span class="p">,</span> <span class="mf">1007.2</span><span class="p">,</span> <span class="mf">1005.0</span><span class="p">,</span> <span class="mf">1002.9</span><span class="p">,</span> <span class="mf">1007.4</span><span class="p">,</span> <span class="mf">1010.4</span><span class="p">,</span> <span class="mf">1010.6</span><span class="p">,</span> <span class="mf">1008.6</span><span class="p">,</span> <span class="mf">1006.2</span><span class="p">,</span> <span class="mf">1005.9</span><span class="p">,</span> <span class="mf">1006.8</span><span class="p">,</span> <span class="mf">1004.6</span><span class="p">,</span> <span class="mf">1002.4</span><span class="p">,</span> <span class="mf">1003.2</span><span class="p">,</span> <span class="mf">1004.4</span><span class="p">,</span> <span class="mf">1003.1</span><span class="p">,</span> <span class="mf">1000.9</span><span class="p">,</span> <span class="mf">998.6</span><span class="p">,</span> <span class="mf">999.9</span><span class="p">,</span> <span class="mf">1001.6</span><span class="p">,</span> <span class="mf">1002.1</span><span class="p">,</span> <span class="mf">1004.1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-12.   -7.2  -2.4   2.4   7.2  12. ]
-y_array: [-12.   -7.2  -2.4   2.4   7.2  12. ]
-sphere:
- [[0.         0.         0.         0.         0.         0.        ]
- [0.         0.         6.51152824 6.51152824 0.         0.        ]
- [0.         6.51152824 9.40638081 9.40638081 6.51152824 0.        ]
- [0.         6.51152824 9.40638081 9.40638081 6.51152824 0.        ]
- [0.         0.         6.51152824 6.51152824 0.         0.        ]
- [0.         0.         0.         0.         0.         0.        ]]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>113
 </pre></div>
 </div>
 </div>
 </div>
-<p>We’d like to visualise the values of the array. One way to do this is with a ‘heat map’ - an image whose pixels represent the value of each element of the array. The <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> function <code class="docutils literal notranslate"><span class="pre">imshow</span></code> will do this for us.</p>
-</div>
-<div class="section" id="question-3">
-<h2><span class="section-number">4.3. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
-<p><strong>Use the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> function <code class="docutils literal notranslate"><span class="pre">imshow</span></code> to generate a heat map of the array</strong></p>
-<p><strong>Experiment with different values of  <code class="docutils literal notranslate"><span class="pre">N</span></code> until you get a nice smooth image. What happens if you change the value of <code class="docutils literal notranslate"><span class="pre">R</span></code>?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="ne">C</span>:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_21904/4105552836.py in &lt;module&gt;
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-3">
 
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
+<p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
+<section id="exercise-content">
+<p>Plot the atmospheric pressure data on a line graph. On the same graph, plot the 5- and 10-moving averages.</p>
+</section>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">6</span>
-
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y_array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">sphere</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-12.   -7.2  -2.4   2.4   7.2  12. ]
-y_array: [-12.   -7.2  -2.4   2.4   7.2  12. ]
-sphere:
- [[0.         0.         0.         0.         0.         0.        ]
- [0.         0.         6.51152824 6.51152824 0.         0.        ]
- [0.         6.51152824 9.40638081 9.40638081 6.51152824 0.        ]
- [0.         6.51152824 9.40638081 9.40638081 6.51152824 0.        ]
- [0.         0.         6.51152824 6.51152824 0.         0.        ]
- [0.         0.         0.         0.         0.         0.        ]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-    
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y_array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">sphere</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere_height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
-        
-        
-
-<span class="c1"># plt.figure(figsize=(6,6))</span>
-<span class="c1"># plt.imshow(sphere)</span>
-        
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="c1"># ax.plot_surface(X, Y, sphere,  rstride=1, cstride=1,</span>
-<span class="c1">#                 cmap=&#39;gray&#39;, edgecolor=&#39;none&#39;)</span>
-
-
-<span class="c1"># surf = ax.plot_surface(X, Y, sphere, cmap=&#39;gray&#39;,</span>
-<span class="c1">#                        linewidth=0, antialiased=False, rcount=200, ccount=200)</span>
-
-<span class="c1"># Get lighting object for shading surface plots.</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LightSource</span>
-
-<span class="c1"># Get colormaps to use with lighting object.</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
-
-<span class="c1"># Create an instance of a LightSource and use it to illuminate the surface.</span>
-<span class="n">light</span> <span class="o">=</span> <span class="n">LightSource</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-<span class="n">rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">sphere</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sphere</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">illuminated_surface</span> <span class="o">=</span> <span class="n">light</span><span class="o">.</span><span class="n">shade_rgb</span><span class="p">(</span><span class="n">rgb</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">sphere</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                <span class="n">facecolors</span><span class="o">=</span><span class="n">illuminated_surface</span><span class="p">)</span>
-<span class="n">ere_height</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x7f02d7f59760&gt;
-</pre></div>
-</div>
-<img alt="../_images/2d_arrays_10_1.png" src="../_images/2d_arrays_10_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sphere_height</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_4096/3062361008.py:5: RuntimeWarning: invalid value encountered in sqrt
-  val = np.sqrt(radius - (x_pos**2 + y_pos**2))
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nan
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Get lighting object for shading surface plots.</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LightSource</span>
-
-<span class="c1"># Get colormaps to use with lighting object.</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
-
-<span class="c1"># Create an instance of a LightSource and use it to illuminate the surface.</span>
-<span class="c1">#light = LightSource(90, 45)</span>
-<span class="n">light</span> <span class="o">=</span> <span class="n">LightSource</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.00</span><span class="p">,</span> <span class="mf">3.50</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.autolayout&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-<span class="n">r</span> <span class="o">=</span> <span class="mf">0.05</span>
-<span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span><span class="mi">30</span><span class="n">j</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="mi">20</span><span class="n">j</span><span class="p">]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-
-<span class="n">rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">illuminated_surface</span> <span class="o">=</span> <span class="n">light</span><span class="o">.</span><span class="n">shade_rgb</span><span class="p">(</span><span class="n">rgb</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">facecolors</span><span class="o">=</span><span class="n">illuminated_surface</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">R</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">R</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-
-<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-
-<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-
-
-<span class="n">rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">Z</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Z</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">illuminated_surface</span> <span class="o">=</span> <span class="n">light</span><span class="o">.</span><span class="n">shade_rgb</span><span class="p">(</span><span class="n">rgb</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
-
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                <span class="n">facecolors</span><span class="o">=</span><span class="n">illuminated_surface</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x7f02bdc95490&gt;
-</pre></div>
-</div>
-<img alt="../_images/2d_arrays_12_1.png" src="../_images/2d_arrays_12_1.png" />
-</div>
-</div>
-</div>
+</section>
+<section id="diffusion">
+<h2><span class="section-number">4.2.2. </span>Diffusion<a class="headerlink" href="#diffusion" title="Permalink to this headline">#</a></h2>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -895,17 +717,17 @@ sphere:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../functions/functions_answers.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2d_arrays_notes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.4. </span>Homework solutions</p>
+            <p class="prev-next-title"><span class="section-number">4.1. </span>Modelling Space</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="2d_arrays_notes.html" title="next page">
+    <a class='right-next' id="next-link" href="2d_arrays_homework.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.4. </span>Further Arrays</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Homework</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
