@@ -48,7 +48,7 @@ Multiplying $\Delta F$ by the Earth's total area gets the total warming energy i
 The value of the constant $\hat{\alpha}$ may be estimated from data.
 
 ```{exercise}
-The dataset [`climate-change-2.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change-2.csv?d=wa78acfaf46614d0db87f10b435bc5752&csf=1&web=1&e=YOVb1H) shows $\ce{CO2}$ levels ($C$) alongside the global temperature anomaly $\Delta T$. Produce a plot of $\Delta T$ against $\ln(C/C_0)$, taking $C_0$ to be the first value in the dataset.
+The dataset [`climate-change-2.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change-2.csv) shows $\ce{CO2}$ levels ($C$) alongside the global temperature anomaly $\Delta T$. Produce a plot of $\Delta T$ against $\ln(C/C_0)$, taking $C_0$ to be the first value in the dataset.
 
 Data for this question were obtained from [ourworldindata.org](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions).
 ```
@@ -352,7 +352,7 @@ Here are the results:
 
 ## Earthquakes
 
-The [`calmag.txt` dataset](https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt?csf=1&web=1&e=qfu9QE) contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey [www.usgs.gov](www.usgs.gov).
+The [`calmag.txt` dataset](https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt) contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey [www.usgs.gov](www.usgs.gov).
 
 We can produce a histogram of this data as shown below. The `hist` function produces a histogram, and also outputs the frequencies `n` and edge values `bin`.
 

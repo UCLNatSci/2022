@@ -162,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../second/placeholder.html">
-   3. Placeholder
+  <a class="reference internal" href="../second/changes.html">
+   3. Rates of change
   </a>
  </li>
 </ul>
@@ -473,8 +473,8 @@ title="Print to PDF"
 <li><p>a terminating plateau where transmission has almost reached the maximum possible</p></li>
 </ul>
 <p>We will explore these features and the models that describe them later in this course. For now, we simply state the equations for the two distributions, which are given below. The effect of the parameters in each model is similar, with <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(K\)</span> determining the location and scale of the distribution, and <span class="math notranslate nohighlight">\(s\)</span> determining the shape.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5985fe3e-3a23-478f-908d-0284e14a26f5">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-5985fe3e-3a23-478f-908d-0284e14a26f5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-331845a8-f587-4e6e-a0df-8f486afd7e1c">
+<span class="eqno">(3.18)<a class="headerlink" href="#equation-331845a8-f587-4e6e-a0df-8f486afd7e1c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Logistic :} \quad &amp;y = \frac{K}{1+e^{-(x-x_0)/s}}\\
 \text{Fréchet :} \quad  &amp;y = e^{-\left(\frac{x-x_0}{K}\right)^{-s}}
 \end{align}\]</div>
@@ -482,14 +482,14 @@ title="Print to PDF"
 <figure class="align-default" id="frechet-plot">
 <a class="reference internal image-reference" href="../_images/frechet.png"><img alt="../_images/frechet.png" src="../_images/frechet.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Plots of the Fréchet distribution (top) and its growth rate (bottom) for <span class="math notranslate nohighlight">\(x_0=0\)</span>, <span class="math notranslate nohighlight">\(K=1\)</span>, <span class="math notranslate nohighlight">\(s=3\)</span></span><a class="headerlink" href="#frechet-plot" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Plots of the Fréchet distribution (top) and its growth rate (bottom) for <span class="math notranslate nohighlight">\(x_0=0\)</span>, <span class="math notranslate nohighlight">\(K=1\)</span>, <span class="math notranslate nohighlight">\(s=3\)</span></span><a class="headerlink" href="#frechet-plot" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The exercises below will give you some practice at fitting data to either of these functions. It is easiest to do this if the data has been <em>normalised</em> to the range <span class="math notranslate nohighlight">\([0,1]\)</span>, though only the Fréchet distribution requires this normalisation.</p>
 <section id="coronavirus-data">
 <h2><span class="section-number">3.1. </span>Coronavirus data<a class="headerlink" href="#coronavirus-data" title="Permalink to this heading">#</a></h2>
 <p>The <em>coronavirus (COVID-19) in the UK dashboard</em> is an up-to-date weekly government summary of key coronavirus metrics, such as levels of infection and hospitalisations. You can download the data from <a class="reference external" href="https://coronavirus.data.gov.uk/details/cases?areaType=nation&amp;areaName=England">coronavirus.data.gov.uk</a></p>
-<p>The below plots are based on dashboard data to 22 Aug 2022, which can be found in <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/data_2022-Aug-17.csv?d=we4b7fe33e3584ed09f2f7bc4cd331472&amp;csf=1&amp;web=1&amp;e=qhjgm6"><code class="docutils literal notranslate"><span class="pre">data_2-22-Aug-17.csv</span></code></a>.</p>
+<p>The below plots are based on dashboard data to 22 Aug 2022, which can be found in <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/data_2022-Aug-17.csv"><code class="docutils literal notranslate"><span class="pre">data_2-22-Aug-17.csv</span></code></a>.</p>
 <section id="daily-cases">
 <h3><span class="section-number">3.1.1. </span>Daily cases<a class="headerlink" href="#daily-cases" title="Permalink to this heading">#</a></h3>
 <p>First we simply plot the daily reported cases. The background shading in the plots below indicates periods of lockdown (red) and significant restriction (yellow). Mostly this is just importing and plotting data, though some work needs to be done to deal with the x-axis values, which are given as <em>dates</em>.</p>
@@ -575,7 +575,7 @@ title="Print to PDF"
 <figure class="align-default" id="covid-cases">
 <a class="reference internal image-reference" href="../_images/covid_cases.png"><img alt="../_images/covid_cases.png" src="../_images/covid_cases.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Daily covid cases obtained from coronavirus (COVID-19) in the UK dashboard</span><a class="headerlink" href="#covid-cases" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Daily covid cases obtained from coronavirus (COVID-19) in the UK dashboard</span><a class="headerlink" href="#covid-cases" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -596,7 +596,7 @@ title="Print to PDF"
 <figure class="align-default" id="covid-gr">
 <a class="reference internal image-reference" href="../_images/covid_gr.png"><img alt="../_images/covid_gr.png" src="../_images/covid_gr.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Daily (averaged) covid growth rates (%) estimated from data reports.</span><a class="headerlink" href="#covid-gr" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Daily (averaged) covid growth rates (%) estimated from data reports.</span><a class="headerlink" href="#covid-gr" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Estimating the R-number is a much more complicated business. Government values are based on aggregating calculations produced by mathematical models from several UK institutions. However, we can obtain a very rough-and-ready estimate of what the R value was a week ago by using the  formula <span class="math notranslate nohighlight">\(R_{est} = (1+6G)\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the current growth rate as a decimal. Compare this plot with Fig 18 from a <a class="reference external" href="https://royalsociety.org/-/media/policy/projects/set-c/set-covid-19-R-estimates.pdf">Royal Society paper</a>:</p>
@@ -610,7 +610,7 @@ title="Print to PDF"
 <figure class="align-default" id="covid-rest">
 <a class="reference internal image-reference" href="../_images/covid_rEst.png"><img alt="../_images/covid_rEst.png" src="../_images/covid_rEst.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Estimated R-value <span class="math notranslate nohighlight">\(R_{est} = (1+6G)\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate as a decimal, offset by one week.</span><a class="headerlink" href="#covid-rest" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Estimated R-value <span class="math notranslate nohighlight">\(R_{est} = (1+6G)\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate as a decimal, offset by one week.</span><a class="headerlink" href="#covid-rest" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -621,12 +621,12 @@ title="Print to PDF"
 <figure class="align-default" id="covid-waves">
 <img alt="../_images/covid_waves.png" src="../_images/covid_waves.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Identifiable “waves” of infection are alternately highlighted in blue or yellow</span><a class="headerlink" href="#covid-waves" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Identifiable “waves” of infection are alternately highlighted in blue or yellow</span><a class="headerlink" href="#covid-waves" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="case-studies/coronavirus-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.20 </span></p>
 <section id="exercise-content">
 <p>Choose one of the “waves” by eye and isolate the <span class="math notranslate nohighlight">\((x,y)\)</span> data for this interval. For the data that you identified :</p>
 <ul class="simple">
@@ -653,23 +653,23 @@ title="Print to PDF"
 <p>In 2012 the singer Carly Rae Jepsen released the song “Call Me Maybe”. The song was a huge worldwide hit and in Britain it become the second best-selling single of 2012. It’s popularity as an internet search term was further helped by viral videos which included a dance routine by the Miami dolphins cheerleaders and a parody by the US army.</p>
 <p>We can obtain a log of interest over time in the search term “call me maybe” by interrogating <a class="reference external" href="https://trends.google.com/trends/?geo=GB">Google Trends</a>. The database allows you to search by timeframe and world location, and you can also distinguish between Google searches or YouTube searches.</p>
 <p>The plot below shows the nomalised worldwide Google search data for the phrase call me maybe between 2/Jan/2011 and 28/Dec/2014. The data shows a surge in interest followed by a long, slow decline. This is similar to the data we saw for coronavirus cases, but with a longer tail.</p>
-<p>Comparison of the plot with <a class="reference internal" href="#frechet-plot"><span class="std std-numref">Fig. 3.4</span></a> suggest that the search data may possibly be a good candidate to fit to the Fréchet function.</p>
+<p>Comparison of the plot with <a class="reference internal" href="#frechet-plot"><span class="std std-numref">Fig. 3.7</span></a> suggest that the search data may possibly be a good candidate to fit to the Fréchet function.</p>
 <figure class="align-default" id="call-me-maybe">
 <a class="reference internal image-reference" href="../_images/call-me-maybe.png"><img alt="../_images/call-me-maybe.png" src="../_images/call-me-maybe.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Global interest over time in the search term <a class="reference external" href="https://trends.google.com/trends/explore?date=2011-01-02%202014-12-28&amp;geo=GB&amp;q=call%20me%20maybe">call me maybe</a>.</span><a class="headerlink" href="#call-me-maybe" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Global interest over time in the search term <a class="reference external" href="https://trends.google.com/trends/explore?date=2011-01-02%202014-12-28&amp;geo=GB&amp;q=call%20me%20maybe">call me maybe</a>.</span><a class="headerlink" href="#call-me-maybe" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="case-studies/coronavirus-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.21 </span></p>
 <section id="exercise-content">
 <p>Fit a Fréchet function to the cumulative search interest for the call me maybe dataset. Present any plots that you think are useful to demonstrate the quality of the fit.</p>
 </section>
 </div>
 <div class="exercise admonition" id="case-studies/coronavirus-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.22 </span></p>
 <section id="exercise-content">
 <p>Use Google trends to obtain search data for your own choice of meme/viral video and fit either the logistic function or the Fréchet function to the cumulative data.</p>
 <p>You can choose between Worldwide or specific country. You can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?</p>

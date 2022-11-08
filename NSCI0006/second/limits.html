@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Placeholder" href="placeholder.html" />
+    <link rel="next" title="3. Rates of change" href="changes.html" />
     <link rel="prev" title="1. Rational functions" href="pfrac.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -163,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="placeholder.html">
-   3. Placeholder
+  <a class="reference internal" href="changes.html">
+   3. Rates of change
   </a>
  </li>
 </ul>
@@ -387,6 +387,16 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#finite-limits">
    2.2. Finite limits
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limit-definition-of-e-x">
+     2.2.1. Limit definition of
+     <span class="math notranslate nohighlight">
+      \(e^x\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#asymptotic-equivalence">
@@ -436,6 +446,16 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#finite-limits">
    2.2. Finite limits
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limit-definition-of-e-x">
+     2.2.1. Limit definition of
+     <span class="math notranslate nohighlight">
+      \(e^x\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#asymptotic-equivalence">
@@ -499,8 +519,8 @@ title="Print to PDF"
 </ul>
 <p>These are <em>one-sided</em> limits. Since the left- and right- sided limits are not the same, we cannot meaningfully speak of the limit as <span class="math notranslate nohighlight">\(x\)</span> tends to <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> without specifying the direction, as indicated by the superscript <span class="math notranslate nohighlight">\(+/-\)</span> used in <a class="reference internal" href="#equation-oneside">(2.4)</a>.</p>
 <p>For comparison, consider the function <span class="math notranslate nohighlight">\(1/x^2\)</span>. As <span class="math notranslate nohighlight">\(x\)</span> tends to zero the left- and right- sided limits of this function are both positive infinity and so we can simply say:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-91dee69f-9af3-4cac-b2dd-271064533384">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-91dee69f-9af3-4cac-b2dd-271064533384" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b9d9a770-84aa-4f71-b56c-6a92c6011f00">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-b9d9a770-84aa-4f71-b56c-6a92c6011f00" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \lim_{x\rightarrow 0}\frac{1}{x^2} = \infty.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/limits-exercise-0">
@@ -590,6 +610,25 @@ y=\frac{1-e^{-x}}{x}.
 \lim_{x\rightarrow 0}\frac{1-e^{-x}}{x}=1
 \end{equation*}\]</div>
 <p>This is possible because whilst both the numerator and denominator tend to zero they do so at exactly the same rate (like <span class="math notranslate nohighlight">\(x/x\)</span>). In the next section we will learn how to find limits of this type.</p>
+<section id="limit-definition-of-e-x">
+<h3><span class="section-number">2.2.1. </span>Limit definition of <span class="math notranslate nohighlight">\(e^x\)</span><a class="headerlink" href="#limit-definition-of-e-x" title="Permalink to this heading">#</a></h3>
+<p>Recall from our earlier work on exponentials that the natural exponent <span class="math notranslate nohighlight">\(e\)</span> satisfies</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2be9c019-cd6e-490a-ac57-beb9230d3ed8">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-2be9c019-cd6e-490a-ac57-beb9230d3ed8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\lim_{\Delta x\rightarrow 0}\frac{e^{\Delta x}-1}{\Delta x}=1
+\end{equation}\]</div>
+<p>From this expression we can obtain</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f8affd72-3fd9-4028-8d2c-78eaebd70bfa">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-f8affd72-3fd9-4028-8d2c-78eaebd70bfa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+e = \lim_{\Delta x \rightarrow 0}\left(1+\Delta x\right)^{\frac{1}{\Delta x}} = \lim_{n\rightarrow \infty}\left(1+\frac{1}{n}\right)^n.
+\end{equation}\]</div>
+<p>This is one of many ways that can be used to define and calculate the exponential function (though it converges quite slowly). Taking <span class="math notranslate nohighlight">\(n=10^7\)</span> gives the value of <span class="math notranslate nohighlight">\(e\)</span> correct to 5 decimal places:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">2.7182816941320818</span></code></p>
+</section>
 </section>
 <section id="asymptotic-equivalence">
 <h2><span class="section-number">2.3. </span>Asymptotic equivalence<a class="headerlink" href="#asymptotic-equivalence" title="Permalink to this heading">#</a></h2>
@@ -829,7 +868,7 @@ S_n = \frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+\dots+\frac{1}{4^n}
 \end{equation*}\]</div>
 <p>In mathematical notation this would usually be written as follows, representing the sum from <span class="math notranslate nohighlight">\(k=1\)</span> to <span class="math notranslate nohighlight">\(n\)</span> of the given expression :</p>
 <div class="math notranslate nohighlight" id="equation-geom-ser1">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-geom-ser1" title="Permalink to this equation">#</a></span>\[\sum_{k=1}^{n}\left(\frac{1}{4}\right)^k.\]</div>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-geom-ser1" title="Permalink to this equation">#</a></span>\[\sum_{k=1}^{n}\left(\frac{1}{4}\right)^k.\]</div>
 <p>A curious person could investigate this sum by calculating a result for the first few values of <span class="math notranslate nohighlight">\(n\)</span>. We could even plot the results to see if there is a visible pattern:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
 <span class="n">t</span><span class="o">=</span><span class="p">[</span><span class="n">r</span><span class="o">**</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span> <span class="c1">#terms in series</span>
@@ -849,7 +888,7 @@ S_n = \frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+\dots+\frac{1}{4^n}
 <p class="admonition-title">Warning</p>
 <p>This result is not a proof. Sometimes a sum that that appears to be numerically converging to a finite limit may in fact be growing to infinity at an extremely slow rate, as demonstrated in the following example. Conversely, a sum that appears to be growing extremely large may be converging towards an extremely large (but finite) limit.</p>
 </div>
-<p>Sometimes the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library in Python may be able to give us the limit of a sum <span class="math notranslate nohighlight">\(S_n\)</span> as the number of terms <span class="math notranslate nohighlight">\(n\)</span> tends to infinity. We can do it here for the sum given in <a class="reference internal" href="#equation-geom-ser1">(2.6)</a>. The result agrees with our numerical estimate:</p>
+<p>Sometimes the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library in Python may be able to give us the limit of a sum <span class="math notranslate nohighlight">\(S_n\)</span> as the number of terms <span class="math notranslate nohighlight">\(n\)</span> tends to infinity. We can do it here for the sum given in <a class="reference internal" href="#equation-geom-ser1">(2.8)</a>. The result agrees with our numerical estimate:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
@@ -877,8 +916,8 @@ r S_n &amp;=     &amp;&amp; ar+ar^2+\dots +ar^{n-1}+ar^n\\
 &amp;&amp;&amp;\implies      S_n = \frac{a(1-r^n)}{1-r}
 \end{alignat}\)</span></p>
 <p>If <span class="math notranslate nohighlight">\(r&lt;1\)</span> then as <span class="math notranslate nohighlight">\(n\to \infty\)</span>, <span class="math notranslate nohighlight">\(r^n\to 0\)</span> and so we obtain the famous geometric series formula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b4cf84bb-ddca-4846-b21b-d83941a114ca">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-b4cf84bb-ddca-4846-b21b-d83941a114ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-71f1e2d8-e90d-4da1-bf19-73cf6b714f93">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-71f1e2d8-e90d-4da1-bf19-73cf6b714f93" title="Permalink to this equation">#</a></span>\[\begin{equation}
 S_{\infty} = \frac{a}{1-r}.
 \end{equation}\]</div>
 <p>For example, when <span class="math notranslate nohighlight">\(r=1/4\)</span>, the result is <span class="math notranslate nohighlight">\(S_\infty=1/3\)</span>.</p>
@@ -951,10 +990,10 @@ S_{\infty} = \frac{a}{1-r}.
             <p class="prev-next-title"><span class="section-number">1. </span>Rational functions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="placeholder.html" title="next page">
+    <a class='right-next' id="next-link" href="changes.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Placeholder</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Rates of change</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

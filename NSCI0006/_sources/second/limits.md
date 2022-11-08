@@ -141,6 +141,28 @@ The plot *suggests* that:
 
 This is possible because whilst both the numerator and denominator tend to zero they do so at exactly the same rate (like $x/x$). In the next section we will learn how to find limits of this type.
 
+### Limit definition of $e^x$
+
+Recall from our earlier work on exponentials that the natural exponent $e$ satisfies
+
+\begin{equation}
+\lim_{\Delta x\rightarrow 0}\frac{e^{\Delta x}-1}{\Delta x}=1
+\end{equation}
+
+From this expression we can obtain
+
+\begin{equation}
+e = \lim_{\Delta x \rightarrow 0}\left(1+\Delta x\right)^{\frac{1}{\Delta x}} = \lim_{n\rightarrow \infty}\left(1+\frac{1}{n}\right)^n.
+\end{equation}
+
+This is one of many ways that can be used to define and calculate the exponential function (though it converges quite slowly). Taking $n=10^7$ gives the value of $e$ correct to 5 decimal places:
+
+```{code}
+n=10**7
+print((1+1/n)**n)
+```
+
+`2.7182816941320818`
 
 ## Asymptotic equivalence
 

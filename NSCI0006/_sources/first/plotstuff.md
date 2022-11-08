@@ -31,7 +31,7 @@ This chapter provides some examples of importing and plotting data. After comple
 
 ## Greenhouse emissions
 
-The plot below uses data from [Our World in Data](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#how-have-global-co2-emissions-changed-over-time) to show how measurements of CO2 concentration in Earth's atmosphere have changed since 1960. You can download the dataset used to make this plot from [`climate-change.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change.csv?d=w8d56219a23104bee98f755c9e28cc230&csf=1&web=1&e=Rks0TP).
+The plot below uses data from [Our World in Data](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#how-have-global-co2-emissions-changed-over-time) to show how measurements of CO2 concentration in Earth's atmosphere have changed since 1960. You can download the dataset used to make this plot from [`climate-change.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change.csv).
 
 ```{code}
 import matplotlib.pyplot as plt
@@ -85,7 +85,7 @@ The increase in CO2 concentrations over the last 60 years is even more striking 
 
 "Do you trust the government?"
 
-This question (or some variant of it) is reported on by many major organisations including the [OECD](https://www.oecd.org/governance/trust-in-government/), [Gallup (US)](https://news.gallup.com/poll/1597/confidence-institutions.aspx) and [ONS (UK)](https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/trustingovernmentuk/2022). The dataset used in this example are obtained from [NatCen (UK)](https://www.natcen.ac.uk/). Responses are shown for the percentage of survey respondents who answered that they trust government to place needs of the nation above the interests of their party "just about always" or "most of the time". The data used to produce this plot (which you will need to answer the exercise) can be found at [`gov-trust.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/gov-trust.csv?d=wf0977ce993904f62952171eb08f42588&csf=1&web=1&e=avdQXj).
+This question (or some variant of it) is reported on by many major organisations including the [OECD](https://www.oecd.org/governance/trust-in-government/), [Gallup (US)](https://news.gallup.com/poll/1597/confidence-institutions.aspx) and [ONS (UK)](https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/trustingovernmentuk/2022). The dataset used in this example are obtained from [NatCen (UK)](https://www.natcen.ac.uk/). Responses are shown for the percentage of survey respondents who answered that they trust government to place needs of the nation above the interests of their party "just about always" or "most of the time". The data used to produce this plot (which you will need to answer the exercise) can be found at [`gov-trust.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/gov-trust.csv).
 
 ```{code}
 import matplotlib.pyplot as plt

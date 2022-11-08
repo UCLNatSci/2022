@@ -36,7 +36,8 @@ The exercises below will give you some practice at fitting data to either of the
 
 The *coronavirus (COVID-19) in the UK dashboard* is an up-to-date weekly government summary of key coronavirus metrics, such as levels of infection and hospitalisations. You can download the data from [coronavirus.data.gov.uk](https://coronavirus.data.gov.uk/details/cases?areaType=nation&areaName=England)
 
-The below plots are based on dashboard data to 22 Aug 2022, which can be found in [`data_2-22-Aug-17.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/data_2022-Aug-17.csv?d=we4b7fe33e3584ed09f2f7bc4cd331472&csf=1&web=1&e=qhjgm6).
+The below plots are based on dashboard data to 22 Aug 2022, which can be found in [`data_2-22-Aug-17.csv`](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/data_2022-Aug-17.csv).
+
 
 ### Daily cases
 

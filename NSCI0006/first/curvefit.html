@@ -163,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../second/placeholder.html">
-   3. Placeholder
+  <a class="reference internal" href="../second/changes.html">
+   3. Rates of change
   </a>
  </li>
 </ul>
@@ -489,7 +489,7 @@ title="Print to PDF"
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
 <section id="exercise-content">
-<p>The dataset <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change-2.csv?d=wa78acfaf46614d0db87f10b435bc5752&amp;csf=1&amp;web=1&amp;e=YOVb1H"><code class="docutils literal notranslate"><span class="pre">climate-change-2.csv</span></code></a> shows <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> levels (<span class="math notranslate nohighlight">\(C\)</span>) alongside the global temperature anomaly <span class="math notranslate nohighlight">\(\Delta T\)</span>. Produce a plot of <span class="math notranslate nohighlight">\(\Delta T\)</span> against <span class="math notranslate nohighlight">\(\ln(C/C_0)\)</span>, taking <span class="math notranslate nohighlight">\(C_0\)</span> to be the first value in the dataset.</p>
+<p>The dataset <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/climate-change-2.csv"><code class="docutils literal notranslate"><span class="pre">climate-change-2.csv</span></code></a> shows <span class="math notranslate nohighlight">\(\ce{CO2}\)</span> levels (<span class="math notranslate nohighlight">\(C\)</span>) alongside the global temperature anomaly <span class="math notranslate nohighlight">\(\Delta T\)</span>. Produce a plot of <span class="math notranslate nohighlight">\(\Delta T\)</span> against <span class="math notranslate nohighlight">\(\ln(C/C_0)\)</span>, taking <span class="math notranslate nohighlight">\(C_0\)</span> to be the first value in the dataset.</p>
 <p>Data for this question were obtained from <a class="reference external" href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.org</a>.</p>
 </section>
 </div>
@@ -652,8 +652,8 @@ title="Print to PDF"
 <hr class="docutils" />
 <p>A dose of radiation is often delivered in smaller amounts called <a class="reference external" href="https://radiopaedia.org/articles/fractionation-radiation-therapy">fractions</a>. This can allow healthy cells to repair sub-lethal damage to their DNA between fractions. A treatment plan may be developed that depends on the type of cancer and proximity to organs.</p>
 <p>The clinical effect of treatment can be modelled by the following “Linear-Quadratic” (LQ) relationship</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a13d693-68dc-4d91-ba44-510f5daa8c69">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-8a13d693-68dc-4d91-ba44-510f5daa8c69" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7fbd2212-835d-4756-a685-2cb33f33a5bd">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-7fbd2212-835d-4756-a685-2cb33f33a5bd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E = n(\alpha d +\beta d^2) = \alpha D\left(1+\frac{d}{\alpha/\beta}\right),
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(D\)</span> is the total dose, <span class="math notranslate nohighlight">\(d\)</span> is the dose per fraction, <span class="math notranslate nohighlight">\(n\)</span> is the number of fractions. The first term represents lethal damage due to single-hit double strand chromsome breaks, and the second term represents lethal damage due to a combination of two sub-lethal single strand chromasome breaks. The coeffcicients <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> depend on the <a class="reference external" href="https://ro-journal.biomedcentral.com/articles/10.1186/s13014-018-1040-z">tumour site and histology</a>. Notice that if the same dose <span class="math notranslate nohighlight">\(D\)</span> is delivered in a larger number of fractions (thereby reducing <span class="math notranslate nohighlight">\(d\)</span>) the clinical effect <span class="math notranslate nohighlight">\(E\)</span> is reduced, with the amount of sparing depending on the <span class="math notranslate nohighlight">\(\alpha/\beta\)</span> ratio.</p>
@@ -662,8 +662,8 @@ E = n(\alpha d +\beta d^2) = \alpha D\left(1+\frac{d}{\alpha/\beta}\right),
 <span class="eqno">(4.4)<a class="headerlink" href="#equation-survivalp" title="Permalink to this equation">#</a></span>\[e^{-E}=e^{-n(\alpha d +\beta d^2)} = e^{-\alpha D\left(1+\frac{d}{\alpha/\beta}\right)}.\]</div>
 <p>Clinical data on radiotherapy often refers to one of two quantities related to the clinical effect, which are EQD2 and BED. These quantifications are used to compare a given treatment plan to either the equivalent dose required in 2Gy fractions (EQD2) or the effective hypothetical dose if the treatment was delivered over an infinite number of “zero fractions” (BED).</p>
 <p>For EQD2 we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c68510b7-7b49-4631-aaa5-19be9db92bd3">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-c68510b7-7b49-4631-aaa5-19be9db92bd3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-97506d20-fcd8-4a67-b5d1-c8faa0f72be6">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-97506d20-fcd8-4a67-b5d1-c8faa0f72be6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E = \alpha D\left(1+\frac{d}{\alpha/\beta}\right) =  \alpha \text{EQD2}\left(1+\frac{2}{\alpha/\beta}\right) \quad \Rightarrow \quad \text{EQD2}=D\left(\frac{d+\frac{\alpha}{\beta}}{2+\frac{\alpha}{\beta}}\right).
 \end{equation}\]</div>
 <p>For BED we may write</p>
@@ -803,7 +803,7 @@ D=(15.00,12.50,8.75,5.00,4.00,2.00,1.00)
 </section>
 <section id="earthquakes">
 <h2><span class="section-number">4.3. </span>Earthquakes<a class="headerlink" href="#earthquakes" title="Permalink to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt?csf=1&amp;web=1&amp;e=qfu9QE"><code class="docutils literal notranslate"><span class="pre">calmag.txt</span></code> dataset</a> contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey <span class="xref myst">www.usgs.gov</span>.</p>
+<p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt"><code class="docutils literal notranslate"><span class="pre">calmag.txt</span></code> dataset</a> contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey <span class="xref myst">www.usgs.gov</span>.</p>
 <p>We can produce a histogram of this data as shown below. The <code class="docutils literal notranslate"><span class="pre">hist</span></code> function produces a histogram, and also outputs the frequencies <code class="docutils literal notranslate"><span class="pre">n</span></code> and edge values <code class="docutils literal notranslate"><span class="pre">bin</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -901,8 +901,8 @@ D=(15.00,12.50,8.75,5.00,4.00,2.00,1.00)
 <p>Many wearable devices allow heart rate and activity data to be tracked and downloaded as txt or csv files. It may be possible to estimate <a class="reference external" href="https://nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx">circadian rhythms</a> from this data.</p>
 <p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/hrdata2.csv?d=w30f852f1fa3e471a92661dfb7dd70ba2&amp;csf=1&amp;web=1&amp;e=ew8gGA">hrdata2.csv</a> dataset contains “fitbit” measurements of activity and heart rate (HR) for a single individual, obtained from a <a class="reference external" href="https://doi.org/10.1016/j.crmeth.2021.100058">recent research paper</a>. The data are for a period of 96 hours, averaged every five minutes. The HR is measured in beats per minute (bpm), and the activity level is measured in steps per minute.</p>
 <p>The heart rate can be modelled by the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8cd7342-9c2d-461c-8f46-464bf9464e94">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-d8cd7342-9c2d-461c-8f46-464bf9464e94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9fae009e-30ab-41e6-82e8-f33da89ecb0d">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-9fae009e-30ab-41e6-82e8-f33da89ecb0d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{HR} = \mu + A\sin\left(\frac{\pi}{12}t\right)+E(a)+\epsilon
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the average background HR, <span class="math notranslate nohighlight">\(A\)</span> is the amplitude of the 24hr circadian cycle, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is statistical error (e.g. due to measurement inaccuracies).</p>
