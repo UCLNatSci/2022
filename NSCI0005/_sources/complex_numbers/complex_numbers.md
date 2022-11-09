@@ -136,30 +136,46 @@ We will understand (and prove!) this result later. For now, we just *find* the p
 ```{admonition} Practice Questions
 :class: seealso, dropdown
 *Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!*
+
 1\. Write down the polar form of the following complex numbers:  
+
 a\. $1+i$ 
+
 b\. $-1+i$  
+
 c\. $-1-i$
+
 d\. $1-i$  
+
 e\. $-1$
 
 2\. Express the following complex numbers in Cartesian form:  
+
 a\. $\sqrt{3}e^{-i\pi /3}$  
+
 b\. $e^{i\pi /2}$
 ```
 
 
 ```{admonition} Solution
 :class: seealso, dropdown
+
 1\. All of the problems in 1(a)-1(d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:
+
 a\. $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$
+
 b\. $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$
+
 c\. $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$
+
 d\. $1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$
+
 e\. Since $-1$ lies on the negative real axis, it has an argument of $\pi$ and modulus $1$, so $e^{i\pi} = -1$ and hence, we can write the famous result $e^{i\pi} + 1 = 0$.
 
 2\. Using the result that $e^{i\theta} = \cos(\theta) + i\sin(\theta)$ gives:
+
 a\. $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\cos(\frac{\pi}{3} - i\sin(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$
+
 b\. $e^{i\frac{\pi}{2}} = i$
 
 Both results could also be derived by sketching the numbers in the plane. 
@@ -188,7 +204,8 @@ name: complexnumberaddition
 Parallelogram rule for addition of complex numbers, $z_3 = z_1+z_2$
 ```
 
-A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diagonal of the parallelogram.
+A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ 
+rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diagonal of the parallelogram.
 
 ```{figure} ComplexNumberSubtraction.png
 ---
@@ -203,7 +220,8 @@ The product of two complex numbers is just an ordinary product of sums, and so f
 
 ```{math}
 :label: complexmultiplication
-(x_1+y_1i)(x_2+y_2i) = x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)
+(x_1+y_1i)(x_2+y_2i) &= x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 \\
+&= (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)
 ```
 
 Note the use of $i^2=-1$ to simplify the result.
@@ -264,7 +282,7 @@ z = \frac{1}{1-3i} + \frac{1}{1+3i} + 1+3i
 
 2\. 
 ```{math}
-\frac{1}{1-3i} + \frac{1}{1+3i} = \frac{1+3i}{1+3^2} + \zfrac{1-3i}{1+3^2} = \frac{2}{10} = \frac{1}{5}
+\frac{1}{1-3i} + \frac{1}{1+3i} = \frac{1+3i}{1+3^2} + \frac{1-3i}{1+3^2} = \frac{2}{10} = \frac{1}{5}
 ```
 and hence:
 ```{math}
@@ -283,7 +301,7 @@ z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \
 
 These results highlight very clearly the geometry of multiplication and division in the complex plane. Notice in particular that multiplication by $e^{i\theta}$ just rotates a complex number in the plane by and angle $\theta$. What result would multiplication by $e^{2\pi i}$ give?
 
-```\{admonition} The geometry of multiplication and division of complex numbers
+````{admonition} The geometry of multiplication and division of complex numbers
 :class: notice
 * $|z_1z_2| = |z_1||z_2|$
 * $\textrm{arg}(z_1z_2) = \textrm{arg}(z_1) + \textrm{arg}(z_2)$
@@ -298,14 +316,11 @@ When $z_1$ is multiplied by $z_2$:
 When $z_1$ is multiplied by $z_2$:
 * The distance of $z_1z_2$ to the origin is reduced by a factor of $|z_2|$,
 * The position of $z_1z_2$ is rotated clockwise by an angle $\textrm{arg}(z_2)$ relative to $z_1$.
-```\
 
-```{admonition} A helpful mnemonic
-:class: tip
-A good way to remember this rule is that **in polar form**, you can multiply two complex numbers by **multiplying** the magnitude and **adding** the angles. 
+A good way to remember these rules is that **in polar form**, you can multiply two complex numbers by **multiplying** the magnitude and **adding** the angles. 
 
 Conversely, to divide two numbers **in polar form**, you **divide** the magnitude, and **subtract** the angles.
-```
+````
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -317,7 +332,7 @@ b\. $z = -1+i$, $w = -\sqrt{3} + i$.
 
 2\. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result: 
 ```{math}
-(\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}
+\Big(\frac{z_1}{z_2}\Big)^* = \frac{z_1^*}{z_2^*}
 ```
 ````
 
@@ -361,7 +376,9 @@ This was also the principal by which we were able to define (at least) two diffe
 ```{admonition} Practice Questions
 :class: seealso, dropdown
 Write the following complex numbers in polar form where the argument is given in the principal range ($-\pi$, $\pi$):
+
 1\. $\sqrt{2}e^{\frac{7\pi i}{3}}$
+
 2\. $3e^{-\frac{13\pi i}{12}}$
 ```
 
@@ -542,7 +559,7 @@ For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. Th
 2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$
 ````
 
-````{admonition} Solution
+````{admonition} Solutions
 :class: seealso, dropdown
 1\.
 Given that $\cos(\theta) = \frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)$, then we can find $\cos^7(\theta)$ as:
