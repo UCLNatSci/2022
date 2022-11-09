@@ -463,7 +463,75 @@ We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + 
 ## Trigonometric and hyperbolic relationships
 In this section, we make use of Euler's identity, $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$, to prove several results involving trigonometric and hyperbolic functions. 
 
-## Hyperbolic functions
+
+
+### de Moivre's theorem
+Starting with Euler's Identity $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$ and raising both sides to the $n^{th}$ power gives:
+
+```{math}
+:label: eulerton
+e^{in\theta} = (\cos(\theta) + i\sin(\theta))^n
+```
+
+We can then use Euler's identity again (replacing $\theta$ with $n\theta$) to re-write the left had side:
+
+```{math}
+:label: demoivre
+\cos(n\theta) + i\sin(n\theta) \equiv (\cos(\theta) + i\sin(\theta))^n
+```
+This result (for integer values of $n$) is known as De Moivre's theorem. Historically, it was proved before Euler's identity. A possible technique for proving it without Euler's identity is by *induction*. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.
+
+The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
+
+```{admonition} Non-integer Values
+:class: tip
+For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\cos(n\theta) + i\sin(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
+```
+
+````{admonition} Practice Questions
+:class: seealso, dropdown
+1\. Show that:
+```{math}
+\cos^7(\theta) = \frac{1}{64} \Big[35\cos(\theta) + 21\cos(3\theta) + 7\cos(5\theta) + \cos(7\theta)\Big]
+```
+2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+1\.
+Given that $\cos(\theta) = \frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)$, then we can find $\cos^7(\theta)$ as:
+```{math}
+\cos^7(\theta) &= \Big[\frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)\Big]^7 \\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 21e^{5 i \theta}\,e^{-2i \theta} + 35e^{4 i \theta}\,e^{-3i \theta} 
++ 35e^{3 i \theta}\,e^{-4i \theta}  + 21e^{2i \theta}\,e^{-5i \theta} + 7e^{i \theta}\,e^{-6i \theta}  + e^{-7i \theta} \Big)\\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 7e^{i \theta}\,e^{-6i \theta}  
++ 21e^{5 i \theta}\,e^{-2i \theta}  + 21e^{2i \theta}\,e^{-5i \theta}  + 35e^{4 i \theta}\,e^{-3i \theta} 
++ 35e^{3 i \theta}\,e^{-4i \theta}  \Big)\\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7\,e^{5i \theta}  + 7\,e^{-5i \theta}  
++ 21z,e^{3 i \theta}  + 21\,e^{-3i \theta}  + 35e^\,e^{-i \theta} 
++ 35\,e^{-i \theta}  \Big)\\
+&= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta) + 35(2\cos(\theta))\Big]\\
+\Rightarrow \cos^7(\theta)&= \frac{1}{64}\Big[\cos(7 \theta) +  7(\cos(5 \theta)) + 21(\cos(3 \theta) + 35(\cos(\theta))\Big]\\
+```
+2\. 
+Starting with:
+```{math}
+\Big(e^{i\theta}\Big)^7 = \Big(\cos(\theta) + i \sin(\theta)\Big)^7 = e^{7i\theta}= \cos(7\theta) + i \sin(7\theta)
+```
+then by expanding out the terms in the binomial and collecting the real and imaginary parts we find:
+```{math}
+\Big(\cos(\theta) + i \sin(\theta)\Big)^7 &= \cos^7(\theta) + 7i \cos^6(\theta)\,\sin(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) \\
+& - 35i \cos^4(\theta)\,\sin^3(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta) \\
+&+ 21i \cos^2(\theta)\,\sin^5(\theta) - 7 \cos(\theta)\,\sin^6(\theta) - i \sin^7(\theta) 
+```
+and hence:
+```{math}
+\cos(7\theta) &= \cos^7(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta)  7 \cos(\theta)\,\sin^6(\theta)  \\
+\sin(7\theta) &= 7 \cos^6(\theta)\,\sin(\theta) - 35 \cos^4(\theta)\,\sin^3(\theta) + 21 \cos^2(\theta)\,\sin^5(\theta) -  \sin^7(\theta) 
+```
+````
+### Hyperbolic functions
 Hyperbolic functions can be thought of as a way to take the exponential function $e^{x}$ which is neither odd nor even and generate odd or even functions from it.  To 
 do so, think about the graphs of $e^{x},\, e^{-x}$ which are mirror images in the $y$ axis:
 ```{figure} ../figures/expfun.png
@@ -572,72 +640,6 @@ Expanding out the right hand side using Binomial expansion, and collecting toget
 
 ```
 
-### de Moivre's theorem
-Starting with Euler's Identity $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$ and raising both sides to the $n^{th}$ power gives:
-
-```{math}
-:label: eulerton
-e^{in\theta} = (\cos(\theta) + i\sin(\theta))^n
-```
-
-We can then use Euler's identity again (replacing $\theta$ with $n\theta$) to re-write the left had side:
-
-```{math}
-:label: demoivre
-\cos(n\theta) + i\sin(n\theta) \equiv (\cos(\theta) + i\sin(\theta))^n
-```
-This result (for integer values of $n$) is known as De Moivre's theorem. Historically, it was proved before Euler's identity. A possible technique for proving it without Euler's identity is by *induction*. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.
-
-The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
-
-```{admonition} Non-integer Values
-:class: tip
-For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\cos(n\theta) + i\sin(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
-```
-
-````{admonition} Practice Questions
-:class: seealso, dropdown
-1\. Show that:
-```{math}
-\cos^7(\theta) = \frac{1}{64} \Big[35\cos(\theta) + 21\cos(3\theta) + 7\cos(5\theta) + \cos(7\theta)\Big]
-```
-2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$
-````
-
-````{admonition} Solutions
-:class: seealso, dropdown
-1\.
-Given that $\cos(\theta) = \frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)$, then we can find $\cos^7(\theta)$ as:
-```{math}
-\cos^7(\theta) &= \Big[\frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)\Big]^7 \\
-&= \frac{1}{2^7}\Big( e^{7 i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 21e^{5 i \theta}\,e^{-2i \theta} + 35e^{4 i \theta}\,e^{-3i \theta} 
-+ 35e^{3 i \theta}\,e^{-4i \theta}  + 21e^{2i \theta}\,e^{-5i \theta} + 7e^{i \theta}\,e^{-6i \theta}  + e^{-7i \theta} \Big)\\
-&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 7e^{i \theta}\,e^{-6i \theta}  
-+ 21e^{5 i \theta}\,e^{-2i \theta}  + 21e^{2i \theta}\,e^{-5i \theta}  + 35e^{4 i \theta}\,e^{-3i \theta} 
-+ 35e^{3 i \theta}\,e^{-4i \theta}  \Big)\\
-&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7\,e^{5i \theta}  + 7\,e^{-5i \theta}  
-+ 21z,e^{3 i \theta}  + 21\,e^{-3i \theta}  + 35e^\,e^{-i \theta} 
-+ 35\,e^{-i \theta}  \Big)\\
-&= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta) + 35(2\cos(\theta))\Big]\\
-\Rightarrow \cos^7(\theta)&= \frac{1}{64}\Big[\cos(7 \theta) +  7(\cos(5 \theta)) + 21(\cos(3 \theta) + 35(\cos(\theta))\Big]\\
-```
-2\. 
-Starting with:
-```{math}
-\Big(e^{i\theta}\Big)^7 = \Big(\cos(\theta) + i \sin(\theta)\Big)^7 = e^{7i\theta}= \cos(7\theta) + i \sin(7\theta)
-```
-then by expanding out the terms in the binomial and collecting the real and imaginary parts we find:
-```{math}
-\Big(\cos(\theta) + i \sin(\theta)\Big)^7 &= \cos^7(\theta) + 7i \cos^6(\theta)\,\sin(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) \\
-& - 35i \cos^4(\theta)\,\sin^3(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta) \\
-&+ 21i \cos^2(\theta)\,\sin^5(\theta) - 7 \cos(\theta)\,\sin^6(\theta) - i \sin^7(\theta) 
-```
-and hence:
-```{math}
-\cos(7\theta) &= \cos^7(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta)  7 \cos(\theta)\,\sin^6(\theta)  \\
-\sin(7\theta) &= 7 \cos^6(\theta)\,\sin(\theta) - 35 \cos^4(\theta)\,\sin^3(\theta) + 21 \cos^2(\theta)\,\sin^5(\theta) -  \sin^7(\theta) 
-```
-````
 
 ### Compound hyperbolic identities
 

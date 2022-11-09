@@ -360,6 +360,7 @@ our particular integral together with the solution to the corresponding homogene
 ````{admonition} Practice questions
 :class: seealso, dropdown
 Find solutions to the following inhomogeneous problems:
+
 1\. 
 ```{math}
 y^{\prime\prime}+4y^{\prime}+5y=\sin(2x)
@@ -444,51 +445,72 @@ and equating coefficients of $e^t$ on the left and right sides gives $A=1$.
 
 ````
 
-### A note about the limitations of variation of parameters:
-The method can only be used to solve problems where there is a finite pattern of derivatives for $f(x)$. So, for example, it would not be usable for problems where $f(x)=\ln(x)$ since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like $1/x$, which would need a term like $1/x^2$, which would need ... [etc].
-
-There is a method that can be used to solve more general types of inhomogeneous problem, which is called variation of parameters. It is slightly beyond the scope of this course, but it uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to construct the full solution. It assumes a solution of the form $y=u(x)y_1(x)+v(x)y_2(x)$ where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u,v$ are to be determined.
-
 ### Constructing the full solution
-The general solution to the inhomogeneous problem can be constructed by combining the homogenous solution $y_h$ and a particular integral $y_p$:
-$y=y_h+y_p$
-It works because of the linearity property:
+The general solution to the inhomogeneous problem can be constructed by combining the homogenous solution $y_h$ and the particular integral $y_p$:
 ```{math}
-\mathcal{L}(y_h+y_p) = \mathcal{L}(y_h)+\mathcal{L}(y_p) = 0+f(x).
+y(x) = y_h(x) + y_p(x)
+```
+This works because of the linearity property:
+```{math}
+\mathcal{L}(y_h+y_p) = \mathcal{L}(y_h)+\mathcal{L}(y_p) = 0+f(x) = f(x)
 ```
 
-The general solution contains two arbitrary constants so it can be made to satisfy a given set of two conditions. The values of the constants will depend on the particular integral you found. There are an infinite number of different particular integrals possible, but they all will differ only be an amount equal to a linear combination of the basis solutions.
+The general solution contains two arbitrary constants so it can be made to satisfy a given set of two conditions. The values of the constants will depend on the 
+particular integral you found. There are an infinite number of different particular integrals possible, but they all will differ only be an amount equal to a 
+linear combination of the basis solutions.
 
-You MUST construct the full solution before employing the given conditions to find constant terms. For example, if you erroneously make $y_h(0)=y_0$ then you will find mathematical
+We *MUST* construct the full solution before employing the given conditions to find constant terms. For example, if you erroneously make $y_h(0)=y_0$ then we will find 
+mathematically:
 ```{math}
 y(0)=y_h(0)+y_p(0) = y_0+y_p(0),
 ```
-which is not what you want.
+which is not what we want.
 
-```{admonition} Example
-:class: note
-Find the particular solution to the problem
-
-$y^{\prime\prime}+4y^{\prime}+5y=e^x, \quad y(0)=1, \quad y^{\prime(0)=2}$
+````{admonition} Worked example
+:class: seealso
+Find the solution to the problem:
+```{math}
+y^{\prime\prime}+4y^{\prime}+5y=e^x, \quad y(0)=1, \quad y^{\prime}(0)=2
+```
+The homogenous solution solves:
+```{math}
+y^{\prime\prime}+4y^{\prime}+5y=0
+```
+which given the trial solutions $y = e^{\lambda x}$ gives:
+```{math}
+\lambda^2 + 4\lambda + 5 = 0 \Rightarrow \lambda_\pm = -2\pm i
+```
+which means that the solution can be written as:
+```{math}
+y=e^{-2x}\,(A_1\cos(x)+A_2\sin(x))
+```
+The particular integral for this problem will have the form:
+```{math}
+y_p = B\,e^{x}
+```
+which means that:
+```{math}
+y_p=\frac{1}{10}e^x
 ```
 
-```{admonition} Solution
-:class: tip
-We already found that the particular integral for this problem is $y=\frac{1}{10}e^x$.
+Therefore the general solution is:
 
-The homogenous solution is $y=e^{-2x}(k_1\cos(x)+k_2\sin(x))$
-
-Therefore the general solution is
-
-$y=e^{-2x}(k_1\cos(x)+k_2\sin(x))+\frac{1}{10}e^x$
-
-Substituting for the initial conditions gives
-
-$k_1+\frac{1}{10}=1$ and $k_2-2k_1+\frac{1}{10}=2$, with solution $k_1=\frac{9}{10}$, $k_2=\frac{37}{10}$
-
-The general solution is
-$y=\frac{1}{10}e^{-2x}(9\cos(x)+37\sin(x))+\frac{1}{10}e^x$
+```{math}
+y=e^{-2x}(A_1\cos(x)+A_2\sin(x))+\frac{1}{10}e^x
 ```
+
+Substituting for the initial conditions gives:
+
+```{math}
+A_1+\frac{1}{10}=1 &\Rightarrow A_1=\frac{9}{10}\\
+A_2-2A_1+\frac{1}{10}=2 &\Rightarrow A_2=\frac{37}{10}
+```
+
+The final solution therefore is:
+```{math}
+y=\frac{1}{10}e^{-2x}(9\cos(x)+37\sin(x))+\frac{1}{10}e^x
+```
+````
 
 ````{admonition} Summary
 In order to solve an inhomogeneous problem:
@@ -522,3 +544,25 @@ y(0) = y_h(0) + y_p(0) &= \alpha_1 \\
 y'(0) = y_h'(0) + y_p'(0) &= \alpha_2 \\
 ```
 ````
+
+### A note about the limitations of undeterminded coefficients
+The method can only be used to solve problems where there is a finite pattern of derivatives for $f(x)$. So it would not be usable for problems such as:
+```{math}
+f(x)=\ln(x)
+``` 
+since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like $1/x$, 
+which would need a term like $1/x^2$ and so forth.  There is a method that can be used to solve more general types of inhomogeneous problem, which is called **variation of 
+parameters**.  It uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to 
+construct the full solution,  it assumes a solution of the form 
+```{math}
+y=u(x)y_1(x)+v(x)y_2(x)
+```
+where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u(x),\,v(x)$ are to be determined.
+
+
+## Solving separable PDEs
+Once we extend calculus to many variables, ODEs can become PDEs and then there techniques required to 
+
+
+## Variation of parameters method
+

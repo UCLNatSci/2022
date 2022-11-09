@@ -285,3 +285,5 @@ which transforms {eq}`benoulliODE` into a linear differential equation of the fo
 ### Ricati equation
 We can extend 
 
+## Perfect differential method
+
