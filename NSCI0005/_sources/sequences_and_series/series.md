@@ -1022,7 +1022,7 @@ be valid in all intervals of $x$ - an expansion around a point for instance.  We
 ````{admonition} Definition of a Taylor series
 :class: notice
 
-We can write a formula for sum of polynomials about $x=a$, in which we seek to express $f(x)$ as an infinite polynomial of the form
+We can write a formula for sum of polynomials about $x=a$, in which we seek to express $f(x)$ in the form:
 ```{math}
 p(x;\,a)=\sum_{n=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots
 ```
@@ -1053,7 +1053,7 @@ A plot of the curve $\sin(x)$ together with Maclaurin series expansion retaining
 As we can see. the degree 21 Maclaurin expansion represents $\sin(x)$ rather faithfully in the range $[-2\pi,2\pi]$, but it is less accurate further away 
 from the expansion point.
 
-````{admonition} An example
+````{admonition} Worked example
 :class: seealso
 
 Lets find the Taylor expansion of $f(x)=e^x$ about $x=0$ i.e. the Maclaurin series.  We first need to find the derivatives, which here is easy:
@@ -1071,14 +1071,18 @@ p(x;\,a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...
 Notice that this series satisfies $\displaystyle \frac{\mathrm{d}p}{\mathrm{d}x}=p$, which we would expect for $p = e^x$.
 ````
 
-We different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:
+````{admonition} An alternative derivation
+:class: tip, dropdown
+A different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:
 ```{math}
 \int_0^x f'(x-t)\,\text{d}t = -f(0) + f(x) \Longrightarrow f(x) = f(0) + \int_0^x f'(x-t) \,\text{d}t 
 ```
 Integrating by parts, we find:
 ```{math}
-u'(t) = 1, &\,\, v(t) = f'(x-t) \\
-u(t) = t, &\,\, v'(t) = -f''(x-t) \\
+&\begin{array}{cc}
+u'(t) = 1, & v(t) = f'(x-t) \\
+u(t) = t, &\,\, v'(t) = -f''(x-t)
+\end{array} \\
 \Rightarrow \int_0^x f'(x-t)\,\text{d}t &= \bigg[t\,f'(x-t) \bigg]^x_0 + \int_0^x t\,f''(x-t)\,\text{d}t \\
 \Rightarrow f(x) &= f(0) + x\,f'(0) + \int_0^x t\,f''(x-t)\,\text{d}t
 ```
@@ -1091,9 +1095,8 @@ If we want to generalise this to *any* point $x=a$, then we start with $\display
 ```{math}
 f(x) = f(a) + (x-a)\,f'(a) + \frac{1}{2!}\,(x-a)^2\,f''(a) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}(x-a)^n f^{(n)}(a)
 ```
+````
 
-````{admonition} More examples
-:class: seealso, dropdown
 The Maclaurin expansions of $\sin$, $\cos$,  $e^x$, and $\ln(1+x)$ are particularly important:
 
 ```{math}
@@ -1105,14 +1108,13 @@ e^x &= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
 
 You should also be able to calculate the first few terms in the expansion of an arbitrary function $f(x)$.
 
-````
 
 ````{admonition} Pratice Question
 :class: seealso, dropdown
 By regrouping the terms in the Maclaurin series for $e^{i\theta}$, derive Euler's formula.
 ````
 
-````{admonition} Solution
+````{admonition} Solutions
 :class: seealso, dropdown
 
 ```{math}

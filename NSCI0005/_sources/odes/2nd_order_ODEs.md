@@ -69,6 +69,8 @@ y_2 & = e^{x}
 where the constants $A_1,\,A_2$ are to be found by applying initial or boundary conditions.
 ````
 
+````{admonition} Some motivation for the ansatz
+:class: tip, dropdown
 We could motivate the form of the trial solution by solving the problem for the special case where $c=0$, which reduces to:
 ```{math}
 a\,z^{\prime}(x) + b\,z(x)=0,\quad \text{where } z=y^{\prime}
@@ -82,6 +84,7 @@ Another way is to begin by writing the system in matrix form $\underline{y}^{\pr
 ```
 The *eigenvalues* of the problem $A\,\underline{y}=\lambda\,\underline{y}$ satisfy the quadratic $a\lambda^2+b\lambda +c=0$ and therefore the solutions to the 
 problem $\underline{y}^{\prime}=k\,\underline{y}$ are of an exponential form. 
+````
 
 ### Principle of linear superposition
 The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable $y$. As a result of this fact, any linear combination of solutions will also be a solution:

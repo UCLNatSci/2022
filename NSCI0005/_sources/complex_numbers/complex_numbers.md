@@ -121,7 +121,7 @@ The relationship between the Cartesian representation $z = x + yi$ and the modul
 
 ```{math}
 :label: polarcomplex
-z = r(cos(\theta) + i sin(\theta)).
+z = r(\cos(\theta) + i \sin(\theta)).
 ```
 
 An alternative way of writing this result is the celebrated *polar form* of a complex number, using the exponential function:

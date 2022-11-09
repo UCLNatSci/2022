@@ -1286,7 +1286,7 @@ Let</p>
 be valid in all intervals of <span class="math notranslate nohighlight">\(x\)</span> - an expansion around a point for instance.  We call such Polynomial series Taylor series in general.</p>
 <div class="notice admonition">
 <p class="admonition-title">Definition of a Taylor series</p>
-<p>We can write a formula for sum of polynomials about <span class="math notranslate nohighlight">\(x=a\)</span>, in which we seek to express <span class="math notranslate nohighlight">\(f(x)\)</span> as an infinite polynomial of the form</p>
+<p>We can write a formula for sum of polynomials about <span class="math notranslate nohighlight">\(x=a\)</span>, in which we seek to express <span class="math notranslate nohighlight">\(f(x)\)</span> in the form:</p>
 <div class="math notranslate nohighlight">
 \[p(x;\,a)=\sum_{n=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots\]</div>
 <p>We choose the coefficients <span class="math notranslate nohighlight">\(c_n\)</span> to ensure that the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the polynomial is equal to the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the function at the
@@ -1307,7 +1307,7 @@ point <span class="math notranslate nohighlight">\(x=a\)</span>. In this sense, 
 <p>As we can see. the degree 21 Maclaurin expansion represents <span class="math notranslate nohighlight">\(\sin(x)\)</span> rather faithfully in the range <span class="math notranslate nohighlight">\([-2\pi,2\pi]\)</span>, but it is less accurate further away
 from the expansion point.</p>
 <div class="seealso admonition">
-<p class="admonition-title">An example</p>
+<p class="admonition-title">Worked example</p>
 <p>Lets find the Taylor expansion of <span class="math notranslate nohighlight">\(f(x)=e^x\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span> i.e. the Maclaurin series.  We first need to find the derivatives, which here is easy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f'(x)  &amp;= e^x \\
@@ -1318,13 +1318,17 @@ f^{(3)} &amp;= e^x \dots\end{split}\]</div>
 \[p(x;\,a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...\]</div>
 <p>Notice that this series satisfies <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}p}{\mathrm{d}x}=p\)</span>, which we would expect for <span class="math notranslate nohighlight">\(p = e^x\)</span>.</p>
 </div>
-<p>We different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">An alternative derivation</p>
+<p>A different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:</p>
 <div class="math notranslate nohighlight">
 \[\int_0^x f'(x-t)\,\text{d}t = -f(0) + f(x) \Longrightarrow f(x) = f(0) + \int_0^x f'(x-t) \,\text{d}t \]</div>
 <p>Integrating by parts, we find:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u'(t) = 1, &amp;\,\, v(t) = f'(x-t) \\
-u(t) = t, &amp;\,\, v'(t) = -f''(x-t) \\
+\[\begin{split}&amp;\begin{array}{cc}
+u'(t) = 1, &amp; v(t) = f'(x-t) \\
+u(t) = t, &amp;\,\, v'(t) = -f''(x-t)
+\end{array} \\
 \Rightarrow \int_0^x f'(x-t)\,\text{d}t &amp;= \bigg[t\,f'(x-t) \bigg]^x_0 + \int_0^x t\,f''(x-t)\,\text{d}t \\
 \Rightarrow f(x) &amp;= f(0) + x\,f'(0) + \int_0^x t\,f''(x-t)\,\text{d}t\end{split}\]</div>
 <p>We can then apply integration by parts repeatedly we find an infinite series for <span class="math notranslate nohighlight">\(f(x)\)</span> around <span class="math notranslate nohighlight">\(x = 0\)</span>:</p>
@@ -1333,8 +1337,7 @@ u(t) = t, &amp;\,\, v'(t) = -f''(x-t) \\
 <p>If we want to generalise this to <em>any</em> point <span class="math notranslate nohighlight">\(x=a\)</span>, then we start with <span class="math notranslate nohighlight">\(\displaystyle \int_0^{x-a} f'(x-t)\,\text{d}t\)</span> :</p>
 <div class="math notranslate nohighlight">
 \[f(x) = f(a) + (x-a)\,f'(a) + \frac{1}{2!}\,(x-a)^2\,f''(a) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}(x-a)^n f^{(n)}(a)\]</div>
-<div class="seealso dropdown admonition">
-<p class="admonition-title">More examples</p>
+</div>
 <p>The Maclaurin expansions of <span class="math notranslate nohighlight">\(\sin\)</span>, <span class="math notranslate nohighlight">\(\cos\)</span>,  <span class="math notranslate nohighlight">\(e^x\)</span>, and <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> are particularly important:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sin(x) &amp;= x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n)!} \\
@@ -1342,13 +1345,12 @@ u(t) = t, &amp;\,\, v'(t) = -f''(x-t) \\
 e^x &amp;= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
 \ln(1+x) &amp;= x-\frac{x^2}{2}+\frac{x^3}{3}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{n+1}}{n+1}\end{split}\]</div>
 <p>You should also be able to calculate the first few terms in the expansion of an arbitrary function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
-</div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Pratice Question</p>
 <p>By regrouping the terms in the Maclaurin series for <span class="math notranslate nohighlight">\(e^{i\theta}\)</span>, derive Euler’s formula.</p>
 </div>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Solution</p>
+<p class="admonition-title">Solutions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}e^{i\theta}&amp;=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
 &amp;=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)\end{split}\]</div>

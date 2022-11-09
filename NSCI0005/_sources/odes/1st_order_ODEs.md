@@ -264,3 +264,24 @@ Can you solve this equation by separation? The solution is
 $\mu = e^{\int f(x)\mathrm{d}x}$
 
 ## Benoulli form
+
+````{admonition} Defintion
+A Benoulli differential equation takes the form:
+```{math}
+:label: benoulliODE
+\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathcal{R}
+```
+We see that for $n = 0,\, 1$ this reduces to cases already discussed, but for any other $n$ this equation is clearly non-linear in $y$.  We can 
+however make progress using the substitution:
+```{math}
+u = y^{1-n}
+```
+which transforms {eq}`benoulliODE` into a linear differential equation of the form:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(u)\,u = -(n-1)\,Q(x)
+```
+````
+
+### Ricati equation
+We can extend 
+
