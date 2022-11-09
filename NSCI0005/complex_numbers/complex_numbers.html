@@ -318,6 +318,11 @@
      3.5.3. Roots of Other Values
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomial-roots">
+     3.5.4. Polynomial roots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -447,6 +452,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#roots-of-other-values">
      3.5.3. Roots of Other Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomial-roots">
+     3.5.4. Polynomial roots
     </a>
    </li>
   </ul>
@@ -801,23 +811,57 @@ The principal argument is given by <span class="math notranslate nohighlight">\(
 <p>Now that we have solved the roots of unity, finding the complex roots of other values <span class="math notranslate nohighlight">\(z^m = c\)</span> is relatively straightforward, even in cases where <span class="math notranslate nohighlight">\(c\)</span> is complex value.</p>
 <p>We simply express <span class="math notranslate nohighlight">\(c\)</span> in polar form, <span class="math notranslate nohighlight">\(c=re^{i\theta}\)</span>, and then use the result:</p>
 <div class="math notranslate nohighlight" id="equation-rootsofothervalues">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-rootsofothervalues" title="Permalink to this equation">¶</a></span>\[z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}\]</div>
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-rootsofothervalues" title="Permalink to this equation">¶</a></span>\[z_m = r^{1/m}e^{i \theta/m}e^{i 2\pi k/m},\, k \in \mathbb{Z}\]</div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked Example</p>
 <p>Find all roots of the problem <span class="math notranslate nohighlight">\(z^4 = \sqrt{3} - i\)</span> in Cartesian form, <span class="math notranslate nohighlight">\(z = x + iy\)</span>.</p>
-<p><em>Solution</em>
-We begin by writing the right hand side in polar form: <span class="math notranslate nohighlight">\(\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}\)</span></p>
-<p>Here, <span class="math notranslate nohighlight">\(m=4\)</span>, and so we use Equation <a class="reference internal" href="#equation-rootsofothervalues">(3.13)</a> to find our roots.</p>
-<p>One solution is given simply by <span class="math notranslate nohighlight">\(z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}\)</span></p>
-<p>The others are found by multiplying by <span class="math notranslate nohighlight">\(e^{-\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\pi}\)</span></p>
-<p>Following through, we then obtain:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(z_{-1} = 2^{\frac{1}{4}}e^{-i\frac{13\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{13\pi}{24}) - i\sin(\frac{13\pi}{24})) \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(z_0 = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{\pi}{24}) - i\sin(\frac{\pi}{24})) \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(z_1 = 2^{\frac{1}{4}}e^{-i\frac{11\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{11\pi}{24}) + i\sin(\frac{11\pi}{24})) \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{23\pi}{24}) + i\sin(\frac{23\pi}{24})) \)</span></p></li>
-</ul>
-<p>We didn’t really need to fiddle about combining the angles (<span class="math notranslate nohighlight">\(\frac{-i\pi}{24} + \frac{2k\pi}{4}\)</span>) in this case, since the <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> spacing between the roots corresponds to a simple multiplication by <span class="math notranslate nohighlight">\(i\)</span>, but it was done here to illustrate the principal of finding the argument for each root in exact form.</p>
+<p>We begin by writing the right hand side in polar form: <span class="math notranslate nohighlight">\(\sqrt{3} - i = 2e^{-i\pi/6}\)</span></p>
+<p>Here, <span class="math notranslate nohighlight">\(m=4\)</span>, and so we use Equation <a class="reference internal" href="#equation-rootsofothervalues">(3.13)</a> to find our roots:</p>
+<div class="math notranslate nohighlight">
+\[z_m = 2^{1/4}\,e^{i(-\pi/6 + 2\pi k)/3},\, k \in \mathbb{Z}\]</div>
+<p>One solution is given simply by <span class="math notranslate nohighlight">\(z_0 = (2e^{-i\pi/6})^{1/4} = 2^{1/4}e^{-i\pi/24}\)</span></p>
+<p>Following through different values of <span class="math notranslate nohighlight">\(m\)</span>, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z_{-1} &amp;= 2^{1/4}e^{-i 13\pi/24} \\
+z_0 &amp;= 2^{1/4}e^{-i \pi/24} \\
+z_1 &amp;= 2^{1/4}e^{i 11\pi/24} \\
+z_2 &amp;= 2^{1/4}e^{i 23\pi/24} \end{split}\]</div>
+<p>We see that the other roots are found by multiplying by <span class="math notranslate nohighlight">\(e^{-i\pi/2},\, e^{i\pi/2},\ e^{i\pi}\)</span></p>
+</div>
+</div>
+<div class="section" id="polynomial-roots">
+<h3><span class="section-number">3.5.4. </span>Polynomial roots<a class="headerlink" href="#polynomial-roots" title="Permalink to this headline">¶</a></h3>
+<p>We can treat complex roots to polynomial just like any other real roots, which for an <span class="math notranslate nohighlight">\(n^{th}\)</span> order polynomial we can write as:</p>
+<div class="math notranslate nohighlight">
+\[f(z) = az^n + bz^{n-1} + \dots =(z-z_1)(z-z_2)\dots(z-z_n) = 0\]</div>
+<p>where here <span class="math notranslate nohighlight">\(z_n \in \mathbb{C}\)</span> in general.</p>
+<p>We find by the <em>conjugate root</em> theorem, i.e. that if <span class="math notranslate nohighlight">\(z_n\)</span> is a <em>complex</em> root of <span class="math notranslate nohighlight">\(f(z)\)</span> then <span class="math notranslate nohighlight">\({z_n}^*\)</span> is also a root - this is not true in general if <span class="math notranslate nohighlight">\(z_n\)</span> is a real root.<br />
+It also follows from this that if <span class="math notranslate nohighlight">\(n\)</span> is odd, then the polynomial must have at least one real root.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. The polynomial <span class="math notranslate nohighlight">\(z^3 - 7z^2 + 41z - 87\)</span> has a root <span class="math notranslate nohighlight">\(z = 2 + 5i\)</span>, find all the other roots.</p>
+<p>2. Find all the roots of <span class="math notranslate nohighlight">\(z^4 - z^3 - z^2 - z - 2\)</span>, given that they are all integer points in the complex plane.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. If <span class="math notranslate nohighlight">\(z_1 = 2 + 5i\)</span>, then <span class="math notranslate nohighlight">\(z_2 = {z_1}^* = 2 - 5i\)</span>, hence we can factorise this polynomial as:</p>
+<div class="math notranslate nohighlight">
+\[(z - 2 - 5i)(z - 2 + 5i)(z-a) = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> here <em>must</em> be a real root.  Expanding this out, we find:</p>
+<div class="math notranslate nohighlight">
+\[(z^2 - 4z + 29)(z-a) = z^3 - (a + 4)z^2 + 25z - 29a = 0\]</div>
+<p>which suggests that <span class="math notranslate nohighlight">\(a=3\)</span>, hence the three roots are:</p>
+<div class="math notranslate nohighlight">
+\[z = 3,\, 2+5i,\, 2-5i\]</div>
+<p>2. If <span class="math notranslate nohighlight">\(z^4 - z^3 - z^2 - z - 2\)</span>, we can spot that <span class="math notranslate nohighlight">\(z = 2\)</span> is a root, hence:</p>
+<div class="math notranslate nohighlight">
+\[z^4 - z^3 - z^2 - z - 2 = (z-2)(z^3 + z^2 + z + 1) = 0\]</div>
+<p>we can then spot that <span class="math notranslate nohighlight">\(z = -1\)</span> is also a root:</p>
+<div class="math notranslate nohighlight">
+\[(z-2)(z^3 + z^2 + z + 1) =  (z-2)(z+1)(z^2 + 1) = 0\]</div>
+<p>and given that <span class="math notranslate nohighlight">\(z^2 + 1 = (z-i)(z+i)\)</span>, we have our final two roots:</p>
+<div class="math notranslate nohighlight">
+\[z^4 - z^3 - z^2 - z - 2 = (z-2)(z+1)(z + i)(z-i)\]</div>
 </div>
 </div>
 </div>
@@ -832,18 +876,47 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <p>We can then use Euler’s identity again (replacing <span class="math notranslate nohighlight">\(\theta\)</span> with <span class="math notranslate nohighlight">\(n\theta\)</span>) to re-write the left had side:</p>
 <div class="math notranslate nohighlight" id="equation-demoivre">
 <span class="eqno">(3.15)<a class="headerlink" href="#equation-demoivre" title="Permalink to this equation">¶</a></span>\[\cos(n\theta) + i\sin(n\theta) \equiv (\cos(\theta) + i\sin(\theta))^n\]</div>
-<p>This result (for integer values of <span class="math notranslate nohighlight">\(n\)</span>) is known as De Moivre’s theorem. Historically, it was proved before Euler’s identity. A possible technique for proving it without Euler’s identity is by <em>induction</em>. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.</p>
-<p>The fact that De Moivre’s theorem is <em>consistent</em> with Euler’s identity is reassuring, although we have still not proved that Euler’s identity is correct.</p>
+<p>This result (for integer values of <span class="math notranslate nohighlight">\(n\)</span>) is known as <strong>de Moivre’s theorem</strong>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Non-integer Values</p>
-<p>For non-integer values <span class="math notranslate nohighlight">\((\cos(\theta) + i\sin(\theta))^n\)</span> is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result <span class="math notranslate nohighlight">\(\cos(n\theta) + i\sin(n\theta)\)</span> gives a single root to the problem, but not necessarily the principal root.</p>
+<p>For non-integer values <span class="math notranslate nohighlight">\((\cos(\theta) + i\sin(\theta))^n\)</span> is multiple-valued. The principal root is normally taken as the one that has the smallest
+positive argument, or that gives a real number. The result <span class="math notranslate nohighlight">\(\cos(n\theta) + i\sin(n\theta)\)</span> gives a single root to the problem, but not necessarily the principal root.</p>
 </div>
+</div>
+<div class="section" id="compound-angle-formulae">
+<h3><span class="section-number">3.6.2. </span>Compound angle formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
+<p>The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:</p>
+<div class="math notranslate nohighlight" id="equation-compoundangle1">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[\begin{split}e^{i(A+B)} &amp;= e^{iA}e^{iB}\\
+\cos(A+B) + i\sin(A+B) &amp;= (\cos(A) + i\sin(A))(\cos(B) + i\sin(B))\end{split}\]</div>
+<p>Expanding out the right hand side and comparing the real and imaginary parts provides us with the
+<strong>compound angle formula</strong> for <span class="math notranslate nohighlight">\(\cos(A+B)\)</span> and <span class="math notranslate nohighlight">\(\sin(A+B)\)</span>. We obtain the familiar results:</p>
+<div class="math notranslate nohighlight" id="equation-compoundangle2">
+<span class="eqno">(3.17)<a class="headerlink" href="#equation-compoundangle2" title="Permalink to this equation">¶</a></span>\[\begin{split}\cos(A+B) &amp;= \cos(A)\cos(B) - \sin(A)\sin(B) \\
+\sin(A+B) &amp;= \sin(A)\cos(B) + \cos(A)\sin(B)\end{split}\]</div>
+<p>In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles , a common one being
+<span class="math notranslate nohighlight">\(\cos^2(\theta) = \frac{1}{2}(\cos(2\theta)+1)\)</span>.</p>
+<p>For higher powers we make use of the complex exponential form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\cos(\theta) &amp;= \frac{1}{2}\Big(e^{i\theta} + e^{-i\theta} \Big) \\
+\sin(\theta) &amp;= \frac{1}{2i}\Big(e^{i\theta} - e^{-i\theta} \Big) \end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\cos^n(\theta) &amp;= \frac{1}{2^n}\Big(e^{i \theta} + e^{-i\theta} \Big)^n \\
+&amp;= \frac{1}{2^n}\Big(e^{ni\theta} + e^{-ni\theta} + ne^{(n-2)i\theta} + ne^{-(n-2)i\theta} + \dots \Big)\\
+&amp;= \frac{1}{2^{n-1}}\Big(\cos(n\theta) + n\cos((n-2)\theta) + \dots \Big)\\
+\sin^n(\theta) &amp;= \frac{1}{(2i)^n}\Big(e^{i \theta} - e^{-i\theta} \Big)^n \\
+&amp;= \frac{1}{(2i)^n}\Big(e^{ni\theta} - e^{-ni\theta} + ne^{(n-2)i\theta} - ne^{-(n-2)i\theta} + \dots \Big)\\
+&amp;= \frac{1}{(2i)^{n-1}}\Big(\sin(n\theta) + n\sin((n-2)\theta) + \dots \Big)\end{split}\]</div>
+<p>where we can expand out using binomial theorem.  We note that for  <span class="math notranslate nohighlight">\(n\)</span> odd that will be <span class="math notranslate nohighlight">\((n+1)/2\)</span> trigonometic terms in the expansion and for <span class="math notranslate nohighlight">\(n\)</span> even there will be
+<span class="math notranslate nohighlight">\(n/2\)</span> trigonometric terms in the expansion as well as a constant term.</p>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice Questions</p>
 <p>1. Show that:</p>
 <div class="math notranslate nohighlight">
 \[\cos^7(\theta) = \frac{1}{64} \Big[35\cos(\theta) + 21\cos(3\theta) + 7\cos(5\theta) + \cos(7\theta)\Big]\]</div>
-<p>2. Find an expressions for <span class="math notranslate nohighlight">\(\cos(7 \theta),\, \sin(7\theta)\)</span> in terms of <span class="math notranslate nohighlight">\(\cos(\theta),\, \sin(\theta)\)</span></p>
+<p>2. Find an expressions for <span class="math notranslate nohighlight">\(\cos(7 \theta),\, \sin(7\theta)\)</span> in terms of <span class="math notranslate nohighlight">\(\cos(\theta),\, \sin(\theta)\)</span>.</p>
+<p>3. Find an expression for <span class="math notranslate nohighlight">\(\sin^5(\theta)\)</span> in terms of <span class="math notranslate nohighlight">\(\sin(n\theta),\, n \in \mathbb{N}\)</span>.</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
@@ -859,8 +932,8 @@ Given that <span class="math notranslate nohighlight">\(\cos(\theta) = \frac{1}{
 &amp;= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7\,e^{5i \theta}  + 7\,e^{-5i \theta}  
 + 21z,e^{3 i \theta}  + 21\,e^{-3i \theta}  + 35e^\,e^{-i \theta} 
 + 35\,e^{-i \theta}  \Big)\\
-&amp;= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta) + 35(2\cos(\theta))\Big]\\
-\Rightarrow \cos^7(\theta)&amp;= \frac{1}{64}\Big[\cos(7 \theta) +  7(\cos(5 \theta)) + 21(\cos(3 \theta) + 35(\cos(\theta))\Big]\\\end{split}\]</div>
+&amp;= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta)) + 35(2\cos(\theta))\Big]\\
+\Rightarrow \cos^7(\theta)&amp;= \frac{1}{64}\Big[\cos(7 \theta) +  7\cos(5 \theta) + 21\cos(3 \theta) + 35\cos(\theta)\Big]\\\end{split}\]</div>
 <p>2.
 Starting with:</p>
 <div class="math notranslate nohighlight">
@@ -874,30 +947,17 @@ Starting with:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\cos(7\theta) &amp;= \cos^7(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta)  7 \cos(\theta)\,\sin^6(\theta)  \\
 \sin(7\theta) &amp;= 7 \cos^6(\theta)\,\sin(\theta) - 35 \cos^4(\theta)\,\sin^3(\theta) + 21 \cos^2(\theta)\,\sin^5(\theta) -  \sin^7(\theta) \end{split}\]</div>
-</div>
-</div>
-<div class="section" id="compound-angle-formulae">
-<h3><span class="section-number">3.6.2. </span>Compound angle formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
-<p>The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:</p>
-<div class="math notranslate nohighlight" id="equation-compoundangle1">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[\begin{split}e^{i(A+B)} &amp;= e^{iA}e^{iB}\\
-\cos(A+B) + i\sin(A+B) &amp;= (\cos(A) + i\sin(A))(\cos(B) + i\sin(B))\end{split}\]</div>
-<p>Expanding out the right hand side and comparing the real and imaginary parts provides us with the
-<strong>compound angle formula</strong> for <span class="math notranslate nohighlight">\(\cos(A+B)\)</span> and <span class="math notranslate nohighlight">\(\sin(A+B)\)</span>. We obtain the familiar results:</p>
-<div class="math notranslate nohighlight" id="equation-compoundangle2">
-<span class="eqno">(3.17)<a class="headerlink" href="#equation-compoundangle2" title="Permalink to this equation">¶</a></span>\[\begin{split}\cos(A+B) &amp;= \cos(A)\cos(B) - \sin(A)\sin(B) \\
-\sin(A+B) &amp;= \sin(A)\cos(B) + \cos(A)\sin(B)\end{split}\]</div>
-<p>In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles
-(e.g. <span class="math notranslate nohighlight">\(\cos^2(\theta) = \frac{1}{2}(\cos(2\theta)+1)\)</span>).</p>
-<p>For higher powers we make use of the complex exponential form:</p>
+<p>3.
+Given that:</p>
 <div class="math notranslate nohighlight">
 \[\sin^5(\theta) = \Big(\frac{1}{2i}\Big)^5\Big(e^{i\theta}-e^{-i\theta}\Big)^5\]</div>
-<p>Expanding out the right hand side using Binomial expansion, and collecting together powers of <span class="math notranslate nohighlight">\(\theta\)</span> gives:</p>
+<p>Expanding out the right hand side using binomial expansion, and collecting together powers of <span class="math notranslate nohighlight">\(\theta\)</span> gives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sin^5(\theta) &amp;= \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]\\
 &amp;= \left(\frac{1}{2}\right)^5 (-i) [2i\sin(5\theta) - 5(2i)\sin(3\theta) + 10(2i)\sin(\theta)]\\
 &amp;= \frac{1}{16} [\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)]\\
 \end{split}\]</div>
+</div>
 </div>
 <div class="section" id="hyperbolic-functions">
 <h3><span class="section-number">3.6.3. </span>Hyperbolic functions<a class="headerlink" href="#hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
@@ -933,6 +993,33 @@ unity at the <span class="math notranslate nohighlight">\(y\)</span> axis.</p>
 \[\begin{split}\textrm{sech} &amp;= \frac{1}{\cosh(\theta)} = \frac{2}{e^x + e^{-x}} = \frac{2e^x}{e^{2x} + 1} \\
 \textrm{cosech}(\theta) &amp;= \frac{1}{\sinh(\theta)} = \frac{2}{e^x - e^{-x}} = \frac{2e^x}{e^{2x} - 1} \\
 \coth(\theta) &amp;= \frac{1}{\tanh(\theta)} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}= \frac{e^{2x}-1}{e^{2x}+1}\end{split}\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Find real solutions to the problem <span class="math notranslate nohighlight">\(\cosh(x) = 2\)</span></p>
+<p>2. Find all the real solutions to the problem:</p>
+<div class="math notranslate nohighlight">
+\[2 \sinh(x) = \cosh(x)\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\cosh(x) = \frac{1}{2}\Big(e^x + e^{-x} \Big) = 2\]</div>
+<p>which is a disguised quadratic in <span class="math notranslate nohighlight">\(e^x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[e^{2x} + 1 = 4e^{x} \Rightarrow e^{2x} - 4e^{x} + 1 = 0\]</div>
+<p>which has roots of:</p>
+<div class="math notranslate nohighlight">
+\[e^{x} = 2 \pm \sqrt{3} \Rightarrow x_\pm = \ln \Big( 2 \pm \sqrt{3}\Big)\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[2\Big(e^{x} - e^{-x}\Big) = e^{x} + e^{-x}\]</div>
+<p>which is a disguised quadratic in <span class="math notranslate nohighlight">\(e^x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2\Big(e^{2x} - 1\Big) &amp;= e^{2x} + 1 \\
+e^{2x} &amp;= 3 \\
+x &amp;= \frac{1}{2}\ln(3)\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="relationship-between-trigonometric-and-hyperbolic-functions">

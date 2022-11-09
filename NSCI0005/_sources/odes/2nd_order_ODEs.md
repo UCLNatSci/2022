@@ -552,17 +552,96 @@ f(x)=\ln(x)
 ``` 
 since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like $1/x$, 
 which would need a term like $1/x^2$ and so forth.  There is a method that can be used to solve more general types of inhomogeneous problem, which is called **variation of 
-parameters**.  It uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to 
+parameters**.  
+
+
+## Solving separable PDEs
+Once we extend calculus to many variables, ordinary differential equations (ODEs) can become partial differential equations (PDEs) and then the range of techniques that can 
+be applied to solve these sorts of problems becomes vast - typically there is not clean, closed form, way of solving a given PDE - a series solution or answer valid 
+only in certain regimes is often the best we can do.  There is however one class of PDE that can solved using ODE techniques, so called *separable PDEs*.
+
+````{admonition} Separable PDEs
+A separable PDE is of the form:
+```{math}
+\mathcal{L}_x u(x,\,t) = \lambda \mathcal{L}_t u(x,\,t)
+```
+where $\lambda$ is some constant and we use the linear differential operators:
+```{math}
+\mathcal{L}_x &= a_1 \frac{\partial^2}{\partial x^2} + a_2\frac{\partial}{\partial x} + a_3\\
+\mathcal{L}_t &= b_1 \frac{\partial^2}{\partial t^2} + b_2\frac{\partial}{\partial t} + b_3
+```
+````
+
+We can separate $u(x,\,t)$ into:
+```{math}
+u(x,\,t) = X(x)\,T(t)
+```
+such that the resulting PDE has the form:
+```{math}
+:label: sepeqn
+\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big)\,T(t) =
+\lambda\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big)\,X(x)
+```
+where we notice we have switched to one variable derivatives, since:
+```{math}
+\frac{\partial (X\,T)}{\partial x} &= T\,\frac{\mathrm{d} X}{\mathrm{d}x} \\
+\frac{\partial (X\,T)}{\partial t} &= X\,\frac{\mathrm{d} T}{\mathrm{d}t}
+```
+If we look at {eq}`sepeqn`, we notice that if divide each side by $u = X\,T$:
+```{math}
+\frac{1}{\lambda\,X}\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big) =
+\frac{1}{T}\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big)
+```
+then whilst the variable $t$ changes on the RHS, it cannot change the value of the LHS, since that does not depends on t.  Likewise although variable $x$ changes 
+the LHS, the RHS would be constant since it does not depend on $x$, hence we can argue that both sides are equal to some constant, here labelled $s$:
+```{math}
+\frac{1}{\lambda\,X}\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big) =
+\frac{1}{T}\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big) = s
+```
+We can solve this system to find two homogeneous ODE systems:
+```{math}
+a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x} + (a_3 - s\,\lambda)X &= 0\\
+b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t} + (b_3 - s)T &= 0
+```
+The size and sign of each of $a_3, \lambda,\, s$ can determine whether there are oscillating or decaying solutions for $X(x)$ and $T(t)$.
+
+
+````{admonition} Worked example
+:class: seealso
+Lets try to solve the wave equation:
+```{math}
+\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
+```
+where $c$ is some constant.  Using the separable ansatz:
+```{math}
+u(x,\,t) = X(x)\,T(t)
+```
+this means that the PDE reduces to:
+```{math}
+\frac{1}{c^2\,T}\frac{\mathrm{d}^2 T}{\mathrm{d}t^2} = \frac{1}{X}\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} = -k^2
+```
+where $-k^2$ as a spearation constant means we pick oscillating solutions, such that the ODEs resulting are:
+```{math}
+\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} + k^2\,X &= 0\\
+\frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + k^2\,c^2\,T &= 0
+```
+meaning:
+```{math}
+X(x) &= A_1\,e^{ikx} + A_2\,e^{-ikx}\\
+T(t) &= B_1\,e^{ikct} + B_2\,e^{-ikct}
+```
+and hence $u(x,\,t)$ is given by:
+```{math}
+u(x,\,t) = \Big(A_1\,e^{ikx} + A_2\,e^{-ikx}\Big)\Big(B_1\,e^{ikct} + B_2\,e^{-ikct}\Big)
+```
+````
+
+
+## Variation of parameters method
+
+It uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to 
 construct the full solution,  it assumes a solution of the form 
 ```{math}
 y=u(x)y_1(x)+v(x)y_2(x)
 ```
 where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u(x),\,v(x)$ are to be determined.
-
-
-## Solving separable PDEs
-Once we extend calculus to many variables, ODEs can become PDEs and then there techniques required to 
-
-
-## Variation of parameters method
-

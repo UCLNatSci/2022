@@ -36,7 +36,7 @@ for all $c$.  However we will see that this behaviour does not apply for all fun
 ````
 We may also consider the limit of a function $f(x)$ as its argument $x$ becomes "very large", for instance, we can say that 
 ```{math}
-\lim_{x\to\infty} x^2 = \infty
+\lim_{x\to\infty} x^2 \rightarrow  \infty
 ```
 since $x^2$ can be made arbitrarily large by making $x$ "big enough".  We would read the expression by saying: 
 "the limit of $x^2$ as $x$ tends to infinity is infinity", though it does not actually reach infinity.

@@ -434,31 +434,91 @@ We simply express $c$ in polar form, $c=re^{i\theta}$, and then use the result:
 
 ```{math}
 :label: rootsofothervalues
-z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}
+z_m = r^{1/m}e^{i \theta/m}e^{i 2\pi k/m},\, k \in \mathbb{Z}
 ```
 
-```{admonition} Worked Example
+````{admonition} Worked Example
 :class: seealso
 Find all roots of the problem $z^4 = \sqrt{3} - i$ in Cartesian form, $z = x + iy$.
 
-*Solution*
-We begin by writing the right hand side in polar form: $\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}$
+We begin by writing the right hand side in polar form: $\sqrt{3} - i = 2e^{-i\pi/6}$
 
-Here, $m=4$, and so we use Equation {eq}`rootsofothervalues` to find our roots.
+Here, $m=4$, and so we use Equation {eq}`rootsofothervalues` to find our roots:
 
-One solution is given simply by $z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}$
-
-The others are found by multiplying by $e^{-\frac{\pi}{2}}$, $e^{\frac{\pi}{2}}$, $e^{\pi}$
-
-Following through, we then obtain:
-* $z_{-1} = 2^{\frac{1}{4}}e^{-i\frac{13\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{13\pi}{24}) - i\sin(\frac{13\pi}{24})) $
-* $z_0 = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{\pi}{24}) - i\sin(\frac{\pi}{24})) $
-* $z_1 = 2^{\frac{1}{4}}e^{-i\frac{11\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{11\pi}{24}) + i\sin(\frac{11\pi}{24})) $
-* $z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\cos(\frac{23\pi}{24}) + i\sin(\frac{23\pi}{24})) $
-
-
-We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principal of finding the argument for each root in exact form.
+```{math}
+z_m = 2^{1/4}\,e^{i(-\pi/6 + 2\pi k)/3},\, k \in \mathbb{Z}
 ```
+
+One solution is given simply by $z_0 = (2e^{-i\pi/6})^{1/4} = 2^{1/4}e^{-i\pi/24}$
+
+Following through different values of $m$, we obtain:
+```{math}
+z_{-1} &= 2^{1/4}e^{-i 13\pi/24} \\
+z_0 &= 2^{1/4}e^{-i \pi/24} \\
+z_1 &= 2^{1/4}e^{i 11\pi/24} \\
+z_2 &= 2^{1/4}e^{i 23\pi/24} 
+```
+
+We see that the other roots are found by multiplying by $e^{-i\pi/2},\, e^{i\pi/2},\ e^{i\pi}$
+
+````
+
+### Polynomial roots
+
+We can treat complex roots to polynomial just like any other real roots, which for an $n^{th}$ order polynomial we can write as:
+```{math}
+f(z) = az^n + bz^{n-1} + \dots =(z-z_1)(z-z_2)\dots(z-z_n) = 0
+```
+where here $z_n \in \mathbb{C}$ in general.  
+
+We find by the *conjugate root* theorem, i.e. that if $z_n$ is a *complex* root of $f(z)$ then ${z_n}^*$ is also a root - this is not true in general if $z_n$ is a real root.  
+It also follows from this that if $n$ is odd, then the polynomial must have at least one real root.
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+1\. The polynomial $z^3 - 7z^2 + 41z - 87$ has a root $z = 2 + 5i$, find all the other roots.
+
+2\. Find all the roots of $z^4 - z^3 - z^2 - z - 2$, given that they are all integer points in the complex plane.
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. If $z_1 = 2 + 5i$, then $z_2 = {z_1}^* = 2 - 5i$, hence we can factorise this polynomial as:
+```{math}
+(z - 2 - 5i)(z - 2 + 5i)(z-a) = 0
+```
+where $a$ here *must* be a real root.  Expanding this out, we find:
+```{math}
+(z^2 - 4z + 29)(z-a) = z^3 - (a + 4)z^2 + 25z - 29a = 0
+```
+which suggests that $a=3$, hence the three roots are:
+```{math}
+z = 3,\, 2+5i,\, 2-5i
+```
+
+
+2\. If $z^4 - z^3 - z^2 - z - 2$, we can spot that $z = 2$ is a root, hence:
+
+```{math}
+z^4 - z^3 - z^2 - z - 2 = (z-2)(z^3 + z^2 + z + 1) = 0
+```
+we can then spot that $z = -1$ is also a root:
+```{math}
+(z-2)(z^3 + z^2 + z + 1) =  (z-2)(z+1)(z^2 + 1) = 0
+```
+and given that $z^2 + 1 = (z-i)(z+i)$, we have our final two roots:
+```{math}
+z^4 - z^3 - z^2 - z - 2 = (z-2)(z+1)(z + i)(z-i)
+```
+````
+
+
+
+
+
 
 ## Trigonometric and hyperbolic relationships
 In this section, we make use of Euler's identity, $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$, to prove several results involving trigonometric and hyperbolic functions. 
@@ -479,14 +539,52 @@ We can then use Euler's identity again (replacing $\theta$ with $n\theta$) to re
 :label: demoivre
 \cos(n\theta) + i\sin(n\theta) \equiv (\cos(\theta) + i\sin(\theta))^n
 ```
-This result (for integer values of $n$) is known as De Moivre's theorem. Historically, it was proved before Euler's identity. A possible technique for proving it without Euler's identity is by *induction*. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.
-
-The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
+This result (for integer values of $n$) is known as **de Moivre's theorem**. 
 
 ```{admonition} Non-integer Values
 :class: tip
-For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\cos(n\theta) + i\sin(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
+For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest 
+positive argument, or that gives a real number. The result $\cos(n\theta) + i\sin(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
 ```
+
+
+### Compound angle formulae
+The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
+
+```{math}
+:label: compoundangle1
+e^{i(A+B)} &= e^{iA}e^{iB}\\
+\cos(A+B) + i\sin(A+B) &= (\cos(A) + i\sin(A))(\cos(B) + i\sin(B))
+```
+
+Expanding out the right hand side and comparing the real and imaginary parts provides us with the 
+**compound angle formula** for $\cos(A+B)$ and $\sin(A+B)$. We obtain the familiar results:
+
+```{math}
+:label: compoundangle2
+\cos(A+B) &= \cos(A)\cos(B) - \sin(A)\sin(B) \\
+\sin(A+B) &= \sin(A)\cos(B) + \cos(A)\sin(B)
+```
+
+In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles , a common one being 
+$\cos^2(\theta) = \frac{1}{2}(\cos(2\theta)+1)$.
+
+For higher powers we make use of the complex exponential form:
+```{math}
+\cos(\theta) &= \frac{1}{2}\Big(e^{i\theta} + e^{-i\theta} \Big) \\
+\sin(\theta) &= \frac{1}{2i}\Big(e^{i\theta} - e^{-i\theta} \Big) 
+```
+and therefore:
+```{math}
+\cos^n(\theta) &= \frac{1}{2^n}\Big(e^{i \theta} + e^{-i\theta} \Big)^n \\
+&= \frac{1}{2^n}\Big(e^{ni\theta} + e^{-ni\theta} + ne^{(n-2)i\theta} + ne^{-(n-2)i\theta} + \dots \Big)\\
+&= \frac{1}{2^{n-1}}\Big(\cos(n\theta) + n\cos((n-2)\theta) + \dots \Big)\\
+\sin^n(\theta) &= \frac{1}{(2i)^n}\Big(e^{i \theta} - e^{-i\theta} \Big)^n \\
+&= \frac{1}{(2i)^n}\Big(e^{ni\theta} - e^{-ni\theta} + ne^{(n-2)i\theta} - ne^{-(n-2)i\theta} + \dots \Big)\\
+&= \frac{1}{(2i)^{n-1}}\Big(\sin(n\theta) + n\sin((n-2)\theta) + \dots \Big)
+```
+where we can expand out using binomial theorem.  We note that for  $n$ odd that will be $(n+1)/2$ trigonometic terms in the expansion and for $n$ even there will be 
+$n/2$ trigonometric terms in the expansion as well as a constant term.
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -494,7 +592,9 @@ For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. Th
 ```{math}
 \cos^7(\theta) = \frac{1}{64} \Big[35\cos(\theta) + 21\cos(3\theta) + 7\cos(5\theta) + \cos(7\theta)\Big]
 ```
-2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$
+2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$.
+
+3\. Find an expression for $\sin^5(\theta)$ in terms of $\sin(n\theta),\, n \in \mathbb{N}$.
 ````
 
 ````{admonition} Solutions
@@ -511,8 +611,8 @@ Given that $\cos(\theta) = \frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)$, t
 &= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7\,e^{5i \theta}  + 7\,e^{-5i \theta}  
 + 21z,e^{3 i \theta}  + 21\,e^{-3i \theta}  + 35e^\,e^{-i \theta} 
 + 35\,e^{-i \theta}  \Big)\\
-&= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta) + 35(2\cos(\theta))\Big]\\
-\Rightarrow \cos^7(\theta)&= \frac{1}{64}\Big[\cos(7 \theta) +  7(\cos(5 \theta)) + 21(\cos(3 \theta) + 35(\cos(\theta))\Big]\\
+&= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta)) + 35(2\cos(\theta))\Big]\\
+\Rightarrow \cos^7(\theta)&= \frac{1}{64}\Big[\cos(7 \theta) +  7\cos(5 \theta) + 21\cos(3 \theta) + 35\cos(\theta)\Big]\\
 ```
 2\. 
 Starting with:
@@ -530,7 +630,23 @@ and hence:
 \cos(7\theta) &= \cos^7(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta)  7 \cos(\theta)\,\sin^6(\theta)  \\
 \sin(7\theta) &= 7 \cos^6(\theta)\,\sin(\theta) - 35 \cos^4(\theta)\,\sin^3(\theta) + 21 \cos^2(\theta)\,\sin^5(\theta) -  \sin^7(\theta) 
 ```
+
+3\. 
+Given that:
+```{math}
+\sin^5(\theta) = \Big(\frac{1}{2i}\Big)^5\Big(e^{i\theta}-e^{-i\theta}\Big)^5
+```
+
+Expanding out the right hand side using binomial expansion, and collecting together powers of $\theta$ gives:
+
+```{math}
+\sin^5(\theta) &= \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]\\
+&= \left(\frac{1}{2}\right)^5 (-i) [2i\sin(5\theta) - 5(2i)\sin(3\theta) + 10(2i)\sin(\theta)]\\
+&= \frac{1}{16} [\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)]\\
+
+```
 ````
+
 ### Hyperbolic functions
 Hyperbolic functions can be thought of as a way to take the exponential function $e^{x}$ which is neither odd nor even and generate odd or even functions from it.  To 
 do so, think about the graphs of $e^{x},\, e^{-x}$ which are mirror images in the $y$ axis:
@@ -576,6 +692,48 @@ and finally, essentially define a *hyperbolic form* of any trigonometric functio
 \coth(\theta) &= \frac{1}{\tanh(\theta)} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}= \frac{e^{2x}-1}{e^{2x}+1}
 ```
 ````
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+1\. Find real solutions to the problem $\cosh(x) = 2$
+
+2\. Find all the real solutions to the problem:
+```{math}
+2 \sinh(x) = \cosh(x)
+```
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. 
+```{math}
+\cosh(x) = \frac{1}{2}\Big(e^x + e^{-x} \Big) = 2
+```
+which is a disguised quadratic in $e^x$:
+```{math}
+e^{2x} + 1 = 4e^{x} \Rightarrow e^{2x} - 4e^{x} + 1 = 0
+```
+which has roots of:
+```{math}
+e^{x} = 2 \pm \sqrt{3} \Rightarrow x_\pm = \ln \Big( 2 \pm \sqrt{3}\Big)
+```
+
+
+2\. 
+```{math}
+2\Big(e^{x} - e^{-x}\Big) = e^{x} + e^{-x}
+```
+which is a disguised quadratic in $e^x$:
+```{math}
+2\Big(e^{2x} - 1\Big) &= e^{2x} + 1 \\
+e^{2x} &= 3 \\
+x &= \frac{1}{2}\ln(3)
+```
+
+````
+
 ### Relationship between trigonometric and hyperbolic functions
 Starting from Euler's identity, we observe that:
 
@@ -605,40 +763,6 @@ The results may be used to obtain similar results for functions like $\tan(\thet
 ```
 
 
-### Compound angle formulae
-The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
-
-```{math}
-:label: compoundangle1
-e^{i(A+B)} &= e^{iA}e^{iB}\\
-\cos(A+B) + i\sin(A+B) &= (\cos(A) + i\sin(A))(\cos(B) + i\sin(B))
-```
-
-Expanding out the right hand side and comparing the real and imaginary parts provides us with the 
-**compound angle formula** for $\cos(A+B)$ and $\sin(A+B)$. We obtain the familiar results:
-
-```{math}
-:label: compoundangle2
-\cos(A+B) &= \cos(A)\cos(B) - \sin(A)\sin(B) \\
-\sin(A+B) &= \sin(A)\cos(B) + \cos(A)\sin(B)
-```
-
-In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles 
-(e.g. $\cos^2(\theta) = \frac{1}{2}(\cos(2\theta)+1)$).
-
-For higher powers we make use of the complex exponential form:
-```{math}
-\sin^5(\theta) = \Big(\frac{1}{2i}\Big)^5\Big(e^{i\theta}-e^{-i\theta}\Big)^5
-```
-
-Expanding out the right hand side using Binomial expansion, and collecting together powers of $\theta$ gives:
-
-```{math}
-\sin^5(\theta) &= \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]\\
-&= \left(\frac{1}{2}\right)^5 (-i) [2i\sin(5\theta) - 5(2i)\sin(3\theta) + 10(2i)\sin(\theta)]\\
-&= \frac{1}{16} [\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)]\\
-
-```
 
 
 ### Compound hyperbolic identities
