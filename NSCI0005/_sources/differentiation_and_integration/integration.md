@@ -270,7 +270,7 @@ I = \frac{(cx+d)^{n+1}}{c^2}\left[\frac{a(cx+d)}{n+2}+\frac{bc-ad}{n+1}\right]
 ````
 
 ## Integral of $\displaystyle \frac{1}{x}$
-The function $\displaystyle \frac{1}{x}$ falls into a special category, because it cannot be solved using the polyniomal antiderivative 
+The function $\displaystyle \frac{1}{x}$ falls into a special category, because it cannot be solved using the polynomial antiderivative 
 $\int x^n = \frac{x^{n+1}}{n+1}$, consider the plot {numref}`oneOverx`:
 
 ```{figure} oneOverx.png

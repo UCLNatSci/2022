@@ -1,26 +1,15 @@
 # Second Order ODEs
 
-Intended Learning Outcomes
-
-* Correctly use the term "homogeneous"
-* Determine the general solution of any homogeneous second order ODE with constant coefficients
-* Apply given conditions to determine the constants of integration
-
-## Introduction to the problem
-This section of the notes will be concerned with the solution of a general problem of the form
+````{admonition} Definition
+:class: notice
+In general a second order differential equation is of the form: 
 
 ```{math}
 :label: ode2general
-ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),
+a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x),
 ```
-where $a,b,c$ are arbitrary constants.
+where $a,\,b,\,c$ are arbitrary constants.
 
-First, we consider the case when $f(x)=0$ so that we obtain the homogeneous problem
-
-```{math}
-:label: ode2hom
-ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0
-```
 
 We can also conveniently write these problems using a linear operator:
 ```{math}
@@ -31,39 +20,128 @@ With this definition, the problems may be written as
 * $\mathcal{L}(y)=0$ (homogeneous)
 * $\mathcal{L}(y)=f(x)$ (inhomogeneous)
 
-### An observation
-If we try a solution of the form $y=e^{\lambda x}$ then the homogeneous problem reduces to
-$e^{\lambda x}(a\lambda^2+b\lambda +c)=0$
-and so by solving the quadratic in $\lambda$ we will have found a solution. We call the quadratic the auxiliary equation. The nature of the solutions depends on the quantity $\Delta= -b^2-4ac$, which we call the discriminant.
+````
 
-**Example:** <br>
-For the problem $2y^{\prime\prime}(x)-y^{\prime}(x)-y(x)=0$, the auxiliary equation is
-$2\lambda^2-\lambda-1=0$
-The quadratic has roots $\lambda=-\frac{1}{2}$ and $\lambda=1$, so we have found two particular solutions of the given ODE, which are $y_1=e^{-\frac{1}{2}x}, \quad y_2=e^{x}$
+## Homogeneous problems
+Firstly, we consider the case of {eq}`ode2general` when $f(x)=0$, where we obtain the homogeneous problem:
+
+```{math}
+:label: ode2hom
+a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=0
+```
+
+### The trial solution
+One way to start with this problem is by using the trial solution (also sometimes called the ansatz):
+```{math}
+:label: trialsoln1storder
+y = e^{\lambda x}
+```
+where $A_\lambda$ is constant.  If we try this, then the homogeneous problem reduces to a polynomial in $\lambda$:
+```{math}
+e^{\lambda x}(a\lambda^2+b\lambda +c)=0
+```
+and so by solving this quadratic in $\lambda$, we can find solutions to {eq}`ode2hom`.   We call this quadratic the auxiliary equation and the nature of the 
+solutions depends on the quantity 
+```{math}
+\Delta= b^2-4ac
+```
+which if we recall is called the **discriminant**.
+
+````{admonition} Worked example
+:class: seealso
+For the differential equation:
+```{math}
+2y^{\prime\prime}(x)-y^{\prime}(x)-y(x)=0
+``` 
+where we apply the trial solution $y = A_\lambda\,e^{\lambda x}$, the auxiliary equation is:
+```{math}
+2\lambda^2-\lambda-1=0
+```
+The quadratic here has roots 
+```{math}
+\lambda=-\frac{1}{2}, \quad \lambda=1
+```
+so we have found two particular solutions of the given ODE:
+```{math}
+y_1 & = e^{-\frac{1}{2}x}\\
+y_2 & = e^{x}
+```
+where the constants $A_1,\,A_2$ are to be found by applying initial or boundary conditions.
+````
+
+We could motivate the form of the trial solution by solving the problem for the special case where $c=0$, which reduces to:
+```{math}
+a\,z^{\prime}(x) + b\,z(x)=0,\quad \text{where } z=y^{\prime}
+```
+This problem can be solved by separation and the result is of the form $y=k_1e^{-bx/a}+k_2$.
+
+Another way is to begin by writing the system in matrix form $\underline{y}^{\prime}=A\,\underline{y}$, where $\underline{y}=[\begin{matrix}y& y^{\prime}\end{matrix}]^T$ :
+```{math}
+\begin{bmatrix}y\\y^{\prime}\end{bmatrix}^{\prime}=\begin{bmatrix}0&1\\-\frac{c_0}{c_2}&-\frac{c_1}{c_2}\end{bmatrix}
+\begin{bmatrix}y\\y^{\prime}\end{bmatrix}
+```
+The *eigenvalues* of the problem $A\,\underline{y}=\lambda\,\underline{y}$ satisfy the quadratic $a\lambda^2+b\lambda +c=0$ and therefore the solutions to the 
+problem $\underline{y}^{\prime}=k\,\underline{y}$ are of an exponential form. 
 
 ### Principle of linear superposition
 The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable $y$. As a result of this fact, any linear combination of solutions will also be a solution:
-\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\&=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}
-
-Therefore, in the previous example we can combine the two solutions that we found, to obtain a more general solution $y=k_1e^{-\frac{1}{2}x}+k_2 e^{x}$. You are encouraged to check this solution to confirm that it works!
-
-### Applying conditions
-Since the result we obtained has two arbitrary constants, it generates a family of solution curves. We can fix the solution to one of these curves by providing conditions for either $y$ or its derivatives at two different $x$ values.
-
-```{admonition} Example
-:class: note
-For the previous problem $2y^{\prime\prime}(x)-y^{\prime}(x)-y(x)=0$
-
-(a) find the particular solution that satisfies $y(0)=2$, $y^{\prime}(0)=1$
-
-(b) find the particular solution that satisfies $y(0)=3$, $y(1)=e^{-1/2}+2e$
+```{math}
+\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\
+&=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}
 ```
 
-```{admonition} Solutions
-:class: tip
-The general solution is $y=k_1e^{-\frac{1}{2}x}+k_2 e^{x}$, from which we also obtain $y^{\prime}=\frac{1}{4} k_1 e^{-\frac{x}{2}}+k_2 e^x$
+````{admonition} Worked example
+:class: seealso
+For the differential equation:
+```{math}
+2y^{\prime\prime}(x)-y^{\prime}(x)-y(x)=0
+``` 
+the solutions are found to be:
+```{math}
+y_1 & = e^{-\frac{1}{2}x}\\
+y_2 & = e^{x}
+```
+By superposition we can combine these two solutions to obtain a more general solution:
+```{math}
+y = A_1\,e^{-\frac{1}{2}x} + A_2\,e^{x}
+```
+where $A_1,\, A_2$ are constants to be found.  You are encouraged to check this solution to confirm that it works!
+````
 
-(a) Substituting for the given conditions:
+### Applying conditions
+Since the results we obtain from solving the auxillary equation and then making a linear superposition of solutions have two arbitrary constants, it generates a 
+family of solution curves. We can fix the solution to one of these curves by providing conditions for either $y$ or its derivatives at two different $x$ values.  These 
+conditions often go by many different names:
+
+1\. Initial 
+
+2\. 
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+Given that the solutions to the ODE:
+```{math}
+2y^{\prime\prime}(x)-y^{\prime}(x)-y(x)=0
+```
+is given by:
+```{math}
+
+```
+
+1\. Find the particular solution that satisfies $y(0)=2$, $y^{\prime}(0)=1$
+
+2\. Find the particular solution that satisfies $y(0)=3$, $y(1)=e^{-1/2}+2e$
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+Given the general solution to the ODEs, we can find the first derivative:
+```{math}
+y &= k_1e^{-\frac{1}{2}x}+k_2 e^{x} \\
+y^{\prime} &= \frac{1}{4} k_1 e^{-\frac{x}{2}}+k_2 e^x
+```
+
+1\. Substituting for the given conditions:
 
 $ y(0)=1\Rightarrow k_1+k_2=2$
 
@@ -74,7 +152,7 @@ Solving these two equations simultaneously gives $k_1=\frac{2}{3}$, $k_2=\frac{4
 The solution satisfying the given conditions is therefore given by
 $y(x)=\frac{2}{3}e^{-\frac{1}{2}x}+\frac{4}{3}e^x$
 
-(b) Substituting for the given conditions:
+2\. Substituting for the given conditions:
 
 $ y(0)=3\Rightarrow k_1+k_2=3$
 
@@ -84,7 +162,7 @@ Solving these two equations simultaneously gives $k_1=1$, $k_2=2$.
 
 The solution satisfying the given conditions is therefore given by
 $y(x)=e^{-\frac{1}{2}x}+2e^x$
-```
+````
 
 For practical problems, the conditions tell us about a particular state of the system. For instance, applying Newton's second law to the motion of a pendulum gives a second order differential equation for the angular displacement $\theta$ from the downward vertical. Conditions for $\theta(0)$ and $\dot{\theta}(0)$ specify the initial displacement and the initial angular velocity. These types of condition, specified at time $t=0$ are called initial conditions. For some other types of problem we may have conditions specified at two end-points of an interval. Such types of condition are called boundary conditions.
 
@@ -94,9 +172,10 @@ In that case, we may wish to write the general solution a bit differently. After
 $y=k_1 e^{(\alpha+i\omega)x}+k_2 e^{(\alpha -i\omega)x}$
 then the only way to satisfy real initial conditions would be if the coefficients $k_1$ and $k_2$ are complex, which isn't nice.
 We make use of our knowledge of complex numbers (Euler's theorem) to rewrite:
+```{math}
 \begin{align}y&=e^{\alpha x}\left[(k_1+k_2)\cos(\omega x)+i(k_1-k_2)\sin(\omega x)\right]\\&=e^{\alpha x}\left[K_1\cos(\omega x)+K_2\sin(\omega x)\right]\end{align}
-upon relabelling the constants.
-This is a much nicer form of the solution, because all parts of it are real, and so we expect that the coefficients $K_1$ and $K_2$ will be real as well. It also shows us clearly that the solution consists of an exponentially growing/decaying amplitude combined with wavy oscillations of frequency $\omega$.
+```
+upon relabelling the constants.  This is a much nicer form of the solution, because all parts of it are real, and so we expect that the coefficients $K_1$ and $K_2$ will be real as well. It also shows us clearly that the solution consists of an exponentially growing/decaying amplitude combined with wavy oscillations of frequency $\omega$.
 
 ```{admonition} Example
 :class: note
@@ -111,23 +190,23 @@ $y=e^{x}\left[K_1\cos(x)+K_2\sin(x)\right]$
 ### Repeated roots:
 If the discriminant $b^2-4ac$ is zero, the auxiliary equation will only have one distinct solution $e^{\lambda x}$, where $\lambda=-\frac{b}{2a}$. We will look for another solution of the form
 
-\begin{equation*}
+```{math}
 y=f(x)e^{\lambda x}.
-\end{equation*}
+```
 
 In this expression, $f(x)$ could be any function, so this step is perfectly legitimate. But we have done it because it will allow us to reduce the order of the differential equation by making use of the known solution. We obtain:
 
-\begin{equation*}
+```{math}
 \mathcal{L}(f e^{\lambda x}) = \mathcal{L}(e^{\lambda x})f+e^{\lambda x}\left[(2a\lambda+b )f^{\prime}+a f^{\prime\prime}\right]
-\end{equation*}
+```
 
 The first term disappears since $e^{\lambda x}$ is a solution, and so to satisfy the problem we require
 $(2a\lambda+b )f^{\prime}+a f^{\prime\prime} =0$.
 Using the result for the repeated root $\lambda$ reduces this equation to $f^{\prime\prime}=0$, which has solution $f(x)=Ax+B$. We can choose $A=1$ and $B=0$.
 Thus, we have found another solution $x e^{\lambda x}$ and we can form the general solution from a linear combination :
-\begin{equation*}
+```{math}
 y=(k_1x+k_2)e^{\lambda x}.
-\end{equation*}
+```
 
 It is very important you recognise that the only reason $x e^{\lambda x}$ has been found as a solution here is because $\lambda$ is a repeated root, which makes the term involving $2a\lambda+b$ drop out. If you tried the same technique using one of the solutions to a problem with distinct roots it would not give you a result of the form $xe^{\lambda x}$. In fact, after some messy first order integration you would simply recover the solution involving the other root.
 
@@ -156,22 +235,13 @@ $y^{\prime}(0)=3 \Rightarrow 2k_1+k_2=3$
 The solution satisfying the given conditions is $y-e^{2x}(x+1)$
 ```
 
-### Summary:
-The general solution of the homogeneous second order ODE
-\begin{equation*}
-ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0
-\end{equation*}
-is given by
-\begin{equation}
-y=\begin{cases}\begin{array}{lll}k_1e^{\lambda_1 x}+k_2 e^{\lambda_2 x}, &\text{where $\lambda_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$} & \text{if $\Delta >0$}\\e^{\alpha x}(k_1\cos(\omega x)+k_2\sin(\omega x))&\text{where $\alpha=-\frac{b}{2a}$, $\omega =\sqrt{\Delta}$}&\text{if $\Delta < 0$}\\(k_1x+k_2)e^{\lambda x}&\text{where $\lambda=-\frac{b}{2a}$}&\text{if $\Delta=0$}\end{array}\end{cases}
-\end{equation}
-where $\Delta=b^2-4ac$.
+
 
 ### Existence of a particular solution:
 The general solution
-\begin{equation*}
+```{math}
 y(x)=k_1 y_1(x)+k_2 y_2(x)
-\end{equation*}
+```
 can be made to satisfy arbitrary initial conditions $y(x_0)=y_0$, $y^{\prime}(x_0)=y^{\prime}_0$ if and only if
 
 ```{math}
@@ -181,22 +251,24 @@ y_1^{\prime}(x_0)y_2(x_0)-y_2^{\prime}(x_0)y_1(x_0)\neq 0
 This condition is met if $y_2$ is not a constant multiple of $y_1$. We say that the solutions are *linearly independent*. A more general definition of linear independence will be given in the course on mathematical methods 2.
 
 **Proof:**<br>
-Applying the given conditions gives
+Applying the given conditions gives:
+```{math}
 \begin{align}y_1(x_0)k_1+y_2(x_0)k_2 &=y_0\\y_1^{\prime}(x_0)k_1+y_2^{\prime}(x_0)&=y_0^{\prime}\end{align}
+```
 This is a set of two equations in two unknowns ($k_0$ and $k_1$). A unique solution exists if and only if the condition {eq}`linindepend` is met.
 
-### Motivation for the trial solution
-One way to motivate the trial solution $y=e^{\lambda x}$ is to begin by solving the problem for the special case where $c=0$, which reduces to
-\begin{equation*}
-az^{\prime}(x)+bz(x)=0,\quad \text{where } z=y^{\prime}
-\end{equation*}
-This problem can be solved by separation and the result is of the form $y=k_1e^{-bx/a}+k_2$.
 
-<!-- Another way is to begin by writing the system in matrix form $\underline{y}^{\prime}=A\underline{y}$, where $\underline{y}=[\begin{matrix}y& y^{\prime}\end{matrix}]^T$ :
-$\left[\begin{array}{cc}y\\y^{\prime}\end{array}\right]^{\prime}=\left[\begin{array}{cc}0&1\\-\frac{c_0}{c_2}&-\frac{c_1}{c_2}\end{array}\right]\left[\begin{array}{c}y\\y^{\prime}\end{array}\right]$
-The eigenvalues of the problem $A\underline{y}=\lambda\underline{y}$ satisfy
-$a\lambda^2+b\lambda +c=0$
-and the solutions to the problem $\underline{y}^{\prime}=k\underline{y}$ are of exponential form. -->
+
+
+````{admonition} Summary
+The general solution of the homogeneous second order ODE is given by:
+```{math}
+y=\begin{cases}\begin{array}{lll}k_1e^{\lambda_1 x}+k_2 e^{\lambda_2 x}, &\text{where $\lambda_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$} & \text{if $\Delta >0$}\\
+e^{\alpha x}(k_1\cos(\omega x)+k_2\sin(\omega x))&\text{where $\alpha=-\frac{b}{2a}$, $\omega =\sqrt{\Delta}$}&\text{if $\Delta < 0$}\\
+(k_1x+k_2)e^{\lambda x}&\text{where $\lambda=-\frac{b}{2a}$}&\text{if $\Delta=0$}\end{array}\end{cases}
+```
+where $\Delta=b^2-4ac$.
+````
 
 ## Inhomogeneous problems
 
@@ -300,9 +372,9 @@ It works because of the linearity property:
 The general solution contains two arbitrary constants so it can be made to satisfy a given set of two conditions. The values of the constants will depend on the particular integral you found. There are an infinite number of different particular integrals possible, but they all will differ only be an amount equal to a linear combination of the basis solutions.
 
 You MUST construct the full solution before employing the given conditions to find constant terms. For example, if you erroneously make $y_h(0)=y_0$ then you will find mathematical
-\begin{equation*}
+```{math}
 y(0)=y_h(0)+y_p(0) = y_0+y_p(0),
-\end{equation*}
+```
 which is not what you want.
 
 ```{admonition} Example

@@ -1,7 +1,9 @@
 # Ordinary Differential Equations
+
 ## Introduction and terminology
 
-Any equation that contains derivatives is called a "differential equation". If the equation contains only a single dependent variable then it is known as an "ordinary differential equation" (ODE).
+Any equation that contains derivatives is called a "differential equation". If the equation contains only a single dependent variable then it is 
+known as an "ordinary differential equation" (ODE).
 
 An example of an ODE that appears very commonly in physical sciences is the Airy equation, which is given by
 
@@ -24,10 +26,9 @@ Check: $\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2$ is a second degree term,
 ````
 
 The simplest type differential equation imaginable is a linear first order ODE of the form
-
-\begin{equation*}
+```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x}=f(x).
-\end{equation*}
+```
 
 Examples of this type can be solved by direct integration. For example, the problem $\frac{\mathrm{d}y}{\mathrm{d}x}=3x^2$ may be integrated to give $y=x^3+\text{const}$.
 
@@ -44,16 +45,18 @@ If the problem is first order then there will be one unknown constant, since the
 If the problem is second order then we will obtain two unknown constants.
 For example, suppose that we are given the problem
 
-\begin{equation*}
+```{math}
 \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=2t
-\end{equation*}
+```
 which describes the vertical acceleration of an object at time $t$.
 
-```{admonition} Displacement, velocity, acceleration
+````{admonition} Displacement, velocity, acceleration
 :class: notice
 If $y$ measures displacement Then
 * $\frac{\mathrm{d}y}{\mathrm{d}t}$ measures velocity (rate of change of displacement)
 * $\frac{\mathrm{d}^2y}{\mathrm{d}t^2}$ measures acceleration (rate of change of velocity).
+
+
 ````
 
 Integrating once with respect to $t$ gives
@@ -81,7 +84,7 @@ The final result is $y=\frac{t^3}{3}+3t+1.$
 
 In general, to obtain a fully determined solution to a given problem, we require the number of given conditions to match the degree of the problem.
 
-```{admonition} More terminology
+````{admonition} More terminology
 :class: notice
 Conditions given when $t=0$ (where $t$ denotes time) are called *initial conditions*
 
@@ -105,6 +108,7 @@ Then, applying $y(1)=0$ gives $k=e-3$
 
 So the final solution is $y(x)=(x-2)e^x+(e-3)x+3$
 
+
 ## Homogeneous linear ODEs
 A linear ODE is said to be homogeneous if it has the form
 
@@ -119,7 +123,7 @@ That is, a linear ODE is homogeneous if there is no term that is a function of t
 
 The corresponding homogeneous problem for the inomogeneous example above is $y^{\prime}(x)=3y(x)=0$
 
-<!-- ```{admonition} Real Life Examples
+````{admonition} Real Life Examples
 :class: notice
 Many of the fundamental laws of physics are stated in the form of differential equations. Examples:
 
@@ -128,4 +132,5 @@ Many of the fundamental laws of physics are stated in the form of differential e
 * Shrödinger's Equation
 * Circuit Equations in Electronics
 * Rate Equations in Chemistry
-```` -->
+```` 
+
