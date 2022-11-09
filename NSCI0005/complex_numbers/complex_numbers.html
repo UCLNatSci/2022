@@ -322,27 +322,32 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trigonometric-and-hyperbolic-relationships">
-   3.6. Trigonometric and Hyperbolic Relationships
+   3.6. Trigonometric and hyperbolic relationships
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hyperbolic-functions">
+   3.7. Hyperbolic functions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#relationship-between-trigonometric-and-hyperbolic-functions">
-     3.6.1. Relationship Between Trigonometric and Hyperbolic Functions
+     3.7.1. Relationship between trigonometric and hyperbolic functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compound-angle-formulae">
-     3.6.2. Compound Angle Formulae
+     3.7.2. Compound angle formulae
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#de-moivre-s-theorem">
-     3.6.3. De Moivre’s Theorem
+     3.7.3. de Moivre’s theorem
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compound-hyperbolic-identities">
-     3.6.4. Compound hyperbolic identities
+     3.7.4. Compound hyperbolic identities
     </a>
    </li>
   </ul>
@@ -448,27 +453,32 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trigonometric-and-hyperbolic-relationships">
-   3.6. Trigonometric and Hyperbolic Relationships
+   3.6. Trigonometric and hyperbolic relationships
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hyperbolic-functions">
+   3.7. Hyperbolic functions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#relationship-between-trigonometric-and-hyperbolic-functions">
-     3.6.1. Relationship Between Trigonometric and Hyperbolic Functions
+     3.7.1. Relationship between trigonometric and hyperbolic functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compound-angle-formulae">
-     3.6.2. Compound Angle Formulae
+     3.7.2. Compound angle formulae
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#de-moivre-s-theorem">
-     3.6.3. De Moivre’s Theorem
+     3.7.3. de Moivre’s theorem
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compound-hyperbolic-identities">
-     3.6.4. Compound hyperbolic identities
+     3.7.4. Compound hyperbolic identities
     </a>
    </li>
   </ul>
@@ -812,10 +822,46 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 </div>
 </div>
 <div class="section" id="trigonometric-and-hyperbolic-relationships">
-<h2><span class="section-number">3.6. </span>Trigonometric and Hyperbolic Relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
-<p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)\)</span>, to prove several results involving trigonometric and hyperbolic functions. We haven’t yet proven Euler’s identity yet, but we will be able to do so later in the course).</p>
+<h2><span class="section-number">3.6. </span>Trigonometric and hyperbolic relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)\)</span>, to prove several results involving trigonometric and hyperbolic functions.</p>
+</div>
+<div class="section" id="hyperbolic-functions">
+<h2><span class="section-number">3.7. </span>Hyperbolic functions<a class="headerlink" href="#hyperbolic-functions" title="Permalink to this headline">¶</a></h2>
+<p>Hyperbolic functions can be thought of as a way to take the exponential function <span class="math notranslate nohighlight">\(e^{x}\)</span> which is neither odd nor even and generate odd or even functions from it.  To
+do so, think about the graphs of <span class="math notranslate nohighlight">\(e^{x},\, e^{-x}\)</span> which are mirror images in the <span class="math notranslate nohighlight">\(y\)</span> axis:</p>
+<div class="figure align-default" id="expfun">
+<img alt="../_images/expfun.png" src="../_images/expfun.png" />
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Graphs of <span class="math notranslate nohighlight">\(e^{x},\, e^{-x}\)</span>.</span><a class="headerlink" href="#expfun" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we add up these functions, <span class="math notranslate nohighlight">\(e^{x} + e^{-x}\)</span>, we find a function which looks like:</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/expfun2.png" src="../_images/expfun2.png" />
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(e^{x}+e^{-x}\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>which clearly now has the property that <span class="math notranslate nohighlight">\(f(-x) = f(x)\)</span>, i.e. it is even.  Likewise if we subtract one function from another <span class="math notranslate nohighlight">\(e^{x} - e^{-x}\)</span>, it looks like:</p>
+<div class="figure align-default" id="id2">
+<img alt="../_images/expfun3.png" src="../_images/expfun3.png" />
+<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(e^{x}-e^{-x}\)</span>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>and again this now has the property that <span class="math notranslate nohighlight">\(f(-x) = -f(x)\)</span>, i.e. is is odd.</p>
+<p>Therefore from a function that is neither, we can construct odd and even functions, by convention we will halve the resultign functions so that <span class="math notranslate nohighlight">\(\cosh(\theta)\)</span> has a minima of
+unity at the <span class="math notranslate nohighlight">\(y\)</span> axis.</p>
+<div class="admonition-defintions-of-hyperbolic-functions admonition">
+<p class="admonition-title">Defintions of hyperbolic functions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\cosh(\theta) &amp;= \frac{1}{2}\Big(e^{x} + e^{-x} \Big) \\
+\sinh(\theta) &amp;= \frac{1}{2}\Big(e^{x} - e^{-x} \Big)\end{split}\]</div>
+<p>We can then also define the hyperbolic tangent <span class="math notranslate nohighlight">\(\tanh(\theta)\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\tanh(\theta) = \frac{\sinh(\theta)}{\cosh(\theta)} = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} = \frac{e^{2x}+1}{e^{2x}-1}\]</div>
+<p>and finally, essentially define a <em>hyperbolic form</em> of any trigonometric function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textrm{sech} &amp;= \frac{1}{\cosh(\theta)} = \frac{2}{e^x + e^{-x}} = \frac{2e^x}{e^{2x} + 1} \\
+\textrm{cosech}(\theta) &amp;= \frac{1}{\sinh(\theta)} = \frac{2}{e^x - e^{-x}} = \frac{2e^x}{e^{2x} - 1} \\
+\coth(\theta) &amp;= \frac{1}{\tanh(\theta)} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}= \frac{e^{2x}-1}{e^{2x}+1}\end{split}\]</div>
+</div>
 <div class="section" id="relationship-between-trigonometric-and-hyperbolic-functions">
-<h3><span class="section-number">3.6.1. </span>Relationship Between Trigonometric and Hyperbolic Functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.1. </span>Relationship between trigonometric and hyperbolic functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
 <p>Starting from Euler’s identity, we observe that:</p>
 <div class="math notranslate nohighlight" id="equation-trigeuler">
 <span class="eqno">(3.14)<a class="headerlink" href="#equation-trigeuler" title="Permalink to this equation">¶</a></span>\[\begin{split}e^{i\theta} &amp;= \cos(\theta) + i\sin(\theta) \\
@@ -829,12 +875,12 @@ similar to the hyperbolic cosine and sine functions:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\cosh(x) &amp; = \cos(ix) \\
 \sinh(x) &amp;= -i\sin(ix)\end{split}\]</div>
-<p>The results may be used to obtain similar results for functions like <span class="math notranslate nohighlight">\(\tan(\theta), \sec(\theta)\)</span> etc:</p>
+<p>The results may be used to obtain similar results for functions like <span class="math notranslate nohighlight">\(\tan(\theta)\)</span> etc:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\tan(\theta) &amp;= \frac{\sin(\theta)}{\cos(\theta)} = \frac{-i\sinh(i\theta)}{\cosh(i\theta)} = -i\tanh(i\theta) \\\end{split}\]</div>
+\[\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{-i\sinh(i\theta)}{\cosh(i\theta)} = -i\tanh(i\theta)\]</div>
 </div>
 <div class="section" id="compound-angle-formulae">
-<h3><span class="section-number">3.6.2. </span>Compound Angle Formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.2. </span>Compound angle formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
 <p>The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:</p>
 <div class="math notranslate nohighlight" id="equation-compoundangle1">
 <span class="eqno">(3.16)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[\begin{split}e^{i(A+B)} &amp;= e^{iA}e^{iB}\\
@@ -857,7 +903,7 @@ similar to the hyperbolic cosine and sine functions:</p>
 \end{split}\]</div>
 </div>
 <div class="section" id="de-moivre-s-theorem">
-<h3><span class="section-number">3.6.3. </span>De Moivre’s Theorem<a class="headerlink" href="#de-moivre-s-theorem" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.3. </span>de Moivre’s theorem<a class="headerlink" href="#de-moivre-s-theorem" title="Permalink to this headline">¶</a></h3>
 <p>Starting with Euler’s Identity <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)\)</span> and raising both sides to the <span class="math notranslate nohighlight">\(n^{th}\)</span> power gives:</p>
 <div class="math notranslate nohighlight" id="equation-eulerton">
 <span class="eqno">(3.18)<a class="headerlink" href="#equation-eulerton" title="Permalink to this equation">¶</a></span>\[e^{in\theta} = (\cos(\theta) + i\sin(\theta))^n\]</div>
@@ -909,7 +955,7 @@ Starting with:</p>
 </div>
 </div>
 <div class="section" id="compound-hyperbolic-identities">
-<h3><span class="section-number">3.6.4. </span>Compound hyperbolic identities<a class="headerlink" href="#compound-hyperbolic-identities" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.4. </span>Compound hyperbolic identities<a class="headerlink" href="#compound-hyperbolic-identities" title="Permalink to this headline">¶</a></h3>
 <p>We can see from the relationships between trigonometric and hyperbolic functions in <a class="reference internal" href="#equation-complexhyperbolic">(3.15)</a> that if we raise trignomietric
 functions to power (e.g. squaring them), there are related hyperbolic identities:</p>
 <div class="math notranslate nohighlight">
@@ -918,9 +964,8 @@ functions to power (e.g. squaring them), there are related hyperbolic identities
 <p>therefore trigonmetric identities can be modified to become hyperbolic identities:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\cos^2 (\theta) + \sin^2(\theta) = 1 &amp;\Longleftrightarrow \cosh^2(x) - \sinh^2(x) = 1\\
-\sin(2\theta) = 2\sin(\theta)\,cos(\theta) &amp;\Longleftrightarrow \sinh(2\theta) = 2\sinh(\theta)\,\cosh(\theta) \\
-\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta) &amp;\Longleftrightarrow \cosh(2\theta) = \cosh^2(\theta) + \sinh^2(\theta) 
-\end{split}\]</div>
+\sin(2\theta) = 2\sin(\theta)\,\cos(\theta) &amp;\Longleftrightarrow \sinh(2\theta) = 2\sinh(\theta)\,\cosh(\theta) \\
+\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta) &amp;\Longleftrightarrow \cosh(2\theta) = \cosh^2(\theta) + \sinh^2(\theta) \end{split}\]</div>
 </div>
 </div>
 </div>

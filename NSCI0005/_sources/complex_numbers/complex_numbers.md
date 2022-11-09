@@ -460,10 +460,55 @@ Following through, we then obtain:
 We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principal of finding the argument for each root in exact form.
 ```
 
-## Trigonometric and Hyperbolic Relationships
-In this section, we make use of Euler's identity, $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$, to prove several results involving trigonometric and hyperbolic functions. We haven't yet proven Euler's identity yet, but we will be able to do so later in the course).
+## Trigonometric and hyperbolic relationships
+In this section, we make use of Euler's identity, $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$, to prove several results involving trigonometric and hyperbolic functions. 
 
-### Relationship Between Trigonometric and Hyperbolic Functions
+## Hyperbolic functions
+Hyperbolic functions can be thought of as a way to take the exponential function $e^{x}$ which is neither odd nor even and generate odd or even functions from it.  To 
+do so, think about the graphs of $e^{x},\, e^{-x}$ which are mirror images in the $y$ axis:
+```{figure} ../figures/expfun.png
+---
+name: expfun
+---
+Graphs of $e^{x},\, e^{-x}$.
+```
+
+If we add up these functions, $e^{x} + e^{-x}$, we find a function which looks like:
+```{figure} ../figures/expfun2.png
+---
+name: expfun
+---
+Graph of $e^{x}+e^{-x}$.
+```
+which clearly now has the property that $f(-x) = f(x)$, i.e. it is even.  Likewise if we subtract one function from another $e^{x} - e^{-x}$, it looks like:
+```{figure} ../figures/expfun3.png
+---
+name: expfun
+---
+Graph of $e^{x}-e^{-x}$.
+```
+and again this now has the property that $f(-x) = -f(x)$, i.e. is is odd.  
+
+Therefore from a function that is neither, we can construct odd and even functions, by convention we will halve the resultign functions so that $\cosh(\theta)$ has a minima of 
+unity at the $y$ axis.
+
+````{admonition} Defintions of hyperbolic functions
+```{math}
+\cosh(\theta) &= \frac{1}{2}\Big(e^{x} + e^{-x} \Big) \\
+\sinh(\theta) &= \frac{1}{2}\Big(e^{x} - e^{-x} \Big)
+```
+We can then also define the hyperbolic tangent $\tanh(\theta)$ as:
+```{math}
+\tanh(\theta) = \frac{\sinh(\theta)}{\cosh(\theta)} = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} = \frac{e^{2x}+1}{e^{2x}-1}
+```
+and finally, essentially define a *hyperbolic form* of any trigonometric function:
+```{math}
+\textrm{sech} &= \frac{1}{\cosh(\theta)} = \frac{2}{e^x + e^{-x}} = \frac{2e^x}{e^{2x} + 1} \\
+\textrm{cosech}(\theta) &= \frac{1}{\sinh(\theta)} = \frac{2}{e^x - e^{-x}} = \frac{2e^x}{e^{2x} - 1} \\
+\coth(\theta) &= \frac{1}{\tanh(\theta)} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}= \frac{e^{2x}-1}{e^{2x}+1}
+```
+````
+### Relationship between trigonometric and hyperbolic functions
 Starting from Euler's identity, we observe that:
 
 ```{math}
@@ -486,13 +531,13 @@ and likewise if we redefine $\theta = ix$:
 \sinh(x) &= -i\sin(ix)
 ```
 
-The results may be used to obtain similar results for functions like $\tan(\theta), \sec(\theta)$ etc:
+The results may be used to obtain similar results for functions like $\tan(\theta)$ etc:
 ```{math}
-\tan(\theta) &= \frac{\sin(\theta)}{\cos(\theta)} = \frac{-i\sinh(i\theta)}{\cosh(i\theta)} = -i\tanh(i\theta) \\
+\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{-i\sinh(i\theta)}{\cosh(i\theta)} = -i\tanh(i\theta)
 ```
 
 
-### Compound Angle Formulae
+### Compound angle formulae
 The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
 
 ```{math}
@@ -527,7 +572,7 @@ Expanding out the right hand side using Binomial expansion, and collecting toget
 
 ```
 
-### De Moivre's Theorem
+### de Moivre's theorem
 Starting with Euler's Identity $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$ and raising both sides to the $n^{th}$ power gives:
 
 ```{math}
@@ -605,7 +650,6 @@ functions to power (e.g. squaring them), there are related hyperbolic identities
 therefore trigonmetric identities can be modified to become hyperbolic identities:
 ```{math}
 \cos^2 (\theta) + \sin^2(\theta) = 1 &\Longleftrightarrow \cosh^2(x) - \sinh^2(x) = 1\\
-\sin(2\theta) = 2\sin(\theta)\,cos(\theta) &\Longleftrightarrow \sinh(2\theta) = 2\sinh(\theta)\,\cosh(\theta) \\
+\sin(2\theta) = 2\sin(\theta)\,\cos(\theta) &\Longleftrightarrow \sinh(2\theta) = 2\sinh(\theta)\,\cosh(\theta) \\
 \cos(2\theta) = \cos^2(\theta) - \sin^2(\theta) &\Longleftrightarrow \cosh(2\theta) = \cosh^2(\theta) + \sinh^2(\theta) 
-
 ```
