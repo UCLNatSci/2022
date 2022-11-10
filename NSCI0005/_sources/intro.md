@@ -10,7 +10,7 @@ In these notes we will cover:
 	- Exponential form and Euler formula
 	- Finding complex roots
 	- de Moivre's theorem
-	- Relationship between trignometric functions and Hyperbolic functions
+	- Relationship between trignometric functions and hyperbolic functions
 
 
 - Sequences, series and convergences
@@ -24,7 +24,9 @@ In these notes we will cover:
 	- Vector notation
 	- Vector equation of a line
 	- Scalar and vector equations of a plane
-	- Matrices as a link to solutions of linear simultaneous system
+	- Matrix algebra
+	- Matrix determinants
+	- Matrix inverses
 
 
 - Differentiation and Integration
