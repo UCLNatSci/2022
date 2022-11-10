@@ -1,13 +1,44 @@
 # First Order ODEs
 
-In this section we will look at some strategies for solving first order ODEs
+
+````{admonition} Definition
+:class: notice
+In general a first order ordinary differential equation (ODE) is of the form: 
+
+```{math}
+:label: ode2general
+y^{\prime}(x)=f(x,\,y)
+```
+where $f(x,\,y)$ is some function, which can in general have $x$ and $y$ dependance.
+
+````
 
 ## Separation of variables form
 Of all the techniques for solving first order ODEs, separation of variables is the simplest to understand, being essentially a direct application of 
 Fundamental Theorem of Calculus.  The technique requires us to take a look at whether the variable dependence can be totally separated on different 
 sides of the equation.
 
-For example, for the problem:
+````{admonition} Definition
+:class: notice
+A separable first order ODE is of the form: 
+
+```{math}
+:label: ode2general
+\frac{\mathrm{d}y}{\mathrm{d}x} = f(x)\,g(y)
+```
+where we have separated out the $x$ dependance into the function $f(x)$ and $y$ dependance into the function $g(y)$.  Using the FTC we find:
+```{math}
+\frac{\mathrm{d}y}{g(y)} = f(x)\,\mathrm{d}x 
+```
+which we can then be integrated:
+```{math}
+\int\frac{\mathrm{d}y}{g(y)} = \int f(x)\,\mathrm{d}x 
+```
+and then we would rearrange to (if possible) find $y(x)$.
+````
+
+````{amonition} Worked example
+To solve the ODE:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} = x^2y
 ```
@@ -33,13 +64,14 @@ This implicit relationship may be rearranged to obtain a solution for $y$ explic
 constant depending on whether $y > 0$ or $y<0$:
 
 ```{math}
-y=\displaystyle A\,e^{\frac{1}{3}x^3}, \quad A \in \mathbb{R}.
+y=\displaystyle A\,e^{x^3/3}, \quad A \in \mathbb{R}.
 ```
+````
 
 ````{admonition} Practice questions
 :class: seealso, dropdown
 
-Decide which of the following expressions are separable, and have a go at solving those that are
+Decide which of the following expressions are separable, and have a go at solving those that are separable:
 
 1\. $\displaystyle (1+e^x)y\frac{\mathrm{d}y}{\mathrm{d}x} = e^x$
 
@@ -61,95 +93,246 @@ population is $P_0$ and it doubles after 10 years.
 ````{admonition} Solutions
 :class: seealso, dropdown
 
-1\. $\displaystyle \int y \mathrm{d}y = \int\frac{e^x}{1+e^x}\mathrm{d}x \quad \longleftrightarrow \quad \frac{y^2}{2} = \ln(e^x+1) + \text{const}$
+1\. Rearranging and separating out variables:
+```{math}
+\int y \,\mathrm{d}y = \int\frac{e^x}{1+e^x}\,\mathrm{d}x 
+```
+This can then just be integrated:
+```{math}
+\frac{y^2}{2} = \ln(e^x+1) + C
+```
 
 2\. This problem is not separable.
 
-3\. $\displaystyle \frac{1}{x} = (1-x)\frac{\mathrm{d}y}{\mathrm{d}x} \quad \longleftrightarrow\quad  \frac{\mathrm{d}y}{\mathrm{d}x}= \frac{1}{x(1-x)} = \frac{1}{x} + \frac{1}{1-x} \quad \longleftrightarrow\quad  y = \ln\biggr|\frac{x}{1-x}\biggr|$
+3\. 
+```{math}
+\frac{1}{x} = (1-x)\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow   \frac{\mathrm{d}y}{\mathrm{d}x}= \frac{1}{x(1-x)} 
+```
+If we use partial fractions we find that this fraction can be simplified:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{1}{x} + \frac{1}{1-x} 
+```
+which we can integrate to find:
+```{math}
+\int\mathrm{d}y &= \int \Big(\frac{1}{x} + \frac{1}{1-x} \Big)\,\mathrm{d}x\\
+y &= \ln\Big|\frac{x}{1-x}\Big|+C
+```
 
-4\. $\displaystyle \int \frac{1}{y}\mathrm{d}y = \int \left(x-\frac{1}{x}\right)\mathrm{d}x \quad \longleftrightarrow\quad  \ln|y|= \frac{x^2}{2}-\ln|x| \quad \longleftrightarrow\quad  y= \frac{Ae^{x^2/2}}{x}, \quad A \in \mathbb{R}$
+4\. 
+```{math}
+\int \frac{1}{y\,}\mathrm{d}y &= \int \left(x-\frac{1}{x}\right)\,\mathrm{d}x\\
+\ln|y| &= \frac{x^2}{2}-\ln|x| + \ln A \\
+y &= \frac{Ae^{x^2/2}}{x}, \quad A \in \mathbb{R}
+```
 
-5\. $\displaystyle \frac{1}{2}\int \left(\frac{1}{y-1}-\frac{1}{y+1}\right)\mathrm{d}y = \int\frac{1}{x^2}\mathrm{d}x \quad \longleftrightarrow\quad   \ln\left(\frac{y-1}{y+1}\right)=-\frac{2}{x}+\text{const},\quad -1 < y < 1$
+5\. 
+```{math}
+\frac{\mathrm{d}y}{y^2 - 1}  = \frac{\mathrm{d}x}{x^2}
+```
+If we use partial fractions, we can reduce the fraction on the LHS down to:
+```{math}
+\frac{1}{y^2 - 1} &= \frac{1}{(y - 1)(y+1)}\\
+&=\frac{1}{2}\int \left(\frac{1}{y-1}-\frac{1}{y+1}\right)
+```
+and so to solve:
+```{math}
+\frac{1}{2}\int \left(\frac{1}{y-1}-\frac{1}{y+1}\right)\,\mathrm{d}y &= \int\frac{1}{x^2}\,\mathrm{d}x \\
+\ln\left(\frac{y-1}{y+1}\right) &= -\frac{2}{x} + C,\quad -1 < y < 1
+```
+which after some rearrangement gives:
+```{math}
+y = \frac{2}{1-e^{-2/x+C}}-1
+```
 
-6\. $\displaystyle \int{y\mathrm{d}y} = \displaystyle \int \frac{\ln(x)}{x}\mathrm{d}x \quad \longleftrightarrow\quad  \frac{y^2}{2} = \frac{(\ln(x))^2}{2} + C$
-
-$y(1) = 0 \Rightarrow C = 0$ so, $y^2 = (\ln(x))^2 $
+6\. 
+```{math}
+\int y\,\mathrm{d}y &= \int \frac{\ln(x)}{x}\,\mathrm{d}x \\
+y^2 &= (\ln(x))^2 + C
+```
+If $y(1) = 0 \Rightarrow C = 0$ so solution is:
+```{math}
+y = \pm\ln(x)
+```
 
 7\.
-$\displaystyle \frac{\mathrm{d}P}{\mathrm{d}t} = \lambda P \quad \longleftrightarrow\quad  \int_{P_0}^{P}\frac{1}{P}\mathrm{d}P = \int_{0}^t\lambda \mathrm{d}t \quad \longleftrightarrow \quad \ln\left(\frac{P}{P_0}\right) = \lambda t \quad\longleftrightarrow\quad P = P_0e^{\lambda t}$
+The differential equation will therefore have the form:
+```{math}
+\frac{\mathrm{d}P}{\mathrm{d}t} = \lambda P
+```
+Which can be separated to:
+```{math}
+\int_{P_0}^{P}\frac{1}{P}\,\mathrm{d}P &= \int_{0}^t\lambda\, \mathrm{d}t \\
+\ln P &= \lambda t + \ln P_0\\
+P &= P_0e^{\lambda t}
+```
+If $P(10) = 2P_0 \Rightarrow \lambda = \displaystyle \frac{1}{10}\ln(2)$, so the solution is:
+```{math}
+P = P_0\,2^{t/10}
+```
 
-$\displaystyle P(10) = 2P_0 \Rightarrow \lambda = \frac{1}{10}\ln(2)$, so  $P = P_02^{\frac{t}{10}}$
 ````
 
 
 
 ## Integrating factor form
 
-### Motivation
-Consider the following differential equation:
+````{admonition} Integrating facor method
+Problems which are the following form can be solved by the integrating factor method:
+:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)\,y = g(x)
+```
+If we multiply the LHS through by a function $\mu(x)$ = e^{\int f(x) \,\mathrm{d}x}$, which we call an *integrating factor* (IF):
 
+```{math}
+:label: eq1compare
+\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)
+```
+
+and compare this with:
+
+```{math}
+:label: eq2compare
+\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}
+```
+
+By equating {eq}`eq1compare` with {eq}`eq2compare` it can be seen that we can make the integrating factor work if we choose $\mu$ to satisfy:
+
+```{math}
+\frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu \,f(x)
+```
+
+Can you solve this equation by separation? The solution is:
+```{math}
+\mu = e^{\int f(x)\,\mathrm{d}x}
+```
+It's role is to cast the left hand side as an exact derivative to make the problem integrable. 
+````
+
+The integrating factor technique can be written down in the form of an algorithm:
+
+1\. Compute the integrating factor $\displaystyle \mu(x) = e^{\int f(x) \,\mathrm{d}x}$.
+
+2\. Multiply the whole ODE by $\mu(x)$:
+```{math}
+e^{\int{f(x) \mathrm{d}x}}\,\frac{\mathrm{d}y}{\mathrm{d}x} + e^{\int{f(x) \mathrm{d}x}}\,f(x)\,y = e^{\int{f(x) \mathrm{d}x}}\,g(x)
+```
+
+3\. We find that the left-hand-side can be rewritten as $\frac{\mathrm{d}}{\mathrm{d}x}(\mu y)$:
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(y\,e^{\int f(x) \,\mathrm{d}x}\Big) = e^{\int f(x)\, \mathrm{d}x }\,g(x)
+```
+
+4\. Integrate both sides with respect to $x$:
+```{math}
+y\,e^{\int f(x)\, \mathrm{d}x} = \int e^{\int f(x)\, \mathrm{d}x}\,g(x)\,\mathrm{d}x
+```
+
+5\. Rearrange to find $y(x)$:
+```{math}
+y(x) = \Big(\int e^{\int f(x)\, \mathrm{d}x}\,g(x)\,\mathrm{d}x + C\Big)\,e^{-\int f(x)\, \mathrm{d}x}
+```
+
+
+
+
+
+````{admonition} Worked example
+:class: seealso
+
+Consider the following differential equation:
 ```{math}
 :label: intfexample
 \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)
 ```
-
-A quick check will show that this equation is not separable.
-If we try to integrate directly, then we obtain
+A quick check will show that this equation is not separable.  If we try to integrate directly, then we obtain:
 
 ```{math}
-\displaystyle \int \mathrm{d}y+\int \frac{1}{x}y \mathrm{d}x = \int \frac{\cos(x)}{x}\mathrm{d}x.
+\int \,\mathrm{d}y + \int \frac{1}{x}y \,\mathrm{d}x = \int \frac{\cos(x)}{x}\,\mathrm{d}x
 ```
 
-We can deal with the integral on the right (in principle) but the term $\displaystyle \int \frac{y}{x}\mathrm{d}x$ appearing on the left cannot be evaluated without knowing $y$. So, we reached a dead end.
+We can deal with the integral on the right (in principle) but the term $\displaystyle \int \frac{y}{x}\mathrm{d}x$ appearing on the left cannot be evaluated 
+without knowing $y$, so this is a dead end.  
 
-Now, observe that we can multiply equation {eq}`intfexample` throughout by $x$, to obtain
+But observe that we can multiply equation {eq}`intfexample` throughout by $x$, to obtain:
 
 ```{math}
 :label: intfexample2
 x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)
 ```
 
-The expression on the left-hand side is an *exact derivative*
+The expression on the left-hand side is an *exact derivative*:
 
 ```{math}
 \frac{\mathrm{d}}{\mathrm{d}x}(yx)=x\frac{\mathrm{d}y}{\mathrm{d}x}+y
 ```
 
-Neat! This means that we can integrate equation {eq}`intfexample2` to obtain
+Neat - this means that we can integrate equation {eq}`intfexample2` to obtain:
 
 ```{math}
 xy=\int\cos(x)\mathrm{d}x
 ```
 
-The final solution is $y=\frac{1}{x}(\sin(x)+k)$, where $k$ is an arbitrary constant. Verify that the solution satisfies equation {eq}`intfexample` now.
+The final solution therefore is:
 
-**Solution**<br>
-We have $\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)=\frac{\cos(x)}{x}$ as required.
+```{math}
+y=\frac{1}{x}(\sin(x)+k)
+``` 
+where $k$ is an arbitrary constant. If we want to verify that the solution satisfies equation {eq}`intfexample`:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y &= \left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)\\
+&=\frac{\cos(x)}{x}
+```
+````
 
-````{admonition}
-:class: note
-In each of the following examples, determine whether the left-hand side is in the form of an exact derivative. If it is, then go ahead and solve the problem by direct integration. If the left hand side is not an exact differential then you do not have to solve the problem.
+````{admonition} Practice questions
+:class: seealso, dropdown
 
-(a) $\displaystyle -\sin(x)ye^{\cos(x)}+e^{\cos(x)}\frac{\mathrm{d}y}{\mathrm{d}x}=x$
+In each of the following, determine whether the left-hand side is in the form of an exact derivative. If it is, then go ahead and solve 
+the problem by direct integration. If the left hand side is not an exact differential then you do not have to solve the problem.
 
-(b) $\displaystyle -\sinh(x)y+\cosh(x)\frac{\mathrm{d}y}{\mathrm{d}x}=\sinh(2x)$
+1\. 
+```{math}
+-\sin(x)\,y\,e^{\cos(x)}+e^{\cos(x)}\,\frac{\mathrm{d}y}{\mathrm{d}x}=x
+```
 
-(c) $\displaystyle \tan(x)\frac{\mathrm{d}y}{\mathrm{d}x}+\sec^2(x)y=\ln(x)$
+2\. 
+```{math}
+-\sinh(x)\,y+\cosh(x)\,\frac{\mathrm{d}y}{\mathrm{d}x}=\sinh(2x)
+```
+
+3\. 
+```{math}
+\tan(x)\,\frac{\mathrm{d}y}{\mathrm{d}x}+\sec^2(x)\,y=\ln(x)
+```
+
+Solve the following ODE problems using the integrating factor technique:
+
+4\. 
+```{math}
+x\frac{dy}{dx} + 2y = 4x^2
+```
+
+5\. 
+```{math}
+\displaystyle x^2\frac{dy}{dx}+3xy=e^{3x}
+```
 
 ````
 
 ````{admonition} Solutions
-:class: tip
+:class: seealso, dropdown
 
-(a) The LHS is given by the exact derivative $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}\left(y e^{\cos(x)}\right)$ and so the solution to this problem can be found by direct integration. The result is $ye^{\cos(x)}=\frac{x^2}{2}+k$, where $k$ is an arbitrary constant.
+1\. The LHS is given by the exact derivative $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}\left(y\, e^{\cos(x)}\right)$ and so the solution to this problem can be found by 
+direct integration. The result is;
+```{math}
+y\,e^{\cos(x)}=\frac{x^2}{2}+k
+```
+where $k$ is an arbitrary constant.
 
-(b) The left hand side is not an exact derivative
+2\. The LHS is not an exact derivative.
 
-(c) The LHS is given by the exact derivative $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(\tan(x)y)$ and so the solution to the problem is $\tan(x)y=x\ln(x)=x+k$, where $k$ is an arbitrary constant.
-
-````
-
-In example (b) above, if we multiply throughout by a factor $\mu= \text{sech}^2(x)$ then we obtain
+However if we multiply throughout by a factor $\mu = \text{sech}^2(x)$ then we obtain:
 
 ```{math}
 \text{sech}(x)\frac{\mathrm{d}y}{\mathrm{d}x}-\text{sech}(x)\tanh(x)y=2\tanh(x)
@@ -157,111 +340,79 @@ In example (b) above, if we multiply throughout by a factor $\mu= \text{sech}^2(
 
 Now the LHS can be written as an exact derivative $\frac{\mathrm{d}}{\mathrm{d}x}(\text{sech}(x)y)$ and so the problem can be solved by direct integration.
 
-We call the $\mu$ an *integrating factor*. It's role is to cast the left hand side as an exact derivative to make the problem integrable. But can we always do this? And if so, how do we choose the integrating factor?
 
-It turns out that we can always find an integrating factor for problems of a special form that we will look at in the next section.
-
-### Technique
-We will apply an integrating factor technique to solve problems of the special form
-
+3\. The LHS is given by the exact derivative $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(\tan(x)y)$ and so the solution to the problem is:
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)y = g(x)
+\tan(x)y=x\ln(x)=x+k
+```
+where $k$ is an arbitrary constant.
+
+4\.
+
+First divide through by $x$ to put the ODE into the correct form, assuming that $x \neq 0$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{x}y = 4x
 ```
 
-The technique can be written down in the form of an algorithm:
+Comparing this form to the template equation we see that $\displaystyle f(x) = \frac{2}{x}$ and so:
 
-````{admonition} The Integrating Factor Algorithm
-:class: danger
-* Compute the integrating factor $\mu(x) = e^{\int{f(x) \mathrm{d}x}}$
-* Multiply the whole ODE by $\mu(x)$
-* You should find that the left-hand-side can be rewritten as $\frac{\mathrm{d}}{\mathrm{d}x}(\mu y)$
-* Integrate both sides with respect to $x$
-````
+```{math}
+\int\,f(x)\,\mathrm{d}x = \int\frac{2}{x}\,\mathrm{d}x=2\ln(x)=\ln(x^2)+C
+```
 
-We will first look at a couple of examples of how it's done, and then we'll take a look at why it works.
+The IF is
+```{math}
+\mu = e^{\ln(x^2)}=x^2
+```
+and multiplying through by the IF gives:
 
-````{admonition} Example 1
-:class: note
+```{math}
+x^2\frac{\mathrm{d}y}{\mathrm{d}x}+2xy=4x^3
+```
 
-$x\frac{dy}{dx} + 2y = 4x^2$
-````
+The left-hand side is now an exact derivative of $(x^2y)$! We can write the modified equation as:
 
-````{admonition} Solution
-:class: tip
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}(x^2y)=4x^3
+```
 
-First we need to put the ODE into the correct form, by dividing throughout by $x$,assuming that $x \neq 0$
+Finally, integrating both sides with respect to $x$ gives:
 
-$\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{x}y = 4x$
+```{math}
+x^2y = x^4 + K \Rightarrow y = x^2 + \frac{K}{x^2}
+```
 
-Comparing this form to the template equation we see that $f(x) = \frac{2}{x}$ and so
+where $K$ is an arbritary constant.  We can verify that the solution works by substituting it into the original ODE.
 
-$\displaystyle \int$$f(x)\mathrm{d}x=\int$$\frac{2}{x}\mathrm{d}x=2\ln(x)=\ln(x^2)+C$
+5\. 
+Firstly rearrange this equation to:
 
-The integrating factor (IF) is $\mu = e^{\ln(x^2)}=x^2$. Multiplying through this factor gives
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{3}{x}y = \frac{1}{x^2}e^{3x}
+```
 
-$\displaystyle x^2\frac{\mathrm{d}y}{\mathrm{d}x}+2xy=4x^3$
+The IF is:
+```{math}
+\mu(x) = e^{\int f(x)\, \mathrm{d}x} = e^{\int 3/x\,\mathrm{d}x} = e^{3\ln(x)} = e^{\ln(x^3)} = x^3
+```
 
-We've achieved something! The left-hand side is an exact derivative of $(x^2y)$. We can write the modified equation as
+Multiplying through by the IF gives:
 
-$\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(x^2y)=4x^3$
+```{math}
+x^3\frac{\mathrm{d}y}{x} + 3x^2y = xe^{3x} \Longrightarrow \frac{\mathrm{d}}{\mathrm{d}x}(x^3y) = xe^{3x}
+```
 
-Finally, integrating both sides with respect to $x$ gives
+Integrating with respect to $x$ to solve:
 
-$\displaystyle x^2y = x^4 + K \quad \longleftrightarrow \quad y = x^2 + \frac{K}{x^2}$,
-
+```{math}
+x^3y = \frac{e^{3x}}{3}\left(x-\frac{1}{3}\right) + K \Longrightarrow y = \frac{1}{3x^3} e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}
+```
 where $K$ is an arbritary constant.
-
-You can verify that the solution works by substituting it into the original ODE.
-````
-
-````{admonition} Example  2
-:class: note
-$\displaystyle x^2\frac{dy}{dx}+3xy=e^{3x}$
 ````
 
 
-````{admonition} Solution
-:class: tip
-
-Rearrange to $\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{3}{x}y = \frac{1}{x^2}e^{3x}$
 
 
-Integrating factor $\mu(x) = e^{\int{f(x) \mathrm{d}x}}$
-
-Multiplying through by the integrating factor gives
-
-$\displaystyle x^3\frac{\mathrm{d}y}{x} + 3x^2y = xe^{3x} \quad \longrightarrow \quad \frac{\mathrm{d}}{\mathrm{d}x}(x^3y) = xe^{3x}$
-
-Integrate with respect to x to solve:
-
-$\displaystyle x^3y = \frac{e^{3x}}{3}\left(x-\frac{1}{3}\right) + K \quad \longrightarrow \quad y = \frac{1}{3x^3}
-e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}$
-````
-
-**So how does it work?**
-
-Multiplying the LHS of the general form by $\mu(x)$ gives
-
-```{math}
-:label: eq1compare
-\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)
-```
-
-Compare with
-
-```{math}
-:label: eq2compare
-\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}
-```
-
-By equating {eq}`eq1compare` with {eq}`eq2compare` it can be seen that we can make the integrating factor work if we choose $\mu$ to satisfy
-
-```{math}
-\frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu f(x)
-```
-
-Can you solve this equation by separation? The solution is
-$\mu = e^{\int f(x)\mathrm{d}x}$
 
 ## Benoulli form
 
@@ -269,7 +420,7 @@ $\mu = e^{\int f(x)\mathrm{d}x}$
 A Benoulli differential equation takes the form:
 ```{math}
 :label: benoulliODE
-\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathcal{R}
+\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}
 ```
 We see that for $n = 0,\, 1$ this reduces to cases already discussed, but for any other $n$ this equation is clearly non-linear in $y$.  We can 
 however make progress using the substitution:
@@ -282,8 +433,26 @@ which transforms {eq}`benoulliODE` into a linear differential equation of the fo
 ```
 ````
 
-### Ricati equation
-We can extend 
+### Riccati form
+````{admonition} Defintion
+A Riccati differential equation takes the form:
+```{math}
+:label: riccatiODE
+\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)
+```
+which we can recast in terms of a variable $u(x)$, which satisfies an ODE:
+```{math}
+u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2
+```
+and we can solve to find $y(x)$:
+```{math}
+y = -\frac{u'}{q_2\,u}
+```
+````
 
-## Perfect differential method
+We see that if $q_0=0$, then this just reduces to a Nenoulli equation with $n=2$ and if $q_2=0$, then this is just in integrating form factor, so this 
+equation can be thought of as a hybrid between the two.
+
+%## Perfect differential form 
+
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Vectors and Vector Algebra &#8212; Mathematics for Natural Sciences A</title>
+    <title>6. Vectors and Vector Algebra &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Differentiation" href="../differentiation_and_integration/differentiation.html" />
-    <link rel="prev" title="7. Matrices" href="matrices.html" />
+    <link rel="next" title="7. Differentiation" href="../differentiation_and_integration/differentiation.html" />
+    <link rel="prev" title="5. Matrices" href="matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,58 +100,68 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Prelim/notationfunctions.html">
-   1. Mathematical Prelimaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Prelim/binexpans.html">
-   2. Binomial Expansion and Theorem
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   3. Complex Numbers
+   1. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
-   4. Limits of Functions and Sequences
+   2. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   5. Sequences and Series
+   3. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/convergence.html">
-   6. Convergence of Series
+   4. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
-   7. Matrices
+   5. Matrices
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Vectors and Vector Algebra
+   6. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   9. Differentiation
+   7. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   10. Integration
+   8. Integration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/partialdifferentiation.html">
-   11. Multivariable Calculus
+   9. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
+   10. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
+   11. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
+   12. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   13. ODEs with Python
   </a>
  </li>
 </ul>
@@ -243,76 +253,76 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#addition-and-scaling-of-vectors">
-   8.1. Addition and Scaling of Vectors
+   6.1. Addition and Scaling of Vectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#magnitude-of-a-vector">
-   8.2. Magnitude of a Vector
+   6.2. Magnitude of a Vector
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#normalised-vectors">
-   8.3. Normalised Vectors
+   6.3. Normalised Vectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-product-dot-product">
-   8.4. Scalar Product / Dot Product
+   6.4. Scalar Product / Dot Product
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-of-the-dot-product">
-     8.4.1. Properties of the Dot Product
+     6.4.1. Properties of the Dot Product
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-product-cross-product">
-   8.5. Vector Product / Cross Product
+   6.5. Vector Product / Cross Product
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#triple-vector-products">
-   8.6. Triple Vector Products
+   6.6. Triple Vector Products
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#triple-scalar-product">
-     8.6.1. Triple Scalar Product
+     6.6.1. Triple Scalar Product
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#triple-vector-product">
-     8.6.2. Triple Vector Product
+     6.6.2. Triple Vector Product
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-lines-and-planes">
-   8.7. Vector Lines and Planes
+   6.7. Vector Lines and Planes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-line">
-     8.7.1. Equation of a Line
+     6.7.1. Equation of a Line
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-plane">
-     8.7.2. Equation of a Plane
+     6.7.2. Equation of a Plane
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distance-between-a-point-and-a-line">
-     8.7.3. Distance between a Point and a Line
+     6.7.3. Distance between a Point and a Line
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shortest-distance-to-a-plane">
-     8.7.4. Shortest Distance to a Plane
+     6.7.4. Shortest Distance to a Plane
     </a>
    </li>
   </ul>
@@ -339,76 +349,76 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#addition-and-scaling-of-vectors">
-   8.1. Addition and Scaling of Vectors
+   6.1. Addition and Scaling of Vectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#magnitude-of-a-vector">
-   8.2. Magnitude of a Vector
+   6.2. Magnitude of a Vector
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#normalised-vectors">
-   8.3. Normalised Vectors
+   6.3. Normalised Vectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-product-dot-product">
-   8.4. Scalar Product / Dot Product
+   6.4. Scalar Product / Dot Product
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-of-the-dot-product">
-     8.4.1. Properties of the Dot Product
+     6.4.1. Properties of the Dot Product
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-product-cross-product">
-   8.5. Vector Product / Cross Product
+   6.5. Vector Product / Cross Product
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#triple-vector-products">
-   8.6. Triple Vector Products
+   6.6. Triple Vector Products
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#triple-scalar-product">
-     8.6.1. Triple Scalar Product
+     6.6.1. Triple Scalar Product
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#triple-vector-product">
-     8.6.2. Triple Vector Product
+     6.6.2. Triple Vector Product
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-lines-and-planes">
-   8.7. Vector Lines and Planes
+   6.7. Vector Lines and Planes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-line">
-     8.7.1. Equation of a Line
+     6.7.1. Equation of a Line
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-plane">
-     8.7.2. Equation of a Plane
+     6.7.2. Equation of a Plane
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distance-between-a-point-and-a-line">
-     8.7.3. Distance between a Point and a Line
+     6.7.3. Distance between a Point and a Line
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shortest-distance-to-a-plane">
-     8.7.4. Shortest Distance to a Plane
+     6.7.4. Shortest Distance to a Plane
     </a>
    </li>
   </ul>
@@ -423,7 +433,7 @@
               <div>
                 
   <div class="section" id="vectors-and-vector-algebra">
-<h1><span class="section-number">8. </span>Vectors and Vector Algebra<a class="headerlink" href="#vectors-and-vector-algebra" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Vectors and Vector Algebra<a class="headerlink" href="#vectors-and-vector-algebra" title="Permalink to this headline">¶</a></h1>
 <p>We can think of vectors at their heart as directions being given to get between two points in space.  If we have to move in one, two or three dimensions, along spatially flat or curved surfaces,
 we can attempt to give directions.  At the heart of a any vector system are the <b>basis vectors</b>, these give us the funadmental possible directions within a vector space, which any vector can be
 decompsoed into a weighted sum of.</p>
@@ -452,10 +462,10 @@ decompsoed into a weighted sum of.</p>
 \[\begin{split}\hat{\bf x} &amp;=  {\bf e_x} = \vec{x} = \hat{\bf i}\\
 \hat{\bf y} &amp;=  {\bf e_y} = \vec{y} = \hat{\bf j}\\
 \hat{\bf z} &amp;=  {\bf e_z} = \vec{z} = \hat{\bf k}\end{split}\]</div>
-<p>To see how these visually fit together, see <a class="reference internal" href="#cartcoords"><span class="std std-numref">Fig. 8.1</span></a>.  We note that all the coordinates meet at right angles and that we have defined <em>right handed axes</em>.</p>
+<p>To see how these visually fit together, see <a class="reference internal" href="#cartcoords"><span class="std std-numref">Fig. 6.1</span></a>.  We note that all the coordinates meet at right angles and that we have defined <em>right handed axes</em>.</p>
 <div class="figure align-default" id="cartcoords">
 <img alt="../_images/CartesianCoordinateSystem.png" src="../_images/CartesianCoordinateSystem.png" />
-<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text"><b>Left Pane</b>: Graphical breakdown of the Cartesian coordinate system with vector path in red,
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text"><b>Left Pane</b>: Graphical breakdown of the Cartesian coordinate system with vector path in red,
 <b>Right Pane</b>: The differences between left handed (top) and right handed (bottom) axes.</span><a class="headerlink" href="#cartcoords" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can also write coordinates in so-called <b>index notation</b>:</p>
@@ -463,12 +473,12 @@ decompsoed into a weighted sum of.</p>
 \[x_i = \left(\hat{\bf x},\, \hat{\bf y},\, \hat{\bf z}\right)\]</div>
 <p>where the value of <span class="math notranslate nohighlight">\(i = \in \{1,\,2,\,3\}\)</span> denotes the specific basis vector.</p>
 <div class="section" id="addition-and-scaling-of-vectors">
-<h2><span class="section-number">8.1. </span>Addition and Scaling of Vectors<a class="headerlink" href="#addition-and-scaling-of-vectors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Addition and Scaling of Vectors<a class="headerlink" href="#addition-and-scaling-of-vectors" title="Permalink to this headline">¶</a></h2>
 <p>If we start with the basis vectors as building blocks of our coordinate system, then we can write any three dimensional Cartesian coordinate in terms of
-weighted basis vectors, we can see this in <a class="reference internal" href="#basisvectors"><span class="std std-numref">Fig. 8.2</span></a>.</p>
+weighted basis vectors, we can see this in <a class="reference internal" href="#basisvectors"><span class="std std-numref">Fig. 6.2</span></a>.</p>
 <div class="figure align-default" id="basisvectors">
 <img alt="../_images/basisvectors.png" src="../_images/basisvectors.png" />
-<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Breakdown of vector <span class="math notranslate nohighlight">\(\bf a = a_x \,\hat{\bf x} + a_y \,\hat{\bf y} + a_z \,\hat{\bf z}\)</span>.</span><a class="headerlink" href="#basisvectors" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Breakdown of vector <span class="math notranslate nohighlight">\(\bf a = a_x \,\hat{\bf x} + a_y \,\hat{\bf y} + a_z \,\hat{\bf z}\)</span>.</span><a class="headerlink" href="#basisvectors" title="Permalink to this image">¶</a></p>
 </div>
 <p>As an example we can define two vectors <span class="math notranslate nohighlight">\(\bf v_1,\, v_2\)</span></p>
 <div class="math notranslate nohighlight">
@@ -529,7 +539,7 @@ weighted basis vectors, we can see this in <a class="reference internal" href="#
 \end{pmatrix} = 21\hat{\bf x} + 44\hat{\bf y} + 49\hat{\bf z}\end{split}\]</div>
 </div>
 <div class="section" id="magnitude-of-a-vector">
-<h2><span class="section-number">8.2. </span>Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this headline">¶</a></h2>
 <p>Given some vector, which will take us some distance from two points in space, we can find the shortest path length between the points.</p>
 <p>In two dimensions this would just follow Pythagoras’s theorem:</p>
 <div class="math notranslate nohighlight">
@@ -544,7 +554,7 @@ v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
 \[|3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}| = \sqrt{3^2 + 4^2 + 12^2} = 13\]</div>
 </div>
 <div class="section" id="normalised-vectors">
-<h2><span class="section-number">8.3. </span>Normalised Vectors<a class="headerlink" href="#normalised-vectors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Normalised Vectors<a class="headerlink" href="#normalised-vectors" title="Permalink to this headline">¶</a></h2>
 <p>Each of the basis vectors is a normalised vector <span class="math notranslate nohighlight">\(|\hat{\bf x}| = |\hat{\bf y}| = |\hat{\bf z}| = 1\)</span>, however if we have a more general vector
 <span class="math notranslate nohighlight">\({\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}\)</span> moving in some direction, we can also construct a normalised vector:</p>
 <div class="admonition-definition admonition">
@@ -559,12 +569,12 @@ v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
 </div>
 </div>
 <div class="section" id="scalar-product-dot-product">
-<h2><span class="section-number">8.4. </span>Scalar Product / Dot Product<a class="headerlink" href="#scalar-product-dot-product" title="Permalink to this headline">¶</a></h2>
-<p>Lets consider two vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span>, as shown in <a class="reference internal" href="#scalarprojection"><span class="std std-numref">Fig. 8.3</span></a>.  We can consider the scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, where we resolve the
+<h2><span class="section-number">6.4. </span>Scalar Product / Dot Product<a class="headerlink" href="#scalar-product-dot-product" title="Permalink to this headline">¶</a></h2>
+<p>Lets consider two vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span>, as shown in <a class="reference internal" href="#scalarprojection"><span class="std std-numref">Fig. 6.3</span></a>.  We can consider the scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, where we resolve the
 parallel components of <span class="math notranslate nohighlight">\(\bf B\)</span> in the direction of vector <span class="math notranslate nohighlight">\(\bf A\)</span>.</p>
 <div class="figure align-default" id="scalarprojection">
 <img alt="../_images/scalarprojection.png" src="../_images/scalarprojection.png" />
-<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text"><b>Left Pane</b>: Vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span> which share a common coordinate and span an angle <span class="math notranslate nohighlight">\(\theta\)</span> between them,
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text"><b>Left Pane</b>: Vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span> which share a common coordinate and span an angle <span class="math notranslate nohighlight">\(\theta\)</span> between them,
 <b>Right Pane</b> The scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, which by trigonometry gives the length <span class="math notranslate nohighlight">\(|{\bf B}| \cos\theta\)</span>.</span><a class="headerlink" href="#scalarprojection" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we multiply these two distances, this is known as the <strong>scalar</strong> product of the vectors.</p>
@@ -597,7 +607,7 @@ parallel components of <span class="math notranslate nohighlight">\(\bf B\)</spa
 <p>where the last expression uses the index notation.</p>
 </div>
 <div class="section" id="properties-of-the-dot-product">
-<h3><span class="section-number">8.4.1. </span>Properties of the Dot Product<a class="headerlink" href="#properties-of-the-dot-product" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Properties of the Dot Product<a class="headerlink" href="#properties-of-the-dot-product" title="Permalink to this headline">¶</a></h3>
 <p>The dot product of two vectors <span class="math notranslate nohighlight">\(\bf a,\, b\)</span> have the following mathematical properties:</p>
 <p>1. <em>Commutative:</em>
 <span class="math notranslate nohighlight">\(\mathbf {a} \cdot \mathbf {b} = \mathbf {b} \cdot \mathbf {a}\)</span></p>
@@ -612,7 +622,7 @@ Two non-zero vectors <span class="math notranslate nohighlight">\(\bf a,\, b\)</
 </div>
 </div>
 <div class="section" id="vector-product-cross-product">
-<h2><span class="section-number">8.5. </span>Vector Product / Cross Product<a class="headerlink" href="#vector-product-cross-product" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Vector Product / Cross Product<a class="headerlink" href="#vector-product-cross-product" title="Permalink to this headline">¶</a></h2>
 <p>Unsurprisingly we can also make a vector product that results in a vector, rather than a scalar, this is known as the <strong>Vector</strong> product, also caleed the <strong>Cross</strong> product.</p>
 <div class="admonition-geometric-definition admonition">
 <p class="admonition-title">Geometric definition</p>
@@ -623,10 +633,10 @@ Two non-zero vectors <span class="math notranslate nohighlight">\(\bf a,\, b\)</
 \hat{\bf z} \times \hat{\bf x} &amp;=  \hat{\bf y} \end{split}\]</div>
 </div>
 <p>In general however we write the cross product between two vectors as a new vector, normal to the other two (following the right hand rule), as depicted in
-<a class="reference internal" href="#vectorproduct"><span class="std std-numref">Fig. 8.4</span></a>.</p>
+<a class="reference internal" href="#vectorproduct"><span class="std std-numref">Fig. 6.4</span></a>.</p>
 <div class="figure align-default" id="vectorproduct">
 <img alt="../_images/VectorProduct.png" src="../_images/VectorProduct.png" />
-<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text"><b>Left Pane</b>: Graphical depiction of the cross product, producing a vector <span class="math notranslate nohighlight">\(\bf a \times b\)</span> which is normal to both <span class="math notranslate nohighlight">\(\bf a,\, b\)</span>,
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text"><b>Left Pane</b>: Graphical depiction of the cross product, producing a vector <span class="math notranslate nohighlight">\(\bf a \times b\)</span> which is normal to both <span class="math notranslate nohighlight">\(\bf a,\, b\)</span>,
 <b>Right Pane</b>: The area of the parallogram produced by vectors <span class="math notranslate nohighlight">\(\bf a,\, b\)</span> is found from <span class="math notranslate nohighlight">\(|\bf a \times b|\)</span></span><a class="headerlink" href="#vectorproduct" title="Permalink to this image">¶</a></p>
 </div>
 <p>This means that if vectors span an angle <span class="math notranslate nohighlight">\(\theta\)</span>, then we need to resolve the perpendicular component:</p>
@@ -686,20 +696,20 @@ the answer is zero:</p>
 </div>
 </div>
 <div class="section" id="triple-vector-products">
-<h2><span class="section-number">8.6. </span>Triple Vector Products<a class="headerlink" href="#triple-vector-products" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Triple Vector Products<a class="headerlink" href="#triple-vector-products" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have multiplcation of two vectors formalised, we find that multiplying three vectors also leads to some further geometric and algebraic ideas.</p>
 <div class="section" id="triple-scalar-product">
-<h3><span class="section-number">8.6.1. </span>Triple Scalar Product<a class="headerlink" href="#triple-scalar-product" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.1. </span>Triple Scalar Product<a class="headerlink" href="#triple-scalar-product" title="Permalink to this headline">¶</a></h3>
 <p>Here we have three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span> composed so that</p>
 <div class="math notranslate nohighlight">
 \[\bf a \cdot (b \times c)\]</div>
 <p>since the combination of <span class="math notranslate nohighlight">\(\bf b \times c\)</span> produces a vector, which we can then do a scalar multiplcation with <span class="math notranslate nohighlight">\(\bf a\)</span>.  Therefore this produces a scalar result.</p>
-<p>Geometrically this is related to the parallepiped, as depicted in <a class="reference internal" href="#parallepiped"><span class="std std-numref">Fig. 8.5</span></a>, where the magnitude of this result is the shapes volume:</p>
+<p>Geometrically this is related to the parallepiped, as depicted in <a class="reference internal" href="#parallepiped"><span class="std std-numref">Fig. 6.5</span></a>, where the magnitude of this result is the shapes volume:</p>
 <div class="math notranslate nohighlight">
 \[V = |{\bf a \cdot (b \times c)}|\]</div>
 <div class="figure align-default" id="parallepiped">
 <img alt="../_images/parallepiped.png" src="../_images/parallepiped.png" />
-<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">A parallepiped, composed from three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span>.</span><a class="headerlink" href="#parallepiped" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">A parallepiped, composed from three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span>.</span><a class="headerlink" href="#parallepiped" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can also evaluate the triple scalar product from a matrix determinant:</p>
 <div class="math notranslate nohighlight">
@@ -710,7 +720,7 @@ the answer is zero:</p>
 \end{vmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="triple-vector-product">
-<h3><span class="section-number">8.6.2. </span>Triple Vector Product<a class="headerlink" href="#triple-vector-product" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.2. </span>Triple Vector Product<a class="headerlink" href="#triple-vector-product" title="Permalink to this headline">¶</a></h3>
 <p>Unsurprisingly we can also find an expression for the vector product between three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\bf a \times (b \times c) = (a\cdot c)b - (a \cdot b)c\]</div>
@@ -721,7 +731,7 @@ the answer is zero:</p>
 </div>
 </div>
 <div class="section" id="vector-lines-and-planes">
-<h2><span class="section-number">8.7. </span>Vector Lines and Planes<a class="headerlink" href="#vector-lines-and-planes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.7. </span>Vector Lines and Planes<a class="headerlink" href="#vector-lines-and-planes" title="Permalink to this headline">¶</a></h2>
 <p>We can identify points in space using their position vectors, which are typically denoted by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf r} =\left(\begin{array}{c}x\\y\\z\end{array}\right)\end{split}\]</div>
@@ -733,7 +743,7 @@ the answer is zero:</p>
 <p>In what follows, we will write the equations using both conventions. You will see that sometimes it is easier to work with
 the scalar equations and other times it is easier to work with the vector equations.</p>
 <div class="section" id="equation-of-a-line">
-<h3><span class="section-number">8.7.1. </span>Equation of a Line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.7.1. </span>Equation of a Line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this headline">¶</a></h3>
 <p>The vector equation of a line can be obtained from a known point on the line and a known vector parallel to the
 line. Equivalently, two known points on the line can also be used to find a parallel vector.</p>
 <p>We obtain the position vector of the other points by a two step process:</p>
@@ -741,10 +751,10 @@ line. Equivalently, two known points on the line can also be used to find a para
 <li><p>first carrying from the origin to the known point</p></li>
 <li><p>secondly carrying along the line in either direction</p></li>
 </ul>
-<p>This principle is illustrated in <a class="reference internal" href="#positionvector"><span class="std std-numref">Fig. 8.6</span></a></p>
+<p>This principle is illustrated in <a class="reference internal" href="#positionvector"><span class="std std-numref">Fig. 6.6</span></a></p>
 <div class="figure align-default" id="positionvector">
 <img alt="../_images/vector_line.gif" src="../_images/vector_line.gif" />
-<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">The vector equation of a line passing through two points <span class="math notranslate nohighlight">\(P,\,Q\)</span>. The position vector <span class="math notranslate nohighlight">\(\bf r\)</span>, shown in red, describes
+<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">The vector equation of a line passing through two points <span class="math notranslate nohighlight">\(P,\,Q\)</span>. The position vector <span class="math notranslate nohighlight">\(\bf r\)</span>, shown in red, describes
 an arbitrary point on the line, it can be formed by the sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}\)</span>.</span><a class="headerlink" href="#positionvector" title="Permalink to this image">¶</a></p>
 </div>
 <p>An arbitrary scalar parameter <span class="math notranslate nohighlight">\(\lambda\)</span> controls how far along the line we move, and if it is negative then the direction is reversed.
@@ -774,14 +784,14 @@ z &amp;=  -(3\lambda -5) = 5 - 3 \lambda\end{split}\]</div>
 \[\begin{split}{\bf r} = \begin{pmatrix} -1/3\\1\\5\end{pmatrix} + \lambda \begin{pmatrix} 2/30\\2\\-3\end{pmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="equation-of-a-plane">
-<h3><span class="section-number">8.7.2. </span>Equation of a Plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.7.2. </span>Equation of a Plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this headline">¶</a></h3>
 <p>The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector
-form of the equation is illustrated in <a class="reference internal" href="#vectorplane"><span class="std std-numref">Fig. 8.7</span></a>.</p>
+form of the equation is illustrated in <a class="reference internal" href="#vectorplane"><span class="std std-numref">Fig. 6.7</span></a>.</p>
 <p>In this description we carry from the origin to the known point identified by <span class="math notranslate nohighlight">\({\bf r}_0\)</span> and then carry along the resultant of
 vectors <span class="math notranslate nohighlight">\(\lambda{\bf v}\)</span> and <span class="math notranslate nohighlight">\(\mu{\bf w}\)</span>, which span a parallelogram within the plane.</p>
 <div class="figure align-default" id="vectorplane">
 <img alt="../_images/vector-plane.gif" src="../_images/vector-plane.gif" />
-<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\({\bf r}\)</span>, shown in red, describes an arbitrary point on the plane. It can be formed by the
+<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\({\bf r}\)</span>, shown in red, describes an arbitrary point on the plane. It can be formed by the
 sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}+\mu{\bf w}\)</span>, where <span class="math notranslate nohighlight">\({\bf r}_0=\overrightarrow{OP}\)</span> is a the position vector of one of the known points
 on the line,<span class="math notranslate nohighlight">\({\bf v}=\overrightarrow{PQ}\)</span> and <span class="math notranslate nohighlight">\({\bf w}=\overrightarrow{PR}\)</span> are known vectors that points in a different directions
 parallel to the plane. The arbitrary scalar parameters <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> control how far along the line we carry. The animation shows how
@@ -800,10 +810,10 @@ to the surface. Then, <span class="math notranslate nohighlight">\({\bf r}-{\bf 
 <div class="math notranslate nohighlight">
 \[({\bf r}-{\bf r}_0)\cdot{\bf n}=0\]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf r}_0\)</span> is the position vector of a point in the plane, and <span class="math notranslate nohighlight">\({\bf n}\)</span> is a vector perpendicular to the plane.  We see this depicted
-in <a class="reference internal" href="#scalarplane"><span class="std std-numref">Fig. 8.8</span></a>.</p>
+in <a class="reference internal" href="#scalarplane"><span class="std std-numref">Fig. 6.8</span></a>.</p>
 <div class="figure align-default" id="scalarplane">
 <img alt="../_images/scalar-plane.png" src="../_images/scalar-plane.png" />
-<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">We can find the scalar equation of a plane by using a normal vector <span class="math notranslate nohighlight">\({\bf n}\)</span> and a position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span>.
+<p class="caption"><span class="caption-number">Fig. 6.8 </span><span class="caption-text">We can find the scalar equation of a plane by using a normal vector <span class="math notranslate nohighlight">\({\bf n}\)</span> and a position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span>.
 We have <span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0)\cdot{\bf n}=0\)</span>.</span><a class="headerlink" href="#scalarplane" title="Permalink to this image">¶</a></p>
 </div>
 <p>Expanding out the scalar product gives:</p>
@@ -835,12 +845,12 @@ e.g. <span class="math notranslate nohighlight">\((1,\,0,\,6)\)</span> and <span
 </div>
 </div>
 <div class="section" id="distance-between-a-point-and-a-line">
-<h3><span class="section-number">8.7.3. </span>Distance between a Point and a Line<a class="headerlink" href="#distance-between-a-point-and-a-line" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.7.3. </span>Distance between a Point and a Line<a class="headerlink" href="#distance-between-a-point-and-a-line" title="Permalink to this headline">¶</a></h3>
 <p>The shortest distance between a point <span class="math notranslate nohighlight">\(C\)</span> and a line through points <span class="math notranslate nohighlight">\(A,B\)</span> is the perpendicular distance,
-<span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>, illustrated in <a class="reference internal" href="#pointline"><span class="std std-numref">Fig. 8.9</span></a></p>
+<span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>, illustrated in <a class="reference internal" href="#pointline"><span class="std std-numref">Fig. 6.9</span></a></p>
 <div class="figure align-default" id="pointline">
 <img alt="../_images/point_line.png" src="../_images/point_line.png" />
-<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(C\)</span> to a line is given by <span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>.</span><a class="headerlink" href="#pointline" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.9 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(C\)</span> to a line is given by <span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>.</span><a class="headerlink" href="#pointline" title="Permalink to this image">¶</a></p>
 </div>
 <p>This distance is equal to the height of the parallelogram spanned by vectors <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span>, so
 it can be found using the vector product:</p>
@@ -867,20 +877,20 @@ d =  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21
 </div>
 </div>
 <div class="section" id="shortest-distance-to-a-plane">
-<h3><span class="section-number">8.7.4. </span>Shortest Distance to a Plane<a class="headerlink" href="#shortest-distance-to-a-plane" title="Permalink to this headline">¶</a></h3>
-<p>The shortest distance between a point <span class="math notranslate nohighlight">\(P\)</span> and a plane containing the point <span class="math notranslate nohighlight">\(A\)</span> is the perpendicular distance, marked <span class="math notranslate nohighlight">\(d\)</span> in <a class="reference internal" href="#pointplane"><span class="std std-numref">Fig. 8.10</span></a></p>
+<h3><span class="section-number">6.7.4. </span>Shortest Distance to a Plane<a class="headerlink" href="#shortest-distance-to-a-plane" title="Permalink to this headline">¶</a></h3>
+<p>The shortest distance between a point <span class="math notranslate nohighlight">\(P\)</span> and a plane containing the point <span class="math notranslate nohighlight">\(A\)</span> is the perpendicular distance, marked <span class="math notranslate nohighlight">\(d\)</span> in <a class="reference internal" href="#pointplane"><span class="std std-numref">Fig. 6.10</span></a></p>
 <div class="figure align-default" id="pointplane">
 <img alt="../_images/point_plane.png" src="../_images/point_plane.png" />
-<p class="caption"><span class="caption-number">Fig. 8.10 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(P\)</span> to a plane through <span class="math notranslate nohighlight">\(A\)</span> is the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal</span><a class="headerlink" href="#pointplane" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.10 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(P\)</span> to a plane through <span class="math notranslate nohighlight">\(A\)</span> is the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal</span><a class="headerlink" href="#pointplane" title="Permalink to this image">¶</a></p>
 </div>
 <p>This distance is the given by projecting vector <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal:</p>
 <div class="math notranslate nohighlight">
 \[d=|\overrightarrow{AP}.\hat{{\bf n}}|\]</div>
 <p>The shortest distance between a line and a (non-intersecting) plane, two parallel planes, or two skew lines can be found in the same way,
-by picking any point on each line/plane. The case of two skew lines is illustrated in <a class="reference internal" href="#skews"><span class="std std-numref">Fig. 8.11</span></a></p>
+by picking any point on each line/plane. The case of two skew lines is illustrated in <a class="reference internal" href="#skews"><span class="std std-numref">Fig. 6.11</span></a></p>
 <div class="figure align-default" id="skews">
 <img alt="../_images/skews.png" src="../_images/skews.png" />
-<p class="caption"><span class="caption-number">Fig. 8.11 </span><span class="caption-text">The shortest distance between two skew lines illustrated.</span><a class="headerlink" href="#skews" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.11 </span><span class="caption-text">The shortest distance between two skew lines illustrated.</span><a class="headerlink" href="#skews" title="Permalink to this image">¶</a></p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
@@ -929,13 +939,13 @@ given by:</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Matrices</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Matrices</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../differentiation_and_integration/differentiation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Differentiation</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Differentiation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

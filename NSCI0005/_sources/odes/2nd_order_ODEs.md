@@ -2,7 +2,7 @@
 
 ````{admonition} Definition
 :class: notice
-In general a second order differential equation is of the form: 
+In general a linear second order differential equation is of the form: 
 
 ```{math}
 :label: ode2general
@@ -16,9 +16,11 @@ We can also conveniently write these problems using a linear operator:
 \mathcal{L}=a\frac{\mathrm{d}^2}{\mathrm{d}x^2}+b\frac{\mathrm{d}}{\mathrm{d}x}+c
 ```
 
-With this definition, the problems may be written as
-* $\mathcal{L}(y)=0$ (homogeneous)
-* $\mathcal{L}(y)=f(x)$ (inhomogeneous)
+With this definition, the problems may be written as:
+
+- $\mathcal{L}(y)=0$ (homogeneous)
+
+- $\mathcal{L}(y)=f(x)$ (inhomogeneous)
 
 ````
 
@@ -95,7 +97,7 @@ linear combination of solutions will also be a solution:
 &=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\\
 &=0
 ```
-We call this solution the complemtary function.
+We sometimes call this solution the complementary function.
 
 ````{admonition} Worked example
 :class: seealso
@@ -120,7 +122,9 @@ You are encouraged to check this solution to confirm that it works!
 Since the results we obtain from solving the auxillary equation and then making a linear superposition of solutions have two arbitrary constants, it generates a 
 family of solution curves. We can fix the solution to one of these curves by providing **conditions** for either $y$ or its derivatives at two different $x$ values - these 
  often go by many different names such as *initial coditions* or *boundary conditions*.  For practical problems, the conditions tell us about a particular state 
- of the system. For instance, applying Newton's second law to the motion of a pendulum gives a second order differential equation for the angular displacement 
+ of the system. 
+ 
+ For instance, applying Newton's second law to the motion of a pendulum gives a second order differential equation for the angular displacement 
  $\theta$ from the downward vertical. Conditions for $\theta(0)$ and $\dot{\theta}(0)$ specify the initial displacement and the initial angular velocity. These 
  types of condition, specified at time $t=0$ are called *initial conditions*. For some other types of problem we may have conditions specified at two end-points of an 
  interval. Such types of condition are called *boundary conditions*.
@@ -152,22 +156,22 @@ y^{\prime} &= -\frac{1}{2}\,A_1\,e^{-x/2} + A_2\,e^x
 
 1\. Substituting for the given conditions:
 
-$ y(0)=1\Rightarrow k_1+k_2=2$
+$ y(0)=1\Rightarrow A_1+A_2=2$
 
-$ y^{\prime}(0)=1 \Rightarrow -\frac{1}{2}k_1+k_2=1$
+$ y^{\prime}(0)=1 \Rightarrow -\frac{1}{2}A_1+A_2=1$
 
-Solving these two equations simultaneously gives $k_1=\frac{2}{3}$, $k_2=\frac{4}{3}$.
+Solving these two equations simultaneously gives $A_1=\frac{2}{3}$, $A_2=\frac{4}{3}$.
 
 The solution satisfying the given conditions is therefore given by
 $y(x)=\frac{2}{3}e^{-\frac{1}{2}x}+\frac{4}{3}e^x$
 
 2\. Substituting for the given conditions:
 
-$ y(0)=3\Rightarrow k_1+k_2=3$
+$ y(0)=3\Rightarrow A_1+A_2=3$
 
-$ y(1)=e^{-1/2}+2e \Rightarrow k_1e^{-1/2}+k_2e=e^{-1/2}+2e$
+$ y(1)=e^{-1/2}+2e \Rightarrow A_1e^{-1/2}+A_2e=e^{-1/2}+2e$
 
-Solving these two equations simultaneously gives $k_1=1$, $k_2=2$.
+Solving these two equations simultaneously gives $A_1=1$, $A_2=2$.
 
 The solution satisfying the given conditions is therefore given by
 $y(x)=e^{-\frac{1}{2}x}+2e^x$
@@ -313,7 +317,7 @@ name because we guess the form of the solution without giving the values of the 
  guess into the ODE and equating terms.  
 
 ````{admonition} Method of undetermined coefficients
-- Polynomial Form:
+- *Polynomial Form:*
 ```{math} 
 f(x) = ax^n \Rightarrow y_{p} = A + Bx^1 + \dots + C x^n
 ```
@@ -322,7 +326,9 @@ f(x) = ax^n \Rightarrow y_{p} = A + Bx^1 + \dots + C x^n
 ```{math} 
 f(x) = a \,e^{\alpha x} \Rightarrow y_{p} = A\,e^{\alpha x}
 ```
-If we find the that homogeneous solution has a term of the form $y = A_1\, e^{\alpha x}$, then the particular integral has the form:
+If we find the that homogeneous solution has a term of the form $y = A_1\, e^{\alpha x}$.  If (and only if) we encounter this problem, you can fix it by multiplying our 
+ansatz by the differentiation variable, here $x$. The reason this works is similar to the derivation of the linearly independent result in the case of homogeneous problems 
+with a repeated eigenvalue. So the particular integral has the form:
 ```{math}
 y_p = A_1\,x\,e^{\alpha x}
 ```
@@ -436,8 +442,7 @@ Following the technique that we have used previously, we would think to try the 
 x_p=A\,e^{t}
 ```
 However, if you substitute this into the left hand side of the equation you will find that it simply gives zero. Our desired ansatz here is a solution of the 
-homogeneous problem also!  If (and only if) you encounter this problem, you can fix it by multiplying your ansatz by the differentiation variable, here $t$. The reason 
-this works is similar to the derivation of the linearly independent result that was given in the case of homogeneous problems with a repeated eigenvalue.  So here we try:
+homogeneous problem also - so here we try:
 ```{math}
 x_p=A\,t\,xe^{t}
 ```
@@ -551,7 +556,7 @@ The method can only be used to solve problems where there is a finite pattern of
 f(x)=\ln(x)
 ``` 
 since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like $1/x$, 
-which would need a term like $1/x^2$ and so forth.  There is a method that can be used to solve more general types of inhomogeneous problem, which is called **variation of 
+which would need a term like $1/x^2$ and so forth.  There is a method that can be used to solve more general types of inhomogeneous problem - **variation of 
 parameters**.  
 
 
@@ -584,16 +589,16 @@ such that the resulting PDE has the form:
 ```
 where we notice we have switched to one variable derivatives, since:
 ```{math}
-\frac{\partial (X\,T)}{\partial x} &= T\,\frac{\mathrm{d} X}{\mathrm{d}x} \\
-\frac{\partial (X\,T)}{\partial t} &= X\,\frac{\mathrm{d} T}{\mathrm{d}t}
+\frac{\partial (X\,T)}{\partial x} = T\,\frac{\mathrm{d} X}{\mathrm{d}x}, \quad \frac{\partial (X\,T)}{\partial t} = X\,\frac{\mathrm{d} T}{\mathrm{d}t}
 ```
 If we look at {eq}`sepeqn`, we notice that if divide each side by $u = X\,T$:
 ```{math}
 \frac{1}{\lambda\,X}\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big) =
 \frac{1}{T}\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big)
 ```
-then whilst the variable $t$ changes on the RHS, it cannot change the value of the LHS, since that does not depends on t.  Likewise although variable $x$ changes 
-the LHS, the RHS would be constant since it does not depend on $x$, hence we can argue that both sides are equal to some constant, here labelled $s$:
+then notice that whilst the variable $t$ changing could change the functions on the RHS, it cannot change the value of the LHS, since that does not depends on $t$.  Likewise 
+although variable $x$ changes the LHS, the RHS would be constant since it does not depend on $x$, hence we can argue that both sides are equal to some constant, here 
+labelled $s$:
 ```{math}
 \frac{1}{\lambda\,X}\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big) =
 \frac{1}{T}\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big) = s
@@ -603,7 +608,7 @@ We can solve this system to find two homogeneous ODE systems:
 a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x} + (a_3 - s\,\lambda)X &= 0\\
 b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t} + (b_3 - s)T &= 0
 ```
-The size and sign of each of $a_3, \lambda,\, s$ can determine whether there are oscillating or decaying solutions for $X(x)$ and $T(t)$.
+The size and sign of each of $a_3,\, b_3,\, \lambda,\, s$ can determine whether there are oscillating or decaying solutions for $X(x)$ and $T(t)$.
 
 
 ````{admonition} Worked example
@@ -620,12 +625,12 @@ this means that the PDE reduces to:
 ```{math}
 \frac{1}{c^2\,T}\frac{\mathrm{d}^2 T}{\mathrm{d}t^2} = \frac{1}{X}\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} = -k^2
 ```
-where $-k^2$ as a spearation constant means we pick oscillating solutions, such that the ODEs resulting are:
+where $-k^2$ is used as the separation constant, the choice of which means we pick oscillating solutions, such that the ODEs resulting are:
 ```{math}
 \frac{\mathrm{d}^2 X}{\mathrm{d}x^2} + k^2\,X &= 0\\
 \frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + k^2\,c^2\,T &= 0
 ```
-meaning:
+which each have solutions:
 ```{math}
 X(x) &= A_1\,e^{ikx} + A_2\,e^{-ikx}\\
 T(t) &= B_1\,e^{ikct} + B_2\,e^{-ikct}
@@ -636,12 +641,54 @@ u(x,\,t) = \Big(A_1\,e^{ikx} + A_2\,e^{-ikx}\Big)\Big(B_1\,e^{ikct} + B_2\,e^{-i
 ```
 ````
 
-
-## Variation of parameters method
-
-It uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to 
-construct the full solution,  it assumes a solution of the form 
+````{admonition} Practice question
+:class: seealso, dropdown
+1\. Find solutions to the PDE:
 ```{math}
-y=u(x)y_1(x)+v(x)y_2(x)
+\frac{\partial u}{\partial t} = \lambda \frac{\partial u}{\partial x}
 ```
-where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u(x),\,v(x)$ are to be determined.
+assuming oscillating solutions in $x,\, t$ and where $\lambda$ is some constant.
+
+````
+
+````{admonition} Solution
+:class: seealso, dropdown
+1\. 
+Using the separable ansatz:
+```{math}
+u(x,\,t) = X(x)\,T(t)
+```
+this means that the PDE reduces to:
+```{math}
+\frac{1}{\lambda\,T}\frac{\mathrm{d} T}{\mathrm{d}t} = \frac{1}{X}\frac{\mathrm{d} X}{\mathrm{d}x} = ik
+```
+where $ik$ is used as the separation constant, the choice of which means we pick oscillating solutions, such that the ODEs resulting are:
+```{math}
+\frac{\mathrm{d} X}{\mathrm{d}x} - ik\,X &= 0\\
+\frac{\mathrm{d} T}{\mathrm{d}t} - ik\,\lambda\,T &= 0
+```
+which each have solutions:
+```{math}
+X(x) &= A_1\,e^{i k x} \\
+T(t) &= B_1\,e^{i k \lambda t} 
+```
+and hence $u(x,\,t)$ is given by:
+```{math}
+u(x,\,t) = C_1\,e^{ik(x+\lambda t)}
+```
+Note that we could have picked $-ik$ as a separation constant, giving:
+```{math}
+u(x,\,t) = C_2\,e^{-ik(x+\lambda t)}
+```
+which is also a valid solution.
+````
+
+
+% ## Variation of parameters method
+
+%It uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to 
+%construct the full solution,  it assumes a solution of the form 
+%```{math}
+%y=u(x)y_1(x)+v(x)y_2(x)
+%```
+%where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u(x),\,v(x)$ are to be determined.
