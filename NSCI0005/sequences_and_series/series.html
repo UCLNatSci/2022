@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Sequences and Series &#8212; Mathematics for Natural Sciences A</title>
+    <title>5. Sequences and Series &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Convergence of Series" href="convergence.html" />
-    <link rel="prev" title="2. Limits of Functions and Sequences" href="limits.html" />
+    <link rel="next" title="6. Convergence of Series" href="convergence.html" />
+    <link rel="prev" title="4. Limits of Functions and Sequences" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,68 +100,78 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   1. Complex Numbers
+   3. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="limits.html">
-   2. Limits of Functions and Sequences
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Sequences and Series
+   5. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="convergence.html">
-   4. Convergence of Series
+   6. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/matrices.html">
-   5. Matrices
+   7. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
-   6. Vectors and Vector Algebra
+   8. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   7. Differentiation
+   9. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   8. Integration
+   10. Integration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/partialdifferentiation.html">
-   9. Multivariable Calculus
+   11. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/Intro_ODEs.html">
-   10. Ordinary Differential Equations
+   12. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   11. First Order ODEs
+   13. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   12. Second Order ODEs
+   14. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   13. ODEs with Python
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -273,87 +283,87 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sequences">
-   3.1. Sequences
+   5.1. Sequences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recurrence-relationships">
-     3.1.1. Recurrence relationships
+     5.1.1. Recurrence relationships
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#series">
-   3.2. Series
+   5.2. Series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summations">
-     3.2.1. Summations
+     5.2.1. Summations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
-   3.3. Arithmetic and geometric progressions
+   5.3. Arithmetic and geometric progressions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#arithmetic-progression">
-     3.3.1. Arithmetic progression
+     5.3.1. Arithmetic progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progressions">
-       3.3.1.1. Solving the series of arithmetic progressions
+       5.3.1.1. Solving the series of arithmetic progressions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometric-progression">
-     3.3.2. Geometric progression
+     5.3.2. Geometric progression
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
-     3.3.3. Solving the series of geometric progessions
+     5.3.3. Solving the series of geometric progessions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#partial-fractions">
-   3.4. Partial fractions
+   5.4. Partial fractions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   3.5. Method of differences
+   5.5. Method of differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#writing-out-the-series-method">
-     3.5.1. Writing out the series method
+     5.5.1. Writing out the series method
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
-     3.5.2. Rewriting the summation index method
+     5.5.2. Rewriting the summation index method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
-   3.6. Taylor and Maclaurin series
+   5.6. Taylor and Maclaurin series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#composite-function-expansion">
-     3.6.1. Composite function expansion
+     5.6.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -380,87 +390,87 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sequences">
-   3.1. Sequences
+   5.1. Sequences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recurrence-relationships">
-     3.1.1. Recurrence relationships
+     5.1.1. Recurrence relationships
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#series">
-   3.2. Series
+   5.2. Series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summations">
-     3.2.1. Summations
+     5.2.1. Summations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
-   3.3. Arithmetic and geometric progressions
+   5.3. Arithmetic and geometric progressions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#arithmetic-progression">
-     3.3.1. Arithmetic progression
+     5.3.1. Arithmetic progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progressions">
-       3.3.1.1. Solving the series of arithmetic progressions
+       5.3.1.1. Solving the series of arithmetic progressions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometric-progression">
-     3.3.2. Geometric progression
+     5.3.2. Geometric progression
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
-     3.3.3. Solving the series of geometric progessions
+     5.3.3. Solving the series of geometric progessions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#partial-fractions">
-   3.4. Partial fractions
+   5.4. Partial fractions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   3.5. Method of differences
+   5.5. Method of differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#writing-out-the-series-method">
-     3.5.1. Writing out the series method
+     5.5.1. Writing out the series method
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index-method">
-     3.5.2. Rewriting the summation index method
+     5.5.2. Rewriting the summation index method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-and-maclaurin-series">
-   3.6. Taylor and Maclaurin series
+   5.6. Taylor and Maclaurin series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#composite-function-expansion">
-     3.6.1. Composite function expansion
+     5.6.1. Composite function expansion
     </a>
    </li>
   </ul>
@@ -475,14 +485,14 @@
               <div>
                 
   <div class="section" id="sequences-and-series">
-<h1><span class="section-number">3. </span>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sequences">
-<h2><span class="section-number">3.1. </span>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Definition</p>
 <p>A <strong>sequence</strong> is a set of terms where order matters, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-sequencedef">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-sequencedef" title="Permalink to this equation">¶</a></span>\[    u_1, u_2, \dots, u_n\]</div>
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-sequencedef" title="Permalink to this equation">¶</a></span>\[    u_1, u_2, \dots, u_n\]</div>
 <p>Here, the size of the sequence (the number of terms) is <span class="math notranslate nohighlight">\(n\)</span>.
 The <span class="math notranslate nohighlight">\(i\)</span>-th term in the sequence may be denoted by <span class="math notranslate nohighlight">\(u_i\)</span> where <span class="math notranslate nohighlight">\(i = 1, 2, \dots, n\)</span>.</p>
 <p>The labels <span class="math notranslate nohighlight">\(u\)</span>, and <span class="math notranslate nohighlight">\(i\)</span> are arbitrary, and we could just as well use other letters to represent them.
@@ -496,7 +506,7 @@ provides a firm grounding for this endeavour.</p>
 \[u_i = 2 + 3 (i-2)\]</div>
 <p>Notice that the size of the terms in this sequence grows without bound as the number of terms is increased.</p>
 <div class="section" id="recurrence-relationships">
-<h3><span class="section-number">3.1.1. </span>Recurrence relationships<a class="headerlink" href="#recurrence-relationships" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>Recurrence relationships<a class="headerlink" href="#recurrence-relationships" title="Permalink to this headline">¶</a></h3>
 <p>It is sometimes possible to express a sequence as a formula that relates the <span class="math notranslate nohighlight">\(n\)</span>th term of the sequence as some combination of the previous terms. This is known as a
 recurrence relation.</p>
 <div class="note admonition">
@@ -509,8 +519,8 @@ recurrence relation.</p>
 e.g. <span class="math notranslate nohighlight">\(0+1=\mathbf{1}\)</span>, <span class="math notranslate nohighlight">\(1+1=\mathbf{2}\)</span>, <span class="math notranslate nohighlight">\(1+2=\mathbf{3}\)</span>, <span class="math notranslate nohighlight">\(2+3=\mathbf{5}\)</span>, <span class="math notranslate nohighlight">\(3+5=\mathbf{8}\)</span>, etc.</p>
 <p>The sequence can be expressed with the recurrence relation</p>
 <div class="math notranslate nohighlight" id="equation-recreldef">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-recreldef" title="Permalink to this equation">¶</a></span>\[u_i=u_{i-1}+u_{i-2}\]</div>
-<p>The recurrence relation <a class="reference internal" href="#equation-recreldef">(3.2)</a> specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-recreldef" title="Permalink to this equation">¶</a></span>\[u_i=u_{i-1}+u_{i-2}\]</div>
+<p>The recurrence relation <a class="reference internal" href="#equation-recreldef">(5.2)</a> specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
 It is because of this formula that it is necessary to provide the first two terms of the sequence, <span class="math notranslate nohighlight">\(u_1=0\)</span> and <span class="math notranslate nohighlight">\(u_2=1\)</span>,
 to find the rest of the sequence.</p>
 <div class="tip admonition">
@@ -574,19 +584,19 @@ starting terms are different (e.g. <span class="math notranslate nohighlight">\(
 <p>Recurrence relations, although simple, can produce surprisingly complicated behaviours.
 For further reading you may like to study the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_map">logistic map</a>:</p>
 <div class="math notranslate nohighlight" id="equation-logisticmap">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-logisticmap" title="Permalink to this equation">¶</a></span>\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-logisticmap" title="Permalink to this equation">¶</a></span>\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is a constant.
 This equation (which models amongst other things animal population growth) opened up the field of chaos theory.</p>
 </div>
 </div>
 <div class="section" id="series">
-<h2><span class="section-number">3.2. </span>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
 <p>Series play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
 <div class="note admonition">
 <p class="admonition-title">Definition</p>
 <p>A <strong>series</strong> is the sum of a sequence of terms, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-seriesdef">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
 <p>where <span class="math notranslate nohighlight">\(m \le n\)</span>, and usually <span class="math notranslate nohighlight">\(m=1\)</span>.</p>
 </div>
 <p>In short, a series is simply the sum of a sequence.
@@ -626,7 +636,7 @@ We can replace the upper value <span class="math notranslate nohighlight">\(n\)<
 </div>
 </div>
 <div class="section" id="summations">
-<h3><span class="section-number">3.2.1. </span>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h3>
 <p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and denotes a summation.</p>
 <p>We would read <span class="math notranslate nohighlight">\(\sum_{i=1}^n u_i\)</span> as “the sum of <span class="math notranslate nohighlight">\(u_i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=n\)</span>”.</p>
 <p>For example</p>
@@ -638,7 +648,7 @@ We can replace the upper value <span class="math notranslate nohighlight">\(n\)<
 <p>is the sum of <span class="math notranslate nohighlight">\(2 i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span></p>
 <p>From this example it should be clear that, in general:</p>
 <div class="math notranslate nohighlight" id="equation-summationrule">
-<span class="eqno">(3.5)<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant.</p>
 <div class="warning admonition">
 <p class="admonition-title">Warning!</p>
@@ -672,17 +682,17 @@ We can replace the upper value <span class="math notranslate nohighlight">\(n\)<
 </div>
 </div>
 <div class="section" id="arithmetic-and-geometric-progressions">
-<h2><span class="section-number">3.3. </span>Arithmetic and geometric progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Arithmetic and geometric progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
 <p>We now introduce the arithmetic progression (or the arithmetic sequence) and the geometric progression (or geometric sequence).
 These sequences have the nice property that their series can be found straightforwardly.</p>
 <div class="section" id="arithmetic-progression">
-<h3><span class="section-number">3.3.1. </span>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which all have a “common
 difference” <span class="math notranslate nohighlight">\(d\)</span>, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-apdef">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
 </div>
 <p>An example of an arithmetic progression is the sequence <span class="math notranslate nohighlight">\(3,5,7,9,11,13\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=3\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span> and the
@@ -690,7 +700,7 @@ number of terms is <span class="math notranslate nohighlight">\(n=6\)</span>.
 An infinite arithmetic progression is given by the case where <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
 <p>The <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression can be expressed as the following recurrence relation:</p>
 <div class="math notranslate nohighlight" id="equation-aprrdef">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Python code for arithmetic progression</p>
 <p>You can play around with the behaviour of different arithmetic progressions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>:</p>
@@ -725,11 +735,11 @@ An infinite arithmetic progression is given by the case where <span class="math 
 </div>
 </div>
 <div class="section" id="solving-the-series-of-arithmetic-progressions">
-<h4><span class="section-number">3.3.1.1. </span>Solving the series of arithmetic progressions<a class="headerlink" href="#solving-the-series-of-arithmetic-progressions" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.1.1. </span>Solving the series of arithmetic progressions<a class="headerlink" href="#solving-the-series-of-arithmetic-progressions" title="Permalink to this headline">¶</a></h4>
 <p>Series of arithmetic progressions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression with recurrence relation <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-seriessol">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
 <p>where <span class="math notranslate nohighlight">\(L = a + (n-1) d\)</span> is the last term in the series.</p>
 <p>As <span class="math notranslate nohighlight">\(n\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>, the arithmetic progession approaches <span class="math notranslate nohighlight">\(\infty\)</span> if <span class="math notranslate nohighlight">\(d&gt;0\)</span> and approaches <span class="math notranslate nohighlight">\(-\infty\)</span> if
 <span class="math notranslate nohighlight">\(d&lt;0\)</span>.
@@ -826,13 +836,13 @@ that Gauss (a famous mathematician) used a similar approach as a schoolboy back 
 </div>
 </div>
 <div class="section" id="geometric-progression">
-<h3><span class="section-number">3.3.2. </span>Geometric progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.2. </span>Geometric progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
 <p class="admonition-title">Definition</p>
 <p>A geometric progression (otherwise known as an geometric sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which have “common ratio”
 <span class="math notranslate nohighlight">\(r\)</span>, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-gpdef">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
 </div>
 <p>Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the geometric progression is
@@ -876,11 +886,11 @@ the number of terms is <span class="math notranslate nohighlight">\(n=5\)</span>
 </div>
 </div>
 <div class="section" id="solving-the-series-of-geometric-progessions">
-<h3><span class="section-number">3.3.3. </span>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.3. </span>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h3>
 <p>Like arithmetic progessions, the series of geometric progressions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of a geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-gpseriessol">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Python code for the series of the geometric progression</p>
 <p>We can use some python code to examine the series of a geometric progression, start at <span class="math notranslate nohighlight">\(a=24\)</span> and <span class="math notranslate nohighlight">\(r = -0.5\)</span>:</p>
@@ -1006,7 +1016,7 @@ same is also true if we extend this range out to positive and negative 1, i.e. f
 </div>
 </div>
 <div class="section" id="partial-fractions">
-<h2><span class="section-number">3.4. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h2>
 <p>Consider the problem of adding different fractions, for example:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{2} + \frac{1}{3} = \frac{?}{??}\]</div>
@@ -1184,11 +1194,11 @@ f(0) = \frac{1}{18} = \frac{1}{2} - \frac{1}{3} - \frac{1}{3^2}\]</div>
 </div>
 </div>
 <div class="section" id="method-of-differences">
-<h2><span class="section-number">3.5. </span>Method of differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Method of differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
 <p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
 to compute the desired result.  This is a handy trick to find the value of partial (finite) sums .</p>
 <div class="section" id="writing-out-the-series-method">
-<h3><span class="section-number">3.5.1. </span>Writing out the series method<a class="headerlink" href="#writing-out-the-series-method" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.1. </span>Writing out the series method<a class="headerlink" href="#writing-out-the-series-method" title="Permalink to this headline">¶</a></h3>
 <p>Lets start with a simple example:</p>
 <div class="math notranslate nohighlight">
 \[S_1 = \sum_{n=1}^5 \left( \frac{1}{n} - \frac{1}{n+1}\right)\]</div>
@@ -1234,7 +1244,7 @@ Expanding out the first few and last few terms allows us to spot the pattern:</p
 \[S_4 = 1 - \frac{1}{N+1} \Rightarrow S_3 = \lim_{N \rightarrow \infty} \left(1 - \frac{1}{N+1}\right) = 1\]</div>
 </div>
 <div class="section" id="rewriting-the-summation-index-method">
-<h3><span class="section-number">3.5.2. </span>Rewriting the summation index method<a class="headerlink" href="#rewriting-the-summation-index-method" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.2. </span>Rewriting the summation index method<a class="headerlink" href="#rewriting-the-summation-index-method" title="Permalink to this headline">¶</a></h3>
 <p>It is possible to demonstrate the cancellation of terms without writing out the terms in the series.</p>
 <p>In general, rewriting the summation index provides:</p>
 <div class="math notranslate nohighlight">
@@ -1291,7 +1301,7 @@ Let</p>
 </div>
 </div>
 <div class="section" id="taylor-and-maclaurin-series">
-<h2><span class="section-number">3.6. </span>Taylor and Maclaurin series<a class="headerlink" href="#taylor-and-maclaurin-series" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Taylor and Maclaurin series<a class="headerlink" href="#taylor-and-maclaurin-series" title="Permalink to this headline">¶</a></h2>
 <p>Lets consider more complicated functions like <span class="math notranslate nohighlight">\(\sin(x)\)</span> or <span class="math notranslate nohighlight">\(\ln(x)\)</span>, a question that we could ask is can we find simpler representation of these, albeit one that might not
 be valid in all intervals of <span class="math notranslate nohighlight">\(x\)</span> - an expansion around a point for instance.  We call such Polynomial series Taylor series in general.</p>
 <div class="notice admonition">
@@ -1312,7 +1322,7 @@ point <span class="math notranslate nohighlight">\(x=a\)</span>. In this sense, 
 <p>We can see how the Taylor series can be seen as a polynomial approximation of a function by looking at higher and higher order series for <span class="math notranslate nohighlight">\(\sin(x)\)</span>:</p>
 <div class="figure align-default" id="macplot">
 <img alt="../_images/macplot.png" src="../_images/macplot.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">A plot of the curve <span class="math notranslate nohighlight">\(\sin(x)\)</span> together with Maclaurin series expansion retaining successively greater numbers of terms, <span class="math notranslate nohighlight">\(p_1,p_3,p_5,p_7,p_{13},p_{21}\)</span>.</span><a class="headerlink" href="#macplot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">A plot of the curve <span class="math notranslate nohighlight">\(\sin(x)\)</span> together with Maclaurin series expansion retaining successively greater numbers of terms, <span class="math notranslate nohighlight">\(p_1,p_3,p_5,p_7,p_{13},p_{21}\)</span>.</span><a class="headerlink" href="#macplot" title="Permalink to this image">¶</a></p>
 </div>
 <p>As we can see. the degree 21 Maclaurin expansion represents <span class="math notranslate nohighlight">\(\sin(x)\)</span> rather faithfully in the range <span class="math notranslate nohighlight">\([-2\pi,2\pi]\)</span>, but it is less accurate further away
 from the expansion point.</p>
@@ -1396,7 +1406,7 @@ meaning that we retain only the terms up to a specified <span class="math notran
 <p>As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical
 use. If the series converges very slowly, then it may not be much good!</p>
 <div class="section" id="composite-function-expansion">
-<h3><span class="section-number">3.6.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.6.1. </span>Composite function expansion<a class="headerlink" href="#composite-function-expansion" title="Permalink to this headline">¶</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively</p>
 <p>Then:</p>
 <ul class="simple">
@@ -1439,13 +1449,13 @@ use. If the series converges very slowly, then it may not be much good!</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Limits of Functions and Sequences</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Limits of Functions and Sequences</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="convergence.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Convergence of Series</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Convergence of Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

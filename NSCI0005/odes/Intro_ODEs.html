@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Ordinary Differential Equations &#8212; Mathematics for Natural Sciences A</title>
+    <title>12. Ordinary Differential Equations &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. First Order ODEs" href="1st_order_ODEs.html" />
-    <link rel="prev" title="9. Multivariable Calculus" href="../differentiation_and_integration/partialdifferentiation.html" />
+    <link rel="next" title="13. First Order ODEs" href="1st_order_ODEs.html" />
+    <link rel="prev" title="11. Multivariable Calculus" href="../differentiation_and_integration/partialdifferentiation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,68 +100,78 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   1. Complex Numbers
+   3. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
-   2. Limits of Functions and Sequences
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   3. Sequences and Series
+   5. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/convergence.html">
-   4. Convergence of Series
+   6. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/matrices.html">
-   5. Matrices
+   7. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
-   6. Vectors and Vector Algebra
+   8. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   7. Differentiation
+   9. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   8. Integration
+   10. Integration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/partialdifferentiation.html">
-   9. Multivariable Calculus
+   11. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   10. Ordinary Differential Equations
+   12. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1st_order_ODEs.html">
-   11. First Order ODEs
+   13. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2nd_order_ODEs.html">
-   12. Second Order ODEs
+   14. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   13. ODEs with Python
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -253,12 +263,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   10.1. Introduction and terminology
+   12.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initial-and-boundary-conditions">
-   10.2. Initial and boundary conditions
+   12.2. Initial and boundary conditions
   </a>
  </li>
 </ul>
@@ -283,12 +293,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   10.1. Introduction and terminology
+   12.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initial-and-boundary-conditions">
-   10.2. Initial and boundary conditions
+   12.2. Initial and boundary conditions
   </a>
  </li>
 </ul>
@@ -301,9 +311,9 @@
               <div>
                 
   <div class="section" id="ordinary-differential-equations">
-<h1><span class="section-number">10. </span>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">12. </span>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction-and-terminology">
-<h2><span class="section-number">10.1. </span>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.1. </span>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
 <p>Any equation that contains derivatives is called a <em>differential equation</em>. If the equation contains only one single dependent variable then it is
 known as an <strong>ordinary differential equation</strong> (ODE), otherwise it is called a <strong>partial differential equation</strong> (PDE).</p>
 <div class="important admonition">
@@ -332,14 +342,14 @@ degree term, whilst <span class="math notranslate nohighlight">\(\displaystyle \
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  However, the majority of differential equations that we encounter in real world problems are not <em>directly</em> integrable, for
 example the Airy equation is an ODE that appears very commonly in physical sciences, which is given by:</p>
 <div class="math notranslate nohighlight" id="equation-airyode">
-<span class="eqno">(10.1)<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
 <p>We note that the Airy equation is a <em>second order</em> differential equation (because the highest derivative in the equation is a second order derivative) as well a first
-degreeequation.  <a class="reference internal" href="#equation-airyode">(10.1)</a> however, cannot be solved by direct integration, and in fact its relatively innocent appearance hides a wealth of interesting
+degreeequation.  <a class="reference internal" href="#equation-airyode">(12.1)</a> however, cannot be solved by direct integration, and in fact its relatively innocent appearance hides a wealth of interesting
 mathematics.  The strategy for solving differential equations involves classifying different types of problem that we know how to solve, and building up an
 armoury of techniques.</p>
 </div>
 <div class="section" id="initial-and-boundary-conditions">
-<h2><span class="section-number">10.2. </span>Initial and boundary conditions<a class="headerlink" href="#initial-and-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2. </span>Initial and boundary conditions<a class="headerlink" href="#initial-and-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>When we solve a differential equation, we obtain arbitrary (undetermined) constants, this because we are in effect integrating the problem.  If the problem is at first
 order then there will be <strong>one</strong> unknown constant, since the solution to the problem is equivalent to performing a single integration, whilst for a second order
 problem we will obtain <strong>two</strong> unknown constants.  In general, to obtain a fully determined solution to a given problem, we require the number of given
@@ -354,16 +364,16 @@ conditions to match the <em>degree</em> of the problem.</p>
 <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}^2y}{\mathrm{d}t^2}\)</span> measures acceleration (i.e. rate of change of velocity).</p>
 <p>Integrating once with respect to <span class="math notranslate nohighlight">\(t\)</span> gives:</p>
 <div class="math notranslate nohighlight" id="equation-firstintegral">
-<span class="eqno">(10.2)<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is an unknown constant.  Integrating again then gives:</p>
 <div class="math notranslate nohighlight" id="equation-secondintegral">
-<span class="eqno">(10.3)<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
 <p>where we have introduced another unknown constant <span class="math notranslate nohighlight">\(c\)</span>.</p>
 <p>The constants can be uniquely determined by providing conditions.  For example, we might specify initial conditions for the displacement and velocity in the
 manner</p>
 <div class="math notranslate nohighlight">
 \[y(0)=1, \quad y^{\prime}(0)=3\]</div>
-<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">(10.2)</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">(10.3)</a>
+<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">(12.2)</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">(12.3)</a>
 gives <span class="math notranslate nohighlight">\(c=1\)</span>, hence the final result is</p>
 <div class="math notranslate nohighlight">
 \[y = \frac{t^3}{3} + 3t + 1\]</div>
@@ -447,13 +457,13 @@ specified value(s) of the independent variable.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>Multivariable Calculus</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Multivariable Calculus</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="1st_order_ODEs.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>First Order ODEs</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>First Order ODEs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Integration &#8212; Mathematics for Natural Sciences A</title>
+    <title>10. Integration &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Multivariable Calculus" href="partialdifferentiation.html" />
-    <link rel="prev" title="7. Differentiation" href="differentiation.html" />
+    <link rel="next" title="11. Multivariable Calculus" href="partialdifferentiation.html" />
+    <link rel="prev" title="9. Differentiation" href="differentiation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,68 +100,78 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   1. Complex Numbers
+   3. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
-   2. Limits of Functions and Sequences
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   3. Sequences and Series
+   5. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/convergence.html">
-   4. Convergence of Series
+   6. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/matrices.html">
-   5. Matrices
+   7. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
-   6. Vectors and Vector Algebra
+   8. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="differentiation.html">
-   7. Differentiation
+   9. Differentiation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Integration
+   10. Integration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
-   9. Multivariable Calculus
+   11. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/Intro_ODEs.html">
-   10. Ordinary Differential Equations
+   12. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   11. First Order ODEs
+   13. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   12. Second Order ODEs
+   14. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   13. ODEs with Python
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -253,39 +263,39 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introducing-integration">
-   8.1. Introducing Integration
+   10.1. Introducing Integration
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-anti-derivative">
-     8.1.1. The “anti-derivative”
+     10.1.1. The “anti-derivative”
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#area-under-the-curve">
-     8.1.2. Area under the curve
+     10.1.2. Area under the curve
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#signed-and-unsigned-areas">
-     8.1.3. Signed and unsigned areas
+     10.1.3. Signed and unsigned areas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#area-between-two-curves">
-     8.1.4. Area between two curves
+     10.1.4. Area between two curves
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-substitution">
-   8.2. Integration by substitution
+   10.2. Integration by substitution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integral-of-displaystyle-frac-1-x">
-   8.3. Integral of
+   10.3. Integral of
    <span class="math notranslate nohighlight">
     \(\displaystyle \frac{1}{x}\)
    </span>
@@ -293,32 +303,32 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-parts">
-   8.4. Integration by parts
+   10.4. Integration by parts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-partial-fractions">
-   8.5. Integration by partial fractions
+   10.5. Integration by partial fractions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-formula">
-   8.6. Reduction formula
+   10.6. Reduction formula
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mean-value-of-a-function">
-   8.7. Mean value of a function
+   10.7. Mean value of a function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arc-length">
-   8.8. Arc Length
+   10.8. Arc Length
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surfaces-of-revolution">
-   8.9. Surfaces of Revolution
+   10.9. Surfaces of Revolution
   </a>
  </li>
 </ul>
@@ -343,39 +353,39 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introducing-integration">
-   8.1. Introducing Integration
+   10.1. Introducing Integration
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-anti-derivative">
-     8.1.1. The “anti-derivative”
+     10.1.1. The “anti-derivative”
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#area-under-the-curve">
-     8.1.2. Area under the curve
+     10.1.2. Area under the curve
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#signed-and-unsigned-areas">
-     8.1.3. Signed and unsigned areas
+     10.1.3. Signed and unsigned areas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#area-between-two-curves">
-     8.1.4. Area between two curves
+     10.1.4. Area between two curves
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-substitution">
-   8.2. Integration by substitution
+   10.2. Integration by substitution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integral-of-displaystyle-frac-1-x">
-   8.3. Integral of
+   10.3. Integral of
    <span class="math notranslate nohighlight">
     \(\displaystyle \frac{1}{x}\)
    </span>
@@ -383,32 +393,32 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-parts">
-   8.4. Integration by parts
+   10.4. Integration by parts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integration-by-partial-fractions">
-   8.5. Integration by partial fractions
+   10.5. Integration by partial fractions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-formula">
-   8.6. Reduction formula
+   10.6. Reduction formula
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mean-value-of-a-function">
-   8.7. Mean value of a function
+   10.7. Mean value of a function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arc-length">
-   8.8. Arc Length
+   10.8. Arc Length
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surfaces-of-revolution">
-   8.9. Surfaces of Revolution
+   10.9. Surfaces of Revolution
   </a>
  </li>
 </ul>
@@ -421,11 +431,11 @@
               <div>
                 
   <div class="section" id="integration">
-<h1><span class="section-number">8. </span>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10. </span>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introducing-integration">
-<h2><span class="section-number">8.1. </span>Introducing Integration<a class="headerlink" href="#introducing-integration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Introducing Integration<a class="headerlink" href="#introducing-integration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-anti-derivative">
-<h3><span class="section-number">8.1.1. </span>The “anti-derivative”<a class="headerlink" href="#the-anti-derivative" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.1. </span>The “anti-derivative”<a class="headerlink" href="#the-anti-derivative" title="Permalink to this headline">¶</a></h3>
 <p>Consider the function <span class="math notranslate nohighlight">\(\cos(x)\)</span>.  We know that this function can be obtained by differentiating <span class="math notranslate nohighlight">\(\sin(x)\)</span>.  Therefore, we could think of <span class="math notranslate nohighlight">\(\sin(x)\)</span> as the
 “anti-derivative” of <span class="math notranslate nohighlight">\(\cos(x)\)</span>.  After differentiating <span class="math notranslate nohighlight">\(\sin(x)\)</span>, the “anti-derivative” takes us back to where we started.</p>
 <p>Well… nearly.
@@ -466,13 +476,13 @@ is <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2} \ln(x^
 </div>
 </div>
 <div class="section" id="area-under-the-curve">
-<h3><span class="section-number">8.1.2. </span>Area under the curve<a class="headerlink" href="#area-under-the-curve" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.2. </span>Area under the curve<a class="headerlink" href="#area-under-the-curve" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
-<p><a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 8.1</span></a> shows how the area under a curve <span class="math notranslate nohighlight">\(f(x)\)</span> between <span class="math notranslate nohighlight">\(x=a,b\)</span> may be estimated by drawing rectangles of equal width <span class="math notranslate nohighlight">\(\Delta x\)</span>.
+<p><a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 10.1</span></a> shows how the area under a curve <span class="math notranslate nohighlight">\(f(x)\)</span> between <span class="math notranslate nohighlight">\(x=a,b\)</span> may be estimated by drawing rectangles of equal width <span class="math notranslate nohighlight">\(\Delta x\)</span>.
 Formally, we may write that:</p>
 <div class="math notranslate nohighlight" id="equation-areaundercurve">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-areaundercurve" title="Permalink to this equation">¶</a></span>\[\textrm{Area} = \sum_{j=0}^{n-1}f(x_n)\Delta x \textrm{,  where  }x_0=a, x_n=b,  \Delta x = \frac{b-a}{n}\]</div>
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-areaundercurve" title="Permalink to this equation">¶</a></span>\[\textrm{Area} = \sum_{j=0}^{n-1}f(x_n)\Delta x \textrm{,  where  }x_0=a, x_n=b,  \Delta x = \frac{b-a}{n}\]</div>
 <p>The expression simply states that we add up the rectangles with width <span class="math notranslate nohighlight">\(\Delta x\)</span> and height <span class="math notranslate nohighlight">\(f(x_n)\)</span>.
 As <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> the area approximation becomes more accurate.</p>
 <p>We call:</p>
@@ -480,11 +490,11 @@ As <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> t
 \[\lim_{\Delta x \rightarrow 0}\sum_{j=0}^{n-1}f(x_j)\Delta x\]</div>
 <p>the integral of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> and we denote it by:</p>
 <div class="math notranslate nohighlight" id="equation-integral">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-integral" title="Permalink to this equation">¶</a></span>\[ \displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-integral" title="Permalink to this equation">¶</a></span>\[ \displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
 </div>
 <div class="figure align-default" id="areaunderthecurve">
 <img alt="../_images/areaUnderTheCurve.png" src="../_images/areaUnderTheCurve.png" />
-<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Rectangles drawn under the curve <span class="math notranslate nohighlight">\(f(x)\)</span> can be used to approximate the area. The thinner the rectangles, the better the approximation. Integration is the
+<p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Rectangles drawn under the curve <span class="math notranslate nohighlight">\(f(x)\)</span> can be used to approximate the area. The thinner the rectangles, the better the approximation. Integration is the
 equivalent to this approach as the width of the rectangles, <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>.</span><a class="headerlink" href="#areaunderthecurve" title="Permalink to this image">¶</a></p>
 </div>
 <p>It can be proved that integration and anti-differentiation are essentially the same thing. This result is known as the <strong>Fundamental Theorem of Calculus</strong>. In fact, the theorem comes in two parts. The first part, given in the box below, allows the definite integral to be determined by evaluating an anti-derivative at integration limits. The second part (not given here) essentially proves that every continuous function has an anti-derivative, which can be found by integration. For some functions, such as <span class="math notranslate nohighlight">\(e^{-x^2}\)</span>, we might not be able to express the integral in terms of elementary functions, but we know it exists
@@ -522,20 +532,20 @@ equivalent to this approach as the width of the rectangles, <span class="math no
 </table>
 </div>
 <div class="section" id="signed-and-unsigned-areas">
-<h3><span class="section-number">8.1.3. </span>Signed and unsigned areas<a class="headerlink" href="#signed-and-unsigned-areas" title="Permalink to this headline">¶</a></h3>
-<p>Note that the heights of the rectangles in <a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 8.1</span></a> are given by <span class="math notranslate nohighlight">\(f(x)\)</span>, and so if <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> then the result will be negative. In many examples, positive and negative areas cancel. For instance,</p>
+<h3><span class="section-number">10.1.3. </span>Signed and unsigned areas<a class="headerlink" href="#signed-and-unsigned-areas" title="Permalink to this headline">¶</a></h3>
+<p>Note that the heights of the rectangles in <a class="reference internal" href="#areaunderthecurve"><span class="std std-numref">Fig. 10.1</span></a> are given by <span class="math notranslate nohighlight">\(f(x)\)</span>, and so if <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> then the result will be negative. In many examples, positive and negative areas cancel. For instance,</p>
 <div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-0">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-differentiation-and-integration-integration-0" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}\sin(x)\mathrm{d}x = 0 \textrm{,  since } \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x = 2 \textrm{ and } \displaystyle \int_{\pi}^{2\pi}\sin(x)\mathrm{d}x = -2\]</div>
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-differentiation-and-integration-integration-0" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}\sin(x)\mathrm{d}x = 0 \textrm{,  since } \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x = 2 \textrm{ and } \displaystyle \int_{\pi}^{2\pi}\sin(x)\mathrm{d}x = -2\]</div>
 <p>If you want the total (unsigned) area between the curve and the axis, then you can work with the modulus of the function,</p>
 <div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-1">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-differentiation-and-integration-integration-1" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_a^b |f(x)|\mathrm{d}x\]</div>
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-differentiation-and-integration-integration-1" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_a^b |f(x)|\mathrm{d}x\]</div>
 <p>The easiest way to do this is to split up the region of integration into areas where <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> and areas where <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span>. For example,</p>
 <div class="math notranslate nohighlight" id="equation-differentiation-and-integration-integration-2">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-differentiation-and-integration-integration-2" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}|\sin(x)|\mathrm{d}x = \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x+ \displaystyle \int_{\pi}^{2\pi}-\sin(x)\mathrm{d}x = 2+2 =4\]</div>
-<p>The results are illustrated in <a class="reference internal" href="#sinxplot"><span class="std std-numref">Fig. 8.2</span></a>:</p>
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-differentiation-and-integration-integration-2" title="Permalink to this equation">¶</a></span>\[\displaystyle \int_0^{2\pi}|\sin(x)|\mathrm{d}x = \displaystyle \int_0^{\pi}\sin(x)\mathrm{d}x+ \displaystyle \int_{\pi}^{2\pi}-\sin(x)\mathrm{d}x = 2+2 =4\]</div>
+<p>The results are illustrated in <a class="reference internal" href="#sinxplot"><span class="std std-numref">Fig. 10.2</span></a>:</p>
 <div class="figure align-default" id="sinxplot">
 <img alt="../_images/my_humps.png" src="../_images/my_humps.png" />
-<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">The plot on the left shows <span class="math notranslate nohighlight">\(\sin(x)\)</span> for <span class="math notranslate nohighlight">\(x\in[0,2\pi]\)</span>. The black and red signed areas (2,-2) cancel when the integral is performed.
+<p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">The plot on the left shows <span class="math notranslate nohighlight">\(\sin(x)\)</span> for <span class="math notranslate nohighlight">\(x\in[0,2\pi]\)</span>. The black and red signed areas (2,-2) cancel when the integral is performed.
 The plot on the right shows <span class="math notranslate nohighlight">\(|\sin(x)|\)</span> for <span class="math notranslate nohighlight">\(x\in[0,2\pi]\)</span>. The black signed are both positive and so the integral is 2+2=4.</span><a class="headerlink" href="#sinxplot" title="Permalink to this image">¶</a></p>
 </div>
 <p>Similarly, if we perform the integration along the x-axis in the negative direction, then the quantities <span class="math notranslate nohighlight">\(\Delta x\)</span> are negative, and so we end up with a negative
@@ -543,10 +553,10 @@ signed area when <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</spa
 <p><strong>FTC1</strong> also confirms that <span class="math notranslate nohighlight">\(\displaystyle \int_b^a f(x) \textrm{d}x = -\displaystyle \int_a^b f(x) \textrm{d}x\)</span>.</p>
 </div>
 <div class="section" id="area-between-two-curves">
-<h3><span class="section-number">8.1.4. </span>Area between two curves<a class="headerlink" href="#area-between-two-curves" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.4. </span>Area between two curves<a class="headerlink" href="#area-between-two-curves" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default" id="betweentwocurves">
 <img alt="../_images/between_curves.png" src="../_images/between_curves.png" />
-<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Where <span class="math notranslate nohighlight">\(f(x) &gt;= g(x)\)</span> the integral <span class="math notranslate nohighlight">\(\displaystyle \int (f(x)-g(x)) \textrm{d}x\)</span> gives the area between the two curves.</span><a class="headerlink" href="#betweentwocurves" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Where <span class="math notranslate nohighlight">\(f(x) &gt;= g(x)\)</span> the integral <span class="math notranslate nohighlight">\(\displaystyle \int (f(x)-g(x)) \textrm{d}x\)</span> gives the area between the two curves.</span><a class="headerlink" href="#betweentwocurves" title="Permalink to this image">¶</a></p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice Questions</p>
@@ -575,7 +585,7 @@ a. Find the tangent to the curve <span class="math notranslate nohighlight">\(y=
 </div>
 </div>
 <div class="section" id="integration-by-substitution">
-<h2><span class="section-number">8.2. </span>Integration by substitution<a class="headerlink" href="#integration-by-substitution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>Integration by substitution<a class="headerlink" href="#integration-by-substitution" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>For an indefinite integral:</p>
@@ -615,12 +625,12 @@ solved by inspection).</p>
 </div>
 </div>
 <div class="section" id="integral-of-displaystyle-frac-1-x">
-<h2><span class="section-number">8.3. </span>Integral of <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span><a class="headerlink" href="#integral-of-displaystyle-frac-1-x" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.3. </span>Integral of <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span><a class="headerlink" href="#integral-of-displaystyle-frac-1-x" title="Permalink to this headline">¶</a></h2>
 <p>The function <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span> falls into a special category, because it cannot be solved using the polynomial antiderivative
-<span class="math notranslate nohighlight">\(\int x^n = \frac{x^{n+1}}{n+1}\)</span>, consider the plot <a class="reference internal" href="#oneoverx"><span class="std std-numref">Fig. 8.4</span></a>:</p>
+<span class="math notranslate nohighlight">\(\int x^n = \frac{x^{n+1}}{n+1}\)</span>, consider the plot <a class="reference internal" href="#oneoverx"><span class="std std-numref">Fig. 10.4</span></a>:</p>
 <div class="figure align-default" id="oneoverx">
 <img alt="../_images/oneOverx.png" src="../_images/oneOverx.png" />
-<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
 </div>
 <p>Hence we see that</p>
 <div class="math notranslate nohighlight">
@@ -631,7 +641,7 @@ solved by inspection).</p>
 \[\lim_{\epsilon\rightarrow 0^{+}}\left( \int_{-a}^{-\epsilon}\frac{1}{x}\mathrm{d}x+ \int_{\epsilon}^a\frac{1}{x}\mathrm{d}x\right)=0\]</div>
 </div>
 <div class="section" id="integration-by-parts">
-<h2><span class="section-number">8.4. </span>Integration by parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4. </span>Integration by parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>For an indefinite integral:</p>
@@ -721,10 +731,10 @@ u' = \frac{1}{x},\quad &amp;v = x^1\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="integration-by-partial-fractions">
-<h2><span class="section-number">8.5. </span>Integration by partial fractions<a class="headerlink" href="#integration-by-partial-fractions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.5. </span>Integration by partial fractions<a class="headerlink" href="#integration-by-partial-fractions" title="Permalink to this headline">¶</a></h2>
 <p>Composing fractions means putting everything together, such as:</p>
 <div class="math notranslate nohighlight" id="equation-compfrac">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-compfrac" title="Permalink to this equation">¶</a></span>\[\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}\]</div>
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-compfrac" title="Permalink to this equation">¶</a></span>\[\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}\]</div>
 <p>Decomposition is the reverse process, <em>i.e.</em> taking the fraction apart.  This very useful for integration, since the resulting partial fractions are much
 easier to integrate to logarithmic type terms.</p>
 <div class="seealso admonition">
@@ -749,7 +759,7 @@ easier to integrate to logarithmic type terms.</p>
 </div>
 </div>
 <div class="section" id="reduction-formula">
-<h2><span class="section-number">8.6. </span>Reduction formula<a class="headerlink" href="#reduction-formula" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.6. </span>Reduction formula<a class="headerlink" href="#reduction-formula" title="Permalink to this headline">¶</a></h2>
 <p>Reduction formulae set up a recurrence relation between different integrands:</p>
 <div class="math notranslate nohighlight">
 \[I_{n} = f(n,x) + I_{n-a} \]</div>
@@ -895,16 +905,16 @@ I_3 &amp;= \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/
 </div>
 </div>
 <div class="section" id="mean-value-of-a-function">
-<h2><span class="section-number">8.7. </span>Mean value of a function<a class="headerlink" href="#mean-value-of-a-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.7. </span>Mean value of a function<a class="headerlink" href="#mean-value-of-a-function" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="mean">
 <img alt="../_images/mean.png" src="../_images/mean.png" />
-<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">The average of a discrete function is given by adding up the values and dividing by the number of points. We extend this concept to continuous functions in
+<p class="caption"><span class="caption-number">Fig. 10.5 </span><span class="caption-text">The average of a discrete function is given by adding up the values and dividing by the number of points. We extend this concept to continuous functions in
 the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span>.</span><a class="headerlink" href="#mean" title="Permalink to this image">¶</a></p>
 </div>
-<p>As shown in <a class="reference internal" href="#mean"><span class="std std-numref">Fig. 8.5</span></a>, for any function <span class="math notranslate nohighlight">\(f(x)\)</span> we can obtain the average output <span class="math notranslate nohighlight">\(\bar{f(x)}\)</span> by adding up a series of outputs and dividing by the number of
+<p>As shown in <a class="reference internal" href="#mean"><span class="std std-numref">Fig. 10.5</span></a>, for any function <span class="math notranslate nohighlight">\(f(x)\)</span> we can obtain the average output <span class="math notranslate nohighlight">\(\bar{f(x)}\)</span> by adding up a series of outputs and dividing by the number of
 datapoints used. In this case, the spacing between datapoints is <span class="math notranslate nohighlight">\(\Delta x\)</span>. By taking the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we can obtain:</p>
 <div class="math notranslate nohighlight" id="equation-functionmean">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-functionmean" title="Permalink to this equation">¶</a></span>\[\bar{f} = \frac{1}{n}\displaystyle \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j) \rightarrow \frac{1}{b-a}\displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
+<span class="eqno">(10.7)<a class="headerlink" href="#equation-functionmean" title="Permalink to this equation">¶</a></span>\[\bar{f} = \frac{1}{n}\displaystyle \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j) \rightarrow \frac{1}{b-a}\displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
 <div class="seealso admonition">
 <p class="admonition-title">Example</p>
 <p>Calculate the mean value of <span class="math notranslate nohighlight">\(\cos ^3(\theta)\)</span> on the interval <span class="math notranslate nohighlight">\(\displaystyle \left[-\frac{\pi}{3}, \frac{\pi}{3}\right]\)</span> by integration.</p>
@@ -915,16 +925,16 @@ datapoints used. In this case, the spacing between datapoints is <span class="ma
 </div>
 </div>
 <div class="section" id="arc-length">
-<h2><span class="section-number">8.8. </span>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.8. </span>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h2>
 <p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve:</p>
 <div class="figure align-default" id="functionarea">
 <img alt="../_images/FunctionArea.png" src="../_images/FunctionArea.png" />
-<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\displaystyle \int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.6 </span><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\displaystyle \int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">¶</a></p>
 </div>
 <p>Another question that we could ask however is what is the length of the path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the range <span class="math notranslate nohighlight">\([a,\,b]\)</span>:</p>
 <div class="figure align-default" id="functionpathlength">
 <img alt="../_images/FunctionPathLength.png" src="../_images/FunctionPathLength.png" />
-<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.7 </span><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">¶</a></p>
 </div>
 <p>To find an expression for this length <span class="math notranslate nohighlight">\(S\)</span>, we can break up the path into infinitesimal segments and then integrate these over the whole function.  We can see this
 process breaking down the change in arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> by Pythagoras graphically as:</p>
@@ -932,7 +942,7 @@ process breaking down the change in arc length <span class="math notranslate noh
 \[(\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
 <div class="figure align-default" id="arclength">
 <img alt="../_images/ArcLength2.png" src="../_images/ArcLength2.png" />
-<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text"><strong>Left Pane:</strong> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> components <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>.  The distance <span class="math notranslate nohighlight">\(\Delta s\)</span> moved along a curve, corresponding
+<p class="caption"><span class="caption-number">Fig. 10.8 </span><span class="caption-text"><strong>Left Pane:</strong> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> components <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>.  The distance <span class="math notranslate nohighlight">\(\Delta s\)</span> moved along a curve, corresponding
 to small changes <span class="math notranslate nohighlight">\(\Delta x \Delta y\)</span> can be calculated by Pythagoras’ formula.</span><a class="headerlink" href="#arclength" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <p><strong>Right Pane:</strong> Effect of taking the limit of smaller <span class="math notranslate nohighlight">\(\Delta x\)</span> in finding the path length.  By decreasing the difference <span class="math notranslate nohighlight">\(\Delta x\)</span> between the joined up points, we
@@ -999,11 +1009,11 @@ Find the length of the arc of the curve <span class="math notranslate nohighligh
 </div>
 </div>
 <div class="section" id="surfaces-of-revolution">
-<h2><span class="section-number">8.9. </span>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.9. </span>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">¶</a></h2>
 <p>Lets now go further, what happens if we take a function and rotate it around an axis:</p>
 <div class="figure align-default" id="areavolumerevolution">
 <img alt="../_images/AreaVolumeRevolution.png" src="../_images/AreaVolumeRevolution.png" />
-<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
+<p class="caption"><span class="caption-number">Fig. 10.9 </span><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
 <b>Right Pane:</b> Breaking down the volume into discrete slices, each of width <span class="math notranslate nohighlight">\(\mathrm{d} x\)</span>.</span><a class="headerlink" href="#areavolumerevolution" title="Permalink to this image">¶</a></p>
 </div>
 <p>To find the volume of such a rotated solid, we need to think about the cross sectional area along the range, which will be <span class="math notranslate nohighlight">\(\pi \,y^2\)</span> since the
@@ -1028,7 +1038,7 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 \[A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y\]</div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
-<p>Lets find the volume of a cone depicted in <a class="reference internal" href="#cone1"><span class="std std-numref">Fig. 8.10</span></a>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<p>Lets find the volume of a cone depicted in <a class="reference internal" href="#cone1"><span class="std std-numref">Fig. 10.10</span></a>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}V_x = \int_0^h \pi\,\left(\frac{R x}{h}\right)^2\,\mathrm{d}x = \frac{R^2 \,\pi}{h^2}\Big[ \frac{1}{3}x^3\Big]_0^h = \frac{1}{3}\pi \,R^2\,h\\\end{split}\]</div>
 <p>which matches the expression we expect and explains where this factor of <span class="math notranslate nohighlight">\(1/3\)</span> comes from!</p>
@@ -1040,7 +1050,7 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 <p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
 <div class="figure align-default" id="cone1">
 <img alt="../_images/cone.png" src="../_images/cone.png" />
-<p class="caption"><span class="caption-number">Fig. 8.10 </span><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.10 </span><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <p>Likewise if we have parametrised expressions <span class="math notranslate nohighlight">\(x = x(t),\, y = y(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [t_1,\, t_2]\)</span> then these expressions become:</p>
@@ -1081,13 +1091,13 @@ A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Differentiation</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Differentiation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="partialdifferentiation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Multivariable Calculus</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Multivariable Calculus</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

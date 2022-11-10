@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12. Second Order ODEs &#8212; Mathematics for Natural Sciences A</title>
+    <title>14. Second Order ODEs &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. ODEs with Python" href="../python/ode_solver_demo.html" />
-    <link rel="prev" title="11. First Order ODEs" href="1st_order_ODEs.html" />
+    <link rel="next" title="15. ODEs with Python" href="../python/ode_solver_demo.html" />
+    <link rel="prev" title="13. First Order ODEs" href="1st_order_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,68 +100,78 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   1. Complex Numbers
+   3. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
-   2. Limits of Functions and Sequences
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   3. Sequences and Series
+   5. Sequences and Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/convergence.html">
-   4. Convergence of Series
+   6. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/matrices.html">
-   5. Matrices
+   7. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
-   6. Vectors and Vector Algebra
+   8. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   7. Differentiation
+   9. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   8. Integration
+   10. Integration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../differentiation_and_integration/partialdifferentiation.html">
-   9. Multivariable Calculus
+   11. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Intro_ODEs.html">
-   10. Ordinary Differential Equations
+   12. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1st_order_ODEs.html">
-   11. First Order ODEs
+   13. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   12. Second Order ODEs
+   14. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   13. ODEs with Python
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -253,27 +263,27 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homogeneous-problems">
-   12.1. Homogeneous problems
+   14.1. Homogeneous problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-trial-solution">
-     12.1.1. The trial solution
+     14.1.1. The trial solution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#principle-of-linear-superposition">
-     12.1.2. Principle of linear superposition
+     14.1.2. Principle of linear superposition
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applying-conditions">
-     12.1.3. Applying conditions
+     14.1.3. Applying conditions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-conjugate-roots-delta-0">
-     12.1.4. Complex conjugate roots
+     14.1.4. Complex conjugate roots
      <span class="math notranslate nohighlight">
       \(\Delta &lt; 0\)
      </span>
@@ -281,7 +291,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#repeated-roots-delta-0">
-     12.1.5. Repeated roots
+     14.1.5. Repeated roots
      <span class="math notranslate nohighlight">
       \(\Delta = 0\)
      </span>
@@ -289,36 +299,36 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#existence-of-a-particular-solution">
-     12.1.6. Existence of a particular solution:
+     14.1.6. Existence of a particular solution:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inhomogeneous-problems">
-   12.2. Inhomogeneous problems
+   14.2. Inhomogeneous problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-method-of-undetermined-coefficients">
-     12.2.1. The method of undetermined coefficients
+     14.2.1. The method of undetermined coefficients
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#constructing-the-full-solution">
-     12.2.2. Constructing the full solution
+     14.2.2. Constructing the full solution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-note-about-the-limitations-of-undeterminded-coefficients">
-     12.2.3. A note about the limitations of undeterminded coefficients
+     14.2.3. A note about the limitations of undeterminded coefficients
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solving-separable-pdes">
-   12.3. Solving separable PDEs
+   14.3. Solving separable PDEs
   </a>
  </li>
 </ul>
@@ -343,27 +353,27 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homogeneous-problems">
-   12.1. Homogeneous problems
+   14.1. Homogeneous problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-trial-solution">
-     12.1.1. The trial solution
+     14.1.1. The trial solution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#principle-of-linear-superposition">
-     12.1.2. Principle of linear superposition
+     14.1.2. Principle of linear superposition
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applying-conditions">
-     12.1.3. Applying conditions
+     14.1.3. Applying conditions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-conjugate-roots-delta-0">
-     12.1.4. Complex conjugate roots
+     14.1.4. Complex conjugate roots
      <span class="math notranslate nohighlight">
       \(\Delta &lt; 0\)
      </span>
@@ -371,7 +381,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#repeated-roots-delta-0">
-     12.1.5. Repeated roots
+     14.1.5. Repeated roots
      <span class="math notranslate nohighlight">
       \(\Delta = 0\)
      </span>
@@ -379,36 +389,36 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#existence-of-a-particular-solution">
-     12.1.6. Existence of a particular solution:
+     14.1.6. Existence of a particular solution:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inhomogeneous-problems">
-   12.2. Inhomogeneous problems
+   14.2. Inhomogeneous problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-method-of-undetermined-coefficients">
-     12.2.1. The method of undetermined coefficients
+     14.2.1. The method of undetermined coefficients
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#constructing-the-full-solution">
-     12.2.2. Constructing the full solution
+     14.2.2. Constructing the full solution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-note-about-the-limitations-of-undeterminded-coefficients">
-     12.2.3. A note about the limitations of undeterminded coefficients
+     14.2.3. A note about the limitations of undeterminded coefficients
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solving-separable-pdes">
-   12.3. Solving separable PDEs
+   14.3. Solving separable PDEs
   </a>
  </li>
 </ul>
@@ -421,12 +431,12 @@
               <div>
                 
   <div class="section" id="second-order-odes">
-<h1><span class="section-number">12. </span>Second Order ODEs<a class="headerlink" href="#second-order-odes" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">14. </span>Second Order ODEs<a class="headerlink" href="#second-order-odes" title="Permalink to this headline">¶</a></h1>
 <div class="notice admonition">
 <p class="admonition-title">Definition</p>
 <p>In general a linear second order differential equation is of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2general">
-<span class="eqno">(12.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">¶</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x),\]</div>
+<span class="eqno">(14.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">¶</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x),\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,\,b,\,c\)</span> are arbitrary constants.</p>
 <p>We can also conveniently write these problems using a linear operator:</p>
 <div class="math notranslate nohighlight">
@@ -438,19 +448,19 @@
 </ul>
 </div>
 <div class="section" id="homogeneous-problems">
-<h2><span class="section-number">12.1. </span>Homogeneous problems<a class="headerlink" href="#homogeneous-problems" title="Permalink to this headline">¶</a></h2>
-<p>Firstly, we consider the case of <a class="reference internal" href="#equation-ode2general">(12.1)</a> when <span class="math notranslate nohighlight">\(f(x)=0\)</span>, where we obtain the homogeneous problem:</p>
+<h2><span class="section-number">14.1. </span>Homogeneous problems<a class="headerlink" href="#homogeneous-problems" title="Permalink to this headline">¶</a></h2>
+<p>Firstly, we consider the case of <a class="reference internal" href="#equation-ode2general">(14.1)</a> when <span class="math notranslate nohighlight">\(f(x)=0\)</span>, where we obtain the homogeneous problem:</p>
 <div class="math notranslate nohighlight" id="equation-ode2hom">
-<span class="eqno">(12.2)<a class="headerlink" href="#equation-ode2hom" title="Permalink to this equation">¶</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=0\]</div>
+<span class="eqno">(14.2)<a class="headerlink" href="#equation-ode2hom" title="Permalink to this equation">¶</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=0\]</div>
 <div class="section" id="the-trial-solution">
-<h3><span class="section-number">12.1.1. </span>The trial solution<a class="headerlink" href="#the-trial-solution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.1. </span>The trial solution<a class="headerlink" href="#the-trial-solution" title="Permalink to this headline">¶</a></h3>
 <p>One way to start with this problem is by using the trial solution (also sometimes called the ansatz):</p>
 <div class="math notranslate nohighlight" id="equation-trialsoln1storder">
-<span class="eqno">(12.3)<a class="headerlink" href="#equation-trialsoln1storder" title="Permalink to this equation">¶</a></span>\[y = e^{\lambda x}\]</div>
+<span class="eqno">(14.3)<a class="headerlink" href="#equation-trialsoln1storder" title="Permalink to this equation">¶</a></span>\[y = e^{\lambda x}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_\lambda\)</span> is constant.  If we try this, then the homogeneous problem reduces to a polynomial in <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[e^{\lambda x}(a\lambda^2+b\lambda +c)=0\]</div>
-<p>and so by solving this quadratic in <span class="math notranslate nohighlight">\(\lambda\)</span>, we can find solutions to <a class="reference internal" href="#equation-ode2hom">(12.2)</a>.   We call this quadratic the auxiliary equation and the nature of the
+<p>and so by solving this quadratic in <span class="math notranslate nohighlight">\(\lambda\)</span>, we can find solutions to <a class="reference internal" href="#equation-ode2hom">(14.2)</a>.   We call this quadratic the auxiliary equation and the nature of the
 solutions depends on the quantity:</p>
 <div class="math notranslate nohighlight">
 \[\Delta= b^2-4ac\]</div>
@@ -487,7 +497,7 @@ problem <span class="math notranslate nohighlight">\(\underline{y}^{\prime}=k\,\
 </div>
 </div>
 <div class="section" id="principle-of-linear-superposition">
-<h3><span class="section-number">12.1.2. </span>Principle of linear superposition<a class="headerlink" href="#principle-of-linear-superposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.2. </span>Principle of linear superposition<a class="headerlink" href="#principle-of-linear-superposition" title="Permalink to this headline">¶</a></h3>
 <p>The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>. As a result of this fact, any
 linear combination of solutions will also be a solution:</p>
 <div class="math notranslate nohighlight">
@@ -512,7 +522,7 @@ linear combination of solutions will also be a solution:</p>
 </div>
 </div>
 <div class="section" id="applying-conditions">
-<h3><span class="section-number">12.1.3. </span>Applying conditions<a class="headerlink" href="#applying-conditions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.3. </span>Applying conditions<a class="headerlink" href="#applying-conditions" title="Permalink to this headline">¶</a></h3>
 <p>Since the results we obtain from solving the auxillary equation and then making a linear superposition of solutions have two arbitrary constants, it generates a
 family of solution curves. We can fix the solution to one of these curves by providing <strong>conditions</strong> for either <span class="math notranslate nohighlight">\(y\)</span> or its derivatives at two different <span class="math notranslate nohighlight">\(x\)</span> values - these
 often go by many different names such as <em>initial coditions</em> or <em>boundary conditions</em>.  For practical problems, the conditions tell us about a particular state
@@ -553,7 +563,7 @@ y^{\prime} &amp;= -\frac{1}{2}\,A_1\,e^{-x/2} + A_2\,e^x\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="complex-conjugate-roots-delta-0">
-<h3><span class="section-number">12.1.4. </span>Complex conjugate roots <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span><a class="headerlink" href="#complex-conjugate-roots-delta-0" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.4. </span>Complex conjugate roots <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span><a class="headerlink" href="#complex-conjugate-roots-delta-0" title="Permalink to this headline">¶</a></h3>
 <p>If the discriminant is negative, then the auxiliary equation will have complex conjugate solutions of the form</p>
 <div class="math notranslate nohighlight">
 \[\lambda=\alpha\pm i\omega\]</div>
@@ -577,7 +587,7 @@ growing/decaying amplitude combined with wavy oscillations of frequency <span cl
 </div>
 </div>
 <div class="section" id="repeated-roots-delta-0">
-<h3><span class="section-number">12.1.5. </span>Repeated roots <span class="math notranslate nohighlight">\(\Delta = 0\)</span><a class="headerlink" href="#repeated-roots-delta-0" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.5. </span>Repeated roots <span class="math notranslate nohighlight">\(\Delta = 0\)</span><a class="headerlink" href="#repeated-roots-delta-0" title="Permalink to this headline">¶</a></h3>
 <p>If the discriminant is zero, then the auxiliary equation will only have one distinct solution <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\lambda=-\frac{b}{2a}\]</div>
@@ -618,19 +628,19 @@ would not give you a result of the form <span class="math notranslate nohighligh
 </div>
 </div>
 <div class="section" id="existence-of-a-particular-solution">
-<h3><span class="section-number">12.1.6. </span>Existence of a particular solution:<a class="headerlink" href="#existence-of-a-particular-solution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.1.6. </span>Existence of a particular solution:<a class="headerlink" href="#existence-of-a-particular-solution" title="Permalink to this headline">¶</a></h3>
 <p>The general solution:</p>
 <div class="math notranslate nohighlight">
 \[y(x)=A_1 \,y_1(x) + A_2\, y_2(x)\]</div>
 <p>can be made to satisfy arbitrary initial conditions <span class="math notranslate nohighlight">\(y(x_0)=y_0,\ y^{\prime}(x_0)=y^{\prime}_0\)</span> if and only if:</p>
 <div class="math notranslate nohighlight" id="equation-linindepend">
-<span class="eqno">(12.4)<a class="headerlink" href="#equation-linindepend" title="Permalink to this equation">¶</a></span>\[y_1^{\prime}(x_0)y_2(x_0)-y_2^{\prime}(x_0)y_1(x_0)\neq 0\]</div>
+<span class="eqno">(14.4)<a class="headerlink" href="#equation-linindepend" title="Permalink to this equation">¶</a></span>\[y_1^{\prime}(x_0)y_2(x_0)-y_2^{\prime}(x_0)y_1(x_0)\neq 0\]</div>
 <p>This condition is met if <span class="math notranslate nohighlight">\(y_2 \neq \alpha y_1\)</span>, where <span class="math notranslate nohighlight">\(\alpha\)</span> would be a constant - we say that these solutions are <em>linearly independent</em>.</p>
 <p>To prove that this is true, start by applying the given conditions:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y_1(x_0)\,A_1+y_2(x_0)\,A_2 &amp;= y_0\\
 y_1^{\prime}(x_0)\,A_1+y_2^{\prime}(x_0)\,A_2 &amp;=y_0^{\prime}\end{split}\]</div>
-<p>This is a set of two simultaneous equations in two unknowns <span class="math notranslate nohighlight">\(A_1,\, A_2\)</span> - a unique solution exists if and only if the condition <a class="reference internal" href="#equation-linindepend">(12.4)</a> is met.</p>
+<p>This is a set of two simultaneous equations in two unknowns <span class="math notranslate nohighlight">\(A_1,\, A_2\)</span> - a unique solution exists if and only if the condition <a class="reference internal" href="#equation-linindepend">(14.4)</a> is met.</p>
 <div class="admonition-summary admonition">
 <p class="admonition-title">Summary</p>
 <p>The general solution of the homogeneous second order ODE is given by:</p>
@@ -644,13 +654,13 @@ e^{\alpha x}(A_1\cos(\omega x) + A_2\sin(\omega x))&amp;\text{where $\alpha=-\fr
 </div>
 </div>
 <div class="section" id="inhomogeneous-problems">
-<h2><span class="section-number">12.2. </span>Inhomogeneous problems<a class="headerlink" href="#inhomogeneous-problems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.2. </span>Inhomogeneous problems<a class="headerlink" href="#inhomogeneous-problems" title="Permalink to this headline">¶</a></h2>
 <p>Now we will be concerned with the solution of a general problem of the form:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}(y) = ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,\,b,\,c\)</span> are arbitrary constants.</p>
 <div class="section" id="the-method-of-undetermined-coefficients">
-<h3><span class="section-number">12.2.1. </span>The method of undetermined coefficients<a class="headerlink" href="#the-method-of-undetermined-coefficients" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.1. </span>The method of undetermined coefficients<a class="headerlink" href="#the-method-of-undetermined-coefficients" title="Permalink to this headline">¶</a></h3>
 <p>This method is a fancy name for educated guesswork - it requires us to pose a trial solution (an ansatz), based on our observation of what <span class="math notranslate nohighlight">\(f(x)\)</span> looks like. We will only
 be able to apply this method for some specific types of function <span class="math notranslate nohighlight">\(f(x)\)</span>, we will be restricted to polynomials, exponentials and trigonometric functions. The method gets its
 name because we guess the form of the solution without giving the values of the coefficients. We find the values of the undetermined coefficients by substituting our
@@ -753,7 +763,7 @@ homogeneous problem also - so here we try:</p>
 </div>
 </div>
 <div class="section" id="constructing-the-full-solution">
-<h3><span class="section-number">12.2.2. </span>Constructing the full solution<a class="headerlink" href="#constructing-the-full-solution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.2. </span>Constructing the full solution<a class="headerlink" href="#constructing-the-full-solution" title="Permalink to this headline">¶</a></h3>
 <p>The general solution to the inhomogeneous problem can be constructed by combining the homogenous solution <span class="math notranslate nohighlight">\(y_h\)</span> and the particular integral <span class="math notranslate nohighlight">\(y_p\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[y(x) = y_h(x) + y_p(x)\]</div>
@@ -824,7 +834,7 @@ y'(0) = y_h'(0) + y_p'(0) &amp;= \alpha_2 \\\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="a-note-about-the-limitations-of-undeterminded-coefficients">
-<h3><span class="section-number">12.2.3. </span>A note about the limitations of undeterminded coefficients<a class="headerlink" href="#a-note-about-the-limitations-of-undeterminded-coefficients" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.3. </span>A note about the limitations of undeterminded coefficients<a class="headerlink" href="#a-note-about-the-limitations-of-undeterminded-coefficients" title="Permalink to this headline">¶</a></h3>
 <p>The method can only be used to solve problems where there is a finite pattern of derivatives for <span class="math notranslate nohighlight">\(f(x)\)</span>. So it would not be usable for problems such as:</p>
 <div class="math notranslate nohighlight">
 \[f(x)=\ln(x)\]</div>
@@ -834,7 +844,7 @@ parameters</strong>.</p>
 </div>
 </div>
 <div class="section" id="solving-separable-pdes">
-<h2><span class="section-number">12.3. </span>Solving separable PDEs<a class="headerlink" href="#solving-separable-pdes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.3. </span>Solving separable PDEs<a class="headerlink" href="#solving-separable-pdes" title="Permalink to this headline">¶</a></h2>
 <p>Once we extend calculus to many variables, ordinary differential equations (ODEs) can become partial differential equations (PDEs) and then the range of techniques that can
 be applied to solve these sorts of problems becomes vast - typically there is not clean, closed form, way of solving a given PDE - a series solution or answer valid
 only in certain regimes is often the best we can do.  There is however one class of PDE that can solved using ODE techniques, so called <em>separable PDEs</em>.</p>
@@ -853,12 +863,12 @@ only in certain regimes is often the best we can do.  There is however one class
 \[u(x,\,t) = X(x)\,T(t)\]</div>
 <p>such that the resulting PDE has the form:</p>
 <div class="math notranslate nohighlight" id="equation-sepeqn">
-<span class="eqno">(12.5)<a class="headerlink" href="#equation-sepeqn" title="Permalink to this equation">¶</a></span>\[\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big)\,T(t) =
+<span class="eqno">(14.5)<a class="headerlink" href="#equation-sepeqn" title="Permalink to this equation">¶</a></span>\[\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big)\,T(t) =
 \lambda\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big)\,X(x)\]</div>
 <p>where we notice we have switched to one variable derivatives, since:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial (X\,T)}{\partial x} = T\,\frac{\mathrm{d} X}{\mathrm{d}x}, \quad \frac{\partial (X\,T)}{\partial t} = X\,\frac{\mathrm{d} T}{\mathrm{d}t}\]</div>
-<p>If we look at <a class="reference internal" href="#equation-sepeqn">(12.5)</a>, we notice that if divide each side by <span class="math notranslate nohighlight">\(u = X\,T\)</span>:</p>
+<p>If we look at <a class="reference internal" href="#equation-sepeqn">(14.5)</a>, we notice that if divide each side by <span class="math notranslate nohighlight">\(u = X\,T\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\lambda\,X}\Big(a_1\frac{\mathrm{d}^2 X}{\mathrm{d}x^2}+a_2\frac{\mathrm{d} X}{\mathrm{d}x}+a_3\,X\Big) =
 \frac{1}{T}\Big(b_1\frac{\mathrm{d}^2 T}{\mathrm{d}t^2}+b_2\frac{\mathrm{d} T}{\mathrm{d}t}+b_3\,T\Big)\]</div>
@@ -960,13 +970,13 @@ T(t) &amp;= B_1\,e^{i k \lambda t} \end{split}\]</div>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">11. </span>First Order ODEs</p>
+            <p class="prev-next-title"><span class="section-number">13. </span>First Order ODEs</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../python/ode_solver_demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>ODEs with Python</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>ODEs with Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
