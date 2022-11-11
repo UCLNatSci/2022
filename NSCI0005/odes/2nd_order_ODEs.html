@@ -487,7 +487,7 @@ y_2 &amp; = e^{x}\end{split}\]</div>
 <p>We could motivate the form of the trial solution by solving the problem for the special case where <span class="math notranslate nohighlight">\(c=0\)</span>, which reduces to:</p>
 <div class="math notranslate nohighlight">
 \[a\,z^{\prime}(x) + b\,z(x)=0,\quad \text{where } z=y^{\prime}\]</div>
-<p>This problem can be solved by separation and the result is of the form <span class="math notranslate nohighlight">\(y=k_1e^{-bx/a}+k_2\)</span>.</p>
+<p>This problem can be solved by separation and the result is of the form <span class="math notranslate nohighlight">\(y=A_1e^{-bx/a}+A_2\)</span>.</p>
 <p>Another way is to begin by writing the system in matrix form <span class="math notranslate nohighlight">\(\underline{y}^{\prime}=A\,\underline{y}\)</span>, where <span class="math notranslate nohighlight">\(\underline{y}=[\begin{matrix}y&amp; y^{\prime}\end{matrix}]^T\)</span> :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}y\\y^{\prime}\end{bmatrix}^{\prime}=\begin{bmatrix}0&amp;1\\-c_0/c_2&amp; -c_1/c_2\end{bmatrix}
@@ -501,8 +501,8 @@ problem <span class="math notranslate nohighlight">\(\underline{y}^{\prime}=k\,\
 <p>The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>. As a result of this fact, any
 linear combination of solutions will also be a solution:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathcal{L}(k_1y_1+k_2y_2)&amp;=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\
-&amp;=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\
+\[\begin{split}\mathcal{L}(A_1\,y_1+A_2\,y_2)&amp;=A_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+A_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\
+&amp;=A_1\mathcal{L}(y_1)+A_2\mathcal{L}(y_2)\\
 &amp;=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\\
 &amp;=0\end{split}\]</div>
 <p>We sometimes call this solution the complementary function.</p>
@@ -606,7 +606,7 @@ the order of the differential equation by making use of the known solution. We o
 \[f(x)=Ax+B\]</div>
 <p>We can choose <span class="math notranslate nohighlight">\(A=1,\, B=0\)</span>, thus we have found another solution <span class="math notranslate nohighlight">\(x e^{\lambda x}\)</span> and we can form the general solution from a linear combination:</p>
 <div class="math notranslate nohighlight">
-\[y=(k_1x+k_2)e^{\lambda x}.\]</div>
+\[y=(A_1x+A_2)e^{\lambda x}.\]</div>
 <p>It is very important you recognise that the only reason <span class="math notranslate nohighlight">\(x e^{\lambda x}\)</span> has been found as a solution here is because <span class="math notranslate nohighlight">\(\lambda\)</span> is a repeated root, which
 makes the term involving <span class="math notranslate nohighlight">\(2a\lambda+b\)</span> drop out. If you tried the same technique using one of the solutions to a problem with distinct roots it
 would not give you a result of the form <span class="math notranslate nohighlight">\(xe^{\lambda x}\)</span> (in fact after some messy first order integration you would simply recover the solution involving the other root).</p>
@@ -621,9 +621,9 @@ would not give you a result of the form <span class="math notranslate nohighligh
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
 <p>1. The auxiliary equation is <span class="math notranslate nohighlight">\(\lambda^2 - 4\lambda + 4 = 0\)</span>, with repeated root <span class="math notranslate nohighlight">\(\lambda=2\)</span>.</p>
-<p>Hence, the general solution is given by <span class="math notranslate nohighlight">\(y=e^{2x}(A_1\,x + A_2)\)</span>, where <span class="math notranslate nohighlight">\(k_1\)</span> and <span class="math notranslate nohighlight">\(k_2\)</span> are constants.</p>
-<p>2. <span class="math notranslate nohighlight">\(y(0)=1\Rightarrow k_1=1\)</span>,</p>
-<p><span class="math notranslate nohighlight">\(y^{\prime}(0)=3 \Rightarrow 2k_1+k_2=3\)</span></p>
+<p>Hence, the general solution is given by <span class="math notranslate nohighlight">\(y=e^{2x}(A_1\,x + A_2)\)</span>, where <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span> are constants.</p>
+<p>2. <span class="math notranslate nohighlight">\(y(0)=1\Rightarrow A_1=1\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(y^{\prime}(0)=3 \Rightarrow 2A_1+A_2=3\)</span></p>
 <p>The solution satisfying the given conditions is <span class="math notranslate nohighlight">\(y-e^{2x}(x+1)\)</span></p>
 </div>
 </div>

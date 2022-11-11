@@ -178,11 +178,11 @@ P = P_0\,2^{t/10}
 
 ````{admonition} Integrating facor method
 Problems which are the following form can be solved by the integrating factor method:
-:
+
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + f(x)\,y = g(x)
 ```
-If we multiply the LHS through by a function $\mu(x)$ = e^{\int f(x) \,\mathrm{d}x}$, which we call an *integrating factor* (IF):
+If we multiply the LHS through by a function $\mu(x) = e^{\int f(x) \,\mathrm{d}x}$, which we call an *integrating factor* (IF):
 
 ```{math}
 :label: eq1compare
@@ -211,27 +211,28 @@ It's role is to cast the left hand side as an exact derivative to make the probl
 
 The integrating factor technique can be written down in the form of an algorithm:
 
-1\. Compute the integrating factor $\displaystyle \mu(x) = e^{\int f(x) \,\mathrm{d}x}$.
+**1\.** Compute the integrating factor $\displaystyle \mu(x) = e^{\int f(x) \,\mathrm{d}x}$.
 
-2\. Multiply the whole ODE by $\mu(x)$:
+**2\.** Multiply the whole ODE by $\mu(x)$:
 ```{math}
 e^{\int{f(x) \mathrm{d}x}}\,\frac{\mathrm{d}y}{\mathrm{d}x} + e^{\int{f(x) \mathrm{d}x}}\,f(x)\,y = e^{\int{f(x) \mathrm{d}x}}\,g(x)
 ```
 
-3\. We find that the left-hand-side can be rewritten as $\frac{\mathrm{d}}{\mathrm{d}x}(\mu y)$:
+**3\.** We find that the left-hand-side can be rewritten as a derivative $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(\mu\, y)$:
 ```{math}
 \frac{\mathrm{d}}{\mathrm{d}x}\Big(y\,e^{\int f(x) \,\mathrm{d}x}\Big) = e^{\int f(x)\, \mathrm{d}x }\,g(x)
 ```
 
-4\. Integrate both sides with respect to $x$:
+**4\.** Integrate both sides with respect to $x$:
 ```{math}
-y\,e^{\int f(x)\, \mathrm{d}x} = \int e^{\int f(x)\, \mathrm{d}x}\,g(x)\,\mathrm{d}x
+y\,e^{\int f(x)\, \mathrm{d}x} = \int \Big(e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x
 ```
 
-5\. Rearrange to find $y(x)$:
+**5\.** Rearrange to find $y(x)$:
 ```{math}
-y(x) = \Big(\int e^{\int f(x)\, \mathrm{d}x}\,g(x)\,\mathrm{d}x + C\Big)\,e^{-\int f(x)\, \mathrm{d}x}
+y(x) = \Big[\int \Big( e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x + C\Big]\,e^{-\int f(x)\, \mathrm{d}x}
 ```
+where $C$ is a constant.
 
 
 
@@ -243,7 +244,7 @@ y(x) = \Big(\int e^{\int f(x)\, \mathrm{d}x}\,g(x)\,\mathrm{d}x + C\Big)\,e^{-\i
 Consider the following differential equation:
 ```{math}
 :label: intfexample
-\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)
+\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x}=\frac{\cos(x)}{x}, \quad (x\neq 0)
 ```
 A quick check will show that this equation is not separable.  If we try to integrate directly, then we obtain:
 
@@ -280,7 +281,7 @@ y=\frac{1}{x}(\sin(x)+k)
 ``` 
 where $k$ is an arbitrary constant. If we want to verify that the solution satisfies equation {eq}`intfexample`:
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y &= \left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)\\
+\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x} &= \left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)\\
 &=\frac{\cos(x)}{x}
 ```
 ````

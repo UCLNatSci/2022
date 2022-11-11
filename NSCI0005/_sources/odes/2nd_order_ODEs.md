@@ -77,7 +77,7 @@ We could motivate the form of the trial solution by solving the problem for the 
 ```{math}
 a\,z^{\prime}(x) + b\,z(x)=0,\quad \text{where } z=y^{\prime}
 ```
-This problem can be solved by separation and the result is of the form $y=k_1e^{-bx/a}+k_2$.
+This problem can be solved by separation and the result is of the form $y=A_1e^{-bx/a}+A_2$.
 
 Another way is to begin by writing the system in matrix form $\underline{y}^{\prime}=A\,\underline{y}$, where $\underline{y}=[\begin{matrix}y& y^{\prime}\end{matrix}]^T$ :
 ```{math}
@@ -92,8 +92,8 @@ problem $\underline{y}^{\prime}=k\,\underline{y}$ are of an exponential form.
 The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable $y$. As a result of this fact, any 
 linear combination of solutions will also be a solution:
 ```{math}
-\mathcal{L}(k_1y_1+k_2y_2)&=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\
-&=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\
+\mathcal{L}(A_1\,y_1+A_2\,y_2)&=A_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+A_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\
+&=A_1\mathcal{L}(y_1)+A_2\mathcal{L}(y_2)\\
 &=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\\
 &=0
 ```
@@ -233,7 +233,7 @@ f(x)=Ax+B
 ```
 We can choose $A=1,\, B=0$, thus we have found another solution $x e^{\lambda x}$ and we can form the general solution from a linear combination:
 ```{math}
-y=(k_1x+k_2)e^{\lambda x}.
+y=(A_1x+A_2)e^{\lambda x}.
 ```
 It is very important you recognise that the only reason $x e^{\lambda x}$ has been found as a solution here is because $\lambda$ is a repeated root, which 
 makes the term involving $2a\lambda+b$ drop out. If you tried the same technique using one of the solutions to a problem with distinct roots it 
@@ -257,11 +257,11 @@ y^{\prime\prime}(x)-4y^{\prime}(x)+4y(x)=0
 
 1\. The auxiliary equation is $\lambda^2 - 4\lambda + 4 = 0$, with repeated root $\lambda=2$.
 
-Hence, the general solution is given by $y=e^{2x}(A_1\,x + A_2)$, where $k_1$ and $k_2$ are constants.
+Hence, the general solution is given by $y=e^{2x}(A_1\,x + A_2)$, where $A_1$ and $A_2$ are constants.
 
-2\. $y(0)=1\Rightarrow k_1=1$,
+2\. $y(0)=1\Rightarrow A_1=1$,
 
-$y^{\prime}(0)=3 \Rightarrow 2k_1+k_2=3$
+$y^{\prime}(0)=3 \Rightarrow 2A_1+A_2=3$
 
 The solution satisfying the given conditions is $y-e^{2x}(x+1)$
 ````
