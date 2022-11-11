@@ -262,28 +262,33 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-partial-derivatives">
-   11.1. First Partial Derivatives
+  <a class="reference internal nav-link" href="#first-order-partial-derivatives">
+   11.1. First order partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#second-partial-derivatives">
-   11.2. Second Partial Derivatives
+  <a class="reference internal nav-link" href="#second-order-partial-derivatives">
+   11.2. Second order partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notation-for-partial-derivatives">
-   11.3. Notation for Partial Derivatives
+   11.3. Notation for partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multivariable-chain-rule">
-   11.4. Multivariable Chain Rule
+   11.4. Multivariable chain rule
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dependency-trees">
-     11.4.1. Dependency Trees
+     11.4.1. Dependency trees
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#total-differential">
+     11.4.2. Total differential
     </a>
    </li>
   </ul>
@@ -326,28 +331,33 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-partial-derivatives">
-   11.1. First Partial Derivatives
+  <a class="reference internal nav-link" href="#first-order-partial-derivatives">
+   11.1. First order partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#second-partial-derivatives">
-   11.2. Second Partial Derivatives
+  <a class="reference internal nav-link" href="#second-order-partial-derivatives">
+   11.2. Second order partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notation-for-partial-derivatives">
-   11.3. Notation for Partial Derivatives
+   11.3. Notation for partial derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multivariable-chain-rule">
-   11.4. Multivariable Chain Rule
+   11.4. Multivariable chain rule
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dependency-trees">
-     11.4.1. Dependency Trees
+     11.4.1. Dependency trees
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#total-differential">
+     11.4.2. Total differential
     </a>
    </li>
   </ul>
@@ -380,8 +390,8 @@
                 
   <div class="section" id="multivariable-calculus">
 <h1><span class="section-number">11. </span>Multivariable Calculus<a class="headerlink" href="#multivariable-calculus" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="first-partial-derivatives">
-<h2><span class="section-number">11.1. </span>First Partial Derivatives<a class="headerlink" href="#first-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-order-partial-derivatives">
+<h2><span class="section-number">11.1. </span>First order partial derivatives<a class="headerlink" href="#first-order-partial-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>We can consider the rate of change of the function, however since it is a function of two variables, we can see there are two possible kinds of derivative we can find:</p>
 <ul class="simple">
 <li><p>along a curve parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis, by holding <span class="math notranslate nohighlight">\(y\)</span> constant and differentiating with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
@@ -425,8 +435,8 @@ consider only variations in one of the two variables here.  The results show the
 \frac{\partial z}{\partial y} &amp;=  \frac{2y\sin(x)}{x+y^2\sin(x)}\end{split}\]</div>
 </div>
 </div>
-<div class="section" id="second-partial-derivatives">
-<h2><span class="section-number">11.2. </span>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="second-order-partial-derivatives">
+<h2><span class="section-number">11.2. </span>Second order partial derivatives<a class="headerlink" href="#second-order-partial-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>The second partial derivatives with respect to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are denoted as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial^2 f}{\partial x^2} &amp;=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
@@ -466,7 +476,7 @@ perform differentiation first and only substitute in the values in the very last
 </div>
 </div>
 <div class="section" id="notation-for-partial-derivatives">
-<h2><span class="section-number">11.3. </span>Notation for Partial Derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Notation for partial derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>Partial derivatives are commonly denoted using subscript notation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_x=\frac{\partial f}{\partial x}, &amp;\quad\, f_y=\frac{\partial f}{\partial y}, \\
@@ -480,7 +490,7 @@ f_{yx} &amp;=  (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{split}
 \[D_x=\frac{\partial}{\partial x}\]</div>
 </div>
 <div class="section" id="multivariable-chain-rule">
-<h2><span class="section-number">11.4. </span>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Multivariable chain rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">¶</a></h2>
 <p>We now consider a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> subjected to small variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as shown in <a class="reference internal" href="#two-step"><span class="std std-numref">Fig. 11.2</span></a>.</p>
 <div class="figure align-default" id="two-step">
 <img alt="../_images/two_step.png" src="../_images/two_step.png" />
@@ -518,7 +528,7 @@ is held constant. Written formally:</p>
 &amp;=\lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u,v))-f(x(u,v),y(u,v))}{\Delta u}\end{split}\]</div>
 <p>The lesson here is - <em>it is dangerous to treat partial derivatives as fractions!</em></p>
 <div class="section" id="dependency-trees">
-<h3><span class="section-number">11.4.1. </span>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.1. </span>Dependency trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h3>
 <p>The multivariate chain rule can be illustrated as a dependency tree, in <a class="reference internal" href="#dependency1"><span class="std std-numref">Fig. 11.3</span></a>, where we examine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> with <span class="math notranslate nohighlight">\(x = x(u,\, v)\)</span> and <span class="math notranslate nohighlight">\(y = y(u,\, v)\)</span>:</p>
 <div class="figure align-default" id="dependency1">
 <img alt="../_images/dependency1.png" src="../_images/dependency1.png" />
@@ -553,6 +563,28 @@ f_v = f_x\, x_v + f_y\, y_v &amp;=  2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)\en
 <div class="math notranslate nohighlight">
 \[f_x = f_u\, u_x +f_v\, v_x = \cos(u)(2x+2y)+2v = 2(x+y)\cos(x^2+2xy) + 2(x-y)\]</div>
 </div>
+</div>
+<div class="section" id="total-differential">
+<h3><span class="section-number">11.4.2. </span>Total differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The total change in a function <span class="math notranslate nohighlight">\(f = f(x,\, y,\, \dots)\)</span> based on the changes in each of its variables can be expressed as the <strong>total differential</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y + \dots\]</div>
+<p>we can therefore express this as a <strong>total derivative</strong>, in terms of one of the variables:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}f}{\mathrm{d}x} &amp;= \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \dots\\
+\frac{\mathrm{d}f}{\mathrm{d}y} &amp;= \frac{\partial f}{\partial x}\,\frac{\mathrm{d}x}{\mathrm{d}y} + \frac{\partial f}{\partial y} + \dots
+\end{split}\]</div>
+</div>
+<p>If we have a differential in the form:</p>
+<div class="math notranslate nohighlight">
+\[P(x,\,y)\,\mathrm{d}x + Q(x,\, y)\,\mathrm{d}y = 0\]</div>
+<p>such that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}[\partial x\,\partial y}
+\]</div>
+<p>then we call this an <strong>exact</strong> or <strong>perfect</strong> differential.</p>
 </div>
 </div>
 <div class="section" id="stationary-points">

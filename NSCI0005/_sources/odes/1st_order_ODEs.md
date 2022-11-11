@@ -430,9 +430,45 @@ u = y^{1-n}
 ```
 which transforms {eq}`benoulliODE` into a linear differential equation of the form:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(u)\,u = -(n-1)\,Q(x)
+\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(x)\,u = -(n-1)\,Q(x)
 ```
+which can then be solved using the integrating factor method.
 ````
+
+````{admonition} Worked example
+:class: seealso
+If we want to solve the ODE:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2
+```
+using the substitution $u = y^{-1}$ here (as the highest power on the RHS is $n=2$):
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}
+```
+and therefore:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
+xy^2 &= \frac{x}{u^2}
+```
+substituing these results in to the ODE:
+```{math}
+\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &= \frac{x}{u^2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &= -x
+```
+which we can then solve using the IF method, with $\mu = e^{-x^2/2}$:
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &=  e^{-x^2/2}\,x \\
+e^{-x^2/2}\,u &= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x 
+```
+Using a subsitution (or inspection) we can integrate this RHS term to find:
+```{math}
+e^{-x^2/2}\,u &= -e^{-x^2/2} + C \\
+u(x) &= -1 + Ce^{x^2/2} \\
+y(x) &= \frac{1}{Ce^{x^2/2}-1}
+```
+where we must not forget to return the answer back to the form of $y(x)$ at the end.
+````
+
 
 ### Riccati form
 ````{admonition} Defintion
@@ -451,9 +487,152 @@ y = -\frac{u'}{q_2\,u}
 ```
 ````
 
-We see that if $q_0=0$, then this just reduces to a Nenoulli equation with $n=2$ and if $q_2=0$, then this is just in integrating form factor, so this 
+We see that if $q_0=0$, then this just reduces to a Benoulli equation with $n=2$ and if $q_2=0$, then this is just in integrating form factor, so this 
 equation can be thought of as a hybrid between the two.
 
-%## Perfect differential form 
+````{admonition} Worked example
+:class: seealso
+Consider the ODE:
+```{math}
+y' - \frac{2y}{x} = - x^2\,y^2 \\
+```
+this equation can be rewritten as:
+```{math}
+y' = \frac{2y}{x}-x^2\,y^2
+```
+and then transformed into the 2nd order ODE:
+```{math}
+u'' - R\,u' + S\,u &= 0 \\
+R = \frac{4}{x}\,\quad & S = 0 \\
+\Rightarrow u'' -\frac{4}{x} \,u' &= 0
+```
+which we can solve using an IF method, with $\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}$:
+```{math}
+x^{-4}\,u'' - 4\,x^{-5} \,u' &= 0 \\
+\Big(x^{-4}\,u'\Big)^\prime &= 0
+```
+Since the derivative of a constant is zero, this means:
+```{math}
+u' &= C_1\,x^4 \\
+u &= \frac{C_1\,x^5}{5} + C_2 \\
+\Rightarrow y &= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
+```
+where $C_1,\, C_2$ are constants, we can tidy this expression up:
+```{math}
+y = -\frac{5x^2}{x^5 + C_3}
+```
+where $C_3$ is a constants.
+````
 
+
+## Perfect differential form 
+If we are struggling to find a first order ODE method that works and has clearly integrable terms, we can try the perfect differential test.  
+
+Recall from the multivariable change rule, the total differential of a function $f(x,\,y)$ is:
+
+```{math}
+\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y 
+```
+
+now if we examine the most general form of a first order ODE:
+
+```{math}
+Q(x,\,y)\,\frac{\mathrm{d}y}{\mathrm{d}x} + P(x,\, y) = 0
+```
+
+which we can rewrite as:
+
+```{math}
+ P(x,\, y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0
+```
+
+we can see that these bear a striking resembalance and remember that if:
+```{math}
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} 
+```
+
+then this is a perfect differential, where here $\mathrm{d}f = 0$ and so:
+```{math}
+f(x,\,y) = C 
+```
+where $C$ is a constant.  
+
+````{admonition} Worked example
+:class: seealso
+Lets try to solve the non-linear, first order ODE:
+```{math}
+2x^2\,y\,\frac{\mathrm{d}y}{\mathrm{d}x} + 2x\,y^2 = 1
+```
+we find that we can identify:
+
+```{math}
+P(x,\,y) &= 2x\,y^2-1\\
+Q(x,\,y) &= 2x^2\,y
+```
+so we check that the partial derivatives agree:
+```{math}
+\frac{\partial P}{\partial y} = 4xy \\
+\frac{\partial Q}{\partial x} = 4xy
+```
+which they do and therefore we want to obtain the function $f(x,\, y)$:
+```{math}
+P(x,\,y) &= \frac{\partial f}{\partial x} = 2x\,y^2-1 \Rightarrow f(x,\,y) = \int (2x\,y^2-1)\,\mathrm{d}x = x^2\,y^2 - x + g(y)\\
+Q(x,\,y) &= \frac{\partial f}{\partial y} = 2x^2\,y \Rightarrow f(x,\,y) = \int (2x^2\,y)\,\mathrm{d}y = x^2\,y^2 + h(x)\\
+```
+which we can see will agree if $g(y) = 0,\, h(x) = -x$:
+```{math}
+f(x,\,y) = x^2\,y^2 - x
+```
+and given that here $f(x,\,y) = C$, where $C$ is a constant, this means that we have:
+
+```{math}
+x^2\,y^2 - x &= C \\
+y &= \pm\sqrt{\frac{1}{x} + \frac{C}{x^2}}
+```
+````
+
+````{admonition} Practice question
+:class: seealso, dropdown
+1\. Solve the non-linear ODE:
+```{math}
+\Big(2xy + e^{-x^2}\Big) \,\frac{\mathrm{d}y}{\mathrm{d}x} + y^2 = 2xy\,e^{-x^2}
+```
+with the condition $y(0) = 1$.
+````
+
+````{admonition} Solution 
+:class: seealso, dropdown
+1\. First write in total differential form:
+```{math}
+\Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x + \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y &= 0\\
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &= 0
+```
+then check that this is an exact differential:
+
+```{math}
+\frac{\partial P}{\partial y} &= 2y - 2xe^{-x^2}\\
+\frac{\partial Q}{\partial x} &= 2y - 2xe^{-x^2}
+```
+and so it is!  So to detemine $f(x,\, y)$:
+
+```{math}
+\frac{\partial f}{\partial x} &= y^2 - 2xy\,e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x = xy^2 + y\,e^{-x^2} + g(y)\\
+\frac{\partial f}{\partial y} &= 2xy + e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y = xy^2 + y\,e^{-x^2} + h(x)\\
+```
+which agree if $g(y) = h(x) = 0$, therefore:
+
+```{math}
+xy^2 + y\,e^{-x^2} = C
+```
+where $C$ is a constant.  Given the condition $y(0) = 1$:
+```{math}
+xy^2 + y\,e^{-x^2} = 1
+```
+which we could then solve to find $y(x)$, as this is quadratic $xy^2 + y\,e^{-x^2} - 1 = 0$:
+
+```{math}
+y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}
+```
+
+````
 

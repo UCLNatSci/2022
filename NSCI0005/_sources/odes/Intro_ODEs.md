@@ -46,7 +46,7 @@ example the Airy equation is an ODE that appears very commonly in physical scien
 \frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy
 ```
 We note that the Airy equation is a *second order* differential equation (because the highest derivative in the equation is a second order derivative) as well a first 
-degre eequation.  However we find that {eq}`airyode` cannot be solved by direct integration, and in fact its relatively innocent appearance hides a wealth of interesting 
+degree equation.  However we find that {eq}`airyode` cannot be solved by direct integration, and in fact its relatively innocent appearance hides a wealth of interesting 
 mathematics.  The strategy for solving differential equations involves classifying different types of problem that we know how to solve, and building up an 
 armoury of techniques.
 

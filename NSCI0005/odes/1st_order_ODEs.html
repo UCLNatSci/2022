@@ -283,6 +283,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perfect-differential-form">
+   13.4. Perfect differential form
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -324,6 +329,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perfect-differential-form">
+   13.4. Perfect differential form
+  </a>
  </li>
 </ul>
 
@@ -581,7 +591,35 @@ however make progress using the substitution:</p>
 \[u = y^{1-n}\]</div>
 <p>which transforms <a class="reference internal" href="#equation-benoulliode">(13.7)</a> into a linear differential equation of the form:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(u)\,u = -(n-1)\,Q(x)\]</div>
+\[\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(x)\,u = -(n-1)\,Q(x)\]</div>
+<p>which can then be solved using the integrating factor method.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>If we want to solve the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2\]</div>
+<p>using the substitution <span class="math notranslate nohighlight">\(u = y^{-1}\)</span> here (as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &amp;= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
+xy^2 &amp;= \frac{x}{u^2}\end{split}\]</div>
+<p>substituing these results in to the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &amp;= \frac{x}{u^2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &amp;= -x\end{split}\]</div>
+<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-x^2/2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &amp;=  e^{-x^2/2}\,x \\
+e^{-x^2/2}\,u &amp;= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x \end{split}\]</div>
+<p>Using a subsitution (or inspection) we can integrate this RHS term to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e^{-x^2/2}\,u &amp;= -e^{-x^2/2} + C \\
+u(x) &amp;= -1 + Ce^{x^2/2} \\
+y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
+<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end.</p>
 </div>
 <div class="section" id="riccati-form">
 <h3><span class="section-number">13.3.1. </span>Riccati form<a class="headerlink" href="#riccati-form" title="Permalink to this headline">¶</a></h3>
@@ -597,8 +635,111 @@ however make progress using the substitution:</p>
 <div class="math notranslate nohighlight">
 \[y = -\frac{u'}{q_2\,u}\]</div>
 </div>
-<p>We see that if <span class="math notranslate nohighlight">\(q_0=0\)</span>, then this just reduces to a Nenoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(q_2=0\)</span>, then this is just in integrating form factor, so this
+<p>We see that if <span class="math notranslate nohighlight">\(q_0=0\)</span>, then this just reduces to a Benoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(q_2=0\)</span>, then this is just in integrating form factor, so this
 equation can be thought of as a hybrid between the two.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y' - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
+<p>this equation can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[y' = \frac{2y}{x}-x^2\,y^2\]</div>
+<p>and then transformed into the 2nd order ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u'' - R\,u' + S\,u &amp;= 0 \\
+R = \frac{4}{x}\,\quad &amp; S = 0 \\
+\Rightarrow u'' -\frac{4}{x} \,u' &amp;= 0\end{split}\]</div>
+<p>which we can solve using an IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^{-4}\,u'' - 4\,x^{-5} \,u' &amp;= 0 \\
+\Big(x^{-4}\,u'\Big)^\prime &amp;= 0\end{split}\]</div>
+<p>Since the derivative of a constant is zero, this means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u' &amp;= C_1\,x^4 \\
+u &amp;= \frac{C_1\,x^5}{5} + C_2 \\
+\Rightarrow y &amp;= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants, we can tidy this expression up:</p>
+<div class="math notranslate nohighlight">
+\[y = -\frac{5x^2}{x^5 + C_3}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_3\)</span> is a constants.</p>
+</div>
+</div>
+</div>
+<div class="section" id="perfect-differential-form">
+<h2><span class="section-number">13.4. </span>Perfect differential form<a class="headerlink" href="#perfect-differential-form" title="Permalink to this headline">¶</a></h2>
+<p>If we are struggling to find a first order ODE method that works and has clearly integrable terms, we can try the perfect differential test.</p>
+<p>Recall from the multivariable change rule, the total differential of a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y \]</div>
+<p>now if we examine the most general form of a first order ODE:</p>
+<div class="math notranslate nohighlight">
+\[Q(x,\,y)\,\frac{\mathrm{d}y}{\mathrm{d}x} + P(x,\, y) = 0\]</div>
+<p>which we can rewrite as:</p>
+<div class="math notranslate nohighlight">
+\[ P(x,\, y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0\]</div>
+<p>we can see that these bear a striking resembalance and remember that if:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \]</div>
+<p>then this is a perfect differential, where here <span class="math notranslate nohighlight">\(\mathrm{d}f = 0\)</span> and so:</p>
+<div class="math notranslate nohighlight">
+\[f(x,\,y) = C \]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Lets try to solve the non-linear, first order ODE:</p>
+<div class="math notranslate nohighlight">
+\[2x^2\,y\,\frac{\mathrm{d}y}{\mathrm{d}x} + 2x\,y^2 = 1\]</div>
+<p>we find that we can identify:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(x,\,y) &amp;= 2x\,y^2-1\\
+Q(x,\,y) &amp;= 2x^2\,y\end{split}\]</div>
+<p>so we check that the partial derivatives agree:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial P}{\partial y} = 4xy \\
+\frac{\partial Q}{\partial x} = 4xy\end{split}\]</div>
+<p>which they do and therefore we want to obtain the function <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(x,\,y) &amp;= \frac{\partial f}{\partial x} = 2x\,y^2-1 \Rightarrow f(x,\,y) = \int (2x\,y^2-1)\,\mathrm{d}x = x^2\,y^2 - x + g(y)\\
+Q(x,\,y) &amp;= \frac{\partial f}{\partial y} = 2x^2\,y \Rightarrow f(x,\,y) = \int (2x^2\,y)\,\mathrm{d}y = x^2\,y^2 + h(x)\\\end{split}\]</div>
+<p>which we can see will agree if <span class="math notranslate nohighlight">\(g(y) = 0,\, h(x) = -x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x,\,y) = x^2\,y^2 - x\]</div>
+<p>and given that here <span class="math notranslate nohighlight">\(f(x,\,y) = C\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is a constant, this means that we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^2\,y^2 - x &amp;= C \\
+y &amp;= \pm\sqrt{\frac{1}{x} + \frac{C}{x^2}}\end{split}\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice question</p>
+<p>1. Solve the non-linear ODE:</p>
+<div class="math notranslate nohighlight">
+\[\Big(2xy + e^{-x^2}\Big) \,\frac{\mathrm{d}y}{\mathrm{d}x} + y^2 = 2xy\,e^{-x^2}\]</div>
+<p>with the condition <span class="math notranslate nohighlight">\(y(0) = 1\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>1. First write in total differential form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x + \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y &amp;= 0\\
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
+<p>then check that this is an exact differential:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial P}{\partial y} &amp;= 2y - 2xe^{-x^2}\\
+\frac{\partial Q}{\partial x} &amp;= 2y - 2xe^{-x^2}\end{split}\]</div>
+<p>and so it is!  So to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial f}{\partial x} &amp;= y^2 - 2xy\,e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x = xy^2 + y\,e^{-x^2} + g(y)\\
+\frac{\partial f}{\partial y} &amp;= 2xy + e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y = xy^2 + y\,e^{-x^2} + h(x)\\\end{split}\]</div>
+<p>which agree if <span class="math notranslate nohighlight">\(g(y) = h(x) = 0\)</span>, therefore:</p>
+<div class="math notranslate nohighlight">
+\[xy^2 + y\,e^{-x^2} = C\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  Given the condition <span class="math notranslate nohighlight">\(y(0) = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[xy^2 + y\,e^{-x^2} = 1\]</div>
+<p>which we could then solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>, as this is quadratic <span class="math notranslate nohighlight">\(xy^2 + y\,e^{-x^2} - 1 = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}\]</div>
 </div>
 </div>
 </div>

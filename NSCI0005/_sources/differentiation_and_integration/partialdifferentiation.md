@@ -1,6 +1,6 @@
 # Multivariable Calculus
  
-### First Partial Derivatives
+### First order partial derivatives
 We can consider the rate of change of the function, however since it is a function of two variables, we can see there are two possible kinds of derivative we can find:
 
 - along a curve parallel to the $x$-axis, by holding $y$ constant and differentiating with respect to $x$.
@@ -68,7 +68,7 @@ Calculate all the first partial derivatives $\partial/\partial x,\, \partial/\pa
 ````
 
 
-### Second Partial Derivatives
+### Second order partial derivatives
 The second partial derivatives with respect to $x$ and $y$ are denoted as follows:
 
 ```{math}
@@ -119,7 +119,7 @@ perform differentiation first and only substitute in the values in the very last
 ```
 ````
 
-### Notation for Partial Derivatives
+### Notation for partial derivatives
 Partial derivatives are commonly denoted using subscript notation:
 
 ```{math}
@@ -141,7 +141,7 @@ D_x=\frac{\partial}{\partial x}
 
     
 
-## Multivariable Chain Rule
+## Multivariable chain rule
 We now consider a function $f(x,\,y)$ subjected to small variations in both $x$ and $y$ as shown in {numref}`two_step`.
 
 ```{figure} ../figures/two_step.png
@@ -206,7 +206,7 @@ is held constant. Written formally:
 
 The lesson here is - <em>it is dangerous to treat partial derivatives as fractions!</em>
 
-### Dependency Trees
+### Dependency trees
 The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`, where we examine $f(x,\, y)$ with $x = x(u,\, v)$ and $y = y(u,\, v)$:
 
 ```{figure} ../figures/dependency1.png
@@ -258,6 +258,36 @@ To find $f_x$, we can let $u = x^2 + 2xy$, $v = x-y$, then:
 f_x = f_u\, u_x +f_v\, v_x = \cos(u)(2x+2y)+2v = 2(x+y)\cos(x^2+2xy) + 2(x-y)
 ```
 ````
+
+### Total differential
+````{admonition} Definition
+The total change in a function $f = f(x,\, y,\, \dots)$ based on the changes in each of its variables can be expressed as the **total differential**:
+
+```{math}
+\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y + \dots
+```
+we can therefore express this as a **total derivative**, in terms of one of the variables:
+```{math}
+\frac{\mathrm{d}f}{\mathrm{d}x} &= \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \dots\\
+\frac{\mathrm{d}f}{\mathrm{d}y} &= \frac{\partial f}{\partial x}\,\frac{\mathrm{d}x}{\mathrm{d}y} + \frac{\partial f}{\partial y} + \dots
+
+```
+````
+
+If we have a differential in the form:
+
+```{math}
+P(x,\,y)\,\mathrm{d}x + Q(x,\, y)\,\mathrm{d}y = 0
+```
+
+such that:
+
+```{math}
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}[\partial x\,\partial y}
+
+```
+then we call this an **exact** or **perfect** differential.  
+
 
 ## Stationary Points
 
