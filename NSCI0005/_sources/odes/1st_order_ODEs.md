@@ -182,7 +182,7 @@ Problems which are the following form can be solved by the integrating factor me
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + f(x)\,y = g(x)
 ```
-If we multiply the LHS through by a function $\mu(x) = e^{\int f(x) \,\mathrm{d}x}$, which we call an *integrating factor* (IF):
+If we multiply the LHS through by a function $\mu(x) = e^{\int f(x) \,\mathrm{d}x}$, which we call an **integrating factor (IF)**:
 
 ```{math}
 :label: eq1compare
@@ -202,7 +202,7 @@ By equating {eq}`eq1compare` with {eq}`eq2compare` it can be seen that we can ma
 \frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu \,f(x)
 ```
 
-Can you solve this equation by separation? The solution is:
+We can solve this equation by separation, the solution is:
 ```{math}
 \mu = e^{\int f(x)\,\mathrm{d}x}
 ```
@@ -230,6 +230,7 @@ y\,e^{\int f(x)\, \mathrm{d}x} = \int \Big(e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big
 
 **5\.** Rearrange to find $y(x)$:
 ```{math}
+:label: intfactorsoln
 y(x) = \Big[\int \Big( e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x + C\Big]\,e^{-\int f(x)\, \mathrm{d}x}
 ```
 where $C$ is a constant.
