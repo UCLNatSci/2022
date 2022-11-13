@@ -267,7 +267,7 @@ A reference mass of 12g was used because it matches the element mass number of $
 
 We call the grams-per-mole measure of an atom the relative atomic mass. The definition of a mole ensures that the element mass number and the relative atomic mass (in g/mol) are *roughly* the same. Indeed, for Carbon-12 this equivalence is exact, by definition.
 
-However, whilst the bulk mass of an atom is determined by the number of protons and neutrons that it contains, the electrons also contribute a small amount to the mass. The atomic mass also needs to take account of the "[mass defect](britannica.com/science/mass-defect)" due to binding energy of the atom. This means that for all elements apart from $\ce{^{12}_{}C}$ the relative atomic mass is not precisely equal to the element mass number.
+However, whilst the bulk mass of an atom is determined by the number of protons and neutrons that it contains, the electrons also contribute a small amount to the mass. The atomic mass also needs to take account of the "[mass defect](https://www.britannica.com/science/mass-defect)" due to binding energy of the atom. This means that for all elements apart from $\ce{^{12}_{}C}$ the relative atomic mass is not precisely equal to the element mass number.
 
 For example, the relative atomic mass of Carbon-13 ($\ce{^{13}_{}C}$) is 13.003355 g/mol.
 
@@ -310,5 +310,4 @@ First we need to obtain the relative atomic masses of carbon, hydrogen and oxyge
 Glucose: $(6\times 12.0106)+(12\times 1.0080)+(6\times 15.9994)=180.156$ g/mol
 
 So 180.16g of glucose contains one mole.
-________
 ```

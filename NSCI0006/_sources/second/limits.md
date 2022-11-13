@@ -164,6 +164,7 @@ print((1+1/n)**n)
 
 `2.7182816941320818`
 
+(asymptotics)=
 ## Asymptotic equivalence
 
 Whereas the *limit* of a function refers to tendency towards a single value, asymptotic equivalence refers to tendency towards a relationship.

@@ -1,14 +1,13 @@
-# Curve fitting
+# Fitting curves
 
 This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.
 
 The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.
 
-```{admonition} [Single-dose radiotherapy transforms breast cancer patient care](https://www.ucl.ac.uk/impact/case-studies/2022/apr/single-dose-radiotherapy-transforms-breast-cancer-patient-care)
+```{admonition} [John Von Neumann](https://www.nature.com/articles/427297a)
 :class: quote
-UCL clinicians have pioneered a single-shot targeted radiotherapy for breast cancer, delivered in the same operation as tumour surgery, removing the need for follow-ups and reducing side-effects.
+"with four parameters I can fit an elephant, and with five I can make him wiggle his trunk".
 ```
-
 
 ## Global temperature anomaly
 
@@ -352,7 +351,7 @@ Here are the results:
 
 ## Earthquakes
 
-The [`calmag.txt` dataset](https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt) contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey [www.usgs.gov](www.usgs.gov).
+The [`calmag.txt` dataset](https://liveuclac-my.sharepoint.com/:t:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/calmag.txt) contains 18,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. The smallest and largest recorded values were 3.0 and 7.3 respectively. These data were downloaded from the U.S Geological Survey [www.usgs.gov](https://www.usgs.gov/).
 
 We can produce a histogram of this data as shown below. The `hist` function produces a histogram, and also outputs the frequencies `n` and edge values `bin`.
 
@@ -583,6 +582,4 @@ plt.show()
 Although the plotted data still contains a large amount of variation/noise, we appear to have done a reasonable job of identifying a circadian rhythm, with the basal heart rate for this person being around 61-62bpm with a daily (resting) variation of $\pm$4bpm.
 
 In their research paper, the authors found that the circadian rhythms for some of their volunteers did not align with the sleep-wake cycle. For instance, one of their participants was undertaking shift work, but their daily heart-rate cycle remained aligned to a standard day/night pattern.
-
-_________
 ````

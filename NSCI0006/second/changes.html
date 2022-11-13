@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>3. Rates of change &#8212; Mathematics for Natural Sciences B</title>
+    <title>7. Rates of change &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -39,6 +39,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -59,7 +60,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Placeholder" href="../third/placeholder.html" />
-    <link rel="prev" title="2. Know your limits" href="limits.html" />
+    <link rel="prev" title="6. Know your limits" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -142,29 +143,29 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../first/curvefit.html">
-   4. Curve fitting
+   4. Fitting curves
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  RATES OF CHANGE
+  INFINITESIMALS
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="pfrac.html">
-   1. Rational functions
+   5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="limits.html">
-   2. Know your limits
+   6. Know your limits
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Rates of change
+   7. Rates of change
   </a>
  </li>
 </ul>
@@ -188,17 +189,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   1. Chemical concentrations
+   8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   2. Freshwater sustainability
+   9. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   3. Viral trends
+   10. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/faustmann.html">
+   11. Forestry management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/homework.html">
+   Maths coursework 1 [20%]
   </a>
  </li>
 </ul>
@@ -426,105 +444,105 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   3.1. Motivation
+   7.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estimating-slope-of-a-curve">
-   3.2. Estimating slope of a curve
+   7.2. Estimating slope of a curve
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-principle">
-   3.3. Differentiation principle
+   7.3. Differentiation principle
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#polynomials">
-     3.3.1. Polynomials
+     7.3.1. Polynomials
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exponentials">
-     3.3.2. Exponentials
+     7.3.2. Exponentials
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operator-notation">
-     3.3.3. Operator notation
+     7.3.3. Operator notation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lagranges-notation">
-     3.3.4. Lagrange’s notation
+     7.3.4. Lagrange’s notation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-rules">
-   3.4. Differentiation rules
+   7.4. Differentiation rules
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sum-rule">
-     3.4.1. Sum rule:
+     7.4.1. Sum rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#product-rule">
-     3.4.2. Product rule:
+     7.4.2. Product rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chain-rule">
-     3.4.3. Chain rule:
+     7.4.3. Chain rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reciprocal-rule">
-     3.4.4. Reciprocal rule:
+     7.4.4. Reciprocal rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#difficult-derivatives">
-     3.4.5. Difficult derivatives
+     7.4.5. Difficult derivatives
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tangent-and-normal">
-   3.5. Tangent and normal
+   7.5. Tangent and normal
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tangent">
-     3.5.1. Tangent
+     7.5.1. Tangent
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#normal">
-     3.5.2. Normal
+     7.5.2. Normal
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-points">
-   3.6. Stationary points
+   7.6. Stationary points
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-by-hand">
-     3.6.1. Classification by hand
+     7.6.1. Classification by hand
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#manoeuvring-a-ladder">
-   3.7. Manoeuvring a ladder
+   7.7. Manoeuvring a ladder
   </a>
  </li>
 </ul>
@@ -548,105 +566,105 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   3.1. Motivation
+   7.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estimating-slope-of-a-curve">
-   3.2. Estimating slope of a curve
+   7.2. Estimating slope of a curve
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-principle">
-   3.3. Differentiation principle
+   7.3. Differentiation principle
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#polynomials">
-     3.3.1. Polynomials
+     7.3.1. Polynomials
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exponentials">
-     3.3.2. Exponentials
+     7.3.2. Exponentials
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operator-notation">
-     3.3.3. Operator notation
+     7.3.3. Operator notation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lagranges-notation">
-     3.3.4. Lagrange’s notation
+     7.3.4. Lagrange’s notation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-rules">
-   3.4. Differentiation rules
+   7.4. Differentiation rules
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sum-rule">
-     3.4.1. Sum rule:
+     7.4.1. Sum rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#product-rule">
-     3.4.2. Product rule:
+     7.4.2. Product rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chain-rule">
-     3.4.3. Chain rule:
+     7.4.3. Chain rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reciprocal-rule">
-     3.4.4. Reciprocal rule:
+     7.4.4. Reciprocal rule:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#difficult-derivatives">
-     3.4.5. Difficult derivatives
+     7.4.5. Difficult derivatives
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tangent-and-normal">
-   3.5. Tangent and normal
+   7.5. Tangent and normal
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tangent">
-     3.5.1. Tangent
+     7.5.1. Tangent
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#normal">
-     3.5.2. Normal
+     7.5.2. Normal
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-points">
-   3.6. Stationary points
+   7.6. Stationary points
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-by-hand">
-     3.6.1. Classification by hand
+     7.6.1. Classification by hand
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#manoeuvring-a-ladder">
-   3.7. Manoeuvring a ladder
+   7.7. Manoeuvring a ladder
   </a>
  </li>
 </ul>
@@ -660,7 +678,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rates-of-change">
-<h1><span class="section-number">3. </span>Rates of change<a class="headerlink" href="#rates-of-change" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7. </span>Rates of change<a class="headerlink" href="#rates-of-change" title="Permalink to this heading">#</a></h1>
 <p>In this chapter we introduce the concept of a derivative and some standard results. After completing this chapter you should be able to:</p>
 <ul class="simple">
 <li><p>obtain a numeric estimate of the derivative using data points representing a curve</p></li>
@@ -675,13 +693,13 @@ title="Print to PDF"
 <p>The philosophical and political dimension of the debate between Leibniz and Newton should not escape our attention. They disagreed over issues concerning the foundations of the calculus: Newton was convinced of the superiority of his method of limits over Leibniz’s mathematical practice where infinitesimals occurred. They were divided over physical questions such as the nature of gravity, time and space, atoms and the void, as well as the issue of which quantities are properly conserved by the laws of nature. In short, they were not just mathematical opponents: they were philosophical enemies as well.</p>
 </div>
 <section id="motivation">
-<h2><span class="section-number">3.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
 <p>Much of what we do in the natural sciences is concerned with studying the relationships between variables. We often consider the effect of changing one variable upon the other, which we call the dependent variable. For instance, we might consider how changing CO2 levels affect global temperatures, how student debt grows over time, or the way that a drug binds to biological receptors as a function of the chemical concentration.</p>
 <p>In such problems it is natural to find ourselves discussing the <em>rate of change</em> of the dependent variable, which can be represented graphically by the slope of the function curve. Indeed, when we looked at student debt we saw that characterising the growth rate is a fundamental idea of the exponential model.</p>
 <p>We also use these ideas very naturally in our day-to-day activities - such as guesstimating how long a bathtub will take to fill at a given rate, how long a cup of tea will take to cool, or how long it will take to reach our journey destination at the current speed. In many scenarios a back-of-an-envelope calculation can be made by assuming a constant rate of change to provide a useful result. To do this for a nonlinear model function we require a method to estimate the rate of change at each point on the curve.</p>
 <div class="exercise admonition" id="second/changes-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.1 </span></p>
 <section id="exercise-content">
 <p>You are studying a new blood pressure drug. At a dose of 5mg the slope of the dose-response curve is -2 mmHg/mg. Approximately how much would a patient’s blood pressure change if the drug dose was increased to 5.1mg?</p>
 </section>
@@ -704,7 +722,7 @@ title="Print to PDF"
 </section>
 <hr class="docutils" />
 <section id="estimating-slope-of-a-curve">
-<h2><span class="section-number">3.2. </span>Estimating slope of a curve<a class="headerlink" href="#estimating-slope-of-a-curve" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.2. </span>Estimating slope of a curve<a class="headerlink" href="#estimating-slope-of-a-curve" title="Permalink to this heading">#</a></h2>
 <p>We can obtain an approximation to a curve by joining up a set of points with straight lines. This is known as a “linear interpolation”. It is the approach we used to plot curves in the previous sections of these notes. For example, the following code produces a plot of <span class="math notranslate nohighlight">\(y=x^2\)</span>, using 30 data points connected by straight lines.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -905,42 +923,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_imgc98892bf9bb0469a81182de40c851e2a">
+  <img id="_anim_img5aad70280e594007a169b83fa54ece54">
   <div class="anim-controls">
-    <input id="_anim_sliderc98892bf9bb0469a81182de40c851e2a" type="range" class="anim-slider"
+    <input id="_anim_slider5aad70280e594007a169b83fa54ece54" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="animc98892bf9bb0469a81182de40c851e2a.set_frame(parseInt(this.value));">
+           oninput="anim5aad70280e594007a169b83fa54ece54.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="animc98892bf9bb0469a81182de40c851e2a.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim5aad70280e594007a169b83fa54ece54.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="animc98892bf9bb0469a81182de40c851e2a.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim5aad70280e594007a169b83fa54ece54.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="animc98892bf9bb0469a81182de40c851e2a.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim5aad70280e594007a169b83fa54ece54.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="animc98892bf9bb0469a81182de40c851e2a.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim5aad70280e594007a169b83fa54ece54.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="animc98892bf9bb0469a81182de40c851e2a.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim5aad70280e594007a169b83fa54ece54.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="animc98892bf9bb0469a81182de40c851e2a.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim5aad70280e594007a169b83fa54ece54.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="animc98892bf9bb0469a81182de40c851e2a.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim5aad70280e594007a169b83fa54ece54.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="animc98892bf9bb0469a81182de40c851e2a.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim5aad70280e594007a169b83fa54ece54.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="animc98892bf9bb0469a81182de40c851e2a.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim5aad70280e594007a169b83fa54ece54.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectc98892bf9bb0469a81182de40c851e2a"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select5aad70280e594007a169b83fa54ece54"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_c98892bf9bb0469a81182de40c851e2a"
+      <input type="radio" name="state" value="once" id="_anim_radio1_5aad70280e594007a169b83fa54ece54"
              >
-      <label for="_anim_radio1_c98892bf9bb0469a81182de40c851e2a">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_c98892bf9bb0469a81182de40c851e2a"
+      <label for="_anim_radio1_5aad70280e594007a169b83fa54ece54">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_5aad70280e594007a169b83fa54ece54"
              checked>
-      <label for="_anim_radio2_c98892bf9bb0469a81182de40c851e2a">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_c98892bf9bb0469a81182de40c851e2a"
+      <label for="_anim_radio2_5aad70280e594007a169b83fa54ece54">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_5aad70280e594007a169b83fa54ece54"
              >
-      <label for="_anim_radio3_c98892bf9bb0469a81182de40c851e2a">Reflect</label>
+      <label for="_anim_radio3_5aad70280e594007a169b83fa54ece54">Reflect</label>
     </form>
   </div>
 </div>
@@ -950,9 +968,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_imgc98892bf9bb0469a81182de40c851e2a";
-    var slider_id = "_anim_sliderc98892bf9bb0469a81182de40c851e2a";
-    var loop_select_id = "_anim_loop_selectc98892bf9bb0469a81182de40c851e2a";
+    var img_id = "_anim_img5aad70280e594007a169b83fa54ece54";
+    var slider_id = "_anim_slider5aad70280e594007a169b83fa54ece54";
+    var loop_select_id = "_anim_loop_select5aad70280e594007a169b83fa54ece54";
     var frames = new Array(13);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -4611,7 +4629,7 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        animc98892bf9bb0469a81182de40c851e2a = new Animation(frames, img_id, slider_id, 200.0,
+        anim5aad70280e594007a169b83fa54ece54 = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -4637,7 +4655,7 @@ s_k = \left[\frac{\Delta y}{\Delta x}\right]_k = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
 </div>
 <div class="exercise admonition" id="second/changes-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.2 </span></p>
 <section id="exercise-content">
 <p>Plot a numeric estimate of the slope at each point in the interval <span class="math notranslate nohighlight">\(-\pi\leq x \leq \pi\)</span> for the function</p>
 <div class="amsmath math notranslate nohighlight">
@@ -4663,13 +4681,13 @@ y(x)=\sin(x)+x
 </div>
 </section>
 <section id="differentiation-principle">
-<h2><span class="section-number">3.3. </span>Differentiation principle<a class="headerlink" href="#differentiation-principle" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.3. </span>Differentiation principle<a class="headerlink" href="#differentiation-principle" title="Permalink to this heading">#</a></h2>
 <p>Based on our argument that the interpolation is improved when the datapoints are closer together, we can obtain a better numeric estimate of the slope by using more datapoints in the interval.</p>
 <p>Analytically, we can obtain the result with infinite precision by taking the limit as <span class="math notranslate nohighlight">\(\Delta x\to 0\)</span>. We call the result “the derivative”, and we denote it by</p>
 <div class="math notranslate nohighlight" id="equation-diffdef">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-diffdef" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = \lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x} =\lim_{\Delta x \to 0}\frac{y(x+\Delta x)-y(x)}{\Delta x}.\]</div>
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-diffdef" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = \lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x} =\lim_{\Delta x \to 0}\frac{y(x+\Delta x)-y(x)}{\Delta x}.\]</div>
 <section id="polynomials">
-<h3><span class="section-number">3.3.1. </span>Polynomials<a class="headerlink" href="#polynomials" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.3.1. </span>Polynomials<a class="headerlink" href="#polynomials" title="Permalink to this heading">#</a></h3>
 <p>We can apply the analytic definition above to find the derivatives of polynomials from first principles.</p>
 <p>By way of example, let’s consider the function <span class="math notranslate nohighlight">\(y(x)=x^2\)</span>.
 Using the definition we have</p>
@@ -4685,7 +4703,7 @@ Using the definition we have</p>
 \end{equation*}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.3 </span></p>
 <section id="exercise-content">
 <p>Calculate the derivative of <span class="math notranslate nohighlight">\(y=x^n\)</span> from first principles, where <span class="math notranslate nohighlight">\(n\)</span> is a natural number. (1,2,3,…)</p>
 </section>
@@ -4698,7 +4716,7 @@ Using the definition we have</p>
 </section>
 <hr class="docutils" />
 <section id="exponentials">
-<h3><span class="section-number">3.3.2. </span>Exponentials<a class="headerlink" href="#exponentials" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.3.2. </span>Exponentials<a class="headerlink" href="#exponentials" title="Permalink to this heading">#</a></h3>
 <p>For the function <span class="math notranslate nohighlight">\(y=e^x\)</span> we have</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -4711,16 +4729,16 @@ Using the definition we have</p>
 \end{equation*}\]</div>
 </section>
 <section id="operator-notation">
-<h3><span class="section-number">3.3.3. </span>Operator notation<a class="headerlink" href="#operator-notation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.3.3. </span>Operator notation<a class="headerlink" href="#operator-notation" title="Permalink to this heading">#</a></h3>
 <p>We can think of differentiation as an <em>operation</em> that we carry out on a function. With this in mind, we also use the following notation in which <span class="math notranslate nohighlight">\(\mathrm{d}/\mathrm{d}x\)</span> represents the differential operator</p>
 <div class="math notranslate nohighlight" id="equation-opnot">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-opnot" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\biggr(y\biggr).\]</div>
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-opnot" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\biggr(y\biggr).\]</div>
 <p>This notation can be straightforwardly extended to use for repeated differentiation. For example, the “second derivative” is given by</p>
 <div class="math notranslate nohighlight" id="equation-opnot2">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-opnot2" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\biggr(\frac{\mathrm{d}y}{\mathrm{d}x}\biggr) = \frac{\mathrm{d}^2}{\mathrm{d}x^2}\biggr(y\biggr).\]</div>
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-opnot2" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\biggr(\frac{\mathrm{d}y}{\mathrm{d}x}\biggr) = \frac{\mathrm{d}^2}{\mathrm{d}x^2}\biggr(y\biggr).\]</div>
 <div class="exercise admonition" id="second/changes-exercise-3">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.9 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.4 </span></p>
 <section id="exercise-content">
 <p>Find the second derivative of <span class="math notranslate nohighlight">\(y=x^4\)</span>.</p>
 </section>
@@ -4732,7 +4750,7 @@ Using the definition we have</p>
 <p>In general, the <span class="math notranslate nohighlight">\(n^{\textrm{th}}\)</span> derivative is denoted by <span class="math notranslate nohighlight">\(\frac{\mathrm{d}^n}{\mathrm{d}x^n}\)</span>.</p>
 </section>
 <section id="lagranges-notation">
-<h3><span class="section-number">3.3.4. </span>Lagrange’s notation<a class="headerlink" href="#lagranges-notation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.3.4. </span>Lagrange’s notation<a class="headerlink" href="#lagranges-notation" title="Permalink to this heading">#</a></h3>
 <p>An alternative notation uses a prime mark to denote the derivative in the following manner:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -4746,18 +4764,18 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </section>
 </section>
 <section id="differentiation-rules">
-<h2><span class="section-number">3.4. </span>Differentiation rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.4. </span>Differentiation rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this heading">#</a></h2>
 <p>The following rules can all be proved from the limit definition</p>
 <section id="sum-rule">
-<h3><span class="section-number">3.4.1. </span>Sum rule:<a class="headerlink" href="#sum-rule" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.1. </span>Sum rule:<a class="headerlink" href="#sum-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=u(x)+v(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-84ff50ee-557c-4524-9961-6dd1deb657f1">
-<span class="eqno">(3.11)<a class="headerlink" href="#equation-84ff50ee-557c-4524-9961-6dd1deb657f1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-41404dca-14b0-4f86-9ed6-6b0ca56c9d82">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-41404dca-14b0-4f86-9ed6-6b0ca56c9d82" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x}\biggr(u+v\biggr)=\frac{\mathrm{d}u}{\mathrm{d}x}+\frac{\mathrm{d}v}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-4">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.10 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.5 </span></p>
 <section id="exercise-content">
 <p>Use the sum rule to calculate the derivative of <span class="math notranslate nohighlight">\(y=x^3+e^x\)</span></p>
 </section>
@@ -4767,15 +4785,15 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </div>
 </section>
 <section id="product-rule">
-<h3><span class="section-number">3.4.2. </span>Product rule:<a class="headerlink" href="#product-rule" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.2. </span>Product rule:<a class="headerlink" href="#product-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=u(x)v(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c85fcba5-4c55-4bcc-bfd6-ede6d741b3e3">
-<span class="eqno">(3.12)<a class="headerlink" href="#equation-c85fcba5-4c55-4bcc-bfd6-ede6d741b3e3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-79ffbf88-d282-43bd-abb0-e06ae366b356">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-79ffbf88-d282-43bd-abb0-e06ae366b356" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x}\biggr(uv\biggr)=u\frac{\mathrm{d}v}{\mathrm{d}x}+v\frac{\mathrm{d}u}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-5">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.11 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.6 </span></p>
 <section id="exercise-content">
 <p>Use the product rule to calculate the derivative of <span class="math notranslate nohighlight">\(x^3e^x\)</span></p>
 </section>
@@ -4785,15 +4803,15 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </div>
 </section>
 <section id="chain-rule">
-<h3><span class="section-number">3.4.3. </span>Chain rule:<a class="headerlink" href="#chain-rule" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.3. </span>Chain rule:<a class="headerlink" href="#chain-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=y(u)\)</span> where <span class="math notranslate nohighlight">\(u=u(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e87c2fa-717a-4dd7-baa8-ea8849ed465e">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-0e87c2fa-717a-4dd7-baa8-ea8849ed465e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-74adcf4d-ff39-44cb-8884-4099e5689c3b">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-74adcf4d-ff39-44cb-8884-4099e5689c3b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u}\frac{\mathrm{d}u}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-6">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.12 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.7 </span></p>
 <section id="exercise-content">
 <p>Use the chain rule to find the derivative of <span class="math notranslate nohighlight">\(y=e^{x^3}\)</span></p>
 </section>
@@ -4803,15 +4821,15 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </div>
 </section>
 <section id="reciprocal-rule">
-<h3><span class="section-number">3.4.4. </span>Reciprocal rule:<a class="headerlink" href="#reciprocal-rule" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.4. </span>Reciprocal rule:<a class="headerlink" href="#reciprocal-rule" title="Permalink to this heading">#</a></h3>
 <p>As a special case of the chain rule we may derive the following result:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d5a49b2d-0626-4132-a2be-0f760f48eed6">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-d5a49b2d-0626-4132-a2be-0f760f48eed6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a84da2a6-bc16-4b8e-b6a5-baa8d192c4b1">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-a84da2a6-bc16-4b8e-b6a5-baa8d192c4b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}y}{\mathrm{d}y} = \frac{\mathrm{d}y}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}y} \qquad \implies \quad \frac{\mathrm{d}y}{\mathrm{d}x} = 1\biggr/\frac{\mathrm{d}x}{\mathrm{d}y}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-7">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.13 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.8 </span></p>
 <section id="exercise-content">
 <p>Use the reciprocal rule to find the derivative of <span class="math notranslate nohighlight">\(y=\ln(x)\)</span>.</p>
 <p><em>Hint: start by rearranging the given equation so that you can use the known result for the derivative of the exponential function.</em></p>
@@ -4826,7 +4844,7 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </div>
 </section>
 <section id="difficult-derivatives">
-<h3><span class="section-number">3.4.5. </span>Difficult derivatives<a class="headerlink" href="#difficult-derivatives" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.5. </span>Difficult derivatives<a class="headerlink" href="#difficult-derivatives" title="Permalink to this heading">#</a></h3>
 <p>You can use the symbolic mathematics library <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to find the derivative of functions in Python if you are not able to differentiate them by hand. The code below gives an example for the derivative of <span class="math notranslate nohighlight">\(y=e^x\sin(x^2)\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
@@ -4837,7 +4855,7 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <p><span class="math notranslate nohighlight">\(\displaystyle 2xe^x\cos(x^2)+e^x\sin(x^2)\)</span></p>
 <div class="exercise admonition" id="second/changes-exercise-8">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.14 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.9 </span></p>
 <section id="exercise-content">
 <p>Could you verify this result by hand, given that the derivative of <span class="math notranslate nohighlight">\(\sin(x)\)</span> is <span class="math notranslate nohighlight">\(\cos(x)\)</span> ?</p>
 </section>
@@ -4867,7 +4885,7 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 </section>
 </section>
 <section id="tangent-and-normal">
-<h2><span class="section-number">3.5. </span>Tangent and normal<a class="headerlink" href="#tangent-and-normal" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.5. </span>Tangent and normal<a class="headerlink" href="#tangent-and-normal" title="Permalink to this heading">#</a></h2>
 <p>The equation of a line through point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> with slope <span class="math notranslate nohighlight">\(m\)</span> is given by</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -4875,10 +4893,10 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 \end{equation*}\]</div>
 <p>The equation follows directly from the fact that the slope of the line is constant and therefore for any two point <span class="math notranslate nohighlight">\((x,y)\)</span> on the line the ratio <span class="math notranslate nohighlight">\(\Delta y/\Delta x\)</span> is equal to <span class="math notranslate nohighlight">\(m\)</span>.</p>
 <section id="tangent">
-<h3><span class="section-number">3.5.1. </span>Tangent<a class="headerlink" href="#tangent" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.1. </span>Tangent<a class="headerlink" href="#tangent" title="Permalink to this heading">#</a></h3>
 <p>The tangent line at a given point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> on a curve is defined as the line with the same slope as the curve. The equation is therefore given by the following result, in which the notation <span class="math notranslate nohighlight">\([]_{x=x_0}\)</span> means that the enclosed expression is evaluated at <span class="math notranslate nohighlight">\(x=x_0\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-03a87ce5-39e0-4c41-bb00-cbb7f2079e19">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-03a87ce5-39e0-4c41-bb00-cbb7f2079e19" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-506a2b7c-864d-4b93-9a91-9c5896ca709a">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-506a2b7c-864d-4b93-9a91-9c5896ca709a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{y-y_0}{x-x_0}=m, \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
 \end{equation}\]</div>
 <p>The code below illustrates how we can use this definition to plot the tangent to the curve <span class="math notranslate nohighlight">\(y=x^2\)</span>, using the analytic derivative <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x}=2x\)</span>.</p>
@@ -4919,12 +4937,12 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <figure class="align-default" id="tangents-01">
 <img alt="../_images/tangents.png" src="../_images/tangents.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text"><span class="math notranslate nohighlight">\(y=x^2\)</span> and its tangent at <span class="math notranslate nohighlight">\(x=0.2,\ 1.2\)</span></span><a class="headerlink" href="#tangents-01" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text"><span class="math notranslate nohighlight">\(y=x^2\)</span> and its tangent at <span class="math notranslate nohighlight">\(x=0.2,\ 1.2\)</span></span><a class="headerlink" href="#tangents-01" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="second/changes-exercise-9">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.15 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.10 </span></p>
 <section id="exercise-content">
 <p>The number of species <span class="math notranslate nohighlight">\(S\)</span> living on an island or habitat fragment of area <span class="math notranslate nohighlight">\(A\)</span> can be modelled as</p>
 <div class="amsmath math notranslate nohighlight">
@@ -4982,10 +5000,10 @@ S = (A-A_c)+S_c.
 </div>
 </section>
 <section id="normal">
-<h3><span class="section-number">3.5.2. </span>Normal<a class="headerlink" href="#normal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.2. </span>Normal<a class="headerlink" href="#normal" title="Permalink to this heading">#</a></h3>
 <p>The gradient of the normal (perpendicular) line to the tangent is <span class="math notranslate nohighlight">\(-1/m\)</span>. The equation of the normal line is therefore given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-afe75ec6-4167-49cd-8560-774a4a8e077c">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-afe75ec6-4167-49cd-8560-774a4a8e077c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5b9d5f08-f2f2-4fcb-b94e-7265ac7f80d3">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-5b9d5f08-f2f2-4fcb-b94e-7265ac7f80d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \quad \frac{y-y_0}{x-x_0}=-\frac{1}{m} \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
 \end{equation}\]</div>
 <p>The justification for this result is illustrated below, using the similarity of the two illustrated triangles.</p>
@@ -5000,7 +5018,7 @@ m= \frac{x-x_0}{-(y-y_0)} \implies \frac{y-y_0}{x-x_0}=-\frac{1}{m}
 </div>
 <div class="exercise admonition" id="second/changes-exercise-10">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.16 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.11 </span></p>
 <section id="exercise-content">
 <p>Differentiate <span class="math notranslate nohighlight">\(y=x^4-2x^2\)</span> and hence</p>
 <p>(i) Calculate the equation of the tangent to this curve at <span class="math notranslate nohighlight">\(x=3\)</span><br>
@@ -5023,10 +5041,10 @@ m= \frac{x-x_0}{-(y-y_0)} \implies \frac{y-y_0}{x-x_0}=-\frac{1}{m}
 </section>
 </section>
 <section id="stationary-points">
-<h2><span class="section-number">3.6. </span>Stationary points<a class="headerlink" href="#stationary-points" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.6. </span>Stationary points<a class="headerlink" href="#stationary-points" title="Permalink to this heading">#</a></h2>
 <p>In some applications we need to find points where the rate of change of a function <span class="math notranslate nohighlight">\(y(x)\)</span> is zero. At these so-called “stationary points” the curve representing the function is flat. By way of example, we will consider the function</p>
 <div class="math notranslate nohighlight" id="equation-cubic-fun">
-<span class="eqno">(3.17)<a class="headerlink" href="#equation-cubic-fun" title="Permalink to this equation">#</a></span>\[y(x)=-x^3+9x^2-24x+20=0.\]</div>
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-cubic-fun" title="Permalink to this equation">#</a></span>\[y(x)=-x^3+9x^2-24x+20=0.\]</div>
 <p>A plot of the function on the domain <span class="math notranslate nohighlight">\([0,5]\)</span> is shown below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -5062,9 +5080,9 @@ f^{\prime}(x)&amp;=-3 x^2+18x-24 \\
 <p><code class="docutils literal notranslate"><span class="pre">2.0000014309459067</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">3.9999985690515034</span></code></p>
 <section id="classification-by-hand">
-<h3><span class="section-number">3.6.1. </span>Classification by hand<a class="headerlink" href="#classification-by-hand" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.6.1. </span>Classification by hand<a class="headerlink" href="#classification-by-hand" title="Permalink to this heading">#</a></h3>
 <p>We can classify stationary points without the use of a plot by looking algebraically at the slope of the curve either side of each stationary point. This can be useful if we want to find general results that do not rely on producing a plot for each scenario.</p>
-<p>It is convenient to record the results in a table, as demonstrated below for the function <a class="reference internal" href="#equation-cubic-fun">(3.17)</a>. We know that the gradient changes sign only at the points :x=2 and x=4, so we can conveniently choose the test points as follows.</p>
+<p>It is convenient to record the results in a table, as demonstrated below for the function <a class="reference internal" href="#equation-cubic-fun">(7.10)</a>. We know that the gradient changes sign only at the points :x=2 and x=4, so we can conveniently choose the test points as follows.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -5088,7 +5106,7 @@ f^{\prime}(x)&amp;=-3 x^2+18x-24 \\
 <p>From the table, we can infer that <span class="math notranslate nohighlight">\(x=2\)</span> is a local minimum and <span class="math notranslate nohighlight">\(x=4\)</span> is a local maximum.</p>
 <div class="exercise admonition" id="second/changes-exercise-11">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.17 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.12 </span></p>
 <section id="exercise-content">
 <p>Can you guess the sign of the second derivative at the points <span class="math notranslate nohighlight">\(x=2,4\)</span> ?</p>
 </section>
@@ -5111,13 +5129,13 @@ f^{\prime}(x)&amp;=-3 x^2+18x-24 \\
 <figure class="align-default" id="x-cubed">
 <img alt="../_images/thecubic.png" src="../_images/thecubic.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">[Left] <span class="math notranslate nohighlight">\(y=x^3\)</span>,  [Right] <span class="math notranslate nohighlight">\(y=3x^2\)</span>.<br>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text">[Left] <span class="math notranslate nohighlight">\(y=x^3\)</span>,  [Right] <span class="math notranslate nohighlight">\(y=3x^2\)</span>.<br>
 The cubic has an inflection point at <span class="math notranslate nohighlight">\(x=0.\)</span></span><a class="headerlink" href="#x-cubed" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="second/changes-exercise-12">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.18 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.13 </span></p>
 <section id="exercise-content">
 <p>Show that the function <span class="math notranslate nohighlight">\(f(x)=x^4-8x^3+24x^2-32x+23\)</span> has a stationary point at <span class="math notranslate nohighlight">\(x=2.\)</span></p>
 <p>What does the result <span class="math notranslate nohighlight">\(f^{\prime\prime}(2)\)</span> tell you about this point? Is this point a local maximum/minimum/inflection?</p>
@@ -5135,18 +5153,18 @@ The cubic has an inflection point at <span class="math notranslate nohighlight">
 </section>
 </section>
 <section id="manoeuvring-a-ladder">
-<h2><span class="section-number">3.7. </span>Manoeuvring a ladder<a class="headerlink" href="#manoeuvring-a-ladder" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.7. </span>Manoeuvring a ladder<a class="headerlink" href="#manoeuvring-a-ladder" title="Permalink to this heading">#</a></h2>
 <p>The figure below illustrates the problem of getting an object around a corner between two corridors. We will imagine that the object has extendable length so that at any angle of placement <span class="math notranslate nohighlight">\(\theta\)</span> it <em>just touches</em> the corner and the walls of each corridor.</p>
 <p>By calculating the length for each angle we will be able to find the maximum length of object that will fit around the corner.</p>
 <figure class="align-default" id="sofa">
 <img alt="../_images/sofa.png" src="../_images/sofa.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Getting an object around a corner. The object is shown in blue, and the corridor widths have been denoted by <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(w\)</span>. It is assumed here that the object is very thin, relative to the size of the corridors.</span><a class="headerlink" href="#sofa" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Getting an object around a corner. The object is shown in blue, and the corridor widths have been denoted by <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(w\)</span>. It is assumed here that the object is very thin, relative to the size of the corridors.</span><a class="headerlink" href="#sofa" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="exercise admonition" id="second/changes-exercise-13">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.19 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.14 </span></p>
 <section id="exercise-content">
 <p>Find an expression for the length of the line <span class="math notranslate nohighlight">\(L\)</span> in terms of <span class="math notranslate nohighlight">\(\theta,h,w\)</span>, and plot <span class="math notranslate nohighlight">\(L(\theta)\)</span> for the case when <span class="math notranslate nohighlight">\(h=1\)</span>, <span class="math notranslate nohighlight">\(w=3\)</span>. Use your result for <span class="math notranslate nohighlight">\(L(\theta)\)</span> to find the longest object that will fit around the corner.</p>
 </section>
@@ -5233,7 +5251,7 @@ y=m x, \qquad m=\tan(\theta).
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Know your limits</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Know your limits</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../third/placeholder.html" title="next page">

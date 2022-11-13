@@ -39,6 +39,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -58,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Curve fitting" href="curvefit.html" />
+    <link rel="next" title="4. Fitting curves" href="curvefit.html" />
     <link rel="prev" title="2. Graphing data" href="plotstuff.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -142,29 +143,29 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="curvefit.html">
-   4. Curve fitting
+   4. Fitting curves
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  RATES OF CHANGE
+  INFINITESIMALS
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../second/pfrac.html">
-   1. Rational functions
+   5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/limits.html">
-   2. Know your limits
+   6. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/changes.html">
-   3. Rates of change
+   7. Rates of change
   </a>
  </li>
 </ul>
@@ -188,17 +189,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   1. Chemical concentrations
+   8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   2. Freshwater sustainability
+   9. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   3. Viral trends
+   10. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/faustmann.html">
+   11. Forestry management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/homework.html">
+   Maths coursework 1 [20%]
   </a>
  </li>
 </ul>
@@ -639,8 +657,8 @@ k=\frac{D_{step}}{T_{step}}=\frac{D_b-D_a}{T_b-T_a}
 <section id="exponential-relationships">
 <h2><span class="section-number">3.2. </span>Exponential relationships<a class="headerlink" href="#exponential-relationships" title="Permalink to this heading">#</a></h2>
 <p>An exponential relationship has the following form, where <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are constants:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-026d0460-8d00-46c7-a396-584f9fc23194">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-026d0460-8d00-46c7-a396-584f9fc23194" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-df7b2b71-5b6a-4957-aaca-ea3ac6ac4218">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-df7b2b71-5b6a-4957-aaca-ea3ac6ac4218" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y=y_0 k^x.
 \end{equation}\]</div>
 <p>In the previous section on student loans we saw an example with <span class="math notranslate nohighlight">\(k=1.168.\)</span> The plot below shows how the exponential curve looks for some other values of <span class="math notranslate nohighlight">\(k\)</span>, taking <span class="math notranslate nohighlight">\(y_0=1\)</span>. By putting <span class="math notranslate nohighlight">\(x=0\)</span> we obtain <span class="math notranslate nohighlight">\(y=y_0\)</span>, so this is the value at which the curve meets the vertical axis.</p>
@@ -662,8 +680,8 @@ y=y_0 k^x.
 </figcaption>
 </figure>
 <p>Notice that the plots for <span class="math notranslate nohighlight">\(k=0.5\)</span> and <span class="math notranslate nohighlight">\(k=2.0\)</span> are mirror images in the vertical axis. This can be understood from the laws of exponents:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8511248b-5363-41d1-883c-315561c8bc83">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-8511248b-5363-41d1-883c-315561c8bc83" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fa9768f0-af3c-431e-a547-60f1cb5f4c19">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-fa9768f0-af3c-431e-a547-60f1cb5f4c19" title="Permalink to this equation">#</a></span>\[\begin{equation}
 k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
 \end{equation}\]</div>
 <p>We can describe the shape of the exponential curve for values of the positive constant <span class="math notranslate nohighlight">\(k\)</span> :</p>
@@ -875,13 +893,13 @@ y=\text{log10}(x) \quad \iff \quad 10^y=x \quad \iff \quad \left(e^{\ln(10)}\rig
 y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
 \end{equation*}\]</div>
 <p>Since we originally defined <span class="math notranslate nohighlight">\(y\)</span> as the base 10 logarithm of <span class="math notranslate nohighlight">\(x\)</span> we have the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c30130a-3f23-4fd1-a61f-dbeec7021e28">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-0c30130a-3f23-4fd1-a61f-dbeec7021e28" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2fa3314d-dc48-48ef-9e01-a4fe99d8f457">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-2fa3314d-dc48-48ef-9e01-a4fe99d8f457" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{log10}(x) = \frac{\ln(x)}{\ln(10)}.
 \end{equation}\]</div>
 <p>By using exactly the same algebra we can dwmonstrate that the analogous result applies to the logarithm in any base:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71843061-2a8f-42c0-84f4-768754f3bd52">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-71843061-2a8f-42c0-84f4-768754f3bd52" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4f4340ae-b599-4900-9809-5d54db1a1bd9">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-4f4340ae-b599-4900-9809-5d54db1a1bd9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \log_k(x) = \frac{\ln(x)}{\ln(k)}.
 \end{equation}\]</div>
 <p>We can also use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base:</p>
@@ -969,7 +987,7 @@ y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
     <a class='right-next' id="next-link" href="curvefit.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Curve fitting</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Fitting curves</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

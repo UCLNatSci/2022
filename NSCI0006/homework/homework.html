@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Placeholder &#8212; Mathematics for Natural Sciences B</title>
+    <title>Maths coursework 1 [20%] &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -39,6 +39,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -54,8 +55,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="11. Forestry management" href="../case-studies/faustmann.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -138,29 +142,29 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../first/curvefit.html">
-   4. Curve fitting
+   4. Fitting curves
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  RATES OF CHANGE
+  INFINITESIMALS
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="pfrac.html">
-   1. Rational functions
+  <a class="reference internal" href="../second/pfrac.html">
+   5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="limits.html">
-   2. Know your limits
+  <a class="reference internal" href="../second/limits.html">
+   6. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="changes.html">
-   3. Rates of change
+  <a class="reference internal" href="../second/changes.html">
+   7. Rates of change
   </a>
  </li>
 </ul>
@@ -184,17 +188,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   1. Chemical concentrations
+   8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   2. Freshwater sustainability
+   9. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   3. Viral trends
+   10. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/faustmann.html">
+   11. Forestry management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Maths coursework 1 [20%]
   </a>
  </li>
 </ul>
@@ -287,7 +308,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsecond/placeholder.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fhomework/homework.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -315,7 +336,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/second/placeholder.md"
+        <a href="../_sources/homework/homework.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -352,23 +373,138 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#freshwater-sustainability">
+   Freshwater sustainability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-15-5pt">
+     Exercise 2.15 [5pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-16-2pt">
+     Exercise 2.16 [2pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-17-3pt">
+     Exercise 2.17 [3pt]
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viral-trends">
+   Viral trends
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-20-3pt">
+     Exercise 3.20 [3pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-21-3pt">
+     Exercise 3.21 [3pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-22-2pt">
+     Exercise 3.22 [2pt]
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Placeholder</h1>
+                <h1>Maths coursework 1 [20%]</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#freshwater-sustainability">
+   Freshwater sustainability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-15-5pt">
+     Exercise 2.15 [5pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-16-2pt">
+     Exercise 2.16 [2pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-17-3pt">
+     Exercise 2.17 [3pt]
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viral-trends">
+   Viral trends
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-20-3pt">
+     Exercise 3.20 [3pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-21-3pt">
+     Exercise 3.21 [3pt]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-22-2pt">
+     Exercise 3.22 [2pt]
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -376,9 +512,82 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="placeholder">
-<h1>Placeholder<a class="headerlink" href="#placeholder" title="Permalink to this heading">#</a></h1>
-<p>Further chapters to follow.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="maths-coursework-1-20">
+<h1>Maths coursework 1 [20%]<a class="headerlink" href="#maths-coursework-1-20" title="Permalink to this heading">#</a></h1>
+<p>Your submission of the two case studies is worth 20% of the mark for this module. You will submit one pdf file for each of the case studies.</p>
+<p>There are ten marks available for the case study on <em>Freshwater sustainability</em> and eight marks available for the case study on <em>Viral trends</em>. A further two marks are available for:</p>
+<ul class="simple">
+<li><p><strong>[1] quality of presentation</strong> - your work should be submitted in finished form, not in the manner of a rough draft. Your answers should be presented in order, complete with written explanations and details of calculations where appropriate.</p></li>
+<li><p><strong>[1] standard of python code</strong> - your code should be presented in an organised and systematic way, with each line of code presented in order. It should be clear from the script what each step is used for. It may help if you add comments to your code using hashtags.</p></li>
+</ul>
+<section id="freshwater-sustainability">
+<h2>Freshwater sustainability<a class="headerlink" href="#freshwater-sustainability" title="Permalink to this heading">#</a></h2>
+<p>This part of the assignment can be completed either by hand or in word-processed format, or using a combination of both. However, your submission must be uploaded in the form of a single pdf document.</p>
+<p>You can use the <a class="reference external" href="https://wiki.ucl.ac.uk/display/ELearningStudentSupport/Office+Lens">Office Lens</a> app to scan in pages of work on your phone/tablet and then convert it to a .pdf.</p>
+<section id="exercise-2-15-5pt">
+<h3>Exercise 2.15 [5pt]<a class="headerlink" href="#exercise-2-15-5pt" title="Permalink to this heading">#</a></h3>
+<p><strong>Calculations :</strong></p>
+<p>Present the results of your calculations as a table of values. Give your answers to an appropriate level of precision and ensure that the units are correctly stated.</p>
+<p>You do not have to show the calculation steps for every country, but you must provide an example calculation for one of the countries.</p>
+<p>Consider how you want to do the calculations. Excel? Python? Your calculator? Use a tool that you think is most likely to give you an error-free answer.</p>
+<p>Two points will be awarded for a fully correct table of values and a clear, correct example calculation.</p>
+<div class="toggle docutils container">
+<ul class="simple">
+<li><p>A table of values that is provided without an example calculation will be awarded a maximum of one point</p></li>
+<li><p>An answer that contains numerical errors will be awarded a maximum of one point.</p></li>
+<li><p>An answer that does not handle units or precision correctly will be awarded a maximum of one point</p></li>
+</ul>
+</div>
+<p><strong>Written commentary:</strong></p>
+<p>The written commentary is worth three points. This means that you should aim to provide three short paragraphs that each contain a critical comment or assertion.</p>
+<p>The word “critical” is key. Descriptive statements such as “this one is bigger than that one” won’t earn any credit. Try to comment on explanations, implications, complexities and issues. This may require you to do a small amount of independent reading, but take care to write in your own words and give credit to any information sources you use.</p>
+</section>
+<section id="exercise-2-16-2pt">
+<h3>Exercise 2.16 [2pt]<a class="headerlink" href="#exercise-2-16-2pt" title="Permalink to this heading">#</a></h3>
+<p>For this question you are required to calculate the WSI value for each of the three countries listed. Your answer for each country should be a number.</p>
+<p>You must present your calculations because method marks will be awarded for this question. A drawing might help the clarity of your explanation.</p>
+<p>Your answer is worth two points. There is one point for a correct method and one point for correctly calculated values.</p>
+</section>
+<section id="exercise-2-17-3pt">
+<h3>Exercise 2.17 [3pt]<a class="headerlink" href="#exercise-2-17-3pt" title="Permalink to this heading">#</a></h3>
+<p>One point will be awarded for correct calculation of the per-capita daily world BFW using the data given in the tables.</p>
+<p>One point will be awarded for the UK per-capita BWF using the value of 8880Mm3 given in the research paper.</p>
+<p>The question also asks for a comment, which is worth one point. Skim through the research paper to inform your answer!</p>
+</section>
+</section>
+<section id="viral-trends">
+<h2>Viral trends<a class="headerlink" href="#viral-trends" title="Permalink to this heading">#</a></h2>
+<p>This part of the assignment should be completed in Python, with accompanying written comments.</p>
+<p>In CoCalc you can download your work as a pdf by selecting File &gt; Save and Download as … PDF.</p>
+<section id="exercise-3-20-3pt">
+<h3>Exercise 3.20 [3pt]<a class="headerlink" href="#exercise-3-20-3pt" title="Permalink to this heading">#</a></h3>
+<p>In this question points will be awarded as follows:</p>
+<ul class="simple">
+<li><p>[1] Import the data, isolate a wave “by eye” and apply the given transforms to the <span class="math notranslate nohighlight">\((x,y)\)</span> data.</p></li>
+<li><p>[1] Fit a logistic function to the transformed data to obtain the coefficients</p></li>
+<li><p>[1] Use the calculated coefficients to plot the fitted function with the datapoints on the scale of the original data.</p></li>
+</ul>
+<p>You should be able to obtain a plot similar to the one shown in the lecture slides:</p>
+<a class="reference internal image-reference" href="../_images/hwk1.png"><img alt="covidius-maximus" class="align-center" src="../_images/hwk1.png" style="width: 50%;" /></a>
+</section>
+<section id="exercise-3-21-3pt">
+<h3>Exercise 3.21 [3pt]<a class="headerlink" href="#exercise-3-21-3pt" title="Permalink to this heading">#</a></h3>
+<p>In this question points will be awarded as follows:</p>
+<ul class="simple">
+<li><p>[1] import the data, accumulate and normalise it</p></li>
+<li><p>[1] fit the Fréchet function to obtain the coefficients</p></li>
+<li><p>[1] present suitable plot(s) to illustrate the quality of fit</p></li>
+</ul>
+</section>
+<section id="exercise-3-22-2pt">
+<h3>Exercise 3.22 [2pt]<a class="headerlink" href="#exercise-3-22-2pt" title="Permalink to this heading">#</a></h3>
+<p>The method here is identical to the previous exercise. Marks will be awarded for:</p>
+<ul class="simple">
+<li><p>[1] Identification of a suitable dataset and choice of function to fit</p></li>
+<li><p>[1] A thoughtful attempt to explain the goodness of fit with reference to the data and the model</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -394,7 +603,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./second"
+            path: "./homework"
         },
         predefinedOutput: true
     }
@@ -408,6 +617,13 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../case-studies/faustmann.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Forestry management</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

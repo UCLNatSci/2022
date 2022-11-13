@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>11. Forestry management &#8212; Mathematics for Natural Sciences B</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Maths coursework 1 [20%]" href="../homework/homework.html" />
+    <link rel="prev" title="10. Viral trends" href="coronavirus.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA TRENDS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/numbers.html">
+   1. Representing numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/plotstuff.html">
+   2. Graphing data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/exponentials.html">
+   3. Exponential trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/curvefit.html">
+   4. Fitting curves
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  INFINITESIMALS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/pfrac.html">
+   5. Rational functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/limits.html">
+   6. Know your limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/changes.html">
+   7. Rates of change
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DYNAMIC MODELS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/placeholder.html">
+   Placeholder
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE STUDIES
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chemicals.html">
+   8. Chemical concentrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="freshwater.html">
+   9. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coronavirus.html">
+   10. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11. Forestry management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/homework.html">
+   Maths coursework 1 [20%]
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcase-studies/faustmann.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/case-studies/faustmann.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#without-replanting">
+   11.1. Without replanting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-replanting">
+   11.2. With replanting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation">
+     11.2.1. Interpretation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-to-data">
+   11.3. Fitting to data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimal-harvesting">
+   11.4. Optimal harvesting
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Forestry management</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#without-replanting">
+   11.1. Without replanting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-replanting">
+   11.2. With replanting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation">
+     11.2.1. Interpretation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-to-data">
+   11.3. Fitting to data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimal-harvesting">
+   11.4. Optimal harvesting
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="forestry-management">
+<h1><span class="section-number">11. </span>Forestry management<a class="headerlink" href="#forestry-management" title="Permalink to this heading">#</a></h1>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.wiley.com/en-us/Mathematical+Bioeconomics:+The+Mathematics+of+Conservation,+3rd+Edition-p-9780470372999">Mathematical Bioeconomics: The Mathematics of Conservation., CW Clark</a></p>
+<p>Biological renewable resources, essential to the survival of mankind, are increasingly overexploited by individuals and corporations that often sacrifice long-term economic health and sustainability for short-term gains.</p>
+</div>
+<p>This case study is adapted from a mathematical discussion of forestry management found in a first edition (1976) copy of the above textbook, which is now in its third edition (2010).</p>
+<p>Solving the problem requires a combination of techniques studied in this module including finding minima, numeric differentiation, summation of geometric series, curve fitting, plotting, and understanding concepts of relative growth rates.</p>
+<p>The problem is to determine the optimal time to harvest a forest resource based on the economic value of timber.</p>
+<section id="without-replanting">
+<h2><span class="section-number">11.1. </span>Without replanting<a class="headerlink" href="#without-replanting" title="Permalink to this heading">#</a></h2>
+<p>It is assumed that the timber (wood) value of a tress increases with age up to full maturity. Eventually decay will cause a decline in the tree value, but many commercial tree species continue to grow and increase in value for several hundred years.</p>
+<p>We wish to determine the value of cutting down trees at the present time in comparison to the future. Our method will take into account the possibility of interest accrued on a present payment.</p>
+<p>Let <span class="math notranslate nohighlight">\(\hat{V}\)</span> denote the present value of a future payment, and let <span class="math notranslate nohighlight">\(V(t)\)</span> denote the commercial value of a tree. Then,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-efba5bb2-d1e9-41fd-9f9c-bf57e935f233">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-efba5bb2-d1e9-41fd-9f9c-bf57e935f233" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=e^{-\delta t}(V(t)-c)
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is the cost of felling, and <span class="math notranslate nohighlight">\(\delta\)</span> is the annual rate of interest.</p>
+<div class="exercise admonition" id="case-studies/faustmann-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.1 </span></p>
+<section id="exercise-content">
+<p>Derive a condition for when the value of felling is maximised.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Differentiating the value function:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\hat{V}^{\prime}=e^{-\delta t}(V^{\prime}-\delta(V-c))
+\end{equation*}\]</div>
+<p>To maximise <span class="math notranslate nohighlight">\(\hat{V}\)</span> we must ensure that <span class="math notranslate nohighlight">\(\frac{V^{\prime}}{V-c}=\delta\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="with-replanting">
+<h2><span class="section-number">11.2. </span>With replanting<a class="headerlink" href="#with-replanting" title="Permalink to this heading">#</a></h2>
+<p>The basic analysis above neglects the opportunity to replant. When replanting is taken into account we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d80fd06-2a71-494c-80dc-36882beccdf9">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-6d80fd06-2a71-494c-80dc-36882beccdf9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=e^{-\delta T_1}[V(T_1)-c]+e^{-\delta T_2}[V(T_2-T_1)-c]+e^{-\delta T_3}[V(T_3-T_2)-c]+\dots
+\end{equation}\]</div>
+<p>Assuming that the interest rate will stay constant, the second rotation problem is identical to the first (and so on). We can therefore assume that all rotation periods are equal and so <span class="math notranslate nohighlight">\(T_k=kT\)</span>, <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>.</p>
+<p>Thus, we may write :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-292efe21-d6f2-476b-becb-ffd28504e6c7">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-292efe21-d6f2-476b-becb-ffd28504e6c7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=\sum_{k=1}^{\infty}e^{-k\delta T}[V(T)-c]=[V(t)-c]\sum_{k=1}^{\infty}e^{-k\delta T}.
+\end{equation}\]</div>
+<p>The sum is a geometric progression With first term and common difference both equal to <span class="math notranslate nohighlight">\(e^{-\delta T}\)</span>. From the formula for the infinite sum we therefore obtain the modified value function:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a2f87d2c-a319-49e8-97ca-f233b7de2d7c">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-a2f87d2c-a319-49e8-97ca-f233b7de2d7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}=\frac{V(T)-c}{e^{\delta T}-1}
+\end{equation}\]</div>
+<div class="exercise admonition" id="case-studies/faustmann-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.2 </span></p>
+<section id="exercise-content">
+<p>Show that the modified value function is maximised for</p>
+<div class="amsmath math notranslate nohighlight" id="equation-92b89e39-59b7-46c5-85a0-346ec3ae6f18">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-92b89e39-59b7-46c5-85a0-346ec3ae6f18" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{V^{\prime}}{V-c}=\frac{\delta}{1-e^{-\delta T}}
+\end{equation}\]</div>
+<p>This is the Faustmann formula.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Differentiating gives:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a7c635ad-3b32-4b2b-9536-945abd537a94">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-a7c635ad-3b32-4b2b-9536-945abd537a94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\hat{V}^{\prime}=\frac{(e^{\delta T}-1)V^{\prime}-(V-c)\delta e^{\delta T}}{(e^{\delta T}-1)^2}
+\end{equation}\]</div>
+<p>The result is then obtained by setting <span class="math notranslate nohighlight">\(\hat{V}^{\prime}=0\)</span>.</p>
+</div>
+<hr class="docutils" />
+<section id="interpretation">
+<h3><span class="section-number">11.2.1. </span>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this heading">#</a></h3>
+<p>Because <span class="math notranslate nohighlight">\(1-e^{-\delta T}&lt;1\)</span>, taking rotation into account leads to a decrease in the age of cutting.</p>
+<p>The Faustmann formula can be understood by rearrangement to:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cff4eaf9-b944-4ce8-94f4-443105976363">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-cff4eaf9-b944-4ce8-94f4-443105976363" title="Permalink to this equation">#</a></span>\[\begin{equation}
+V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>The first term represents the interest earned if revenue from cutting is invested at interest rate <span class="math notranslate nohighlight">\(\delta\)</span></p></li>
+<li><p>The second term represents the rotation aspect of the problem.</p></li>
+</ul>
+</section>
+</section>
+<section id="fitting-to-data">
+<h2><span class="section-number">11.3. </span>Fitting to data<a class="headerlink" href="#fitting-to-data" title="Permalink to this heading">#</a></h2>
+<p>In the Faustmann formula, <span class="math notranslate nohighlight">\((V-c)\)</span> is the net stumpage value, which can be determined from data tables. We can plot the functions on the left and right side of the formula and calculate their intersection.</p>
+<table class="table" id="id1">
+<caption><span class="caption-number">Table 11.1 </span><span class="caption-text">Yield tables for Douglas fir, multiplied by cost (in cents per cubic foot!)</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Year</p></th>
+<th class="head"><p>30</p></th>
+<th class="head"><p>40</p></th>
+<th class="head"><p>50</p></th>
+<th class="head"><p>60</p></th>
+<th class="head"><p>70</p></th>
+<th class="head"><p>80</p></th>
+<th class="head"><p>90</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>110</p></th>
+<th class="head"><p>120</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V-c\)</span></p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>143</p></td>
+<td><p>303</p></td>
+<td><p>497</p></td>
+<td><p>650</p></td>
+<td><p>805</p></td>
+<td><p>913</p></td>
+<td><p>1002</p></td>
+<td><p>1076</p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="case-studies/faustmann-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.3 </span></p>
+<section id="exercise-content">
+<p>Determine the relative growth rate <span class="math notranslate nohighlight">\(V^{\prime}/(V-c)\)</span> and the average yield <span class="math notranslate nohighlight">\((V-c)/T\)</span></p>
+<p><em>Hint: to estimate <span class="math notranslate nohighlight">\(V^{\prime}\)</span> use the central differences formula</em></p>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">121</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">143</span><span class="p">,</span><span class="mi">303</span><span class="p">,</span><span class="mi">497</span><span class="p">,</span><span class="mi">650</span><span class="p">,</span><span class="mi">805</span><span class="p">,</span><span class="mi">913</span><span class="p">,</span><span class="mi">1002</span><span class="p">,</span><span class="mi">1076</span><span class="p">])</span> <span class="c1">#y=V-c</span>
+
+<span class="n">gr</span><span class="o">=</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>   <span class="c1">#growth rate</span>
+<span class="n">relgr</span><span class="o">=</span><span class="n">gr</span><span class="o">/</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>                   <span class="c1">#relative gr            </span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">relgr</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Year <span class="math notranslate nohighlight">\(T\)</span></p></th>
+<th class="head"><p>30</p></th>
+<th class="head"><p>40</p></th>
+<th class="head"><p>50</p></th>
+<th class="head"><p>60</p></th>
+<th class="head"><p>70</p></th>
+<th class="head"><p>80</p></th>
+<th class="head"><p>90</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>110</p></th>
+<th class="head"><p>120</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>net stump val</p></td>
+<td><p>0</p></td>
+<td><p>43</p></td>
+<td><p>143</p></td>
+<td><p>303</p></td>
+<td><p>497</p></td>
+<td><p>650</p></td>
+<td><p>805</p></td>
+<td><p>913</p></td>
+<td><p>1002</p></td>
+<td><p>1076</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rel gr rate %</p></td>
+<td><p>-</p></td>
+<td><p>16.6</p></td>
+<td><p>9.1</p></td>
+<td><p>5.8</p></td>
+<td><p>3.5</p></td>
+<td><p>2.4</p></td>
+<td><p>1.6</p></td>
+<td><p>1.1</p></td>
+<td><p>0.8</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Avg yield</p></td>
+<td><p>0</p></td>
+<td><p>1.08</p></td>
+<td><p>2.86</p></td>
+<td><p>5.05</p></td>
+<td><p>7.10</p></td>
+<td><p>8.12</p></td>
+<td><p>8.94</p></td>
+<td><p>9.13</p></td>
+<td><p>9.11</p></td>
+<td><p>8.97</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="exercise admonition" id="case-studies/faustmann-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.4 </span></p>
+<section id="exercise-content">
+<p>Fit a Weibull function to the net stumpage value. The Weibull function is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-792a84c8-4e52-4e18-be31-b5cc941e8f66">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-792a84c8-4e52-4e18-be31-b5cc941e8f66" title="Permalink to this equation">#</a></span>\[\begin{equation}
+w(t) = 1-e^{-(t/k)^s}
+\end{equation}\]</div>
+<p><em>Hint: The data need to be transformed to the range [0,1] on both axes to perform the fit, and then the inverse transform needs to be performed. It’s worth it though, as the data fit very nicely!</em></p>
+</section>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># plot the data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="c1"># function to fit, with unknown parameters</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">t</span><span class="o">/</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1">#scale t,y to [0,1]</span>
+<span class="n">tscl</span><span class="o">=</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">30</span><span class="p">)</span><span class="o">/</span><span class="mi">90</span>
+<span class="n">yscl</span><span class="o">=</span><span class="n">y</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># fit the function</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="n">coeffs</span><span class="o">=</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">tscl</span><span class="p">,</span><span class="n">yscl</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">#generate fitted curve</span>
+<span class="n">tt</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">func</span><span class="p">((</span><span class="n">tt</span><span class="o">-</span><span class="mi">30</span><span class="p">)</span><span class="o">/</span><span class="mi">90</span><span class="p">,</span><span class="o">*</span><span class="n">coeffs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span><span class="n">yy</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/stumpage.png"><img alt="weibull-stumpage" class="align-center" src="../_images/stumpage.png" style="width: 60%;" /></a>
+</div>
+</section>
+<section id="optimal-harvesting">
+<h2><span class="section-number">11.4. </span>Optimal harvesting<a class="headerlink" href="#optimal-harvesting" title="Permalink to this heading">#</a></h2>
+<p>Using the fitted Weibull function, we can produce a figure illustrating the intersections of the left and right sides of the Faustmann formula for different values of the interest rate <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Left-hand side of Faustmann formula</span>
+<span class="n">T</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.15</span><span class="p">]:</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">d</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="o">*</span><span class="n">T</span><span class="p">)),</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="nb">max</span><span class="p">([</span><span class="mf">0.015</span><span class="p">,</span><span class="n">d</span><span class="o">+</span><span class="mf">0.005</span><span class="p">]),</span> <span class="s1">&#39;$\delta=$ </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span>
+
+<span class="c1"># Right-hand side of Faustmann formula (data)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">relgr</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="c1"># Right hand side of Faustmann formula (function)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">yy</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span><span class="o">/</span><span class="n">yy</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">120</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.20</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="faustmann-intersection">
+<img alt="../_images/faustmann-wbll.png" src="../_images/faustmann-wbll.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Graphical determination of the optimal rotation for different interest rates <span class="math notranslate nohighlight">\(\delta\)</span></span><a class="headerlink" href="#faustmann-intersection" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The intersections give the optimal rotation age (years) for different values of the discount. To numerically locate the intersections we can find where the difference between the two datasets representing the curves is smallest.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tt</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>             <span class="c1">#ensure plenty of data points</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">func</span><span class="p">((</span><span class="n">tt</span><span class="o">-</span><span class="mi">30</span><span class="p">)</span><span class="o">/</span><span class="mi">90</span><span class="p">,</span><span class="o">*</span><span class="n">coeffs</span><span class="p">)</span>   <span class="c1">#(V-c)</span>
+<span class="n">LHS</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">yy</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span><span class="o">/</span><span class="n">yy</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1">#V&#39;/(V-c)</span>
+
+<span class="k">def</span> <span class="nf">optrot</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+  <span class="n">RHS</span><span class="o">=</span><span class="n">d</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="o">*</span><span class="n">tt</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>         <span class="c1">#d/(1-exp(-dT))</span>
+  <span class="n">minfun</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">LHS</span><span class="o">-</span><span class="n">RHS</span><span class="p">)</span>                <span class="c1">#we want where LHS-RHS=0</span>
+  <span class="n">idx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">minfun</span><span class="p">)</span>                 <span class="c1">#find data point minimum</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">tt</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="n">yy</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">/</span><span class="n">tt</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span>      <span class="c1">#return T, (V-c)/T</span>
+
+<span class="n">dvals</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.20</span><span class="p">]</span>
+<span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="n">optrot</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dvals</span><span class="p">];</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Annual discount <span class="math notranslate nohighlight">\(\delta\)</span></p></th>
+<th class="head"><p>0.00</p></th>
+<th class="head"><p>0.03</p></th>
+<th class="head"><p>0.05</p></th>
+<th class="head"><p>0.07</p></th>
+<th class="head"><p>0.10</p></th>
+<th class="head"><p>0.15</p></th>
+<th class="head"><p>0.20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Optimal rotation age T (yr)</p></td>
+<td><p>99</p></td>
+<td><p>73</p></td>
+<td><p>63</p></td>
+<td><p>56</p></td>
+<td><p>50</p></td>
+<td><p>44</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td><p>Avg annual yield</p></td>
+<td><p>9.23</p></td>
+<td><p>7.42</p></td>
+<td><p>5.61</p></td>
+<td><p>4.16</p></td>
+<td><p>2.72</p></td>
+<td><p>1.48</p></td>
+<td><p>0.91</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./case-studies"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="coronavirus.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Viral trends</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../homework/homework.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Maths coursework 1 [20%]</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

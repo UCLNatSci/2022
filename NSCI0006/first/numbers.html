@@ -39,6 +39,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -142,29 +143,29 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="curvefit.html">
-   4. Curve fitting
+   4. Fitting curves
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  RATES OF CHANGE
+  INFINITESIMALS
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../second/pfrac.html">
-   1. Rational functions
+   5. Rational functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/limits.html">
-   2. Know your limits
+   6. Know your limits
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../second/changes.html">
-   3. Rates of change
+   7. Rates of change
   </a>
  </li>
 </ul>
@@ -188,17 +189,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   1. Chemical concentrations
+   8. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   2. Freshwater sustainability
+   9. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   3. Viral trends
+   10. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/faustmann.html">
+   11. Forestry management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/homework.html">
+   Maths coursework 1 [20%]
   </a>
  </li>
 </ul>
@@ -796,8 +814,8 @@ f=8\text{ml} =1.6\text{ tsp}.
 <section id="the-mole">
 <h3><span class="section-number">1.7.1. </span>The mole<a class="headerlink" href="#the-mole" title="Permalink to this heading">#</a></h3>
 <p>Traditionally, a mole was defined to be the number of atoms in 12g of <a class="reference external" href="https://en.wikipedia.org/wiki/Carbon-12">Carbon-12</a>. Now the inernationally accepted value of this measure is defined to be a specific numnber called Avagadro’s constant, which is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0847491e-8f90-42be-b9be-a084caf002aa">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-0847491e-8f90-42be-b9be-a084caf002aa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1c970b17-e45a-464e-b7a0-777d8f3438f1">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-1c970b17-e45a-464e-b7a0-777d8f3438f1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 N_A = 6.02214179\times 10^{23}\text{mol}^{-1}.
 \end{equation}\]</div>
 <p>Carbon-12 (<span class="math notranslate nohighlight">\(\ce{^{12}_{}C}\)</span>) was chosen as the reference element by international standard because of its relatively simple structure, abundance, and stability - which make its mass comparatively easy to measure.</p>
@@ -806,7 +824,7 @@ N_A = 6.02214179\times 10^{23}\text{mol}^{-1}.
 <section id="relative-atomic-mass">
 <h3><span class="section-number">1.7.2. </span>Relative atomic mass<a class="headerlink" href="#relative-atomic-mass" title="Permalink to this heading">#</a></h3>
 <p>We call the grams-per-mole measure of an atom the relative atomic mass. The definition of a mole ensures that the element mass number and the relative atomic mass (in g/mol) are <em>roughly</em> the same. Indeed, for Carbon-12 this equivalence is exact, by definition.</p>
-<p>However, whilst the bulk mass of an atom is determined by the number of protons and neutrons that it contains, the electrons also contribute a small amount to the mass. The atomic mass also needs to take account of the “<span class="xref myst">mass defect</span>” due to binding energy of the atom. This means that for all elements apart from <span class="math notranslate nohighlight">\(\ce{^{12}_{}C}\)</span> the relative atomic mass is not precisely equal to the element mass number.</p>
+<p>However, whilst the bulk mass of an atom is determined by the number of protons and neutrons that it contains, the electrons also contribute a small amount to the mass. The atomic mass also needs to take account of the “<a class="reference external" href="https://www.britannica.com/science/mass-defect">mass defect</a>” due to binding energy of the atom. This means that for all elements apart from <span class="math notranslate nohighlight">\(\ce{^{12}_{}C}\)</span> the relative atomic mass is not precisely equal to the element mass number.</p>
 <p>For example, the relative atomic mass of Carbon-13 (<span class="math notranslate nohighlight">\(\ce{^{13}_{}C}\)</span>) is 13.003355 g/mol.</p>
 <div class="exercise admonition" id="first/numbers-exercise-8">
 
@@ -847,7 +865,6 @@ N_A = 6.02214179\times 10^{23}\text{mol}^{-1}.
 </ul>
 <p>Glucose: <span class="math notranslate nohighlight">\((6\times 12.0106)+(12\times 1.0080)+(6\times 15.9994)=180.156\)</span> g/mol</p>
 <p>So 180.16g of glucose contains one mole.</p>
-<hr class="docutils" />
 </div>
 </section>
 </section>

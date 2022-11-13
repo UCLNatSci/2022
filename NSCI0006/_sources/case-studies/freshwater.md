@@ -11,7 +11,7 @@ Drought could be next pandemic and there is no vaccine to cure it. Drought has d
 
 ```
 
-### Water Stress
+## Water Stress
 
 To use our freshwater resource sustainably, the rate at which we make withdrawals must be below the rate at which stocks are replenished (e.g. by rainfall). If we consume more than the amount restored by nature, the resulting decrease in water levels can cause damage to the environment.
 
@@ -98,7 +98,7 @@ The key property of a straight line is that the "rise over run" is constant. In 
 ________
 ```
 
-### Water scarcity innovations:
+## Water scarcity innovations:
 
 *Singapore* and *Dubai* are two of the world's most water stressed places, due to a lack of renewable water resources. Singapore gets a significant portion of its TFWW from its neighbour Malaysia, but has also developed an advanced system to turn sewage into clean, drinkable water that can meet 40% of demand [[VOA news](https://www.voanews.com/a/east-asia-pacific_singapore-turns-sewage-clean-drinkable-water-meeting-40-demand/6209374.html)]. In Dubai, around 90% of the city's needs are supplied by [desalinated](https://en.wikipedia.org/wiki/Desalination) seawater.
 
@@ -106,7 +106,7 @@ As global freshwater pressures intensify, such measures may become more common. 
 
 Such solutions must be looked at carefully. For instance, the process of desalination requires large amounts of energy and therefore may substitute one scarce resource (freshwater) for another (energy). Desalination also produces a toxic brine by-product, which can damage coastal and marine ecosystems if it is pumped back into the ocean.
 
-### Water footprint
+## Water footprint
 
 If we only look at water withdrawals this masks some important truths about the characteristics of water consumption. We may marvel that the UK's water withdrawal per-capita is much lower than that of other countries. The source of these disparities lies in the "hidden water" that is used during the production of many of the items that we consume.
 
