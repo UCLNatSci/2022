@@ -559,6 +559,39 @@ since the ansatz would need to have an infinite number of terms. To balance the 
 which would need a term like $1/x^2$ and so forth.  There is a method that can be used to solve more general types of inhomogeneous problem - **variation of 
 parameters**.  
 
+## Coupled systems
+````{amonition} Defintion
+Consider again the general form of ODE in {eq}`ode2hom`:
+
+```{math}
+a y^{\prime\prime}+by^{\prime}+cy=0
+```
+
+We will now introduce a new variable $z=y^{\prime}$, so that the equation may be rewritten as two:
+
+```{math}
+z &= y' \\
+az^{\prime}+bz+cy &= 0
+```
+
+Notice that we have gone from *one second order* ODE system to a system of *two first order* ODEs. The two equations are linked, if $z$ changes, this will affect 
+$y$ and vice-versa -  we say that they are **coupled**.  
+````
+
+We can write this system in matrix form:
+
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\begin{pmatrix}y\\z\end{pmatrix}=\begin{pmatrix}z\\-bz/a-cy/a\end{pmatrix}
+```
+
+and since the equations are linear, it is also possible to separate out the coefficient matrix:
+
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\begin{pmatrix}
+y\\z\end{pmatrix}=\begin{pmatrix}0&1\\-c/a&-b/a\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}
+```
+
+This sort of system is called an *eigenvalue problem* and can be solved by techniques from linear algebra.  
 
 ## Solving separable PDEs
 Once we extend calculus to many variables, ordinary differential equations (ODEs) can become partial differential equations (PDEs) and then the range of techniques that can 
@@ -892,10 +925,10 @@ y &= \Big(\frac{1}{12}e^{3x} - \frac{1}{4}e^{-x}\Big)e^{-x} - \Big(\frac{1}{20}e
 &= \frac{1}{12}e^{2x} - \frac{1}{4}e^{-2x} - \frac{1}{20}e^{2x} - \frac{1}{4}e^{-2x} + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)\\
 &= \frac{1}{60}\Big(2e^{2x} - 30e^{-2x} \Big) + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)
 ```
-Given that $y(0)=1$, we find that:
+Given the initial conditions, we find that:
 ```{math}
 y(0) &= \frac{-28}{60} + \Big(C_1 + C_2\Big) = -\frac{7}{15} \Rightarrow C_1 + C_2 = 0\\
-y' &= \frac{1}{60}\Big(4e^{2x} + 60e^{-2x} \Big) + \Big(-C_1\,e^{-x} -3 C_2\,e^{-3x}\Big)\\
+y'(x) &= \frac{1}{60}\Big(4e^{2x} + 60e^{-2x} \Big) + \Big(-C_1\,e^{-x} -3 C_2\,e^{-3x}\Big)\\
 y'(0) &= \frac{64}{60} + \Big(-C_1 - 3C_2\Big) = \frac{1}{15} \Rightarrow -C_1 - 3C_2 = -1
 ```
 which we can solve as $C_1 = 1/2,\, C_2 = -1/2$, which gives final solutions as:

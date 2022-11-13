@@ -327,23 +327,28 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coupled-systems">
+   14.3. Coupled systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solving-separable-pdes">
-   14.3. Solving separable PDEs
+   14.4. Solving separable PDEs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variation-of-parameters-method">
-   14.4. Variation of parameters method
+   14.5. Variation of parameters method
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-order-system">
-     14.4.1. First order system
+     14.5.1. First order system
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#second-order-system">
-     14.4.2. Second order system
+     14.5.2. Second order system
     </a>
    </li>
   </ul>
@@ -434,23 +439,28 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coupled-systems">
+   14.3. Coupled systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solving-separable-pdes">
-   14.3. Solving separable PDEs
+   14.4. Solving separable PDEs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variation-of-parameters-method">
-   14.4. Variation of parameters method
+   14.5. Variation of parameters method
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-order-system">
-     14.4.1. First order system
+     14.5.1. First order system
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#second-order-system">
-     14.4.2. Second order system
+     14.5.2. Second order system
     </a>
    </li>
   </ul>
@@ -877,8 +887,19 @@ which would need a term like <span class="math notranslate nohighlight">\(1/x^2\
 parameters</strong>.</p>
 </div>
 </div>
+<div class="section" id="coupled-systems">
+<h2><span class="section-number">14.3. </span>Coupled systems<a class="headerlink" href="#coupled-systems" title="Permalink to this headline">¶</a></h2>
+<p>We can write this system in matrix form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\begin{pmatrix}y\\z\end{pmatrix}=\begin{pmatrix}z\\-bz/a-cy/a\end{pmatrix}\end{split}\]</div>
+<p>and since the equations are linear, it is also possible to separate out the coefficient matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\begin{pmatrix}
+y\\z\end{pmatrix}=\begin{pmatrix}0&amp;1\\-c/a&amp;-b/a\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}\end{split}\]</div>
+<p>This sort of system is called an <em>eigenvalue problem</em> and can be solved by techniques from linear algebra.</p>
+</div>
 <div class="section" id="solving-separable-pdes">
-<h2><span class="section-number">14.3. </span>Solving separable PDEs<a class="headerlink" href="#solving-separable-pdes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.4. </span>Solving separable PDEs<a class="headerlink" href="#solving-separable-pdes" title="Permalink to this headline">¶</a></h2>
 <p>Once we extend calculus to many variables, ordinary differential equations (ODEs) can become partial differential equations (PDEs) and then the range of techniques that can
 be applied to solve these sorts of problems becomes vast - typically there is not clean, closed form, way of solving a given PDE - a series solution or answer valid
 only in certain regimes is often the best we can do.  There is however one class of PDE that can solved using ODE techniques, so called <em>separable PDEs</em>.</p>
@@ -974,7 +995,7 @@ T(t) &amp;= B_1\,e^{i k \lambda t} \end{split}\]</div>
 </div>
 </div>
 <div class="section" id="variation-of-parameters-method">
-<h2><span class="section-number">14.4. </span>Variation of parameters method<a class="headerlink" href="#variation-of-parameters-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.5. </span>Variation of parameters method<a class="headerlink" href="#variation-of-parameters-method" title="Permalink to this headline">¶</a></h2>
 <p>Whilst the method of undetermined coefficients works for specific set of source terms <span class="math notranslate nohighlight">\(f(x)\)</span> (i.e. those of certain elementary functions with symmetries
 in their derivatives), we could ask what is the more general method for solving these sorts of ODEs?</p>
 <div class="admonition-definition admonition">
@@ -1009,7 +1030,7 @@ u_{1}^{(n-1)}(x) &amp; u_{2}^{(n-1)}(x) &amp; \cdots &amp; f(x)&amp; \cdots &amp
 \end{pmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="first-order-system">
-<h3><span class="section-number">14.4.1. </span>First order system<a class="headerlink" href="#first-order-system" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.1. </span>First order system<a class="headerlink" href="#first-order-system" title="Permalink to this headline">¶</a></h3>
 <p>If we start with a general first order linear ODE:</p>
 <div class="math notranslate nohighlight" id="equation-inhomofirstorder">
 <span class="eqno">(14.6)<a class="headerlink" href="#equation-inhomofirstorder" title="Permalink to this equation">¶</a></span>\[y’ + P(x)\,y = Q(x)\]</div>
@@ -1039,7 +1060,7 @@ y_h &amp;= y_0\,e^{- \int P(x)\,\mathrm{d}x}\end{split}\]</div>
 <p>which  we have seen before with integrating factors for first order systems in <a class="reference internal" href="1st_order_ODEs.html#equation-intfactorsoln">(13.5)</a>.</p>
 </div>
 <div class="section" id="second-order-system">
-<h3><span class="section-number">14.4.2. </span>Second order system<a class="headerlink" href="#second-order-system" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.2. </span>Second order system<a class="headerlink" href="#second-order-system" title="Permalink to this headline">¶</a></h3>
 <p>Let’s start with a general form of a second order ODE system::</p>
 <div class="math notranslate nohighlight">
 \[L\,y(x) = y^{\prime\prime}(x)+P(x)\,y^{\prime}(x)+Q(x)\,y(x) = f(x)\]</div>
@@ -1137,10 +1158,10 @@ B(x) &amp;= -\frac{1}{2}\int e^{4x}\,e^{-x}\,\cosh(2x) \,\mathrm{d}x = -\frac{1}
 \[\begin{split}y &amp;= \Big(\frac{1}{12}e^{3x} - \frac{1}{4}e^{-x}\Big)e^{-x} - \Big(\frac{1}{20}e^{5x} - \frac{1}{4}e^{x}\Big)e^{-3x} + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big) \\
 &amp;= \frac{1}{12}e^{2x} - \frac{1}{4}e^{-2x} - \frac{1}{20}e^{2x} - \frac{1}{4}e^{-2x} + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)\\
 &amp;= \frac{1}{60}\Big(2e^{2x} - 30e^{-2x} \Big) + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)\end{split}\]</div>
-<p>Given that <span class="math notranslate nohighlight">\(y(0)=1\)</span>, we find that:</p>
+<p>Given the initial conditions, we find that:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y(0) &amp;= \frac{-28}{60} + \Big(C_1 + C_2\Big) = -\frac{7}{15} \Rightarrow C_1 + C_2 = 0\\
-y' &amp;= \frac{1}{60}\Big(4e^{2x} + 60e^{-2x} \Big) + \Big(-C_1\,e^{-x} -3 C_2\,e^{-3x}\Big)\\
+y'(x) &amp;= \frac{1}{60}\Big(4e^{2x} + 60e^{-2x} \Big) + \Big(-C_1\,e^{-x} -3 C_2\,e^{-3x}\Big)\\
 y'(0) &amp;= \frac{64}{60} + \Big(-C_1 - 3C_2\Big) = \frac{1}{15} \Rightarrow -C_1 - 3C_2 = -1\end{split}\]</div>
 <p>which we can solve as <span class="math notranslate nohighlight">\(C_1 = 1/2,\, C_2 = -1/2\)</span>, which gives final solutions as:</p>
 <div class="math notranslate nohighlight">
