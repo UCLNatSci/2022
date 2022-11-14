@@ -19,8 +19,6 @@ A matrix (plural: matrices) is essentially just an array of values, arranged in 
 
 In general, the values contained in a matrix could represent anything, although manipulating systems of linear equations is one of the most valuable uses of matrices.
 
-The Gaussian elimination technique that we have looked at is a brute force method for solving a given set of equations, whilst matrix methods are more concerned with 
-finding general solutions and simplifications of certain types of problems.
 
 ### Notation
 

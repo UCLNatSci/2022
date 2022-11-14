@@ -553,12 +553,12 @@ weighted basis vectors, we can see this in <a class="reference internal" href="#
 <p>Given some vector, which will take us some distance from two points in space, we can find the shortest path length between the points.</p>
 <p>In two dimensions this would just follow Pythagoras’s theorem:</p>
 <div class="math notranslate nohighlight">
-\[{\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y}
-v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2}\]</div>
+\[\begin{split}{\bf v} &amp;= a_x\hat{\bf x} + a_y\hat{\bf y}\\
+v_3 &amp;= |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2}\end{split}\]</div>
 <p>and in three dimensions a similar relation holds (which we can prove geometrically:</p>
 <div class="math notranslate nohighlight">
-\[{\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}
-v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
+\[\begin{split}{\bf v} &amp;= a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}\\
+v_3 &amp;= |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \end{split}\]</div>
 <p>As an example lets consider <span class="math notranslate nohighlight">\(\bf v_1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[|3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}| = \sqrt{3^2 + 4^2 + 12^2} = 13\]</div>
@@ -701,7 +701,7 @@ the answer is zero:</p>
  a_x &amp; a_y 
  b_x &amp; b_y 
 \end{vmatrix}\hat{\bf z} \\
-&amp;=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} \end{split}\]</div>
+&amp;=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_z\,b_x)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} \end{split}\]</div>
 <p>which we find are equivalent definitions.</p>
 </div>
 </div>

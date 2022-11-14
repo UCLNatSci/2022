@@ -128,16 +128,23 @@ Likewise we can scale each of the vectors and then proceed to add them:
 
 Given some vector, which will take us some distance from two points in space, we can find the shortest path length between the points.  
 
+````{admonition}
+A magnitude of a vector ${\bf v}$ with $n$ orthogonal components is:
+```{math}
+|{\bf v}| &= \sqrt{{v_1}^2 + {v_2}^2 +  + \dots + {v_n}^2} = \sqrt{\sum_{i=1}^n (v_i)^2}
+``` 
+````
+
 In two dimensions this would just follow Pythagoras's theorem:
 ```{math}
-{\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y}
-v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2}
+{\bf v} &= a_x\hat{\bf x} + a_y\hat{\bf y}\\
+v_3 &= |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2}
 ```
 
 and in three dimensions a similar relation holds (which we can prove geometrically:
 ```{math}
-{\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}
-v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} 
+{\bf v} &= a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}\\
+v_3 &= |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} 
 ```
 As an example lets consider $\bf v_1$:
 
@@ -321,7 +328,7 @@ which by the cofactor method along the first row produces:
  a_x & a_y 
  b_x & b_y 
 \end{vmatrix}\hat{\bf z} \\
-&=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
+&=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_z\,b_x)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
 ```
 which we find are equivalent definitions.
 ````
