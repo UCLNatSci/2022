@@ -557,22 +557,27 @@ and rearranging provides again the result $\displaystyle\frac{\mathrm{d}y}{\math
 
 In this scenario we wish to calculate $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$ where $y = f^{-1}(x)$ and we know how to differentiate function $f$.
 
-For example, to calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)$ we let $y=\ln(x)$ so that $x=e^y$
+````{admonition} Worked example 
+:class: seealso
 
-We know that $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y$ and then by using the special case of the chain rule we obtain the result :
+Calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)$
+
+We let $y=\ln(x)$ such that $x=e^y$, this means that $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y$ and by the chain rule:
 
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{e^y}
+\frac{\mathrm{d}y}{\mathrm{d}x}=1\Big/\frac{\mathrm{d}x}{\mathrm{d}y}=\frac{1}{e^y} = e^{-y}
 ```
 
-This is not an acceptable result because the derivative has been given in terms of the dependent variable - we need to rewrite in terms of the independent variable $x$. For 
-some problems of this type, it can be quite difficult, but here is is easy since $e^y=x$.
+This is not an acceptable result because the derivative has been given in terms of the dependent variable - we need to rewrite in terms of the independent variable $x$. 
 
-The final result is 
+For some problems of this type, it can be quite difficult, but here is is easy since $e^y=x$.
+
+Thus the final result is:
 ```{math}
-\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)=\displaystyle\frac{1}{x}
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(\ln(x)\Big)=\frac{1}{x}
 ```
 another important (and familar) result.
+````
 
 ````{admonition} Practice Questions
 :class: seealso, dropdown
@@ -613,14 +618,15 @@ since $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0$.  There are no points whe
 2\. Let $𝑦=\mathrm{arccosh(y)}$. Then $𝑡=\cosh(y)$
 
 ```{math}
-\frac{\mathrm{d}t}{\mathrm{d}y}=1\Big/\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{1}{\sinh(y)}=\frac{1}{\pm \sqrt{cosh^2(y)−1}}
+\frac{\mathrm{d}t}{\mathrm{d}y}=1\Big/\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{1}{\sinh(y)}=\frac{1}{\pm \sqrt{\cosh^2(y)−1}}
 =\pm \frac{1}{\sqrt{t^2−1}}
 ```
 
-Recall that for the function $\mathrm{arccosh}$ we select the positive branch. On this branch the function is monotonic increasing, so we again select the positive square root.
+Recall that for the function $\mathrm{arccosh}$ we select the positive branch. On this branch the function is monotonic increasing, so we again select the 
+positive square root.
 
 ```{math}
-\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)=\frac{1}{\sqrt{t^2−1}}
+\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{\arccosh}(t)=\frac{1}{\sqrt{t^2−1}}
 ```
 
 ````

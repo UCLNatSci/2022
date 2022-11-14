@@ -600,20 +600,28 @@ a. Find the tangent to the curve <span class="math notranslate nohighlight">\(y=
 <p>The idea of using a substitution is that we convert a difficult integral w.r.t <span class="math notranslate nohighlight">\(x\)</span> to an easier one w.r.t <span class="math notranslate nohighlight">\(u\)</span>.</p>
 <p>Note that <span class="math notranslate nohighlight">\(\displaystyle f \frac{\mathrm{d}x}{\mathrm{d}u}=f\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\)</span> and so the substitution <span class="math notranslate nohighlight">\(u\)</span> can be chosen to eliminate a factor from <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <div class="seealso admonition">
-<p class="admonition-title">Worked Examples</p>
-<p>1. To calculate <span class="math notranslate nohighlight">\( \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x\)</span> we can try the substitution <span class="math notranslate nohighlight">\(u=x^2-1\)</span>. This substitution will eliminate the factor <span class="math notranslate nohighlight">\(x\)</span> and
+<p class="admonition-title">Worked example</p>
+<p>To calculate <span class="math notranslate nohighlight">\( \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x\)</span> we can try the substitution <span class="math notranslate nohighlight">\(u=x^2-1\)</span>. This substitution will eliminate the factor <span class="math notranslate nohighlight">\(x\)</span> and
 will simplify the expression <span class="math notranslate nohighlight">\(\sqrt{x^2-1}\)</span>. We find that:</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle  \frac{\mathrm{d}u}{\mathrm{d}x}=2x\)</span> and so <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}x}{\mathrm{d}u}=\frac{1}{2x}\)</span>, hence:</p>
 <div class="math notranslate nohighlight">
 \[\int x\sqrt{x^2-1}\mathrm{d}x=\displaystyle \int\frac{1}{2}u^{1/2}\mathrm{d}u=\frac{1}{3}u^{3/2}+c=\frac{1}{3}(x^2-1)^{3/2}+c\]</div>
 <p>This is the same result we can find by inspection.</p>
-<p>2. To calculate the definite integral <span class="math notranslate nohighlight">\( I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>, we will use the substitution <span class="math notranslate nohighlight">\(u=2x+1\)</span>. (This problem could also be
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Find <span class="math notranslate nohighlight">\( I= \displaystyle\int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>.</p>
+<p>2. Find <span class="math notranslate nohighlight">\( I= \displaystyle\int (ax+b)(cx+d)^n\mathrm{d}x\)</span> using the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span>,/</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. To calculate the definite integral <span class="math notranslate nohighlight">\( I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>, we will use the substitution <span class="math notranslate nohighlight">\(u=2x+1\)</span>. (This problem could also be
 solved by inspection).</p>
 <p>When <span class="math notranslate nohighlight">\(x=1\)</span>, <span class="math notranslate nohighlight">\(u=3\)</span> and when <span class="math notranslate nohighlight">\(x=3\)</span>, <span class="math notranslate nohighlight">\(u=7\)</span>, hence, the result is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}I&amp;=\int_{u=3}^{u=7}\frac{1}{u}\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}u \\
 &amp;=\frac{1}{2} \int_3^7\frac{1}{u}\mathrm{d}u=\frac{1}{2}\biggr[\ln(u)\biggr]_3^7=\frac{1}{2}\ln\biggr(\frac{7}{3}\biggr)\end{split}\]</div>
-<p>3. To calculate an expression of the form <span class="math notranslate nohighlight">\( I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x\)</span> we can make the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span>, which gives:</p>
+<p>2. To calculate an expression of the form <span class="math notranslate nohighlight">\( I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x\)</span> we can make the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span>, which gives:</p>
 <div class="math notranslate nohighlight">
 \[I=\int\left(a\frac{u-d}{c}+b\right)u^n\frac{1}{c}\mathrm{d}u=\frac{1}{c^2}e \int(au+bc-ad)u^n\mathrm{d}u\]</div>
 <p>By polynomial expansion:</p>
@@ -627,16 +635,18 @@ solved by inspection).</p>
 <div class="section" id="integral-of-displaystyle-frac-1-x">
 <h2><span class="section-number">10.3. </span>Integral of <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span><a class="headerlink" href="#integral-of-displaystyle-frac-1-x" title="Permalink to this headline">¶</a></h2>
 <p>The function <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span> falls into a special category, because it cannot be solved using the polynomial antiderivative
-<span class="math notranslate nohighlight">\(\int x^n = \frac{x^{n+1}}{n+1}\)</span>, consider the plot <a class="reference internal" href="#oneoverx"><span class="std std-numref">Fig. 10.4</span></a>:</p>
+<span class="math notranslate nohighlight">\(\displaystyle \int x^n = \frac{x^{n+1}}{n+1}\)</span> aws <span class="math notranslate nohighlight">\(n=-1\)</span> here.</p>
 <div class="figure align-default" id="oneoverx">
 <img alt="../_images/oneOverx.png" src="../_images/oneOverx.png" />
-<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(\displaystyle y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
 </div>
-<p>Hence we see that</p>
+<p>However we can think about the fact that <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}\Big(\ln(x)\Big) = \frac{1}{x}\)</span> and therefore use this as an
+antiderivative.  From <a class="reference internal" href="#oneoverx"><span class="std std-numref">Fig. 10.4</span></a>, we see that:</p>
 <div class="math notranslate nohighlight">
 \[\int_{-b}^{-a}\frac{1}{x}\mathrm{d}x = -\int_a^b\frac{1}{x}\mathrm{d}x = \int_b^a\frac{1}{x}\mathrm{d}x = \int_{-b}^{-a}\frac{1}{|x|\mathrm{d}x}\]</div>
 <p>So, <span class="math notranslate nohighlight">\(\displaystyle \int\frac{1}{x}=\ln(|x|)+\mathrm{const},\, \forall x\)</span>, provided that the range of integration does not cross the vertical axis.</p>
-<p>This is because formally <span class="math notranslate nohighlight">\(\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x\)</span> is undefined, although we can define what is called the <strong>Cauchy principal value</strong> of this integral as:</p>
+<p>This is because formally <span class="math notranslate nohighlight">\(\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x\)</span> is undefined, although we can define what is called the
+<strong>Cauchy principal value</strong> of this integral as:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{\epsilon\rightarrow 0^{+}}\left( \int_{-a}^{-\epsilon}\frac{1}{x}\mathrm{d}x+ \int_{\epsilon}^a\frac{1}{x}\mathrm{d}x\right)=0\]</div>
 </div>
@@ -646,13 +656,16 @@ solved by inspection).</p>
 <p class="admonition-title">Definition</p>
 <p>For an indefinite integral:</p>
 <div class="math notranslate nohighlight">
-\[\int u\frac{\mathrm{d}v}{\mathrm{d}x}\mathrm{d}x = u\,v- \int v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c\]</div>
+\[\int u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x = u\,v- \int v\,\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c\]</div>
 <p>For a definite integral:</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b u\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x\]</div>
+\[\int_a^b u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x\]</div>
 <p>This result can be proved using the product rule and the fundamental theorem of calculus.</p>
 <div class="math notranslate nohighlight">
-\[\int \mathrm{d}(u\,v)=\int u\,\mathrm{d}\,v+\int v\,\mathrm{d}u \Rightarrow u\,v= \int u\,\mathrm{d}v= \int v\,\mathrm{d}u\]</div>
+\[\begin{split}\mathrm{d}(u\,v) &amp;= u\,\mathrm{d}\,v + v\,\mathrm{d}u  \\
+u\,\mathrm{d}\,v &amp;= \mathrm{d}(u\,v) - v\,\mathrm{d}u \\
+\Rightarrow \int u\,\mathrm{d}\,v &amp;= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
+\Rightarrow u\,v &amp;= u\,v - \int v\,\mathrm{d}u\end{split}\]</div>
 </div>
 <p>For a handy rule of thumb for choosing which term to differentiate when applying this method, we can use <strong>LIATE</strong> method:</p>
 <ul class="simple">

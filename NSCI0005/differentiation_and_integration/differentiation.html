@@ -811,16 +811,19 @@ parametric differentiation. The result is obtained fully in terms of the paramet
 <div class="section" id="derivatives-of-inverse-functions">
 <h2><span class="section-number">9.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
 <p>In this scenario we wish to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(y = f^{-1}(x)\)</span> and we know how to differentiate function <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p>For example, to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span> we let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> so that <span class="math notranslate nohighlight">\(x=e^y\)</span></p>
-<p>We know that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and then by using the special case of the chain rule we obtain the result :</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span></p>
+<p>We let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> such that <span class="math notranslate nohighlight">\(x=e^y\)</span>, this means that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and by the chain rule:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{e^y}\]</div>
-<p>This is not an acceptable result because the derivative has been given in terms of the dependent variable - we need to rewrite in terms of the independent variable <span class="math notranslate nohighlight">\(x\)</span>. For
-some problems of this type, it can be quite difficult, but here is is easy since <span class="math notranslate nohighlight">\(e^y=x\)</span>.</p>
-<p>The final result is</p>
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=1\Big/\frac{\mathrm{d}x}{\mathrm{d}y}=\frac{1}{e^y} = e^{-y}\]</div>
+<p>This is not an acceptable result because the derivative has been given in terms of the dependent variable - we need to rewrite in terms of the independent variable <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>For some problems of this type, it can be quite difficult, but here is is easy since <span class="math notranslate nohighlight">\(e^y=x\)</span>.</p>
+<p>Thus the final result is:</p>
 <div class="math notranslate nohighlight">
-\[\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)=\displaystyle\frac{1}{x}\]</div>
+\[\frac{\mathrm{d}}{\mathrm{d}x}\Big(\ln(x)\Big)=\frac{1}{x}\]</div>
 <p>another important (and familar) result.</p>
+</div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice Questions</p>
 <ol class="simple">
@@ -846,11 +849,12 @@ and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d
 since <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0\)</span>.  There are no points where the curve is parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
 <p>2. Let <span class="math notranslate nohighlight">\(𝑦=\mathrm{arccosh(y)}\)</span>. Then <span class="math notranslate nohighlight">\(𝑡=\cosh(y)\)</span></p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}t}{\mathrm{d}y}=1\Big/\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{1}{\sinh(y)}=\frac{1}{\pm \sqrt{cosh^2(y)−1}}
+\[\frac{\mathrm{d}t}{\mathrm{d}y}=1\Big/\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{1}{\sinh(y)}=\frac{1}{\pm \sqrt{\cosh^2(y)−1}}
 =\pm \frac{1}{\sqrt{t^2−1}}\]</div>
-<p>Recall that for the function <span class="math notranslate nohighlight">\(\mathrm{arccosh}\)</span> we select the positive branch. On this branch the function is monotonic increasing, so we again select the positive square root.</p>
+<p>Recall that for the function <span class="math notranslate nohighlight">\(\mathrm{arccosh}\)</span> we select the positive branch. On this branch the function is monotonic increasing, so we again select the
+positive square root.</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)=\frac{1}{\sqrt{t^2−1}}\]</div>
+\[\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{\arccosh}(t)=\frac{1}{\sqrt{t^2−1}}\]</div>
 </div>
 </div>
 <div class="section" id="implicit-differentiation">

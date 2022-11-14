@@ -228,10 +228,10 @@ The idea of using a substitution is that we convert a difficult integral w.r.t $
 
 Note that $\displaystyle f \frac{\mathrm{d}x}{\mathrm{d}u}=f\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}$ and so the substitution $u$ can be chosen to eliminate a factor from $f$.
 
-````{admonition} Worked Examples
+````{admonition} Worked example
 :class: seealso
 
-1\. To calculate $ \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x$ we can try the substitution $u=x^2-1$. This substitution will eliminate the factor $x$ and 
+To calculate $ \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x$ we can try the substitution $u=x^2-1$. This substitution will eliminate the factor $x$ and 
 will simplify the expression $\sqrt{x^2-1}$. We find that:
 
 $\displaystyle  \frac{\mathrm{d}u}{\mathrm{d}x}=2x$ and so $\displaystyle \frac{\mathrm{d}x}{\mathrm{d}u}=\frac{1}{2x}$, hence:
@@ -242,7 +242,21 @@ $\displaystyle  \frac{\mathrm{d}u}{\mathrm{d}x}=2x$ and so $\displaystyle \frac{
 
 This is the same result we can find by inspection.
 
-2\. To calculate the definite integral $ I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x$, we will use the substitution $u=2x+1$. (This problem could also be 
+````
+
+````{admonition} Practice questions
+:class: seealso, dropdown 
+
+1\. Find $ I= \displaystyle\int_1^3\frac{1}{2x+1}\mathrm{d}x$.
+
+
+2\. Find $ I= \displaystyle\int (ax+b)(cx+d)^n\mathrm{d}x$ using the substitution $u=cx+d$,/
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown 
+
+1\. To calculate the definite integral $ I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x$, we will use the substitution $u=2x+1$. (This problem could also be 
 solved by inspection).
 
 When $x=1$, $u=3$ and when $x=3$, $u=7$, hence, the result is 
@@ -252,7 +266,7 @@ I&=\int_{u=3}^{u=7}\frac{1}{u}\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}u 
 ```
 
 
-3\. To calculate an expression of the form $ I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x$ we can make the substitution $u=cx+d$, which gives:
+2\. To calculate an expression of the form $ I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x$ we can make the substitution $u=cx+d$, which gives:
 ```{math}
 I=\int\left(a\frac{u-d}{c}+b\right)u^n\frac{1}{c}\mathrm{d}u=\frac{1}{c^2}e \int(au+bc-ad)u^n\mathrm{d}u
 ```
@@ -266,28 +280,28 @@ Rewriting in terms of $x$ finally gives:
 ```{math}
 I = \frac{(cx+d)^{n+1}}{c^2}\left[\frac{a(cx+d)}{n+2}+\frac{bc-ad}{n+1}\right]
 ```
-
 ````
 
 ## Integral of $\displaystyle \frac{1}{x}$
 The function $\displaystyle \frac{1}{x}$ falls into a special category, because it cannot be solved using the polynomial antiderivative 
-$\int x^n = \frac{x^{n+1}}{n+1}$, consider the plot {numref}`oneOverx`:
+$\displaystyle \int x^n = \frac{x^{n+1}}{n+1}$ aws $n=-1$ here.
 
 ```{figure} oneOverx.png
 ---
 name: oneOverx
 ---
-The plot of $y=\frac{1}{x}$, showing limits of integration $\pm a$ and $\pm b$.
+The plot of $\displaystyle y=\frac{1}{x}$, showing limits of integration $\pm a$ and $\pm b$.
 ```
-
-Hence we see that 
+However we can think about the fact that $\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}\Big(\ln(x)\Big) = \frac{1}{x}$ and therefore use this as an 
+antiderivative.  From {numref}`oneOverx`, we see that:
 ```{math}
 \int_{-b}^{-a}\frac{1}{x}\mathrm{d}x = -\int_a^b\frac{1}{x}\mathrm{d}x = \int_b^a\frac{1}{x}\mathrm{d}x = \int_{-b}^{-a}\frac{1}{|x|\mathrm{d}x}
 ```
 
 So, $\displaystyle \int\frac{1}{x}=\ln(|x|)+\mathrm{const},\, \forall x$, provided that the range of integration does not cross the vertical axis.
 
-This is because formally $\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x$ is undefined, although we can define what is called the **Cauchy principal value** of this integral as:
+This is because formally $\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x$ is undefined, although we can define what is called the 
+**Cauchy principal value** of this integral as:
 
 ```{math}
 \lim_{\epsilon\rightarrow 0^{+}}\left( \int_{-a}^{-\epsilon}\frac{1}{x}\mathrm{d}x+ \int_{\epsilon}^a\frac{1}{x}\mathrm{d}x\right)=0
@@ -298,19 +312,22 @@ This is because formally $\displaystyle \int_{-a}^a\frac{1}{x}\mathrm{d}x$ is un
 For an indefinite integral:
 
 ```{math}
-\int u\frac{\mathrm{d}v}{\mathrm{d}x}\mathrm{d}x = u\,v- \int v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c
+\int u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x = u\,v- \int v\,\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c
 ```
 
 For a definite integral:
 
 ```{math}
-\int_a^b u\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x
+\int_a^b u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x
 ```
 
 This result can be proved using the product rule and the fundamental theorem of calculus.
 
 ```{math}
-\int \mathrm{d}(u\,v)=\int u\,\mathrm{d}\,v+\int v\,\mathrm{d}u \Rightarrow u\,v= \int u\,\mathrm{d}v= \int v\,\mathrm{d}u
+\mathrm{d}(u\,v) &= u\,\mathrm{d}\,v + v\,\mathrm{d}u  \\
+u\,\mathrm{d}\,v &= \mathrm{d}(u\,v) - v\,\mathrm{d}u \\
+\Rightarrow \int u\,\mathrm{d}\,v &= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
+\Rightarrow u\,v &= u\,v - \int v\,\mathrm{d}u
 ```
 ````
 
