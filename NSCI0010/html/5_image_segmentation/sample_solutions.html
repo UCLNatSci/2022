@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Images: loading and indexing &#8212; Natural Sciences Computing Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -48,6 +49,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Computing Project" href="../6_project/project.html" />
+    <link rel="prev" title="Workshop 5: Image Segmentation" href="segmentation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_introduction/getting_started.html">
    Workshop 1: Jupyter Notebooks
@@ -164,10 +167,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="segmentation.html">
    Workshop 5: Image Segmentation
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Images: loading and indexing
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_project/project.html">
@@ -394,7 +409,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="images-loading-and-indexing">
+  <section class="tex2jax_ignore mathjax_ignore" id="images-loading-and-indexing">
 <h1>Images: loading and indexing<a class="headerlink" href="#images-loading-and-indexing" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -409,41 +424,6 @@ title="Print to PDF"
 <span class="c1"># Load example image</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;bw.png&quot;</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="ne">C</span>:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_19848/2540240674.py in &lt;module&gt;
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">scipy.ndimage</span> <span class="k">as</span> <span class="nn">sn</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Load example image</span>
-
-<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">scipy</span>\<span class="n">ndimage</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="kn">from</span> <span class="nn">.filters</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span> <span class="kn">from</span> <span class="nn">.fourier</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="ne">--&gt; </span><span class="mi">153</span> <span class="kn">from</span> <span class="nn">.interpolation</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="kn">from</span> <span class="nn">.measurements</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="kn">from</span> <span class="nn">.morphology</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">scipy</span>\<span class="n">ndimage</span>\<span class="n">interpolation</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="kn">from</span> <span class="nn">numpy.core.multiarray</span> <span class="kn">import</span> <span class="n">normalize_axis_index</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span> 
-<span class="ne">---&gt; </span><span class="mi">37</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">special</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_ni_support</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_nd_image</span>
-
-<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">scipy</span>\<span class="n">special</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">641</span> <span class="kn">from</span> <span class="nn">.sf_error</span> <span class="kn">import</span> <span class="n">SpecialFunctionWarning</span><span class="p">,</span> <span class="n">SpecialFunctionError</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> 
-<span class="ne">--&gt; </span><span class="mi">643</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_ufuncs</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span> <span class="kn">from</span> <span class="nn">._ufuncs</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span> 
-
-<span class="ne">ImportError</span>: DLL load failed: The specified module could not be found.
 </pre></div>
 </div>
 </div>
@@ -470,8 +450,8 @@ title="Print to PDF"
 <img alt="../_images/sample_solutions_3_01.png" src="../_images/sample_solutions_3_01.png" />
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="thresholding">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="thresholding">
 <h1>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this headline">#</a></h1>
 <p>Write a function that takes two inputs: a grayscale image, and a threshold value. Your function should then return the x and y co-ordinates of the largest blob in that image.</p>
 <div class="cell docutils container">
@@ -511,8 +491,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="videos">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="videos">
 <h1>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">#</a></h1>
 <p>Load video data</p>
 <div class="cell docutils container">
@@ -580,7 +560,7 @@ Number of frames: 200
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x13ec56f70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1f5f74d6c88&gt;
 </pre></div>
 </div>
 <img alt="../_images/sample_solutions_11_1.png" src="../_images/sample_solutions_11_1.png" />
@@ -607,7 +587,7 @@ Number of frames: 200
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x13ed20d30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x1f5f75838c8&gt;
 </pre></div>
 </div>
 <img alt="../_images/sample_solutions_12_1.png" src="../_images/sample_solutions_12_1.png" />
@@ -660,7 +640,7 @@ Number of frames: 200
 <img alt="../_images/sample_solutions_13_0.png" src="../_images/sample_solutions_13_0.png" />
 </div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -689,6 +669,20 @@ Number of frames: 200
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="segmentation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Workshop 5: Image Segmentation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../6_project/project.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Computing Project</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

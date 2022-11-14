@@ -10,10 +10,6 @@ It is well known that the value of [acceleration due to gravity at the Earth's s
 Perform an experiment to determine an estimate of the value of $g$, using a handheld camera to capture the experimental results and Python to perform the analysis.
 :::
 
-*More details of the project will appear here soon*.
-
-<!--
-
 ## Instructions
 
 These instructions are one suggested way to meet the project goal. There may be other equally valid ways to achieve the goal, so feel free to adapt them as you wish.
@@ -50,10 +46,8 @@ You should submit your solution to the problem as a Jupyter Notebook, including 
 
 Each project group will be awarded a mark as follows.
 
-|Grade|Class|Criterion|
-| ---  | ---        |---|
-|100%|Distinction|A solution to the problem which also goes beyond the project goal by completing an extension activity|
-|70%|Merit|A solution to the problem which meets the project goal by correctly determining a value for $g$|
-|39%|Fail|Failed to solve the problem or notebook does not run correctly|
-
--->
+|Grade|Criterion|
+| ---  | ---        |
+|Distinction|A solution to the problem which also goes beyond the project goal by completing an extension activity|
+|Merit|A solution to the problem which meets the project goal by correctly determining a value for $g$|
+|Fail|Failed to solve the problem or notebook does not run correctly|

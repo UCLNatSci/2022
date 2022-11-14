@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Workshop 2: Turtle Graphics &#8212; Natural Sciences Computing Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -168,10 +169,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../5_image_segmentation/segmentation.html">
    Workshop 5: Image Segmentation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_image_segmentation/sample_solutions.html">
+     Images: loading and indexing
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_project/project.html">
@@ -418,7 +431,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="workshop-2-turtle-graphics">
+  <section class="tex2jax_ignore mathjax_ignore" id="workshop-2-turtle-graphics">
 <h1>Workshop 2: Turtle Graphics<a class="headerlink" href="#workshop-2-turtle-graphics" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Turtle_graphics">Turtle Graphics</a> is a graphical computer language often used to introduce programming to beginners. The user controls an on-screen turtle by sending commands such as ‘forward 50’ and ‘rotate 90’. The turtle follows the commands in sequence, drawing a line as it moves.</p>
 <p><img alt="Turtle Graphics" src="../_images/220px-Turtle-animation.gif" /></p>
@@ -431,7 +444,7 @@ title="Print to PDF"
 <li><p>How to assemble more complicated programs by combining instructions into functions</p></li>
 </ol>
 </div>
-<div class="section" id="question-1">
+<section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
 <p>The code below implements a simple Turtle Graphics program. Don’t worry, you’re not expected to understand it - some of this is quite advanced!</p>
 <blockquote>
@@ -514,8 +527,8 @@ Create another code cell and paste the following code:</p>
 <p class="admonition-title">Computer Program</p>
 <p>A computer program is an ordered sequence of instructions which direct the computer to perform a specific task. The computer executes each instruction in turn, resulting in the desired output.</p>
 </div>
-</div>
-<div class="section" id="question-2">
+</section>
+<section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
 <p>In principle, we could use the same technique to generate any <span class="math notranslate nohighlight">\(n\)</span>-sided polygon. But there’s a smarter way, which means that we don’t have to endlessly repeat ourselves, using <em>loops</em>. Here is how to draw a square using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:</p>
 <div class="cell docutils container">
@@ -542,8 +555,8 @@ Create another code cell and paste the following code:</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="question-3">
+</section>
+<section id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
 <p>The following code defines a function which draws a square, using the code above:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_square</span><span class="p">():</span>
@@ -572,8 +585,8 @@ Create another code cell and paste the following code:</p>
 <p class="admonition-title">Functions</p>
 <p>A function is a set of instructions combined together to achieve a specific outcome. Functions are a good alternative to having repeating blocks of code in a program.</p>
 </div>
-</div>
-<div class="section" id="question-4">
+</section>
+<section id="question-4">
 <h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
 <p>Can you reproduce the figures below?</p>
 <div class="cell_output docutils container">
@@ -583,8 +596,8 @@ Create another code cell and paste the following code:</p>
 <img alt="../_images/turtle_workshop_answers_11_0.png" src="../_images/turtle_workshop_answers_11_0.png" />
 </div>
 <p><em>Hint: approximate a circle by a polygon with a large number of sides</em></p>
-</div>
-<div class="section" id="question-5-optional">
+</section>
+<section id="question-5-optional">
 <h2>Question 5 (Optional)<a class="headerlink" href="#question-5-optional" title="Permalink to this headline">#</a></h2>
 <p>The Koch curve is a fractal that can be generated by iteratively applying a sequence of Turtle instructions.</p>
 <p><img alt="" src="../_images/koch_1.png" /><img alt="" src="../_images/koch_2.png" /><img alt="" src="../_images/koch_3.png" /></p>
@@ -595,10 +608,10 @@ Create another code cell and paste the following code:</p>
 <blockquote>
 <div><p><a class="reference external" href="http://www.fractalcurves.com/Turtle.html">Read about L-Systems</a> then try drawing some L-Systems using Turtle.</p>
 </div></blockquote>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

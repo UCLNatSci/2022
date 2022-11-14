@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Workshop 5: Image Segmentation &#8212; Natural Sciences Computing Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -48,7 +49,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Computing Project" href="../6_project/project.html" />
+    <link rel="next" title="Images: loading and indexing" href="sample_solutions.html" />
     <link rel="prev" title="Workshop 4 Answers" href="../4_simulation/simulation_sample_solution.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -166,10 +167,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Workshop 5: Image Segmentation
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sample_solutions.html">
+     Images: loading and indexing
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_project/project.html">
@@ -456,7 +469,7 @@ title="Print to PDF"
 <p>It is up to YOU to choose your team members and if possible you should do this during today’s workshop.</p>
 <p>Submit the names of your team members via the link on Moodle.</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="workshop-5-image-segmentation">
+<section class="tex2jax_ignore mathjax_ignore" id="workshop-5-image-segmentation">
 <h1>Workshop 5: Image Segmentation<a class="headerlink" href="#workshop-5-image-segmentation" title="Permalink to this headline">#</a></h1>
 <p>Image segmentation is the process of partitioning a image or video into regions, typically for the purpose of identifying specific objects or features. For example, identifying different tissue types in medical images, or distinguishing objects in astronomical images.
 <img src="https://d3i71xaburhd42.cloudfront.net/1b699b098ec7a5e539afd8370d71a82d41e3370d/3-Figure1-1.png" width="400px" /></p>
@@ -481,7 +494,7 @@ title="Print to PDF"
 <li><p>How to use Python libraries to perform image segmentation</p></li>
 </ol>
 </div>
-<div class="section" id="images-loading-and-indexing">
+<section id="images-loading-and-indexing">
 <h2>Images: loading and indexing<a class="headerlink" href="#images-loading-and-indexing" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">bw.png</span></code> is an 8x8 pixel image.</p>
 <p><a href="../workshop_5/bw.png" download>bw.png (download link)</a></p>
@@ -555,7 +568,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="ne">C</span>:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_32420/161630308.py in &lt;module&gt;
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_10572</span>\<span class="mf">161630308.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 
 <span class="ne">IndexError</span>: index 8 is out of bounds for axis 1 with size 8
@@ -610,8 +623,8 @@ title="Print to PDF"
 </div>
 </div>
 <p>You can learn more about indexing and slicing, including more advanced syntax <a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html">here</a></p>
-</div>
-<div class="section" id="thresholding">
+</section>
+<section id="thresholding">
 <h2>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this headline">#</a></h2>
 <p>The next step is to threshold the image, generating an array whose values are 1 for pixels above the threshold, and 0 for pixels below the threshold. The threshold value should of course be between the minimum and maximum values in this array:</p>
 <div class="cell docutils container">
@@ -680,8 +693,8 @@ Max: 1.0
 <img alt="../_images/segmentation_22_2.png" src="../_images/segmentation_22_2.png" />
 </div>
 </div>
-</div>
-<div class="section" id="segmentation">
+</section>
+<section id="segmentation">
 <h2>Segmentation<a class="headerlink" href="#segmentation" title="Permalink to this headline">#</a></h2>
 <p>The next step is to identify the blobs and determine their size and locations. There is a package called <code class="docutils literal notranslate"><span class="pre">scipy.ndimage</span></code> which contains functions to do exactly this. The following code uses <a class="reference external" href="https://en.wikipedia.org/wiki/Connected-component_labeling">connected component labelling</a> to identify and print the number of blobs, their sizes and the co-ordinates of the largest one:</p>
 <div class="cell docutils container">
@@ -769,8 +782,8 @@ You may use the following template as a starting point:</p>
 <span class="c1"># should print 2.5 3.5</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="videos">
+</section>
+<section id="videos">
 <h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">#</a></h2>
 <p>Our goal is to track the location of a moving particle across a sequence of frames of a video. A video is essentially a sequence of frame-by-frame still images, so we can reuse the techniques above. The essential steps are as below:</p>
 <ol class="simple">
@@ -779,7 +792,7 @@ You may use the following template as a starting point:</p>
 <li><p>Use slicing to crop the frame so that only one particle is visible</p></li>
 <li><p>Re-use the previous code to identify the particle position</p></li>
 </ol>
-<div class="section" id="load-video-data">
+<section id="load-video-data">
 <h3>Load Video Data<a class="headerlink" href="#load-video-data" title="Permalink to this headline">#</a></h3>
 <p>The following code loads a video file into an array called <code class="docutils literal notranslate"><span class="pre">data</span></code> and prints out the dimensions of each frame and the number of frames. You don’t need to understand how it works.</p>
 <p><a href="../workshop_5/atomic.avi" download>atomic.avi (download link)</a></p>
@@ -820,8 +833,8 @@ Number of frames: 200
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="extract-first-frame">
+</section>
+<section id="extract-first-frame">
 <h3>Extract First Frame<a class="headerlink" href="#extract-first-frame" title="Permalink to this headline">#</a></h3>
 <p>Our video is stored as a 200x480x640 array, where the first dimension is the time axis and the second two dimensions are the spatial axes. In other words, the video consists of 200 individual 480x640 pixel frames. We can extract the first frame (frame number 0) into an array <code class="docutils literal notranslate"><span class="pre">f</span></code>, using the indexing concepts introduced earlier.</p>
 <div class="cell docutils container">
@@ -839,8 +852,8 @@ Number of frames: 200
 <img alt="../_images/segmentation_31_1.png" src="../_images/segmentation_31_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="crop-the-image">
+</section>
+<section id="crop-the-image">
 <h3>Crop the Image<a class="headerlink" href="#crop-the-image" title="Permalink to this headline">#</a></h3>
 <p>Next we will crop the image to only focus on a single bright particle. We will draw some lines on the image to indicate the cropping boundaries, then use slicing to create an array <code class="docutils literal notranslate"><span class="pre">f_cropped</span></code> containing the cropped image.</p>
 <div class="cell docutils container">
@@ -942,13 +955,15 @@ Number of frames: 200
 <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="exercise">
+</section>
+<section id="exercise">
 <h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h3>
 <p>Choose another particle in the video and repeat the steps above to track its movement.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -984,10 +999,10 @@ Number of frames: 200
             <p class="prev-next-title">Workshop 4 Answers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../6_project/project.html" title="next page">
+    <a class='right-next' id="next-link" href="sample_solutions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Computing Project</p>
+        <p class="prev-next-title">Images: loading and indexing</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

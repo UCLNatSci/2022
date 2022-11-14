@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Workshop 4: Modelling and Simulation &#8212; Natural Sciences Computing Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -168,10 +169,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../5_image_segmentation/segmentation.html">
    Workshop 5: Image Segmentation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_image_segmentation/sample_solutions.html">
+     Images: loading and indexing
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_project/project.html">
@@ -462,9 +475,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="workshop-4-modelling-and-simulation">
+  <section class="tex2jax_ignore mathjax_ignore" id="workshop-4-modelling-and-simulation">
 <h1>Workshop 4: Modelling and Simulation<a class="headerlink" href="#workshop-4-modelling-and-simulation" title="Permalink to this headline">#</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>A <a class="reference external" href="https://www.britannica.com/science/scientific-modeling">scientific model </a> is a mathematical or conceptual representation of a real-world process or phenomenon.</p>
 <p>In the previous workshop, we simulated the motion of an object moving under gravity using a simple quadratic equation. The equation was a model of the motion of the object, but in reality it’s only a prediction of the object’s movement.</p>
@@ -483,14 +496,14 @@ title="Print to PDF"
 <li><p>How to using model fitting to estimate the parameters of a model</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="exponential-growth">
+</section>
+<section id="exponential-growth">
 <h2>Exponential Growth<a class="headerlink" href="#exponential-growth" title="Permalink to this headline">#</a></h2>
 <p>Bacteria grown in the lab provide an example of <strong>exponential growth</strong>. In exponential growth, the growth rate of the population is in proportion to the size of the population. Bacteria reproduce by binary fission, and the time between divisions is about an hour.</p>
 <p>Suppose we place a 1000 bacteria in a flask with an unlimited supply of nutrients. After one hour, each bacterium will divide, yielding 2000 bacteria (an increase of 1000). After 2 hours, each of the 2000 bacteria will divide, producing 4000 (an increase of 2000 bacteria). After 3 hours, each of the 4000 bacteria will divide, producing 8000 (an increase of 4000 bacteria).</p>
 <p>The key concept of exponential growth is that the number of cells added in each generation is in direct proportion to the number cells.</p>
-</div>
-<div class="section" id="modelling-exponential-growth">
+</section>
+<section id="modelling-exponential-growth">
 <h2>Modelling Exponential Growth<a class="headerlink" href="#modelling-exponential-growth" title="Permalink to this headline">#</a></h2>
 <p>Suppose a population of bacteria belonging to species X doubles in size every hour. Then we can model the population using the following equation:</p>
 <div class="math notranslate nohighlight">
@@ -566,10 +579,10 @@ title="Print to PDF"
 <blockquote>
 <div><p>Plot the predicted population of species Y on a separate figure.</p>
 </div></blockquote>
-</div>
-<div class="section" id="experimental-data">
+</section>
+<section id="experimental-data">
 <h2>Experimental Data<a class="headerlink" href="#experimental-data" title="Permalink to this headline">#</a></h2>
-<div class="section" id="eight-hour-experiment">
+<section id="eight-hour-experiment">
 <h3>Eight hour experiment<a class="headerlink" href="#eight-hour-experiment" title="Permalink to this headline">#</a></h3>
 <p>Now suppose that we perform a laboratory experiment in order to measure the growth in the two species of bacteria. The population of each was recorded every hour for 8 hours.</p>
 <div class="admonition seealso">
@@ -632,7 +645,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x28faeef28c8&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1a479d21648&gt;
 </pre></div>
 </div>
 <img alt="../_images/simulation_6_1.png" src="../_images/simulation_6_1.png" />
@@ -646,8 +659,8 @@ title="Print to PDF"
 <blockquote>
 <div><p>By changing the value of <code class="docutils literal notranslate"><span class="pre">r_Y</span></code> until the two graphs coincide, determine a good value of <span class="math notranslate nohighlight">\(r\)</span> for species Y.</p>
 </div></blockquote>
-</div>
-<div class="section" id="hour-experiment">
+</section>
+<section id="hour-experiment">
 <h3>24 hour experiment<a class="headerlink" href="#hour-experiment" title="Permalink to this headline">#</a></h3>
 <p>The experimenter continues the experiment for a full 24 hours. The results of the experiment are in the files <code class="docutils literal notranslate"><span class="pre">data_exp_X.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">data_exp_Y.txt</span></code>.</p>
 <p><a href="../workshop_4/data_exp_X.txt" download>data_exp_X.txt</a><br />
@@ -695,7 +708,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x28faf146788&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1a477b7a4c8&gt;
 </pre></div>
 </div>
 <img alt="../_images/simulation_10_1.png" src="../_images/simulation_10_1.png" />
@@ -710,7 +723,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x28fb13dc3c8&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1a479e48608&gt;]
 </pre></div>
 </div>
 <img alt="../_images/simulation_12_1.png" src="../_images/simulation_12_1.png" />
@@ -718,9 +731,9 @@ title="Print to PDF"
 </div>
 <p>Notice that while the population increases exponentially at first, eventually it stops increasing, likely due to exhausting resources such as nutrients or physical space. Our simple exponential model is insufficient to take this into account.</p>
 <p>Instead, we can consider a more sophisticated model, <em>logistic growth</em>.</p>
-</div>
-</div>
-<div class="section" id="logistic-growth">
+</section>
+</section>
+<section id="logistic-growth">
 <h2>Logistic Growth<a class="headerlink" href="#logistic-growth" title="Permalink to this headline">#</a></h2>
 <p>The logistic equation describes the growth of a population where the growth rate is limited by resources.</p>
 <div class="math notranslate nohighlight">
@@ -738,8 +751,8 @@ Plot the experimental and model prediction on the same graph.</p>
 <blockquote>
 <div><p>Repeat the simulation for species Y (Don’t forget to load the 24h experimental data for Y, from the text file provided above!). Determine values of <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(K\)</span> that best fit the experimental data. Hint: the value of <span class="math notranslate nohighlight">\(r\)</span> affects the steepness of growth, while <span class="math notranslate nohighlight">\(K\)</span> is related to the point of saturation.</p>
 </div></blockquote>
-</div>
-<div class="section" id="exercise">
+</section>
+<section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
 <p>The following three text files contain the results of 3 bacterial population growth experiments. For each one, plot the data and by running a simulation for each, estimate the value of <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(K\)</span>.</p>
 <p><a href="../workshop_4/data_exp_A.txt" download>data_exp_A.txt</a><br />
@@ -768,8 +781,8 @@ Plot the experimental and model prediction on the same graph.</p>
 <p class="admonition-title">Challenge</p>
 <p>See if you can use simple functions, loops and arrays to solve this exercise efficiently. If you find yourself repeating the same code over and over, could you use a loop? Try defining a function that takes values for <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(K\)</span>, <span class="math notranslate nohighlight">\(x_0\)</span> (initial population) and <code class="docutils literal notranslate"><span class="pre">n_hours</span></code> as inputs and returns an array of population values.</p>
 </div>
-</div>
-<div class="section" id="epidemic-model-optional">
+</section>
+<section id="epidemic-model-optional">
 <h2>Epidemic Model (Optional)<a class="headerlink" href="#epidemic-model-optional" title="Permalink to this headline">#</a></h2>
 <p>The spread of an infectious disease amongst a population can be modelled by the following pair of coupled equations:</p>
 <div class="math notranslate nohighlight">
@@ -784,10 +797,10 @@ Plot the experimental and model prediction on the same graph.</p>
 <p class="admonition-title">SIR model</p>
 <p>This model is called the SIR model which is commonly used to <a class="reference external" href="https://www.nature.com/articles/d41586-020-01003-6">model epidemics such as COVID</a>.</p>
 </div>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
