@@ -52,7 +52,7 @@ slowing down towards a fixed value, if they do not then there is no chance that 
 convergence, the "rate of decline" is also important.  If the 
 
 3 \. *For any convergent series, there is a corresponding geometric series that converges to the same or a larger value* - since the expression for 
-$S_\infty = a/(1-r)$, there are actually a infinite number of corresponding geometric series given a free choice of $a$ and $r$.
+$S_\infty = a/(1-r)$, there are actually an infinite number of corresponding geometric series given a free choice of $a$ and $r$.
 ````
 
 We may start to understand this behaviour by looking at what happens to the size of the terms in a series in the long run (i.e. for large $n$).
@@ -63,8 +63,8 @@ but we can make the sum as big as we like by adding more terms - so this series 
 
 Less obviously, if we look at the series $\displaystyle \sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}$ then it may be shown that in the limit of $n \to \infty$,
 ```{math}
-\frac{n^2}{4n^2 + 3 n + 1} = \frac{1}{4 + \frac{3}{n} + \frac{1}{n^2}} \\
-\lim_{n \to \infty} \frac{n^2}{4n^2 + 3 n + 1} = \frac{1}{4}
+\frac{n^2}{4n^2 + 3 n + 1} &= \frac{1}{4 + \frac{3}{n} + \frac{1}{n^2}} \\
+\lim_{n \to \infty} \frac{n^2}{4n^2 + 3 n + 1} &= \frac{1}{4}
 
 ``` 
 This means that in the long run the series starts to resemble $\displaystyle\sum_{n=1}^N \frac{1}{4}$ and therefore also diverges.
@@ -75,14 +75,14 @@ The first criterion here can be written into a "preliminary test" for convergenc
 
 ````{admonition} Definition
 :class: note
-A convergent series *must* satisy the following result:
+A convergent series *must* satisfy the following result:
 ```{math}
 \lim_{n \to \infty}\Big| u_n\Big | = 0
 ```
 ````
 
-Note that the preliminary test cannot conclusively identify a series as convergent, we require further tests in order to do this, but it does test whether a series 
-is divergent.
+Note that the preliminary test cannot conclusively identify a series as convergent, we require further tests in order to do this, but if a series fails this test, 
+it is definitely divergent (i.e. a necessary but not sufficient condition on convergence).
 
 
 ## D'Alembert's ratio test
@@ -117,7 +117,7 @@ series converges.  If the converse is true the terms are **growing** and hence t
 
 Cases where the ratio test is inconclusive will require further tests.  
 
-````{admonition} Worked Example
+````{admonition} Worked example
 :class: seealso
 We will use D'Alembert's ratio test to determine whether $\displaystyle \sum_{k=1}^n \frac{k^2}{k!}$ converges.
 
@@ -144,7 +144,7 @@ run - i.e. as $n \to \infty$. The limit must be explicitly taken!
 3. Do not drop the modulus signs unexpectedly, otherwise you might get an answer $< -1$ and then conclude that $\rho < 1$, when it should have actually been $\rho > 1$.
 ````
 
-````{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
 
 Use the ratio test to determine if the following series converges:
@@ -215,16 +215,22 @@ an interval:
 
 ````
 
-````{admonition} Example with Taylor series
+````{admonition} Practice questions
 :class: seealso, dropdown
 
-Find the Maclaurin series for $\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)$, and determine the interval of convergence for this expansion.
+1\. Find the Maclaurin series for $\displaystyle \ln\Big(\frac{1+x}{1-x}\Big)$, and determine the interval of convergence for this expansion.
+
+2\. Given the series:
+```{math}
+S[x;\,p] = \sum_{n=1}^\infty\frac{(2x)^{2n}}{n^p}
+```
+find the interval of convergence.
 ````
 
-````{admonition} Solution :
+````{admonition} Solution
 :class: seealso, dropdown
 
-The series expansion of $\ln(1+x)$ can be found by taking $f(x)=\ln(1+x)$ and using the formula for a Maclaurin series
+1\. The series expansion of $\ln(1+x)$ can be found by taking $f(x)=\ln(1+x)$ and using the formula for a Maclaurin series
 as we are about the point $x=0$.
 
 ```{math}
@@ -263,6 +269,14 @@ which does not converge - it is actually the harmonic series in disguise!
 
 For these values of $x$, the function $f(x)$ is also not finite.
 
+2\. Applying the ratio test:
+```{math}
+\frac{u_{n+1}}{u_n} &= \frac{(2x)^{2n+2}}{(n+1)^p} \Big/ \frac{(2x)^{2n}}{n^p} = \frac{(2x)^{2n+2}}{(2x)^{2n}}\frac{n^p}{(n+1)^p}\\
+&= x^2\Big(\frac{n}{n+1}\Big)^p = (2x)^2\Big(\frac{1}{1+\frac{1}{n}}\Big)^p \\
+\lim_{n \rightarrow \infty}\Big| \frac{u_{n+1}}{u_n}\Big|&= \lim_{n \rightarrow \infty}\Big| (2x)^2\Big(\frac{1}{1+\frac{1}{n}}\Big)^p \Big|
+```
+this means that $|4x^2|<1$, i.e. $\displaystyle |x|^2 < \frac{1}{4} \Rightarrow -\frac{1}{4} < x < \frac{1}{4}$.  
+
 ````
 
 
@@ -275,7 +289,7 @@ Typically we will compare to geometric series involving powers of two - by the s
 ````{admonition} Definition
 :class: note
 
-A series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_1' = \sum_n b_n$ such that $\forall n$, $|b_n| \geq |a_n|$.
+A series $\displaystyle S_1 = \sum_n a_n$ can be shown to converge if there exists a series $\displaystyle S_1' = \sum_n b_n$ such that $\forall n$, $|b_n| \geq |a_n|$.
 
 If series $S_1'$ is known to converge (e.g. an infinite geometric series), then series $S_1$ **must** also converge.
 

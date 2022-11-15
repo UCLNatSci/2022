@@ -32,10 +32,12 @@ Sequences can have finite $n<\infty$ (e.g. telephone numbers) or infinite sizes
 $n \to \infty$ (e.g. the prime numbers).
 ````
 
-The sequences that we will examine in this course are numerical patterns.  Much of mathematics is concerned with patterns in both mathematical constructs and nature, and the study of sequences
+The sequences that we will examine in this course are numerical patterns.  Much of mathematics is concerned with patterns in both mathematical constructs and nature, 
+and the study of sequences
 provides a firm grounding for this endeavour.
 
-Mathematical patterns can generally be expressed as formula for the $i$th term. For instance, the formula below generates the sequence $-1, 2, 5, 8, 11, 14, 17, 20$ by taking $i=1,\dots 8$ :
+Mathematical patterns can generally be expressed as formula for the $i$th term. For instance, the formula below generates the sequence $-1, 2, 5, 8, 11, 14, 17, 20$ by 
+taking $i=1,\dots 8$ :
 
 ```{math}
 u_i = 2 + 3 (i-2)
