@@ -440,18 +440,27 @@ where ${\bf r_0}=\begin{pmatrix} x_0\\y_0\\z_0\end{pmatrix}$ is the position vec
 ${\bf v}=\begin{pmatrix}  v_x\\v_y\\v_z\end{pmatrix}$ is a vector parallel to the line.  Notice that the special case where $z$ is constant 
 gives an equation of the form $y = m x+c$
 
-As an example, we can wfind the vector equation of the lines $\frac{3x+1}{2} = \frac{y−1}{2} = \frac{5−z}{3}$, by setting each of these to 
-equal some constant $\lambda$, hence:
+````{admonition} Worked example
+:class: seealso 
+Find the vector equation of the lines:
+```{math} 
+\frac{3x+1}{2} = \frac{y−1}{2} = \frac{5−z}{3}
+```
+
+By setting each of these equations to equal some constant $\lambda$:
 
 ```{math}
-x &=  \frac{1}{3}(2\lambda-1) = -\frac{1}{3} + \frac{2}{3}\lambda \\
-y &=  1 + 2\lambda \\
-z &=  -(3\lambda -5) = 5 - 3 \lambda
+\frac{3x+1}{2} = \lambda &\Rightarrow x =  \frac{1}{3}(2\lambda-1) = -\frac{1}{3} + \frac{2}{3}\lambda \\
+\frac{y−1}{2} = \lambda &\Rightarrow y =  1 + 2\lambda \\
+\frac{5−z}{3} = \lambda &\Rightarrow z =  -(3\lambda -5) = 5 - 3 \lambda
 ```
-and therefore the vector equation is:
+
+we find the vector equation as:
+
 ```{math}
 {\bf r} = \begin{pmatrix} -1/3\\1\\5\end{pmatrix} + \lambda \begin{pmatrix} 2/30\\2\\-3\end{pmatrix}
 ```
+````
 
 ### Equation of a Plane
 
@@ -597,9 +606,9 @@ d &=  \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}
 Or by using the scalar product:
 
 ```{math}
-\overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix},\quad \overrightarrow{AC} =  \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
-|\overrightarrow{AC}_{\parallel}| =  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}&=\frac{3}{\sqrt{14}}
-d =  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
+\overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix},\quad \overrightarrow{AC} =  \begin{pmatrix}4\\-1\\2\end{pmatrix} \\
+|\overrightarrow{AC}_{\parallel}| &=  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}&=\frac{3}{\sqrt{14}}\\
+d &=  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
 ```
 ````
    
