@@ -582,7 +582,7 @@ f_v = f_x\, x_v + f_y\, y_v &amp;=  2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)\en
 \[P(x,\,y)\,\mathrm{d}x + Q(x,\, y)\,\mathrm{d}y = 0\]</div>
 <p>such that:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}[\partial x\,\partial y}
+\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}{\partial x\,\partial y}
 \]</div>
 <p>then we call this an <strong>exact</strong> or <strong>perfect</strong> differential.</p>
 </div>
@@ -694,7 +694,52 @@ f_{yx}&amp;f_{yy}
 <p>A contour plot of the function, shown in <a class="reference internal" href="#example1"><span class="std std-numref">Fig. 11.9</span></a>, confirms these findings.</p>
 <div class="figure align-default" id="example1">
 <img alt="../_images/example1.png" src="../_images/example1.png" />
-<p class="caption"><span class="caption-number">Fig. 11.9 </span><span class="caption-text">Contour plot of <span class="math notranslate nohighlight">\(f=x^3-y^3-2xy+2\)</span>, showing stationary points clearly.</span><a class="headerlink" href="#example1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11.9 </span><span class="caption-text">Contour plot of <span class="math notranslate nohighlight">\(\displaystyle f=x^3-y^3-2xy+2\)</span>, showing stationary points clearly.</span><a class="headerlink" href="#example1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice question</p>
+<p>1. Find the stationary points for the surface described by <span class="math notranslate nohighlight">\(f(x,y) = x^2 + 3xy^2 + 2y^3\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>1. Finding the partial derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_x &amp;= 2x + 3y^2\\
+f_y &amp;= 6xy + 6y^2\\
+f_{xx} &amp;= 2\\ 
+f_{yy} &amp;= 6x + 12y\\
+f_{xy} &amp;= f_{yx} = 6y\end{split}\]</div>
+<p>To find the points which satisfy <span class="math notranslate nohighlight">\(f_x = f_y = 0\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2x + 3y^2 &amp;= 0\\
+6xy + 6y^2 = 6y(x+y) &amp;=0\end{split}\]</div>
+<p>Thus we find <span class="math notranslate nohighlight">\(y=0\)</span> as a valid stationary point, this will therefore correspond to <span class="math notranslate nohighlight">\(x=0\)</span>.  Another stationary point will be found to satisfy by <span class="math notranslate nohighlight">\(y = -x\)</span>, hence we have to solve:</p>
+<div class="math notranslate nohighlight">
+\[3x^2 + 2x = x(3x + 2) = 0\]</div>
+<p>which has solutions of <span class="math notranslate nohighlight">\(x = 0\)</span> (hence <span class="math notranslate nohighlight">\(y = 0\)</span>) or <span class="math notranslate nohighlight">\(x = -2/3\)</span> and therefore from <span class="math notranslate nohighlight">\(y = -x\)</span> corresponds to <span class="math notranslate nohighlight">\(y = 0\)</span> or <span class="math notranslate nohighlight">\(y = 2/3\)</span>.</p>
+<p>Therefore we can collect together these points as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;A\Big(0,\,0\Big) \\
+&amp;B\Big(-\frac{2}{3},\,\frac{2}{3}\Big)\end{split}\]</div>
+<p>To find the nature of these SP’s, we
+need the Hessian determinant:</p>
+<div class="math notranslate nohighlight">
+\[\det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = \Big( 2 \Big)\Big( 6x+12y \Big)\Big( 6y \Big) = 72y(x+2y)\]</div>
+<p>and hence at each point:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H\Big|_A &amp;= 0 \qquad \text{(inconclusive)}\\
+H\Big|_B &amp;= -\frac{244}{9} &lt; 0 \qquad\text{(saddle)}\\\end{split}\]</div>
+<p>To examine what happens at <span class="math notranslate nohighlight">\(A\)</span>, we can look at <span class="math notranslate nohighlight">\(f_{x}\)</span> and <span class="math notranslate nohighlight">\(f_{y}\)</span> for points <span class="math notranslate nohighlight">\((\pm \delta x, \,\pm\delta x)\)</span> for <span class="math notranslate nohighlight">\(\delta x, \delta y \ll 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_{x}\Big|_{(\delta x,\, \delta y)} = 3(\delta y)^2 + 2\delta x &gt; 0\\
+f_{x}\Big|_{(-\delta x,\, -\delta y)} = 3(\delta y)^2 - 2\delta x&lt; 0\\
+f_{y}\Big|_{(\delta x,\, \delta y)} = 6(\delta x)(\delta y) + 6(\delta y)^2 &gt; 0\\
+f_{x}\Big|_{(-\delta x,\, -\delta y)} = 6(\delta x)(\delta y) + 6(\delta y)^2 &gt; 0\\\end{split}\]</div>
+<p>In the <span class="math notranslate nohighlight">\(y\)</span> direction there is a point of inflection and in the <span class="math notranslate nohighlight">\(x\)</span> direction there is a minima, there is a saddle point at <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>We can also see this from the contour plot:</p>
+<div class="figure align-default" id="cplot">
+<img alt="../_images/contourplot.gif" src="../_images/contourplot.gif" />
 </div>
 </div>
 </div>

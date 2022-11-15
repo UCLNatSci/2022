@@ -283,7 +283,7 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\, y)\,\mathrm{d}y = 0
 such that:
 
 ```{math}
-\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}[\partial x\,\partial y}
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} = \frac{\partial^2 f}{\partial x\,\partial y}
 
 ```
 then we call this an **exact** or **perfect** differential.  
@@ -443,8 +443,72 @@ A contour plot of the function, shown in {numref}`example1`, confirms these find
 ---
 name: example1
 ---
-Contour plot of $f=x^3-y^3-2xy+2$, showing stationary points clearly.
+Contour plot of $\displaystyle f=x^3-y^3-2xy+2$, showing stationary points clearly.
 ```
+````
+
+````{admonition} Practice question
+:class: seealso, dropdown
+1\. Find the stationary points for the surface described by $f(x,y) = x^2 + 3xy^2 + 2y^3$.
+````
+
+````{admonition} Solution
+:class: seealso, dropdown
+1\. Finding the partial derivatives:
+```{math}
+f_x &= 2x + 3y^2\\
+f_y &= 6xy + 6y^2\\
+f_{xx} &= 2\\ 
+f_{yy} &= 6x + 12y\\
+f_{xy} &= f_{yx} = 6y
+```
+
+To find the points which satisfy $f_x = f_y = 0$, we have:
+```{math}
+2x + 3y^2 &= 0\\
+6xy + 6y^2 = 6y(x+y) &=0
+```
+
+Thus we find $y=0$ as a valid stationary point, this will therefore correspond to $x=0$.  Another stationary point will be found to satisfy by $y = -x$, hence we have to solve:
+```{math}
+3x^2 + 2x = x(3x + 2) = 0
+```
+which has solutions of $x = 0$ (hence $y = 0$) or $x = -2/3$ and therefore from $y = -x$ corresponds to $y = 0$ or $y = 2/3$.  
+
+Therefore we can collect together these points as:
+
+```{math}
+&A\Big(0,\,0\Big) \\
+&B\Big(-\frac{2}{3},\,\frac{2}{3}\Big)
+```
+To find the nature of these SP's, we 
+need the Hessian determinant:
+
+```{math}
+\det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = \Big( 2 \Big)\Big( 6x+12y \Big)\Big( 6y \Big) = 72y(x+2y)
+```
+and hence at each point:
+```{math}
+H\Big|_A &= 0 \qquad \text{(inconclusive)}\\
+H\Big|_B &= -\frac{244}{9} < 0 \qquad\text{(saddle)}\\
+```
+To examine what happens at $A$, we can look at $f_{x}$ and $f_{y}$ for points $(\pm \delta x, \,\pm\delta x)$ for $\delta x, \delta y \ll 1$
+```{math}
+f_{x}\Big|_{(\delta x,\, \delta y)} = 3(\delta y)^2 + 2\delta x > 0\\
+f_{x}\Big|_{(-\delta x,\, -\delta y)} = 3(\delta y)^2 - 2\delta x< 0\\
+f_{y}\Big|_{(\delta x,\, \delta y)} = 6(\delta x)(\delta y) + 6(\delta y)^2 > 0\\
+f_{x}\Big|_{(-\delta x,\, -\delta y)} = 6(\delta x)(\delta y) + 6(\delta y)^2 > 0\\
+```
+In the $y$ direction there is a point of inflection and in the $x$ direction there is a minima, there is a saddle point at $A$.
+
+We can also see this from the contour plot:
+
+```{figure} ./contourplot.gif
+---
+name: cplot
+---
+```
+
 ````
 
   

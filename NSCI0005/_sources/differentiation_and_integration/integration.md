@@ -284,7 +284,7 @@ I = \frac{(cx+d)^{n+1}}{c^2}\left[\frac{a(cx+d)}{n+2}+\frac{bc-ad}{n+1}\right]
 
 ## Integral of $\displaystyle \frac{1}{x}$
 The function $\displaystyle \frac{1}{x}$ falls into a special category, because it cannot be solved using the polynomial antiderivative 
-$\displaystyle \int x^n = \frac{x^{n+1}}{n+1}$ aws $n=-1$ here.
+$\displaystyle \int x^n = \frac{x^{n+1}}{n+1}$ as $n=-1$ here.
 
 ```{figure} oneOverx.png
 ---
@@ -326,8 +326,8 @@ This result can be proved using the product rule and the fundamental theorem of 
 ```{math}
 \mathrm{d}(u\,v) &= u\,\mathrm{d}\,v + v\,\mathrm{d}u  \\
 u\,\mathrm{d}\,v &= \mathrm{d}(u\,v) - v\,\mathrm{d}u \\
-\Rightarrow \int u\,\mathrm{d}\,v &= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
-\Rightarrow u\,v &= u\,v - \int v\,\mathrm{d}u
+\int u\,\mathrm{d}\,v &= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
+\Rightarrow \int u\,\mathrm{d}\,v  &= u\,v - \int v\,\mathrm{d}u
 ```
 ````
 
@@ -338,8 +338,8 @@ For a handy rule of thumb for choosing which term to differentiate when applying
 - **T**rignometric Term
 - **E**xponential Term
 
-This list tells the order of preference for the term to be differentiated - $g(x) \rightarrow g'(x)$. The exponential function is at the bottom of the sit because it is 
-usually the easiest to integrate, the logarithmic is usually the hardest.  
+This list tells the order of preference for the term to be differentiated $u(x) \rightarrow u'(x)$. The exponential function is at the bottom of the sit because it is 
+usually the easiest to integrate, the logarithmic is usually the hardest, hence it sits at the top.  
 
 ````{admonition} Worked Examples
 :class: seealso
@@ -422,11 +422,18 @@ $u'=1$, which is simpler and $v=-e^{-x}$ which is no more complicated, so:
 Let $u=x^2,\, v'=e^{-x}$, then:
 
 $u'=2x$, which is simpler and $v=-e^{-x}$, which is no more complicated, so:
+
 ```{math}
-`int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x
+\int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x
 ```
 
-From the previous example, we know the result of this integrand $\displaystyle \int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C$, so:
+From the previous example, we know the result of this integrand is:
+
+```{math}
+\int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C
+```
+
+and therefore we find:
 
 ```{math}
  \int x^2 e^{-x}\mathrm{d}x=-e^{-x}(x^2+2x+2)
@@ -475,14 +482,15 @@ Since this is an algebraic fraction we can try to express as partial fractions:
 
 \frac{5x+7}{x^2+3x+2} &= \frac{5x+7}{(x+1)(x+2)}\\
 &= \frac{A}{x+1}+\frac{B}{x+2} = \frac{A(x+2) + B(x+1)}{(x+1)(x+2)}\\
-&= \frac{(A+B)x + 2A+B}{(x+1)(x+2)} \Rightarrow 5x + 7 = (A+B)x + 2A+B
+&= \frac{(A+B)x + 2A+B}{(x+1)(x+2)} \\
+\Rightarrow 5x + 7 &= (A+B)x + 2A+B
 ```
 Which leads to simultaneous equations:
 ```{math}
 A + B &=5 \\
 2A + B &= 7
 ```
-which is solved by $A = 2,\, B = 3$ and therefore:
+and is solved by $A = 2,\, B = 3$, therefore:
 
 ```{math}
 \frac{5x+7}{x^2+3x+2} &= \frac{2}{x+1}+\frac{3}{x+2} \\
@@ -698,14 +706,22 @@ the limit as $\Delta x\rightarrow 0$.
 ```
 
 As shown in {numref}`mean`, for any function $f(x)$ we can obtain the average output $\bar{f(x)}$ by adding up a series of outputs and dividing by the number of 
-datapoints used. In this case, the spacing between datapoints is $\Delta x$. By taking the limit as $\Delta x\rightarrow 0$ we can obtain:
+datapoints used. In this case, the spacing between datapoints is $\Delta x$.  
 
 ```{math}
-:label: functionMean
-\bar{f} = \frac{1}{n}\displaystyle \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j) \rightarrow \frac{1}{b-a}\displaystyle \int_a^b f(x)\mathrm{d}x
+\bar{f} = \frac{1}{n} \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j)
+```
+By taking the limit as $\Delta x\rightarrow 0$, we can obtain an average of the function $f(x)$ and we find that this result is equal to the limit defintion of the definite 
+integral.
+
+````{admonition} Definition
+The mean value $\bar{f}$ of the function $f(x)$ on the domain $x \in [a,\, b]$ is given by:
+```{math}
+\bar{f} = \frac{1}{b-a} \int_a^b f(x)\mathrm{d}x
 ```
 
-````{admonition} Example
+````
+````{admonition} Worked example
 :class: seealso
 Calculate the mean value of $\cos ^3(\theta)$ on the interval $\displaystyle \left[-\frac{\pi}{3}, \frac{\pi}{3}\right]$ by integration.
 
@@ -714,6 +730,27 @@ Calculate the mean value of $\cos ^3(\theta)$ on the interval $\displaystyle \le
 &= \frac{3}{2\pi}\displaystyle \int_{-\pi/3}^{\pi/3}\cos(\theta)(1-\sin^2(\theta))\mathrm{d}\theta\\
 &=\frac{3}{2\pi}\left[\sin(\theta)-\frac{1}{3}\sin^3(\theta)\right]_{-\pi/3}^{\pi/3} = \frac{9\sqrt{3}}{8\pi}
 ```
+````
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+1\. Find the average value of the function $f(x) = x^3$ on the interval $x \in [0,\, 1]$.
+
+2\. Find the mean value of the cosine function on the interval $x \in \Big[0,\, \frac{\pi}{2}\Big]$.
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+1\.
+```{math}
+\bar{f} = \frac{1}{1-0} \int_0^{1} x^3\,\mathrm{d}x = \int_0^{1} x^3\,\mathrm{d}x = \Big[ \frac{x^4}{4}\Big]_0^{1} = \frac{1}{4}
+```
+
+2\.
+```{math}
+\bar{f} = \frac{1}{\frac{\pi}{2}-0} \int_0^{\pi/2} \cos(x)\,\mathrm{d}x = \frac{2}{\pi} \int_0^{\pi/2} \cos(x)\,\mathrm{d}x = \frac{2}{\pi}\,\Big[ \sin(x)\Big]_0^{\pi/2} = \frac{2}{\pi}
+```
+
 ````
 
 ## Arc Length
@@ -924,3 +961,20 @@ A_y &=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\ri
 ```
 
 
+````{admonition} Practice question
+:class: seealso, dropdown
+1\. Find the surface area of revolution for $y  = x^2$ rotated around the $y$ axis over $y \in [0,\,4]$.
+````
+
+````{admonition} Solution
+:class: seealso, dropdown
+1\. 
+```{math}
+y_2 = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x}
+```
+Fixing the limits we find $\quad y=0 \rightarrow x=0,\quad y = 4 \rightarrow x = 2$, so integral is:
+```{math}
+A &= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
+&= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots
+```
+````

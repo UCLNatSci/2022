@@ -635,7 +635,7 @@ solved by inspection).</p>
 <div class="section" id="integral-of-displaystyle-frac-1-x">
 <h2><span class="section-number">10.3. </span>Integral of <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span><a class="headerlink" href="#integral-of-displaystyle-frac-1-x" title="Permalink to this headline">¶</a></h2>
 <p>The function <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x}\)</span> falls into a special category, because it cannot be solved using the polynomial antiderivative
-<span class="math notranslate nohighlight">\(\displaystyle \int x^n = \frac{x^{n+1}}{n+1}\)</span> aws <span class="math notranslate nohighlight">\(n=-1\)</span> here.</p>
+<span class="math notranslate nohighlight">\(\displaystyle \int x^n = \frac{x^{n+1}}{n+1}\)</span> as <span class="math notranslate nohighlight">\(n=-1\)</span> here.</p>
 <div class="figure align-default" id="oneoverx">
 <img alt="../_images/oneOverx.png" src="../_images/oneOverx.png" />
 <p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">The plot of <span class="math notranslate nohighlight">\(\displaystyle y=\frac{1}{x}\)</span>, showing limits of integration <span class="math notranslate nohighlight">\(\pm a\)</span> and <span class="math notranslate nohighlight">\(\pm b\)</span>.</span><a class="headerlink" href="#oneoverx" title="Permalink to this image">¶</a></p>
@@ -664,8 +664,8 @@ antiderivative.  From <a class="reference internal" href="#oneoverx"><span class
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{d}(u\,v) &amp;= u\,\mathrm{d}\,v + v\,\mathrm{d}u  \\
 u\,\mathrm{d}\,v &amp;= \mathrm{d}(u\,v) - v\,\mathrm{d}u \\
-\Rightarrow \int u\,\mathrm{d}\,v &amp;= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
-\Rightarrow u\,v &amp;= u\,v - \int v\,\mathrm{d}u\end{split}\]</div>
+\int u\,\mathrm{d}\,v &amp;= \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
+\Rightarrow \int u\,\mathrm{d}\,v  &amp;= u\,v - \int v\,\mathrm{d}u\end{split}\]</div>
 </div>
 <p>For a handy rule of thumb for choosing which term to differentiate when applying this method, we can use <strong>LIATE</strong> method:</p>
 <ul class="simple">
@@ -675,8 +675,8 @@ u\,\mathrm{d}\,v &amp;= \mathrm{d}(u\,v) - v\,\mathrm{d}u \\
 <li><p><strong>T</strong>rignometric Term</p></li>
 <li><p><strong>E</strong>xponential Term</p></li>
 </ul>
-<p>This list tells the order of preference for the term to be differentiated - <span class="math notranslate nohighlight">\(g(x) \rightarrow g'(x)\)</span>. The exponential function is at the bottom of the sit because it is
-usually the easiest to integrate, the logarithmic is usually the hardest.</p>
+<p>This list tells the order of preference for the term to be differentiated <span class="math notranslate nohighlight">\(u(x) \rightarrow u'(x)\)</span>. The exponential function is at the bottom of the sit because it is
+usually the easiest to integrate, the logarithmic is usually the hardest, hence it sits at the top.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked Examples</p>
 <p>1.</p>
@@ -727,8 +727,11 @@ u' = \frac{1}{x},\quad &amp;v = x^1\end{split}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(u=x^2,\, v'=e^{-x}\)</span>, then:</p>
 <p><span class="math notranslate nohighlight">\(u'=2x\)</span>, which is simpler and <span class="math notranslate nohighlight">\(v=-e^{-x}\)</span>, which is no more complicated, so:</p>
 <div class="math notranslate nohighlight">
-\[`int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x\]</div>
-<p>From the previous example, we know the result of this integrand <span class="math notranslate nohighlight">\(\displaystyle \int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\)</span>, so:</p>
+\[\int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x\]</div>
+<p>From the previous example, we know the result of this integrand is:</p>
+<div class="math notranslate nohighlight">
+\[\int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\]</div>
+<p>and therefore we find:</p>
 <div class="math notranslate nohighlight">
 \[ \int x^2 e^{-x}\mathrm{d}x=-e^{-x}(x^2+2x+2)\]</div>
 <p>3. To calculate <span class="math notranslate nohighlight">\( I =\displaystyle \int \arcsin(x)\mathrm{d}x\)</span> we play a trick:</p>
@@ -759,12 +762,13 @@ easier to integrate to logarithmic type terms.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{5x+7}{x^2+3x+2} &amp;= \frac{5x+7}{(x+1)(x+2)}\\
 &amp;= \frac{A}{x+1}+\frac{B}{x+2} = \frac{A(x+2) + B(x+1)}{(x+1)(x+2)}\\
-&amp;= \frac{(A+B)x + 2A+B}{(x+1)(x+2)} \Rightarrow 5x + 7 = (A+B)x + 2A+B\end{split}\]</div>
+&amp;= \frac{(A+B)x + 2A+B}{(x+1)(x+2)} \\
+\Rightarrow 5x + 7 &amp;= (A+B)x + 2A+B\end{split}\]</div>
 <p>Which leads to simultaneous equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A + B &amp;=5 \\
 2A + B &amp;= 7\end{split}\]</div>
-<p>which is solved by <span class="math notranslate nohighlight">\(A = 2,\, B = 3\)</span> and therefore:</p>
+<p>and is solved by <span class="math notranslate nohighlight">\(A = 2,\, B = 3\)</span>, therefore:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{5x+7}{x^2+3x+2} &amp;= \frac{2}{x+1}+\frac{3}{x+2} \\
 \, \\
@@ -925,16 +929,38 @@ I_3 &amp;= \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/
 the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span>.</span><a class="headerlink" href="#mean" title="Permalink to this image">¶</a></p>
 </div>
 <p>As shown in <a class="reference internal" href="#mean"><span class="std std-numref">Fig. 10.5</span></a>, for any function <span class="math notranslate nohighlight">\(f(x)\)</span> we can obtain the average output <span class="math notranslate nohighlight">\(\bar{f(x)}\)</span> by adding up a series of outputs and dividing by the number of
-datapoints used. In this case, the spacing between datapoints is <span class="math notranslate nohighlight">\(\Delta x\)</span>. By taking the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we can obtain:</p>
-<div class="math notranslate nohighlight" id="equation-functionmean">
-<span class="eqno">(10.7)<a class="headerlink" href="#equation-functionmean" title="Permalink to this equation">¶</a></span>\[\bar{f} = \frac{1}{n}\displaystyle \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j) \rightarrow \frac{1}{b-a}\displaystyle \int_a^b f(x)\mathrm{d}x\]</div>
+datapoints used. In this case, the spacing between datapoints is <span class="math notranslate nohighlight">\(\Delta x\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\bar{f} = \frac{1}{n} \sum_{j=0}^{n-1}f(x_j) = \frac{\Delta x}{b-a}\sum_{j=0}^{n-1}f(x_j)\]</div>
+<p>By taking the limit as <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span>, we can obtain an average of the function <span class="math notranslate nohighlight">\(f(x)\)</span> and we find that this result is equal to the limit defintion of the definite
+integral.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The mean value <span class="math notranslate nohighlight">\(\bar{f}\)</span> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the domain <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\bar{f} = \frac{1}{b-a} \int_a^b f(x)\mathrm{d}x\]</div>
+</div>
 <div class="seealso admonition">
-<p class="admonition-title">Example</p>
+<p class="admonition-title">Worked example</p>
 <p>Calculate the mean value of <span class="math notranslate nohighlight">\(\cos ^3(\theta)\)</span> on the interval <span class="math notranslate nohighlight">\(\displaystyle \left[-\frac{\pi}{3}, \frac{\pi}{3}\right]\)</span> by integration.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{\frac{\pi}{3} - \left(-\frac{\pi}{3}\right)} \int_{-\pi/3}^{\pi/3}\cos^{3}(\theta)\mathrm{d}\theta 
 &amp;= \frac{3}{2\pi}\displaystyle \int_{-\pi/3}^{\pi/3}\cos(\theta)(1-\sin^2(\theta))\mathrm{d}\theta\\
 &amp;=\frac{3}{2\pi}\left[\sin(\theta)-\frac{1}{3}\sin^3(\theta)\right]_{-\pi/3}^{\pi/3} = \frac{9\sqrt{3}}{8\pi}\end{split}\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Find the average value of the function <span class="math notranslate nohighlight">\(f(x) = x^3\)</span> on the interval <span class="math notranslate nohighlight">\(x \in [0,\, 1]\)</span>.</p>
+<p>2. Find the mean value of the cosine function on the interval <span class="math notranslate nohighlight">\(x \in \Big[0,\, \frac{\pi}{2}\Big]\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\bar{f} = \frac{1}{1-0} \int_0^{1} x^3\,\mathrm{d}x = \int_0^{1} x^3\,\mathrm{d}x = \Big[ \frac{x^4}{4}\Big]_0^{1} = \frac{1}{4}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\bar{f} = \frac{1}{\frac{\pi}{2}-0} \int_0^{\pi/2} \cos(x)\,\mathrm{d}x = \frac{2}{\pi} \int_0^{\pi/2} \cos(x)\,\mathrm{d}x = \frac{2}{\pi}\,\Big[ \sin(x)\Big]_0^{\pi/2} = \frac{2}{\pi}\]</div>
 </div>
 </div>
 <div class="section" id="arc-length">
@@ -1072,6 +1098,20 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 V_y &amp;=  \int_{t_1}^{t_2} \pi\,x^2\,\frac{\mathrm{d}y}{\mathrm{d}t}\,\mathrm{d}t \\
 A_x &amp;=  \int_{t_1}^{t_2} 2\pi\,y\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t \\
 A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice question</p>
+<p>1. Find the surface area of revolution for <span class="math notranslate nohighlight">\(y  = x^2\)</span> rotated around the <span class="math notranslate nohighlight">\(y\)</span> axis over <span class="math notranslate nohighlight">\(y \in [0,\,4]\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[y_2 = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
+<p>Fixing the limits we find <span class="math notranslate nohighlight">\(\quad y=0 \rightarrow x=0,\quad y = 4 \rightarrow x = 2\)</span>, so integral is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A &amp;= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
+&amp;= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots\end{split}\]</div>
+</div>
 </div>
 </div>
 
