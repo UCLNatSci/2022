@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.3.2. Homework solutions &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -272,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Tutorial 3: Functions
+     3.2. Workshop 3: Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -288,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2d_arrays/2d_arrays.html">
-   4. Tutorial 4: Measuring Space
+  <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
+   4. Modelling Space
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -299,8 +300,32 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
-     4.4. Further Arrays
+     4.1. Notes
     </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+     4.2. Workshop
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
+     4.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
   </ul>
  </li>
@@ -537,7 +562,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="homework-solutions">
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-solutions">
 <h1><span class="section-number">2.3.2. </span>Homework solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this headline">#</a></h1>
 <p>The BZ reaction can be modelled by the following equations, where <span class="math notranslate nohighlight">\(X_i\)</span> and <span class="math notranslate nohighlight">\(Y_i\)</span> are the concentrations of the two reactants X (red) and Y (colourless) at timestep <span class="math notranslate nohighlight">\(i\)</span>. At each timestep, the concentrations of the two reactants change according to the difference equations below. Each timestep has a duration of one second.</p>
 <div class="math notranslate nohighlight">
@@ -549,7 +574,7 @@ Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
 <li><p>Model the evolution of the chemical reaction for <span class="math notranslate nohighlight">\(300\)</span> seconds, assuming the initial concentrations are zero, and using the parameter values <span class="math notranslate nohighlight">\(k_1=0.2,k_2 = 0.4, k_3 = 0.1\mathrm{~and~}k_4 = 0.3\)</span>.</p></li>
 <li><p>Experiment with different values of <span class="math notranslate nohighlight">\(k_1\)</span>. For what range of values of <span class="math notranslate nohighlight">\(k_1\)</span> does the reaction exhibit oscillations?</p></li>
 </ol>
-<div class="section" id="modelling">
+<section id="modelling">
 <h2><span class="section-number">2.3.2.1. </span>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h2>
 <p>First, to model the equations we can follow the same structure we used in the tutorial.
 To see how the reactants interact we can model both concentrations on the same graph.</p>
@@ -600,8 +625,8 @@ To see how the reactants interact we can model both concentrations on the same g
 <img alt="../_images/rate_equations_answers_2_2.png" src="../_images/rate_equations_answers_2_2.png" />
 </div>
 </div>
-</div>
-<div class="section" id="experiment-with-k-1">
+</section>
+<section id="experiment-with-k-1">
 <h2><span class="section-number">2.3.2.2. </span>Experiment with <span class="math notranslate nohighlight">\(k_1\)</span><a class="headerlink" href="#experiment-with-k-1" title="Permalink to this headline">#</a></h2>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to test a few different values for <span class="math notranslate nohighlight">\(k_1\)</span>. Let’s try the interval <span class="math notranslate nohighlight">\([0, 0.3]\)</span>.</p>
 <div class="cell docutils container">
@@ -633,20 +658,19 @@ To see how the reactants interact we can model both concentrations on the same g
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: overflow encountered in double_scalars
-  if __name__ == &#39;__main__&#39;:
-C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: overflow encountered in double_scalars
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: overflow encountered in double_scalars
+  if __name__ == &quot;__main__&quot;:
+c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: overflow encountered in double_scalars
   # Remove the CWD from sys.path while we load stuff.
-C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: invalid value encountered in double_scalars
-  if __name__ == &#39;__main__&#39;:
-C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: invalid value encountered in double_scalars
+c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: invalid value encountered in double_scalars
+  if __name__ == &quot;__main__&quot;:
+c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: invalid value encountered in double_scalars
   # Remove the CWD from sys.path while we load stuff.
+c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  if sys.path[0] == &quot;&quot;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
-  if sys.path[0] == &#39;&#39;:
-</pre></div>
-</div>
+<img alt="../_images/rate_equations_answers_5_1.png" src="../_images/rate_equations_answers_5_1.png" />
 <img alt="../_images/rate_equations_answers_5_2.png" src="../_images/rate_equations_answers_5_2.png" />
 <img alt="../_images/rate_equations_answers_5_3.png" src="../_images/rate_equations_answers_5_3.png" />
 <img alt="../_images/rate_equations_answers_5_4.png" src="../_images/rate_equations_answers_5_4.png" />
@@ -686,12 +710,11 @@ C:\Users\NatSciTeaching\anaconda3\lib\site-packages\ipykernel_launcher.py:10: Ru
 <img alt="../_images/rate_equations_answers_5_38.png" src="../_images/rate_equations_answers_5_38.png" />
 <img alt="../_images/rate_equations_answers_5_39.png" src="../_images/rate_equations_answers_5_39.png" />
 <img alt="../_images/rate_equations_answers_5_40.png" src="../_images/rate_equations_answers_5_40.png" />
-<img alt="../_images/rate_equations_answers_5_41.png" src="../_images/rate_equations_answers_5_41.png" />
 </div>
 </div>
 <p>We see oscillations first appear when <span class="math notranslate nohighlight">\(k_1 \approx 0.079\)</span>, these continue until <span class="math notranslate nohighlight">\(k_1 \approx 0.25\)</span> when <span class="math notranslate nohighlight">\(X\)</span> stops oscillating.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
