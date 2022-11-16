@@ -9,4 +9,10 @@ One of the main goals of scientific computing is to simulate process that change
  - How to repeat code using `for` loops
  - How to plot graphs using `matplotlib`
 ```
+## This Week
 
+**Before class** read the [notes](rate_equations_notes.ipynb) and complete the embedded exercises.
+
+**During class** work through the [workshop](rate_equations.ipynb).
+
+**After class** complete and submit the [homework](rate_equations_homework.md).

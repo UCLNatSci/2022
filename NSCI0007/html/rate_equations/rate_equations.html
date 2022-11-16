@@ -37,13 +37,10 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3. Homework" href="rate_equations_homework.html" />
+    <link rel="next" title="2.2.5. Solutions" href="rate_equations_solutions.html" />
     <link rel="prev" title="2.1. Modelling Change" href="rate_equations_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -218,23 +215,35 @@ const thebe_selector_output = ".output, .cell_output"
      2.1. Notes
     </a>
    </li>
-   <li class="toctree-l2 current active">
+   <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
      2.2. Workshop
     </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="rate_equations_homework.html">
-     2.3. Homework
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
     <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="rate_equations_answers.html">
+      <a class="reference internal" href="rate_equations_solutions.html">
+       2.2.5. Solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="rate_equations_homework.html">
+     2.3. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="rate_equations_homework_answers.html">
        2.3.2. Homework solutions
       </a>
      </li>
@@ -244,8 +253,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_extra.html">
      2.4. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -263,8 +272,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -295,8 +304,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -310,8 +319,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.2. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -322,8 +331,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.3. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -535,7 +544,17 @@ title="Print to PDF"
      2.2.3.2. Full Model
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#investigating-the-model">
+     2.2.3.3. Investigating the Model
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ballistics">
+   2.2.4. Ballistics
+  </a>
  </li>
 </ul>
 
@@ -581,7 +600,17 @@ title="Print to PDF"
      2.2.3.2. Full Model
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#investigating-the-model">
+     2.2.3.3. Investigating the Model
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ballistics">
+   2.2.4. Ballistics
+  </a>
  </li>
 </ul>
 
@@ -729,24 +758,77 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 </section>
 <section id="full-model">
 <h3><span class="section-number">2.2.3.2. </span>Full Model<a class="headerlink" href="#full-model" title="Permalink to this headline">#</a></h3>
+<p>Next we will model the full set of two equations <a class="reference internal" href="#equation-sir-equations">(2.1)</a>. We’ll assume that parameter values <span class="math notranslate nohighlight">\(a = 0.1\)</span> and <span class="math notranslate nohighlight">\(b = 0.00005\)</span> and the initial populations <span class="math notranslate nohighlight">\(S_0 = 20000\)</span> and <span class="math notranslate nohighlight">\(I_0 = 100\)</span>.</p>
 <div class="exercise admonition" id="exercise_2_10">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.10 </span></p>
 <section id="exercise-content">
-<p>Adapt your code to model the full set of two equations <a class="reference internal" href="#equation-sir-equations">(2.1)</a>. With parameter values <span class="math notranslate nohighlight">\(a = 0.1\)</span> and <span class="math notranslate nohighlight">\(b = 0.00005\)</span> and the initial populations <span class="math notranslate nohighlight">\(S_0 = 20000\)</span> and <span class="math notranslate nohighlight">\(I_0 = 100\)</span>, simulate the infection for a duration of 100 days. Plot the resulting arrays <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">I</span></code> on the same figure.</p>
+<p>Adapt your code to model the full set of equations with parameter values and initial conditions as described above.</p>
 <p>Hint: You should see that the number of infected people peaks at around 15,000 at about day 15, while the number of susceptible people drops to about zero at about the same time.</p>
 </section>
 </div>
+</section>
+<section id="investigating-the-model">
+<h3><span class="section-number">2.2.3.3. </span>Investigating the Model<a class="headerlink" href="#investigating-the-model" title="Permalink to this headline">#</a></h3>
+<p>One of the benefits of modelling is that we can investigate the effect of changing particular parameters. For example, the Government can influence the rate parameter <span class="math notranslate nohighlight">\(b\)</span> through public policy (for example the imposition of social distancing, vaccination or other measures) and so it would like to understand how changing the value of <span class="math notranslate nohighlight">\(b\)</span> affects the outcome of the epidemic.</p>
 <div class="exercise admonition" id="exercise_2_11">
 
 <p class="admonition-title"><span class="caption-number">Exercise 2.11 </span></p>
 <section id="exercise-content">
-<p>The infection rate parameter <span class="math notranslate nohighlight">\(b\)</span> can be influenced by public policy - for example the imposition of social distancing, vaccination or other measures.</p>
 <p>Experiment with various values of <span class="math notranslate nohighlight">\(b\)</span> to see how it affects the outbreak. Roughly what is the minimum value of <span class="math notranslate nohighlight">\(b\)</span> which results in an epidemic? (We say there is an epidemic if <span class="math notranslate nohighlight">\(I_i\)</span> initially rises to a peak, however small).</p>
+<p>Then <em>on one graph</em> plot <span class="math notranslate nohighlight">\(I_i\)</span> for 10 different values of <span class="math notranslate nohighlight">\(b\)</span> (use a loop!).</p>
 </section>
 </div>
 </section>
 </section>
+<section id="ballistics">
+<h2><span class="section-number">2.2.4. </span>Ballistics<a class="headerlink" href="#ballistics" title="Permalink to this headline">#</a></h2>
+<p>Suppose a cannon located at position <span class="math notranslate nohighlight">\(x = 0, y = 0\)</span> fires a cannonball at an angle <span class="math notranslate nohighlight">\(\theta\)</span> from the horizontal (measured in radians) and speed <span class="math notranslate nohighlight">\(s\)</span> m/s. We’d like to simulate the trajectory of the cannonball as in <a class="reference internal" href="#cannon-fig"><span class="std std-numref">Fig. 2.1</span></a>.</p>
+<figure class="align-default" id="cannon-fig">
+<a class="reference internal image-reference" href="../_images/cannon.jpg"><img alt="../_images/cannon.jpg" src="../_images/cannon.jpg" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The trajectory of a cannonball fired at an angle <span class="math notranslate nohighlight">\(\theta\)</span> from the horizontal and speed <span class="math notranslate nohighlight">\(s\)</span> m/s.</span><a class="headerlink" href="#cannon-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can model the motion of the cannonball using four variables: The x- and y-positions of the cannonable <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(y_i\)</span>, and the x- and y-velocities of the cannonball <span class="math notranslate nohighlight">\(u_i\)</span> and <span class="math notranslate nohighlight">\(v_i\)</span>. Assuming a fixed simulation timestep <span class="math notranslate nohighlight">\(\Delta t\)</span>, we update the positions as below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+x_{i+1} &amp;= x_i + v_i\Delta t \\
+y_{i+1} &amp;= y_i + u_i\Delta t.
+\end{align*}
+\end{split}\]</div>
+<p>The x-velocity <span class="math notranslate nohighlight">\(u_i\)</span> is constant, and the y-velocity changes due to the gravitational acceleration <span class="math notranslate nohighlight">\(g=9.81\)</span> m/s.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+u_{i+1} &amp;= u_i\\
+v_{i+1} &amp;= v_i - g\Delta t
+\end{align*}
+\end{split}\]</div>
+<div class="exercise admonition" id="exercise_2_12">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.12 </span></p>
+<section id="exercise-content">
+<p>Assuming that <span class="math notranslate nohighlight">\(s = 100\)</span> m/s and that <span class="math notranslate nohighlight">\(\theta= \pi/4\)</span>, write a program which plots a graph of the cannonball’s trajectory.</p>
+<ul class="simple">
+<li><p>Use trigonometry to calculate the initial velocities</p></li>
+<li><p>Make sure that <span class="math notranslate nohighlight">\(y\)</span> does not go below zero (use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement or the <code class="docutils literal notranslate"><span class="pre">max</span></code> function)</p></li>
+<li><p>You’ll need to choose a suitable value for the timestep <span class="math notranslate nohighlight">\(\Delta t\)</span></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">plt.xlim</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim</span></code> to make sure that the scales on the two axes are equal</p></li>
+</ul>
+</section>
+</div>
+<div class="exercise admonition" id="exercise_2_13">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.13 </span> (Challenge)</p>
+<section id="exercise-content">
+<p>Given <span class="math notranslate nohighlight">\(s=100\)</span>, calculate the distance from the cannon that the cannonball lands for any given <span class="math notranslate nohighlight">\(\theta\)</span>. Then, plot a graph with <span class="math notranslate nohighlight">\(\theta\)</span> on the x-axis and distance on the y-axis. What angle maximises the distance?</p>
+</section>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -783,10 +865,10 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
             <p class="prev-next-title"><span class="section-number">2.1. </span>Modelling Change</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="rate_equations_homework.html" title="next page">
+    <a class='right-next' id="next-link" href="rate_equations_solutions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Homework</p>
+        <p class="prev-next-title"><span class="section-number">2.2.5. </span>Solutions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
