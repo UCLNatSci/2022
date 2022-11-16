@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>7. Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Linear Systems of Equations" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" />
+    <link rel="prev" title="6. Surface Integrals" href="surfaceintegrals.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to NSCI0027
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   1. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   2. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   3. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   4. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   5. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   8. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   9. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   10. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
+   11. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
+   12. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   13. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   14. Matrix Diagonalisation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/VectorCalculus/vectorcalctheorems.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gauss-divergence-theorem">
+   7.1. (Gauss-)Divergence Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
+     7.1.1. A Sketch of a Proof
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
+   7.2. (Kelvin-)Stoke’s Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     7.2.1. A Sketch of a Proof
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Vector Calculus Theorems</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gauss-divergence-theorem">
+   7.1. (Gauss-)Divergence Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
+     7.1.1. A Sketch of a Proof
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
+   7.2. (Kelvin-)Stoke’s Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     7.2.1. A Sketch of a Proof
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="vector-calculus-theorems">
+<h1><span class="section-number">7. </span>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">#</a></h1>
+<p>Although the ideas in vector calculus seem quite distinct, area, surface and volume integrals as well as the gradient, divergence and curl, it turns out
+that they are connected together thanks to a couple of quite important theorems.  These can in some cases simplify a calculation that we are aiming to
+do and/or give us a better intution about a system.</p>
+<section id="gauss-divergence-theorem">
+<h2><span class="section-number">7.1. </span>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">#</a></h2>
+<p>Lets think about a closed surface <span class="math notranslate nohighlight">\(S\)</span> in a space, this surface area therefore encloses a volume <span class="math notranslate nohighlight">\(V\)</span>, i.e. it forms the boundary <span class="math notranslate nohighlight">\(S = \partial V\)</span> (not
+to be confused with taking some partial derivative!), as depicted in <a class="reference internal" href="#gaussdivergence"><span class="std std-numref">Fig. 7.1</span></a>.</p>
+<figure class="align-default" id="gaussdivergence">
+<img alt="../_images/gaussdivergence.png" src="../_images/gaussdivergence.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
+<span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \hat{\bf n} \mathrm{d}S\)</span> points outwards.</span><a class="headerlink" href="#gaussdivergence" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>Thinking about a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> through the closed surface <span class="math notranslate nohighlight">\(S\)</span>, one thing we can do is count the flux from the surface intregral:</p>
+<div class="math notranslate nohighlight">
+\[\int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S}\]</div>
+<p>We can see that if the field is uniform, say <span class="math notranslate nohighlight">\(\nabla \cdot {\bf G} = 0\)</span>, then this net flux will zero (all incoming vectors = all out going vectors),
+however if there is a divergence in the enclosed volume <span class="math notranslate nohighlight">\(\nabla \cdot {\bf G} \neq 0\)</span>, then there would be a net flux through the surface (with the sign of the flux being related to the sign ofthe divergence).<br />
+This result gives us the <b>Divergence Theorem</b>:</p>
+<div class="math notranslate nohighlight">
+\[\int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} = \int_V \left(\nabla \cdot G\right)\,\mathrm{d}V\]</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the vector field:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf G}({\bf r}) = \begin{pmatrix} x^2 \\ y \\ z \end{pmatrix}\end{split}\]</div>
+<p>over a cubic volume surface, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <a class="reference internal" href="#divergencecube"><span class="std std-numref">Fig. 7.2</span></a>.</p>
+<figure class="align-default" id="divergencecube">
+<img alt="../_images/divergencecube.png" src="../_images/divergencecube.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If we compute the surface integral:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;= \int_{S = \partial V} {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} \\
+&amp;= \,
+\int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} -1 \\ 0\\ 0 \end{pmatrix}  \\ 
+&amp;+ \,
+\int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ 1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ 1 \\ 0 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ -1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ -1 \\ 0 \end{pmatrix}  \\ 
+ &amp;+ \,
+ \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix}  \\ 
+ &amp;= \,
+ 2 \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y  = 16\end{split}\]</div>
+<p>A little long! However using the Gauss’s divergence theorem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf G} &amp;=  2x + 2\\ 
+I &amp;=  \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\, \int_{-1}^1\,\mathrm{d}y\, \int_{-1}^1\,\mathrm{d}z (2x + 2)\\
+&amp;=  4\int_{-1}^1\,(2x+2)\,\mathrm{d}x = 4\Bigg[x^2 + 2x\Bigg]_{-1}^1 = 16\end{split}\]</div>
+<p>In agreement with the previous result and whole lot easier to do!</p>
+</div>
+<section id="a-sketch-of-a-proof">
+<h3><span class="section-number">7.1.1. </span>A Sketch of a Proof<a class="headerlink" href="#a-sketch-of-a-proof" title="Permalink to this headline">#</a></h3>
+<p>We can sketch out a proof of this result, using the same set up as previously, as seen in <a class="reference internal" href="#divergencecubeproof"><span class="std std-numref">Fig. 7.3</span></a>,</p>
+<figure class="align-default" id="divergencecubeproof">
+<img alt="../_images/divergencecubeproof.png" src="../_images/divergencecubeproof.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">An infinitesimal cubic surface <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> around some vector field divergence.</span><a class="headerlink" href="#divergencecubeproof" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Thinking about an infinitesimal flux element <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> for a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> crossing the sides of the infinitesimal
+volume element <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-divtheoremproof">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-divtheoremproof" title="Permalink to this equation">#</a></span>\[\begin{split}\mathrm{d}F &amp;=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
++ {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\,\mathrm{d}y\,\mathrm{d}z\\
+&amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
++ {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf y} \right)\cdot (-\hat{\bf y})\,\mathrm{d}x\,\mathrm{d}z\\
+&amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}z\,\hat{\bf z} \right)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y 
++ {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf z} \right)\cdot (-\hat{\bf z})\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
+<p>The first line of <a class="reference internal" href="#equation-divtheoremproof">(7.1)</a> reduces to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
++ {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\right]\,\mathrm{d}y\,\mathrm{d}z\\
+&amp;=  \left[G_x\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)
+- G_x\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\\end{split}\]</div>
+<p>If we do a Taylor expansion of each vector field, around <span class="math notranslate nohighlight">\(G_x({\bf r})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;=  \left[G_x({\bf r}) + \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x 
+- \left(G_x({\bf r}) - \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
+&amp;=  \partial_x G_x \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\end{split}\]</div>
+<p>We can do similar for the second and third lines of <a class="reference internal" href="#equation-divtheoremproof">(7.1)</a> to find the result:</p>
+<p>And through suitable coordinate transforms we could prove this result for any coordinate system.  Hence the flux across the cubes sides
+is related to the divergence of the vector field over the volume element.</p>
+<p>If we then proceed with integrating this flux over the over a given volume, then we can think of this as summing up little cubes with volume
+<span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, as depicted in <a class="reference internal" href="#infinitesimalcubes"><span class="std std-numref">Fig. 7.4</span></a>.</p>
+<figure class="align-default" id="infinitesimalcubes">
+<img alt="../_images/infinitesimalcubes.png" src="../_images/infinitesimalcubes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Infinitesimal cubic volume <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> making up some volume <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#infinitesimalcubes" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This means we are summing up neighbouring cubes, where the outgoing flux <span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &gt; 0\)</span> from one will be an incoming flux
+<span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &lt; 0\)</span> for another cube, as depicted in <a class="reference internal" href="#inoutgoingflux"><span class="std std-numref">Fig. 7.5</span></a>.</p>
+<figure class="align-default" id="inoutgoingflux">
+<img alt="../_images/inoutgoingflux.png" src="../_images/inoutgoingflux.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text">A schematic of the infinitesimal flux contributions from neighbouring infintesimal cubic volumes.</span><a class="headerlink" href="#inoutgoingflux" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Therefore we see that the <b>only</b> remaining contributions to the summing of the fluxes over the volume will be from the volumes surface,
+hence:</p>
+<div class="math notranslate nohighlight">
+\[\int_V\,\mathrm{d}F = \int_{S = \partial V}\,\mathrm{d}F = 
+\iint_{S = \partial V}\,{\bf G}({\bf r})\cdot \mathrm{d}{\bf S} = \iiint \Bigg( \nabla \cdot {\bf G}({\bf r})\Bigg)\,\mathrm{d}V\]</div>
+<p>which is the desired result.</p>
+</section>
+</section>
+<section id="kelvin-stokes-theorem">
+<h2><span class="section-number">7.2. </span>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">#</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>Stokes’s theorem states that the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around the boundary <span class="math notranslate nohighlight">\(C = \partial S\)</span> of an open surface <span class="math notranslate nohighlight">\(S\)</span> is
+equal to the flux of the curl of the vector field, <span class="math notranslate nohighlight">\(\nabla \times {\bf G}({\bf r})\)</span> through the surface;</p>
+<div class="math notranslate nohighlight">
+\[\oint_{C = \partial S} {\bf G}({\bf r}) \cdot \mathrm{d}{\bf r} = \iint_{S} \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\]</div>
+<p>where the orientation of this closed contour is given by the right hand rule, as depicted in <a class="reference internal" href="#stokesrhrule"><span class="std std-numref">Fig. 7.6</span></a>.</p>
+</div>
+<figure class="align-default" id="stokesrhrule">
+<img alt="../_images/stokesRHrule.png" src="../_images/stokesRHrule.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text">The relevant orientation of the closed contour used in Stoke’s theorem.</span><a class="headerlink" href="#stokesrhrule" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}\)</span> over a closed circular arc path around the origin, which we depict
+in <a class="reference internal" href="#contourexample"><span class="std std-numref">Fig. 7.7</span></a>:</p>
+<figure class="align-default" id="contourexample">
+<img alt="../_images/contourexample.png" src="../_images/contourexample.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.</span><a class="headerlink" href="#contourexample" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The parameterisation of the line integral will not change its result (nor should the starting point for a loop integral), so we will start
+at the origin and parameterise the three sections of the contour <span class="math notranslate nohighlight">\(C_1,\,C_2,\, C_3\)</span> using <span class="math notranslate nohighlight">\(t\)</span>, with <span class="math notranslate nohighlight">\(t \in [0,\,1]\)</span> along each piece:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}C_1: {\bf r}(t) &amp;=  \begin{pmatrix} 0 \\ t \\ 0 \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\\
+C_2: {\bf r}(t) &amp;=  \begin{pmatrix} 0 \\ \cos(\pi t/2) \\ \sin(\pi t/2) \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\\
+C_3: {\bf r}(t) &amp;=  \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\end{split}\]</div>
+<p>Therefore we can calculate the line integral:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=  \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r})\cdot {\bf r'}\,\mathrm{d}t\\
+&amp;=  \int_0^1  \left[ \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} 
++ \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}\cdot \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}
++ \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix} \cdot\begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\right]\,\mathrm{d}t\\
+&amp;=  \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t 
+= \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}\end{split}\]</div>
+<p>Using Stoke’s theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work
+with is the area of the quarter circle, sitting on the <span class="math notranslate nohighlight">\(y-z\)</span> plane.  To make sure the orientation of the contour matches with the
+right hand rule, we have <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}\)</span>.  Therefore given that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf G} = \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\end{split}\]</div>
+<p>we can find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=  \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} =
+  \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
+&amp;= \iint_S \,\mathrm{d}y\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}\end{split}\]</div>
+<p>Therefore for quite a lot less work, we find the same result!</p>
+</div>
+<section id="id1">
+<h3><span class="section-number">7.2.1. </span>A Sketch of a Proof<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Lets consider a vectorial surface area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}x\,\mathrm{d}y\,\hat{\bf z}\)</span>, as depicted
+in <a class="reference internal" href="#infinitesimalcontour"><span class="std std-numref">Fig. 7.8</span></a>:</p>
+<figure class="align-default" id="infinitesimalcontour">
+<img alt="../_images/infinitesimalcontour.png" src="../_images/infinitesimalcontour.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Closed infinitesimal contour around some point <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#infinitesimalcontour" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can therefore find the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around this contour as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dI &amp;=  {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf x}\,\mathrm{d}x 
++ {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf y}\,\mathrm{d}y \\
+&amp;+\,  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot (-\hat{\bf x})\,\mathrm{d}x 
++ {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf y})\,\mathrm{d}y \\
+&amp;=  \left[G_x \left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) 
+- G_x\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) \right]\,\mathrm{d}x 
++ \left[ G_y\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right) - G_y\left({\bf r} 
+- \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y\end{split}\]</div>
+<p>Taking a Taylor expansion around <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span>, we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;=  -\partial_y G_x({\bf r})\,\mathrm{d}x\,\mathrm{d}y + \partial_x G_y({\bf r})\,\mathrm{d}x\,\mathrm{d}y \\
+&amp;=  \Bigg(\nabla \times {\bf G}\Bigg)_z\,\mathrm{d}x\,\mathrm{d}y = \Bigg(\nabla \times {\bf G}\Bigg)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y\\
+&amp;=  \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\end{split}\]</div>
+<p>Which if we integrate up, we find <span class="math notranslate nohighlight">\(I = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}\)</span>.  Thinking carefully these loop integrals however,
+if we sum up infinitesimal areas (plaquettes if you will), then along the surface neighbouring areas will have cancellation occuring, as depicted in
+<a class="reference internal" href="#neighbouringcontours"><span class="std std-numref">Fig. 7.9</span></a>:</p>
+<figure class="align-default" id="neighbouringcontours">
+<img alt="../_images/neighbouringcontours.png" src="../_images/neighbouringcontours.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.9 </span><span class="caption-text">Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.</span><a class="headerlink" href="#neighbouringcontours" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This means that the only interbal contributions to summing up these loop integrals will be those along the boundary, hence:</p>
+<div class="math notranslate nohighlight">
+\[\int_S\,\mathrm{d}I = \int_{C=\partial S}{\bf G}\cdot \mathrm{d}{\bf r} = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}\]</div>
+<p>which is the desired result.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./VectorCalculus"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="surfaceintegrals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Surface Integrals</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Linear Systems of Equations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

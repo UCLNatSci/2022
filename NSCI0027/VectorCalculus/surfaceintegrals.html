@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Vector Calculus Theorems" href="vectorcalctheorems.html" />
+    <link rel="prev" title="5. Multidimensional Integrals" href="volumeintegrals.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to NSCI0027
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   1. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   2. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   3. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   4. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   5. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   8. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   9. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   10. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
+   11. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
+   12. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   13. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   14. Matrix Diagonalisation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/VectorCalculus/surfaceintegrals.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-surface-integrals">
+   6.1. Calculating Surface Integrals
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Surface Integrals</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-surface-integrals">
+   6.1. Calculating Surface Integrals
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="surface-integrals">
+<h1><span class="section-number">6. </span>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">#</a></h1>
+<p>Now that we are happy with flat area and volume integrals, we can turn our attention to surfaces that are not flat, if we can break up the surface into area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> and then
+integrate over the whole surface, we can use all the same techniques described so far to think about this.  It is typical to define here an area vector <span class="math notranslate nohighlight">\({\bf A}\)</span> which points outwards from a
+surface and is in the normal direction to it:</p>
+<div class="math notranslate nohighlight">
+\[{\bf A} = A\,\hat{\bf n}\]</div>
+<p>although sometimes for a curves surface we will use the letter <span class="math notranslate nohighlight">\(S\)</span> for the surface normal.  We can write the inifinitesimal area element as:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf S} = \hat{\bf n} \,\mathrm{d}S\]</div>
+<p>and this is depicted in <a class="reference internal" href="#surfacenormal"><span class="std std-numref">Fig. 6.1</span></a>.</p>
+<figure class="align-default" id="surfacenormal">
+<img alt="../_images/surfacenormal.png" src="../_images/surfacenormal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Some general surfece surface <span class="math notranslate nohighlight">\(S\)</span> with an infinitesimal surface element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span>.</span><a class="headerlink" href="#surfacenormal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For any scalar field <span class="math notranslate nohighlight">\(f(r) = f(x,\, y,\, z)\)</span> that is defined on all the points of
+the surface <span class="math notranslate nohighlight">\(S\)</span> we can define the <b>Surface Integral</b> as:</p>
+<div class="math notranslate nohighlight">
+\[I_f = \int_Sf({\bf r})\,\mathrm{d}S\]</div>
+<p>However this will only tell us the total amount of <span class="math notranslate nohighlight">\(f\)</span> on the surface <span class="math notranslate nohighlight">\(S\)</span>, what is we instead had a vector field <span class="math notranslate nohighlight">\({\bf G(r)}\)</span> which crossed the surface <span class="math notranslate nohighlight">\(S\)</span>?  Then in this case, the surface integral is
+given by:</p>
+<div class="math notranslate nohighlight">
+\[I_{\bf G} = \int_S {\bf G}\cdot \mathrm{d}{\bf S} = \int_S \left({\bf G}\cdot \hat{\bf n}\right)\,\mathrm{d}{ S} \]</div>
+<p>We define this quantity as the <b>flux</b> of the vector field <span class="math notranslate nohighlight">\(\bf G\)</span> crossing the surface <span class="math notranslate nohighlight">\(S\)</span>.  Clearly as this has a scalar product, only the components parallel to <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> (perpendicular
+to <span class="math notranslate nohighlight">\(S\)</span>) will be summed over in the integral.</p>
+<section id="calculating-surface-integrals">
+<h2><span class="section-number">6.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">#</a></h2>
+<p>Similar to line integrals, we must parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> in order for this integral to be possible, so we will pick
+<span class="math notranslate nohighlight">\(S = S({\bf r})\)</span> with <span class="math notranslate nohighlight">\({\bf r} = {\bf r}(s,\, t)\)</span> with <span class="math notranslate nohighlight">\(s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]\)</span>.<br />
+This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes
+<span class="math notranslate nohighlight">\(\mathrm{d}s,\, \mathrm{d}t\)</span> that make up the <span class="math notranslate nohighlight">\(\mathrm{d}S\)</span> on the surface.  We can then
+define vectors <span class="math notranslate nohighlight">\(\bf u,\, v\)</span> which live on the surface:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf u} &amp;= \frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
+\mathrm{d}{\bf v} &amp;= \frac{\partial {\bf r}}{\partial t}\,\mathrm{d}t\end{split}\]</div>
+<p>and the final step is to find a cross product, this will produce the normal area vector, hence:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf S} = \mathrm{d}{\bf u} \times \mathrm{d}{\bf v} = \left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\,\mathrm{d}s\,\mathrm{d}t\]</div>
+<p>This means that in order to actually calculate the surface integrals we will need:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_f &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
+I_{\bf G} &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\end{split}\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked examples</p>
+<p>1. The sphere</p>
+<p>Lets find the surface area of a sphere with radius <span class="math notranslate nohighlight">\(R\)</span>.  The most natural choice of parameters <span class="math notranslate nohighlight">\((s,\,t)\)</span> here would be the angles <span class="math notranslate nohighlight">\((\theta,\, \phi)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(\theta,\,\phi) = \begin{pmatrix} R\sin(\theta)\cos(\phi) \\ R \sin(\theta)\sin(\phi)\\ R \cos(\theta)\end{pmatrix}\end{split}\]</div>
+<p>hence we can calculate <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> here:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf S} &amp;=  \left(\frac{\partial {\bf r}}{\partial \theta} \times \frac{\partial {\bf r}}{\partial \phi}\right)\,\mathrm{d}\theta\,\mathrm{d}\phi\\
+&amp;=  R^2\begin{pmatrix} \cos(\theta)\cos(\phi) \\ \cos(\theta)\sin(\phi)\\ -\sin(\theta)\end{pmatrix} \times \begin{pmatrix} -\sin(\theta)\sin(\phi) \\ \sin(\theta)\cos(\phi)\\ 0 \end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi\\
+&amp;=  R^2 \begin{pmatrix} \sin^2(\theta) \cos(\phi) \\ \sin^2(\theta)\sin(\phi)\\ \sin(\theta) \cos(\theta)\end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi \\
+&amp;=  R^2 \begin{pmatrix} \sin(\theta) \cos(\phi) \\ \sin(\theta)\sin(\phi)\\ \cos(\theta)\end{pmatrix} \,\sin(\theta)\mathrm{d}\theta\,\mathrm{d}\phi \\\end{split}\]</div>
+<p>We can then recall that the radial vector for spherical polar coordinates has the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\bf r} = \begin{pmatrix} \sin(\theta) \cos(\phi) \\ \sin(\theta)\sin(\phi)\\ \cos(\theta)\end{pmatrix}\end{split}\]</div>
+<p>and therefore :</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf S} =  R^2\,\sin(\theta)\,\mathrm{d}\theta\,\mathrm{d}\phi\,\hat{\bf r} \]</div>
+<p>Another way to see this is that <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial {\bf r}}{\partial \theta} \propto \hat{\theta}\)</span> from the definition of the spherical coordinate system,
+likewise <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial {\bf r}}{\partial \phi}\ \propto \hat{\phi}\)</span> therefore, we have <span class="math notranslate nohighlight">\(\hat{\theta} \times \hat{\phi} = \hat{\bf r}\)</span> from the definition of the
+cross products.</p>
+<p>Thus the surface area integral takes the form:</p>
+<div class="math notranslate nohighlight">
+\[A = \int_A \mathrm{d}S = \int_A |\mathrm{d}{\bf S}| = R^2 \int_0^{2\pi}\,\mathrm{d}\phi\,\int_0^\pi\,\sin(\theta)\,\mathrm{d}\theta = 2\pi R^2\Big[-\cos(\theta)\Big]_0^{\pi} = 4\pi R^2\]</div>
+<p>2. Surface of the form <span class="math notranslate nohighlight">\(z = (x,\, y)\)</span></p>
+<p>A different sort of example is where the coordinates <span class="math notranslate nohighlight">\(x,\, y\)</span> are defined as terms of <span class="math notranslate nohighlight">\(z\)</span>, say <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = R^2\)</span>, which would describe the upper half of a sphere
+(recall the lower half would be with the negative root).  Here we have <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span>, thus the parameterisation of the surface is just in terms of <span class="math notranslate nohighlight">\(x,\,y\)</span> (a little
+like doing a line integral only in terms of <span class="math notranslate nohighlight">\(x\)</span>).</p>
+<p>Thus the surface has a coordinate vector of the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x,\,y) = \begin{pmatrix} x \\ y \\ z(x,\, y) \end{pmatrix}\end{split}\]</div>
+<p>meaning that the infinitemsimal surface vector element is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf S} &amp;=  \left(\frac{\partial {\bf r}}{\partial x} \times \frac{\partial {\bf r}}{\partial y}\right)\,\mathrm{d}x\,\mathrm{d}y \\
+&amp;=  \begin{pmatrix} 1 \\ 0 \\ \partial z/\partial x \end{pmatrix} \times \begin{pmatrix} 0 \\ 1 \\ \partial z/\partial y  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y \\
+&amp;=  \begin{pmatrix} -\partial z/\partial x \\ -\partial z/\partial y \\ 1  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
+<p>Which means to solve this problem either we use this result with the scalar product of a vector field <span class="math notranslate nohighlight">\(\bf G\)</span>, <span class="math notranslate nohighlight">\(I = \int {\bf G(r)}\cdot \mathrm{d}{\bf S}\)</span>.  For a scalar
+field we have <span class="math notranslate nohighlight">\(I = \int f\,\mathrm{d}S\)</span>, with:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{S} = \left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y\]</div>
+<p>Lets see this for <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = 9\)</span>, thus <span class="math notranslate nohighlight">\(z = \sqrt{9 - x^2 - y^2}\)</span>, lets consider the surface area over the range <span class="math notranslate nohighlight">\(x \in [0,\,3],\, y \in [0,\, 3]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\iint \mathrm{d}S &amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
+&amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{ 1 + \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}} }\right) \\
+&amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}\end{split}\]</div>
+<p>If we use a change of variable, <span class="math notranslate nohighlight">\(x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi\)</span> and therefore we have:</p>
+<div class="math notranslate nohighlight">
+\[\iint \mathrm{d}S =  3\int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y =  \frac{9\pi}{2}\]</div>
+<p>which corresponds to <span class="math notranslate nohighlight">\(\frac{1}{8}\)</span> of the full sphere’s surface area <span class="math notranslate nohighlight">\(36\pi\)</span>, as expected.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./VectorCalculus"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="volumeintegrals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Multidimensional Integrals</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="vectorcalctheorems.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Vector Calculus Theorems</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

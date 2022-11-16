@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Integration Preliminaries &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to NSCI0027
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   1. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   2. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   3. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   4. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   5. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   8. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   9. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   10. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
+   11. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
+   12. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   13. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   14. Matrix Diagonalisation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/VectorCalculus/integrationprelim.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arc-length">
+   Arc Length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surfaces-of-revolution">
+   Surfaces of Revolution
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Integration Preliminaries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arc-length">
+   Arc Length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surfaces-of-revolution">
+   Surfaces of Revolution
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="integration-preliminaries">
+<h1>Integration Preliminaries<a class="headerlink" href="#integration-preliminaries" title="Permalink to this headline">#</a></h1>
+<section id="arc-length">
+<h2>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">#</a></h2>
+<p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">FunctionArea</span></code>.</p>
+<figure class="align-default" id="functionarea">
+<img alt="../_images/FunctionArea.png" src="../_images/FunctionArea.png" />
+<figcaption>
+<p><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Another question that we could ask however is what is the length of the path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the range <span class="math notranslate nohighlight">\([a,\,b]\)</span>, as shown in
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">FunctionPathLength</span></code>.</p>
+<figure class="align-default" id="functionpathlength">
+<img alt="../_images/FunctionPathLength.png" src="../_images/FunctionPathLength.png" />
+<figcaption>
+<p><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To find an expression for this length <span class="math notranslate nohighlight">\(S\)</span>, we can break up the path into infinitesimal segments and then integrate these over the whole function.  We can see this
+process in <code class="xref std std-numref docutils literal notranslate"><span class="pre">ArcLength</span></code>, where we break down the change in arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> by Pythagoras:</p>
+<div class="math notranslate nohighlight">
+\[(\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
+<figure class="align-default" id="arclength">
+<img alt="../_images/ArcLength2.png" src="../_images/ArcLength2.png" />
+<figcaption>
+<p><span class="caption-text"><b>Left Pane:</b> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> comoonents <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>,
+<b>Right Pane:</b> Effect of taking the limit of smaller <span class="math notranslate nohighlight">\(\Delta x\)</span> in finding the path length.</span><a class="headerlink" href="#arclength" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Taking the limit of <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}s = \mathrm{d}x\, \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\]</div>
+<p>and therefore to find the path length:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_{x=a}^{x=b} \mathrm{d}s = \int_a^b \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
+<p>Taking an example here, lets look at <span class="math notranslate nohighlight">\(y = \cosh(x)\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\,1]\)</span>, so we find <span class="math notranslate nohighlight">\(\mathrm{d}y/\mathrm{d}x = \sinh(x)\)</span>, and therefore:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots\]</div>
+<p>We might also have a function which is parameterised <span class="math notranslate nohighlight">\(y = y(t),\, x=x(t)\)</span>, it is also possible to find an expression for the path length, taking the limit of
+<span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta s &amp;=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
+\Rightarrow \mathrm{d}s &amp;=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\end{split}\]</div>
+<p>An example here would be a circle, parameterised by <span class="math notranslate nohighlight">\(x = R\cos(t),\, y = R\sin(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [0,\, 2\pi)\)</span>, giving
+<span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi} R\,\mathrm{d}x = \Big[ Rt \Big]_0^{2\pi} = 2\pi\,R\]</div>
+<p>which gives the result for the circumference of a circle!</p>
+</section>
+<section id="surfaces-of-revolution">
+<h2>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">#</a></h2>
+<p>Lets now go further, what happens if we take a function and rotate it around an axis, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">AreaVolumeRevolution</span></code>.</p>
+<figure class="align-default" id="areavolumerevolution">
+<img alt="../_images/AreaVolumeRevolution.png" src="../_images/AreaVolumeRevolution.png" />
+<figcaption>
+<p><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
+<b>Right Pane:</b> Breaking down the volume into discrete slices, each of width <span class="math notranslate nohighlight">\(\mathrm{d} x\)</span>.</span><a class="headerlink" href="#areavolumerevolution" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To find the volume of such a rotated solid, we need to think about the cross sectional area along the range, which will be <span class="math notranslate nohighlight">\(\pi \,y^2\)</span> since the
+radius of each slice at <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(y(x)\)</span>.  Then we just need to integrate up these slices <span class="math notranslate nohighlight">\(\pi\,y^2\,\mathrm{d}x\)</span> over the range:</p>
+<div class="math notranslate nohighlight">
+\[V_x = \int_a^b \pi\,y^2\,\mathrm{d}x\]</div>
+<p>and we can swap round the axis we rotate over to the <span class="math notranslate nohighlight">\(y\)</span> axis and therefore the radius of each slice would be <span class="math notranslate nohighlight">\(\pi\,x^2\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[V_y = \int_{y(a)}^{y(b)} \pi\,x^2\,\mathrm{d}y\]</div>
+<p>We can also find the surface area of this solid of revolution, if we rotate over the <span class="math notranslate nohighlight">\(x\)</span> acis then this surface area is the circumference of each
+slice <span class="math notranslate nohighlight">\(2\pi\,y\)</span> multiplied by the path length <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span> along the surface, so we find:</p>
+<div class="math notranslate nohighlight">
+\[A_x = \int_{x=a}^{x=b} 2\pi\,y\,\mathrm{d}s = \int_a^b 2\pi\,y\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
+<p>We could rotate over the <span class="math notranslate nohighlight">\(y\)</span> axis instead, in which case we just switch the circumference we are interested in to be <span class="math notranslate nohighlight">\(2\pi\,x\)</span> and integrate the
+path length over the <span class="math notranslate nohighlight">\(y\)</span> axis:</p>
+<div class="math notranslate nohighlight">
+\[A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y\]</div>
+<p>As an example, lets find the volume of a cone depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cone</span></code>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_x = \int_0^h \pi\,\left(\frac{R x}{h}\right)^2\,\mathrm{d}x = \frac{R^2 \,\pi}{h^2}\Big[ \frac{1}{3}x^3\Big]_0^h = \frac{1}{3}\pi \,R^2\,h\\\end{split}\]</div>
+<p>which matches the expression we expect and explains where this factor of <span class="math notranslate nohighlight">\(1/3\)</span> comes from!</p>
+<p>Likewise we can look at the surface area of this cone,  <span class="math notranslate nohighlight">\(y = R x / h \rightarrow \mathrm{d}y/\mathrm{d}x = R / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_x &amp;=  \int_0^h 2\pi\,\frac{R x}{h}\,\sqrt{1 + \left(\frac{R}{h}\right)^2}\,\mathrm{d}x \\
+&amp;=  2\pi \frac{R}{h}\sqrt{1 + \left(\frac{R}{h}\right)^2}\Bigg[ \frac{1}{2}x^2\Bigg]_0^h \\
+&amp;=  \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
+<figure class="align-default" id="cone">
+<img alt="../_images/cone.png" src="../_images/cone.png" />
+<figcaption>
+<p><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Likewise if we have parametrised expressions <span class="math notranslate nohighlight">\(x = x(t),\, y = y(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [t_1,\, t_2]\)</span> then these expressions become:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_x &amp;=  \int_{t_1}^{t_2} \pi\,y^2\,\frac{\mathrm{d}x}{\mathrm{d}t}\,\mathrm{d}t \\
+V_y &amp;=  \int_{t_1}^{t_2} \pi\,x^2\,\frac{\mathrm{d}y}{\mathrm{d}t}\,\mathrm{d}t \\
+A_x &amp;=  \int_{t_1}^{t_2} 2\pi\,y\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t \\
+A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./VectorCalculus"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

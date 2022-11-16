@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Linear Algebra Answers 2 &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to NSCI0027
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/calculusonfields.html">
+   1. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/divandcurl.html">
+   2. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/coordinatesystems.html">
+   3. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/lineintegrals.html">
+   4. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/volumeintegrals.html">
+   5. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../VectorCalculus/vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/echelon_form.html">
+   8. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/matrices.html">
+   9. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/linear_maps.html">
+   10. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/inverses.html">
+   11. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/determinants.html">
+   12. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eigenvectors/notes.html">
+   13. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../linear_systems_matrices/diagonalisation.html">
+   14. Matrix Diagonalisation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/LinearAlgebra/problems/problems_2/solutions_2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-6">
+   Question 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-7">
+   Question 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-8">
+   Question 8
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear Algebra Answers 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-6">
+   Question 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-7">
+   Question 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-8">
+   Question 8
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-answers-2">
+<h1>Linear Algebra Answers 2<a class="headerlink" href="#linear-algebra-answers-2" title="Permalink to this headline">#</a></h1>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
+<p>We will prove that <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\circ T\)</span> are linear transformations, but <span class="math notranslate nohighlight">\(S\)</span> is not.</p>
+<p>To prove that <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation, let <span class="math notranslate nohighlight">\(x, y \in \mathbb{R}^2\)</span> where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{pmatrix}x_1\\x_2\end{pmatrix}, y = \begin{pmatrix}y_1\\y_2\end{pmatrix}.\end{split}\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}T(x+y) &amp;= T\left(\begin{pmatrix}x_1\\x_2\end{pmatrix}+\begin{pmatrix}y_1\\ y_2\end{pmatrix}\right) = T\left(\begin{pmatrix}x_1+y_1\\x_2+y_2\end{pmatrix}\right)\\
+&amp;=\begin{pmatrix}2(x_1+y_1)+x_2+y_2\\0\end{pmatrix}=\begin{pmatrix}2x_1+x_2\\0\end{pmatrix} + \begin{pmatrix}2y_1+y_2\\0\end{pmatrix}\\
+&amp;= T(x) + T(y).
+\end{align*}\end{split}\]</div>
+<p>Next, for any <span class="math notranslate nohighlight">\(a\in \mathbb{R}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+T(ax) &amp;= T\left(a\begin{pmatrix}x_1\\x_2\end{pmatrix}\right)=T\left(\begin{pmatrix}ax_1\\ax_2\end{pmatrix}\right)\\
+&amp;=\begin{pmatrix}2ax_1+ax_2\\0\end{pmatrix}=a\begin{pmatrix}2x_1+x_2\\0\end{pmatrix}\\
+&amp;=aT(x).
+\end{align*}\end{split}\]</div>
+<p>To prove that <span class="math notranslate nohighlight">\(S\)</span> is not a linear transformation, it is sufficient to find two vectors <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[S(u + v) \neq S(u) + S(v).\]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = \begin{pmatrix}1\\0\end{pmatrix}, v=\begin{pmatrix}0\\1\end{pmatrix},\end{split}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S(u+v) = S\left(\begin{pmatrix}1\\0\end{pmatrix}+\begin{pmatrix}0\\1\end{pmatrix}\right)=S\left(\begin{pmatrix}1\\1\end{pmatrix}\right)=\begin{pmatrix}2\\1\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S(u) + S(v) = S\left(\begin{pmatrix}1\\0\end{pmatrix}\right)+S\left(\begin{pmatrix}0\\1\end{pmatrix}\right)=\begin{pmatrix}1\\0\end{pmatrix}+\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}2\\0\end{pmatrix}.\end{split}\]</div>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[S(u+v)\neq S(u)+S(v).\]</div>
+<p>To prove that <span class="math notranslate nohighlight">\(S\circ T\)</span> is linear, let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{pmatrix}x_1\\x_2\end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}S\circ T(x) = S\left(T\left(\begin{pmatrix}x_1\\x_2\end{pmatrix}\right)\right) = S\left(\begin{pmatrix}2x_1+x_2\\0\end{pmatrix}\right)=\begin{pmatrix}2x_1+x_2\\0\end{pmatrix}=T(x).\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(S \circ T = T\)</span>. We have already shown that <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation, therefore <span class="math notranslate nohighlight">\(S \circ T\)</span> is a linear transformation.</p>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
+<p>1. Reducing <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1&amp;-1\\0&amp;0\end{pmatrix},\end{split}\]</div>
+<p>we find that the null space of <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(t\begin{pmatrix}1\\1\end{pmatrix}, t\in \mathbb{R}\)</span>.</p>
+<p>The images of the coordinate vectors under the transformation <span class="math notranslate nohighlight">\(x \mapsto Ax\)</span> are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Ae_1 = \begin{pmatrix}1/\sqrt{2}\\-1/\sqrt{2}\end{pmatrix}, Ae_2 = \begin{pmatrix}-1/\sqrt{2}\\1/\sqrt{2}\end{pmatrix}
+\end{split}\]</div>
+<a class="reference internal image-reference" href="../../../_images/q2_1.jpg"><img alt="../../../_images/q2_1.jpg" class="align-center" src="../../../_images/q2_1.jpg" style="width: 300px;" /></a>
+<p><span class="math notranslate nohighlight">\(A\)</span> represents a projection onto the line <span class="math notranslate nohighlight">\(x_1=-x_2\)</span> followed by a stretch <span class="math notranslate nohighlight">\(\times \sqrt{2}\)</span> along the line <span class="math notranslate nohighlight">\(x_1 = -x_2\)</span>.</p>
+<p>Alternatively, <span class="math notranslate nohighlight">\(A\)</span> represents a dilation (equal stretch in all directions) by <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> follwed by a projection onto the line <span class="math notranslate nohighlight">\(x_1=-x_2\)</span>.</p>
+<p>2. Reducing <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1&amp;-1&amp;0\\0&amp;0&amp;1\\0&amp;0&amp;0\end{pmatrix},\end{split}\]</div>
+<p>we find that the null space of <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(t\begin{pmatrix}1\\1\\0\end{pmatrix}, t\in \mathbb{R}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Ae_1 = \begin{pmatrix}1/\sqrt{2}\\-1/\sqrt{2}\\0\end{pmatrix}, Ae_2 = \begin{pmatrix}-1/\sqrt{2}\\1/\sqrt{2}\\0\end{pmatrix}, Ae_3 = \begin{pmatrix}0\\0\\1\end{pmatrix}
+\end{split}\]</div>
+<a class="reference internal image-reference" href="../../../_images/q2_2.jpg"><img alt="../../../_images/q2_2.jpg" class="align-center" src="../../../_images/q2_2.jpg" style="width: 300px;" /></a>
+<p><span class="math notranslate nohighlight">\(A\)</span> represents a projection onto the plane <span class="math notranslate nohighlight">\(t_1\begin{pmatrix}1\\-1\\0\end{pmatrix} + t_2\begin{pmatrix}0\\0\\1\end{pmatrix}\)</span> followed by a stretch <span class="math notranslate nohighlight">\(\times \sqrt{2}\)</span> along the line <span class="math notranslate nohighlight">\(t_1\begin{pmatrix}1\\-1\\0\end{pmatrix}\)</span>.</p>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
+<a class="reference internal image-reference" href="../../../_images/q3.jpg"><img alt="../../../_images/q3.jpg" class="align-center" src="../../../_images/q3.jpg" style="width: 300px;" /></a>
+<p>M represents an anticlockwise rotation <span class="math notranslate nohighlight">\(\pi/4\)</span> followed by a scaling (dilation) <span class="math notranslate nohighlight">\(\times \sqrt{2}\)</span>.</p>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
+<p>Using the special triangles with sides <span class="math notranslate nohighlight">\(1, 1/2, \sqrt{3}/2\)</span> and internal angles <span class="math notranslate nohighlight">\(\pi/2, \pi/3, \pi/6\)</span> as in the image below,</p>
+<a class="reference internal image-reference" href="../../../_images/q4.jpg"><img alt="../../../_images/q4.jpg" class="align-center" src="../../../_images/q4.jpg" style="width: 500px;" /></a>
+<p>or using the formula in the notes</p>
+<p><span class="math notranslate nohighlight">\(M=\left(\begin{array}{cc}\cos{2\theta}&amp;\sin{2\theta}\\ \sin{2\theta}&amp;-\cos{2\theta}\end{array}\right)\)</span> with <span class="math notranslate nohighlight">\(\theta=\tan^{-1}{\sqrt{3}}=\frac{\pi}{3}\)</span></p>
+<p>gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M=\frac{1}{2}\left(\begin{array}{cc}-1&amp;\sqrt{3}\\ \sqrt{3}&amp;1\end{array}\right).\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\det{M}=\left(\frac{1}{2}\right)^2(-1-3)=-1\]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M^{-1}=-\frac{1}{2}\left(\begin{array}{cc}1&amp;-\sqrt{3}\\ -\sqrt{3}&amp;-1\end{array}\right)\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[T=NM\]</div>
+<p>(transform <span class="math notranslate nohighlight">\(M\)</span> is applied first).</p>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}N=TM^{-1}=\frac{1}{4}\left(\begin{array}{cc}-1+2\sqrt{3} &amp; 2+\sqrt{3}\\ \sqrt{3} &amp; 1\end{array}\right)\left(\begin{array}{cc}-1&amp;\sqrt{3}\\ \sqrt{3}&amp;1\end{array}\right)\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}=\frac{1}{4}\left(\begin{array}{cc}1-2\sqrt{3}+2\sqrt{3} &amp; -\sqrt{3}+6+2+\sqrt{3}\\-\sqrt{3}+\sqrt{3} &amp; 3+1\end{array}\right)\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}=\left(\begin{array}{cc}1&amp;2\\0&amp;1\end{array}\right)\end{split}\]</div>
+<p>This is a shear parallel to the x-axis, scale factor 2.</p>
+</section>
+<section id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
+<p>A vector <span class="math notranslate nohighlight">\(x\)</span> is invariant under the transformation <span class="math notranslate nohighlight">\(x \mapsto Ax\)</span> if it satisfies the equation</p>
+<div class="math notranslate nohighlight">
+\[Ax = x.\]</div>
+<p>(Alternatively, we say that <span class="math notranslate nohighlight">\(A\)</span> ‘fixes’ <span class="math notranslate nohighlight">\(x\)</span>).</p>
+<p>This equation is <em>not</em> of the form <span class="math notranslate nohighlight">\(Ax = b\)</span> since <span class="math notranslate nohighlight">\(x\)</span> appears on both sides of the equation. We need to rearrange and factorise the equation to get <span class="math notranslate nohighlight">\(x\)</span> on its own.</p>
+<div class="math notranslate nohighlight">
+\[Ax - x = 0.\]</div>
+<p>we are not allowed to write <span class="math notranslate nohighlight">\((A-1)x = 0\)</span> since we cannot subtract a number from a matrix. Instead, use the identity matrix:</p>
+<div class="math notranslate nohighlight">
+\[Ax - Ix = (A-I)x = 0.\]</div>
+<p>We just need to find the null space of the matrix <span class="math notranslate nohighlight">\(A-I\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A - I = \frac{1}{2}\begin{pmatrix}-3&amp;\sqrt{3}\\\sqrt{3}&amp;-1\end{pmatrix}.\end{split}\]</div>
+<p>Reducing to echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1&amp;-\frac{1}{\sqrt{3}}\\0&amp;0\end{pmatrix}.\end{split}\]</div>
+<p>The values of <span class="math notranslate nohighlight">\(x\)</span> invariant under <span class="math notranslate nohighlight">\(x \mapsto Ax\)</span> is the null space of <span class="math notranslate nohighlight">\(A-I\)</span> which is <span class="math notranslate nohighlight">\(t\begin{pmatrix}\frac{1}{\sqrt{3}}  \\1\end{pmatrix}, t \in \mathbb{R}\)</span>.</p>
+<p>The matrix represents a reflection in the line <span class="math notranslate nohighlight">\(y = \sqrt{3}x\)</span>.</p>
+</section>
+<section id="question-6">
+<h2>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix representing the linear transformation <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Then</p>
+<div class="math notranslate nohighlight" id="equation-eqn-s2-q6">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn-s2-q6" title="Permalink to this equation">#</a></span>\[\begin{split}A\begin{pmatrix}1\\1\\1\end{pmatrix} = \begin{pmatrix}1\\0\\1\end{pmatrix}, A\begin{pmatrix}2\\3\\5\end{pmatrix} = \begin{pmatrix}0\\2\\1\end{pmatrix}, A\begin{pmatrix}0\\1\\2\end{pmatrix} = \begin{pmatrix}1\\0\\0\end{pmatrix}.\end{split}\]</div>
+<p><strong>Method 1</strong></p>
+<p>Writing</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\a_{21}&amp;a_{22}&amp;a_{23}\\a_{31}&amp;a_{32}&amp;a_{33}\end{pmatrix}\end{split}\]</div>
+<p>We have three linear equations for each of the matrix equations above:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+a_{11} + a_{12} + a_{13} &amp;= 1\\
+a_{21} + a_{22} + a_{23} &amp;= 0\\
+a_{31} + a_{32} + a_{33} &amp;= 1\\
+\\
+2a_{11} + 3a_{12} + 5a_{13} &amp;= 0\\
+2a_{21} + 3a_{22} + 5a_{23} &amp;= 2\\
+2a_{31} + 3a_{32} + 5a_{33} &amp;= 1\\
+\\
+a_{12} + 2a_{13} &amp;= 1\\
+a_{22} + 2a_{23} &amp;= 0\\
+a_{32} + 2a_{33} &amp;= 0\\
+\end{align*}
+\end{split}\]</div>
+<p>By regrouping equations we arrive at 3 sets of simultaneous equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+a_{11} + a_{12} + a_{13} &amp;= 1\\
+2a_{11} + 3a_{12} + 5a_{13} &amp;= 0\\
+a_{12} + 2a_{13} &amp;= 1\\
+\\
+a_{21} + a_{22} + a_{23} &amp;= 0\\
+2a_{21} + 3a_{22} + 5a_{23} &amp;= 2\\
+a_{22} + 2a_{23} &amp;= 0\\
+\\
+a_{31} + a_{32} + a_{33} &amp;= 1\\
+2a_{31} + 3a_{32} + 5a_{33} &amp;= 1\\
+a_{32} + 2a_{33} &amp;= 0\\
+\end{align*}
+\end{split}\]</div>
+<p>Then writing in matrix form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}1&amp;1&amp;1\\2&amp;3&amp;5\\0&amp;1&amp;2\end{pmatrix}\begin{pmatrix}a_{11}\\a_{12}\\a_{13}\end{pmatrix}=\begin{pmatrix}1\\0\\1\end{pmatrix}\\
+\begin{pmatrix}1&amp;1&amp;1\\2&amp;3&amp;5\\0&amp;1&amp;2\end{pmatrix}\begin{pmatrix}a_{21}\\a_{22}\\a_{23}\end{pmatrix}=\begin{pmatrix}0\\2\\0\end{pmatrix}\\
+\begin{pmatrix}1&amp;1&amp;1\\2&amp;3&amp;5\\0&amp;1&amp;2\end{pmatrix}\begin{pmatrix}a_{31}\\a_{32}\\a_{33}\end{pmatrix}=\begin{pmatrix}1\\1\\0\end{pmatrix}
+\end{split}\]</div>
+<p>Which is the same as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}1&amp;1&amp;1\\2&amp;3&amp;5\\0&amp;1&amp;2\end{pmatrix}\begin{pmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\a_{21}&amp;a_{22}&amp;a_{23}\\a_{31}&amp;a_{32}&amp;a_{33}\end{pmatrix}^T = \begin{pmatrix}1&amp;0&amp;1\\0&amp;2&amp;1\\1&amp;0&amp;0\end{pmatrix}\\
+\end{split}\]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M = \begin{pmatrix}1&amp;1&amp;1\\2&amp;3&amp;5\\0&amp;1&amp;2\end{pmatrix}, B = \begin{pmatrix}1&amp;0&amp;1\\0&amp;2&amp;1\\1&amp;0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[MA^T = B\]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[A^T = M^{-1}B\]</div>
+<p>Using any method to calculate the inverse (e.g. cofactor expansion),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M^{-1} = \begin{pmatrix}-1&amp;1&amp;-2\\4&amp;-2&amp;3\\-2&amp;1&amp;-1\end{pmatrix}\end{split}\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^T = \begin{pmatrix}-1&amp;1&amp;-2\\4&amp;-2&amp;3\\-2&amp;1&amp;-1\end{pmatrix}\begin{pmatrix}1&amp;0&amp;1\\0&amp;2&amp;1\\1&amp;0&amp;0\end{pmatrix} = \begin{pmatrix}-3&amp;2&amp;0\\7&amp;-4&amp;2\\-3&amp;2&amp;-1\end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}-3&amp;7&amp;-3\\2&amp;-4&amp;2\\0&amp;2&amp;-1\end{pmatrix}\end{split}\]</div>
+<p><strong>Method 2</strong></p>
+<p>Notice that we can rewrite <a class="reference internal" href="#equation-eqn-s2-q6">()</a> as a single matrix equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\begin{pmatrix}1&amp;2&amp;0\\1&amp;3&amp;5\\1&amp;5&amp;2\end{pmatrix}=\begin{pmatrix}1&amp;0&amp;1\\0&amp;2&amp;0\\1&amp;1&amp;0\end{pmatrix}\end{split}\]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[AM^T=B^T\]</div>
+<p>which we can solve by calculating <span class="math notranslate nohighlight">\(M^{-1}\)</span> as before</p>
+<div class="math notranslate nohighlight">
+\[A = B(M^T)^{-1} = B^T(M^{-1})^T.\]</div>
+</section>
+<section id="question-7">
+<h2>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>False. For example set <span class="math notranslate nohighlight">\(B=0\)</span> then <span class="math notranslate nohighlight">\(AB=B\)</span> for any matrix <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>False. If <span class="math notranslate nohighlight">\(A\)</span> in invertible then there is a single solution <span class="math notranslate nohighlight">\(x = bA^{-1}\)</span>.</p></li>
+<li><p>False. For example <span class="math notranslate nohighlight">\(A\)</span> is any nonzero rotation and <span class="math notranslate nohighlight">\(B\)</span> is a reflection.</p></li>
+<li><p>True. If <span class="math notranslate nohighlight">\(x\)</span> is a solution to <span class="math notranslate nohighlight">\(Ax = 0\)</span> then so is <span class="math notranslate nohighlight">\(tx\)</span> for any <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span>.</p></li>
+</ol>
+</section>
+<section id="question-8">
+<h2>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">#</a></h2>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Ae_1 = \begin{pmatrix}\frac{1}{2}\\0\end{pmatrix}, Ae_2 = \begin{pmatrix}0\\2\end{pmatrix}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(A\)</span> represents a stretch <span class="math notranslate nohighlight">\(\times \frac{1}{2}\)</span> along the <span class="math notranslate nohighlight">\(x\)</span>-axis and <span class="math notranslate nohighlight">\(\times 2\)</span> along the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
+<a class="reference internal image-reference" href="../../../_images/q8.jpg"><img alt="../../../_images/q8.jpg" class="align-center" src="../../../_images/q8.jpg" style="width: 200px;" /></a>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B = \begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta = \pi/3\)</span>. (You can show this geometrically using special triangles).</p>
+<p><span class="math notranslate nohighlight">\(B^{-1}\)</span> is a rotation <span class="math notranslate nohighlight">\(\theta = -\pi/3\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{-1} = \begin{pmatrix}\cos\theta&amp;\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix} = \begin{pmatrix}\frac{\sqrt{3}}{2}&amp;\frac{1}{2}\\-\frac{1}{2}&amp;\frac{\sqrt{3}}{2}\end{pmatrix}.\end{split}\]</div>
+<p>3. Showing <span class="math notranslate nohighlight">\(C=BAB^{-1}\)</span> is just a case of multiplying out the matrices on the right hand side of the equation. <span class="math notranslate nohighlight">\(C\)</span> represents a stretch <span class="math notranslate nohighlight">\(\times \frac{1}{2}\)</span> along the line <span class="math notranslate nohighlight">\(y=(\tan\theta)x\)</span> and <span class="math notranslate nohighlight">\(\times 2\)</span> along the line perpendicular to <span class="math notranslate nohighlight">\(y=(\tan\theta)x\)</span>.</p>
+<p>4.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^2 = \begin{pmatrix}\frac{1}{4}&amp;0\\0&amp;4\end{pmatrix},\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[C^2 = \left(BAB^{-1}\right)^2 = BAB^{-1}BAB^{-1} = BA^2B^{-1}.\]</div>
+<p>5.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}C^{10} = \left(BAB^{-1}\right)^{10} = BAB^{-1}BAB^{-1} \ldots BAB^{-1} = BA^{10}B = B\begin{pmatrix}\frac{1}{2^{10}}&amp;0\\0&amp;2^{10}\end{pmatrix}B^{-1}.\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(C^{10}\)</span> represents a stretch <span class="math notranslate nohighlight">\(\times \frac{1}{2^{10}}\)</span> along the line <span class="math notranslate nohighlight">\(y=(\tan\theta)x\)</span> and <span class="math notranslate nohighlight">\(\times 2^{10}\)</span> along the line perpendicular to <span class="math notranslate nohighlight">\(y=(\tan\theta)  x\)</span>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LinearAlgebra\problems\problems_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
