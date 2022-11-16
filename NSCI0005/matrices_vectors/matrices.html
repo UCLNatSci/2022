@@ -835,12 +835,12 @@ and then find these determinants.</p>
 <p>Suppose that we are given the definitions below and asked to compute the result for <span class="math notranslate nohighlight">\(B\)</span> :</p>
 <div class="math notranslate nohighlight" id="equation-a-ab">
 <span class="eqno">(7.2)<a class="headerlink" href="#equation-a-ab" title="Permalink to this equation">¶</a></span>\[\begin{split}A=\left(\begin{array}{cc}1 &amp; 2 \\2 &amp; 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)\end{split}\]</div>
-<p>If this was ordinary scalar algebra, then <span class="math notranslate nohighlight">\(B\)</span> would be given by <span class="math notranslate nohighlight">\(\frac{AB}{A}\)</span>, but we have not defined the concept of division for matrices.
-Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems <span class="math notranslate nohighlight">\(Q X = P\)</span> and <span class="math notranslate nohighlight">\(X Q=P\)</span> do not generally
-have the same solution, and so the expression <span class="math notranslate nohighlight">\(X=\frac{P}{Q}\)</span> would be ambiguous.  The difficulty could be addressed by introducing separate concepts
-of “left-division” and “right-division”, and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division
-for matrices altogether, and consider what it means for matrix multiplication to be invertible.  To illustrate the use of the inverse matrix, we multiply each
-side of the equation for <span class="math notranslate nohighlight">\(A B\)</span> in <a class="reference internal" href="#equation-a-ab">(7.2)</a> by <span class="math notranslate nohighlight">\(A^{-1}\)</span> as follows:</p>
+<p>If this was ordinary scalar algebra, then <span class="math notranslate nohighlight">\(B\)</span> would be given by <span class="math notranslate nohighlight">\(\displaystyle \frac{AB}{A}\)</span>, but we have not defined the concept of division for matrices.</p>
+<p>Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems <span class="math notranslate nohighlight">\(Q X = P\)</span> and <span class="math notranslate nohighlight">\(X Q=P\)</span> do not generally
+have the same solution, and so the expression <span class="math notranslate nohighlight">\(\displaystyle X=\frac{P}{Q}\)</span> would be ambiguous.</p>
+<p>This difficulty could be addressed by introducing separate concepts of “left-division” and “right-division”, and some authors have done exactly this. However, a more
+fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.  To illustrate
+the use of the inverse matrix, we multiply each side of the equation for <span class="math notranslate nohighlight">\(A B\)</span> in <a class="reference internal" href="#equation-a-ab">(7.2)</a> by <span class="math notranslate nohighlight">\(A^{-1}\)</span> as follows:</p>
 <div class="math notranslate nohighlight" id="equation-a-inverse-ab">
 <span class="eqno">(7.3)<a class="headerlink" href="#equation-a-inverse-ab" title="Permalink to this equation">¶</a></span>\[\begin{split}A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&amp;3\\4&amp;3\end{array}\right) \end{split}\]</div>
 <p>It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the

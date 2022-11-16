@@ -520,12 +520,14 @@ Suppose that we are given the definitions below and asked to compute the result 
 A=\left(\begin{array}{cc}1 & 2 \\2 & 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)
 ``` 
 
-If this was ordinary scalar algebra, then $B$ would be given by $\frac{AB}{A}$, but we have not defined the concept of division for matrices. 
+If this was ordinary scalar algebra, then $B$ would be given by $\displaystyle \frac{AB}{A}$, but we have not defined the concept of division for matrices. 
+
 Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems $Q X = P$ and $X Q=P$ do not generally 
-have the same solution, and so the expression $X=\frac{P}{Q}$ would be ambiguous.  The difficulty could be addressed by introducing separate concepts 
-of "left-division" and "right-division", and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division 
-for matrices altogether, and consider what it means for matrix multiplication to be invertible.  To illustrate the use of the inverse matrix, we multiply each 
-side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
+have the same solution, and so the expression $\displaystyle X=\frac{P}{Q}$ would be ambiguous.  
+
+This difficulty could be addressed by introducing separate concepts of "left-division" and "right-division", and some authors have done exactly this. However, a more 
+fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.  To illustrate 
+the use of the inverse matrix, we multiply each side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
 
 ```{math}
 :label: a_inverse_ab

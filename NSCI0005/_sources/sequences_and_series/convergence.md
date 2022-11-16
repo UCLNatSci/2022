@@ -535,7 +535,7 @@ hence for a convergent infinite binomial expansion we just need $\displaystyle \
 2\. It allows us to do an expansion where the order parameter (the variable we expand out in) is getting smaller and smaller - it provides a 
 great way to approximate the complicated binomial functions with a one or two parameter expansion - this is VERY useful.
 
-````{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
 
 1\. The energy mass relation of a massive particle in special relativity is given by:

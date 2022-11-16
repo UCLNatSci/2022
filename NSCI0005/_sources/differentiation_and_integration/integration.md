@@ -16,7 +16,7 @@ where $c$ is an arbitrary constant.
 
 Being able to "spot" anti-derivatives is a tremendously useful (and often under-utilised) trick.
 
-````{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
 
 *Note: these are not "integration questions", you only need to use your knowledge of differentiation, and the concept of the anti-derivative, as described above.*
@@ -160,7 +160,7 @@ name: betweenTwoCurves
 Where $f(x) >= g(x)$ the integral $\displaystyle \int (f(x)-g(x)) \textrm{d}x$ gives the area between the two curves.
 ```
 
-````{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
 1\. 
 a\. Find the tangent to the curve $y=25-x^2$ at the point where $x=2$.

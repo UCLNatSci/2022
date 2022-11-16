@@ -357,7 +357,7 @@ A parallepiped, composed from three vectors $\bf a, \,b,\,c$.
 
 We can also evaluate the triple scalar product from a matrix determinant:
 ```{math}
- {\bf a \cdot (b \times c)} = \mathbf{a}\times\mathbf{b} = \begin{vmatrix}
+ {\bf a \cdot (b \times c)} = {\bf c}\cdot\mathbf{a}\times\mathbf{b} = {\bf b}\cdot\mathbf{c}\times\mathbf{a} = \begin{vmatrix}
  a_x & a_y & a_z \\
  b_x & b_y & b_z \\
  c_x & c_y & c_z \\
@@ -458,7 +458,7 @@ By setting each of these equations to equal some constant $\lambda$:
 we find the vector equation as:
 
 ```{math}
-{\bf r} = \begin{pmatrix} -1/3\\1\\5\end{pmatrix} + \lambda \begin{pmatrix} 2/30\\2\\-3\end{pmatrix}
+{\bf r} = \begin{pmatrix} -1/3\\1\\5\end{pmatrix} + \lambda \begin{pmatrix} 2/3\\2\\-3\end{pmatrix}
 ```
 ````
 
@@ -523,7 +523,7 @@ Expanding out the scalar product gives:
 n_x x +n_y y + n_z z = k
 ```
 
-where $k=n_x x_0 +n_y y_0 + n_z z+0$
+where $k=n_x \,x_0 +n_y \,y_0 + n_z\, z_0$
 
 In the case where we are given two vectors $v,\,w$ lying inside the plane we can, of course, find a normal vector by making use of the vector product!
 
@@ -557,7 +557,7 @@ e.g. $(1,\,0,\,6)$ and $\displaystyle \Big(0,\,1,\,\frac{27}{4}\Big)$, thus we c
 
 and therefore we have:
 ```{math}
-{\bf r} = \lambda\begin{pmatrix} -2\\-2\\-1 \end{pmatrix} + \mu\begin{pmatrix} -3\\-1\\-1/4\end{pmatrix} + \begin{pmatrix} 1\\-5\\8\end{pmatrix}
+{\bf r} = \lambda\begin{pmatrix} -2\\-2\\-1 \end{pmatrix} + \mu\begin{pmatrix} -3\\-1\\-1/4\end{pmatrix} + \begin{pmatrix} 3\\2\\7 \end{pmatrix}
 ```
 which is just one of an infinite number of solutions!
 ````
@@ -600,14 +600,14 @@ By using the vector product:
 ```{math}
 \overrightarrow{AB}\times\overrightarrow{AC} &=  \begin{vmatrix}\hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\2&3&-1\\4&-1&2\end{vmatrix} =
  5\hat{\bf x} - 8\hat{\bf y} - 14\hat{\bf z} \\
-d &=  \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}
+d &=  \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{|\overrightarrow{AB}|}=\sqrt{\frac{285}{14}}
 ```
 
 Or by using the scalar product:
 
 ```{math}
 \overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix},\quad \overrightarrow{AC} =  \begin{pmatrix}4\\-1\\2\end{pmatrix} \\
-|\overrightarrow{AC}_{\parallel}| &=  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}&=\frac{3}{\sqrt{14}}\\
+|\overrightarrow{AC}_{\parallel}| &=  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|} = \frac{3}{\sqrt{14}}\\
 d &=  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
 ```
 ````
@@ -661,6 +661,6 @@ We have to pick a point on each plane - e.g. on $P_1$ pick $A:(0,0,3)$ and on $P
 given by:
 
 ```{math}
-|\overrightarrow{AB}.\hat{{\bf n}}|=\frac{|(0,0,-2).(3,2,-4)|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}
+|\overrightarrow{AB}.\hat{{\bf n}}|=\frac{\left|\begin{pmatrix}0 \\0 \\-2 \end{pmatrix}\cdot \begin{pmatrix} 3 \\ 2 \\-4 \end{pmatrix}\right|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}
 ```
 ````

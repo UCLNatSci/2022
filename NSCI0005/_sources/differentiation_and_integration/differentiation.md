@@ -660,16 +660,18 @@ We apply the chain rule to the left-hand-side:
 Combining the two results and rearranging gives:
 
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x}=ne\frac{y}{x}
+\frac{\mathrm{d}y}{\mathrm{d}x}=n\frac{y}{x}
 ```
 
 and finally, rewriting all in terms of $x$ gives:
 
-```{math}\frac{\mathrm{d}y}{\mathrm{d}x}=n\frac{x^n}{x}=nx^{n-1}
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x}=n\frac{x^n}{x}=nx^{n-1}
 ```
+
 ````
 
-````{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
 
 1\. Use implicit differentiation to calculate $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}$ where $e^y+e^x=ye^y$, giving your answer in terms of the dependent variable $y$.
@@ -696,7 +698,7 @@ Rearranging:
 \frac{\mathrm{d}x}{\mathrm{d}y}=\frac{ye^y}{e^x}=\frac{ye^y}{(y−1)e^y}=\frac{y}{y−1}
 ```
 
-2\. Since $a>0$ we can take the natural log of both sides: $\ln(a)=b\ln(4)$ and then differentiate w.r.r. $b$.
+2\. Since $a>0$ we can take the natural log of both sides: $\ln(a)=b\ln(4)$ and then differentiate w.r.t. $b$.
 
 ```{math}
 \frac{1}{a}\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}=\ln(4)
@@ -739,7 +741,7 @@ which is the same result we obtained in the examples earlier, where it was also 
 
 
 
-````{admonition} Further Practice Questions
+````{admonition} Further practice questions
 :class: seealso, dropdown
 
 1\. Given that $x(t)=2^t$, calculate $\ddot{x}$.
