@@ -1,6 +1,8 @@
-# Welcome to Linear Algebra and Vector calculus
+# Welcome to Linear Algebra and Vector Calculus
 
-This module is designed as a follow on to NSCI0005, being a second module mathematical methods for natural sciences students.  In it we will cover:
+This module is designed as a follow on to NSCI0005, being a second mathematical methods for natural sciences students studying Mathematics & Statistics and Physics streams.  
+
+In this module, we will aim to cover:
 
 - Vector calculus methods:
 	- Vector fields
