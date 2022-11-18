@@ -560,7 +560,7 @@ which would need a term like $1/x^2$ and so forth.  There is a method that can b
 parameters**.  
 
 ## Coupled systems
-````{amonition} Defintion
+````{admonition} Defintion
 Consider again the general form of ODE in {eq}`ode2hom`:
 
 ```{math}
@@ -592,83 +592,6 @@ y\\z\end{pmatrix}=\begin{pmatrix}0&1\\-c/a&-b/a\end{pmatrix}\begin{pmatrix}y\\z\
 ```
 
 This sort of system is called an *eigenvalue problem* and can be solved by techniques from linear algebra.  
-
-### Uncoupling systems
-Given that we have been able to rewrite the general second order homogeneous ODE as a coupled first order system it is tempting to ask can we always write a higher order ODE
-problem as a system of coupled equations and likewise can we always write a system of coupled equations as a higher order problem?
-
-The answers to this are two fold:
-- it will always be possible to write a higher order problem as a system of coupled equations, provided that the highest derivative 
-in the equations is a linear term (for nonlinear problems it won't be possible to factorise out the coefficients). The number of equations will be the same as the 
-degree of the highest derivative. This is essential, as it allows us to tackle a wide variety of problems using numeric integration.  
-- it may not be possible to write a 
-system of coupled equations as a higher order problem if the coupled equations are nonlinear, as it may not be possible to obtain the ODE fully in terms of a single 
-variable. It may be less clear why this would be useful, since it is much easier to generalise the mathematics of first order systems. As an exception, it may be 
-useful to write a system of two coupled linear ODEs as a second order problem, to make use of the results that we have deduced for problems of this type.
-
-   
-
-### Non-linearity 
-Consider the following pair of differential equations describing the populations of rabbits and foxes:
-```{math}
-\frac{\mathrm{d}r}{\mathrm{d}t}&=ar-c r f\\
-\frac{\mathrm{d}f}{\mathrm{d}t}&=-bf+d r f
-```
-
-Constants $a,\,-b$ determine the rates of exponential population growth for each species in the absence of competition. Constants $c,\, d$ determine the strength 
-of the interaction between the two species. The two equations are coupled. Changes in the rabbit population affect foxes, and vice-versa. The coupling terms are $c rf$ and 
-$d rf$.  This system is also nonlinear as features terms involving products of the dependent variables $r,\,f$. Nonlinear systems are usually extremely difficult to 
-tackle by hand, though progress can be made by looking at key features. For example, dynamicists will often start by looking for equilibrium solutions 
-(when both derivatives are equal to zero), and undertaking stability tests to see if the system will move towards or away from equilibrium if it is 
-close to an equilibrium state. This mathematics is beyond the scope of our course.  It is also possible to make progress with nonlinear systems by attacking them 
-numerically. For first order ODE systems, which make up a very large class of scientific problems, Python's "odeint" function will often do the job. However, for some 
-types of problem the standard algorithm may break down and fail to give a sensible result. This breakdown normally occurs when a problem has solutions that change 
-rapidly on the domain of integration. These types of problem are called "stiff" problems, and modified algorithms have been designed to deal with them. The Van der 
-Pol oscillator introduced elsewhere in this course is an example of a stiff problem that can be tackled with an "out-of-the-box" stiff ODE solver (in Python). However, 
-stiff solvers won't always do the job either, and sometimes a customised algorithm is required. These techniques are an area of active research.
-
-   
-
-````{admonition} Worked example
-:class: seealso
-
-A simple model of glucose metabolism that can be used to identify mild diabetics and pre-diabetics is given by the following two coupled ODEs, in which 
-$g(t)$ and $h(t)$ measure the deviation of blood glucose and hormonal (insulin) concentrations from fasting levels at time $t$:
-```{math}
-\frac{\mathrm{d}g}{\mathrm{d}t} &=-m_1 g - m_2 h \qquad  \text{[equation (I)]}\\
-\frac{\mathrm{d}h}{\mathrm{d}t} &=-m_3 h + m_4 g \qquad  \text{[equation (II)]}
-```
-The quantities $m_1,\,m_2,\,m_3,\,m_4$ are non-negative constants.
-
-   
-1\. If $m_2=0$, glucose metabolism does not depend on insulin concentration. We can solve equation (I) in this case to find $g(t)$ subject to $g(0)=g_0>0$:
-
-Assuming that all four constants appearing in equations (I) and (II) are non-zero, we can show that $g(t)$ satisfies:
-
-```{math}
-\frac{\mathrm{d}^2g}{\mathrm{d}t^2}+2\alpha \frac{\mathrm{d}g}{\mathrm{d}t}+\omega^2 g &= 0 \\
-\alpha &= (m_1+m_3)/2 \\
-\omega^2 &= m_1 m_3 +m_2 m_4
-```
-
-   
-
-2\. We can solve the second order ODE in (1) for the case where $\alpha^2 - \omega^2<0$:
-
-   
-
-(c) Consider the second order ODE
-
-```{math}
-\frac{\mathrm{d}^2y}{\mathrm{d}t^2}+\omega_0^2\thinspace y = F(t)
-```
-
-where $\omega_0 \in \mathbb{R}^+$.  
-
-(i) By considering a trial solution of the form $y = k(t)\,e^{i\omega_0 t}$, or otherwise, find a particular integral for the case where $F(t)=e^{i\omega_0 t}$.
-
-(ii) Use your answer to part (i) to determine a particular integral for the case where $F(t) = \cos(\omega_0 t)$.
-````
 
 
 ## Solving separable PDEs
