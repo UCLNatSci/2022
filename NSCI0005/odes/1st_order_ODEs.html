@@ -449,19 +449,20 @@ P &amp;= P_0e^{\lambda t}\end{split}\]</div>
 <p>Problems which are the following form can be solved by the integrating factor method:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)\,y = g(x)\]</div>
-<p>If we multiply the LHS through by a function <span class="math notranslate nohighlight">\(\mu(x) = e^{\int f(x) \,\mathrm{d}x}\)</span>, which we call an <strong>integrating factor (IF)</strong>:</p>
-<div class="math notranslate nohighlight" id="equation-eq1compare">
-<span class="eqno">(13.3)<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
+<p>If we multiply through by a function <span class="math notranslate nohighlight">\(\mu(x) = e^{\int f(x) \,\mathrm{d}x}\)</span>, which we call an <strong>integrating factor (IF)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\mu \,\frac{\mathrm{d}y}{\mathrm{d}x} +  y\,\mu\,f(x)  = \mu\,g(x)\]</div>
 <p>and compare this with:</p>
-<div class="math notranslate nohighlight" id="equation-eq2compare">
-<span class="eqno">(13.4)<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
-<p>By equating <a class="reference internal" href="#equation-eq1compare">(13.3)</a> with <a class="reference internal" href="#equation-eq2compare">(13.4)</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
+<p>By equating these two equations, it can be seen that we can make the integrating factor work
+if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu \,f(x)\]</div>
 <p>We can solve this equation by separation, the solution is:</p>
 <div class="math notranslate nohighlight">
 \[\mu = e^{\int f(x)\,\mathrm{d}x}\]</div>
-<p>It’s role is to cast the left hand side as an exact derivative to make the problem integrable.</p>
+<p>This terms role is to cast the left hand side as an exact derivative - in order to make the problem integrable.</p>
 </div>
 <p>The integrating factor technique can be written down in the form of an algorithm:</p>
 <p><strong>1.</strong> Compute the integrating factor <span class="math notranslate nohighlight">\(\displaystyle \mu(x) = e^{\int f(x) \,\mathrm{d}x}\)</span>.</p>
@@ -476,31 +477,32 @@ P &amp;= P_0e^{\lambda t}\end{split}\]</div>
 \[y\,e^{\int f(x)\, \mathrm{d}x} = \int \Big(e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x\]</div>
 <p><strong>5.</strong> Rearrange to find <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-intfactorsoln">
-<span class="eqno">(13.5)<a class="headerlink" href="#equation-intfactorsoln" title="Permalink to this equation">¶</a></span>\[y(x) = \Big[\int \Big( e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x + C\Big]\,e^{-\int f(x)\, \mathrm{d}x}\]</div>
+<span class="eqno">(13.3)<a class="headerlink" href="#equation-intfactorsoln" title="Permalink to this equation">¶</a></span>\[y(x) = \Big[\int \Big( e^{\int f(x)\, \mathrm{d}x}\,g(x)\Big)\,\mathrm{d}x + C\Big]\,e^{-\int f(x)\, \mathrm{d}x}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>Consider the following differential equation:</p>
 <div class="math notranslate nohighlight" id="equation-intfexample">
-<span class="eqno">(13.6)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x}=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
+<span class="eqno">(13.4)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x}=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
 <p>A quick check will show that this equation is not separable.  If we try to integrate directly, then we obtain:</p>
 <div class="math notranslate nohighlight">
 \[\int \,\mathrm{d}y + \int \frac{1}{x}y \,\mathrm{d}x = \int \frac{\cos(x)}{x}\,\mathrm{d}x\]</div>
 <p>We can deal with the integral on the right (in principle) but the term <span class="math notranslate nohighlight">\(\displaystyle \int \frac{y}{x}\mathrm{d}x\)</span> appearing on the left cannot be evaluated
 without knowing <span class="math notranslate nohighlight">\(y\)</span>, so this is a dead end.</p>
-<p>But observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(13.6)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain:</p>
+<p>But observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(13.4)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain:</p>
 <div class="math notranslate nohighlight" id="equation-intfexample2">
-<span class="eqno">(13.7)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
+<span class="eqno">(13.5)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
 <p>The expression on the left-hand side is an <em>exact derivative</em>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}}{\mathrm{d}x}(yx)=x\frac{\mathrm{d}y}{\mathrm{d}x}+y\]</div>
-<p>Neat - this means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(13.7)</a> to obtain:</p>
+<p>Neat - this means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(13.5)</a> to obtain:</p>
 <div class="math notranslate nohighlight">
 \[xy=\int\cos(x)\mathrm{d}x\]</div>
 <p>The final solution therefore is:</p>
 <div class="math notranslate nohighlight">
 \[y=\frac{1}{x}(\sin(x)+k)\]</div>
-<p>where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. If we want to verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(13.6)</a>:</p>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant.</p>
+<p>If we want to verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(13.4)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x} &amp;= \left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)\\
 &amp;=\frac{\cos(x)}{x}\end{split}\]</div>
@@ -584,12 +586,12 @@ Firstly rearrange this equation to:</p>
 <p class="admonition-title">Defintion</p>
 <p>A Benoulli differential equation takes the form:</p>
 <div class="math notranslate nohighlight" id="equation-benoulliode">
-<span class="eqno">(13.8)<a class="headerlink" href="#equation-benoulliode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}\]</div>
+<span class="eqno">(13.6)<a class="headerlink" href="#equation-benoulliode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}\]</div>
 <p>We see that for <span class="math notranslate nohighlight">\(n = 0,\, 1\)</span> this reduces to cases already discussed, but for any other <span class="math notranslate nohighlight">\(n\)</span> this equation is clearly non-linear in <span class="math notranslate nohighlight">\(y\)</span>.  We can
 however make progress using the substitution:</p>
 <div class="math notranslate nohighlight">
 \[u = y^{1-n}\]</div>
-<p>which transforms <a class="reference internal" href="#equation-benoulliode">(13.8)</a> into a linear differential equation of the form:</p>
+<p>which transforms <a class="reference internal" href="#equation-benoulliode">(13.6)</a> into a linear differential equation of the form:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(x)\,u = -(n-1)\,Q(x)\]</div>
 <p>which can then be solved using the integrating factor method.</p>
@@ -627,7 +629,7 @@ y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
 <p class="admonition-title">Defintion</p>
 <p>A Riccati differential equation takes the form:</p>
 <div class="math notranslate nohighlight" id="equation-riccatiode">
-<span class="eqno">(13.9)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)\]</div>
+<span class="eqno">(13.7)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)\]</div>
 <p>which we can recast in terms of a variable <span class="math notranslate nohighlight">\(u(x)\)</span>, which satisfies an ODE:</p>
 <div class="math notranslate nohighlight">
 \[u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2\]</div>

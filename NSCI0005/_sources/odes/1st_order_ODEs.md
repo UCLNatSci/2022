@@ -182,21 +182,20 @@ Problems which are the following form can be solved by the integrating factor me
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + f(x)\,y = g(x)
 ```
-If we multiply the LHS through by a function $\mu(x) = e^{\int f(x) \,\mathrm{d}x}$, which we call an **integrating factor (IF)**:
+If we multiply through by a function $\mu(x) = e^{\int f(x) \,\mathrm{d}x}$, which we call an **integrating factor (IF)**:
 
 ```{math}
-:label: eq1compare
-\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)
+\mu \,\frac{\mathrm{d}y}{\mathrm{d}x} +  y\,\mu\,f(x)  = \mu\,g(x)
 ```
 
 and compare this with:
 
 ```{math}
-:label: eq2compare
 \frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}
 ```
 
-By equating {eq}`eq1compare` with {eq}`eq2compare` it can be seen that we can make the integrating factor work if we choose $\mu$ to satisfy:
+By equating these two equations, it can be seen that we can make the integrating factor work 
+if we choose $\mu$ to satisfy:
 
 ```{math}
 \frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu \,f(x)
@@ -206,7 +205,8 @@ We can solve this equation by separation, the solution is:
 ```{math}
 \mu = e^{\int f(x)\,\mathrm{d}x}
 ```
-It's role is to cast the left hand side as an exact derivative to make the problem integrable. 
+
+This terms role is to cast the left hand side as an exact derivative - in order to make the problem integrable. 
 ````
 
 The integrating factor technique can be written down in the form of an algorithm:
@@ -280,7 +280,9 @@ The final solution therefore is:
 ```{math}
 y=\frac{1}{x}(\sin(x)+k)
 ``` 
-where $k$ is an arbitrary constant. If we want to verify that the solution satisfies equation {eq}`intfexample`:
+where $k$ is an arbitrary constant. 
+
+If we want to verify that the solution satisfies equation {eq}`intfexample`:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{y}{x} &= \left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)\\
 &=\frac{\cos(x)}{x}
