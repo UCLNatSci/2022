@@ -477,7 +477,7 @@ We can combine together our facts about partial fractions into:
 |$ax+b$			|$\displaystyle \frac{A}{ax+b}$		 		|
 |$(ax+b)^n$		|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax+b)2} + \dots \frac{A_n}{(ax+b)^n}, \quad n \in \mathbb{N}$		 |
 |$ax^2+bx+c$	|$\displaystyle \frac{Ax+B}{ax^2+bx+c}$		|
-|$(ax^2+bx+c)^n$|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax^2+bx+c)^2} + \dots \frac{A_n}{(ax^2+bx+c)^n}, \quad n \in \mathbb{N}$		 |
+|$(ax^2+bx+c)^n$|$\displaystyle \frac{A_1}{ax^2+bx+c} + \frac{A_2}{(ax^2+bx+c)^2} + \dots \frac{A_n}{(ax^2+bx+c)^n}, \quad n \in \mathbb{N}$		 |
 
 
 ````{admonition} Worked example
