@@ -465,11 +465,20 @@ I=x \arcsin(x)+\sqrt{1-x^2}+C
 ## Integration by partial fractions
 Composing fractions means putting everything together, such as:
 ```{math}
-:label: compFrac
 \frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}
 ```
-Decomposition is the reverse process, *i.e.* taking the fraction apart.  This very useful for integration, since the resulting partial fractions are much 
-easier to integrate to logarithmic type terms. 
+Decomposition is the reverse process, *i.e.* taking the fraction apart.  This very useful for integration, 
+since the resulting partial fractions are much easier to integrate to logarithmic type terms. 
+
+We can combine together our facts about partial fractions into:
+
+| Factor in denominator | Term in partial fraction decomposition |
+|---------------------  |----------------------------------------|
+|$ax+b$			|$\displaystyle \frac{A}{ax+b}$		 		|
+|$(ax+b)^n$		|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax+b)2} + \dots \frac{A_n}{(ax+b)^n}, \quad n \in \mathbb{N}$		 |
+|$ax^2+bx+c$	|$\displaystyle \frac{Ax+B}{ax^2+bx+c}$		|
+|$(ax^2+bx+c)^n$|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax^2+bx+c)^2} + \dots \frac{A_n}{(ax^2+bx+c)^n}, \quad n \in \mathbb{N}$		 |
+
 
 ````{admonition} Worked example
 :class: seealso
@@ -499,6 +508,128 @@ and is solved by $A = 2,\, B = 3$, therefore:
 ```
 ````
 
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+Evaluate the following integrals:
+
+1\. 
+```{math}
+\int\frac{3x+11}{x^2-x-6}\,\mathrm{d}x
+```
+
+2\.
+```{math}
+\int\frac{x^2+4}{3x^3+4x^2-4x}\,\mathrm{d}x
+```
+
+3\.
+```{math}
+\int\frac{x^2-29x+5}{(x-4)^2(x^2+3)}\,\mathrm{d}x
+```
+
+4\.
+```{math}
+\int\frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)^2}\,\mathrm{d}x
+```
+
+5\.
+```{math}
+\int\frac{x^4-5x^3+6x^2-18}{x^3-3x^2}\,\mathrm{d}x
+```
+
+6\.
+```{math}
+\int\frac{x^3}{x^2-1}\,\mathrm{d}x
+```
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. 
+```{math}
+\frac{3x+11}{x^2-x-6} &= \frac{A}{x-3} + \frac{B}{x+2} = \frac{A(x+2)+B(x-3)}{x^2-x-6} \\
+\Longrightarrow &A(x+2)+B(x-3) = 3x+11 \\
+x=-2: &\qquad A(0) + B(-5) = 5 \Rightarrow B = -1 \\
+x=3: &\qquad A(5) + B(0) = 20 \Rightarrow A = 4 \\
+\int\frac{3x+11}{x^2-x-6}\,\mathrm{d}x &=\int\left(\frac{4}{x-3} - \frac{1}{x+2}\right)\,\mathrm{d}x\\
+&= 4\ln|x-3| - \ln|x+2| + K
+```
+
+2\.
+```{math}
+\frac{x^2+4}{3x^3+4x^2-4x} &= \frac{x^2+4}{x(x+2)(3x-2)}= \frac{A}{x} + \frac{B}{x+2} + \frac{C}{3x-2} \\
+&= \frac{A(x+2)(3x-2) + Bx(3x-2) + Cx(x+2)}{x(x+2)(3x-2)} \\
+\Longrightarrow & A(x+2)(3x-2) + Bx(3x-2) + Cx(x+2) = x^2+4 \\
+x=0: &\qquad A(2)(-2) + B(0) + C(0) = 4 \Rightarrow A = -1 \\
+x=-2: &\qquad A(0) + B(-2)(-8) + C(0) = 8 \Rightarrow B = \frac{1}{2} \\
+x=\frac{2}{3}: &\qquad A(0) + B(0) + C\left(\frac{2}{3}\right)\left(\frac{8}{3}\right) = \frac{40}{9} \Rightarrow C = \frac{5}{2} \\
+\int\frac{x^2+4}{3x^3+4x^2-4x}\,\mathrm{d}x &=\int\left(-\frac{1}{x} + \frac{1}{2}\frac{1}{x+2} + \frac{5}{2}\frac{1}{3x-2}\right)\,\mathrm{d}x\\
+&= -\ln|x| +\frac{1}{2} \ln|x+2| + \frac{5}{6}\ln|3x-2|+ K
+```
+
+3\.
+```{math}
+\frac{x^2-29x+5}{(x-4)^2(x^2+3)} &= \frac{A}{x-4} + \frac{B}{(x-4)^2} + \frac{Cx+D}{x^2+3} \\
+&= \frac{A(x-4)(x^2+3) + B(x^2+3) + (Cx+D)(x-4)^2}{(x-4)^2(x^2+3)} \\
+\Longrightarrow & A(x-4)(x^2+3) + B(x^2+3) + (Cx+D)(x-4)^2 = x^2-29x+5 
+```
+Comparing coefficients at reach order in $x$:
+```{math}
+x^3: &\qquad  A+C = 0 \\
+x^2: &\qquad -4A + B - 8C + D = 1  \\
+x^1: &\qquad 3A + 16C- 8D = -29  \\
+x^0: &\qquad -12A + 3B + 16D = 5  \\
+&\Longrightarrow A = 1,\quad B = -5, \quad C = -1, \quad D = 2\\
+\int\frac{x^2-29x+5}{(x-4)^2(x^2+3)}\,\mathrm{d}x &=\int\left(\frac{1}{x-4} - \frac{5}{(x-4)^2} + \frac{2-x}{x^2+3}\right)\,\mathrm{d}x\\
+&= \int\left(\frac{1}{x-4} - \frac{5}{(x-4)^2} + \frac{2}{x^2+3} - \frac{x}{x^2+3}\right)\,\mathrm{d}x\\
+&= \ln|x-4| + \frac{5}{x-4} + \frac{2}{\sqrt{3}}\arctan\left(\frac{x}{\sqrt{3}}\right)- \frac{1}{2}\ln|x^2+3|+ K
+```
+
+4\.
+```{math}
+\frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)^2} &= \frac{A}{x-1} + \frac{Bx+C}{(x^2+4)} + \frac{Dx+E}{(x^2+4)^2} \\
+&= \frac{A(x^2+4)^2 + (Bx+C)(x-1)(x^2+4) + (Dx+E)(x-1)}{(x-1)(x^2+4)^2} \\
+\Longrightarrow A(x^2+4)^2 &+ (Bx+C)(x-1)(x^2+4) + (Dx+E)(x-1) = x^3+10x^2+3x+36
+```
+Comparing coefficients at reach order in $x$:
+```{math}
+x^4: &\qquad  A + B = 0 \\
+x^3: &\qquad  C - B =  1 \\
+x^2: &\qquad  8A + 8B - C + D = 10  \\
+x^1: &\qquad -4B + 4C - D + E = 3  \\
+x^0: &\qquad 16A - 4C -E = 36  \\
+&\Longrightarrow A = 2,\quad B = -2, \quad C = -1, \quad D = 1, \quad E = 0\\
+\int\frac{x^3+10x^2+3x+36}{(x-1)(x^2+4)^2}\,\mathrm{d}x &=\int\left(\frac{2}{x-1} - \frac{2x+1}{(x^2+4)} + \frac{x}{(x^2+4)^2} \right)\,\mathrm{d}x\\
+&= \int\left(\frac{2}{x-1} - \frac{2x}{(x^2+4)} + \frac{1}{(x^2+4)} + \frac{x}{(x^2+4)^2} \right)\,\mathrm{d}x\\
+&= 2\ln|x-1| - \ln|x^2 + 4| + \frac{1}{2}\arctan\left(\frac{x}{2}\right)- \frac{1}{2}\frac{1}{x^2+4}+ K
+```
+
+5\.
+Since this is a top heavy fraction, we should try to cancel this down first:
+```{math}
+\frac{x^4-5x^3+6x^2-18}{x^3-3x^2} &= \frac{x^4 - 3x^3 + 3x^3 - 5x^3 + 6x^2 - 18}{x^3-3x^2} \\
+&= x + \frac{-2x^3 + 6x^2 - 18}{x^3-3x^2} = x + \frac{-2x^3 + 6x^2} - \frac{18}{x^3-3x^2}\\
+&= x - 2 - \frac{18}{x^3-3x^2} = x - 2 - \frac{18}{x^2(x-3)}\\
+\frac{18}{x^2(x-3)} &= \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x-3} = \frac{Ax(x-3) + B(x-3) + Cx^2}{x^2(x-3)}\\
+x=0: &\qquad A(0) + B(-3) + C(0)= 18 \Rightarrow B = -6 \\
+x=3: &\qquad A(0) + B(0) + C(9) = 18 \Rightarrow C = 2 \\
+x=1: &\qquad A(-2) + B(-2) + C(1) = 18 \Rightarrow A = -2 \\
+\int\frac{x^4-5x^3+6x^2-18}{x^3-3x^2}\,\mathrm{d}x &= \int\left(-\frac{2}{x} - \frac{6}{x^2} + \frac{2}{x-3}\right)\,\mathrm{d}x\\
+&= \frac{1}{2}x^2 - 2x + 2\ln|x| - \frac{6}{x} - 2\ln|x-3| + K
+```
+
+6\.
+```{math}
+\frac{x^3}{x^2-1} &= \frac{x^3-x^2 + x^2 - 1 + 1}{x^2-1} = x + 1 + \frac{1}{x^2-1} = x + 1 + \frac{1}{(x-1)(x+1)}\\
+&= x + 1 + \frac{1}{2}\left(\frac{1}{x-1} - \frac{1}{x+1}\right)\\
+\int\frac{x^3}{x^2-1}\,\mathrm{d}x &= \int\left[x + 1 + \frac{1}{2}\left(\frac{1}{x-1} - \frac{1}{x+1}\right)\right]\,\mathrm{d}x\\
+&= \frac{1}{2}x^2 + x + \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + K
+```
+
+````
 ## Reduction formula 
 
 Reduction formulae set up a recurrence relation between different integrands:
@@ -920,7 +1051,7 @@ We could rotate over the $y$ axis instead, in which case we just switch the circ
 path length over the $y$ axis:
 
 ```{math}
-A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y
+A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)^2}\,\mathrm{d}y
 ```
 
 ````{admonition} Worked example
@@ -961,20 +1092,60 @@ A_y &=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\ri
 ```
 
 
-````{admonition} Practice question
+````{admonition} Practice questions
 :class: seealso, dropdown
 1\. Find the surface area of revolution for $y  = x^2$ rotated around the $y$ axis over $y \in [0,\,4]$.
+
+2\. Determine the surface area of the solid obtained by rotating the function $y=\sqrt{9-x^2}$ for 
+$-2 \leq x \leq 2$ about the $x$-axis.
+
+3\. Determine the surface area of the solid obtained by rotating the function $y=x^{1/3}$, for 
+$1 \leq y \leq 2$ about the $y$-axis.
+
 ````
 
 ````{admonition} Solution
 :class: seealso, dropdown
 1\. 
 ```{math}
-y_2 = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x}
+y = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = 2x
 ```
-Fixing the limits we find $\quad y=0 \rightarrow x=0,\quad y = 4 \rightarrow x = 2$, so integral is:
+Fixing the limits we find 
+```{math}
+y = 0 &\rightarrow x = 0\\
+y = 4 &\rightarrow x = 2
+```
+so integral is:
 ```{math}
 A &= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
 &= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots
 ```
+
+2\.
+```{math}
+y^2 &= 9-x^2\\
+2y\frac{\mathrm{d}y}{\mathrm{d}x} &= -2x  \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{x}{y} = -\frac{x}{\sqrt{9-x^2}}\\
+1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &= 1 + \frac{x}{9-x^2} = \frac{9}{9-x^2}
+```
+so integral is:
+```{math}
+2\pi\,\int_{-2}^2  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = 6\pi\,\int_{-2}^2 \, \mathrm{d}x = 24\pi
+```
+
+
+3\. 
+```{math}
+y &= x^{1/3}\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{1}{3}x^{-2/3}  \\
+1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &= 1 \frac{1}{9}x^{-4/3} = \frac{9x^{4/3} + 1}{9x^{4/3}}
+```
+the limits as $y \in [1,\, 2]$ in $x$ are $x \in [1,\, 8]$, so integral is:
+```{math}
+2\pi\,\int_{1}^8  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = \frac{2\pi}{3}\int_{1}^8 x^{1/3}\left(9x^{4/3}+1\right)^{1/2}\, \mathrm{d}x
+```
+which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}x = \frac{1}{n+1}f^{n+1}$, here $f = 9x^{4/3} + 1$, so $f' = 12x^{1/3}$
+```{math}
+S = \frac{2\pi}{3}\frac{1}{12}\Big[\frac{2}{3}\left(9x^{4/3}+1 \right)^{3/2}\Big]_1^8 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
+```
+
 ````
