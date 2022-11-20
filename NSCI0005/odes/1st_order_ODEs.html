@@ -288,6 +288,11 @@
    13.4. Perfect differential form
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-systems-with-odes">
+   13.5. Modelling systems with ODEs
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -333,6 +338,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#perfect-differential-form">
    13.4. Perfect differential form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-systems-with-odes">
+   13.5. Modelling systems with ODEs
   </a>
  </li>
 </ul>
@@ -742,6 +752,27 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
 <p>which we could then solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>, as this is quadratic <span class="math notranslate nohighlight">\(xy^2 + y\,e^{-x^2} - 1 = 0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}\]</div>
+</div>
+</div>
+<div class="section" id="modelling-systems-with-odes">
+<h2><span class="section-number">13.5. </span>Modelling systems with ODEs<a class="headerlink" href="#modelling-systems-with-odes" title="Permalink to this headline">¶</a></h2>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>The number of species S living on an island or habitat fragment of area A can be modelled as
+<span class="math notranslate nohighlight">\(S = cA^z\)</span>, where <span class="math notranslate nohighlight">\(z &gt; 0\)</span>. We can measure area in units that make <span class="math notranslate nohighlight">\(c = 1\)</span>, simplifying this equation into
+<span class="math notranslate nohighlight">\(S = A^z\)</span>. A common value for <span class="math notranslate nohighlight">\(z\)</span> is approximately 0.45 (found by data fitting).</p>
+<p>Find the critical value when <span class="math notranslate nohighlight">\(\frac{\mathrm{d}S}{\mathrm{d}A} = 1\)</span>: and explain the significance of this
+for biodiversity conservation.</p>
+<p>Given that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}S}{\mathrm{d}A} = 0.45\,A^{-0.55}\]</div>
+<p>then we can aim to find the critical value when <span class="math notranslate nohighlight">\(\frac{\mathrm{d}S}{\mathrm{d}A} = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[0.45\,{A_c}^{-0.55} = 1 \Rightarrow A_c = \left(\frac{9}{20}\right)^{20/11} \simeq 0.234\dots\]</div>
+<p>For <span class="math notranslate nohighlight">\(A &lt; A_c\)</span>, any loss of habitat results in a proportionally greater loss of species, as we can see from:</p>
+<div class="figure align-default" id="speciesarea">
+<img alt="../_images/SvA.png" src="../_images/SvA.png" />
+</div>
 </div>
 </div>
 </div>

@@ -1108,18 +1108,18 @@ obtain a better approximation.</p>
 <p>and therefore to find the path length:</p>
 <div class="math notranslate nohighlight">
 \[L = \int_{x=a}^{x=b} \mathrm{d}s = \int_a^b \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
-<div class="seealso admonition">
-<p class="admonition-title">Worked examples</p>
-<p>1.  lets look at <span class="math notranslate nohighlight">\(y = \cosh(x)\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\,1]\)</span>, so we find <span class="math notranslate nohighlight">\(\mathrm{d}y/\mathrm{d}x = \sinh(x)\)</span>, and therefore:</p>
-<div class="math notranslate nohighlight">
-\[L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots\]</div>
-<p>We might also have a function which is parameterised <span class="math notranslate nohighlight">\(y = y(t),\, x=x(t)\)</span>, it is also possible to find an expression for the path length, taking the limit of
-<span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span>:</p>
+<p>We might also have a function which is parameterised <span class="math notranslate nohighlight">\(y = y(t),\, x=x(t)\)</span>, it is also possible to find an
+expression for the path length for <span class="math notranslate nohighlight">\(t \in [t_a,\, t_b]\)</span>, taking the limit of <span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\Delta s &amp;=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
-\Rightarrow \mathrm{d}s &amp;=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\end{split}\]</div>
-<p>2.
-Consider a circle, parameterised by <span class="math notranslate nohighlight">\(x = R\cos(t),\, y = R\sin(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [0,\, 2\pi)\)</span>, giving
+\Rightarrow \mathrm{d}s &amp;=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\\
+L &amp;= \int_{t_a}^{t_b}  \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked examples</p>
+<p>1.  Looking at <span class="math notranslate nohighlight">\(y = \cosh(x)\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\,1]\)</span>, so we find <span class="math notranslate nohighlight">\(\mathrm{d}y/\mathrm{d}x = \sinh(x)\)</span>, and therefore:</p>
+<div class="math notranslate nohighlight">
+\[L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots\]</div>
+<p>2. Consider a circle, parameterised by <span class="math notranslate nohighlight">\(x = R\cos(t),\, y = R\sin(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [0,\, 2\pi)\)</span>, giving
 <span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)\)</span> and therefore:</p>
 <div class="math notranslate nohighlight">
 \[L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi} R\,\mathrm{d}x = \Big[ Rt \Big]_0^{2\pi} = 2\pi\,R\]</div>

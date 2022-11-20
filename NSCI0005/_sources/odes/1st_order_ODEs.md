@@ -639,3 +639,33 @@ y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}
 
 ````
 
+## Modelling systems with ODEs
+
+
+````{admonition} Worked example
+:class: seealso
+The number of species S living on an island or habitat fragment of area A can be modelled as 
+$S = cA^z$, where $z > 0$. We can measure area in units that make $c = 1$, simplifying this equation into 
+$S = A^z$. A common value for $z$ is approximately 0.45 (found by data fitting). 
+
+Find the critical value when $\frac{\mathrm{d}S}{\mathrm{d}A} = 1$: and explain the significance of this 
+for biodiversity conservation.
+
+Given that:
+```{math}
+\frac{\mathrm{d}S}{\mathrm{d}A} = 0.45\,A^{-0.55}
+```
+then we can aim to find the critical value when $\frac{\mathrm{d}S}{\mathrm{d}A} = 1$:
+```{math}
+0.45\,{A_c}^{-0.55} = 1 \Rightarrow A_c = \left(\frac{9}{20}\right)^{20/11} \simeq 0.234\dots
+```
+For $A < A_c$, any loss of habitat results in a proportionally greater loss of species, as we can see from:
+```{figure} SvA.png
+---
+name: SpeciesArea
+---
+```
+
+
+````
+

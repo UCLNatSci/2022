@@ -928,22 +928,25 @@ and therefore to find the path length:
 ```{math}
 L = \int_{x=a}^{x=b} \mathrm{d}s = \int_a^b \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x
 ```
+
+We might also have a function which is parameterised $y = y(t),\, x=x(t)$, it is also possible to find an 
+expression for the path length for $t \in [t_a,\, t_b]$, taking the limit of $\Delta t \rightarrow 0$:
+```{math}
+\Delta s &=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
+\Rightarrow \mathrm{d}s &=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\\
+L &= \int_{t_a}^{t_b}  \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t
+```
+
+
 ````{admonition} Worked examples
 :class: seealso
 
-1\.  lets look at $y = \cosh(x)$ over the range $x \in [0,\,1]$, so we find $\mathrm{d}y/\mathrm{d}x = \sinh(x)$, and therefore:
+1\.  Looking at $y = \cosh(x)$ over the range $x \in [0,\,1]$, so we find $\mathrm{d}y/\mathrm{d}x = \sinh(x)$, and therefore:
 ```{math}
 L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots
 ```
-We might also have a function which is parameterised $y = y(t),\, x=x(t)$, it is also possible to find an expression for the path length, taking the limit of 
-$\Delta t \rightarrow 0$:
-```{math}
-\Delta s &=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
-\Rightarrow \mathrm{d}s &=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}
-```
 
-2\. 
-Consider a circle, parameterised by $x = R\cos(t),\, y = R\sin(t)$, over the range $t \in [0,\, 2\pi)$, giving 
+2\. Consider a circle, parameterised by $x = R\cos(t),\, y = R\sin(t)$, over the range $t \in [0,\, 2\pi)$, giving 
 $\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)$ and therefore:
 ```{math}
 L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi} R\,\mathrm{d}x = \Big[ Rt \Big]_0^{2\pi} = 2\pi\,R
