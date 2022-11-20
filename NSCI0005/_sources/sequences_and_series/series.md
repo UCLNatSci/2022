@@ -1111,14 +1111,25 @@ e^x &= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
 You should also be able to calculate the first few terms in the expansion of an arbitrary function $f(x)$.
 
 
-````{admonition} Pratice Question
+````{admonition} Pratice questions
 :class: seealso, dropdown
-By regrouping the terms in the Maclaurin series for $e^{i\theta}$, derive Euler's formula.
+1\. By regrouping the terms in the Maclaurin series for $e^{i\theta}$, derive Euler's formula.
+
+2\. Find the Maclaurin series for $\cosh(x)$, giving your answer in the form of an infinite series. 
+
+3\. Find the first two non-zero terms in the Maclaurin series for $\textrm{arsinh}(x)$.
+
+4\. 
+
+a\. Find the coefficient of $x^n$ in the Maclaurin series expansion for $(x + 1)^{1/k},\,k,\, n \in \mathbb{N}, \,n > 2$.
+
+b\. Write the coefficient of $x^6$ in the Maclaurin series of $(x+1)^{1/7}$ as an exact, proper fraction.
 ````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
 
+1\.
 ```{math}
 e^{i\theta}&=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
 &=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)
@@ -1131,6 +1142,70 @@ We can write this out rigorously as follows:
  =\sum_{n=0}^{\infty}\frac{(i\theta)^{2n}}{(2n)!} + \sum_{n=0}^{\infty}\frac{(i\theta)^{2n+1}}{(2n+1)!}\\
  &= \sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n}}{(2n)!} + i\sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n+1}}{(2n+1)!} = \cos(\theta)+i\sin(\theta).
 ```
+
+2\. 
+Let $f(x) = \cosh(x)$, then:
+```{math}
+f(x) = \cosh(x) & f(0) = 1\\
+f'(x) = \sinh(x) & f'(0) = 0\\
+f''(x) = \cosh(x) & f''(0) = 1
+```
+Thus we find that for $f^(n)$:
+```{math}
+  f^{(x)} =
+    \begin{cases}
+      \sinh(x) & n\,\text{odd}\\
+      \cosh(x) & n\,\text{even}
+    \end{cases} \quad 
+	\Longrightarrow  \quad
+	  f^{(n)}(0) =
+    \begin{cases}
+      0 & n\,\text{odd}\\
+      1 & n\,\text{even}
+    \end{cases} 
+```
+
+Hence the Taylor series is found from:
+```{math}
+\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \dots = \sum_{n=0}^\infty \frac{x^{2n}}{(2n)!}
+```
+
+3\.
+Let $f(x) = \textrm{arsinh}(x)$
+```{math}
+f(x) = \textrm{arsinh}(x) & f(0) = 0\\
+f'(x) = \frac{1}{\sqrt{x^2+1}} & f'(0) = 1\\
+f''(x) = -\frac{1}{2}\frac{x}{(x^2+1)^{3/2}} & f''(0) = 0\\
+f^{(3)}(x) = -\frac{1}{(x^2+1)^{3/2}} + \frac{3x^2}{(x^2+1)^{5/2}} & f^{(3)}(0) = -1
+```
+Hence the Taylor series is given by:
+```{math}
+\textrm{arsinh}(x) = x - \frac{x^3}{6} + \dots
+```
+
+4\.
+
+a\.
+For $f(x) = (x + 1)^{1/k}$, then we find:
+```{math}
+f'(x) &= \left(\frac{1}{k}\right)\\
+f''(x) &= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\,(x + 1)^{1/k-2}\\
+\vdots\\
+f^{(n)} &= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\dots\left(\frac{1}{k}-(n-1)\right)\,(x + 1)^{1/k-n}\\
+```
+Hence the $n^{th}$ term will be found from:
+```{math}
+f^{(n)}(0) &= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\dots\left(\frac{1}{k}-(n-1)\right)\,(x + 1)^{1/k-n} \\
+&= \frac{\left(1-k\right)\left(1-2k\right)\dots\left(1-(n-1)k\right)}{k^n}\\
+\Rightarrow c_{(k,\,n)} &= \frac{\left(1-k\right)\left(1-2k\right)\dots\left(1-(n-1)k\right)}{k^n\,n!}
+```
+
+b\. We need to find $c_{(7,\,6)}$:
+```{math}
+c_{(7,\,6)} &= \frac{\left(1-7\right)\left(1-14\right)\left(1-21\right)\left(1-28\right)\left(1-35\right)}{7^6\,6!}\\
+&= -\frac{1989}{117649}
+```
+
 ````
 
 ```{admonition} A disclaimer!

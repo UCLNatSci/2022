@@ -305,7 +305,7 @@ For our $\displaystyle \text{sinc}(x) = \frac{\sin(x)}{x}$ function, we can see 
 ```
 
 
-```{admonition} Practice Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
 
 Determine, with justification, the value of the limits:
@@ -314,9 +314,13 @@ Determine, with justification, the value of the limits:
 
 2\. $\displaystyle\lim_{x\rightarrow\infty}x^2 e^{-x}$
 
+3\. By retaining only the first two non-zero terms in the Maclaurin series for $\sin(x)$, estimate:
+```{math}
+\int_{-1}^1 \frac{\sin(x)}{x}\,\mathrm{d}x
 ```
+````
 
-```{admonition} Solutions :
+````{admonition} Solutions :
 :class: seealso, dropdown
 
 1\. Both functions approach $0$ in the limit x$ \to 0$, hence:
@@ -338,5 +342,16 @@ Hence we need to differentiate again:
 $f^{\prime\prime} (x) = 2,\, g^{\prime\prime}(x) = e^x$
 
 $\displaystyle \lim_{x\rightarrow\infty} x^2 e^{-x} = \lim_{x\rightarrow\infty}\frac{2}{e^x}=0$
+
+3\. 
+We can write this as:
+```{math}
+\int_{-1}^1\frac{\sin(x)}{x}\,\mathrm{d}x = 2\int_{0}^1\frac{\sin(x)}{x}\,\mathrm{d}x
 ```
+as both $\sin(x)$ and $x$ are odd, the result is even.  Using $\sin(x) = \displaystyle x - \frac{x^3}{3!} + \dots$:
+```{math}
+2\int_{0}^1\frac{\sin(x)}{x}\,\mathrm{d}x = 2\int_{0}^1\left(1 - \frac{x^2}{3!} \right)\,\mathrm{d}x = \frac{17}{9}
+```
+So this integral is $\simeq 1.8888\dots$ and the true value of the integral is found as $1.89217\dots$, hence a good approximation.
+````
 

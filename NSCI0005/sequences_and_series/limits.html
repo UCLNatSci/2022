@@ -583,6 +583,9 @@ Numeric rounding errors can lead to very badly behaved results!</em></p>
 <p>Determine, with justification, the value of the limits:</p>
 <p>1. <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow 0}{\left(\frac{\sin^2(x)}{3 x^2 + 2x}\right)}\)</span></p>
 <p>2. <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow\infty}x^2 e^{-x}\)</span></p>
+<p>3. By retaining only the first two non-zero terms in the Maclaurin series for <span class="math notranslate nohighlight">\(\sin(x)\)</span>, estimate:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^1 \frac{\sin(x)}{x}\,\mathrm{d}x\]</div>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions :</p>
@@ -596,6 +599,14 @@ Numeric rounding errors can lead to very badly behaved results!</em></p>
 <p>Hence we need to differentiate again:</p>
 <p><span class="math notranslate nohighlight">\(f^{\prime\prime} (x) = 2,\, g^{\prime\prime}(x) = e^x\)</span></p>
 <p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow\infty} x^2 e^{-x} = \lim_{x\rightarrow\infty}\frac{2}{e^x}=0\)</span></p>
+<p>3.
+We can write this as:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^1\frac{\sin(x)}{x}\,\mathrm{d}x = 2\int_{0}^1\frac{\sin(x)}{x}\,\mathrm{d}x\]</div>
+<p>as both <span class="math notranslate nohighlight">\(\sin(x)\)</span> and <span class="math notranslate nohighlight">\(x\)</span> are odd, the result is even.  Using <span class="math notranslate nohighlight">\(\sin(x) = \displaystyle x - \frac{x^3}{3!} + \dots\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[2\int_{0}^1\frac{\sin(x)}{x}\,\mathrm{d}x = 2\int_{0}^1\left(1 - \frac{x^2}{3!} \right)\,\mathrm{d}x = \frac{17}{9}\]</div>
+<p>So this integral is <span class="math notranslate nohighlight">\(\simeq 1.8888\dots\)</span> and the true value of the integral is found as <span class="math notranslate nohighlight">\(1.89217\dots\)</span>, hence a good approximation.</p>
 </div>
 </div>
 </div>

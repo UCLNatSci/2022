@@ -1368,11 +1368,17 @@ e^x &amp;= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
 \ln(1+x) &amp;= x-\frac{x^2}{2}+\frac{x^3}{3}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{n+1}}{n+1}\end{split}\]</div>
 <p>You should also be able to calculate the first few terms in the expansion of an arbitrary function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Pratice Question</p>
-<p>By regrouping the terms in the Maclaurin series for <span class="math notranslate nohighlight">\(e^{i\theta}\)</span>, derive Euler’s formula.</p>
+<p class="admonition-title">Pratice questions</p>
+<p>1. By regrouping the terms in the Maclaurin series for <span class="math notranslate nohighlight">\(e^{i\theta}\)</span>, derive Euler’s formula.</p>
+<p>2. Find the Maclaurin series for <span class="math notranslate nohighlight">\(\cosh(x)\)</span>, giving your answer in the form of an infinite series.</p>
+<p>3. Find the first two non-zero terms in the Maclaurin series for <span class="math notranslate nohighlight">\(\textrm{arsinh}(x)\)</span>.</p>
+<p>4.</p>
+<p>a. Find the coefficient of <span class="math notranslate nohighlight">\(x^n\)</span> in the Maclaurin series expansion for <span class="math notranslate nohighlight">\((x + 1)^{1/k},\,k,\, n \in \mathbb{N}, \,n &gt; 2\)</span>.</p>
+<p>b. Write the coefficient of <span class="math notranslate nohighlight">\(x^6\)</span> in the Maclaurin series of <span class="math notranslate nohighlight">\((x+1)^{1/7}\)</span> as an exact, proper fraction.</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
+<p>1.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}e^{i\theta}&amp;=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
 &amp;=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)\end{split}\]</div>
@@ -1381,6 +1387,55 @@ e^x &amp;= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
 \[\begin{split} e^{i\theta}&amp;=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!} = \sum_{n=0,2,4,...}\frac{(i\theta)^n}{n!} + \sum_{n=1,3,5,...}\frac{(i\theta)^n}{n!} 
  =\sum_{n=0}^{\infty}\frac{(i\theta)^{2n}}{(2n)!} + \sum_{n=0}^{\infty}\frac{(i\theta)^{2n+1}}{(2n+1)!}\\
  &amp;= \sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n}}{(2n)!} + i\sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n+1}}{(2n+1)!} = \cos(\theta)+i\sin(\theta).\end{split}\]</div>
+<p>2.
+Let <span class="math notranslate nohighlight">\(f(x) = \cosh(x)\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \cosh(x) &amp; f(0) = 1\\
+f'(x) = \sinh(x) &amp; f'(0) = 0\\
+f''(x) = \cosh(x) &amp; f''(0) = 1\end{split}\]</div>
+<p>Thus we find that for <span class="math notranslate nohighlight">\(f^(n)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  f^{(x)} =
+    \begin{cases}
+      \sinh(x) &amp; n\,\text{odd}\\
+      \cosh(x) &amp; n\,\text{even}
+    \end{cases} \quad 
+	\Longrightarrow  \quad
+	  f^{(n)}(0) =
+    \begin{cases}
+      0 &amp; n\,\text{odd}\\
+      1 &amp; n\,\text{even}
+    \end{cases} \end{split}\]</div>
+<p>Hence the Taylor series is found from:</p>
+<div class="math notranslate nohighlight">
+\[\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \dots = \sum_{n=0}^\infty \frac{x^{2n}}{(2n)!}\]</div>
+<p>3.
+Let <span class="math notranslate nohighlight">\(f(x) = \textrm{arsinh}(x)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \textrm{arsinh}(x) &amp; f(0) = 0\\
+f'(x) = \frac{1}{\sqrt{x^2+1}} &amp; f'(0) = 1\\
+f''(x) = -\frac{1}{2}\frac{x}{(x^2+1)^{3/2}} &amp; f''(0) = 0\\
+f^{(3)}(x) = -\frac{1}{(x^2+1)^{3/2}} + \frac{3x^2}{(x^2+1)^{5/2}} &amp; f^{(3)}(0) = -1\end{split}\]</div>
+<p>Hence the Taylor series is given by:</p>
+<div class="math notranslate nohighlight">
+\[\textrm{arsinh}(x) = x - \frac{x^3}{6} + \dots\]</div>
+<p>4.</p>
+<p>a.
+For <span class="math notranslate nohighlight">\(f(x) = (x + 1)^{1/k}\)</span>, then we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f'(x) &amp;= \left(\frac{1}{k}\right)\\
+f''(x) &amp;= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\,(x + 1)^{1/k-2}\\
+\vdots\\
+f^{(n)} &amp;= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\dots\left(\frac{1}{k}-(n-1)\right)\,(x + 1)^{1/k-n}\\\end{split}\]</div>
+<p>Hence the <span class="math notranslate nohighlight">\(n^{th}\)</span> term will be found from:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f^{(n)}(0) &amp;= \left(\frac{1}{k}\right)\left(\frac{1}{k}-1\right)\dots\left(\frac{1}{k}-(n-1)\right)\,(x + 1)^{1/k-n} \\
+&amp;= \frac{\left(1-k\right)\left(1-2k\right)\dots\left(1-(n-1)k\right)}{k^n}\\
+\Rightarrow c_{(k,\,n)} &amp;= \frac{\left(1-k\right)\left(1-2k\right)\dots\left(1-(n-1)k\right)}{k^n\,n!}\end{split}\]</div>
+<p>b. We need to find <span class="math notranslate nohighlight">\(c_{(7,\,6)}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}c_{(7,\,6)} &amp;= \frac{\left(1-7\right)\left(1-14\right)\left(1-21\right)\left(1-28\right)\left(1-35\right)}{7^6\,6!}\\
+&amp;= -\frac{1989}{117649}\end{split}\]</div>
 </div>
 <div class="danger admonition">
 <p class="admonition-title">A disclaimer!</p>
