@@ -804,7 +804,7 @@ I_0 &= \int_0^1\mathrm{d} x = 1 \\
 ```
 
 4\. 
-Firstly break up the integrand into $\sin(x) \sin^{n-1}(x) \,\mathrm{d} x$ and then integrate by parts:
+Firstly break up the integrand into $\sin(x) \sin^{n-1}(x)$ and then integrate by parts:
 ```{math} 
 \begin{array}{lcl}
 u(x) = \sin^{n-1}(x) && v'(x) = \sin(x) \\
@@ -1040,7 +1040,7 @@ Instead of using cylindrical slices, we could use "frustrums" (sections of cones
 Similarly, when calculating the area under the curve, we used rectangles, but we could have used parallelograms.
 ```
 
-We can also find the surface area of this solid of revolution, if we rotate over the $x$ acis then this surface area is the circumference of each 
+We can also find the surface area of this solid of revolution, if we rotate over the $x$ xcis then this surface area is the circumference of each 
 slice $2\pi\,y$ multiplied by the path length $\mathrm{d} s$ along the surface, so we find:
 
 ```{math}
@@ -1108,16 +1108,13 @@ $1 \leq y \leq 2$ about the $y$-axis.
 :class: seealso, dropdown
 1\. 
 ```{math}
-y = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = 2x
-```
-Fixing the limits we find 
-```{math}
-y = 0 &\rightarrow x = 0\\
-y = 4 &\rightarrow x = 2
+y = x^2\Rightarrow x = y^{1/2}\\
+\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{2}y^{-1/2}\\
+1 + (x')^2 = 1 + \frac{1}{4}y^{-1} = \frac{1+4y}{4y}
 ```
 so integral is:
 ```{math}
-A &= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
+A &= \int_{y=0}^{y=4} 2\pi\,x\,\mathrm{d}s = 1\pi\int_0^4 x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
 &= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots
 ```
 
@@ -1135,17 +1132,17 @@ so integral is:
 
 3\. 
 ```{math}
-y &= x^{1/3}\\
-\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{1}{3}x^{-2/3}  \\
-1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &= 1 \frac{1}{9}x^{-4/3} = \frac{9x^{4/3} + 1}{9x^{4/3}}
+y &= x^{1/3} \Rightarrow x = y^3\\
+\frac{\mathrm{d}x}{\mathrm{d}y} &= 3y^2  \\
+1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2 &= 1+ 9y^4 
 ```
-the limits as $y \in [1,\, 2]$ in $x$ are $x \in [1,\, 8]$, so integral is:
+the limits as $y \in [1,\, 2]$, so integral is:
 ```{math}
-2\pi\,\int_{1}^8  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = \frac{2\pi}{3}\int_{1}^8 x^{1/3}\left(9x^{4/3}+1\right)^{1/2}\, \mathrm{d}x
+2\pi\,\int_{1}^2  x\sqrt{1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2}\,\mathrm{d}x = 2\pi\int_{1}^2 y^3\left(1+9y^4\right)^{1/2}\, \mathrm{d}x
 ```
-which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}x = \frac{1}{n+1}f^{n+1}$, here $f = 9x^{4/3} + 1$, so $f' = 12x^{1/3}$
+which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}y = \frac{1}{n+1}f^{n+1}$, here $f = 1+9y^4 $, so $f' = 36y^3$
 ```{math}
-S = \frac{2\pi}{3}\frac{1}{12}\Big[\frac{2}{3}\left(9x^{4/3}+1 \right)^{3/2}\Big]_1^8 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
+S = 2\pi\frac{1}{36}\Big[\frac{2}{3}\left(9y^4+1 \right)^{3/2}\Big]_1^2 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
 ```
 
 ````

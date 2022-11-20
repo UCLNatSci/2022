@@ -1016,7 +1016,7 @@ I_4 &amp;= \bigg(\frac{12}{13}\bigg)I_3 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9
 I_0 &amp;= \int_0^1\mathrm{d} x = 1 \\
 \Rightarrow I_4 &amp;= \frac{243}{455} \end{split}\]</div>
 <p>4.
-Firstly break up the integrand into <span class="math notranslate nohighlight">\(\sin(x) \sin^{n-1}(x) \,\mathrm{d} x\)</span> and then integrate by parts:</p>
+Firstly break up the integrand into <span class="math notranslate nohighlight">\(\sin(x) \sin^{n-1}(x)\)</span> and then integrate by parts:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{lcl}
 u(x) = \sin^{n-1}(x) &amp;&amp; v'(x) = \sin(x) \\
@@ -1181,7 +1181,7 @@ radius of each slice at <span class="math notranslate nohighlight">\(x\)</span> 
 <p>Instead of using cylindrical slices, we could use “frustrums” (sections of cones). The result would be the same (in the limit <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>).</p>
 <p>Similarly, when calculating the area under the curve, we used rectangles, but we could have used parallelograms.</p>
 </div>
-<p>We can also find the surface area of this solid of revolution, if we rotate over the <span class="math notranslate nohighlight">\(x\)</span> acis then this surface area is the circumference of each
+<p>We can also find the surface area of this solid of revolution, if we rotate over the <span class="math notranslate nohighlight">\(x\)</span> xcis then this surface area is the circumference of each
 slice <span class="math notranslate nohighlight">\(2\pi\,y\)</span> multiplied by the path length <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span> along the surface, so we find:</p>
 <div class="math notranslate nohighlight">
 \[A_x = \int_{x=a}^{x=b} 2\pi\,y\,\mathrm{d}s = \int_a^b 2\pi\,y\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x\]</div>
@@ -1224,14 +1224,12 @@ A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t
 <p class="admonition-title">Solution</p>
 <p>1.</p>
 <div class="math notranslate nohighlight">
-\[y = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = 2x\]</div>
-<p>Fixing the limits we find</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y = 0 &amp;\rightarrow x = 0\\
-y = 4 &amp;\rightarrow x = 2\end{split}\]</div>
+\[\begin{split}y = x^2\Rightarrow x = y^{1/2}\\
+\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{2}y^{-1/2}\\
+1 + (x')^2 = 1 + \frac{1}{4}y^{-1} = \frac{1+4y}{4y}\end{split}\]</div>
 <p>so integral is:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A &amp;= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
+\[\begin{split}A &amp;= \int_{y=0}^{y=4} 2\pi\,x\,\mathrm{d}s = 1\pi\int_0^4 x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
 &amp;= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots\end{split}\]</div>
 <p>2.</p>
 <div class="math notranslate nohighlight">
@@ -1243,15 +1241,15 @@ y = 4 &amp;\rightarrow x = 2\end{split}\]</div>
 \[2\pi\,\int_{-2}^2  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = 6\pi\,\int_{-2}^2 \, \mathrm{d}x = 24\pi\]</div>
 <p>3.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}y &amp;= x^{1/3}\\
-\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{1}{3}x^{-2/3}  \\
-1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &amp;= 1 \frac{1}{9}x^{-4/3} = \frac{9x^{4/3} + 1}{9x^{4/3}}\end{split}\]</div>
-<p>the limits as <span class="math notranslate nohighlight">\(y \in [1,\, 2]\)</span> in <span class="math notranslate nohighlight">\(x\)</span> are <span class="math notranslate nohighlight">\(x \in [1,\, 8]\)</span>, so integral is:</p>
+\[\begin{split}y &amp;= x^{1/3} \Rightarrow x = y^3\\
+\frac{\mathrm{d}x}{\mathrm{d}y} &amp;= 3y^2  \\
+1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2 &amp;= 1+ 9y^4 \end{split}\]</div>
+<p>the limits as <span class="math notranslate nohighlight">\(y \in [1,\, 2]\)</span>, so integral is:</p>
 <div class="math notranslate nohighlight">
-\[2\pi\,\int_{1}^8  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = \frac{2\pi}{3}\int_{1}^8 x^{1/3}\left(9x^{4/3}+1\right)^{1/2}\, \mathrm{d}x\]</div>
-<p>which we can solve by inspection (or reverse chain rule), where <span class="math notranslate nohighlight">\(\int f^n\,f'\,\mathrm{d}x = \frac{1}{n+1}f^{n+1}\)</span>, here <span class="math notranslate nohighlight">\(f = 9x^{4/3} + 1\)</span>, so <span class="math notranslate nohighlight">\(f' = 12x^{1/3}\)</span></p>
+\[2\pi\,\int_{1}^2  x\sqrt{1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2}\,\mathrm{d}x = 2\pi\int_{1}^2 y^3\left(1+9y^4\right)^{1/2}\, \mathrm{d}x\]</div>
+<p>which we can solve by inspection (or reverse chain rule), where <span class="math notranslate nohighlight">\(\int f^n\,f'\,\mathrm{d}y = \frac{1}{n+1}f^{n+1}\)</span>, here <span class="math notranslate nohighlight">\(f = 1+9y^4 \)</span>, so <span class="math notranslate nohighlight">\(f' = 36y^3\)</span></p>
 <div class="math notranslate nohighlight">
-\[S = \frac{2\pi}{3}\frac{1}{12}\Big[\frac{2}{3}\left(9x^{4/3}+1 \right)^{3/2}\Big]_1^8 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots\]</div>
+\[S = 2\pi\frac{1}{36}\Big[\frac{2}{3}\left(9y^4+1 \right)^{3/2}\Big]_1^2 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots\]</div>
 </div>
 </div>
 </div>
