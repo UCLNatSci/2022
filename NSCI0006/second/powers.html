@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Infinite powers &#8212; Mathematics for Natural Sciences B</title>
+    <title>8. Infinite powers &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -59,6 +59,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Simple models" href="../third/first_order.html" />
+    <link rel="prev" title="7. Rates of change" href="changes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -150,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
   INFINITESIMALS
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="pfrac.html">
    5. Rational functions
@@ -166,6 +168,11 @@ const thebe_selector_output = ".output, .cell_output"
    7. Rates of change
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Infinite powers
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -174,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../third/placeholder.html">
-   Placeholder
+  <a class="reference internal" href="../third/first_order.html">
+   9. Simple models
   </a>
  </li>
 </ul>
@@ -187,22 +194,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   8. Chemical concentrations
+   10. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   9. Freshwater sustainability
+   11. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   10. Viral trends
+   12. Viral trends
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/faustmann.html">
-   11. Forestry management
+   13. Forestry management
   </a>
  </li>
 </ul>
@@ -396,22 +403,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   Motivation
+   8.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convergence">
-   Convergence
+   8.2. Convergence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generalization">
-   Generalization
+   8.3. Generalization
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#midpoint-rule">
-   Midpoint rule
+   8.4. Midpoint rule
   </a>
  </li>
 </ul>
@@ -435,22 +442,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   Motivation
+   8.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convergence">
-   Convergence
+   8.2. Convergence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generalization">
-   Generalization
+   8.3. Generalization
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#midpoint-rule">
-   Midpoint rule
+   8.4. Midpoint rule
   </a>
  </li>
 </ul>
@@ -464,18 +471,26 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="infinite-powers">
-<h1>Infinite powers<a class="headerlink" href="#infinite-powers" title="Permalink to this heading">#</a></h1>
-<p>This chapter is about power series expansions (Maclaurin and Taylor series)</p>
-<p>In the section on <a class="reference internal" href="limits.html#asymptotics"><span class="std std-ref">Asymptotic equivalence</span></a> we saw some examples of polynomial approximations for common functions, such as <span class="math notranslate nohighlight">\(f(x)=e^x\)</span>. We now outline the theory behind the results that were presented.</p>
+<h1><span class="section-number">8. </span>Infinite powers<a class="headerlink" href="#infinite-powers" title="Permalink to this heading">#</a></h1>
+<p>In the section on <a class="reference internal" href="limits.html#asymptotics"><span class="std std-ref">Asymptotic equivalence</span></a> we saw some examples of polynomial approximations for common functions, such as <span class="math notranslate nohighlight">\(f(x)=e^x\)</span>. We now outline the theory behind the results that were presented. After completing this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>find Maclaurin and Taylor series expansions for given functions</p></li>
+<li><p>Discuss the convergence properties of these series using numeric justification</p></li>
+</ul>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://en.wikipedia.org/wiki/Siphonaptera_(poem)">Siphonaptera</a></p>
+<p>Great fleas have little fleas upon their backs to bite ‘em,</p>
+<p>And little fleas have lesser fleas, and so ad infinitum</p>
+</div>
 <section id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
 <p>We suppose that for “small” <span class="math notranslate nohighlight">\(x\)</span> we can express a given function <span class="math notranslate nohighlight">\(f(x)\)</span> as a sum of the form</p>
 <div class="math notranslate nohighlight" id="equation-maclaurin">
-<span class="eqno">()<a class="headerlink" href="#equation-maclaurin" title="Permalink to this equation">#</a></span>\[p(x) = c_0 + c_1x +c_2 x^2 + \dots + c_n x^n+\mathcal{O}(x^{n+1}).\]</div>
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-maclaurin" title="Permalink to this equation">#</a></span>\[p(x) = c_0 + c_1x +c_2 x^2 + \dots + c_n x^n+\mathcal{O}(x^{n+1}).\]</div>
 <p>The coefficients <span class="math notranslate nohighlight">\(c_{0\dots n}\)</span> will be chosen to give an accurate representation of <span class="math notranslate nohighlight">\(f(x)\)</span> in the neighbourhood of <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 <div class="exercise admonition" id="second/powers-exercise-0">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.1 </span></p>
 <section id="exercise-content">
 <p>Find the first three derivatives of <span class="math notranslate nohighlight">\(p(x)\)</span> and evaluate them at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </section>
@@ -491,9 +506,10 @@ p^{\prime\prime\prime}(x)&amp;=    &amp;&amp;       &amp;\  \ &amp; 6c_3    &amp
 <hr class="docutils" />
 <div class="exercise admonition" id="second/powers-exercise-1">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.2 </span></p>
 <section id="exercise-content">
-<p>Determine a general result for the <span class="math notranslate nohighlight">\(n\)</span>th derivative <span class="math notranslate nohighlight">\(p^{(n)}(0)\)</span>. Match this to <span class="math notranslate nohighlight">\(f^{(n)}(0)\)</span> to find an expression for <span class="math notranslate nohighlight">\(c_n\)</span>.</p>
+<p>Determine a general result for the <span class="math notranslate nohighlight">\(n\)</span>th derivative <span class="math notranslate nohighlight">\(p^{(n)}(0)\)</span>.</p>
+<p>Match this to <span class="math notranslate nohighlight">\(f^{(n)}(0)\)</span> to find an expression for <span class="math notranslate nohighlight">\(c_n\)</span>.</p>
 </section>
 </div>
 <div class="toggle docutils container">
@@ -505,7 +521,7 @@ p^{\prime\prime\prime}(x)&amp;=    &amp;&amp;       &amp;\  \ &amp; 6c_3    &amp
 <hr class="docutils" />
 <div class="exercise admonition" id="second/powers-exercise-2">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.3 </span></p>
 <section id="exercise-content">
 <p>Calculate the first three non-zero terms in the expansion for <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span>, using the formula for the coefficients found in the previous exercise.</p>
 </section>
@@ -569,21 +585,21 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 <figure class="align-default" id="maclaurin1">
 <img alt="../_images/maclaurin1.png" src="../_images/maclaurin1.png" />
 <figcaption>
-<p><span class="caption-text">Comparison of asymptotic expansions to the curve <span class="math notranslate nohighlight">\(y=e^x\)</span> on the domain <span class="math notranslate nohighlight">\([-1,1]\)</span>.</span><a class="headerlink" href="#maclaurin1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Comparison of asymptotic expansions to the curve <span class="math notranslate nohighlight">\(y=e^x\)</span> on the domain <span class="math notranslate nohighlight">\([-1,1]\)</span>.</span><a class="headerlink" href="#maclaurin1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We see that the linear approximation is an accurate representation of the curve in a very small domain close to <span class="math notranslate nohighlight">\(x=0\)</span>, and that by adding the quadratic and cubic terms we successively improve the approximation on the domain <span class="math notranslate nohighlight">\([-1,1]\)</span>.</p>
 </section>
 <section id="convergence">
-<h2>Convergence<a class="headerlink" href="#convergence" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.2. </span>Convergence<a class="headerlink" href="#convergence" title="Permalink to this heading">#</a></h2>
 <p>In the above discussion we have assumed that <span class="math notranslate nohighlight">\(|x|&lt;1\)</span> so that the powers of <span class="math notranslate nohighlight">\(x\)</span> grow successively smaller. However, it is not guaranteed that the infinite sum <span class="math notranslate nohighlight">\(p(x)\)</span> will converge to <span class="math notranslate nohighlight">\(f(x)\)</span> on the whole interval <span class="math notranslate nohighlight">\([-1,1]\)</span>. By constructing the expansion to match the derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span> we have only ensured that the representation is accurate in some local neighbourhood of this point.</p>
 <p>It is possible to use tools of mathematical analysis to formally determine the interval of convergence for the infinite series, which will be different for each function <span class="math notranslate nohighlight">\(f(x)\)</span>. In the case of the series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> it turns out that the infinite series converges to the correct value on the whole interval <span class="math notranslate nohighlight">\([-1,1]\)</span>, albeit rather slowly for some values of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>What is truly remarkable is that for some functions the expansions constructed by the method outlined above are valid over a wider interval than <span class="math notranslate nohighlight">\([-1,1]\)</span>. In fact, the expansions for some functions are valid <em>for all</em> values of <span class="math notranslate nohighlight">\(x\)</span>. Examples include the functions <span class="math notranslate nohighlight">\(e^x\)</span>, <span class="math notranslate nohighlight">\(\sin(x)\)</span> and <span class="math notranslate nohighlight">\(\cos(x)\)</span>.</p>
-<p>It is quite exciting to think that these non-polynomial functions can be represented by infinite polynomial series. However, the expansions converge increasingly slowly as we move further from the point <span class="math notranslate nohighlight">\(x=0\)</span>, which significantly limits their practical use.</p>
-<p>In this module we will not develop the tools of analysis required to undertake a formal investigation of convergence. We will adopt a more experimental approach, by simply generating series containing a few terms and evaluating their accuracy on the interval that we are interested in.</p>
+<p>It is quite exciting to think that these non-polynomial functions can be represented by infinite polynomial series. However, the expansions converge increasingly slowly as we move further from the point <span class="math notranslate nohighlight">\(x=0\)</span>, which lessens their practical use.</p>
+<p>In this module we will not develop the tools of analysis required to undertake a formal investigation of convergence. We will adopt a more experimental approach, by generating series containing a few terms and evaluating their accuracy on the interval that we are interested in.</p>
 <div class="exercise admonition" id="second/powers-exercise-3">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.4 </span></p>
 <section id="exercise-content">
 <p>Demonstrate that with only five terms in the expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> we obtain a result that is accurate to within 1% on the interval <span class="math notranslate nohighlight">\([-0.5,0.5]\)</span></p>
 </section>
@@ -636,20 +652,20 @@ u_{n+1}=\left(\frac{-n x}{n+1}\right)u_n .
 <p>Running this code tells us that 203 terms are required to obtain convergence to within 1%. Obviously that’s a lot of terms! For practical purposes, we normally want to use expansions with only a few terms.</p>
 </section>
 <section id="generalization">
-<h2>Generalization<a class="headerlink" href="#generalization" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.3. </span>Generalization<a class="headerlink" href="#generalization" title="Permalink to this heading">#</a></h2>
 <p>In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of <span class="math notranslate nohighlight">\(x=0\)</span>. For some series derived in this way the series can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept in order to obtain a good approximation away from the origin.</p>
 <p>Where we require a power series approximation to a function near to a location other than <span class="math notranslate nohighlight">\(x=0\)</span>, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of that point. We do this using a shifted version of the expansion formula:</p>
 <div class="math notranslate nohighlight" id="equation-taylor">
-<span class="eqno">()<a class="headerlink" href="#equation-taylor" title="Permalink to this equation">#</a></span>\[p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)\]</div>
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-taylor" title="Permalink to this equation">#</a></span>\[p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(x-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)\]</div>
 <p>By applying the technique of matching derivatives at the location <span class="math notranslate nohighlight">\(x=a\)</span>, we obtain the result</p>
 <div class="math notranslate nohighlight" id="equation-taylor-coeff">
-<span class="eqno">()<a class="headerlink" href="#equation-taylor-coeff" title="Permalink to this equation">#</a></span>\[c_n = \frac{f^{(n)}(a)}{n!}.\]</div>
-<p>The formula <a class="reference internal" href="#equation-taylor">()</a> together with <a class="reference internal" href="#equation-taylor-coeff">()</a> is known as <em>Taylor’s series</em>. The special case when <span class="math notranslate nohighlight">\(a=0\)</span> is known as the Maclaurin series for historical reasons.</p>
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-taylor-coeff" title="Permalink to this equation">#</a></span>\[c_n = \frac{f^{(n)}(a)}{n!}.\]</div>
+<p>The formula <a class="reference internal" href="#equation-taylor">(8.2)</a> together with <a class="reference internal" href="#equation-taylor-coeff">(8.3)</a> is known as <em>Taylor’s series</em>. The special case when <span class="math notranslate nohighlight">\(a=0\)</span> is known as the Maclaurin series for historical reasons.</p>
 <div class="exercise admonition" id="second/powers-exercise-4">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.5 </span></p>
 <section id="exercise-content">
-<p>Find the Taylor series for the following cases:</p>
+<p>Find the first four non-zero terms of the Taylor series for the following cases:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(e^{x}\)</span> about the point <span class="math notranslate nohighlight">\(x=1\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\sin(x)\)</span> about the point <span class="math notranslate nohighlight">\(x=\pi/3\)</span></p></li>
@@ -657,25 +673,99 @@ u_{n+1}=\left(\frac{-n x}{n+1}\right)u_n .
 </section>
 </div>
 <div class="toggle docutils container">
-<p>Solution to follow</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(x)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(1)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e/0! = e\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e/1! = e\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e/2! = e/2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e/3! = e/6\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Hence <span class="math notranslate nohighlight">\(p(x;e)\sim e(1+x+x^2/2+x^3/6+\dots)\)</span></p>
+<p>The result could have been obtained by recognising that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+e^{1+x}=e^1 e^x
+\end{equation*}\]</div>
+<p>and obtaining the expansion for <span class="math notranslate nohighlight">\(e^x\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </div>
 <div class="toggle docutils container">
-<p>Solution to follow</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(x)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(\pi/3)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{3}/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{3}/2/0! = \sqrt{3}/2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1/2/1! = 1/2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sin(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sqrt{3}/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sqrt{3}/2/2! = \sqrt{3}/4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\cos(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1/2/3! = -1/12\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Hence</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+p\left(x;\frac{\pi}{3}\right)\sim \frac{\sqrt{3}}{2}+\frac{x}{2}-\frac{\sqrt{3}}{4}x^2-\frac{x^3}{12}
+\end{equation*}\]</div>
 </div>
 <div class="exercise admonition" id="second/powers-exercise-5">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.6 </span></p>
 <section id="exercise-content">
 <p>Explain why it is not possible to construct a series expansion of <span class="math notranslate nohighlight">\(\ln(x)\)</span> about the point <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 <p>Also explain the relationship between the series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span> and the series for <span class="math notranslate nohighlight">\(\ln(x)\)</span> about <span class="math notranslate nohighlight">\(x=1\)</span>.</p>
 </section>
 </div>
 <div class="toggle docutils container">
-<p>Solution to follow</p>
+<p>The function <span class="math notranslate nohighlight">\(\ln(x)\)</span> is not defined at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>The series for <span class="math notranslate nohighlight">\(\ln(x)\)</span> about <span class="math notranslate nohighlight">\(x=1\)</span> is identical to the series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>This can be seen by defining <span class="math notranslate nohighlight">\(\hat{x}=x-1\)</span>.</p>
 </div>
 <div class="exercise admonition" id="second/powers-exercise-6">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8.7 </span></p>
 <section id="exercise-content">
 <p>A function <span class="math notranslate nohighlight">\(W(x)\)</span> is defined by the relationship</p>
 <div class="amsmath math notranslate nohighlight">
@@ -692,31 +782,82 @@ We^W =x.
 </section>
 </div>
 <div class="toggle docutils container">
-<p><span class="math notranslate nohighlight">\(We^W = x \implies \frac{\mathrm{d}}{\mathrm{d}x}(W e^W)=1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\implies \frac{\mathrm{d}W}{\mathrm{d}x}\left[e^W+We^W\right]=1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\implies \frac{\mathrm{d}W}{\mathrm{d}x} = \frac{1}{e^W(1+W)}\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{\mathrm{d}^2W}{\mathrm{d}x^2}=\frac{\mathrm{d}W}{\mathrm{d}x}\frac{\mathrm{d}}{\mathrm{d}W}\left[\frac{1}{e^W(1+W)}\right]\)</span></p>
-<p><span class="math notranslate nohighlight">\(=\frac{1}{e^W(1+W)}\left[\frac{-\frac{\mathrm{d}}{\mathrm{d}W}[e^W(1+W)]}{e^{2W}(1+W)^2}\right]\)</span></p>
-<p><span class="math notranslate nohighlight">\(=\frac{-1}{e^W(1+W)^3}\frac{e^W(1+W)+e^W}{e^2W}=-\frac{(2+W)}{e^{2W}(1++W)^3}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+We^W = x &amp; \implies \frac{\mathrm{d}}{\mathrm{d}x}(W e^W)=1\\
+         &amp; \implies \frac{\mathrm{d}W}{\mathrm{d}x}\left[e^W+We^W\right]=1\\
+         &amp;\implies \frac{\mathrm{d}W}{\mathrm{d}x} = \frac{1}{e^W(1+W)}
+\end{align*}\]</div>
+<p>Differentiating the result with respect to <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\mathrm{d}^2W}{\mathrm{d}x^2}&amp;=\frac{\mathrm{d}W}{\mathrm{d}x}\frac{\mathrm{d}}{\mathrm{d}W}\left[\frac{1}{e^W(1+W)}\right]\\
+&amp; =\frac{1}{e^W(1+W)}\left[\frac{-\frac{\mathrm{d}}{\mathrm{d}W}[e^W(1+W)]}{e^{2W}(1+W)^2}\right]\\
+&amp;=\frac{-1}{e^W(1+W)^3}\frac{e^W(1+W)+e^W}{e^2W}=-\frac{(2+W)}{e^{2W}(1++W)^3}
+\end{align*}\]</div>
 <p>Hence, the two term Maclaurin series expansion is</p>
-<p><span class="math notranslate nohighlight">\(W(x)=x-x^2+\dots\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+W(x)=x-x^2+\dots
+\end{equation*}\]</div>
 </div>
 </section>
 <section id="midpoint-rule">
-<h2>Midpoint rule<a class="headerlink" href="#midpoint-rule" title="Permalink to this heading">#</a></h2>
-<p>We argued in CHAPTER that the straight line connecting two data points ought to give a more accurate estimate of the slope at the mid-point of the interval, rather than at the left-hand point. The graphic below provides a characteristic justification of this claim. We may write:</p>
+<h2><span class="section-number">8.4. </span>Midpoint rule<a class="headerlink" href="#midpoint-rule" title="Permalink to this heading">#</a></h2>
+<p>We argued in a previous chapter that the straight line connecting two data points ought to give a more accurate estimate of the slope at the mid-point of the interval, rather than at the left-hand point. The graphic below provides a characteristic justification of this claim:</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/midpoint.png" src="../_images/midpoint.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.2 </span><span class="caption-text">The slope of the line connecting two points on a curve generally estimates the slope of the curve better at the midpoint of the interval than at the ends.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We may write:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 s_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
 \end{equation*}\]</div>
-<figure class="align-default" id="id1">
-<img alt="../_images/midpoint.png" src="../_images/midpoint.png" />
-<figcaption>
-<p><span class="caption-text">The slope of the line connecting two points on a curve generally estimates the slope of the curve better at the midpoint of the interval than at the ends.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>So far this is just a claim, but we will test it out for some examples later.</p>
-<p>COMPARISON OF FORWARD AND CENTRAL RULES:</p>
+<p>A proof of this result can be given using Taylor’s expansion.</p>
+<div class="toggle docutils container">
+<p>Left-hand result</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y(x+h) =y(x) +h y^{\prime}(x)+\mathcal{O}(h^2)
+\end{equation*}\]</div>
+<p>Hence,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y^{\prime}(x) = \frac{y(x+h)-y(x)}{h} + \mathcal{O}(h)
+\end{equation*}\]</div>
+<p>The error in this expression is proportional to <span class="math notranslate nohighlight">\(h\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="toggle docutils container">
+<p>Midpoint result</p>
+<p>Taking the midpoint as <span class="math notranslate nohighlight">\(\hat{x}=x+h/2\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y\left(\hat{x}+\frac{h}{2}\right)&amp;=y(\hat{x})+\frac{h}{2}y^{\prime}(\hat{x})+\left(\frac{h}{2}\right)^2y^{\prime\prime}(\hat{x})+\mathcal{O}(h^3)\\
+y\left(\hat{x}-\frac{h}{2}\right)&amp;=y(\hat{x})-\frac{h}{2}y^{\prime}(\hat{x})+\left(\frac{h}{2}\right)^2y^{\prime\prime}(\hat{x})-\mathcal{O}(h^3)
+\end{align*}\]</div>
+<p>Subtracting the second expression from the first gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y\left(\hat{x}+\frac{h}{2}\right)-y\left(\hat{x}-\frac{h}{2}\right) = hy^{\prime}(\hat{x})+\mathcal{O}(h^3)
+\end{equation*}\]</div>
+<p>Rearranging gives,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y^{\prime}(\hat{x}) = \frac{y(x+h)-y(x)}{h}+\mathcal{O}(h^2)
+\end{equation*}\]</div>
+<p>The error in this expression is proportional to <span class="math notranslate nohighlight">\(h^2\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>A comparison of the errors in the forward and central difference formulae is given below for the example of differentiating the function</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\sin(x)+x.
+\end{equation*}\]</div>
+<p>The code uses the <code class="docutils literal notranslate"><span class="pre">fdiff</span></code> function that was defined in the previous chapter.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># data points</span>
 <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">x</span>
@@ -744,12 +885,14 @@ s_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
 <figure class="align-default" id="num-errors">
 <img alt="../_images/fwd_mid_errors.png" src="../_images/fwd_mid_errors.png" />
 <figcaption>
-<p><span class="caption-text">Errors in the numeric derivative of <span class="math notranslate nohighlight">\(y=\sin(x)+x\)</span> on <span class="math notranslate nohighlight">\([-\pi,\pi]\)</span> with 100 datapoints.<br>
+<p><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Errors in the numeric derivative of <span class="math notranslate nohighlight">\(y=\sin(x)+x\)</span> on <span class="math notranslate nohighlight">\([-\pi,\pi]\)</span> with 100 datapoints.<br>
 <span class="math notranslate nohighlight">\(\qquad \)</span>(top) forward difference, (bottom) midpoint rule.</span><a class="headerlink" href="#num-errors" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>IN THE LIMIT IT MAKES NO DIFFERENCE! The forward derivative formula is easier to work with so for non-numerical applications (i.e. formal calculus) we will always use that one.</p>
-<p>Prove the mid-point rule using Taylor series.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the central difference formula is more accurate when the step size is large, both expressions become exact in the limit <span class="math notranslate nohighlight">\(h\rightarrow 0\)</span>. The forward derivative formula is easier to work with.</p>
+</div>
 </section>
 </section>
 
@@ -780,6 +923,20 @@ s_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="changes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Rates of change</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../third/first_order.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Simple models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

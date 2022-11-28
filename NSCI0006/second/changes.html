@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Placeholder" href="../third/placeholder.html" />
+    <link rel="next" title="8. Infinite powers" href="powers.html" />
     <link rel="prev" title="6. Know your limits" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -168,6 +168,11 @@ const thebe_selector_output = ".output, .cell_output"
    7. Rates of change
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="powers.html">
+   8. Infinite powers
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -176,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../third/placeholder.html">
-   Placeholder
+  <a class="reference internal" href="../third/first_order.html">
+   9. Simple models
   </a>
  </li>
 </ul>
@@ -189,22 +194,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   8. Chemical concentrations
+   10. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   9. Freshwater sustainability
+   11. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   10. Viral trends
+   12. Viral trends
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/faustmann.html">
-   11. Forestry management
+   13. Forestry management
   </a>
  </li>
 </ul>
@@ -923,42 +928,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img5aad70280e594007a169b83fa54ece54">
+  <img id="_anim_img995a54f488a24f7db517d5dcbf65da10">
   <div class="anim-controls">
-    <input id="_anim_slider5aad70280e594007a169b83fa54ece54" type="range" class="anim-slider"
+    <input id="_anim_slider995a54f488a24f7db517d5dcbf65da10" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim5aad70280e594007a169b83fa54ece54.set_frame(parseInt(this.value));">
+           oninput="anim995a54f488a24f7db517d5dcbf65da10.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim5aad70280e594007a169b83fa54ece54.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim995a54f488a24f7db517d5dcbf65da10.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim5aad70280e594007a169b83fa54ece54.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim995a54f488a24f7db517d5dcbf65da10.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim5aad70280e594007a169b83fa54ece54.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim995a54f488a24f7db517d5dcbf65da10.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim5aad70280e594007a169b83fa54ece54.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim995a54f488a24f7db517d5dcbf65da10.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim5aad70280e594007a169b83fa54ece54.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim995a54f488a24f7db517d5dcbf65da10.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim5aad70280e594007a169b83fa54ece54.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim995a54f488a24f7db517d5dcbf65da10.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim5aad70280e594007a169b83fa54ece54.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim995a54f488a24f7db517d5dcbf65da10.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim5aad70280e594007a169b83fa54ece54.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim995a54f488a24f7db517d5dcbf65da10.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim5aad70280e594007a169b83fa54ece54.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim995a54f488a24f7db517d5dcbf65da10.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select5aad70280e594007a169b83fa54ece54"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select995a54f488a24f7db517d5dcbf65da10"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_5aad70280e594007a169b83fa54ece54"
+      <input type="radio" name="state" value="once" id="_anim_radio1_995a54f488a24f7db517d5dcbf65da10"
              >
-      <label for="_anim_radio1_5aad70280e594007a169b83fa54ece54">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_5aad70280e594007a169b83fa54ece54"
+      <label for="_anim_radio1_995a54f488a24f7db517d5dcbf65da10">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_995a54f488a24f7db517d5dcbf65da10"
              checked>
-      <label for="_anim_radio2_5aad70280e594007a169b83fa54ece54">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_5aad70280e594007a169b83fa54ece54"
+      <label for="_anim_radio2_995a54f488a24f7db517d5dcbf65da10">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_995a54f488a24f7db517d5dcbf65da10"
              >
-      <label for="_anim_radio3_5aad70280e594007a169b83fa54ece54">Reflect</label>
+      <label for="_anim_radio3_995a54f488a24f7db517d5dcbf65da10">Reflect</label>
     </form>
   </div>
 </div>
@@ -968,9 +973,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img5aad70280e594007a169b83fa54ece54";
-    var slider_id = "_anim_slider5aad70280e594007a169b83fa54ece54";
-    var loop_select_id = "_anim_loop_select5aad70280e594007a169b83fa54ece54";
+    var img_id = "_anim_img995a54f488a24f7db517d5dcbf65da10";
+    var slider_id = "_anim_slider995a54f488a24f7db517d5dcbf65da10";
+    var loop_select_id = "_anim_loop_select995a54f488a24f7db517d5dcbf65da10";
     var frames = new Array(13);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -4629,7 +4634,7 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim5aad70280e594007a169b83fa54ece54 = new Animation(frames, img_id, slider_id, 200.0,
+        anim995a54f488a24f7db517d5dcbf65da10 = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -4769,8 +4774,8 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <section id="sum-rule">
 <h3><span class="section-number">7.4.1. </span>Sum rule:<a class="headerlink" href="#sum-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=u(x)+v(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41404dca-14b0-4f86-9ed6-6b0ca56c9d82">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-41404dca-14b0-4f86-9ed6-6b0ca56c9d82" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27076270-cbb9-4556-b4df-ca9273c4af1b">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-27076270-cbb9-4556-b4df-ca9273c4af1b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x}\biggr(u+v\biggr)=\frac{\mathrm{d}u}{\mathrm{d}x}+\frac{\mathrm{d}v}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-4">
@@ -4787,8 +4792,8 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <section id="product-rule">
 <h3><span class="section-number">7.4.2. </span>Product rule:<a class="headerlink" href="#product-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=u(x)v(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-79ffbf88-d282-43bd-abb0-e06ae366b356">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-79ffbf88-d282-43bd-abb0-e06ae366b356" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c0aac9ff-2e6b-4e72-903e-4df943c3d4a8">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-c0aac9ff-2e6b-4e72-903e-4df943c3d4a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x}\biggr(uv\biggr)=u\frac{\mathrm{d}v}{\mathrm{d}x}+v\frac{\mathrm{d}u}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-5">
@@ -4805,8 +4810,8 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <section id="chain-rule">
 <h3><span class="section-number">7.4.3. </span>Chain rule:<a class="headerlink" href="#chain-rule" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=y(u)\)</span> where <span class="math notranslate nohighlight">\(u=u(x)\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74adcf4d-ff39-44cb-8884-4099e5689c3b">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-74adcf4d-ff39-44cb-8884-4099e5689c3b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e232a0bc-c6d2-4e95-8f07-c1fe41bc4ac4">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-e232a0bc-c6d2-4e95-8f07-c1fe41bc4ac4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u}\frac{\mathrm{d}u}{\mathrm{d}x}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-6">
@@ -4823,8 +4828,8 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <section id="reciprocal-rule">
 <h3><span class="section-number">7.4.4. </span>Reciprocal rule:<a class="headerlink" href="#reciprocal-rule" title="Permalink to this heading">#</a></h3>
 <p>As a special case of the chain rule we may derive the following result:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a84da2a6-bc16-4b8e-b6a5-baa8d192c4b1">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-a84da2a6-bc16-4b8e-b6a5-baa8d192c4b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-375ddd77-df89-49b5-bca9-33d7ff4f8a49">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-375ddd77-df89-49b5-bca9-33d7ff4f8a49" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}y}{\mathrm{d}y} = \frac{\mathrm{d}y}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}y} \qquad \implies \quad \frac{\mathrm{d}y}{\mathrm{d}x} = 1\biggr/\frac{\mathrm{d}x}{\mathrm{d}y}.
 \end{equation}\]</div>
 <div class="exercise admonition" id="second/changes-exercise-7">
@@ -4895,8 +4900,8 @@ f^{(n)}(x)=\frac{\mathrm{d}^n y}{\mathrm{d}x^n}.
 <section id="tangent">
 <h3><span class="section-number">7.5.1. </span>Tangent<a class="headerlink" href="#tangent" title="Permalink to this heading">#</a></h3>
 <p>The tangent line at a given point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> on a curve is defined as the line with the same slope as the curve. The equation is therefore given by the following result, in which the notation <span class="math notranslate nohighlight">\([]_{x=x_0}\)</span> means that the enclosed expression is evaluated at <span class="math notranslate nohighlight">\(x=x_0\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-506a2b7c-864d-4b93-9a91-9c5896ca709a">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-506a2b7c-864d-4b93-9a91-9c5896ca709a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a740ffb3-e0c4-454a-aee6-2a6323022dbc">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-a740ffb3-e0c4-454a-aee6-2a6323022dbc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{y-y_0}{x-x_0}=m, \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
 \end{equation}\]</div>
 <p>The code below illustrates how we can use this definition to plot the tangent to the curve <span class="math notranslate nohighlight">\(y=x^2\)</span>, using the analytic derivative <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x}=2x\)</span>.</p>
@@ -5002,8 +5007,8 @@ S = (A-A_c)+S_c.
 <section id="normal">
 <h3><span class="section-number">7.5.2. </span>Normal<a class="headerlink" href="#normal" title="Permalink to this heading">#</a></h3>
 <p>The gradient of the normal (perpendicular) line to the tangent is <span class="math notranslate nohighlight">\(-1/m\)</span>. The equation of the normal line is therefore given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b9d5f08-f2f2-4fcb-b94e-7265ac7f80d3">
-<span class="eqno">(7.9)<a class="headerlink" href="#equation-5b9d5f08-f2f2-4fcb-b94e-7265ac7f80d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7d39b99e-69ff-4725-b782-67e00885e15f">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-7d39b99e-69ff-4725-b782-67e00885e15f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \quad \frac{y-y_0}{x-x_0}=-\frac{1}{m} \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
 \end{equation}\]</div>
 <p>The justification for this result is illustrated below, using the similarity of the two illustrated triangles.</p>
@@ -5150,6 +5155,63 @@ The cubic has an inflection point at <span class="math notranslate nohighlight">
 <p>In this case the slope is increasing either side of the stationary point, so the point is a minimum:</p>
 <p><span class="math notranslate nohighlight">\(f^{\prime\prime}(x)=12(x^2-4x+4)=12(x-2)^2 \geq 0 \ \forall x\)</span></p>
 </div>
+<div class="exercise admonition" id="second/changes-exercise-13">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.14 </span></p>
+<section id="exercise-content">
+<p>The Gompertz curve is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y = a e^{-be^{-ct}}, \qquad a,b,c&gt;0.
+\end{equation*}\]</div>
+<p>It can be used in <a class="reference external" href="https://en.wikipedia.org/wiki/Gompertz_function#:~:text=an%20arbitrary%20constant.-,Example%20uses,-%5Bedit%5D">various modelling scenarios</a>, such to model population growth, spread of disease and growth of tumours.</p>
+<p>Show that <span class="math notranslate nohighlight">\(y^{\prime\prime}=0\)</span> when <span class="math notranslate nohighlight">\(t=\ln(b)/c\)</span>. What is the significance of this result?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Notice that <span class="math notranslate nohighlight">\(y\)</span> is strictly positive for all <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Differentiating once:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}y}{\mathrm{d}t}=a e^{-be^{-ct}}\frac{\mathrm{d}}{\mathrm{d}t}\biggr[-be^{-ct}\biggr]=ybce^{-ct}
+\end{equation*}\]</div>
+<p>The first derivative is strictly positive for all <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Differentiating again:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}^2 y}{\mathrm{d}t^2}=bc\biggr[-cye^{-ct}+e^{-ct}\frac{\mathrm{d}y}{\mathrm{d}t}\biggr]=ybc^2e^{-ct}\biggr[be^{-ct}-1\biggr]
+\end{equation*}\]</div>
+<p>The second derivative changes sign when</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+be^{-ct}=1 \quad \implies \quad t=\frac{\ln(b)}{c}
+\end{equation*}\]</div>
+<p>This point is a (non-stationary) inflection. A plot of the curve is shown below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># example parameters</span>
+<span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span><span class="n">c</span><span class="o">=</span><span class="mf">0.1</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># plot the function</span>
+<span class="n">pwr</span><span class="o">=-</span><span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># inflection point</span>
+<span class="n">tinf</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="n">c</span>
+<span class="n">yinf</span><span class="o">=</span><span class="n">a</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">tinf</span><span class="p">,</span><span class="n">tinf</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="n">yinf</span><span class="p">,</span><span class="n">yinf</span><span class="p">],</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/gompertz.png"><img alt="gompertz-inflxn" class="align-center" src="../_images/gompertz.png" style="width: 60%;" /></a>
+</div>
 </section>
 </section>
 <section id="manoeuvring-a-ladder">
@@ -5162,9 +5224,9 @@ The cubic has an inflection point at <span class="math notranslate nohighlight">
 <p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Getting an object around a corner. The object is shown in blue, and the corridor widths have been denoted by <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(w\)</span>. It is assumed here that the object is very thin, relative to the size of the corridors.</span><a class="headerlink" href="#sofa" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="exercise admonition" id="second/changes-exercise-13">
+<div class="exercise admonition" id="second/changes-exercise-14">
 
-<p class="admonition-title"><span class="caption-number">Exercise 7.14 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 7.15 </span></p>
 <section id="exercise-content">
 <p>Find an expression for the length of the line <span class="math notranslate nohighlight">\(L\)</span> in terms of <span class="math notranslate nohighlight">\(\theta,h,w\)</span>, and plot <span class="math notranslate nohighlight">\(L(\theta)\)</span> for the case when <span class="math notranslate nohighlight">\(h=1\)</span>, <span class="math notranslate nohighlight">\(w=3\)</span>. Use your result for <span class="math notranslate nohighlight">\(L(\theta)\)</span> to find the longest object that will fit around the corner.</p>
 </section>
@@ -5254,10 +5316,10 @@ y=m x, \qquad m=\tan(\theta).
             <p class="prev-next-title"><span class="section-number">6. </span>Know your limits</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../third/placeholder.html" title="next page">
+    <a class='right-next' id="next-link" href="powers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Placeholder</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Infinite powers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

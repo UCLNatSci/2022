@@ -192,6 +192,8 @@ Identifiable "waves" of infection are alternately highlighted in blue or yellow
 
 
 ```{exercise}
+:label: ex-vt1
+
 Choose one of the "waves" by eye and isolate the $(x,y)$ data for this interval. For the data that you identified :
 
 * Normalise the $x$ co-ordinate so that it runs from 0 to 1. You can do this by defining: <br>
@@ -232,10 +234,14 @@ Global interest over time in the search term [call me maybe](https://trends.goog
 ```
 
 ```{exercise}
+:label: ex-vt2
+
 Fit a Fréchet function to the cumulative search interest for the call me maybe dataset. Present any plots that you think are useful to demonstrate the quality of the fit.
 ```
 
 ```{exercise}
+:label: ex-vt3
+
 Use Google trends to obtain search data for your own choice of meme/viral video and fit either the logistic function or the Fréchet function to the cumulative data.
 
 You can choose between Worldwide or specific country. You can also choose Google search data or YouTube data. Provide the url link to the dataset you used. Did you obtain a good fit? Why do you think this is?

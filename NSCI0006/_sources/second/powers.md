@@ -1,8 +1,18 @@
 # Infinite powers
 
-This chapter is about power series expansions (Maclaurin and Taylor series)
+In the section on {ref}`asymptotics` we saw some examples of polynomial approximations for common functions, such as $f(x)=e^x$. We now outline the theory behind the results that were presented. After completing this chapter you should be able to:
 
-In the section on {ref}`asymptotics` we saw some examples of polynomial approximations for common functions, such as $f(x)=e^x$. We now outline the theory behind the results that were presented.
+* find Maclaurin and Taylor series expansions for given functions
+* Discuss the convergence properties of these series using numeric justification
+
+
+```{admonition} [Siphonaptera](https://en.wikipedia.org/wiki/Siphonaptera_(poem))
+:class: quote
+Great fleas have little fleas upon their backs to bite 'em,
+
+And little fleas have lesser fleas, and so ad infinitum
+```
+
 
 ## Motivation
 
@@ -30,7 +40,9 @@ $p(0)=c_0, \quad p^{\prime}(0)=c_1, \quad p^{\prime\prime}(0)=2c_2, \quad p^{\pr
 __________
 ```
 ```{exercise}
-Determine a general result for the $n$th derivative $p^{(n)}(0)$. Match this to $f^{(n)}(0)$ to find an expression for $c_n$.
+Determine a general result for the $n$th derivative $p^{(n)}(0)$.
+
+Match this to $f^{(n)}(0)$ to find an expression for $c_n$.
 ```
 
 ```{toggle}
@@ -106,9 +118,9 @@ It is possible to use tools of mathematical analysis to formally determine the i
 
 What is truly remarkable is that for some functions the expansions constructed by the method outlined above are valid over a wider interval than $[-1,1]$. In fact, the expansions for some functions are valid *for all* values of $x$. Examples include the functions $e^x$, $\sin(x)$ and $\cos(x)$.
 
-It is quite exciting to think that these non-polynomial functions can be represented by infinite polynomial series. However, the expansions converge increasingly slowly as we move further from the point $x=0$, which significantly limits their practical use.
+It is quite exciting to think that these non-polynomial functions can be represented by infinite polynomial series. However, the expansions converge increasingly slowly as we move further from the point $x=0$, which lessens their practical use.
 
-In this module we will not develop the tools of analysis required to undertake a formal investigation of convergence. We will adopt a more experimental approach, by simply generating series containing a few terms and evaluating their accuracy on the interval that we are interested in.
+In this module we will not develop the tools of analysis required to undertake a formal investigation of convergence. We will adopt a more experimental approach, by generating series containing a few terms and evaluating their accuracy on the interval that we are interested in.
 
 ```{exercise}
 Demonstrate that with only five terms in the expansion of $\ln(1+x)$ we obtain a result that is accurate to within 1% on the interval $[-0.5,0.5]$
@@ -175,7 +187,7 @@ Where we require a power series approximation to a function near to a location o
 
 ```{math}
 :label: taylor
-p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)
+p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(x-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)
 ```
 
 By applying the technique of matching derivatives at the location $x=a$, we obtain the result
@@ -188,7 +200,7 @@ c_n = \frac{f^{(n)}(a)}{n!}.
 The formula {eq}`taylor` together with {eq}`taylor-coeff` is known as *Taylor's series*. The special case when $a=0$ is known as the Maclaurin series for historical reasons.
 
 ```{exercise}
-Find the Taylor series for the following cases:
+Find the first four non-zero terms of the Taylor series for the following cases:
 
 * $e^{x}$ about the point $x=1$
 
@@ -196,11 +208,37 @@ Find the Taylor series for the following cases:
 ```
 
 ```{toggle}
-Solution to follow
+
+| $n$    | $f^{(n)}(x)$  | $f^{(n)}(1)$   | $c_n$         |
+| ------ | ------------- | -------------- | ------------- |
+| $0$    | $e^x$         | $e$            | $e/0! = e$    |
+| $1$    | $e^x$         | $e$            | $e/1! = e$    |
+| $2$    | $e^x$         | $e$            | $e/2! = e/2$  |
+| $3$    | $e^x$         | $e$            | $e/3! = e/6$  |
+
+Hence $p(x;e)\sim e(1+x+x^2/2+x^3/6+\dots)$
+
+The result could have been obtained by recognising that
+\begin{equation*}
+e^{1+x}=e^1 e^x
+\end{equation*}
+
+and obtaining the expansion for $e^x$ about $x=0$.
+
 ```
 
 ```{toggle}
-Solution to follow
+| $n$    | $f^{(n)}(x)$  | $f^{(n)}(\pi/3)$  | $c_n$                         |
+| ------ | ------------- | ----------------- | ----------------------------- |
+| $0$    | $\sin(x)$     | $\sqrt{3}/2$      | $\sqrt{3}/2/0! = \sqrt{3}/2$  |
+| $1$    | $\cos(x)$     | $1/2$             | $1/2/1! = 1/2$                |
+| $2$    | $-\sin(x)$    | $-\sqrt{3}/2$     | $-\sqrt{3}/2/2! = \sqrt{3}/4$ |
+| $3$    | $-\cos(x)$    | $-1/2$            | $-1/2/3! = -1/12$             |
+
+Hence
+\begin{equation*}
+p\left(x;\frac{\pi}{3}\right)\sim \frac{\sqrt{3}}{2}+\frac{x}{2}-\frac{\sqrt{3}}{4}x^2-\frac{x^3}{12}
+\end{equation*}
 ```
 
 ```{exercise}
@@ -210,7 +248,11 @@ Also explain the relationship between the series for $\ln(1+x)$ about $x=0$ and 
 ```
 
 ```{toggle}
-Solution to follow
+The function $\ln(x)$ is not defined at $x=0$.
+
+The series for $\ln(x)$ about $x=1$ is identical to the series for $\ln(1+x)$ about $x=0$.
+
+This can be seen by defining $\hat{x}=x-1$.
 ```
 
 
@@ -233,33 +275,32 @@ Hence, find the Maclaurin series expansion of $W$, up to and including the term 
 ```
 
 ```{toggle}
-$We^W = x \implies \frac{\mathrm{d}}{\mathrm{d}x}(W e^W)=1$
 
-$\implies \frac{\mathrm{d}W}{\mathrm{d}x}\left[e^W+We^W\right]=1$
+\begin{align*}
+We^W = x & \implies \frac{\mathrm{d}}{\mathrm{d}x}(W e^W)=1\\
+         & \implies \frac{\mathrm{d}W}{\mathrm{d}x}\left[e^W+We^W\right]=1\\
+         &\implies \frac{\mathrm{d}W}{\mathrm{d}x} = \frac{1}{e^W(1+W)}
+\end{align*}
 
-$\implies \frac{\mathrm{d}W}{\mathrm{d}x} = \frac{1}{e^W(1+W)}$
+Differentiating the result with respect to $x$ gives:
 
-$\frac{\mathrm{d}^2W}{\mathrm{d}x^2}=\frac{\mathrm{d}W}{\mathrm{d}x}\frac{\mathrm{d}}{\mathrm{d}W}\left[\frac{1}{e^W(1+W)}\right]$
-
-$=\frac{1}{e^W(1+W)}\left[\frac{-\frac{\mathrm{d}}{\mathrm{d}W}[e^W(1+W)]}{e^{2W}(1+W)^2}\right]$
-
-$=\frac{-1}{e^W(1+W)^3}\frac{e^W(1+W)+e^W}{e^2W}=-\frac{(2+W)}{e^{2W}(1++W)^3}$
-
+\begin{align*}
+\frac{\mathrm{d}^2W}{\mathrm{d}x^2}&=\frac{\mathrm{d}W}{\mathrm{d}x}\frac{\mathrm{d}}{\mathrm{d}W}\left[\frac{1}{e^W(1+W)}\right]\\
+& =\frac{1}{e^W(1+W)}\left[\frac{-\frac{\mathrm{d}}{\mathrm{d}W}[e^W(1+W)]}{e^{2W}(1+W)^2}\right]\\
+&=\frac{-1}{e^W(1+W)^3}\frac{e^W(1+W)+e^W}{e^2W}=-\frac{(2+W)}{e^{2W}(1++W)^3}
+\end{align*}
 
 Hence, the two term Maclaurin series expansion is
 
-$W(x)=x-x^2+\dots$
+\begin{equation*}
+W(x)=x-x^2+\dots
+\end{equation*}
 ```
 
 
 ## Midpoint rule
 
-We argued in CHAPTER that the straight line connecting two data points ought to give a more accurate estimate of the slope at the mid-point of the interval, rather than at the left-hand point. The graphic below provides a characteristic justification of this claim. We may write:
-
-\begin{equation*}
-s_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
-\end{equation*}
-
+We argued in a previous chapter that the straight line connecting two data points ought to give a more accurate estimate of the slope at the mid-point of the interval, rather than at the left-hand point. The graphic below provides a characteristic justification of this claim:
 
 
 ```{figure} imgs/midpoint.png
@@ -269,10 +310,62 @@ name: midpoint-rule
 The slope of the line connecting two points on a curve generally estimates the slope of the curve better at the midpoint of the interval than at the ends.
 ```
 
-So far this is just a claim, but we will test it out for some examples later.
+We may write:
 
+\begin{equation*}
+s_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}
+\end{equation*}
 
-COMPARISON OF FORWARD AND CENTRAL RULES:
+A proof of this result can be given using Taylor's expansion.
+
+```{toggle}
+Left-hand result
+
+\begin{equation*}
+y(x+h) =y(x) +h y^{\prime}(x)+\mathcal{O}(h^2)
+\end{equation*}
+
+Hence,
+\begin{equation*}
+y^{\prime}(x) = \frac{y(x+h)-y(x)}{h} + \mathcal{O}(h)
+\end{equation*}
+
+The error in this expression is proportional to $h$.
+__________
+```
+
+```{toggle}
+Midpoint result
+
+Taking the midpoint as $\hat{x}=x+h/2$
+
+\begin{align*}
+y\left(\hat{x}+\frac{h}{2}\right)&=y(\hat{x})+\frac{h}{2}y^{\prime}(\hat{x})+\left(\frac{h}{2}\right)^2y^{\prime\prime}(\hat{x})+\mathcal{O}(h^3)\\
+y\left(\hat{x}-\frac{h}{2}\right)&=y(\hat{x})-\frac{h}{2}y^{\prime}(\hat{x})+\left(\frac{h}{2}\right)^2y^{\prime\prime}(\hat{x})-\mathcal{O}(h^3)
+\end{align*}
+
+Subtracting the second expression from the first gives
+
+\begin{equation*}
+y\left(\hat{x}+\frac{h}{2}\right)-y\left(\hat{x}-\frac{h}{2}\right) = hy^{\prime}(\hat{x})+\mathcal{O}(h^3)
+\end{equation*}
+
+Rearranging gives,
+\begin{equation*}
+y^{\prime}(\hat{x}) = \frac{y(x+h)-y(x)}{h}+\mathcal{O}(h^2)
+\end{equation*}
+
+The error in this expression is proportional to $h^2$.
+_________
+```
+
+A comparison of the errors in the forward and central difference formulae is given below for the example of differentiating the function
+
+\begin{equation*}
+y=\sin(x)+x.
+\end{equation*}
+
+The code uses the `fdiff` function that was defined in the previous chapter.
 
 ```{code}
 # data points
@@ -307,6 +400,6 @@ Errors in the numeric derivative of $y=\sin(x)+x$ on $[-\pi,\pi]$ with 100 datap
 $\qquad $(top) forward difference, (bottom) midpoint rule.
 ```
 
-IN THE LIMIT IT MAKES NO DIFFERENCE! The forward derivative formula is easier to work with so for non-numerical applications (i.e. formal calculus) we will always use that one.
-
-Prove the mid-point rule using Taylor series.
+```{note}
+Although the central difference formula is more accurate when the step size is large, both expressions become exact in the limit $h\rightarrow 0$. The forward derivative formula is easier to work with.
+```

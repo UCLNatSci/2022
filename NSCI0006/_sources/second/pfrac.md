@@ -215,7 +215,7 @@ import matplotlib.pyplot as plt
 x=np.linspace(xmin,xmax,1000)
 y = (3*x**2+2*x)/(1-2*x)
 
-xa = np.roots([-2,1])
+xa = np.roots([-2,1])  #roots of 1-2x
 
 # Set values to nan at discontinuity
 loc=[np.argmax(x>i) for i in xa]
@@ -305,7 +305,7 @@ import matplotlib.pyplot as plt
 x=np.linspace(xmin,xmax,1000)
 y = (x**2+3*x+1)/(4*x**2-9)
 
-xa = np.roots([4,0,-9])
+xa = np.roots([4,0,-9])  # roots of 4x^2-9
 
 # Set values to nan at discontinuity
 loc=[np.argmax(x>i) for i in xa]

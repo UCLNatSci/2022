@@ -334,7 +334,7 @@ $\qquad \displaystyle y=\frac{\sqrt{1-x^2}-\sqrt{1+x}}{x}$.
 
 For small $x$
 \begin{align*}
-(1-x^2)^{1/2} &= 1+\frac{1}{2}(-x^2)+\mathcal{O}(y^4)\\
+(1-x^2)^{1/2} &= 1+\frac{1}{2}(-x^2)+\mathcal{O}(x^4)\\
 (1+x)^{1/2}   &= 1+\frac{1}{2}x -\frac{1}{8}x^2+\mathcal{O}(x^3)
 \end{align*}
 Therefore,

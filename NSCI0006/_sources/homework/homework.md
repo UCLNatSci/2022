@@ -14,7 +14,7 @@ This part of the assignment can be completed either by hand or in word-processed
 
 You can use the [Office Lens](https://wiki.ucl.ac.uk/display/ELearningStudentSupport/Office+Lens) app to scan in pages of work on your phone/tablet and then convert it to a .pdf.
 
-### Exercise 2.15 [5pt]
+### {numref}`ex-fw1` [5pt]
 
 **Calculations :**
 
@@ -40,7 +40,7 @@ The written commentary is worth three points. This means that you should aim to 
 
 The word "critical" is key. Descriptive statements such as "this one is bigger than that one" won't earn any credit. Try to comment on explanations, implications, complexities and issues. This may require you to do a small amount of independent reading, but take care to write in your own words and give credit to any information sources you use.
 
-### Exercise 2.16 [2pt]
+### {numref}`ex-fw2` [2pt]
 
 For this question you are required to calculate the WSI value for each of the three countries listed. Your answer for each country should be a number.
 
@@ -48,7 +48,7 @@ You must present your calculations because method marks will be awarded for this
 
 Your answer is worth two points. There is one point for a correct method and one point for correctly calculated values.
 
-### Exercise 2.17 [3pt]
+### {numref}`ex-fw3` [3pt]
 
 One point will be awarded for correct calculation of the per-capita daily world BFW using the data given in the tables.
 
@@ -62,7 +62,7 @@ This part of the assignment should be completed in Python, with accompanying wri
 
 In CoCalc you can download your work as a pdf by selecting File > Save and Download as ... PDF.
 
-### Exercise 3.20 [3pt]
+### {numref}`ex-vt1` [3pt]
 
 In this question points will be awarded as follows:
 
@@ -80,7 +80,7 @@ You should be able to obtain a plot similar to the one shown in the lecture slid
 :align: center
 ```
 
-### Exercise 3.21 [3pt]
+### {numref}`ex-vt2` [3pt]
 
 In this question points will be awarded as follows:
 
@@ -91,7 +91,7 @@ In this question points will be awarded as follows:
 * [1] present suitable plot(s) to illustrate the quality of fit
 
 
-### Exercise 3.22 [2pt]
+### {numref}`ex-vt3` [2pt]
 
 The method here is identical to the previous exercise. Marks will be awarded for:
 

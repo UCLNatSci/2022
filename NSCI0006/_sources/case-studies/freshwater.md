@@ -46,6 +46,7 @@ The following AQUASTAT database variables are shown in {numref}`renewable-freshw
 
 
 ```{exercise}
+:label: ex-fw1
 For each country in {numref}`renewable-freshwater`, calculate the values listed below:
 
 * the [per-capita](https://www.dictionary.com/browse/per-capita) values for TRWR and TFWW
@@ -66,6 +67,8 @@ The proportion used is given by TFWW/TRWR, which was used as [Millennum Developm
 ```
 
 ``````{exercise}
+:label: ex-fw2
+
 In some literature, the WSI is rescaled and categorised. An example of how this may be done is given in the table below, which follows the [coding scheme of the WRI](https://www.wri.org/data/aqueduct-country-and-river-basin-rankings-map). Taking the relationship between WSI and Score to be linear within each category, as shown in the image, calculate the scores for each of UK, India and Pakistan.
 
 `````{grid} 2
@@ -136,10 +139,12 @@ The relationships between water withdrawals and the blue water footprint are est
 ```
 
 ```{exercise}
+:label: ex-fw3
+
 Use the value for the world TFWW given in {numref}`renewable-freshwater`, together with the information in {numref}`blue-footprint` to estimate the world Blue Water Footprint (BFW). Convert your result to a per-capita daily figure in litres.
 
 
-According to a [paper](https://www.tandfonline.com/doi/full/10.1080/13504851.2021.2009111?scroll=top&needAccess=true) published in 2021 , the UK daily BWF is approximately 8880 Mm3. Convert this to a per-capita value and comment whether the result is different to the global average.
+According to a [paper](https://www.tandfonline.com/doi/full/10.1080/13504851.2021.2009111?scroll=top&needAccess=true) published in 2021 , the UK annual BWF is approximately 8880 Mm3. Convert this to a per-capita value and comment whether the result is different to the global average.
 ```
 
 ```{toggle}

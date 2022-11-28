@@ -714,6 +714,71 @@ $f^{\prime\prime}(x)=12(x^2-4x+4)=12(x-2)^2 \geq 0 \ \forall x$
 
 ```
 
+```{exercise}
+The Gompertz curve is given by
+\begin{equation*}
+y = a e^{-be^{-ct}}, \qquad a,b,c>0.
+\end{equation*}
+
+It can be used in [various modelling scenarios](https://en.wikipedia.org/wiki/Gompertz_function#:~:text=an%20arbitrary%20constant.-,Example%20uses,-%5Bedit%5D), such to model population growth, spread of disease and growth of tumours.
+
+Show that $y^{\prime\prime}=0$ when $t=\ln(b)/c$. What is the significance of this result?
+```
+
+````{toggle}
+Notice that $y$ is strictly positive for all $t$.
+
+Differentiating once:
+\begin{equation*}
+\frac{\mathrm{d}y}{\mathrm{d}t}=a e^{-be^{-ct}}\frac{\mathrm{d}}{\mathrm{d}t}\biggr[-be^{-ct}\biggr]=ybce^{-ct}
+\end{equation*}
+
+The first derivative is strictly positive for all $t$.
+
+Differentiating again:
+
+\begin{equation*}
+\frac{\mathrm{d}^2 y}{\mathrm{d}t^2}=bc\biggr[-cye^{-ct}+e^{-ct}\frac{\mathrm{d}y}{\mathrm{d}t}\biggr]=ybc^2e^{-ct}\biggr[be^{-ct}-1\biggr]
+\end{equation*}
+
+The second derivative changes sign when
+\begin{equation*}
+be^{-ct}=1 \quad \implies \quad t=\frac{\ln(b)}{c}
+\end{equation*}
+
+This point is a (non-stationary) inflection. A plot of the curve is shown below
+
+```{code}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# example parameters
+a=1;b=50;c=0.1
+
+t=np.linspace(0,100)
+
+# plot the function
+pwr=-b*np.exp(-c*t)
+y=a*np.exp(pwr)
+plt.plot(t,y)
+
+# inflection point
+tinf=np.log(b)/c
+yinf=a/np.exp(1)
+plt.plot([tinf,tinf,0],[0,yinf,yinf],'r')
+
+plt.xlim([0,100])
+plt.ylim([0,1])
+plt.show()
+```
+
+```{image} imgs/gompertz.png
+:alt: gompertz-inflxn
+:width: 60%
+:align: center
+```
+
+````
 
 ## Manoeuvring a ladder
 
