@@ -48,7 +48,7 @@ Calculate all the first partial derivatives $\partial/\partial x,\, \partial/\pa
 1\. $f(x,\,y) = 3x^3 y^2 + 2 y $
 
 ```{math}
-\frac{\partial f}{\partial x} &=  x^2 y^2, \\
+\frac{\partial f}{\partial x} &=  9x^2 y^2, \\
 \frac{\partial f}{\partial y} &=  6x^3 y+2
 ```
 

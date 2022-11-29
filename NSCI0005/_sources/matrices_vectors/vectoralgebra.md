@@ -128,7 +128,7 @@ Likewise we can scale each of the vectors and then proceed to add them:
 
 Given some vector, which will take us some distance from two points in space, we can find the shortest path length between the points.  
 
-````{admonition}
+````{admonition} Definition
 A magnitude of a vector ${\bf v}$ with $n$ orthogonal components is:
 ```{math}
 |{\bf v}| &= \sqrt{{v_1}^2 + {v_2}^2 +  + \dots + {v_n}^2} = \sqrt{\sum_{i=1}^n (v_i)^2}

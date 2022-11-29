@@ -108,6 +108,10 @@ For example, in the Airy ODE we might specify the boundary conditions $y(0)=1$, 
 \lim_{x\rightarrow\infty}y(x)=0
 ```
 
+We sometimes call ODEs **autonomous**, that is a system of ODES which do not explicitly depend on the independent 
+variable e.g. $x$ and only depend on the dependent variable e.g. $y(x)$. When the variable is time, they are also 
+called *time-invariant* systems.  Examples of this could include $y'' = -\omega^2 y$ (the SHM equation) or $y' = y^2$.
+
 
 ````{admonition} Practice questions
 :class: seealso, dropdown

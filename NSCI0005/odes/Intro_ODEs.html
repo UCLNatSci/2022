@@ -100,12 +100,12 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../prelim/notationfunctions.html">
+  <a class="reference internal" href="../Prelim/notationfunctions.html">
    1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../prelim/binexpans.html">
+  <a class="reference internal" href="../Prelim/binexpans.html">
    2. Binomial Expansion and Theorem
   </a>
  </li>
@@ -384,6 +384,9 @@ specified value(s) of the independent variable.</p>
 <p>For example, in the Airy ODE we might specify the boundary conditions <span class="math notranslate nohighlight">\(y(0)=1\)</span>, with a limit such as:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x\rightarrow\infty}y(x)=0\]</div>
+<p>We sometimes call ODEs <strong>autonomous</strong>, that is a system of ODES which do not explicitly depend on the independent
+variable e.g. <span class="math notranslate nohighlight">\(x\)</span> and only depend on the dependent variable e.g. <span class="math notranslate nohighlight">\(y(x)\)</span>. When the variable is time, they are also
+called <em>time-invariant</em> systems.  Examples of this could include <span class="math notranslate nohighlight">\(y'' = -\omega^2 y\)</span> (the SHM equation) or <span class="math notranslate nohighlight">\(y' = y^2\)</span>.</p>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice questions</p>
 <p>1. Solve the second order problem <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)=xe^x\)</span> subject to <span class="math notranslate nohighlight">\(y(0)=1,\, y(1)=0\)</span> by direct integration.</p>
