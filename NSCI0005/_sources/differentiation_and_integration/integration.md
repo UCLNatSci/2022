@@ -1105,6 +1105,13 @@ $-2 \leq x \leq 2$ about the $x$-axis.
 3\. Determine the surface area of the solid obtained by rotating the function $y=x^{1/3}$, for 
 $1 \leq y \leq 2$ about the $y$-axis.
 
+4\. Find the surface area spherical section obtained by revolving the function $r = \cos(\theta)$ around the $x$ 
+axis over $\theta \in \left[0\,\frac{\pi}{4}\right]$.
+
+5\. Find the volume of revolutio for the section obtained by reolving the function $y = x^2$ around the $x$ axis over $x \in [-2,\,3]$.
+
+6\. Find the volume of the solid obtained by rotating the region bounded by $y=2x^2$ and $y=x^3$ about the $x$ axis, from the origin up to where the functions meet.
+
 ````
 
 ````{admonition} Solution
@@ -1146,6 +1153,53 @@ the limits as $y \in [1,\, 2]$, so integral is:
 which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}y = \frac{1}{n+1}f^{n+1}$, here $f = 1+9y^4 $, so $f' = 36y^3$
 ```{math}
 S = 2\pi\frac{1}{36}\Big[\frac{2}{3}\left(9y^4+1 \right)^{3/2}\Big]_1^2 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
+```
+
+4\. Given that the surface for a rotated solid around the $x$ axis is $\int_a^b 2\pi y\,\mathrm{d}s$ and we have $x = r \cos(\theta),\, y = r \sin(\theta)$, 
+then this is just a parametric problem, where:
+```{math}
+\mathrm{d}s &= \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}\theta}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}\theta}\right)^2}\,\mathrm{d}\theta\\
+\mathrm{d}x &= \cos(\theta)\,\mathrm{d}r - r \sin(\theta)\,\mathrm{d}\theta \Rightarrow \frac{\mathrm{d}x}{\mathrm{d}\theta} = \cos(\theta)\,\frac{\mathrm{d}r}{\mathrm{d}\theta} - r \sin(\theta)\\
+\mathrm{d}y &= \sin(\theta)\,\mathrm{d}r + r \cos(\theta)\,\mathrm{d}\theta \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}\theta} = \sin(\theta)\,\frac{\mathrm{d}r}{\mathrm{d}\theta} + r \cos(\theta)\\
+\mathrm{d}s &= \sqrt{r^2 + \left(\frac{\mathrm{d}r}{\mathrm{d}\theta}\right)^2}\,\mathrm{d}\theta 
+```
+Given that $r = \cos(\theta)$ then:
+```{math}
+\frac{\mathrm{d}r}{\mathrm{d}\theta} = -\sin(\theta)
+```
+so the problem looks like:
+```{math}
+A &= \int_0^{\pi/4} 2\pi r\,\sin(\theta)\,\sqrt{\cos^2(\theta) + \sin^2(\theta)}\,\mathrm{d}\theta \\
+ &= \int_0^{\pi/4} 2\pi \cos(\theta)\,\sin(\theta)\,\mathrm{d}\theta = \Bigg[\pi \sin^2(\theta) \Bigg]_0^{\pi/4} = \frac{\pi}{2}
+```
+
+5\.
+
+Using $V = \int_{-2}^3 \pi y^2\,\mathrm{d}x $, we find:
+```{math}
+V = \int_{-2}^3 \pi x^4\,\mathrm{d}x = \Bigg[ \frac{1}{5}x^5\Bigg]_{-2}^3 = \pi\left[ \frac{243}{5} - \left(-\frac{32}{5}\right)\right] = 55\pi
+```
+
+
+6\. 
+
+Firstly lets find the intersection points:
+```{math}
+x^3 &= 2x^2 \\
+x^2(x-2) &= 0 \\
+\Rightarrow x = 0,\qquad & x = 2
+```
+which we can also see graphically:
+```{figure} ../figures/regions.png
+---
+name: regionsIntVol
+---
+```
+To find the volume of the bounded shape, we need to subtract the two volumes we would find:
+
+```{math}
+V_{tot} &= V_{outer} - V_{inner} = \int_0^2 \pi (2x^2)^2 \,\mathrm{d}x - \int_0^2 \pi (x^3)^2 \,\mathrm{d}x \\
+&=\int_0^2 \pi \left(4x^4 -x^6\right)\, \mathrm{d}x = \Bigg[ \frac{4}{5}x^5 - \frac{1}{7}x^7\Bigg]_0^2 = \frac{256}{35}\pi
 ```
 
 ````
