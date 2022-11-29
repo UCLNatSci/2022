@@ -698,11 +698,12 @@ f_{yx}&amp;f_{yy}
 </div>
 </div>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Practice question</p>
+<p class="admonition-title">Practice questions</p>
 <p>1. Find the stationary points for the surface described by <span class="math notranslate nohighlight">\(f(x,y) = x^2 + 3xy^2 + 2y^3\)</span>.</p>
+<p>2. Find the stationary points for the surface described by <span class="math notranslate nohighlight">\(f(x,y) = x^3 + y^2 - 3xy - 4\)</span>.</p>
 </div>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Solution</p>
+<p class="admonition-title">Solutions</p>
 <p>1. Finding the partial derivatives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_x &amp;= 2x + 3y^2\\
@@ -722,15 +723,14 @@ f_{xy} &amp;= f_{yx} = 6y\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;A\Big(0,\,0\Big) \\
 &amp;B\Big(-\frac{2}{3},\,\frac{2}{3}\Big)\end{split}\]</div>
-<p>To find the nature of these SP’s, we
-need the Hessian determinant:</p>
+<p>To find the nature of these SP’s, we need the Hessian determinant:</p>
 <div class="math notranslate nohighlight">
 \[\det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = \Big( 2 \Big)\Big( 6x+12y \Big)\Big( 6y \Big) = 72y(x+2y)\]</div>
 <p>and hence at each point:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H\Big|_A &amp;= 0 \qquad \text{(inconclusive)}\\
 H\Big|_B &amp;= -\frac{244}{9} &lt; 0 \qquad\text{(saddle)}\\\end{split}\]</div>
-<p>To examine what happens at <span class="math notranslate nohighlight">\(A\)</span>, we can look at <span class="math notranslate nohighlight">\(f_{x}\)</span> and <span class="math notranslate nohighlight">\(f_{y}\)</span> for points <span class="math notranslate nohighlight">\((\pm \delta x, \,\pm\delta x)\)</span> for <span class="math notranslate nohighlight">\(\delta x, \delta y \ll 1\)</span></p>
+<p>To examine what happens at <span class="math notranslate nohighlight">\(A\)</span>, we can look at <span class="math notranslate nohighlight">\(f_{x}\)</span> and <span class="math notranslate nohighlight">\(f_{y}\)</span> for points <span class="math notranslate nohighlight">\((\pm \delta x, \,\pm\delta y)\)</span> for <span class="math notranslate nohighlight">\(\delta x, \delta y \ll 1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_{x}\Big|_{(\delta x,\, \delta y)} = 3(\delta y)^2 + 2\delta x &gt; 0\\
 f_{x}\Big|_{(-\delta x,\, -\delta y)} = 3(\delta y)^2 - 2\delta x&lt; 0\\
@@ -740,6 +740,37 @@ f_{x}\Big|_{(-\delta x,\, -\delta y)} = 6(\delta x)(\delta y) + 6(\delta y)^2 &g
 <p>We can also see this from the contour plot:</p>
 <div class="figure align-default" id="cplot">
 <img alt="../_images/contourplot.gif" src="../_images/contourplot.gif" />
+</div>
+<p>2.
+Finding the partial derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_x &amp;= 3x^2 - 3y\\
+f_y &amp;= 3y^2 - 3x\\
+f_{xx} &amp;= 6x\\ 
+f_{yy} &amp;= 6y\\
+f_{xy} &amp;= f_{yx} = -3\end{split}\]</div>
+<p>To find the points which satisfy <span class="math notranslate nohighlight">\(f_x = f_y = 0\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}3(x^2 - y) &amp;= 0\\
+3(y^2 - x) &amp;=0\end{split}\]</div>
+<p>hence this means that <span class="math notranslate nohighlight">\(y = x^2\)</span> from the first equation, which pluggin into the second gives:</p>
+<div class="math notranslate nohighlight">
+\[3(x^2)^2 - 3x = 3x(x^3-1) = 0\]</div>
+<p>which means that <span class="math notranslate nohighlight">\(x = 0\)</span> or <span class="math notranslate nohighlight">\(x = 1\)</span> and since <span class="math notranslate nohighlight">\(y = x^2\)</span> we find two stationary points:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;A(0,\,0) \\
+&amp;B(1,\ 1)\end{split}\]</div>
+<p>To find the nature of these SP’s, we need the Hessian determinant:</p>
+<div class="math notranslate nohighlight">
+\[\det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = 6x(6y) - (-3)^2 = 36xy - 9\]</div>
+<p>and hence at each point:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H\Big|_A &amp;= -9 &lt; 0 \qquad \text{(saddle)}\\
+H\Big|_B &amp;= 27 &gt; 0 \qquad\text{(maxima/minima)}\\\end{split}\]</div>
+<p>given that <span class="math notranslate nohighlight">\(f_{xx}|_B,\, f_{yy}|_B &gt; 0\)</span> then this a minima.</p>
+<p>We can also see this from the contour plot:</p>
+<div class="figure align-default" id="spplot">
+<img alt="../_images/SPs.png" src="../_images/SPs.png" />
 </div>
 </div>
 </div>

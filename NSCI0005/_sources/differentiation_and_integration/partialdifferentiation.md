@@ -447,12 +447,14 @@ Contour plot of $\displaystyle f=x^3-y^3-2xy+2$, showing stationary points clear
 ```
 ````
 
-````{admonition} Practice question
+````{admonition} Practice questions
 :class: seealso, dropdown
 1\. Find the stationary points for the surface described by $f(x,y) = x^2 + 3xy^2 + 2y^3$.
+
+2\. Find the stationary points for the surface described by $f(x,y) = x^3 + y^2 - 3xy - 4$.
 ````
 
-````{admonition} Solution
+````{admonition} Solutions
 :class: seealso, dropdown
 1\. Finding the partial derivatives:
 ```{math}
@@ -481,8 +483,7 @@ Therefore we can collect together these points as:
 &A\Big(0,\,0\Big) \\
 &B\Big(-\frac{2}{3},\,\frac{2}{3}\Big)
 ```
-To find the nature of these SP's, we 
-need the Hessian determinant:
+To find the nature of these SP's, we need the Hessian determinant:
 
 ```{math}
 \det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = \Big( 2 \Big)\Big( 6x+12y \Big)\Big( 6y \Big) = 72y(x+2y)
@@ -492,7 +493,7 @@ and hence at each point:
 H\Big|_A &= 0 \qquad \text{(inconclusive)}\\
 H\Big|_B &= -\frac{244}{9} < 0 \qquad\text{(saddle)}\\
 ```
-To examine what happens at $A$, we can look at $f_{x}$ and $f_{y}$ for points $(\pm \delta x, \,\pm\delta x)$ for $\delta x, \delta y \ll 1$
+To examine what happens at $A$, we can look at $f_{x}$ and $f_{y}$ for points $(\pm \delta x, \,\pm\delta y)$ for $\delta x, \delta y \ll 1$
 ```{math}
 f_{x}\Big|_{(\delta x,\, \delta y)} = 3(\delta y)^2 + 2\delta x > 0\\
 f_{x}\Big|_{(-\delta x,\, -\delta y)} = 3(\delta y)^2 - 2\delta x< 0\\
@@ -506,6 +507,50 @@ We can also see this from the contour plot:
 ```{figure} ./contourplot.gif
 ---
 name: cplot
+---
+```
+
+2\.
+Finding the partial derivatives:
+```{math}
+f_x &= 3x^2 - 3y\\
+f_y &= 3y^2 - 3x\\
+f_{xx} &= 6x\\ 
+f_{yy} &= 6y\\
+f_{xy} &= f_{yx} = -3
+```
+
+To find the points which satisfy $f_x = f_y = 0$, we have:
+```{math}
+3(x^2 - y) &= 0\\
+3(y^2 - x) &=0
+```
+hence this means that $y = x^2$ from the first equation, which pluggin into the second gives:
+```{math}
+3(x^2)^2 - 3x = 3x(x^3-1) = 0
+```
+which means that $x = 0$ or $x = 1$ and since $y = x^2$ we find two stationary points:
+```{math}
+&A(0,\,0) \\
+&B(1,\ 1)
+```
+To find the nature of these SP's, we need the Hessian determinant:
+
+```{math}
+\det(H) = f_{xx}\,f_{yy} - (f_{xy})^2 = 6x(6y) - (-3)^2 = 36xy - 9
+```
+and hence at each point:
+```{math}
+H\Big|_A &= -9 < 0 \qquad \text{(saddle)}\\
+H\Big|_B &= 27 > 0 \qquad\text{(maxima/minima)}\\
+```
+given that $f_{xx}|_B,\, f_{yy}|_B > 0$ then this a minima.  
+
+We can also see this from the contour plot:
+
+```{figure} ../figures/SPs.png
+---
+name: SPplot
 ---
 ```
 
