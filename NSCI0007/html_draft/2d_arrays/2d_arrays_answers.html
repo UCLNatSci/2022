@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Scientific Computing Workbook</title>
+    <title>4.3.3. Solutions &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -37,13 +37,10 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,10 +49,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.3. Homework" href="2d_arrays_homework.html" />
-    <link rel="prev" title="4.2. Workshop 4: Modelling Space" href="2d_arrays.html" />
+    <link rel="next" title="4.4. Homework" href="2d_arrays_homework.html" />
+    <link rel="prev" title="4.3. Workshop 4: Modelling Space" href="2d_arrays.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
   Programming with Python
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../calculations/calculations_intro.html">
    1. Fundamentals
@@ -213,17 +212,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../rate_equations/rate_equations_notes.html">
-     2.1. Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rate_equations/rate_equations.html">
-     2.2. Workshop
+     2.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../rate_equations/rate_equations_homework.html">
-     2.3. Homework
+    <a class="reference internal" href="../rate_equations/rate_equations.html">
+     2.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
     <label for="toctree-checkbox-6">
@@ -232,15 +226,15 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../rate_equations/rate_equations_answers.html">
-       2.3.2. Homework solutions
+      <a class="reference internal" href="../rate_equations/rate_equations_solutions.html">
+       2.3.5. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../rate_equations/rate_equations_extra.html">
-     2.4. Further Practice
+    <a class="reference internal" href="../rate_equations/rate_equations_homework.html">
+     2.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
     <label for="toctree-checkbox-7">
@@ -249,8 +243,25 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../rate_equations/rate_equations_homework_answers.html">
+       2.4.2. Homework solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../rate_equations/rate_equations_extra.html">
+     2.5. Further Practice
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
       <a class="reference internal" href="../rate_equations/rate_equations_extra_solutions.html">
-       2.4.1. Solutions
+       2.5.1. Solutions
       </a>
      </li>
     </ul>
@@ -261,38 +272,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_notes.html">
-     3.1. Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions.html">
-     3.2. Workshop 3: Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_homework.html">
-     3.3. Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_answers.html">
-     3.4. Homework solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2d_arrays_intro.html">
-   4. Modelling Space
-  </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
@@ -300,32 +279,98 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2d_arrays_notes.html">
-     4.1. Notes
+    <a class="reference internal" href="../functions/functions_notes.html">
+     3.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="2d_arrays.html">
-     4.2. Workshop
+    <a class="reference internal" href="../functions/functions.html">
+     3.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
     <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../functions/functions_solutions.html">
+       3.3.4. Solutions
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="2d_arrays_homework.html">
-     4.3. Homework
+    <a class="reference internal" href="../functions/functions_homework.html">
+     3.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
     <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../functions/functions_homework_answers.html">
+       3.4.1. Homework solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../functions/functions_extra.html">
+     3.5. Further Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="2d_arrays_intro.html">
+   4. Modelling Space
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2d_arrays_notes.html">
+     4.2. Notes
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="2d_arrays.html">
+     4.3. Workshop
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.3.3. Solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="2d_arrays_homework.html">
+     4.4. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2d_arrays_homework_answers.html">
+       4.4.1. Homework Answers
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -333,6 +378,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../cellular_automata/cellular_automata.html">
    5. Tutorial 5: Cellular Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Coursework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../coursework/coursework.html">
+   NSCI0007 Coursework
   </a>
  </li>
 </ul>
@@ -486,50 +543,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Solutions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -537,382 +567,174 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="solutions">
+<h1><span class="section-number">4.3.3. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h1>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-0">
 
-<span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>      
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">1.5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">val</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>    
-    <span class="k">return</span> <span class="n">result</span>
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_5"> Exercise 4.5</a></p>
+<section id="solution-content">
+<p>The 2-moving average of <code class="docutils literal notranslate"><span class="pre">x</span></code> is formed by averaging the 2 values on either side of <code class="docutils literal notranslate"><span class="pre">x_i</span></code> (5 values in total). We can modify the for loop we just saw. The index of <code class="docutils literal notranslate"><span class="pre">x</span></code> should be extended by 1 on either side - from <code class="docutils literal notranslate"><span class="pre">i-2</span></code> to <code class="docutils literal notranslate"><span class="pre">i+3</span></code>. The for loop also needs to change, otherwise when <code class="docutils literal notranslate"><span class="pre">i=1</span></code> or <code class="docutils literal notranslate"><span class="pre">i=n-1</span></code> the subarray <code class="docutils literal notranslate"><span class="pre">x[i-2:i+3]</span></code> will go outside the bounds of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-<span class="c1"># check the function works</span>
-<span class="n">h</span> <span class="o">=</span> <span class="n">height</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="c1"># should print 1</span>
-
-<span class="n">h</span> <span class="o">=</span> <span class="n">height</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="c1"># should print 0</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
-0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2-moving average:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-2. -1.  0.  1.  2.]
-sphere:
- [[0. 0. 0. 0. 0.]
- [1. 0. 0. 0. 0.]
- [1. 0. 0. 0. 0.]
- [1. 0. 0. 0. 0.]
- [0. 0. 0. 0. 0.]]
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_6"> Exercise 4.6</a></p>
+<section id="solution-content">
+<p>We need to adapt our code so that it will work for an integer <code class="docutils literal notranslate"><span class="pre">k</span></code>. Notice that to adapt the code above from the 1-moving average to the 2-moving average, we just needed to change the range of the for loop and adjust the index of <span class="math notranslate nohighlight">\(x\)</span> so we don’t go out of bounds.</p>
+<p>The first element of the array that has <code class="docutils literal notranslate"><span class="pre">k</span></code> elements before it will be at index <code class="docutils literal notranslate"><span class="pre">k</span></code>. The last element to have <code class="docutils literal notranslate"><span class="pre">k</span></code> elements after it will be at index <code class="docutils literal notranslate"><span class="pre">n-k-1</span></code>, so we adjust the for loop to cover <code class="docutils literal notranslate"><span class="pre">range(k,</span> <span class="pre">n-k)</span></code> (remembering that it won’t include the last element).
+Then to get the subarray containing the <code class="docutils literal notranslate"><span class="pre">k</span></code> elements before and after the index <code class="docutils literal notranslate"><span class="pre">i</span></code>, we can use <code class="docutils literal notranslate"><span class="pre">x[i-k:i+k+1]</span></code>. The function looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">):</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">y</span>
 </pre></div>
 </div>
+<p>We can check it works by calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
 </div>
+</section>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">30</span>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-2">
 
-<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_7"> Exercise 4.7</a></p>
+<section id="solution-content">
+<p>To adapt our function we need to change the for loop to cover the full range from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n</span></code>, and then replace the lower limit with <code class="docutils literal notranslate"><span class="pre">max(i-k,</span> <span class="pre">0)</span></code> and the upper limit with <code class="docutils literal notranslate"><span class="pre">min(i+k+1,</span> <span class="pre">n)</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y_array:&quot;</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span><span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)])</span>
 
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y_array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">height</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Let’s check this works:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_8"> Exercise 4.8</a></p>
+<section id="solution-content">
+<p>First we need to calculate the moving averages</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the moving averages</span>
+<span class="n">moving_avg_5</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">pressure_data</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">moving_avg_10</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">pressure_data</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then we can build up the plot. Here we have used the <code class="docutils literal notranslate"><span class="pre">color</span></code> keyword to plot the underlying pressure data in black, and added labels and a legend so we can see which line is which.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># build the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pressure_data</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;raw data&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moving_avg_10</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;10 day&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moving_avg_5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;5 day&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Day&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pressure (mbar)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-4">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_9"> Exercise 4.9</a></p>
+<section id="solution-content">
+<p>To find the 1-moving average of the cell at position <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j</span></code> we need to take the average of all the cells in the rows <code class="docutils literal notranslate"><span class="pre">i-1</span></code> up to and including <code class="docutils literal notranslate"><span class="pre">i+1</span></code>, and in the columns <code class="docutils literal notranslate"><span class="pre">j-1</span></code> up to and including <code class="docutils literal notranslate"><span class="pre">j+1</span></code>. Remember we need to add 1 to the final index to make sure we get the whole 3-by-3 array.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="n">sub_array</span> <span class="o">=</span> <span class="n">x</span><span class="p">[(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">):(</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">)]</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sub_array</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-5">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_10"> Exercise 4.10</a></p>
+<section id="solution-content">
+<p>First we can load the image and retrieve the shape of the array - this will tell us what size our new array should be.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;falling_cat.txt&quot;</span><span class="p">)</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then we just need to adapt out code to work for an array of this shape. The inside of the nested for loop can stay the same, but we need to change the upper limit of both loops. When there were five rows and five columns the upper limit was four, so now we should use <code class="docutils literal notranslate"><span class="pre">n-1</span></code> and <code class="docutils literal notranslate"><span class="pre">m-1</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">sub_array</span> <span class="o">=</span> <span class="n">x</span><span class="p">[(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">):(</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">)]</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sub_array</span><span class="p">)</span>
+        
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</div>
+<div class="solution admonition" id="2d_arrays/2d_arrays_answers-solution-6">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="2d_arrays.html#exercise_4_11"> Exercise 4.11</a></p>
+<section id="solution-content">
+<p>Let’s write a function that calculates the k-moving average of the 2d array <code class="docutils literal notranslate"><span class="pre">x</span></code>. We need to adjust the limits of the for loops and the indices of the sub-array - just like we did in 1 dimension! We will leave the zero padding so the for loops should go from row <code class="docutils literal notranslate"><span class="pre">k</span></code> to <code class="docutils literal notranslate"><span class="pre">n-k-1</span></code> and from column <code class="docutils literal notranslate"><span class="pre">k</span></code> to <code class="docutils literal notranslate"><span class="pre">m-k-1</span></code>. The sub-array should contain the <code class="docutils literal notranslate"><span class="pre">2k+1</span></code> by <code class="docutils literal notranslate"><span class="pre">2k+1</span></code> array centred at <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j</span></code>, which goes from row <code class="docutils literal notranslate"><span class="pre">i-k</span></code> to <code class="docutils literal notranslate"><span class="pre">i+k</span></code> and from column <code class="docutils literal notranslate"><span class="pre">j-k</span></code> to <code class="docutils literal notranslate"><span class="pre">j+k</span></code>. Remember to add 1 to the upper limits!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average_2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="c1"># get the shape</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-2.         -1.86206897 -1.72413793 -1.5862069  -1.44827586 -1.31034483
- -1.17241379 -1.03448276 -0.89655172 -0.75862069 -0.62068966 -0.48275862
- -0.34482759 -0.20689655 -0.06896552  0.06896552  0.20689655  0.34482759
-  0.48275862  0.62068966  0.75862069  0.89655172  1.03448276  1.17241379
-  1.31034483  1.44827586  1.5862069   1.72413793  1.86206897  2.        ]
-y_array: [-2.         -1.86206897 -1.72413793 -1.5862069  -1.44827586 -1.31034483
- -1.17241379 -1.03448276 -0.89655172 -0.75862069 -0.62068966 -0.48275862
- -0.34482759 -0.20689655 -0.06896552  0.06896552  0.20689655  0.34482759
-  0.48275862  0.62068966  0.75862069  0.89655172  1.03448276  1.17241379
-  1.31034483  1.44827586  1.5862069   1.72413793  1.86206897  2.        ]
-z:
- [[0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.01831564 0.03120113 0.05116745 0.08077786 0.12276259 0.17960351
-  0.25295236 0.3429555  0.44762252 0.56242058 0.6802767  0.7921093
-  0.8878912  0.95809707 0.99525505 0.99525505 0.95809707 0.8878912
-  0.7921093  0.6802767  0.56242058 0.44762252 0.3429555  0.25295236
-  0.17960351 0.12276259 0.08077786 0.05116745 0.03120113 0.01831564]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]
- [0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.
-  0.         0.         0.         0.         0.         0.        ]]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x22471ce4048&gt;
-</pre></div>
-</div>
-<img alt="../_images/2d_arrays_answers_2_2.png" src="../_images/2d_arrays_answers_2_2.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cross_section_0</span> <span class="o">=</span> <span class="n">z</span><span class="p">[:,</span><span class="mi">12</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="n">cross_section_0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x22471c7ddc8&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2d_arrays_answers_3_1.png" src="../_images/2d_arrays_answers_3_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-
-
-<span class="c1"># Plot the surface</span>
-<span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x22473f793c8&gt;
-</pre></div>
-</div>
-<img alt="../_images/2d_arrays_answers_5_1.png" src="../_images/2d_arrays_answers_5_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="k">def</span> <span class="nf">funky_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">5</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">40</span>
-
-
-<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_array:&quot;</span><span class="p">,</span> <span class="n">x_array</span><span class="p">)</span>
-                  
-<span class="n">y_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y_array:&quot;</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y_array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-                  
-        <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">funky_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="c1"># set up the empty array</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_array</span><span class="p">,</span> <span class="n">y_array</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-
-
-<span class="c1"># Plot the surface</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-
-<span class="c1"># Set an equal aspect ratio</span>
-<span class="c1">#ax.set_aspect(&#39;equal&#39;)</span>
+    <span class="c1"># fill in moving avg</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="n">k</span><span class="p">):</span>
+            <span class="n">sub_array</span> <span class="o">=</span> <span class="n">x</span><span class="p">[(</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">):(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">):(</span><span class="n">j</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+            <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sub_array</span><span class="p">)</span>
+           
+    <span class="k">return</span> <span class="n">y</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_array: [-4.         -3.79487179 -3.58974359 -3.38461538 -3.17948718 -2.97435897
- -2.76923077 -2.56410256 -2.35897436 -2.15384615 -1.94871795 -1.74358974
- -1.53846154 -1.33333333 -1.12820513 -0.92307692 -0.71794872 -0.51282051
- -0.30769231 -0.1025641   0.1025641   0.30769231  0.51282051  0.71794872
-  0.92307692  1.12820513  1.33333333  1.53846154  1.74358974  1.94871795
-  2.15384615  2.35897436  2.56410256  2.76923077  2.97435897  3.17948718
-  3.38461538  3.58974359  3.79487179  4.        ]
-y_array: [-4.         -3.79487179 -3.58974359 -3.38461538 -3.17948718 -2.97435897
- -2.76923077 -2.56410256 -2.35897436 -2.15384615 -1.94871795 -1.74358974
- -1.53846154 -1.33333333 -1.12820513 -0.92307692 -0.71794872 -0.51282051
- -0.30769231 -0.1025641   0.1025641   0.30769231  0.51282051  0.71794872
-  0.92307692  1.12820513  1.33333333  1.53846154  1.74358974  1.94871795
-  2.15384615  2.35897436  2.56410256  2.76923077  2.97435897  3.17948718
-  3.38461538  3.58974359  3.79487179  4.        ]
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_35144</span>\<span class="mf">2321466637.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">funky_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> 
-<span class="ne">---&gt; </span><span class="mi">25</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sphere:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> 
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+<p>Testing this we see that as we make <code class="docutils literal notranslate"><span class="pre">k</span></code> bigger, the image gets blurrier.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;falling_cat.txt&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;sphere&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<span class="c1"># this should result in a very blurry image</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">moving_average_2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.00720203798462
--6.406440278922631
-787
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -945,13 +767,13 @@ y_array: [-4.         -3.79487179 -3.58974359 -3.38461538 -3.17948718 -2.9743589
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.2. </span>Workshop 4: Modelling Space</p>
+            <p class="prev-next-title"><span class="section-number">4.3. </span>Workshop 4: Modelling Space</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="2d_arrays_homework.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.3. </span>Homework</p>
+        <p class="prev-next-title"><span class="section-number">4.4. </span>Homework</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

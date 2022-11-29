@@ -280,22 +280,46 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../functions/functions_notes.html">
-     3.1. Functions
+     3.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../functions/functions.html">
-     3.2. Workshop 3: Functions
+     3.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../functions/functions_solutions.html">
+       3.3.4. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../functions/functions_homework.html">
-     3.3. Homework
+     3.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../functions/functions_homework_answers.html">
+       3.4.1. Homework solutions
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_answers.html">
-     3.4. Homework solutions
+    <a class="reference internal" href="../functions/functions_extra.html">
+     3.5. Further Practice
     </a>
    </li>
   </ul>
@@ -304,39 +328,49 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
-     4.1. Notes
+     4.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
-     4.2. Workshop
+     4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../2d_arrays/2d_arrays_answers.html">
+       4.3.3. Solutions
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
-     4.3. Homework
+     4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../2d_arrays/2d_arrays_homework_answers.html">
+       4.4.1. Homework Answers
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -344,6 +378,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../cellular_automata/cellular_automata.html">
    5. Tutorial 5: Cellular Automata
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Coursework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../coursework/coursework.html">
+   NSCI0007 Coursework
   </a>
  </li>
 </ul>
@@ -794,8 +840,8 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-x_{i+1} &amp;= x_i + v_i\Delta t \\
-y_{i+1} &amp;= y_i + u_i\Delta t.
+x_{i+1} &amp;= x_i + u_i\Delta t \\
+y_{i+1} &amp;= y_i + v_i\Delta t.
 \end{align*}
 \end{split}\]</div>
 <p>The x-velocity <span class="math notranslate nohighlight">\(u_i\)</span> is constant, and the y-velocity changes due to the gravitational acceleration <span class="math notranslate nohighlight">\(g=9.81\)</span> m/s.</p>

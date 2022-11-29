@@ -317,6 +317,11 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../functions/functions_extra.html">
+     3.5. Further Practice
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -384,7 +389,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../coursework/coursework.html">
-   NSCI0007 Coursework (LSA)
+   NSCI0007 Coursework
   </a>
  </li>
 </ul>
@@ -611,7 +616,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="workshop-4-modelling-space">
 <h1><span class="section-number">4.3. </span>Workshop 4: Modelling Space<a class="headerlink" href="#workshop-4-modelling-space" title="Permalink to this headline">#</a></h1>
-<p>We’ve already seen that we can use arrays to store one-dimensional sequences of numerical data. Such data might represent a time series of measurements, such as daily recordings of atmospheric pressure (<a class="reference internal" href="#pressure-fig"><span class="std std-numref">Fig. 4.2</span></a>) where the value in the array <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> correspond to the pressure on day <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<p>We’ve already seen that we can use arrays to store one-dimensional sequences of numerical data. Such data might represent a time series of measurements, such as daily recordings of atmospheric pressure (<a class="reference internal" href="#pressure-fig"><span class="std std-numref">Fig. 4.2</span></a>) where the value <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> corresponds to the pressure on day <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <figure class="align-default" id="pressure-fig" style="width: 400px">
 <div class="cell_output docutils container">
 <img alt="../_images/2d_arrays_0_1.png" src="../_images/2d_arrays_0_1.png" />
@@ -620,7 +625,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Atmospheric pressure measured for 113 consecutive days.</span><a class="headerlink" href="#pressure-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>On the other hand, we might need to work with data that is 2-dimensional, such as recordings of atmospheric pressure over in a rectangular region. The values in the array are then indexed by two numbers so that <code class="docutils literal notranslate"><span class="pre">x[i,</span> <span class="pre">j]</span></code> corresponds to the pressure at the coordinate <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j</span></code>. Such arrays can be represented as a heat map, which is an image where the intensity of each pixel represents the value of the array element (<a class="reference internal" href="#pressure-2d-fig"><span class="std std-numref">Fig. 4.3</span></a>).</p>
+<p>On the other hand, we might need to work with data that is two-dimensional, such as recordings of atmospheric pressure over a rectangular region. The values in the array are then indexed by two numbers so that <code class="docutils literal notranslate"><span class="pre">x[i,</span> <span class="pre">j]</span></code> corresponds to the pressure at the coordinate <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j</span></code>. Such arrays can be represented as a heat map, which is an image where the intensity of each pixel represents the value of the array element (<a class="reference internal" href="#pressure-2d-fig"><span class="std std-numref">Fig. 4.3</span></a>).</p>
 <figure class="align-default" id="pressure-2d-fig" style="width: 400px">
 <div class="cell_output docutils container">
 <img alt="../_images/2d_arrays_2_0.png" src="../_images/2d_arrays_2_0.png" />
@@ -631,7 +636,7 @@ title="Print to PDF"
 </figure>
 <section id="d-moving-average">
 <h2><span class="section-number">4.3.1. </span>1D Moving Average<a class="headerlink" href="#d-moving-average" title="Permalink to this headline">#</a></h2>
-<p>A <strong>moving average</strong> is commonly used when visualising time series data in order to smooth out short-term fluctuations in the data. <a class="reference internal" href="#moving-average-fig"><span class="std std-numref">Fig. 4.4</span></a> shows 113 days of atmospheric pressure are displayed along with the 10-day and 5-day moving averages.</p>
+<p>A <strong>moving average</strong> is commonly used when visualising time series data in order to smooth out short-term fluctuations in the data. <a class="reference internal" href="#moving-average-fig"><span class="std std-numref">Fig. 4.4</span></a> shows 113 days of atmospheric pressure along with the 10-day and 5-day moving averages.</p>
 <figure class="align-default" id="moving-average-fig" style="width: 600px">
 <div class="cell_output docutils container">
 <img alt="../_images/2d_arrays_0_0.png" src="../_images/2d_arrays_0_0.png" />
@@ -640,7 +645,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Atmospheric pressure measured for 113 consecutive days, along with 10-day and 5-day moving averages, where the <span class="math notranslate nohighlight">\(k\)</span>-day moving averages are taken over <span class="math notranslate nohighlight">\(2k+1\)</span> measurements centred at each day.</span><a class="headerlink" href="#moving-average-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In this workshop, we define the <strong>k-moving average</strong> of an array is the array formed by averaging <span class="math notranslate nohighlight">\(k\)</span> values on either side of each element (a total of <span class="math notranslate nohighlight">\(2k + 1\)</span> elements). For example, given a sequence of values <span class="math notranslate nohighlight">\(x_i\)</span> then the 1-moving average <span class="math notranslate nohighlight">\(y_i\)</span> is defined by (see <a class="reference internal" href="#moving-average-def"><span class="std std-numref">Fig. 4.5</span></a>):</p>
+<p>In this workshop, we define the <strong>k-moving average</strong> of an array as the array formed by averaging <span class="math notranslate nohighlight">\(k\)</span> values on either side of each element (a total of <span class="math notranslate nohighlight">\(2k + 1\)</span> elements). For example, given a sequence of values <span class="math notranslate nohighlight">\(x_i\)</span> then the 1-moving average <span class="math notranslate nohighlight">\(y_i\)</span> is defined by (see <a class="reference internal" href="#moving-average-def"><span class="std std-numref">Fig. 4.5</span></a>):</p>
 <div class="math notranslate nohighlight">
 \[y_i = (x_{i-1} + x_i + x_{i+1})/3.\]</div>
 <figure class="align-default" id="moving-average-def">
@@ -673,7 +678,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>A more compact way to calculate the sum of consecutive elements is using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> slice notation. We can replace <code class="docutils literal notranslate"><span class="pre">(x[i-1]</span> <span class="pre">+</span> <span class="pre">x[i]</span> <span class="pre">+</span> <span class="pre">x[i+1])/3</span></code> with <code class="docutils literal notranslate"><span class="pre">np.average(x[i-1:i+2])</span></code>. <code class="docutils literal notranslate"><span class="pre">x[a,</span> <span class="pre">b]</span></code> represents the subarray from <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">b</span></code> (<em>including</em> the lower limit but <em>excluding</em> the upper limt).</p>
+<p>A more compact way to calculate the sum of consecutive elements is using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> slice notation. We can replace <code class="docutils literal notranslate"><span class="pre">(x[i-1]</span> <span class="pre">+</span> <span class="pre">x[i]</span> <span class="pre">+</span> <span class="pre">x[i+1])/3</span></code> with <code class="docutils literal notranslate"><span class="pre">np.average(x[i-1:i+2])</span></code>. <code class="docutils literal notranslate"><span class="pre">x[a:b]</span></code> represents the subarray from <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">b</span></code> (<em>including</em> the lower limit but <em>excluding</em> the upper limit).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -691,18 +696,18 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Notice that when <code class="docutils literal notranslate"><span class="pre">i=0</span></code> or <code class="docutils literal notranslate"><span class="pre">i=n</span></code> the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1,i+2]</span></code> would include elements outside the bounds of the array <code class="docutils literal notranslate"><span class="pre">x</span></code>. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop therefore excludes the first and last element in its <code class="docutils literal notranslate"><span class="pre">range</span></code> function and we end up with zeros padding the start and end of the array.</p>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-0">
+<p>Notice that when <code class="docutils literal notranslate"><span class="pre">i=0</span></code> or <code class="docutils literal notranslate"><span class="pre">i=n</span></code> the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1:i+2]</span></code> would include elements outside the bounds of the array <code class="docutils literal notranslate"><span class="pre">x</span></code>. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop therefore excludes the first and last element in its <code class="docutils literal notranslate"><span class="pre">range</span></code> function and we end up with zeros padding the start and end of the array.</p>
+<div class="exercise admonition" id="exercise_4_5">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
 <section id="exercise-content">
-<p>Calculate the 5-moving average of <code class="docutils literal notranslate"><span class="pre">x</span></code>. You should get the following result:</p>
+<p>Calculate the 2-moving average of <code class="docutils literal notranslate"><span class="pre">x</span></code>. You should get the following result:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">3.6</span>  <span class="mf">3.88</span> <span class="mf">3.5</span>  <span class="mf">0.</span>   <span class="mf">0.</span>  <span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </div>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-1">
+<div class="exercise admonition" id="exercise_4_6">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.6 </span></p>
 <section id="exercise-content">
@@ -716,31 +721,10 @@ title="Print to PDF"
     <span class="k">return</span> <span class="n">y</span>
 </pre></div>
 </div>
-<p>Check that <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">2)</span></code> produce the correct 1- and 2-moving averages as previously calculated.</p>
+<p>Check that <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">moving_average(x,</span> <span class="pre">2)</span></code> produce the correct 1- and 2-moving averages, as previously calculated.</p>
 </section>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">):</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-    
-    <span class="k">return</span> <span class="n">y</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">moving_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.   0.   3.6  3.88 3.5  0.   0.  ]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Instead of padding the start and end of the array with zeros, we can simply average only the elements of the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1,i+2]</span></code> which lie within the bounds of <code class="docutils literal notranslate"><span class="pre">x</span></code>. In the case of the 1-moving average we can achieve this by replacing the lower limit with <code class="docutils literal notranslate"><span class="pre">max(i-1,</span> <span class="pre">0)</span></code> and the upper limit with <code class="docutils literal notranslate"><span class="pre">min(i+2,</span> <span class="pre">n)</span></code>. We also change the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to include the full range from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p>Instead of padding the start and end of the array with zeros, we can simply average only the elements of the subarray <code class="docutils literal notranslate"><span class="pre">x[i-1:i+2]</span></code> which lie within the bounds of <code class="docutils literal notranslate"><span class="pre">x</span></code>. In the case of the 1-moving average we can achieve this by replacing the lower limit with <code class="docutils literal notranslate"><span class="pre">max(i-1,</span> <span class="pre">0)</span></code> and the upper limit with <code class="docutils literal notranslate"><span class="pre">min(i+2,</span> <span class="pre">n)</span></code>. We also change the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to include the full range from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -758,7 +742,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-2">
+<div class="exercise admonition" id="exercise_4_7">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.7 </span></p>
 <section id="exercise-content">
@@ -773,11 +757,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-3">
+<div class="exercise admonition" id="exercise_4_8">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.8 </span></p>
 <section id="exercise-content">
-<p>Plot the atmospheric pressure data on a line graph. On the same graph, plot the 5- and 10-moving averages (as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">moving_average</span></code>).</p>
+<p>Plot the atmospheric pressure data on a line graph. On the same graph, plot the 5- and 10-moving averages (as shown in <a class="reference internal" href="#moving-average-fig"><span class="std std-numref">Fig. 4.4</span></a>).</p>
 </section>
 </div>
 </section>
@@ -786,7 +770,7 @@ title="Print to PDF"
 <p>We can extend the definition of moving average to 2-dimensional data. One application of moving averages on 2-dimensional data is smoothing images. In <a class="reference internal" href="#cats-fig"><span class="std std-numref">Fig. 4.6</span></a> the image on the left is an <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">m</span></code> array where the colour intensity of each pixel corresponds to the value of each array element. Applying a 2-dimensional moving average to each pixel result in the smoothed image on the right.</p>
 <figure class="align-default" id="cats-fig" style="width: 600px">
 <div class="cell_output docutils container">
-<img alt="../_images/2d_arrays_17_0.png" src="../_images/2d_arrays_17_0.png" />
+<img alt="../_images/2d_arrays_15_0.png" src="../_images/2d_arrays_15_0.png" />
 </div>
 <figcaption>
 <p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">An image before (left) and after (right) 2-dimensional averaging.</span><a class="headerlink" href="#cats-fig" title="Permalink to this image">#</a></p>
@@ -850,11 +834,11 @@ average: 2.6666666666666665
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-4">
+<div class="exercise admonition" id="exercise_4_9">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.9 </span></p>
 <section id="exercise-content">
-<p>Complete the following code to calculate the 2d moving 1-average for all cells in <code class="docutils literal notranslate"><span class="pre">x</span></code> (except the cells along each edge).</p>
+<p>Complete the following code to calculate the 2d 1-moving average for all cells in <code class="docutils literal notranslate"><span class="pre">x</span></code> (except the cells along each edge).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
               <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
               <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -883,7 +867,7 @@ average: 2.6666666666666665
 </div>
 </section>
 </div>
-<p>Now let’s try this procedure on the image shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cats</span></code>. The data for this image can be found in the file <a href="../modelling_change/falling_cat.txt" download>falling_cat.txt</a>. The following code can be used to load the image file into a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, then display the contents of the array.</p>
+<p>Now let’s try this procedure on the image shown in <a class="reference internal" href="#cats-fig"><span class="std std-numref">Fig. 4.6</span></a>. The data for this image can be found in the file <a href="../modelling_change/falling_cat.txt" download>falling_cat.txt</a>. The following code can be used to load the image file into a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, then display the contents of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;falling_cat.txt&quot;</span><span class="p">)</span>
@@ -892,17 +876,17 @@ average: 2.6666666666666665
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x2ca1cd88dc8&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x296921b9e88&gt;
 </pre></div>
 </div>
-<img alt="../_images/2d_arrays_24_1.png" src="../_images/2d_arrays_24_1.png" />
+<img alt="../_images/2d_arrays_22_1.png" src="../_images/2d_arrays_22_1.png" />
 </div>
 </div>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-5">
+<div class="exercise admonition" id="exercise_4_10">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.10 </span></p>
 <section id="exercise-content">
-<p>Load the file <code class="docutils literal notranslate"><span class="pre">falling_cat.txt</span></code> into a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array. Use your code from the previous question to calculate its moving 1-average, then use <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code> to display the image before and after smoothing. You should end up with two images similar to <a class="reference internal" href="#cats-fig"><span class="std std-numref">Fig. 4.6</span></a>.</p>
+<p>Load the file <code class="docutils literal notranslate"><span class="pre">falling_cat.txt</span></code> into a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array. Use your code from the previous question to calculate its 1-moving average, then use <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code> to display the image before and after smoothing. You should end up with two images similar to <a class="reference internal" href="#cats-fig"><span class="std std-numref">Fig. 4.6</span></a>.</p>
 <p>Hint: you can use <code class="docutils literal notranslate"><span class="pre">x.shape</span></code> to find the dimensions of the original array.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;falling_cat.txt&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
@@ -914,7 +898,7 @@ average: 2.6666666666666665
 </section>
 </div>
 <p>The 2-dimensional 1-moving average calculates the average across 3 by 3 subarrays centred at each array element. Similarly, we can calculate the k-moving average across <span class="math notranslate nohighlight">\(2k+1\)</span> by <span class="math notranslate nohighlight">\(2k+1\)</span> subarrays.</p>
-<div class="exercise admonition" id="2d_arrays/2d_arrays-exercise-6">
+<div class="exercise admonition" id="exercise_4_11">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.11 </span></p>
 <section id="exercise-content">
@@ -931,7 +915,7 @@ average: 2.6666666666666665
 <span class="c1"># this should result in a very blurry image</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">moving_average_2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
