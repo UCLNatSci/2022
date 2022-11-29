@@ -451,7 +451,7 @@ Contour plot of $\displaystyle f=x^3-y^3-2xy+2$, showing stationary points clear
 :class: seealso, dropdown
 1\. Find the stationary points for the surface described by $f(x,y) = x^2 + 3xy^2 + 2y^3$.
 
-2\. Find the stationary points for the surface described by $f(x,y) = x^3 + y^2 - 3xy - 4$.
+2\. Find the stationary points for the surface described by $f(x,y) = x^3 + y^3 - 3xy - 4$.
 ````
 
 ````{admonition} Solutions
@@ -471,7 +471,9 @@ To find the points which satisfy $f_x = f_y = 0$, we have:
 6xy + 6y^2 = 6y(x+y) &=0
 ```
 
-Thus we find $y=0$ as a valid stationary point, this will therefore correspond to $x=0$.  Another stationary point will be found to satisfy by $y = -x$, hence we have to solve:
+Thus we find $y=0$ as a valid stationary point, this will therefore correspond to $x=0$.  
+
+Another stationary point will be found to satisfy by $y = -x$, hence we have to solve:
 ```{math}
 3x^2 + 2x = x(3x + 2) = 0
 ```
