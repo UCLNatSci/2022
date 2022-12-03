@@ -733,12 +733,41 @@ Q   &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}\end{split}\]</div>
 <p>We sometimes find that we can reduce more complicated (even non-linear) first order differential equations down to a solvable form using a substitution.</p>
 <div class="section" id="y-f-y-x-form">
 <h3><span class="section-number">13.4.1. </span><span class="math notranslate nohighlight">\(y' = f(y/x)\)</span> form<a class="headerlink" href="#y-f-y-x-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>homogeneous</strong> first order differential equation is one of the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = f\left(\frac{y}{x}\right)\]</div>
+<p>and this is typically one that, through a substitution, can be solved using separation of variables.  Let our substitution here be <span class="math notranslate nohighlight">\(u = \displaystyle\frac{y}{x}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y &amp;= ux\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{\mathrm{d}u}{\mathrm{d}x}x + u \\
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= f(u) \\
+\Rightarrow \int\frac{\mathrm{d}u}{f(u) - u} &amp;= \int\frac{\mathrm{d}x}{x}\end{split}\]</div>
+<p>and depending on the complexity of this LHS integral, this problem is solvable!</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Solve the ODE <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x^2 + y^2}{xy}\)</span>.</p>
+<p>Rewriting this to be in the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>, means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= \frac{x}{y} + \frac{y}{x} = u + \frac{1}{u}\\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}x &amp;=  \frac{1}{u}\end{split}\]</div>
+<p>This is now in a form for separation of variables and integrating:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int u\,\mathrm{d}u &amp;= \int \frac{\mathrm{d}x}{x} \\
+\frac{1}{2}u^2 &amp;= \ln|x| + C \\
+u &amp;= \sqrt{2 \ln|x| + C}\end{split}\]</div>
+<p>Remember that before finishing the question, we must convert this back into <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y = x\sqrt{2 \ln|x| + C}\]</div>
+</div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice questions</p>
 <p>1. Solve the following ODEs</p>
 <p>a.</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos^2\left(\frac{y}{x^2}\right)\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}\]</div>
 <p>b.</p>
 <div class="math notranslate nohighlight">
 \[x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)\]</div>
@@ -746,6 +775,18 @@ Q   &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}\end{split}\]</div>
 </div>
 <div class="section" id="y-f-ax-by-form">
 <h3><span class="section-number">13.4.2. </span><span class="math notranslate nohighlight">\(y' = f(ax+by)\)</span> form<a class="headerlink" href="#y-f-ax-by-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A first order differential equation of the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = f(ax+by)\]</div>
+<p>can also be solved through a substitution which leads to separation of variables.  Let our substitution here be <span class="math notranslate nohighlight">\(u = ax+by\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= a + b\frac{\mathrm{d}y}{\mathrm{d}x} \\
+a + b\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{\mathrm{d}u}{\mathrm{d}x} \\
+\Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &amp;= \int\,\mathrm{d}x\end{split}\]</div>
+<p>and depending on the complexity of this LHS integral, this problem is solvable!</p>
+</div>
 </div>
 <div class="section" id="benoulli-form">
 <h3><span class="section-number">13.4.3. </span>Benoulli form<a class="headerlink" href="#benoulli-form" title="Permalink to this headline">¶</a></h3>

@@ -577,19 +577,57 @@ We sometimes find that we can reduce more complicated (even non-linear) first or
 
 ### $y' = f(y/x)$ form
 
+````{admonition} Definition
+A **homogeneous** first order differential equation is one of the form:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = f\left(\frac{y}{x}\right)
+```
+and this is typically one that, through a substitution, can be solved using separation of variables.  Let our substitution here be $u = \displaystyle\frac{y}{x}$:
+```{math}
+y &= ux\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{\mathrm{d}u}{\mathrm{d}x}x + u \\
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= f(u) \\
+\Rightarrow \int\frac{\mathrm{d}u}{f(u) - u} &= \int\frac{\mathrm{d}x}{x}
+```
+and depending on the complexity of this LHS integral, this problem is solvable!
+````
+
+````{admonition} Worked example
+:class: seealso
+Solve the ODE $\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x^2 + y^2}{xy}$.
+
+Rewriting this to be in the form $y' = f(y/x) = f(u)$, means:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}u}{\mathrm{d}x}x + u &= \frac{x}{y} + \frac{y}{x} = u + \frac{1}{u}\\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}x &=  \frac{1}{u}
+```
+This is now in a form for separation of variables and integrating:
+```{math}
+\int u\,\mathrm{d}u &= \int \frac{\mathrm{d}x}{x} \\
+\frac{1}{2}u^2 &= \ln|x| + C \\
+u &= \sqrt{2 \ln|x| + C}
+```
+Remember that before finishing the question, we must convert this back into $y(x)$:
+```{math}
+y = x\sqrt{2 \ln|x| + C}
+```
+````
+
 ````{admonition} Practice questions
 :class: seealso, dropdown
 1\. Solve the following ODEs
 
-a\. 
+a\.
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos^2\left(\frac{y}{x^2}\right)
+\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}
 ```
 
-b\.
+b\. 
 ```{math}
 x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)
 ```
+
+
 ````
 
 ````{admonition} Solutions
@@ -598,6 +636,21 @@ x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)
 ````
 
 ### $y' = f(ax+by)$ form
+
+
+````{admonition} Definition
+A first order differential equation of the form:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = f(ax+by)
+```
+can also be solved through a substitution which leads to separation of variables.  Let our substitution here be $u = ax+by$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} &= a + b\frac{\mathrm{d}y}{\mathrm{d}x} \\
+a + b\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{\mathrm{d}u}{\mathrm{d}x} \\
+\Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &= \int\,\mathrm{d}x
+```
+and depending on the complexity of this LHS integral, this problem is solvable!
+````
 
 ### Benoulli form
 
