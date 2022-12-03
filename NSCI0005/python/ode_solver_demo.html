@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15. ODEs with Python &#8212; Mathematics for Natural Sciences A</title>
+    <title>ODEs with Python &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="14. Second Order ODEs" href="../odes/2nd_order_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Prelim/notationfunctions.html">
    1. Mathematical Prelimaries
@@ -166,11 +165,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/2nd_order_ODEs.html">
    14. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -279,22 +273,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-exponential-growth">
-   15.1. Example 1: Exponential growth
+   Example 1: Exponential growth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-simple-harmonic-motion">
-   15.2. Example 2: Simple Harmonic Motion
+   Example 2: Simple Harmonic Motion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-shm-with-forcing">
-   15.3. Example 3: SHM with forcing
+   Example 3: SHM with forcing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-4-the-sir-model-of-infection">
-   15.4. Example 4 : The SIR model of infection
+   Example 4 : The SIR model of infection
   </a>
  </li>
 </ul>
@@ -319,22 +313,22 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-exponential-growth">
-   15.1. Example 1: Exponential growth
+   Example 1: Exponential growth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-simple-harmonic-motion">
-   15.2. Example 2: Simple Harmonic Motion
+   Example 2: Simple Harmonic Motion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-shm-with-forcing">
-   15.3. Example 3: SHM with forcing
+   Example 3: SHM with forcing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-4-the-sir-model-of-infection">
-   15.4. Example 4 : The SIR model of infection
+   Example 4 : The SIR model of infection
   </a>
  </li>
 </ul>
@@ -347,7 +341,7 @@
               <div>
                 
   <div class="section" id="odes-with-python">
-<h1><span class="section-number">15. </span>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
+<h1>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## preamble : This part loads the packages that we will use</span>
@@ -364,7 +358,7 @@
 \[\frac{\mathrm{d}X}{\mathrm{d}t}=f(X,t,c)\]</div>
 <p>where <span class="math notranslate nohighlight">\(X\)</span> is a list of dependent variables and c is a sequence of parameters.</p>
 <div class="section" id="example-1-exponential-growth">
-<h2><span class="section-number">15.1. </span>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
+<h2>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}I}{\mathrm{d}t}=\mu(r_0-1)I\]</div>
 <p>The first step requires us to set up a function that returns the derivative for a given value of <span class="math notranslate nohighlight">\(I\)</span>, and parameters <span class="math notranslate nohighlight">\(\mu,r_0\)</span>.</p>
@@ -420,7 +414,7 @@
 </div>
 </div>
 <div class="section" id="example-2-simple-harmonic-motion">
-<h2><span class="section-number">15.2. </span>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
+<h2>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
 <p>The SHM equation is</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}=-\frac{k}{m}x,\]</div>
@@ -483,7 +477,7 @@
 </div>
 </div>
 <div class="section" id="example-3-shm-with-forcing">
-<h2><span class="section-number">15.3. </span>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
+<h2>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
 <p>Now let’s see what happens if we add in a forcing term</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}-\frac{k}{m}x=F\sin(\Omega t),\]</div>
@@ -520,7 +514,7 @@
 <p>Experiment with making <span class="math notranslate nohighlight">\(\Omega\)</span> closer to <span class="math notranslate nohighlight">\(1\)</span>. What happens?</p>
 </div>
 <div class="section" id="example-4-the-sir-model-of-infection">
-<h2><span class="section-number">15.4. </span>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
+<h2>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
 <p>In this model, <span class="math notranslate nohighlight">\(S\)</span> represents people who are susceptible to catching an infection, <span class="math notranslate nohighlight">\(I\)</span> represents people who already have the infection, and <span class="math notranslate nohighlight">\(R\)</span> represents people who have recovered.</p>
 <p>\begin{align*}
 \frac{\mathrm{d}S}{\mathrm{d}t}&amp;=-\beta \frac{S I}{N}\
@@ -587,14 +581,7 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../odes/2nd_order_ODEs.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14. </span>Second Order ODEs</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

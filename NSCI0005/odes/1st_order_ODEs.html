@@ -169,11 +169,6 @@
    14. Second Order ODEs
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/ode_solver_demo.html">
-   15. ODEs with Python
-  </a>
- </li>
 </ul>
 
     </div>
@@ -272,26 +267,44 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#benoulli-form">
-   13.3. Benoulli form
+  <a class="reference internal nav-link" href="#perfect-differential-form">
+   13.3. Perfect differential form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitution-methods">
+   13.4. Substitution methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-f-y-x-form">
+     13.4.1.
+     <span class="math notranslate nohighlight">
+      \(y' = f(y/x)\)
+     </span>
+     form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-f-ax-by-form">
+     13.4.2.
+     <span class="math notranslate nohighlight">
+      \(y' = f(ax+by)\)
+     </span>
+     form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benoulli-form">
+     13.4.3. Benoulli form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#riccati-form">
-     13.3.1. Riccati form
+     13.4.4. Riccati form
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#perfect-differential-form">
-   13.4. Perfect differential form
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelling-systems-with-odes">
-   13.5. Modelling systems with ODEs
-  </a>
  </li>
 </ul>
 
@@ -324,26 +337,44 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#benoulli-form">
-   13.3. Benoulli form
+  <a class="reference internal nav-link" href="#perfect-differential-form">
+   13.3. Perfect differential form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitution-methods">
+   13.4. Substitution methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-f-y-x-form">
+     13.4.1.
+     <span class="math notranslate nohighlight">
+      \(y' = f(y/x)\)
+     </span>
+     form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-f-ax-by-form">
+     13.4.2.
+     <span class="math notranslate nohighlight">
+      \(y' = f(ax+by)\)
+     </span>
+     form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benoulli-form">
+     13.4.3. Benoulli form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#riccati-form">
-     13.3.1. Riccati form
+     13.4.4. Riccati form
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#perfect-differential-form">
-   13.4. Perfect differential form
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelling-systems-with-odes">
-   13.5. Modelling systems with ODEs
-  </a>
  </li>
 </ul>
 
@@ -590,96 +621,8 @@ Firstly rearrange this equation to:</p>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is an arbritary constant.</p>
 </div>
 </div>
-<div class="section" id="benoulli-form">
-<h2><span class="section-number">13.3. </span>Benoulli form<a class="headerlink" href="#benoulli-form" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-defintion admonition">
-<p class="admonition-title">Defintion</p>
-<p>A Benoulli differential equation takes the form:</p>
-<div class="math notranslate nohighlight" id="equation-benoulliode">
-<span class="eqno">(13.6)<a class="headerlink" href="#equation-benoulliode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}\]</div>
-<p>We see that for <span class="math notranslate nohighlight">\(n = 0,\, 1\)</span> this reduces to cases already discussed, but for any other <span class="math notranslate nohighlight">\(n\)</span> this equation is clearly non-linear in <span class="math notranslate nohighlight">\(y\)</span>.  We can
-however make progress using the substitution:</p>
-<div class="math notranslate nohighlight">
-\[u = y^{1-n}\]</div>
-<p>which transforms <a class="reference internal" href="#equation-benoulliode">(13.6)</a> into a linear differential equation of the form:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(x)\,u = -(n-1)\,Q(x)\]</div>
-<p>which can then be solved using the integrating factor method.</p>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Worked example</p>
-<p>If we want to solve the ODE:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2\]</div>
-<p>using the substitution <span class="math notranslate nohighlight">\(u = y^{-1}\)</span> here (as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>):</p>
-<div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
-<p>and therefore:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &amp;= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &amp;= \frac{x}{u^2}\end{split}\]</div>
-<p>substituing these results in to the ODE:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &amp;= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &amp;= -x\end{split}\]</div>
-<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-x^2/2}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &amp;=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &amp;= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x \end{split}\]</div>
-<p>Using a subsitution (or inspection) we can integrate this RHS term to find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}e^{-x^2/2}\,u &amp;= -e^{-x^2/2} + C \\
-u(x) &amp;= -1 + Ce^{x^2/2} \\
-y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
-<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end.</p>
-</div>
-<div class="section" id="riccati-form">
-<h3><span class="section-number">13.3.1. </span>Riccati form<a class="headerlink" href="#riccati-form" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-defintion admonition">
-<p class="admonition-title">Defintion</p>
-<p>A Riccati differential equation takes the form:</p>
-<div class="math notranslate nohighlight" id="equation-riccatiode">
-<span class="eqno">(13.7)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)\]</div>
-<p>which we can recast in terms of a variable <span class="math notranslate nohighlight">\(u(x)\)</span>, which satisfies an ODE:</p>
-<div class="math notranslate nohighlight">
-\[u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2\]</div>
-<p>and we can solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[y = -\frac{u'}{q_2\,u}\]</div>
-</div>
-<p>We see that if <span class="math notranslate nohighlight">\(q_0=0\)</span>, then this just reduces to a Benoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(q_2=0\)</span>, then this is just in integrating form factor, so this
-equation can be thought of as a hybrid between the two.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Worked example</p>
-<p>Consider the ODE:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y' - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
-<p>this equation can be rewritten as:</p>
-<div class="math notranslate nohighlight">
-\[y' = \frac{2y}{x}-x^2\,y^2\]</div>
-<p>and then transformed into the 2nd order ODE:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}u'' - R\,u' + S\,u &amp;= 0 \\
-R = \frac{4}{x}\,\quad &amp; S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &amp;= 0\end{split}\]</div>
-<p>which we can solve using an IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}x^{-4}\,u'' - 4\,x^{-5} \,u' &amp;= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &amp;= 0\end{split}\]</div>
-<p>Since the derivative of a constant is zero, this means:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}u' &amp;= C_1\,x^4 \\
-u &amp;= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &amp;= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants, we can tidy this expression up:</p>
-<div class="math notranslate nohighlight">
-\[y = -\frac{5x^2}{x^5 + C_3}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_3\)</span> is a constants.</p>
-</div>
-</div>
-</div>
 <div class="section" id="perfect-differential-form">
-<h2><span class="section-number">13.4. </span>Perfect differential form<a class="headerlink" href="#perfect-differential-form" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3. </span>Perfect differential form<a class="headerlink" href="#perfect-differential-form" title="Permalink to this headline">¶</a></h2>
 <p>If we are struggling to find a first order ODE method that works and has clearly integrable terms, we can try the perfect differential test.</p>
 <p>Recall from the multivariable change rule, the total differential of a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> is:</p>
 <div class="math notranslate nohighlight">
@@ -723,14 +666,18 @@ Q(x,\,y) &amp;= \frac{\partial f}{\partial y} = 2x^2\,y \Rightarrow f(x,\,y) = \
 y &amp;= \pm\sqrt{\frac{1}{x} + \frac{C}{x^2}}\end{split}\]</div>
 </div>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Practice question</p>
+<p class="admonition-title">Practice questions</p>
 <p>1. Solve the non-linear ODE:</p>
 <div class="math notranslate nohighlight">
 \[\Big(2xy + e^{-x^2}\Big) \,\frac{\mathrm{d}y}{\mathrm{d}x} + y^2 = 2xy\,e^{-x^2}\]</div>
 <p>with the condition <span class="math notranslate nohighlight">\(y(0) = 1\)</span>.</p>
+<p>2. Solve the non-linear ODE:</p>
+<div class="math notranslate nohighlight">
+\[3y^3\,e^{3xy} - 1 + \left(2y\,e^{3xy} + 3x\,y^2\,e^{3xy} \right)\,\frac{\mathrm{d}y}{\mathrm{d}x} = 0\]</div>
+<p>with the condition <span class="math notranslate nohighlight">\(y(0) = 1\)</span>.</p>
 </div>
 <div class="seealso dropdown admonition">
-<p class="admonition-title">Solution</p>
+<p class="admonition-title">Solutions</p>
 <p>1. First write in total differential form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x + \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y &amp;= 0\\
@@ -739,7 +686,7 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial P}{\partial y} &amp;= 2y - 2xe^{-x^2}\\
 \frac{\partial Q}{\partial x} &amp;= 2y - 2xe^{-x^2}\end{split}\]</div>
-<p>and so it is!  So to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
+<p>this condition is met and so to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial f}{\partial x} &amp;= y^2 - 2xy\,e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x = xy^2 + y\,e^{-x^2} + g(y)\\
 \frac{\partial f}{\partial y} &amp;= 2xy + e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(2xy + e^{-x^2}\Big)\,\mathrm{d}y = xy^2 + y\,e^{-x^2} + h(x)\\\end{split}\]</div>
@@ -752,27 +699,213 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
 <p>which we could then solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>, as this is quadratic <span class="math notranslate nohighlight">\(xy^2 + y\,e^{-x^2} - 1 = 0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}\]</div>
+<p>2. First write in total differential form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(3y^3\,e^{3xy} - 1\right)\mathrm{d}x + \left(2y\,e^{3xy} + 3x\,y^2\,e^{3xy} \right)\,\mathrm{d}y &amp;= 0\\
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
+<p>then check that this is an exact differential:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial P}{\partial y} &amp;= 9y^2\,e^{xy} + 9xy^3\,e^{xy}\\
+\frac{\partial Q}{\partial x} &amp;= 6y^2\,e^{sy} + 3y^2\,e^{3xy} + 3x\,y^3\,e^{xy} = 9y^2\,e^{xy} + 9xy^3\,e^{xy}\end{split}\]</div>
+<p>this condition is met and so to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)\]</div>
+<p>We could attempt the same process on <span class="math notranslate nohighlight">\(f_y\)</span> however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae <span class="math notranslate nohighlight">\(\int y^n\,e^{axy}\,mathrm{d}y\)</span>, but
+we could instead by differentiate this preliminary expression for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> and then compare <span class="math notranslate nohighlight">\(f_y\)</span> with what is left to figure out the anti-derivative:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f   &amp;= y^2\,e^{3xy} - x + g(y) \\
+f_y &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
+Q   &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}\end{split}\]</div>
+<p>which tells us that <span class="math notranslate nohighlight">\(g'(y) = 0\)</span> hence at most <span class="math notranslate nohighlight">\(g(y)\)</span> is a constant, which we can absorb into the constant value for <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>, therefore:</p>
+<div class="math notranslate nohighlight">
+\[y^2\,e^{3xy} - x  = C\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  Given the condition <span class="math notranslate nohighlight">\(y(0) = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1^2\,e^{0} - 0 = 1 = C\]</div>
+<p>Thus the solution is:</p>
+<div class="math notranslate nohighlight">
+\[y^2\,e^{3xy} - x  = 1\]</div>
+<p>Which we have to leave in this form as no simple elementary function solution exists.</p>
 </div>
 </div>
-<div class="section" id="modelling-systems-with-odes">
-<h2><span class="section-number">13.5. </span>Modelling systems with ODEs<a class="headerlink" href="#modelling-systems-with-odes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="substitution-methods">
+<h2><span class="section-number">13.4. </span>Substitution methods<a class="headerlink" href="#substitution-methods" title="Permalink to this headline">¶</a></h2>
+<p>We sometimes find that we can reduce more complicated (even non-linear) first order differential equations down to a solvable form using a substitution.</p>
+<div class="section" id="y-f-y-x-form">
+<h3><span class="section-number">13.4.1. </span><span class="math notranslate nohighlight">\(y' = f(y/x)\)</span> form<a class="headerlink" href="#y-f-y-x-form" title="Permalink to this headline">¶</a></h3>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Solve the following ODEs</p>
+<p>a.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos^2\left(\frac{y}{x^2}\right)\]</div>
+<p>b.</p>
+<div class="math notranslate nohighlight">
+\[x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)\]</div>
+</div>
+</div>
+<div class="section" id="y-f-ax-by-form">
+<h3><span class="section-number">13.4.2. </span><span class="math notranslate nohighlight">\(y' = f(ax+by)\)</span> form<a class="headerlink" href="#y-f-ax-by-form" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="benoulli-form">
+<h3><span class="section-number">13.4.3. </span>Benoulli form<a class="headerlink" href="#benoulli-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-defintion admonition">
+<p class="admonition-title">Defintion</p>
+<p>A Benoulli differential equation takes the form:</p>
+<div class="math notranslate nohighlight" id="equation-benoulliode">
+<span class="eqno">(13.6)<a class="headerlink" href="#equation-benoulliode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}\]</div>
+<p>We see that for <span class="math notranslate nohighlight">\(n = 0,\, 1\)</span> this reduces to cases already discussed, but for any other <span class="math notranslate nohighlight">\(n\)</span> this equation is clearly non-linear in <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>We can make progress in solving these sorts of ODEs by using the substitution:</p>
+<div class="math notranslate nohighlight">
+\[u = y^{1-n}\]</div>
+<p>which transforms <a class="reference internal" href="#equation-benoulliode">(13.6)</a> into a linear differential equation, since:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = y^{1-n} &amp;\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} = (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x}\\
+\frac{\mathrm{d}y}{\mathrm{d}x} + P(x)\,y = Q(x)\,y^n &amp;\Rightarrow (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x} + (1-n)\,P(x)\,y^{1-n} = (1-n)\,Q(x)\\
+&amp;\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - (n-1)\,P(x)\,u = -(n-1)\,Q(x)\end{split}\]</div>
+<p>and as this ODE is linear in <span class="math notranslate nohighlight">\(u\)</span>, it can be solved using the integrating factor method.</p>
+</div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
-<p>The number of species S living on an island or habitat fragment of area A can be modelled as
-<span class="math notranslate nohighlight">\(S = cA^z\)</span>, where <span class="math notranslate nohighlight">\(z &gt; 0\)</span>. We can measure area in units that make <span class="math notranslate nohighlight">\(c = 1\)</span>, simplifying this equation into
-<span class="math notranslate nohighlight">\(S = A^z\)</span>. A common value for <span class="math notranslate nohighlight">\(z\)</span> is approximately 0.45 (found by data fitting).</p>
-<p>Find the critical value when <span class="math notranslate nohighlight">\(\frac{\mathrm{d}S}{\mathrm{d}A} = 1\)</span>: and explain the significance of this
-for biodiversity conservation.</p>
-<p>Given that:</p>
+<p>If we want to solve the ODE:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}S}{\mathrm{d}A} = 0.45\,A^{-0.55}\]</div>
-<p>then we can aim to find the critical value when <span class="math notranslate nohighlight">\(\frac{\mathrm{d}S}{\mathrm{d}A} = 1\)</span>:</p>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2\]</div>
+<p>using the substitution <span class="math notranslate nohighlight">\(u = y^{-1}\)</span> here (as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[0.45\,{A_c}^{-0.55} = 1 \Rightarrow A_c = \left(\frac{9}{20}\right)^{20/11} \simeq 0.234\dots\]</div>
-<p>For <span class="math notranslate nohighlight">\(A &lt; A_c\)</span>, any loss of habitat results in a proportionally greater loss of species, as we can see from:</p>
-<div class="figure align-default" id="speciesarea">
-<img alt="../_images/SvA.png" src="../_images/SvA.png" />
+\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &amp;= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
+xy^2 &amp;= \frac{x}{u^2}\end{split}\]</div>
+<p>substituing these results in to the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &amp;= \frac{x}{u^2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &amp;= -x\end{split}\]</div>
+<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-x^2/2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &amp;=  e^{-x^2/2}\,x \\
+e^{-x^2/2}\,u &amp;= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x \end{split}\]</div>
+<p>Using a subsitution (or inspection) we can integrate this RHS term to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e^{-x^2/2}\,u &amp;= -e^{-x^2/2} + C \\
+u(x) &amp;= -1 + Ce^{x^2/2} \\
+y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
+<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end.</p>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>Solve the following ODEs:</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[6\frac{\mathrm{d}y}{\mathrm{d}x} - 2y = x\,y^4\]</div>
+<p>which satisfies the condition <span class="math notranslate nohighlight">\(y(0) = -2\)</span>.</p>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} - \sqrt{y} = 0\]</div>
+<p>which satisfies the condition <span class="math notranslate nohighlight">\(y(1) = 0\)</span>,</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{1}{3}y = \frac{1}{6}x\,y^4 \]</div>
+<p>since the highest power on the RHS is <span class="math notranslate nohighlight">\(n = 4\)</span>, this means the substitution we need is <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-3}\)</span> and hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}&amp; \\
+\Rightarrow -3y^{-4}\,\frac{\mathrm{d}y}{\mathrm{d}x} + y^{-3} &amp;= -\frac{1}{2}x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + u(x) &amp;= -\frac{1}{2}x\end{split}\]</div>
+<p>which suggests an IF of the form <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int\,\mathrm{d}x} = e^x\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}\,e^x + u(x)\,e^x &amp;= -\frac{1}{2}x\,e^x \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,e^x\right) &amp;= -\frac{1}{2}x\,e^x \\
+u\,e^x = -\frac{1}{2}\int x\,e^x\,\mathrm{d}x + C &amp;= -\frac{1}{2}(x-1)\,e^{x} + C \\
+u = y^{-3} &amp;= -\frac{1}{2}(x-1) + C\,e^{-x}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(0)=-2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[-\frac{1}{8} = \frac{1}{2} + C \Rightarrow C = -\frac{5}{8}\]</div>
+<p>meaning the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = -\frac{2}{(4x-4 + 5\,e^{-x})^{1/3}}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = y^{1/2}\]</div>
+<p>since the highest power on the RHS is <span class="math notranslate nohighlight">\(n = \frac{1}{2}\)</span>, this means the substitution we need is <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{1/2}\)</span> and hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = \frac{1}{2}y^{-1/2}\frac{\mathrm{d}y}{\mathrm{d}x}&amp; \\
+\Rightarrow \frac{1}{2}y^{-1/2}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{1}{2}\frac{y^{1/2}}{x} &amp;= \frac{1}{2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{1}{2x}u(x) &amp;= \frac{1}{2}\end{split}\]</div>
+<p>which suggests an IF of the form <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int\frac{1}{2x}\,\mathrm{d}x} = e^{\frac{1}{2}\ln|x|} = x^{1/2}\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}\,x^{1/2} + u(x) &amp;= \frac{1}{2}x^{1/2} \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,x^{1/2}\right) &amp;= \frac{1}{2}x^{1/2} \\
+u\,x^{1/2} = -\frac{1}{2}\int x\,\mathrm{d}x + C &amp;= \frac{1}{2}\frac{2}{3}x^{3/2} + C \\
+u = y^{1/2} &amp;= \frac{1}{3}x + C\,x^{-1/2}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(1)=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{1}{3} + C \Rightarrow C = -\frac{1}{3}\]</div>
+<p>meaning the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \left(\frac{1}{3}x - \frac{1}{3}x^{-1/2} \right)^2 = \frac{x^3-2x^{3/2}+1}{9x}\]</div>
+</div>
+</div>
+<div class="section" id="riccati-form">
+<h3><span class="section-number">13.4.4. </span>Riccati form<a class="headerlink" href="#riccati-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-defintion admonition">
+<p class="admonition-title">Defintion</p>
+<p>A Riccati differential equation takes the form:</p>
+<div class="math notranslate nohighlight" id="equation-riccatiode">
+<span class="eqno">(13.7)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = p(x)\,y^2(x) + q(x)\,y(x) + r(x)\]</div>
+<p>which we can recast in terms of a variable <span class="math notranslate nohighlight">\(u(x)\)</span>, which satisfies an ODE:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u =0, \quad R = q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S = r\,p\]</div>
+<p>and we can solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y = -\frac{1}{p\,u}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
+</div>
+<p>Using the transformation <span class="math notranslate nohighlight">\(v = p\,y\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}v}{\mathrm{d}x} &amp;= \frac{\mathrm{d}p}{\mathrm{d}x}\,y + p\,\frac{\mathrm{d}y}{\mathrm{d}x} \\
+p\,\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= p^2\,y^2 + q\,p\,y + p\,r \\
+\Rightarrow \frac{\mathrm{d}v}{\mathrm{d}x} &amp;= v^2 + q\,v + p\,r + y\,\frac{\mathrm{d}p}{\mathrm{d}x} = v^2 + v\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \end{split}\]</div>
+<p>and then switching to the variable <span class="math notranslate nohighlight">\(u(x)\)</span>, where <span class="math notranslate nohighlight">\(v = -\displaystyle \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\)</span> means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}v}{\mathrm{d}x} &amp;= \frac{1}{u^2}\left(\frac{\mathrm{d}u}{\mathrm{d}x}\right)^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} 
+= v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} \\
+v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;= v^2 - \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \\
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;= \left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right)\frac{\mathrm{d}u}{\mathrm{d}x} - p\,r\,u\\
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;- R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u = 0\\
+R(x) &amp;= q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S(x) = r\,p\end{split}\]</div>
+<p>We see that if <span class="math notranslate nohighlight">\(r=0\)</span>, then this just reduces to a Benoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(p=0\)</span>, then this is just in integrating form factor, so this
+equation can be thought of as a hybrid between the two.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y' - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
+<p>this equation can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[y' = \frac{2y}{x}-x^2\,y^2\]</div>
+<p>and then transformed into the 2nd order ODE:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u'' - R\,u' + S\,u &amp;= 0 \\
+R = \frac{4}{x}\,\quad &amp; S = 0 \\
+\Rightarrow u'' -\frac{4}{x} \,u' &amp;= 0\end{split}\]</div>
+<p>which we can solve using an IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^{-4}\,u'' - 4\,x^{-5} \,u' &amp;= 0 \\
+\Big(x^{-4}\,u'\Big)^\prime &amp;= 0\end{split}\]</div>
+<p>Since the derivative of a constant is zero, this means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u' &amp;= C_1\,x^4 \\
+u &amp;= \frac{C_1\,x^5}{5} + C_2 \\
+\Rightarrow y &amp;= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants.  We can tidy this expression up:</p>
+<div class="math notranslate nohighlight">
+\[y = -\frac{5x^2}{x^5 + C_3}\]</div>
+<p>and <span class="math notranslate nohighlight">\(C_3\)</span> is a constant.</p>
+</div>
+<p>Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the
+resulting equation will need some quite powerful techinques to solve, especially if <span class="math notranslate nohighlight">\(R(x)\)</span> and <span class="math notranslate nohighlight">\(S(x)\)</span> are both functions of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 </div>
 </div>

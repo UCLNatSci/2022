@@ -416,118 +416,6 @@ where $K$ is an arbritary constant.
 
 
 
-
-
-## Benoulli form
-
-````{admonition} Defintion
-A Benoulli differential equation takes the form:
-```{math}
-:label: benoulliODE
-\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}
-```
-We see that for $n = 0,\, 1$ this reduces to cases already discussed, but for any other $n$ this equation is clearly non-linear in $y$.  We can 
-however make progress using the substitution:
-```{math}
-u = y^{1-n}
-```
-which transforms {eq}`benoulliODE` into a linear differential equation of the form:
-```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x}- (n-1)\,P(x)\,u = -(n-1)\,Q(x)
-```
-which can then be solved using the integrating factor method.
-````
-
-````{admonition} Worked example
-:class: seealso
-If we want to solve the ODE:
-```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2
-```
-using the substitution $u = y^{-1}$ here (as the highest power on the RHS is $n=2$):
-```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}
-```
-and therefore:
-```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &= \frac{x}{u^2}
-```
-substituing these results in to the ODE:
-```{math}
-\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &= -x
-```
-which we can then solve using the IF method, with $\mu = e^{-x^2/2}$:
-```{math}
-\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x 
-```
-Using a subsitution (or inspection) we can integrate this RHS term to find:
-```{math}
-e^{-x^2/2}\,u &= -e^{-x^2/2} + C \\
-u(x) &= -1 + Ce^{x^2/2} \\
-y(x) &= \frac{1}{Ce^{x^2/2}-1}
-```
-where we must not forget to return the answer back to the form of $y(x)$ at the end.
-````
-
-
-### Riccati form
-````{admonition} Defintion
-A Riccati differential equation takes the form:
-```{math}
-:label: riccatiODE
-\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)
-```
-which we can recast in terms of a variable $u(x)$, which satisfies an ODE:
-```{math}
-u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2
-```
-and we can solve to find $y(x)$:
-```{math}
-y = -\frac{u'}{q_2\,u}
-```
-````
-
-We see that if $q_0=0$, then this just reduces to a Benoulli equation with $n=2$ and if $q_2=0$, then this is just in integrating form factor, so this 
-equation can be thought of as a hybrid between the two.
-
-````{admonition} Worked example
-:class: seealso
-Consider the ODE:
-```{math}
-y' - \frac{2y}{x} = - x^2\,y^2 \\
-```
-this equation can be rewritten as:
-```{math}
-y' = \frac{2y}{x}-x^2\,y^2
-```
-and then transformed into the 2nd order ODE:
-```{math}
-u'' - R\,u' + S\,u &= 0 \\
-R = \frac{4}{x}\,\quad & S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &= 0
-```
-which we can solve using an IF method, with $\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}$:
-```{math}
-x^{-4}\,u'' - 4\,x^{-5} \,u' &= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &= 0
-```
-Since the derivative of a constant is zero, this means:
-```{math}
-u' &= C_1\,x^4 \\
-u &= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
-```
-where $C_1,\, C_2$ are constants, we can tidy this expression up:
-```{math}
-y = -\frac{5x^2}{x^5 + C_3}
-```
-where $C_3$ is a constants.
-````
-
-
 ## Perfect differential form 
 If we are struggling to find a first order ODE method that works and has clearly integrable terms, we can try the perfect differential test.  
 
@@ -594,16 +482,22 @@ y &= \pm\sqrt{\frac{1}{x} + \frac{C}{x^2}}
 ```
 ````
 
-````{admonition} Practice question
+````{admonition} Practice questions
 :class: seealso, dropdown
 1\. Solve the non-linear ODE:
 ```{math}
 \Big(2xy + e^{-x^2}\Big) \,\frac{\mathrm{d}y}{\mathrm{d}x} + y^2 = 2xy\,e^{-x^2}
 ```
 with the condition $y(0) = 1$.
+
+2\. Solve the non-linear ODE:
+```{math}
+3y^3\,e^{3xy} - 1 + \left(2y\,e^{3xy} + 3x\,y^2\,e^{3xy} \right)\,\frac{\mathrm{d}y}{\mathrm{d}x} = 0
+```
+with the condition $y(0) = 1$.
 ````
 
-````{admonition} Solution 
+````{admonition} Solutions
 :class: seealso, dropdown
 1\. First write in total differential form:
 ```{math}
@@ -616,7 +510,7 @@ then check that this is an exact differential:
 \frac{\partial P}{\partial y} &= 2y - 2xe^{-x^2}\\
 \frac{\partial Q}{\partial x} &= 2y - 2xe^{-x^2}
 ```
-and so it is!  So to detemine $f(x,\, y)$:
+this condition is met and so to detemine $f(x,\, y)$:
 
 ```{math}
 \frac{\partial f}{\partial x} &= y^2 - 2xy\,e^{-x^2} \Rightarrow f(x,\,y) = \int \Big(y^2 - 2xy\,e^{-x^2}\Big)\,\mathrm{d}x = xy^2 + y\,e^{-x^2} + g(y)\\
@@ -637,35 +531,282 @@ which we could then solve to find $y(x)$, as this is quadratic $xy^2 + y\,e^{-x^
 y = \frac{-e^{-x^2} \pm \sqrt{e^{-2x^2}+4x}}{2x}
 ```
 
+2\. First write in total differential form:
+```{math}
+\left(3y^3\,e^{3xy} - 1\right)\mathrm{d}x + \left(2y\,e^{3xy} + 3x\,y^2\,e^{3xy} \right)\,\mathrm{d}y &= 0\\
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &= 0
+```
+then check that this is an exact differential:
+
+```{math}
+\frac{\partial P}{\partial y} &= 9y^2\,e^{xy} + 9xy^3\,e^{xy}\\
+\frac{\partial Q}{\partial x} &= 6y^2\,e^{sy} + 3y^2\,e^{3xy} + 3x\,y^3\,e^{xy} = 9y^2\,e^{xy} + 9xy^3\,e^{xy}
+```
+this condition is met and so to detemine $f(x,\, y)$:
+
+```{math}
+\frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)
+```
+We could attempt the same process on $f_y$ however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae $\int y^n\,e^{axy}\,mathrm{d}y$, but 
+we could instead by differentiate this preliminary expression for $f(x,\,y)$ and then compare $f_y$ with what is left to figure out the anti-derivative:
+```{math}
+f   &= y^2\,e^{3xy} - x + g(y) \\
+f_y &= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
+Q   &= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}
+```
+
+which tells us that $g'(y) = 0$ hence at most $g(y)$ is a constant, which we can absorb into the constant value for $f(x,\, y)$, therefore:
+
+```{math}
+y^2\,e^{3xy} - x  = C
+```
+where $C$ is a constant.  Given the condition $y(0) = 1$:
+```{math}
+1^2\,e^{0} - 0 = 1 = C
+```
+Thus the solution is:
+```{math}
+y^2\,e^{3xy} - x  = 1
+```
+Which we have to leave in this form as no simple elementary function solution exists.
 ````
 
-## Modelling systems with ODEs
+## Substitution methods
 
+We sometimes find that we can reduce more complicated (even non-linear) first order differential equations down to a solvable form using a substitution.  
+
+### $y' = f(y/x)$ form
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+1\. Solve the following ODEs
+
+a\. 
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos^2\left(\frac{y}{x^2}\right)
+```
+
+b\.
+```{math}
+x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)
+```
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+````
+
+### $y' = f(ax+by)$ form
+
+### Benoulli form
+
+````{admonition} Defintion
+A Benoulli differential equation takes the form:
+```{math}
+:label: benoulliODE
+\frac{\mathrm{d}y}{\mathrm{d}x} +P(x)\,y = Q(x)\,y^n,\, n \in \mathbb{R}
+```
+We see that for $n = 0,\, 1$ this reduces to cases already discussed, but for any other $n$ this equation is clearly non-linear in $y$.  
+
+We can make progress in solving these sorts of ODEs by using the substitution:
+```{math}
+u = y^{1-n}
+```
+which transforms {eq}`benoulliODE` into a linear differential equation, since:
+```{math}
+u = y^{1-n} &\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} = (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x}\\
+\frac{\mathrm{d}y}{\mathrm{d}x} + P(x)\,y = Q(x)\,y^n &\Rightarrow (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x} + (1-n)\,P(x)\,y^{1-n} = (1-n)\,Q(x)\\
+&\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - (n-1)\,P(x)\,u = -(n-1)\,Q(x)
+```
+and as this ODE is linear in $u$, it can be solved using the integrating factor method. 
+````
 
 ````{admonition} Worked example
 :class: seealso
-The number of species S living on an island or habitat fragment of area A can be modelled as 
-$S = cA^z$, where $z > 0$. We can measure area in units that make $c = 1$, simplifying this equation into 
-$S = A^z$. A common value for $z$ is approximately 0.45 (found by data fitting). 
-
-Find the critical value when $\frac{\mathrm{d}S}{\mathrm{d}A} = 1$: and explain the significance of this 
-for biodiversity conservation.
-
-Given that:
+If we want to solve the ODE:
 ```{math}
-\frac{\mathrm{d}S}{\mathrm{d}A} = 0.45\,A^{-0.55}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2
 ```
-then we can aim to find the critical value when $\frac{\mathrm{d}S}{\mathrm{d}A} = 1$:
+using the substitution $u = y^{-1}$ here (as the highest power on the RHS is $n=2$):
 ```{math}
-0.45\,{A_c}^{-0.55} = 1 \Rightarrow A_c = \left(\frac{9}{20}\right)^{20/11} \simeq 0.234\dots
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}
 ```
-For $A < A_c$, any loss of habitat results in a proportionally greater loss of species, as we can see from:
-```{figure} SvA.png
----
-name: SpeciesArea
----
+and therefore:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
+xy^2 &= \frac{x}{u^2}
+```
+substituing these results in to the ODE:
+```{math}
+\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &= \frac{x}{u^2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &= -x
+```
+which we can then solve using the IF method, with $\mu = e^{-x^2/2}$:
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &=  e^{-x^2/2}\,x \\
+e^{-x^2/2}\,u &= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x 
+```
+Using a subsitution (or inspection) we can integrate this RHS term to find:
+```{math}
+e^{-x^2/2}\,u &= -e^{-x^2/2} + C \\
+u(x) &= -1 + Ce^{x^2/2} \\
+y(x) &= \frac{1}{Ce^{x^2/2}-1}
+```
+where we must not forget to return the answer back to the form of $y(x)$ at the end.
+````
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+Solve the following ODEs:
+
+1\. 
+```{math}
+6\frac{\mathrm{d}y}{\mathrm{d}x} - 2y = x\,y^4
+```
+which satisfies the condition $y(0) = -2$.
+
+2\.
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} - \sqrt{y} = 0
+```
+which satisfies the condition $y(1) = 0$,
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. 
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{1}{3}y = \frac{1}{6}x\,y^4 
+```
+since the highest power on the RHS is $n = 4$, this means the substitution we need is $u = y^{1-n} = y^{-3}$ and hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}& \\
+\Rightarrow -3y^{-4}\,\frac{\mathrm{d}y}{\mathrm{d}x} + y^{-3} &= -\frac{1}{2}x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + u(x) &= -\frac{1}{2}x
+```
+which suggests an IF of the form $\mu = \displaystyle e^{\int\,\mathrm{d}x} = e^x$, hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}\,e^x + u(x)\,e^x &= -\frac{1}{2}x\,e^x \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,e^x\right) &= -\frac{1}{2}x\,e^x \\
+u\,e^x = -\frac{1}{2}\int x\,e^x\,\mathrm{d}x + C &= -\frac{1}{2}(x-1)\,e^{x} + C \\
+u = y^{-3} &= -\frac{1}{2}(x-1) + C\,e^{-x}
+```
+
+Using the condition $y(0)=-2$:
+
+```{math}
+-\frac{1}{8} = \frac{1}{2} + C \Rightarrow C = -\frac{5}{8}
+```
+
+meaning the final solution is:
+
+```{math}
+y(x) = -\frac{2}{(4x-4 + 5\,e^{-x})^{1/3}}
+```
+
+2\.
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = y^{1/2}
+```
+since the highest power on the RHS is $n = \frac{1}{2}$, this means the substitution we need is $u = y^{1-n} = y^{1/2}$ and hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = \frac{1}{2}y^{-1/2}\frac{\mathrm{d}y}{\mathrm{d}x}& \\
+\Rightarrow \frac{1}{2}y^{-1/2}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{1}{2}\frac{y^{1/2}}{x} &= \frac{1}{2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{1}{2x}u(x) &= \frac{1}{2}
+```
+which suggests an IF of the form $\mu = \displaystyle e^{\int\frac{1}{2x}\,\mathrm{d}x} = e^{\frac{1}{2}\ln|x|} = x^{1/2}$, hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}\,x^{1/2} + u(x) &= \frac{1}{2}x^{1/2} \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,x^{1/2}\right) &= \frac{1}{2}x^{1/2} \\
+u\,x^{1/2} = -\frac{1}{2}\int x\,\mathrm{d}x + C &= \frac{1}{2}\frac{2}{3}x^{3/2} + C \\
+u = y^{1/2} &= \frac{1}{3}x + C\,x^{-1/2}
+```
+
+Using the condition $y(1)=0$:
+
+```{math}
+0 = \frac{1}{3} + C \Rightarrow C = -\frac{1}{3}
+```
+
+meaning the final solution is:
+
+```{math}
+y(x) = \left(\frac{1}{3}x - \frac{1}{3}x^{-1/2} \right)^2 = \frac{x^3-2x^{3/2}+1}{9x}
 ```
 
 
 ````
 
+### Riccati form
+````{admonition} Defintion
+A Riccati differential equation takes the form:
+```{math}
+:label: riccatiODE
+\frac{\mathrm{d}y}{\mathrm{d}x} = p(x)\,y^2(x) + q(x)\,y(x) + r(x)
+```
+which we can recast in terms of a variable $u(x)$, which satisfies an ODE:
+```{math}
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u =0, \quad R = q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S = r\,p
+```
+and we can solve to find $y(x)$:
+```{math}
+y = -\frac{1}{p\,u}\frac{\mathrm{d}u}{\mathrm{d}x}
+```
+````
+Using the transformation $v = p\,y$ we find:
+```{math}
+\frac{\mathrm{d}v}{\mathrm{d}x} &= \frac{\mathrm{d}p}{\mathrm{d}x}\,y + p\,\frac{\mathrm{d}y}{\mathrm{d}x} \\
+p\,\frac{\mathrm{d}y}{\mathrm{d}x} &= p^2\,y^2 + q\,p\,y + p\,r \\
+\Rightarrow \frac{\mathrm{d}v}{\mathrm{d}x} &= v^2 + q\,v + p\,r + y\,\frac{\mathrm{d}p}{\mathrm{d}x} = v^2 + v\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r 
+```
+and then switching to the variable $u(x)$, where $v = -\displaystyle \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}$ means:
+```{math}
+\frac{\mathrm{d}v}{\mathrm{d}x} &= \frac{1}{u^2}\left(\frac{\mathrm{d}u}{\mathrm{d}x}\right)^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} 
+= v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} \\
+v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &= v^2 - \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \\
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &= \left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right)\frac{\mathrm{d}u}{\mathrm{d}x} - p\,r\,u\\
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &- R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u = 0\\
+R(x) &= q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S(x) = r\,p
+```
+We see that if $r=0$, then this just reduces to a Benoulli equation with $n=2$ and if $p=0$, then this is just in integrating form factor, so this 
+equation can be thought of as a hybrid between the two.
+
+````{admonition} Worked example
+:class: seealso
+Consider the ODE:
+```{math}
+y' - \frac{2y}{x} = - x^2\,y^2 \\
+```
+this equation can be rewritten as:
+```{math}
+y' = \frac{2y}{x}-x^2\,y^2
+```
+and then transformed into the 2nd order ODE:
+```{math}
+u'' - R\,u' + S\,u &= 0 \\
+R = \frac{4}{x}\,\quad & S = 0 \\
+\Rightarrow u'' -\frac{4}{x} \,u' &= 0
+```
+which we can solve using an IF method, with $\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}$:
+```{math}
+x^{-4}\,u'' - 4\,x^{-5} \,u' &= 0 \\
+\Big(x^{-4}\,u'\Big)^\prime &= 0
+```
+Since the derivative of a constant is zero, this means:
+```{math}
+u' &= C_1\,x^4 \\
+u &= \frac{C_1\,x^5}{5} + C_2 \\
+\Rightarrow y &= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
+```
+where $C_1,\, C_2$ are constants.  We can tidy this expression up:
+```{math}
+y = -\frac{5x^2}{x^5 + C_3}
+```
+and $C_3$ is a constant.
+````
+
+Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the 
+resulting equation will need some quite powerful techinques to solve, especially if $R(x)$ and $S(x)$ are both functions of $x$.

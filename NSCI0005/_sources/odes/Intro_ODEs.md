@@ -158,13 +158,15 @@ y(x) = 8e^{x/2} - \frac{ x^2}{2} - 3x - 7
 
 ````{admonition} Real Life Examples
 :class: tip
-Many of the fundamental laws of physics are stated in the form of differential equations, some examples include:
+Many of the fundamental laws of science are stated in the form of differential equations, some examples include:
 
 * Simple (and higher order) Harmonic Oscillators
 * Newton's Second Law of Motion
 * The Schrödinger Equation
 * Circuit Equations in Electronics
+* Fluid dynamics equations
 * Rate Equations in Chemistry
+* Growth and decline of infectious diseases
 ```` 
 
 
