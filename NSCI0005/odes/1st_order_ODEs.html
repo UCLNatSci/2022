@@ -965,28 +965,41 @@ equation can be thought of as a hybrid between the two.</p>
 <p class="admonition-title">Worked example</p>
 <p>Consider the ODE:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}y' - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
 <p>this equation can be rewritten as:</p>
 <div class="math notranslate nohighlight">
-\[y' = \frac{2y}{x}-x^2\,y^2\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x}-x^2\,y^2\]</div>
 <p>and then transformed into the 2nd order ODE:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u'' - R\,u' + S\,u &amp;= 0 \\
+\[\begin{split}\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u &amp;= 0 \\
 R = \frac{4}{x}\,\quad &amp; S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &amp;= 0\end{split}\]</div>
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d} x^2} -\frac{4}{x} \,\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 0\end{split}\]</div>
 <p>which we can solve using an IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x^{-4}\,u'' - 4\,x^{-5} \,u' &amp;= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &amp;= 0\end{split}\]</div>
+\[\begin{split}x^{-4}\,\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - 4\,x^{-5} \,\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 0 \\
+\Big(x^{-4}\,\frac{\mathrm{d}u}{\mathrm{d}x}\Big)^\prime &amp;= 0\end{split}\]</div>
 <p>Since the derivative of a constant is zero, this means:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u' &amp;= C_1\,x^4 \\
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= C_1\,x^4 \\
 u &amp;= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &amp;= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
+\Rightarrow y &amp;= \frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants.  We can tidy this expression up:</p>
 <div class="math notranslate nohighlight">
-\[y = -\frac{5x^2}{x^5 + C_3}\]</div>
+\[y = \frac{5x^2}{x^5 + C_3}\]</div>
 <p>and <span class="math notranslate nohighlight">\(C_3\)</span> is a constant.</p>
+<p>We note that this problem has <span class="math notranslate nohighlight">\(r(x) = 0\)</span>, therefore is also a Bernoulli type expression, with highest power <span class="math notranslate nohighlight">\(y^2\)</span>, so <span class="math notranslate nohighlight">\(u = y^{1-2} = y^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2} \frac{\mathrm{d}y}{\mathrm{d}x}\\
+-\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{xy} &amp;= x^2  \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \left(\frac{2u}{x}\right) &amp;= x^2\end{split}\]</div>
+<p>which is also solveable using an IF, <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int \frac{2}{x}\,\mathrm{d}x} = x^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^2\frac{\mathrm{d}u}{\mathrm{d}x} + 2x\,u &amp;= x^4 \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(x^2\,u\right) &amp;= x^4 \\
+x^2\,u &amp;= \frac{1}{5}x^5 + C \\
+\Rightarrow u = \frac{1}{5}x^3 + Cx^{-2} &amp;= \frac{x^5 + C}{5x^2}\\
+y &amp;= \frac{5x^2}{x^5 + C}\end{split}\]</div>
+<p>which agrees with the earlier result.</p>
 </div>
 <p>Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the
 resulting equation will need some quite powerful techinques to solve, especially if <span class="math notranslate nohighlight">\(R(x)\)</span> and <span class="math notranslate nohighlight">\(S(x)\)</span> are both functions of <span class="math notranslate nohighlight">\(x\)</span>.</p>

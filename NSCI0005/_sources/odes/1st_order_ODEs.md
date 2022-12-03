@@ -886,34 +886,51 @@ equation can be thought of as a hybrid between the two.
 :class: seealso
 Consider the ODE:
 ```{math}
-y' - \frac{2y}{x} = - x^2\,y^2 \\
+\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{2y}{x} = - x^2\,y^2 \\
 ```
 this equation can be rewritten as:
 ```{math}
-y' = \frac{2y}{x}-x^2\,y^2
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x}-x^2\,y^2
 ```
 and then transformed into the 2nd order ODE:
 ```{math}
-u'' - R\,u' + S\,u &= 0 \\
+\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u &= 0 \\
 R = \frac{4}{x}\,\quad & S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &= 0
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d} x^2} -\frac{4}{x} \,\frac{\mathrm{d}u}{\mathrm{d}x} &= 0
 ```
 which we can solve using an IF method, with $\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}$:
 ```{math}
-x^{-4}\,u'' - 4\,x^{-5} \,u' &= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &= 0
+x^{-4}\,\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - 4\,x^{-5} \,\frac{\mathrm{d}u}{\mathrm{d}x} &= 0 \\
+\Big(x^{-4}\,\frac{\mathrm{d}u}{\mathrm{d}x}\Big)^\prime &= 0
 ```
 Since the derivative of a constant is zero, this means:
 ```{math}
-u' &= C_1\,x^4 \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &= C_1\,x^4 \\
 u &= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
+\Rightarrow y &= \frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
 ```
 where $C_1,\, C_2$ are constants.  We can tidy this expression up:
 ```{math}
-y = -\frac{5x^2}{x^5 + C_3}
+y = \frac{5x^2}{x^5 + C_3}
 ```
 and $C_3$ is a constant.
+
+We note that this problem has $r(x) = 0$, therefore is also a Bernoulli type expression, with highest power $y^2$, so $u = y^{1-2} = y^{-1}$:
+
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2} \frac{\mathrm{d}y}{\mathrm{d}x}\\
+-\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{xy} &= x^2  \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \left(\frac{2u}{x}\right) &= x^2
+```
+which is also solveable using an IF, $\mu = \displaystyle e^{\int \frac{2}{x}\,\mathrm{d}x} = x^2$:
+```{math}
+x^2\frac{\mathrm{d}u}{\mathrm{d}x} + 2x\,u &= x^4 \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(x^2\,u\right) &= x^4 \\
+x^2\,u &= \frac{1}{5}x^5 + C \\
+\Rightarrow u = \frac{1}{5}x^3 + Cx^{-2} &= \frac{x^5 + C}{5x^2}\\
+y &= \frac{5x^2}{x^5 + C}
+```
+which agrees with the earlier result.
 ````
 
 Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the 
