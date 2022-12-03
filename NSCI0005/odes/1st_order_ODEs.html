@@ -768,9 +768,53 @@ u &amp;= \sqrt{2 \ln|x| + C}\end{split}\]</div>
 <p>a.</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>.</p>
 <p>b.</p>
 <div class="math notranslate nohighlight">
 \[x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(1) =\displaystyle  \frac{\pi}{4}\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Solve the following ODEs</p>
+<p>a.
+Rearrange to get into the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y}{x} - \left(\frac{y}{x}\right)^2 = u - u^2\]</div>
+<p>and then use the result <span class="math notranslate nohighlight">\(y' = xu' + u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= u - u^2 \\
+\Rightarrow -\int \frac{\mathrm{d}u}{u^2} &amp;= \int\frac{\mathrm{d}x}{x} \\
+\frac{1}{u} &amp;= \ln|x| + C \\
+y &amp;= \frac{x}{\ln|x| + C}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1 = \frac{1}{0 + C} \Rightarrow C = 1\]</div>
+<p>gives the final solution:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{x}{\ln|x| + 1}\]</div>
+<p>b.
+Rearrange to get into the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{y}{x} - \sin^2\left(\frac{y}{x}\right) = u - \sin^2(u)\]</div>
+<p>and then use the result <span class="math notranslate nohighlight">\(y' = xu' + u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= u - \sin^2(u) \\
+\Rightarrow -\int \frac{\mathrm{d}u}{\sin^2(u)} &amp;= \int\frac{\mathrm{d}x}{x} \\
+\int (-\text{cosec}^2(u))\,\mathrm{d}u &amp;= \ln|x| + C\end{split}\]</div>
+<p>using the fact that <span class="math notranslate nohighlight">\((\cot(u))' = -\text{cosec}^2(u)\)</span>, this means:</p>
+<div class="math notranslate nohighlight">
+\[\cot(u) = \ln|x| + C \Rightarrow \cot\left( \frac{y}{x}\right) = \ln|x| + C \]</div>
+<p>Using condition <span class="math notranslate nohighlight">\(y(1) = \displaystyle  \frac{\pi}{4}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\cot\left(\frac{\pi}{4}\right) = 1 = 0 + C \Rightarrow C = 1\]</div>
+<p>gives a  solution:</p>
+<div class="math notranslate nohighlight">
+\[\cot\left( \frac{y}{x}\right) = \ln|x| + 1 \]</div>
+<p>and we could simplify further even:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tan\left( \frac{y}{x}\right) &amp;= \frac{1}{\ln|x| + 1}\\
+y = x\arctan&amp;\left( \frac{1}{\ln|x| + 1}\right)\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="y-f-ax-by-form">
@@ -782,8 +826,7 @@ u &amp;= \sqrt{2 \ln|x| + C}\end{split}\]</div>
 \[\frac{\mathrm{d}y}{\mathrm{d}x} = f(ax+by)\]</div>
 <p>can also be solved through a substitution which leads to separation of variables.  Let our substitution here be <span class="math notranslate nohighlight">\(u = ax+by\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= a + b\frac{\mathrm{d}y}{\mathrm{d}x} \\
-a + b\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{\mathrm{d}u}{\mathrm{d}x} \\
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = a + b\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= a + b\,f(u)\\
 \Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &amp;= \int\,\mathrm{d}x\end{split}\]</div>
 <p>and depending on the complexity of this LHS integral, this problem is solvable!</p>
 </div>

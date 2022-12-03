@@ -615,24 +615,80 @@ y = x\sqrt{2 \ln|x| + C}
 
 ````{admonition} Practice questions
 :class: seealso, dropdown
+
 1\. Solve the following ODEs
 
 a\.
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}
 ```
+with condition $y(1) = 1$.
 
 b\. 
 ```{math}
 x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)
 ```
-
+with condition $y(1) =\displaystyle  \frac{\pi}{4}$.
 
 ````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
 
+1\. Solve the following ODEs
+
+a\.
+Rearrange to get into the form $y' = f(y/x) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y}{x} - \left(\frac{y}{x}\right)^2 = u - u^2
+```
+and then use the result $y' = xu' + u$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= u - u^2 \\
+\Rightarrow -\int \frac{\mathrm{d}u}{u^2} &= \int\frac{\mathrm{d}x}{x} \\
+\frac{1}{u} &= \ln|x| + C \\
+y &= \frac{x}{\ln|x| + C}
+```
+Using the condition $y(1) = 1$:
+```{math}
+1 = \frac{1}{0 + C} \Rightarrow C = 1
+```
+gives the final solution:
+```{math}
+y = \frac{x}{\ln|x| + 1}
+```
+
+b\. 
+Rearrange to get into the form $y' = f(y/x) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{y}{x} - \sin^2\left(\frac{y}{x}\right) = u - \sin^2(u)
+```
+and then use the result $y' = xu' + u$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= u - \sin^2(u) \\
+\Rightarrow -\int \frac{\mathrm{d}u}{\sin^2(u)} &= \int\frac{\mathrm{d}x}{x} \\
+\int (-\text{cosec}^2(u))\,\mathrm{d}u &= \ln|x| + C
+```
+using the fact that $(\cot(u))' = -\text{cosec}^2(u)$, this means:
+
+```{math}
+\cot(u) = \ln|x| + C \Rightarrow \cot\left( \frac{y}{x}\right) = \ln|x| + C 
+```
+Using condition $y(1) = \displaystyle  \frac{\pi}{4}$:
+
+```{math}
+\cot\left(\frac{\pi}{4}\right) = 1 = 0 + C \Rightarrow C = 1
+```
+gives a  solution:
+```{math}
+\cot\left( \frac{y}{x}\right) = \ln|x| + 1 
+```
+and we could simplify further even:
+
+```{math}
+\tan\left( \frac{y}{x}\right) &= \frac{1}{\ln|x| + 1}\\
+y = x\arctan&\left( \frac{1}{\ln|x| + 1}\right)
+```
 ````
 
 ### $y' = f(ax+by)$ form
@@ -645,8 +701,7 @@ A first order differential equation of the form:
 ```
 can also be solved through a substitution which leads to separation of variables.  Let our substitution here be $u = ax+by$:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x} &= a + b\frac{\mathrm{d}y}{\mathrm{d}x} \\
-a + b\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{\mathrm{d}u}{\mathrm{d}x} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} = a + b\frac{\mathrm{d}y}{\mathrm{d}x} &= a + b\,f(u)\\
 \Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &= \int\,\mathrm{d}x
 ```
 and depending on the complexity of this LHS integral, this problem is solvable!
