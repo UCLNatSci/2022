@@ -721,9 +721,9 @@ with condition $y(0) = 2$.
 
 b\. 
 ```{math}
-\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 = 3x - 4y + 2
+\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}
 ```
-with condition $y(1) = 1$.
+with condition $y(0) = 0$.
 
 ````
 
@@ -780,29 +780,30 @@ y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}
 b\. 
 Writing in the form $y' = f(ax+by) = f(u)$:
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} = \left(3x - 4y + 2\right)^{1/2}
+\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}
 ```
-We need to be careful with tricky powers like $1/2$, so let use a substitution which takes out the square root, with one of the form $u^2 = 3x - 4y + 2$:
+which suggests we pick a substitution $u = 9y - x$:
 ```{math}
-2u\frac{\mathrm{d}u}{\mathrm{d}x} &= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u\\
-\int \frac{2u}{3-4u}\,\mathrm{d}u &= \int\,\mathrm{d}x \\
--\int \frac{4u}{3-4u}\,\mathrm{d}u &= -2\int\,\mathrm{d}x \\
-\int \left(1-\frac{3}{3-4u} \right)\,\mathrm{d}u &= -2x + C \\
-\Rightarrow u + \frac{3}{4}\ln|3-4u| &= C -2 x
+\frac{\mathrm{d}u}{\mathrm{d}x} &= 9 \frac{\mathrm{d}y}{\mathrm{d}x} - 1 = 9 e^u - 1\\
+\int \frac{\mathrm{d}u}{9 e^u - 1} &= \int\,\mathrm{d}x \\
+\int \frac{e^{-u}}{9 - e^{-u}}\,\mathrm{d}u &= x + C_1\\
+\ln|9 - e^{-u}| &= x + C_1
 ```
-Replacing $u$ with $u(x,\,y)$:
+separating out the variables:
 ```{math}
-(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = C - 2x
+9 - e^{-u} &= e^{x + C_1} = C_2\,e^x \\
+e^{-u} &= 9 - C_2\,e^x \\
+u &= -\ln(9 - c_2\,e^x) \\
+\Rightarrow y &= \frac{1}{9}\Big( x - \ln(9 - C_2\,e^x)\Big)
 ```
-and using the condition $y(1) = 1$:
+and using the condition $y(0) = 0$:
 ```{math}
-1 + 0 = C - 2 \Rightarrow C = 3
+0 = \frac{1}{9}\Big(0 - \ln(9-C_2)\Big) \Rightarrow C_2 = 8
 ```
-giving a final solution of the form:
+hence the final solution is:
 ```{math}
-(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = 3 - 2x
+y = \frac{1}{9}\Big( x - \ln(9 - 8\,e^x)\Big)
 ```
-
 ````
 
 

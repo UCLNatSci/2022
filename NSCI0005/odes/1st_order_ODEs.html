@@ -839,8 +839,8 @@ y = x\arctan&amp;\left( \frac{1}{\ln|x| + 1}\right)\end{split}\]</div>
 <p>with condition <span class="math notranslate nohighlight">\(y(0) = 2\)</span>.</p>
 <p>b.</p>
 <div class="math notranslate nohighlight">
-\[\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 = 3x - 4y + 2\]</div>
-<p>with condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>.</p>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
@@ -882,23 +882,25 @@ u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &amp;= 4x - y \\
 <p>b.
 Writing in the form <span class="math notranslate nohighlight">\(y' = f(ax+by) = f(u)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}y}{\mathrm{d}x} = \left(3x - 4y + 2\right)^{1/2}\]</div>
-<p>We need to be careful with tricky powers like <span class="math notranslate nohighlight">\(1/2\)</span>, so let use a substitution which takes out the square root, with one of the form <span class="math notranslate nohighlight">\(u^2 = 3x - 4y + 2\)</span>:</p>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}\]</div>
+<p>which suggests we pick a substitution <span class="math notranslate nohighlight">\(u = 9y - x\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}2u\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u\\
-\int \frac{2u}{3-4u}\,\mathrm{d}u &amp;= \int\,\mathrm{d}x \\
--\int \frac{4u}{3-4u}\,\mathrm{d}u &amp;= -2\int\,\mathrm{d}x \\
-\int \left(1-\frac{3}{3-4u} \right)\,\mathrm{d}u &amp;= -2x + C \\
-\Rightarrow u + \frac{3}{4}\ln|3-4u| &amp;= C -2 x\end{split}\]</div>
-<p>Replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(u(x,\,y)\)</span>:</p>
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 9 \frac{\mathrm{d}y}{\mathrm{d}x} - 1 = 9 e^u - 1\\
+\int \frac{\mathrm{d}u}{9 e^u - 1} &amp;= \int\,\mathrm{d}x \\
+\int \frac{e^{-u}}{9 - e^{-u}}\,\mathrm{d}u &amp;= x + C_1\\
+\ln|9 - e^{-u}| &amp;= x + C_1\end{split}\]</div>
+<p>separating out the variables:</p>
 <div class="math notranslate nohighlight">
-\[(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = C - 2x\]</div>
-<p>and using the condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>:</p>
+\[\begin{split}9 - e^{-u} &amp;= e^{x + C_1} = C_2\,e^x \\
+e^{-u} &amp;= 9 - C_2\,e^x \\
+u &amp;= -\ln(9 - c_2\,e^x) \\
+\Rightarrow y &amp;= \frac{1}{9}\Big( x - \ln(9 - C_2\,e^x)\Big)\end{split}\]</div>
+<p>and using the condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[1 + 0 = C - 2 \Rightarrow C = 3\]</div>
-<p>giving a final solution of the form:</p>
+\[0 = \frac{1}{9}\Big(0 - \ln(9-C_2)\Big) \Rightarrow C_2 = 8\]</div>
+<p>hence the final solution is:</p>
 <div class="math notranslate nohighlight">
-\[(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = 3 - 2x\]</div>
+\[y = \frac{1}{9}\Big( x - \ln(9 - 8\,e^x)\Big)\]</div>
 </div>
 </div>
 <div class="section" id="benoulli-form">
