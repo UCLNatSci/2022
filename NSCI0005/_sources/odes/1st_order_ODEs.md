@@ -616,7 +616,7 @@ y = x\sqrt{2 \ln|x| + C}
 ````{admonition} Practice questions
 :class: seealso, dropdown
 
-1\. Solve the following ODEs
+1\. Solve the following ODEs:
 
 a\.
 ```{math}
@@ -707,6 +707,102 @@ can also be solved through a substitution which leads to separation of variables
 and depending on the complexity of this LHS integral, this problem is solvable!
 ````
 
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+1\. Solve the following ODEs:
+
+a\.
+```{math}
+\frac{1}{2}\frac{\mathrm{d}y}{\mathrm{d}x} - \left(x + \frac{1-y}{4}\right)^2 = 0
+```
+with condition $y(0) = 2$.
+
+b\. 
+```{math}
+\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 = 3x - 4y + 2
+```
+with condition $y(1) = 1$.
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. Solve the following ODEs
+
+a\.
+Writing this in the form $y' = f(ax+by)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \left(4x -y + 1\right)^2
+```
+
+means we can pick our substitution to be $u = 4x - y$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} &= 4 - \frac{\mathrm{d}y}{\mathrm{d}x}= 4 - \left(u + 1\right)^2\\
+\Rightarrow \int \frac{\mathrm{d}u}{4 - \left(u + 1\right)^2} &= \int \mathrm{d}x \\
+\int \frac{\mathrm{d}u}{u^2 + 2u -3} &= -x + C_1 \\
+
+```
+
+This integrand can be represented in terms of partial fractions:
+```{math}
+\frac{1}{u^2 + 2u -3} = \frac{1}{(u-1)(u+3)} &= \frac{A}{v-1} + \frac{B}{v+3} \\
+&= \frac{A(u+3) + B(u-1)}{(u-1)(u+3)} \\
+\Rightarrow  1 &= A(u+3) + B(u-1) 
+```
+For $u = 1$, $4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}$ and for $u = -3$, $-4B = 1 \Rightarrow A = \displaystyle -\frac{1}{4}$, hence:
+
+```{math}
+\frac{1}{u^2 + 2u -3} &= \frac{1}{4}\left( \frac{1}{u-1} - \frac{1}{u+3} \right) \\
+\Rightarrow \frac{1}{4}\int \left( \frac{1}{u-1} - \frac{1}{u+3} \right)\,\mathrm{d}u &= C_1 - x \\
+\frac{1}{4}\left(\ln|u-1| - \ln|u + 3|\right) &= C_1 - x \\
+\ln\left|\frac{u-1}{u+3}\right| &= C_2 - 4x\\
+\frac{u-1}{u+3} &= e^{C_2 - 4x} = C_3\,e^{-4x} \\
+u-1 &= C_3\,(u+3)\,e^{-4x} \\
+\Rightarrow u(1 - C_3\,e^{-4x}) &= 1 + 3C_3\,e^{-4x} \\
+u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &= 4x - y \\
+\Rightarrow y &= 4x - \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}}
+```
+and using the condition $y(0) = 2$:
+```{math}
+2 = 0 - \frac{1+3C_3}{1 - C_3} \Rightarrow C_3 = -3
+```
+giving a final solution of the form:
+```{math}
+y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}
+```
+
+b\. 
+Writing in the form $y' = f(ax+by)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \left(3x - 4y + 2\right)^{1/2}
+```
+We need to be careful with tricky powers like $1/2$, so let use a substitution which takes out the square root, with one of the form $u^2 = 3x - 4y + 2$:
+```{math}
+2u\frac{\mathrm{d}u}{\mathrm{d}x} &= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u
+\int \frac{2u}{3-4u}\,\mathrm{d}u &= \int\,\mathrm{d}x \\
+-\int \frac{4u}{3-4u}\,\mathrm{d}u &= -2\int\,\mathrm{d}x \\
+\int \left(1-\frac{3}{3-4u} \right)\,\mathrm{d}u &= -2x + C \\
+\Rightarrow u + \frac{3}{4}\ln|3-4u| &= C -2 x
+```
+Replacing $u$ with $u(x,\,y)$:
+```{math}
+(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = C - 2x
+```
+and using the condition $y(1) = 1$:
+```{math}
+1 + 0 = C - 2 \Rightarrow C = 3
+```
+giving a final solution of the form:
+```{math}
+(3x - 4y + 2)^{1/2} + \frac{3}{4}\ln|3 - 4(3x - 4y + 2)^{1/2}| = 3 - 2x
+```
+
+````
+
+
 ### Benoulli form
 
 ````{admonition} Defintion
@@ -767,15 +863,16 @@ where we must not forget to return the answer back to the form of $y(x)$ at the 
 ````{admonition} Practice questions
 :class: seealso, dropdown
 
+1\. 
 Solve the following ODEs:
 
-1\. 
+a\.
 ```{math}
 6\frac{\mathrm{d}y}{\mathrm{d}x} - 2y = x\,y^4
 ```
 which satisfies the condition $y(0) = -2$.
 
-2\.
+b\.
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} - \sqrt{y} = 0
 ```
@@ -785,7 +882,7 @@ which satisfies the condition $y(1) = 0$,
 ````{admonition} Solutions
 :class: seealso, dropdown
 
-1\. 
+a\. 
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} - \frac{1}{3}y = \frac{1}{6}x\,y^4 
 ```
@@ -815,7 +912,7 @@ meaning the final solution is:
 y(x) = -\frac{2}{(4x-4 + 5\,e^{-x})^{1/3}}
 ```
 
-2\.
+b\.
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = y^{1/2}
 ```
