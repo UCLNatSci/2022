@@ -1012,27 +1012,25 @@ u &amp;= -\ln(9 - c_2\,e^x) \\
 <p>If we want to solve the ODE:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2\]</div>
-<p>using the substitution <span class="math notranslate nohighlight">\(u = y^{-1}\)</span> here (as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>):</p>
+<p>we need to put it in the form <span class="math notranslate nohighlight">\(y' = f(u,\,x)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}\]</div>
+<p>the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>, using the substitution <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
 <p>and therefore:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &amp;= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &amp;= \frac{x}{u^2}\end{split}\]</div>
-<p>substituing these results in to the ODE:</p>
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{1}{xy} - x 
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}  &amp;= \frac{u}{x} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &amp;= - x\end{split}\]</div>
+<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &amp;= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &amp;= -x\end{split}\]</div>
-<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-x^2/2}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &amp;=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &amp;= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x \end{split}\]</div>
-<p>Using a subsitution (or inspection) we can integrate this RHS term to find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}e^{-x^2/2}\,u &amp;= -e^{-x^2/2} + C \\
-u(x) &amp;= -1 + Ce^{x^2/2} \\
-y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
-<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end.</p>
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(\frac{u}{x}\Big) &amp;=  -1 \\
+\frac{u}{x} &amp;= -\int \,\mathrm{d}x \\
+\frac{u}{x} &amp;= -x + C \\
+u &amp;= x(C - x) \\
+y &amp;= \frac{1}{x(C-x)}\end{split}\]</div>
+<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end (if possible).</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice questions</p>

@@ -927,32 +927,29 @@ If we want to solve the ODE:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2
 ```
-using the substitution $u = y^{-1}$ here (as the highest power on the RHS is $n=2$):
+we need to put it in the form $y' = f(u,\,x)$:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}
+\frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}
+```
+the highest power on the RHS is $n=2$, using the substitution $u = y^{1-n} = y^{-1}$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}
 ```
 and therefore:
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &= \frac{x}{u^2}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{1}{xy} - x 
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}  &= \frac{u}{x} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &= - x
 ```
-substituing these results in to the ODE:
+which we can then solve using the IF method, with $\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}$:
 ```{math}
-\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &= -x
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(\frac{u}{x}\Big) &=  -1 \\
+\frac{u}{x} &= -\int \,\mathrm{d}x \\
+\frac{u}{x} &= -x + C \\
+u &= x(C - x) \\
+y &= \frac{1}{x(C-x)}
 ```
-which we can then solve using the IF method, with $\mu = e^{-x^2/2}$:
-```{math}
-\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x 
-```
-Using a subsitution (or inspection) we can integrate this RHS term to find:
-```{math}
-e^{-x^2/2}\,u &= -e^{-x^2/2} + C \\
-u(x) &= -1 + Ce^{x^2/2} \\
-y(x) &= \frac{1}{Ce^{x^2/2}-1}
-```
-where we must not forget to return the answer back to the form of $y(x)$ at the end.
+where we must not forget to return the answer back to the form of $y(x)$ at the end (if possible).
 ````
 
 ````{admonition} Practice questions
