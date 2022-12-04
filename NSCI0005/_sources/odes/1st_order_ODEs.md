@@ -931,15 +931,15 @@ we need to put it in the form $y' = f(u,\,x)$:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}
 ```
-the highest power on the RHS is $n=2$, using the substitution $u = y^{1-n} = y^{-1}$:
+as the highest power on the RHS is $n=2$, using the substitution $u = y^{1-n} = y^{-1}$:
 ```{math}
 \frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}
 ```
 and therefore:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{1}{xy} - x 
-\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}  &= \frac{u}{x} - x \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &= - x
+\frac{\mathrm{d}u}{\mathrm{d}x} &= -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{1}{xy} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &= \frac{u}{x} - x \\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &= - x
 ```
 which we can then solve using the IF method, with $\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}$:
 ```{math}

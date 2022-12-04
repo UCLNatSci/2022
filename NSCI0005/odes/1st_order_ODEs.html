@@ -1015,14 +1015,14 @@ u &amp;= -\ln(9 - c_2\,e^x) \\
 <p>we need to put it in the form <span class="math notranslate nohighlight">\(y' = f(u,\,x)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}\]</div>
-<p>the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>, using the substitution <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-1}\)</span>:</p>
+<p>as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>, using the substitution <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-1}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
 <p>and therefore:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{1}{xy} - x 
-\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}  &amp;= \frac{u}{x} - x \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &amp;= - x\end{split}\]</div>
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{1}{xy} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= \frac{u}{x} - x \\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &amp;= - x\end{split}\]</div>
 <p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(\frac{u}{x}\Big) &amp;=  -1 \\
