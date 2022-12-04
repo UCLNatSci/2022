@@ -547,8 +547,9 @@ this condition is met and so to detemine $f(x,\, y)$:
 ```{math}
 \frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)
 ```
-We could attempt the same process on $f_y$ however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae $\int y^n\,e^{axy}\,mathrm{d}y$, but 
-we could instead by differentiate this preliminary expression for $f(x,\,y)$ and then compare $f_y$ with what is left to figure out the anti-derivative:
+We could attempt the same process on $f_y$ however this will involve multiple integration by parts calculations (we could simplify this with a 
+reduction formula $\int y^n\,e^{axy}\,\mathrm{d}y$), but here we will instead differentiate this preliminary expression for $f(x,\,y)$ and then 
+compare $f_y$ with what is left to figure out the anti-derivative:
 ```{math}
 f   &= y^2\,e^{3xy} - x + g(y) \\
 f_y &= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
@@ -569,6 +570,96 @@ Thus the solution is:
 y^2\,e^{3xy} - x  = 1
 ```
 Which we have to leave in this form as no simple elementary function solution exists.
+````
+### Fixing the perfect form
+
+This method relies on the differential given being perfect, if it is not, then we cannot find the function $f(x,\, y)$.  However there is an analagous method for finding 
+a multivariable integrating factor, allowing us to *potentially* convert imperfect differentials into a perfect form .
+
+````{admonition} Multivariable integrating factor
+Consider an imperfect differential:
+```{math}
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0\qquad \frac{\partial P}{\partial y} \neq \frac{\partial Q}{\partial x}
+```
+
+Lets introduce an integrating factor $M(x,\,y)$, which means now that:
+```{math}
+M(x,\,y)\,P(x,\,y)\,\mathrm{d}x + M(x,\,y)\,Q(x,\,y)\,\mathrm{d}y = 0 \qquad \frac{\partial (M P)}{\partial y} = \frac{\partial (M Q)}{\partial x}
+```
+
+and we can write the form of $M(x,\,y)$ as:
+```{math}
+M(x,\,y) = e^{\int G(x)\,\mathrm{d}x}\,e^{\int H(y)\,\mathrm{d}y}
+```
+````
+
+The form of the multivariable integrating factor means that:
+```{math}
+M_x &= G(x)\,M \\
+M_y &= H(y)\,M
+```
+Solving the key requirement for a perfect differential:
+```{math}
+\frac{\partial (M P)}{\partial y} &= M_y\,P + M\,P_y = M(H\,P + P_y)\\
+\frac{\partial (M Q)}{\partial x} &= M_x\,Q + M\,Q_x = M(G\,Q + Q_x)\\
+&\Rightarrow H(y)\,P + P_y = G(x)\,Q + Q_x
+```
+our aim here is separate out variables.  If each of $P(x,\,y),\, Q(x,\,y)$ are in a separable form:
+```{math}
+P(x,\,y) &= p_1(x)\,p_2(y) \\
+Q(x,\,y) &= q_1(x)\,q_2(y)
+``` 
+which means therefore:
+```{math}
+H(y)\,p_1(x)\,p_2(y) + p_1(x)\,{p_2}'(y) &= G(x)\,q_1(x)\,q_2(y) + {q_1}'(x)\,q_2(y) \\
+\Rightarrow p_1(x)\Big(H(y)\,p_2(y) + {p_2}'(y)\Big) &= q_2(y)\Big(G(x)\,q_1(x) + {q_1}'(x)\Big) \\
+\frac{H(y)\,p_2(y) + {p_2}'(y)}{q_2(y)} &= \frac{G(x)\,q_1(x) + {q_1}'(x)}{p_1(x)} = C
+```
+where $C$ is a constant.  We find that this expression is a constant, because although the LHS depends *only* on $y$, the RHS does not, hence the LHS is overall a 
+constant in $y$.  A similar argument holds for $x$ and the RHS, meaning that overall the two expressions are constant.  This mean therefore:
+
+```{math}
+H(y)\,p_2(y) + {p_2}'(y) &= C\,q_2(y) \Rightarrow H(y) = \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} \\
+G(x)\,q_1(x) + {q_1}'(x) &= C\,p_1(x) \Rightarrow G(x) = \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)}
+```
+
+````{admonition} Worked example
+:class: seealso
+Consider the differential:
+```{math}
+2x\sin(y)\,\mathrm{d}x + x^3\,\cos(y)\,\mathrm{d}y = 0
+```
+Looking at the derivatives:
+```{math}
+P_y &= 2x\,\cos(y) \\
+Q_x &= 3x^2\,\cos(y)
+```
+hence this is not an exact differential.  
+
+However since here the functions $P(x,\,y),\, Q(x,\,y)$ are separable, we can find:
+```{math}
+p_1(x) &= 2x \qquad p_2(y) = \sin(y) \\
+q_1(x) &= x^3 \qquad q_2(y) = \cos(y)\\
+H(y) &= \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} = \frac{C\,\cos(y) - \cos(y)}{\sin(y)} = (C-1)\,\cot(y) \\
+G(x) &= \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)} = \frac{2Cx - 3x^2}{x^3} = \frac{2C - 3x}{x^2}\\
+\ln(M) &= \int G(x)\,\mathrm{d}x + \int H(y)\,\mathrm{d}y = (C-1)\ln|\sin(x)| - \frac{2C}{x} - 3 \ln|x|\\
+\Rightarrow M(x,\,y) &= \frac{\sin^{C-1}(y)\,e^{-2C/x}}{x^3}
+```
+This means that our differential function is satisfied by:
+```{math}
+f_x &= \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2} \\
+\Rightarrow f &= \int \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2}\,\mathrm{d}x = \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_1(y)\\
+f_y &= \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x} \\
+\Rightarrow f &= \int \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x}\,\mathrm{d}y =  \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_2(x)
+```
+and so $K_1 = K_2$ are constants here, which we can absorb into the constant for $f(x,\,y)$:
+```{math}
+\sin^{C}(y)= K\,e^{2C/x}
+```
+where $K$ will be fixed by initial conditions, however $C$ is a system parameter - it shows that this systems integrating factor is not unique! We could simplify this down to:
+```{math}
+\sin(y)= K\,e^{2/x}
+```
 ````
 
 ## Substitution methods

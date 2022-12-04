@@ -270,6 +270,13 @@
   <a class="reference internal nav-link" href="#perfect-differential-form">
    13.3. Perfect differential form
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-the-perfect-form">
+     13.3.1. Fixing the perfect form
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#substitution-methods">
@@ -340,6 +347,13 @@
   <a class="reference internal nav-link" href="#perfect-differential-form">
    13.3. Perfect differential form
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-the-perfect-form">
+     13.3.1. Fixing the perfect form
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#substitution-methods">
@@ -710,8 +724,9 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
 <p>this condition is met and so to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)\]</div>
-<p>We could attempt the same process on <span class="math notranslate nohighlight">\(f_y\)</span> however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae <span class="math notranslate nohighlight">\(\int y^n\,e^{axy}\,mathrm{d}y\)</span>, but
-we could instead by differentiate this preliminary expression for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> and then compare <span class="math notranslate nohighlight">\(f_y\)</span> with what is left to figure out the anti-derivative:</p>
+<p>We could attempt the same process on <span class="math notranslate nohighlight">\(f_y\)</span> however this will involve multiple integration by parts calculations (we could simplify this with a
+reduction formula <span class="math notranslate nohighlight">\(\int y^n\,e^{axy}\,\mathrm{d}y\)</span>), but here we will instead differentiate this preliminary expression for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> and then
+compare <span class="math notranslate nohighlight">\(f_y\)</span> with what is left to figure out the anti-derivative:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f   &amp;= y^2\,e^{3xy} - x + g(y) \\
 f_y &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
@@ -726,6 +741,77 @@ Q   &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[y^2\,e^{3xy} - x  = 1\]</div>
 <p>Which we have to leave in this form as no simple elementary function solution exists.</p>
+</div>
+<div class="section" id="fixing-the-perfect-form">
+<h3><span class="section-number">13.3.1. </span>Fixing the perfect form<a class="headerlink" href="#fixing-the-perfect-form" title="Permalink to this headline">¶</a></h3>
+<p>This method relies on the differential given being perfect, if it is not, then we cannot find the function <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>.  However there is an analagous method for finding
+a multivariable integrating factor, allowing us to <em>potentially</em> convert imperfect differentials into a perfect form .</p>
+<div class="admonition-multivariable-integrating-factor admonition">
+<p class="admonition-title">Multivariable integrating factor</p>
+<p>Consider an imperfect differential:</p>
+<div class="math notranslate nohighlight">
+\[P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0\qquad \frac{\partial P}{\partial y} \neq \frac{\partial Q}{\partial x}\]</div>
+<p>Lets introduce an integrating factor <span class="math notranslate nohighlight">\(M(x,\,y)\)</span>, which means now that:</p>
+<div class="math notranslate nohighlight">
+\[M(x,\,y)\,P(x,\,y)\,\mathrm{d}x + M(x,\,y)\,Q(x,\,y)\,\mathrm{d}y = 0 \qquad \frac{\partial (M P)}{\partial y} = \frac{\partial (M Q)}{\partial x}\]</div>
+<p>and we can write the form of <span class="math notranslate nohighlight">\(M(x,\,y)\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[M(x,\,y) = e^{\int G(x)\,\mathrm{d}x}\,e^{\int H(y)\,\mathrm{d}y}\]</div>
+</div>
+<p>The form of the multivariable integrating factor means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_x &amp;= G(x)\,M \\
+M_y &amp;= H(y)\,M\end{split}\]</div>
+<p>Solving the key requirement for a perfect differential:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial (M P)}{\partial y} &amp;= M_y\,P + M\,P_y = M(H\,P + P_y)\\
+\frac{\partial (M Q)}{\partial x} &amp;= M_x\,Q + M\,Q_x = M(G\,Q + Q_x)\\
+&amp;\Rightarrow H(y)\,P + P_y = G(x)\,Q + Q_x\end{split}\]</div>
+<p>our aim here is separate out variables.  If each of <span class="math notranslate nohighlight">\(P(x,\,y),\, Q(x,\,y)\)</span> are in a separable form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(x,\,y) &amp;= p_1(x)\,p_2(y) \\
+Q(x,\,y) &amp;= q_1(x)\,q_2(y)\end{split}\]</div>
+<p>which means therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(y)\,p_1(x)\,p_2(y) + p_1(x)\,{p_2}'(y) &amp;= G(x)\,q_1(x)\,q_2(y) + {q_1}'(x)\,q_2(y) \\
+\Rightarrow p_1(x)\Big(H(y)\,p_2(y) + {p_2}'(y)\Big) &amp;= q_2(y)\Big(G(x)\,q_1(x) + {q_1}'(x)\Big) \\
+\frac{H(y)\,p_2(y) + {p_2}'(y)}{q_2(y)} &amp;= \frac{G(x)\,q_1(x) + {q_1}'(x)}{p_1(x)} = C\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  We find that this expression is a constant, because although the LHS depends <em>only</em> on <span class="math notranslate nohighlight">\(y\)</span>, the RHS does not, hence the LHS is overall a
+constant in <span class="math notranslate nohighlight">\(y\)</span>.  A similar argument holds for <span class="math notranslate nohighlight">\(x\)</span> and the RHS, meaning that overall the two expressions are constant.  This mean therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(y)\,p_2(y) + {p_2}'(y) &amp;= C\,q_2(y) \Rightarrow H(y) = \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} \\
+G(x)\,q_1(x) + {q_1}'(x) &amp;= C\,p_1(x) \Rightarrow G(x) = \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)}\end{split}\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the differential:</p>
+<div class="math notranslate nohighlight">
+\[2x\sin(y)\,\mathrm{d}x + x^3\,\cos(y)\,\mathrm{d}y = 0\]</div>
+<p>Looking at the derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_y &amp;= 2x\,\cos(y) \\
+Q_x &amp;= 3x^2\,\cos(y)\end{split}\]</div>
+<p>hence this is not an exact differential.</p>
+<p>However since here the functions <span class="math notranslate nohighlight">\(P(x,\,y),\, Q(x,\,y)\)</span> are separable, we can find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p_1(x) &amp;= 2x \qquad p_2(y) = \sin(y) \\
+q_1(x) &amp;= x^3 \qquad q_2(y) = \cos(y)\\
+H(y) &amp;= \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} = \frac{C\,\cos(y) - \cos(y)}{\sin(y)} = (C-1)\,\cot(y) \\
+G(x) &amp;= \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)} = \frac{2Cx - 3x^2}{x^3} = \frac{2C - 3x}{x^2}\\
+\ln(M) &amp;= \int G(x)\,\mathrm{d}x + \int H(y)\,\mathrm{d}y = (C-1)\ln|\sin(x)| - \frac{2C}{x} - 3 \ln|x|\\
+\Rightarrow M(x,\,y) &amp;= \frac{\sin^{C-1}(y)\,e^{-2C/x}}{x^3}\end{split}\]</div>
+<p>This means that our differential function is satisfied by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_x &amp;= \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2} \\
+\Rightarrow f &amp;= \int \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2}\,\mathrm{d}x = \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_1(y)\\
+f_y &amp;= \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x} \\
+\Rightarrow f &amp;= \int \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x}\,\mathrm{d}y =  \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_2(x)\end{split}\]</div>
+<p>and so <span class="math notranslate nohighlight">\(K_1 = K_2\)</span> are constants here, which we can absorb into the constant for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sin^{C}(y)= K\,e^{2C/x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(K\)</span> will be fixed by initial conditions, however <span class="math notranslate nohighlight">\(C\)</span> is a system parameter - it shows that this systems integrating factor is not unique! We could simplify this down to:</p>
+<div class="math notranslate nohighlight">
+\[\sin(y)= K\,e^{2/x}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="substitution-methods">
