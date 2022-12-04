@@ -846,7 +846,7 @@ y = x\arctan&amp;\left( \frac{1}{\ln|x| + 1}\right)\end{split}\]</div>
 <p class="admonition-title">Solutions</p>
 <p>1. Solve the following ODEs</p>
 <p>a.
-Writing this in the form <span class="math notranslate nohighlight">\(y' = f(ax+by)\)</span>:</p>
+Writing this in the form <span class="math notranslate nohighlight">\(y' = f(ax+by) = f(u)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} = \left(4x -y + 1\right)^2\]</div>
 <p>means we can pick our substitution to be <span class="math notranslate nohighlight">\(u = 4x - y\)</span>:</p>
@@ -860,13 +860,15 @@ Writing this in the form <span class="math notranslate nohighlight">\(y' = f(ax+
 \[\begin{split}\frac{1}{u^2 + 2u -3} = \frac{1}{(u-1)(u+3)} &amp;= \frac{A}{v-1} + \frac{B}{v+3} \\
 &amp;= \frac{A(u+3) + B(u-1)}{(u-1)(u+3)} \\
 \Rightarrow  1 &amp;= A(u+3) + B(u-1) \end{split}\]</div>
-<p>For <span class="math notranslate nohighlight">\(u = 1\)</span>, <span class="math notranslate nohighlight">\(4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}\)</span> and for <span class="math notranslate nohighlight">\(u = -3\)</span>, <span class="math notranslate nohighlight">\(-4B = 1 \Rightarrow A = \displaystyle -\frac{1}{4}\)</span>, hence:</p>
+<p>For <span class="math notranslate nohighlight">\(u = 1\)</span>, <span class="math notranslate nohighlight">\(4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}\)</span> and for <span class="math notranslate nohighlight">\(u = -3\)</span>, <span class="math notranslate nohighlight">\(-4B = 1 \Rightarrow B = \displaystyle -\frac{1}{4}\)</span>, hence:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{u^2 + 2u -3} &amp;= \frac{1}{4}\left( \frac{1}{u-1} - \frac{1}{u+3} \right) \\
 \Rightarrow \frac{1}{4}\int \left( \frac{1}{u-1} - \frac{1}{u+3} \right)\,\mathrm{d}u &amp;= C_1 - x \\
-\frac{1}{4}\left(\ln|u-1| - \ln|u + 3|\right) &amp;= C_1 - x \\
-\ln\left|\frac{u-1}{u+3}\right| &amp;= C_2 - 4x\\
-\frac{u-1}{u+3} &amp;= e^{C_2 - 4x} = C_3\,e^{-4x} \\
+\frac{1}{4}\Big(\ln|u-1| - \ln|u + 3|\Big) &amp;= C_1 - x \\
+\ln\left|\frac{u-1}{u+3}\right| &amp;= C_2 - 4x\end{split}\]</div>
+<p>We then need to think about converting this back into <span class="math notranslate nohighlight">\(u = u(x,\,y)\)</span>, so lets try to collect together terms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u-1}{u+3} &amp;= e^{C_2 - 4x} = C_3\,e^{-4x} \\
 u-1 &amp;= C_3\,(u+3)\,e^{-4x} \\
 \Rightarrow u(1 - C_3\,e^{-4x}) &amp;= 1 + 3C_3\,e^{-4x} \\
 u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &amp;= 4x - y \\
@@ -878,12 +880,12 @@ u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &amp;= 4x - y \\
 <div class="math notranslate nohighlight">
 \[y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}\]</div>
 <p>b.
-Writing in the form <span class="math notranslate nohighlight">\(y' = f(ax+by)\)</span>:</p>
+Writing in the form <span class="math notranslate nohighlight">\(y' = f(ax+by) = f(u)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} = \left(3x - 4y + 2\right)^{1/2}\]</div>
 <p>We need to be careful with tricky powers like <span class="math notranslate nohighlight">\(1/2\)</span>, so let use a substitution which takes out the square root, with one of the form <span class="math notranslate nohighlight">\(u^2 = 3x - 4y + 2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}2u\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u
+\[\begin{split}2u\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u\\
 \int \frac{2u}{3-4u}\,\mathrm{d}u &amp;= \int\,\mathrm{d}x \\
 -\int \frac{4u}{3-4u}\,\mathrm{d}u &amp;= -2\int\,\mathrm{d}x \\
 \int \left(1-\frac{3}{3-4u} \right)\,\mathrm{d}u &amp;= -2x + C \\

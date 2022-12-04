@@ -733,7 +733,7 @@ with condition $y(1) = 1$.
 1\. Solve the following ODEs
 
 a\.
-Writing this in the form $y' = f(ax+by)$:
+Writing this in the form $y' = f(ax+by) = f(u)$:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} = \left(4x -y + 1\right)^2
 ```
@@ -752,13 +752,16 @@ This integrand can be represented in terms of partial fractions:
 &= \frac{A(u+3) + B(u-1)}{(u-1)(u+3)} \\
 \Rightarrow  1 &= A(u+3) + B(u-1) 
 ```
-For $u = 1$, $4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}$ and for $u = -3$, $-4B = 1 \Rightarrow A = \displaystyle -\frac{1}{4}$, hence:
+For $u = 1$, $4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}$ and for $u = -3$, $-4B = 1 \Rightarrow B = \displaystyle -\frac{1}{4}$, hence:
 
 ```{math}
 \frac{1}{u^2 + 2u -3} &= \frac{1}{4}\left( \frac{1}{u-1} - \frac{1}{u+3} \right) \\
 \Rightarrow \frac{1}{4}\int \left( \frac{1}{u-1} - \frac{1}{u+3} \right)\,\mathrm{d}u &= C_1 - x \\
-\frac{1}{4}\left(\ln|u-1| - \ln|u + 3|\right) &= C_1 - x \\
-\ln\left|\frac{u-1}{u+3}\right| &= C_2 - 4x\\
+\frac{1}{4}\Big(\ln|u-1| - \ln|u + 3|\Big) &= C_1 - x \\
+\ln\left|\frac{u-1}{u+3}\right| &= C_2 - 4x
+```
+We then need to think about converting this back into $u = u(x,\,y)$, so lets try to collect together terms:
+```{math}
 \frac{u-1}{u+3} &= e^{C_2 - 4x} = C_3\,e^{-4x} \\
 u-1 &= C_3\,(u+3)\,e^{-4x} \\
 \Rightarrow u(1 - C_3\,e^{-4x}) &= 1 + 3C_3\,e^{-4x} \\
@@ -775,13 +778,13 @@ y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}
 ```
 
 b\. 
-Writing in the form $y' = f(ax+by)$:
+Writing in the form $y' = f(ax+by) = f(u)$:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} = \left(3x - 4y + 2\right)^{1/2}
 ```
 We need to be careful with tricky powers like $1/2$, so let use a substitution which takes out the square root, with one of the form $u^2 = 3x - 4y + 2$:
 ```{math}
-2u\frac{\mathrm{d}u}{\mathrm{d}x} &= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u
+2u\frac{\mathrm{d}u}{\mathrm{d}x} &= 3 - 4\frac{\mathrm{d}y}{\mathrm{d}x} = 3-4u\\
 \int \frac{2u}{3-4u}\,\mathrm{d}u &= \int\,\mathrm{d}x \\
 -\int \frac{4u}{3-4u}\,\mathrm{d}u &= -2\int\,\mathrm{d}x \\
 \int \left(1-\frac{3}{3-4u} \right)\,\mathrm{d}u &= -2x + C \\
