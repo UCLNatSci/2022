@@ -373,6 +373,11 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2d_arrays/2d_arrays_extra.html">
+     4.5. Further Practice
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -571,8 +576,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   Instructions
+  <a class="reference internal nav-link" href="#coursework-brief">
+   Coursework Brief
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -637,8 +642,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   Instructions
+  <a class="reference internal nav-link" href="#coursework-brief">
+   Coursework Brief
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -701,19 +706,34 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>Panel 1 (left)</strong>. Organisms of two species (blue and green) are initially spread around the neighbourhood at random, with some cells empty (white). <strong>Panels 2 - 4</strong>. At each time step, dissatisfied organisms move into unoccupied cells, resulting in shifting patterns of organism locations.</span><a class="headerlink" href="#fig-neighbourhood" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The neighbourhood consists of a square grid of cells, each of which is either empty or occupied by an organism of one of the two species. Populations of the two species are initially placed into random locations of a neighbourhood represented by a grid.</p>
-<p><img alt="" src="../_images/grid1.png" /></p>
+<p>The neighbourhood consists of a square grid of cells, each of which is either empty or occupied by an organism of one of the two species. Populations of the two species are initially placed into random locations of a neighbourhood represented by a grid (<a class="reference internal" href="#grid1-fig"><span class="std std-numref">Fig. 2</span></a>).</p>
+<figure class="align-default" id="grid1-fig">
+<a class="reference internal image-reference" href="../_images/grid1.png"><img alt="../_images/grid1.png" src="../_images/grid1.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Organisms of two species (X and O) are placed at random in a 5 by 5 grid.</span><a class="headerlink" href="#grid1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The organisms prefer to be surrounded by organisms of the same type. An organism is <em>satisfied</em> if it is surrounded by at least a fraction <span class="math notranslate nohighlight">\(f\)</span> of organisms that are of a like species.</p>
 <p>Let’s assume that <span class="math notranslate nohighlight">\(f = 0.3\)</span>, meaning that an organism is satisfied when at least 30% of its neighbours are the same species as itself. If the organism is satisfied, then it will remain in its current location. If fewer than 30% are the same species, then the organism is not satisfied, and it will want to change its location in the grid.</p>
-<p>The picture below (left) shows a satisfied organism because 50% of X’s neighbors are also X <span class="math notranslate nohighlight">\((50\% &gt; f)\)</span>. The next X (right) is not satisfied because only 25% of its neighbors are X <span class="math notranslate nohighlight">\((25\% &lt; f)\)</span>. Notice that empty cells are not counted when calculating similarity.</p>
-<p><img alt="" src="../_images/grid2.png" /> <img alt="" src="../_images/grid3.png" /></p>
+<p><a class="reference internal" href="#grid2-fig"><span class="std std-numref">Fig. 3</span></a> (left) shows a satisfied organism because 50% of X’s neighbors are also X <span class="math notranslate nohighlight">\((50\% &gt; f)\)</span>. The next X (right) is dissatisfied because only 25% of its neighbours are X <span class="math notranslate nohighlight">\((25\% &lt; f)\)</span>. Notice that empty cells are not counted when calculating similarity.</p>
+<figure class="align-default" id="grid2-fig">
+<a class="reference internal image-reference" href="../_images/grid2.png"><img alt="../_images/grid2.png" src="../_images/grid2.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">An organism is satisifed if the proportion of its neighbours which are of the same species is greater than <span class="math notranslate nohighlight">\(f\)</span>, otherwise it is disatisfied. Given <span class="math notranslate nohighlight">\(f=0.3\)</span>, the organism indicated in the left panel is satisfied because 50% of its neighbours are X, whereas the organism indicated in the right panel is dissatisfied because only 25% of its neighbours are X.</span><a class="headerlink" href="#grid2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>When an organism is not satisfied, it is moved to a an empty cell in the grid. The new location is chosen at random from amongst the empty cells.</p>
-<p>In the image below (left), all dissatisfied organisms have an asterisk next to them. The image on the right shows the new configuration after all the dissatisfied organisms have been moved to unoccupied cells at random. Note that the new configuration may cause some organisms which were previously satisfied to become dissatisfied.</p>
-<p><img alt="" src="../_images/grid4.png" /> <img alt="" src="../_images/grid5.png" /></p>
+<p>In <a class="reference internal" href="#grid3-fig"><span class="std std-numref">Fig. 4</span></a> (left), all dissatisfied organisms have an asterisk next to them. <a class="reference internal" href="#grid3-fig"><span class="std std-numref">Fig. 4</span></a> (right) shows the new configuration after all the dissatisfied organisms have been moved to unoccupied cells at random. Note that the new configuration may cause some organisms which were previously satisfied to become dissatisfied.</p>
+<figure class="align-default" id="grid3-fig">
+<a class="reference internal image-reference" href="../_images/grid3.png"><img alt="../_images/grid3.png" src="../_images/grid3.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">In the left panel, all dissatisfied organisms have an asterisk next to them. In the right panel, all the dissatisfied organisms have been moved to unoccupied cells at random.</span><a class="headerlink" href="#grid3-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>All dissatisfied organisms are moved in the same round. After the round is complete, a new round begins, and dissatisfied organisms are once again moved to new locations in the grid. These rounds continue until all organisms in the neighbourhood are satisfied with their location.</p>
 </section>
-<section id="instructions">
-<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
+<section id="coursework-brief">
+<h2>Coursework Brief<a class="headerlink" href="#coursework-brief" title="Permalink to this headline">#</a></h2>
 <p>Your task is to write a Python notebook that implements the model described above, and then to investigate the model for various values of its parameters. You will model the grid as an array containing the values <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code> which represent the two species of organism and <code class="docutils literal notranslate"><span class="pre">0</span></code> which represents an empty cell.</p>
 <section id="question-1-5-marks">
 <h3>Question 1 [5 marks]<a class="headerlink" href="#question-1-5-marks" title="Permalink to this headline">#</a></h3>
@@ -730,10 +750,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2. 1. 2. 0.]
- [1. 0. 1. 0.]
- [0. 1. 2. 0.]
- [2. 2. 1. 0.]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2. 0. 1. 1.]
+ [1. 1. 0. 0.]
+ [0. 1. 0. 2.]
+ [2. 2. 0. 2.]]
 </pre></div>
 </div>
 </div>
@@ -836,11 +856,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2. 2. 1. 0. 1.]
- [1. 1. 1. 1. 1.]
- [2. 2. 0. 1. 0.]
- [2. 0. 2. 2. 2.]
- [2. 1. 1. 2. 0.]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2. 0. 1. 0. 1.]
+ [0. 1. 1. 1. 1.]
+ [2. 2. 0. 1. 2.]
+ [2. 1. 2. 2. 2.]
+ [2. 1. 1. 0. 2.]]
 </pre></div>
 </div>
 </div>

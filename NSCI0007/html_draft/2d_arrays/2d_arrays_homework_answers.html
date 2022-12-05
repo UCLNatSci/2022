@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Tutorial 5: Cellular Automata" href="../cellular_automata/cellular_automata.html" />
+    <link rel="next" title="4.5. Further Practice" href="2d_arrays_extra.html" />
     <link rel="prev" title="4.4. Homework" href="2d_arrays_homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -372,6 +372,11 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2d_arrays_extra.html">
+     4.5. Further Practice
+    </a>
    </li>
   </ul>
  </li>
@@ -724,7 +729,7 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x2826dae0588&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x249d6f33d88&gt;
 </pre></div>
 </div>
 <img alt="../_images/2d_arrays_homework_answers_2_1.png" src="../_images/2d_arrays_homework_answers_2_1.png" />
@@ -852,7 +857,7 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -862,26 +867,12 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_9340</span>\<span class="mf">3183246015.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="nn">~\AppData\Local\Temp\ipykernel_9340\803825402.py</span> in <span class="ni">upsample</span><span class="nt">(x, k)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_out</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m_out</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">12</span>             <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span> <span class="o">//</span> <span class="n">k</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> 
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="c1"># Display new image</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
+<img alt="../_images/2d_arrays_homework_answers_16_0.png" src="../_images/2d_arrays_homework_answers_16_0.png" />
 </div>
 </div>
 </section>
@@ -921,10 +912,10 @@ The most complicated steps will be to calculate the shape of the new image and t
             <p class="prev-next-title"><span class="section-number">4.4. </span>Homework</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../cellular_automata/cellular_automata.html" title="next page">
+    <a class='right-next' id="next-link" href="2d_arrays_extra.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Tutorial 5: Cellular Automata</p>
+        <p class="prev-next-title"><span class="section-number">4.5. </span>Further Practice</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
