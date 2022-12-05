@@ -27,7 +27,7 @@ y = (5*x+7)/(x**2+3*x+2)
 apart(y)
 ```
 \begin{equation*}
-\frac{3}{x+1}+\frac{2}{x+1}
+\frac{3}{x+2}+\frac{2}{x+1}
 \end{equation*}
 
 

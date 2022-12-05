@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Chemical concentrations" href="../case-studies/chemicals.html" />
+    <link rel="next" title="10. Accumulating change" href="solving.html" />
     <link rel="prev" title="8. Infinite powers" href="../second/powers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -185,6 +185,11 @@ const thebe_selector_output = ".output, .cell_output"
    9. Simple models
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solving.html">
+   10. Accumulating change
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -194,22 +199,27 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/chemicals.html">
-   10. Chemical concentrations
+   11. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/freshwater.html">
-   11. Freshwater sustainability
+   12. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/coronavirus.html">
-   12. Viral trends
+   13. Viral trends
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../case-studies/faustmann.html">
-   13. Forestry management
+   14. Forestry management
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/oil.html">
+   15. Peak oil
   </a>
  </li>
 </ul>
@@ -402,18 +412,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exponential-model">
-   9.1. Exponential model
+  <a class="reference internal nav-link" href="#describing-change">
+   9.1. Describing change
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numeric-solution">
-   9.2. Numeric solution
+  <a class="reference internal nav-link" href="#exponential-model">
+   9.2. Exponential model
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     9.2.1. Example
+    <a class="reference internal nav-link" href="#the-continuous-model">
+     9.2.1. The continuous model
     </a>
    </li>
   </ul>
@@ -424,16 +434,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#restricted-growth-models">
-   9.4. Restricted growth models
+  <a class="reference internal nav-link" href="#microbial-growth">
+   9.4. Microbial growth
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#to-be-continued">
-     9.4.1. To be continued…
+    <a class="reference internal nav-link" href="#monod-vs-logistic">
+     9.4.1. Monod vs logistic
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flu-transmission">
+   9.5. Flu transmission
+  </a>
  </li>
 </ul>
 
@@ -455,18 +470,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exponential-model">
-   9.1. Exponential model
+  <a class="reference internal nav-link" href="#describing-change">
+   9.1. Describing change
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numeric-solution">
-   9.2. Numeric solution
+  <a class="reference internal nav-link" href="#exponential-model">
+   9.2. Exponential model
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     9.2.1. Example
+    <a class="reference internal nav-link" href="#the-continuous-model">
+     9.2.1. The continuous model
     </a>
    </li>
   </ul>
@@ -477,16 +492,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#restricted-growth-models">
-   9.4. Restricted growth models
+  <a class="reference internal nav-link" href="#microbial-growth">
+   9.4. Microbial growth
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#to-be-continued">
-     9.4.1. To be continued…
+    <a class="reference internal nav-link" href="#monod-vs-logistic">
+     9.4.1. Monod vs logistic
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flu-transmission">
+   9.5. Flu transmission
+  </a>
  </li>
 </ul>
 
@@ -500,7 +520,33 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="simple-models">
 <h1><span class="section-number">9. </span>Simple models<a class="headerlink" href="#simple-models" title="Permalink to this heading">#</a></h1>
-<p>We will begin to explore some differential equations, their meaning, and their solutions.</p>
+<p>In this chapter we will start to write down some differential equations and “spot” their solutions. We will focus especially on the model for exponential growth. We will also begin to understand some other models by relating them to the exponential model for non-constant growth rate.</p>
+<p>After working through the chapter you should be able to</p>
+<ul class="simple">
+<li><p>state the differential equation governing exponential growth/decay, and its corresponding solution for a particular initial condition.</p></li>
+<li><p>Examine models of non-constant growth via their relationship with the exponential model.</p></li>
+</ul>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.sciencefriday.com/articles/the-language-of-calculus/">The Language of Calculus, Strogatz</a></p>
+<p>Without calculus, we wouldn’t have cell phones, computers, or microwave ovens. We wouldn’t have radio. Or television. Or ultrasound for expectant mothers, or GPS for lost travelers. We wouldn’t have split the atom, unraveled the human genome, or put astronauts on the moon. We might not even have the Declaration of Independence.</p>
+</div>
+<section id="describing-change">
+<h2><span class="section-number">9.1. </span>Describing change<a class="headerlink" href="#describing-change" title="Permalink to this heading">#</a></h2>
+<p>Most things change, and we are already quite familiar with discussing how quickly they do so in our day-to-day lives. The formal study of time-dependent systems is called “mathematical dynamics”. To describe change we use the language of calculus because it allows us to write down mathematical models that govern the behaviour of systems. By investigating these models, we often can gain great insights about the systems they represent. It all starts with the first derivative, which defines the rate of change.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can also represent time derivatives using “dotty” notation in the following manner:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{x}=\frac{\mathrm{d}x}{\mathrm{d}t}, \qquad \ddot{x}=\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+\end{equation*}\]</div>
+</div>
+<p>For a given quantity <span class="math notranslate nohighlight">\(x\)</span>,</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t&gt;0\)</span> then <span class="math notranslate nohighlight">\(x\)</span> is increasing</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t&lt;0\)</span> then <span class="math notranslate nohighlight">\(x\)</span> is decreasing</p></li>
+</ul>
+<p>In many scenarios the rate of change may depend on time <span class="math notranslate nohighlight">\(t\)</span> or on the value of <span class="math notranslate nohighlight">\(S\)</span> itself.</p>
 <div class="exercise admonition" id="third/first_order-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.1 </span></p>
@@ -538,26 +584,28 @@ F=m\frac{\mathrm{d}v}{\mathrm{d}t}
 F= m \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)=m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2}
 \end{equation*}\]</div>
 </div>
+</section>
 <hr class="docutils" />
 <section id="exponential-model">
-<h2><span class="section-number">9.1. </span>Exponential model<a class="headerlink" href="#exponential-model" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.2. </span>Exponential model<a class="headerlink" href="#exponential-model" title="Permalink to this heading">#</a></h2>
+<p>Before we write down the governing differential equation for exponential growth, let us first return to the case of discrete compound interest that we considered in the chapter on exponentials. We may describe this model using a <em>difference</em> equation involving discrete steps <span class="math notranslate nohighlight">\(\Delta x\)</span> and <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
 <div class="exercise admonition" id="third/first_order-exercise-2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.3 </span></p>
 <section id="exercise-content">
-<p>A loan company charges interest of <span class="math notranslate nohighlight">\(r\%\)</span> per month. Write this down in the form of a difference equation. Also write down the general solution given an initial investment of <span class="math notranslate nohighlight">\(M_0\)</span></p>
+<p>A loan company charges interest of <span class="math notranslate nohighlight">\(r\%\)</span> per month. Write this down in the form of a difference equation. Also write down the general solution given an initial investment of <span class="math notranslate nohighlight">\(x_0\)</span></p>
 </section>
 </div>
 <div class="toggle docutils container">
 <p>In each time step <span class="math notranslate nohighlight">\(\Delta t=1\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{\Delta M}{\Delta t} = \frac{\left(1+\frac{r}{100}\right)M-M}{1}=\frac{r}{100}M.
+\frac{\Delta x}{\Delta t} = \frac{\left(1+\frac{r}{100}\right)x-x}{1}=\frac{r}{100}x.
 \end{equation*}\]</div>
 <p>The equation may be rearranged as</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{1}{M}\frac{\Delta M}{\Delta t} = \frac{r}{100}.
+\frac{1}{x}\frac{\Delta x}{\Delta t} = \frac{r}{100}.
 \end{equation*}\]</div>
 <p>The relative growth rate is constant, as we have seen previously for this model.</p>
 </div>
@@ -566,60 +614,37 @@ F= m \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)=
 
 <p class="admonition-title"><span class="caption-number">Exercise 9.4 </span></p>
 <section id="exercise-content">
-<p>Write down a differential equation corresponding to the previous exercise, supposing that interest is compounded continuously, rather than monthly.</p>
-</section>
-</div>
-<div class="toggle docutils container">
-<p>If interest is compounded continuously then it is convenient to write</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-M=M_0 e^{\lambda t},
-\end{equation*}\]</div>
-<p>which we can do by taking <span class="math notranslate nohighlight">\(\lambda =\ln\left(1+\frac{r}{100}\right)\)</span>.</p>
-<p>Differentiating then gives</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-\frac{1}{M}\frac{\mathrm{d}M}{\mathrm{d}t}=\lambda
-\end{equation*}\]</div>
-</div>
-<div class="exercise admonition" id="third/first_order-exercise-4">
-
-<p class="admonition-title"><span class="caption-number">Exercise 9.5 </span></p>
-<section id="exercise-content">
 <p>Given a module of discrete compound growth of a quantity <span class="math notranslate nohighlight">\(M\)</span> with growth factor <span class="math notranslate nohighlight">\(r\)</span> and initial value <span class="math notranslate nohighlight">\(M_0\)</span>, find the time to reach a given value.</p>
 </section>
 </div>
 <div class="toggle docutils container">
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{M}{M_0}=(1+r)^t \quad &amp;\implies \quad \ln(M/M_0)=t\ln(1+r)\\
-&amp; \implies t=\frac{\ln(M/M_0)}{\ln(1+r)}
+\frac{x}{x_0}=(1+r)^t \quad &amp;\implies \quad \ln(x/x_0)=t\ln(1+r)\\
+&amp; \implies t=\frac{\ln(x/x_0)}{\ln(1+r)}
 \end{align*}\]</div>
 </div>
 <hr class="docutils" />
-<div class="exercise admonition" id="third/first_order-exercise-5">
-
-<p class="admonition-title"><span class="caption-number">Exercise 9.6 </span></p>
-<section id="exercise-content">
-<p>Let <span class="math notranslate nohighlight">\(x(t)\)</span> be the population of a given area at time <span class="math notranslate nohighlight">\(t\)</span>. Write down an expression for the per-capita rate of change of population change.</p>
-<p>Convert this to an equation for <span class="math notranslate nohighlight">\(x(t)\)</span> by assuming that the per-capita rate of population change is equal to a constant <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
-</section>
-</div>
-<div class="toggle docutils container">
+<section id="the-continuous-model">
+<h3><span class="section-number">9.2.1. </span>The continuous model<a class="headerlink" href="#the-continuous-model" title="Permalink to this heading">#</a></h3>
+<p>If interest is compounded continuously then it is convenient to write</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{1}{x}\frac{\mathrm{d}x}{\mathrm{d}t} = \mu \quad \implies \quad x = x_0 e^{\mu t}
+x=x_0 e^{\lambda t}.
 \end{equation*}\]</div>
+<p>We can relate this result to the discrete model by taking <span class="math notranslate nohighlight">\(\lambda =\ln\left(1+\frac{r}{100}\right)\)</span>.</p>
+<p>Differentiating then gives the model for exponential growth:</p>
+<div class="math notranslate nohighlight" id="equation-exponential-model">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-exponential-model" title="Permalink to this equation">#</a></span>\[\frac{1}{x}\frac{\mathrm{d}x}{\mathrm{d}t}=\lambda\]</div>
+<p>According to the model, the relative growth rate is constant. In the case where <span class="math notranslate nohighlight">\(x\)</span> represents a population we can interpret this as the “per-capita” growth rate.</p>
 <p>We could also express the equation in relation to the doubling time <span class="math notranslate nohighlight">\(\tau\)</span>. For <span class="math notranslate nohighlight">\(x\)</span> to be doubled, <span class="math notranslate nohighlight">\(x/x_0=2\)</span> which gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 e^{\mu\tau}=2 \quad \Rightarrow \quad x=x_0 2^{t/\tau}\ .
 \end{equation*}\]</div>
-</div>
-<hr class="docutils" />
-<div class="exercise admonition" id="third/first_order-exercise-6">
+<div class="exercise admonition" id="third/first_order-exercise-4">
 
-<p class="admonition-title"><span class="caption-number">Exercise 9.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 9.5 </span></p>
 <section id="exercise-content">
 <p><a class="reference external" href="https://www.emcdda.europa.eu/publications/drug-profiles/cocaine_en">Cocaine</a> has a half-life of around 0.7-1.5 hour in human blood. Determine what percentage will remain after six hours.</p>
 </section>
@@ -633,139 +658,229 @@ e^{\mu\tau}=2 \quad \Rightarrow \quad x=x_0 2^{t/\tau}\ .
 <p>You may wish to compare this to the results for caffeine and alcohol, which each have a mean half-life of about 5 hours.</p>
 </div>
 </section>
+</section>
 <hr class="docutils" />
-<section id="numeric-solution">
-<h2><span class="section-number">9.2. </span>Numeric solution<a class="headerlink" href="#numeric-solution" title="Permalink to this heading">#</a></h2>
-<p>Consider a general equation of the following form, where <span class="math notranslate nohighlight">\(f(x,t)\)</span> is a known function:</p>
-<div class="math notranslate nohighlight" id="equation-std-prob">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-std-prob" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}x}{\mathrm{d}t} = f(x,t).\]</div>
-<p>To obtain a numeric estimate of the solution we can use the discrete derivative formula</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a4236aa-4c43-48fc-a08b-beff8f346f65">
-<span class="eqno">(9.2)<a class="headerlink" href="#equation-2a4236aa-4c43-48fc-a08b-beff8f346f65" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{\Delta x}{\Delta t}  =\frac{x_{i+1}-x_i}{h},
-\end{equation}\]</div>
-<p>where <span class="math notranslate nohighlight">\(h\)</span> is the step size of <span class="math notranslate nohighlight">\(t\)</span>. By using this formula to estimate the continuous derivative in <a class="reference internal" href="#equation-std-prob">(9.1)</a> we the may obtain the rearrangement</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a42440e-e67e-4a72-bbf1-0896ff0b0214">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-3a42440e-e67e-4a72-bbf1-0896ff0b0214" title="Permalink to this equation">#</a></span>\[\begin{equation}
-x_{i+1} = x_i + h f(x_i,t_i).
-\end{equation}\]</div>
-<p>This allows us to start from a given initial value <span class="math notranslate nohighlight">\(x_0\)</span> and “step forward” successively to obtain <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, etc.</p>
-<section id="example">
-<h3><span class="section-number">9.2.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
-<p>Consider the equation governing exponential growth/decay:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3991855a-3839-4151-af20-38751e112256">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-3991855a-3839-4151-af20-38751e112256" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{\mathrm{d}x}{\mathrm{d}t} = \alpha x.
-\end{equation}\]</div>
-<p>The discrete formula for this problem is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a1de37b8-570d-4218-8efc-d16a3a3b00a8">
-<span class="eqno">(9.5)<a class="headerlink" href="#equation-a1de37b8-570d-4218-8efc-d16a3a3b00a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
-x_{i+1} = (1+\alpha h)x_i.
-\end{equation}\]</div>
-<p>Notice that the solution grows if <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span>, which matches what we expect to see for exponential growth.</p>
-<p>The code below can be used to carry out the forward stepping and plot the solution. By comparing to the known solution we can find the size of the error on a given interval. Here, using a step size <span class="math notranslate nohighlight">\(h=0.02\)</span>, the maximum error is also around 0.02%.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">a</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#alpha</span>
-
-<span class="c1">#range of values to plot for</span>
-<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
-
-<span class="c1">#initialise solution array</span>
-<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-
-<span class="c1"># forward stepping</span>
-<span class="n">h</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#step size</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-  <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">a</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Calculate the error using the known solution</span>
-<span class="n">x_sol</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
-<span class="n">err</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x_sol</span><span class="p">)</span><span class="o">/</span><span class="n">x_sol</span>
-
-<span class="c1"># Maximum error (as %)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
-</pre></div>
-</div>
-</section>
-</section>
 <section id="offset-model">
 <h2><span class="section-number">9.3. </span>Offset model<a class="headerlink" href="#offset-model" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="third/first_order-exercise-7">
+<div class="exercise admonition" id="third/first_order-exercise-5">
 
-<p class="admonition-title"><span class="caption-number">Exercise 9.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 9.6 </span></p>
 <section id="exercise-content">
 <p>In an offset exponential model, the rate of change of a quantity <span class="math notranslate nohighlight">\(Q\)</span> is proportional to the difference from some <strong>equilibrium</strong> value <span class="math notranslate nohighlight">\(Q_e\)</span> in the manner</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{\mathrm{d}Q}{\mathrm{d}t}=r(Q-Q_e)
+\frac{\mathrm{d}Q}{\mathrm{d}t}=r(Q_e-Q)
 \end{equation*}\]</div>
-<p>By defining <span class="math notranslate nohighlight">\(D=(Q-Q_e)\)</span>, write down an equation for <span class="math notranslate nohighlight">\(\dot{D}\)</span> and solve it.</p>
+<p>By defining <span class="math notranslate nohighlight">\(D=(Q_e-Q)\)</span>, write down an equation for <span class="math notranslate nohighlight">\(\dot{D}\)</span> and solve it.</p>
 <p>What do we mean when we say that <span class="math notranslate nohighlight">\(Q_e\)</span> is the equilibrium value?</p>
 </section>
 </div>
 <div class="toggle docutils container">
-<p>Let <span class="math notranslate nohighlight">\(D=(Q-Q_e)\)</span>, then</p>
+<p>Let <span class="math notranslate nohighlight">\(D=(Q_e-Q)\)</span>, then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{\mathrm{d}D}{\mathrm{d}t}=rD \quad \rightarrow \quad \rightarrow D=D_0 e^{r t}
+\frac{\mathrm{d}D}{\mathrm{d}t}=-rD \quad \rightarrow \quad \rightarrow D=D_0 e^{-r t}
 \end{equation*}\]</div>
 <p>The equilibrium value is the point where <span class="math notranslate nohighlight">\(\dot{Q}=0\)</span>. If the system reaches its equilibrium then it will remain there unless some external influence acts on the system to move it away from its equilibrium.</p>
+<p>Notice that if <span class="math notranslate nohighlight">\(r&gt;0\)</span> then</p>
+<ul class="simple">
+<li><p>when <span class="math notranslate nohighlight">\(Q\)</span> exceeds the equilibrium value the growth rate will be negative</p></li>
+<li><p>When <span class="math notranslate nohighlight">\(Q\)</span> is less than the equilibrium value the growth rate will be positive</p></li>
+</ul>
+<p>Therefore this system wants to go to the equilibrium value.</p>
 </div>
-<div class="exercise admonition" id="third/first_order-exercise-8">
+<div class="exercise admonition" id="third/first_order-exercise-6">
 
-<p class="admonition-title"><span class="caption-number">Exercise 9.9 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 9.7 </span></p>
 <section id="exercise-content">
-<p>Apply the offset equilibrium model to find the time taken for a drink to cool from 80C to 63C given an ambient (room) temperature of 20C, given that <span class="math notranslate nohighlight">\(r=-0.11\)</span>/min.</p>
+<p>Apply the offset equilibrium model to find the time taken for a drink to cool from 80C to 63C given an ambient (room) temperature of 20C, given that <span class="math notranslate nohighlight">\(r=0.11\)</span>/min.</p>
 </section>
 </div>
 <div class="toggle docutils container">
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\ln(D/D_0)=rt \quad \implies \quad t=\frac{1}{-0.11}\ln\left(\frac{63-20}{80-20}\right)=\frac{1}{0.11}\ln(60/43)
+\ln(D/D_0)=-rt \quad \implies \quad t=\frac{-1}{0.11}\ln\left(\frac{20-63}{20-80}\right)=\frac{-1}{0.11}\ln(43/60)
 \end{equation*}\]</div>
-<p>The drink will take 3 mins and 2 sec to reach ambient temperature.</p>
+<p>The drink will take 3 mins and 2 sec to reach the desired temperature.</p>
 <p>Note that according to this model, the drink will never actually <em>reach</em> room temperature, though it will approach it in the limit.</p>
-</div>
-</section>
-<section id="restricted-growth-models">
-<h2><span class="section-number">9.4. </span>Restricted growth models<a class="headerlink" href="#restricted-growth-models" title="Permalink to this heading">#</a></h2>
-<p>The Von Bertalanffy equation is the simplest example of a restricted growth model. It is provided by the equation,</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-\frac{\mathrm{d}L}{\mathrm{d}t}=k(L_{\infty}-L),\qquad L(t_0)=0
-\end{equation*}\]</div>
-<p>It has solution</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-L=L_{\infty}\left(1-e^{-k(t-t_0)}\right)
-\end{equation*}\]</div>
 <p>A plot of this curve is shown below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># example parameters</span>
-<span class="n">k</span><span class="o">=</span><span class="mf">0.52</span><span class="p">;</span> <span class="n">Linf</span><span class="o">=</span><span class="mf">275.2</span><span class="p">;</span> <span class="n">t0</span><span class="o">=-</span><span class="mf">0.47</span><span class="p">;</span>
+<span class="n">Qe</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span> <span class="n">r</span><span class="o">=</span><span class="mf">0.11</span><span class="p">;</span> <span class="n">Q0</span><span class="o">=</span><span class="mi">80</span><span class="p">;</span>
 
-<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">Q</span><span class="o">=</span> <span class="n">Qe</span><span class="o">+</span><span class="p">(</span><span class="n">Q0</span><span class="o">-</span><span class="n">Qe</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
 
 <span class="c1"># plot the function</span>
-<span class="n">L</span><span class="o">=</span><span class="n">Linf</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">Linf</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t / min&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Q / Celsius&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/vonbert.png"><img alt="von-bertalanffy" class="align-center" src="../_images/vonbert.png" style="width: 60%;" /></a>
-<section id="to-be-continued">
-<h3><span class="section-number">9.4.1. </span>To be continued…<a class="headerlink" href="#to-be-continued" title="Permalink to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/vonbert.png"><img alt="cooling-drink" class="align-center" src="../_images/vonbert.png" style="width: 60%;" /></a>
+</div>
 </section>
+<section id="microbial-growth">
+<h2><span class="section-number">9.4. </span>Microbial growth<a class="headerlink" href="#microbial-growth" title="Permalink to this heading">#</a></h2>
+<p>The growth rate of a microorganism on a substrate demonstrates an S-shaped curve consisting of a “lag” phase (flat) followed by exponential growth, followed by a “stationary” (flat) phase.</p>
+<p>To estimate the relative growth rate during the exponential phase we can fit a straight line to the logged data, as illustrated in the plot below. A worked exercise can be found in example 3.3 from the recommended reading on microbial growth.</p>
+<figure class="align-default" id="bacterial-growth">
+<img alt="../_images/CFU.png" src="../_images/CFU.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">After taking the logarithm we can identify the exponentially growing phase and find the constant growth rate.</span><a class="headerlink" href="#bacterial-growth" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Monod equation is an empirical relationship that can be used to model the entire growth curve mathematically by taking into account the effect of substrate concentration on growth. It has the same form as the equation for molecular binding model that we looked at in <a class="reference internal" href="../first/plotstuff.html#molbind"><span class="std std-numref">Section 2.4</span></a>. According to the model the specific growth rate <span class="math notranslate nohighlight">\(\mu\)</span> is given by</p>
+<div class="math notranslate nohighlight" id="equation-monod">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-monod" title="Permalink to this equation">#</a></span>\[\mu=\frac{\mu_{max}S}{K_s+S}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_{max}\)</span> is the maximum growth rate, <span class="math notranslate nohighlight">\(S\)</span> is the substrate concentration, <span class="math notranslate nohighlight">\(K_s\)</span> is the half-saturation constant.</p>
+<div class="exercise admonition" id="third/first_order-exercise-7">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9.8 </span></p>
+<section id="exercise-content">
+<p>Find leading order asymptotically equivalent expressions based on the Monod equation for :</p>
+<ul class="simple">
+<li><p>high substrate concentrations (<span class="math notranslate nohighlight">\(S\gg K_s\)</span>)</p></li>
+<li><p>low substrate concentrations (<span class="math notranslate nohighlight">\(S\ll K_s\)</span>)</p></li>
+</ul>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>At high substrate concentrations (e.g initially) the growth rate is approximately independent of the substrate concentration:</p>
+<p><span class="math notranslate nohighlight">\(\qquad \displaystyle S\gg K_s\)</span>, so <span class="math notranslate nohighlight">\(\mu = \mu_{max}\frac{1}{1+K_s/S}\sim \mu_{max}\)</span>.</p>
+<p>At low substrate concentrations (late in evolution) the growth rate is proportional to the substrate concentration:</p>
+<p><span class="math notranslate nohighlight">\(\qquad \displaystyle S\ll K_s\)</span>, so <span class="math notranslate nohighlight">\(\mu=\frac{\mu_{max}S}{K_s}\left(1+\frac{S}{K_s}\right)^{-1}=\frac{\mu_{max}S}{K_s}\left(1-\frac{S}{K_s}+\dots\right)\sim \frac{\mu_{max}S}{K_s}\)</span>.</p>
+<p>These features are what led <a class="reference external" href="https://en.wikipedia.org/wiki/Jacques_Monod">Jacques Monod</a> to propose model that uses his name.</p>
+</div>
+<hr class="docutils" />
+<p>Taking <span class="math notranslate nohighlight">\(X\)</span> to be the cell mass at time <span class="math notranslate nohighlight">\(t\)</span>, we define the cell yield as the rate of cell mass production per unit of substrate consumed:</p>
+<div class="math notranslate nohighlight" id="equation-cell-yield">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-cell-yield" title="Permalink to this equation">#</a></span>\[Y=-\frac{\mathrm{d}X}{\mathrm{d}S} = \frac{\dot{X}}{-\dot{S}}\]</div>
+<p>It is a constant, which depends on the substrate structure and the micro-organism. You may verify by differentiation that this equation is satisfied by</p>
+<div class="math notranslate nohighlight" id="equation-cell-subst">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-cell-subst" title="Permalink to this equation">#</a></span>\[S=S_0-\frac{1}{Y}(X-X_0)\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_0\)</span>, <span class="math notranslate nohighlight">\(X_0\)</span> are the substrate concentration and cell mass when <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+<div class="toggle docutils container">
+<p>First notice that <span class="math notranslate nohighlight">\((S_0,X_0)\)</span> satisfies the equation. Then simply differentiation with respect to <span class="math notranslate nohighlight">\(t\)</span>, treating <span class="math notranslate nohighlight">\(Y\)</span> as a constant:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{S} = -\frac{1}{Y}\dot{X} \quad \implies Y=\frac{\dot{X}}{-\dot{S}}
+\end{equation*}\]</div>
+</div>
+<hr class="docutils" />
+<p>Putting <a class="reference internal" href="#equation-cell-subst">(9.4)</a> for the substrate concentration together with Monod’s growth rate gives</p>
+<div class="math notranslate nohighlight" id="equation-monod-final">
+<span class="eqno">(9.5)<a class="headerlink" href="#equation-monod-final" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}X}{\mathrm{d}t} = \left[\frac{\mu_{max}S}{K_S+S}\right]X, \qquad S=S_0-\frac{1}{Y}(X-X_0).\]</div>
+<section id="monod-vs-logistic">
+<h3><span class="section-number">9.4.1. </span>Monod vs logistic<a class="headerlink" href="#monod-vs-logistic" title="Permalink to this heading">#</a></h3>
+<p>Monod’s model may be compared to the logistic model, which is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}X}{\mathrm{d}t}=rX\left(1-\frac{X}{C}\right)
+\end{equation*}\]</div>
+<p>A comparison of the two model predictions for the cell mass is shown below. In the logistic model <span class="math notranslate nohighlight">\(C\)</span> denotes the “carrying capacity”, which is the maximum value of <span class="math notranslate nohighlight">\(S\)</span> that can be obtained. It occurs when the substrate is exhausted, <span class="math notranslate nohighlight">\(S=0\)</span>, which gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+C=X_0+SY
+\end{equation*}\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(r=\mu K/S_0\)</span> ensures that growth rate in the logistic equation is equal to the growth rate in the Monod equation for low substrate concentrations.</p>
+<a class="reference internal image-reference" href="../_images/model-comparison.png"><img alt="model-comparison" class="align-center" src="../_images/model-comparison.png" style="width: 60%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The exponential model is a special case of the logistic model with infinite carrying capacity.</p>
+</div>
+</section>
+</section>
+<section id="flu-transmission">
+<h2><span class="section-number">9.5. </span>Flu transmission<a class="headerlink" href="#flu-transmission" title="Permalink to this heading">#</a></h2>
+<p>A basic model of flu transmission is given below, in which <span class="math notranslate nohighlight">\(S\)</span> denotes susceptible individuals and <span class="math notranslate nohighlight">\(I\)</span> denotes infected individuals. The constants <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(m\)</span> in these equations are taken to be positive:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{aligned}
+\frac{\mathrm{d}S}{\mathrm{d}t} &amp;=-k SI+m I&amp;&amp; \text{[Equation I]} \\[10pt]
+\frac{\mathrm{d}I}{\mathrm{d}t} &amp;=\phantom{-}k SI-mI &amp;&amp; \text{[Equation II]}
+\end{aligned}
+\end{equation*}\]</div>
+<div class="exercise admonition" id="third/first_order-exercise-8">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9.9 </span></p>
+<section id="exercise-content">
+<p>Give a physical interpretation of each term on the right hand side of the equation for <span class="math notranslate nohighlight">\(\frac{\mathrm{d}I}{\mathrm{d}t}\)</span>.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(kSI\)</span> : When a susceptible person encounters an infected person this may result in infection. Infections occur at rate <span class="math notranslate nohighlight">\(k\)</span></p>
+<p><span class="math notranslate nohighlight">\(-mI\)</span> : Infected individuals recover at rate <span class="math notranslate nohighlight">\(m\)</span></p>
+</div>
+<div class="exercise admonition" id="ex-poplnN">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9.10 </span></p>
+<section id="exercise-content">
+<p>Taking <span class="math notranslate nohighlight">\(N=(S+I)\)</span>,
+Find <span class="math notranslate nohighlight">\(\frac{\mathrm{d}N}{\mathrm{d}t}\)</span> and explain the result in terms of the population dynamics.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(N=S+I\implies \frac{\mathrm{d}N}{\mathrm{d}t}=\frac{\mathrm{d}S}{\mathrm{d}t}+\frac{\mathrm{d}I}{\mathrm{d}t}=(-kSI+mI)+(kSI-mI)=0\)</span></p>
+<p>This is a two compartment model. The total number of people in the population is constant.</p>
+</div>
+<div class="exercise admonition" id="third/first_order-exercise-10">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9.11 </span></p>
+<section id="exercise-content">
+<p>Use the result from <a class="reference internal" href="#ex-poplnN"><span class="std std-numref">Exercise 9.10</span></a> to write Equation II in the form</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}I}{\mathrm{d}t}= rI\left(1-\frac{I}{C}\right)
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r,C\)</span> are constants related to <span class="math notranslate nohighlight">\(k,m,N\)</span>. Hence, write down the solution for <span class="math notranslate nohighlight">\(I(t)\)</span>.</p>
+<p>Taking <span class="math notranslate nohighlight">\(N=100,k=0.02,m=0.5\)</span>, plot the solutions for <span class="math notranslate nohighlight">\(I(t),S(t)\)</span> on the same axes.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Substituting <span class="math notranslate nohighlight">\(S=(N-I)\)</span> into Equation II gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}I}{\mathrm{d}t}=rI\left(1-\frac{I}{C}\right)
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=(kN-m)\)</span> and <span class="math notranslate nohighlight">\(C=r/k\)</span>. Hence, the general form of the solution is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+I= \frac{C}{1+(C/I_0-1)e^{-r t}}.
+\end{equation*}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># define parameters</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.02</span><span class="p">;</span> <span class="n">m</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">r</span><span class="o">=</span><span class="n">k</span><span class="o">*</span><span class="n">N</span><span class="o">-</span><span class="n">m</span><span class="p">;</span> <span class="n">C</span><span class="o">=</span><span class="n">r</span><span class="o">/</span><span class="n">k</span>
+
+<span class="c1"># range to plot</span>
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># If there is initially one infection</span>
+<span class="n">I0</span><span class="o">=</span><span class="mi">1</span>
+
+<span class="n">den</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="n">I0</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">I</span><span class="o">=</span><span class="n">C</span><span class="o">/</span><span class="n">den</span>
+<span class="n">S</span><span class="o">=</span><span class="n">N</span><span class="o">-</span><span class="n">I</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;infected&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;susceptible&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/SI_eulerf.png"><img alt="susceptible-infected" class="align-center" src="../_images/SI_eulerf.png" style="width: 60%;" /></a>
+</div>
 </section>
 </section>
 
@@ -803,10 +918,10 @@ L=L_{\infty}\left(1-e^{-k(t-t_0)}\right)
             <p class="prev-next-title"><span class="section-number">8. </span>Infinite powers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../case-studies/chemicals.html" title="next page">
+    <a class='right-next' id="next-link" href="solving.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Chemical concentrations</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Accumulating change</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>13. Forestry management &#8212; Mathematics for Natural Sciences B</title>
+    <title>14. Forestry management &#8212; Mathematics for Natural Sciences B</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -59,8 +59,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Maths coursework 1 [20%]" href="../homework/homework.html" />
-    <link rel="prev" title="12. Viral trends" href="coronavirus.html" />
+    <link rel="next" title="15. Peak oil" href="oil.html" />
+    <link rel="prev" title="13. Viral trends" href="coronavirus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -185,6 +185,11 @@ const thebe_selector_output = ".output, .cell_output"
    9. Simple models
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/solving.html">
+   10. Accumulating change
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -194,22 +199,27 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chemicals.html">
-   10. Chemical concentrations
+   11. Chemical concentrations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="freshwater.html">
-   11. Freshwater sustainability
+   12. Freshwater sustainability
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coronavirus.html">
-   12. Viral trends
+   13. Viral trends
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   13. Forestry management
+   14. Forestry management
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oil.html">
+   15. Peak oil
   </a>
  </li>
 </ul>
@@ -403,29 +413,29 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#without-replanting">
-   13.1. Without replanting
+   14.1. Without replanting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#with-replanting">
-   13.2. With replanting
+   14.2. With replanting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interpretation">
-     13.2.1. Interpretation
+     14.2.1. Interpretation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fitting-to-data">
-   13.3. Fitting to data
+   14.3. Fitting to data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optimal-harvesting">
-   13.4. Optimal harvesting
+   14.4. Optimal harvesting
   </a>
  </li>
 </ul>
@@ -449,29 +459,29 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#without-replanting">
-   13.1. Without replanting
+   14.1. Without replanting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#with-replanting">
-   13.2. With replanting
+   14.2. With replanting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interpretation">
-     13.2.1. Interpretation
+     14.2.1. Interpretation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fitting-to-data">
-   13.3. Fitting to data
+   14.3. Fitting to data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optimal-harvesting">
-   13.4. Optimal harvesting
+   14.4. Optimal harvesting
   </a>
  </li>
 </ul>
@@ -485,7 +495,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="forestry-management">
-<h1><span class="section-number">13. </span>Forestry management<a class="headerlink" href="#forestry-management" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">14. </span>Forestry management<a class="headerlink" href="#forestry-management" title="Permalink to this heading">#</a></h1>
 <div class="quote admonition">
 <p class="admonition-title"><a class="reference external" href="https://www.wiley.com/en-us/Mathematical+Bioeconomics:+The+Mathematics+of+Conservation,+3rd+Edition-p-9780470372999">Mathematical Bioeconomics: The Mathematics of Conservation., CW Clark</a></p>
 <p>Biological renewable resources, essential to the survival of mankind, are increasingly overexploited by individuals and corporations that often sacrifice long-term economic health and sustainability for short-term gains.</p>
@@ -494,18 +504,18 @@ title="Print to PDF"
 <p>Solving the problem requires a combination of techniques studied in this module including finding minima, numeric differentiation, summation of geometric series, curve fitting, plotting, and understanding concepts of relative growth rates.</p>
 <p>The problem is to determine the optimal time to harvest a forest resource based on the economic value of timber.</p>
 <section id="without-replanting">
-<h2><span class="section-number">13.1. </span>Without replanting<a class="headerlink" href="#without-replanting" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.1. </span>Without replanting<a class="headerlink" href="#without-replanting" title="Permalink to this heading">#</a></h2>
 <p>It is assumed that the timber (wood) value of a tress increases with age up to full maturity. Eventually decay will cause a decline in the tree value, but many commercial tree species continue to grow and increase in value for several hundred years.</p>
 <p>We wish to determine the value of cutting down trees at the present time in comparison to the future. Our method will take into account the possibility of interest accrued on a present payment.</p>
 <p>Let <span class="math notranslate nohighlight">\(\hat{V}\)</span> denote the present value of a future payment, and let <span class="math notranslate nohighlight">\(V(t)\)</span> denote the commercial value of a tree. Then,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2d7814c-b7dd-4b72-abb5-a1ac246ab8f3">
-<span class="eqno">(13.1)<a class="headerlink" href="#equation-b2d7814c-b7dd-4b72-abb5-a1ac246ab8f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-451fb43d-cb65-43e7-8461-e2a914890875">
+<span class="eqno">(14.1)<a class="headerlink" href="#equation-451fb43d-cb65-43e7-8461-e2a914890875" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta t}(V(t)-c)
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the cost of felling, and <span class="math notranslate nohighlight">\(\delta\)</span> is the annual rate of interest.</p>
 <div class="exercise admonition" id="case-studies/faustmann-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 13.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 14.1 </span></p>
 <section id="exercise-content">
 <p>Derive a condition for when the value of felling is maximised.</p>
 </section>
@@ -521,30 +531,30 @@ title="Print to PDF"
 </section>
 <hr class="docutils" />
 <section id="with-replanting">
-<h2><span class="section-number">13.2. </span>With replanting<a class="headerlink" href="#with-replanting" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.2. </span>With replanting<a class="headerlink" href="#with-replanting" title="Permalink to this heading">#</a></h2>
 <p>The basic analysis above neglects the opportunity to replant. When replanting is taken into account we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b3365ee-da4c-41c3-b77b-cf8bc9da7014">
-<span class="eqno">(13.2)<a class="headerlink" href="#equation-8b3365ee-da4c-41c3-b77b-cf8bc9da7014" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-85401120-cc05-40cc-8b44-3d62e925d454">
+<span class="eqno">(14.2)<a class="headerlink" href="#equation-85401120-cc05-40cc-8b44-3d62e925d454" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta T_1}[V(T_1)-c]+e^{-\delta T_2}[V(T_2-T_1)-c]+e^{-\delta T_3}[V(T_3-T_2)-c]+\dots
 \end{equation}\]</div>
 <p>Assuming that the interest rate will stay constant, the second rotation problem is identical to the first (and so on). We can therefore assume that all rotation periods are equal and so <span class="math notranslate nohighlight">\(T_k=kT\)</span>, <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>.</p>
 <p>Thus, we may write :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f5ff7e92-1b67-4778-8392-f5db8f58a59f">
-<span class="eqno">(13.3)<a class="headerlink" href="#equation-f5ff7e92-1b67-4778-8392-f5db8f58a59f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-36a4508c-349c-4dbd-8970-b5d9687d107a">
+<span class="eqno">(14.3)<a class="headerlink" href="#equation-36a4508c-349c-4dbd-8970-b5d9687d107a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\sum_{k=1}^{\infty}e^{-k\delta T}[V(T)-c]=[V(t)-c]\sum_{k=1}^{\infty}e^{-k\delta T}.
 \end{equation}\]</div>
 <p>The sum is a geometric progression With first term and common difference both equal to <span class="math notranslate nohighlight">\(e^{-\delta T}\)</span>. From the formula for the infinite sum we therefore obtain the modified value function:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4d579a8e-d1df-412a-8087-4bfd204fcf0a">
-<span class="eqno">(13.4)<a class="headerlink" href="#equation-4d579a8e-d1df-412a-8087-4bfd204fcf0a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c71e9c93-ca52-415c-b176-60330a1eaa17">
+<span class="eqno">(14.4)<a class="headerlink" href="#equation-c71e9c93-ca52-415c-b176-60330a1eaa17" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\frac{V(T)-c}{e^{\delta T}-1}
 \end{equation}\]</div>
 <div class="exercise admonition" id="case-studies/faustmann-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 13.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 14.2 </span></p>
 <section id="exercise-content">
 <p>Show that the modified value function is maximised for</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48ec5893-b240-4c67-b8a2-827fd2b83eee">
-<span class="eqno">(13.5)<a class="headerlink" href="#equation-48ec5893-b240-4c67-b8a2-827fd2b83eee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-123e49f3-a423-42cc-8ef2-e9ce1c7b11a8">
+<span class="eqno">(14.5)<a class="headerlink" href="#equation-123e49f3-a423-42cc-8ef2-e9ce1c7b11a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{V^{\prime}}{V-c}=\frac{\delta}{1-e^{-\delta T}}
 \end{equation}\]</div>
 <p>This is the Faustmann formula.</p>
@@ -552,19 +562,19 @@ title="Print to PDF"
 </div>
 <div class="toggle docutils container">
 <p>Differentiating gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a7210d2-135d-4b3b-bea6-c83287e38228">
-<span class="eqno">(13.6)<a class="headerlink" href="#equation-3a7210d2-135d-4b3b-bea6-c83287e38228" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a5aff99c-dfb8-471b-94e4-49424fc5e9dc">
+<span class="eqno">(14.6)<a class="headerlink" href="#equation-a5aff99c-dfb8-471b-94e4-49424fc5e9dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}^{\prime}=\frac{(e^{\delta T}-1)V^{\prime}-(V-c)\delta e^{\delta T}}{(e^{\delta T}-1)^2}
 \end{equation}\]</div>
 <p>The result is then obtained by setting <span class="math notranslate nohighlight">\(\hat{V}^{\prime}=0\)</span>.</p>
 </div>
 <hr class="docutils" />
 <section id="interpretation">
-<h3><span class="section-number">13.2.1. </span>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">14.2.1. </span>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this heading">#</a></h3>
 <p>Because <span class="math notranslate nohighlight">\(1-e^{-\delta T}&lt;1\)</span>, taking rotation into account leads to a decrease in the age of cutting.</p>
 <p>The Faustmann formula can be understood by rearrangement to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b5b297d-962d-485f-a71e-591087bf0b19">
-<span class="eqno">(13.7)<a class="headerlink" href="#equation-4b5b297d-962d-485f-a71e-591087bf0b19" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-617f83f5-2588-48b3-b4a5-8a3db75e81e2">
+<span class="eqno">(14.7)<a class="headerlink" href="#equation-617f83f5-2588-48b3-b4a5-8a3db75e81e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 \end{equation}\]</div>
 <ul class="simple">
@@ -574,10 +584,10 @@ V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 </section>
 </section>
 <section id="fitting-to-data">
-<h2><span class="section-number">13.3. </span>Fitting to data<a class="headerlink" href="#fitting-to-data" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.3. </span>Fitting to data<a class="headerlink" href="#fitting-to-data" title="Permalink to this heading">#</a></h2>
 <p>In the Faustmann formula, <span class="math notranslate nohighlight">\((V-c)\)</span> is the net stumpage value, which can be determined from data tables. We can plot the functions on the left and right side of the formula and calculate their intersection.</p>
 <table class="table" id="id1">
-<caption><span class="caption-number">Table 13.1 </span><span class="caption-text">Yield tables for Douglas fir, multiplied by cost (in cents per cubic foot!)</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 14.1 </span><span class="caption-text">Yield tables for Douglas fir, multiplied by cost (in cents per cubic foot!)</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Year</p></th>
 <th class="head"><p>30</p></th>
@@ -609,7 +619,7 @@ V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 </table>
 <div class="exercise admonition" id="case-studies/faustmann-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 13.3 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 14.3 </span></p>
 <section id="exercise-content">
 <p>Determine the relative growth rate <span class="math notranslate nohighlight">\(V^{\prime}/(V-c)\)</span> and the average yield <span class="math notranslate nohighlight">\((V-c)/T\)</span></p>
 <p><em>Hint: to estimate <span class="math notranslate nohighlight">\(V^{\prime}\)</span> use the central differences formula</em></p>
@@ -683,11 +693,11 @@ V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 </div>
 <div class="exercise admonition" id="case-studies/faustmann-exercise-3">
 
-<p class="admonition-title"><span class="caption-number">Exercise 13.4 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 14.4 </span></p>
 <section id="exercise-content">
 <p>Fit a Weibull function to the net stumpage value. The Weibull function is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5885e034-8664-43ae-8a66-2837a944a41b">
-<span class="eqno">(13.8)<a class="headerlink" href="#equation-5885e034-8664-43ae-8a66-2837a944a41b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-57e709d6-e492-4c63-95ae-41627a50f524">
+<span class="eqno">(14.8)<a class="headerlink" href="#equation-57e709d6-e492-4c63-95ae-41627a50f524" title="Permalink to this equation">#</a></span>\[\begin{equation}
 w(t) = 1-e^{-(t/k)^s}
 \end{equation}\]</div>
 <p><em>Hint: The data need to be transformed to the range [0,1] on both axes to perform the fit, and then the inverse transform needs to be performed. It’s worth it though, as the data fit very nicely!</em></p>
@@ -722,7 +732,7 @@ w(t) = 1-e^{-(t/k)^s}
 </div>
 </section>
 <section id="optimal-harvesting">
-<h2><span class="section-number">13.4. </span>Optimal harvesting<a class="headerlink" href="#optimal-harvesting" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.4. </span>Optimal harvesting<a class="headerlink" href="#optimal-harvesting" title="Permalink to this heading">#</a></h2>
 <p>Using the fitted Weibull function, we can produce a figure illustrating the intersections of the left and right sides of the Faustmann formula for different values of the interest rate <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Left-hand side of Faustmann formula</span>
 <span class="n">T</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
@@ -744,7 +754,7 @@ w(t) = 1-e^{-(t/k)^s}
 <figure class="align-default" id="faustmann-intersection">
 <img alt="../_images/faustmann-wbll.png" src="../_images/faustmann-wbll.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Graphical determination of the optimal rotation for different interest rates <span class="math notranslate nohighlight">\(\delta\)</span></span><a class="headerlink" href="#faustmann-intersection" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Graphical determination of the optimal rotation for different interest rates <span class="math notranslate nohighlight">\(\delta\)</span></span><a class="headerlink" href="#faustmann-intersection" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The intersections give the optimal rotation age (years) for different values of the discount. To numerically locate the intersections we can find where the difference between the two datasets representing the curves is smallest.</p>
@@ -829,13 +839,13 @@ w(t) = 1-e^{-(t/k)^s}
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">12. </span>Viral trends</p>
+            <p class="prev-next-title"><span class="section-number">13. </span>Viral trends</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../homework/homework.html" title="next page">
+    <a class='right-next' id="next-link" href="oil.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maths coursework 1 [20%]</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Peak oil</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
