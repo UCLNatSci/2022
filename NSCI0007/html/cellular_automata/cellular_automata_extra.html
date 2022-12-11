@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.3. Further Practice &#8212; Scientific Computing Workbook</title>
+    <title>5.4. Further Practice &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="cellular_automata_homework.html" />
-    <link rel="prev" title="5.2.7. Solutions" href="cellular_automata_answers.html" />
+    <link rel="next" title="5.9. Homework" href="cellular_automata_homework.html" />
+    <link rel="prev" title="5.3.3. Solutions" href="cellular_automata_answers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -392,12 +392,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="cellular_automata_notes.html">
-     5.1. Notes
+     5.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="cellular_automata.html">
-     5.2. Workshop
+     5.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
     <label for="toctree-checkbox-16">
@@ -407,14 +407,19 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="cellular_automata_answers.html">
-       5.2.7. Solutions
+       5.3.3. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     5.3. Further Practice
+     5.4. Further Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cellular_automata_homework.html">
+     5.9. Homework
     </a>
    </li>
   </ul>
@@ -582,12 +587,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5.4. Further Practice
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   5.5. Question 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   5.6. Question 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   5.7. Question 4
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   5.8. Question 5
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -599,6 +648,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5.4. Further Practice
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   5.5. Question 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   5.6. Question 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   5.7. Question 4
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   5.8. Question 5
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -607,7 +689,7 @@ title="Print to PDF"
               <div>
                 
   <section id="further-practice">
-<h1><span class="section-number">5.3. </span>Further Practice<a class="headerlink" href="#further-practice" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5.4. </span>Further Practice<a class="headerlink" href="#further-practice" title="Permalink to this headline">#</a></h1>
 <p>In fact, the concentration <span class="math notranslate nohighlight">\(z_{i,j}\)</span> at the next timestep is given by</p>
 <div class="math notranslate nohighlight">
 \[x_{i,j} + \mathrm{flow~into~cell~} i, j - \mathrm{flow~out~of~cell~} i,j.\]</div>
@@ -619,7 +701,7 @@ title="Print to PDF"
 \[d \times (\mathrm{sum~of~3~by~3~subarray~centred~at~}i,j) + (1-9d)x_{i,j}.\]</div>
 <div class="exercise admonition" id="cellular_automata/cellular_automata_extra-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 5.6 </span></p>
 <section id="exercise-content">
 <p>Use the formula above to calculate the concentration in cell <code class="docutils literal notranslate"><span class="pre">x[1,1]</span></code> of array <code class="docutils literal notranslate"><span class="pre">x</span></code> after one timestep.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -720,12 +802,54 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="cellular_automata/cellular_automata_extra-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 5.7 </span></p>
 <section id="exercise-content">
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">diffuse(x,</span> <span class="pre">d)</span></code> which</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
+</section>
+</div>
+</section>
+<section id="question-2">
+<h1><span class="section-number">5.5. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h1>
+<p>Get this working on a 3-d <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">t</span></code> array where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the number of time steps.</p>
+<p>Generate embedded video</p>
+</section>
+<section id="question-3">
+<h1><span class="section-number">5.6. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h1>
+<p>You’ll have noticed that some starting patterns quickly die out, whereas some spawn a complicted series of activity which lasts a long time. To invesitage this, we’d like to generate a line graph which shows the total number of active cells at each timestep.</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">activity_graph(grid)</span></code> which plots a line graph as shown.</p>
+</section>
+<section id="question-4">
+<h1><span class="section-number">5.7. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h1>
+<p>Some starting patterns eventually settle down to an oscillating between states. Write a function which returns the number of states in the cycle.</p>
+<p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cycle_period(grid):</span></code></p>
+</section>
+<section id="question-5">
+<h1><span class="section-number">5.8. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h1>
+<p>Some starting patterns ‘gliders’ oscillate between states, but shifted by a cell in some direction. Write a function which idenfities if a starting pattern is a glider.</p>
+<p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">is_glider(grid):</span></code></p>
+<div class="exercise admonition" id="exercise_5_6">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.8 </span></p>
+<section id="exercise-content">
+<p>Adapt your code so that  the Create a 3d array <code class="docutils literal notranslate"><span class="pre">z</span></code> to store the results of your diffusion simulation. Each slice <code class="docutils literal notranslate"><span class="pre">z[i,:,:]</span></code> should be an <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> array representing the concentration of the region at timestep <code class="docutils literal notranslate"><span class="pre">i</span></code>. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># number of time steps</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># size of region</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+
+<span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="c1"># the inital concentrations</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="c1"># set z[i,:,:] to the value of the next moving average</span>
+
+</pre></div>
+</div>
+<p>Then create line graphs which show the concentration at a point<br />
+1. At the centre<br />
+2. Near the edge</p>
+<p>Over time.</p>
 </section>
 </div>
 </section>
@@ -761,13 +885,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.2.7. </span>Solutions</p>
+            <p class="prev-next-title"><span class="section-number">5.3.3. </span>Solutions</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="cellular_automata_homework.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"><span class="section-number">5.9. </span>Homework</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
