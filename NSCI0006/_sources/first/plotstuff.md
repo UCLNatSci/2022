@@ -14,6 +14,11 @@ kernelspec:
 
 #  Graphing data
 
+```{admonition} [Calling Bullsh*t](https://www.callingbullshit.org/tools/tools_misleading_axes.html)
+:class: quote
+[D]ata visualizations tell stories. Relatively subtle choices, such as the range of the axes in a bar chart or line graph, can have a big impact on the story that a figure tells. When you look at data graphics, you want to ask yourself whether the graph has been designed to tell a story that accurately reflects the underlying data, or whether it has been designed to tell a story more closely aligned with what the designer would like you to believe.
+```
+
 This chapter provides some examples of importing and plotting data. After completing the chapter you should be able to:
 
 * Use line and scatter graphs to create a visual representation of data
@@ -23,11 +28,6 @@ This chapter provides some examples of importing and plotting data. After comple
 * Estimate area under a curve by using trapezia
 
 * Produce a graph where one or both axes is on a log scale and recognise when this may be useful
-
-```{admonition} [Calling Bullsh*t](https://www.callingbullshit.org/tools/tools_misleading_axes.html)
-:class: quote
-[D]ata visualizations tell stories. Relatively subtle choices, such as the range of the axes in a bar chart or line graph, can have a big impact on the story that a figure tells. When you look at data graphics, you want to ask yourself whether the graph has been designed to tell a story that accurately reflects the underlying data, or whether it has been designed to tell a story more closely aligned with what the designer would like you to believe.
-```
 
 ## Greenhouse emissions
 

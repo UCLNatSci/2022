@@ -1,13 +1,13 @@
 # Rational functions
 
-In this chapter we will look at functions of the form $P(x)/Q(x)$, where $P,Q$ are polynomials. The material will require us to use partial fractions and so an overview of that technique is provided as background material.
-
-After completing the chapter you should be able to plot rational functions and identify any vertical, horizontal or oblique asymptotes.
-
 ```{admonition} [Sheldon, The Big Bang Theory](https://www.quotes.net/mquote/885618)
 :class: quote
 What part of "inverse tangent function approaching an asymptote" did you not understand?
 ```
+
+In this chapter we will look at functions of the form $P(x)/Q(x)$, where $P,Q$ are polynomials. The material will require us to use partial fractions and so an overview of that technique is provided as background material.
+
+After completing the chapter you should be able to plot rational functions and identify any vertical, horizontal or oblique asymptotes.
 
 ## Partial fractions
 

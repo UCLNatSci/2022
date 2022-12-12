@@ -1,5 +1,11 @@
 # Representing numbers
 
+```{admonition} [Simon Singh](https://www.theguardian.com/education/2005/sep/30/highereducation.uk)
+:class: quote
+We are entering a new era of so-called precision cosmology.<br>
+In short, Katie Melua has no right to call the age of the universe "a guess".
+```
+
 This chapter provides some short background practice on working with numbers. After working through the chapter you should
 
 * Be able to express numbers in scientific number format and recognise why this format can be useful.
@@ -10,11 +16,6 @@ This chapter provides some short background practice on working with numbers. Af
 
 The exercises in {numref}`thwater` and {numref}`substance` are provided for you to practice.
 
-```{admonition} [Simon Singh](https://www.theguardian.com/education/2005/sep/30/highereducation.uk)
-:class: quote
-We are entering a new era of so-called precision cosmology.<br>
-In short, Katie Melua has no right to call the age of the universe "a guess".
-```
 
 ## Precision
 When we state the numeric value of a measured quantity such as the volume of water in a beaker or the number of bacteria in a sample we often give additional information about the width of the measurement interval such as "to the nearest millilitre" or "to the nearest million bacteria". These can be understood as statements about measurement precision.

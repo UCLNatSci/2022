@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -512,16 +527,16 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exponential-trends">
 <h1><span class="section-number">3. </span>Exponential trends<a class="headerlink" href="#exponential-trends" title="Permalink to this heading">#</a></h1>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://commonslibrary.parliament.uk/research-briefings/sn01079/#:~:text=%C2%A3460%20billion">Scale of student loans in England</a></p>
+<p>The Government forecasts the value of outstanding loans to reach around £460 billion (2021-22 prices) by the mid2040s.</p>
+</div>
 <p>This chapter introduces the natural exponent and natural logarithm. After working through this chapter you should be able to:</p>
 <ul class="simple">
 <li><p>Calculate absolute and relative growth rates from a given dataset</p></li>
 <li><p>Understand the relationship between exponential behaviour and growth rates</p></li>
 <li><p>Manipulate exponentials and logarithms algebraically</p></li>
 </ul>
-<div class="quote admonition">
-<p class="admonition-title"><a class="reference external" href="https://commonslibrary.parliament.uk/research-briefings/sn01079/#:~:text=%C2%A3460%20billion">Scale of student loans in England</a></p>
-<p>The Government forecasts the value of outstanding loans to reach around £460 billion (2021-22 prices) by the mid2040s.</p>
-</div>
 <section id="student-debt-in-england">
 <h2><span class="section-number">3.1. </span>Student debt in England<a class="headerlink" href="#student-debt-in-england" title="Permalink to this heading">#</a></h2>
 <p>The table below shows how the amount of student debt in England has changed since 2005. Data are obtained from <a class="reference external" href="https://researchbriefings.files.parliament.uk/documents/SN01079/SN01079.pdf">House of Commons Student Loan Statistics</a> [page 35, table 2].</p>
@@ -672,8 +687,8 @@ k=\frac{D_{step}}{T_{step}}=\frac{D_b-D_a}{T_b-T_a}
 <section id="exponential-relationships">
 <h2><span class="section-number">3.2. </span>Exponential relationships<a class="headerlink" href="#exponential-relationships" title="Permalink to this heading">#</a></h2>
 <p>An exponential relationship has the following form, where <span class="math notranslate nohighlight">\(y_0\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are constants:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d137ff77-ce59-461a-a124-aee3cdba2e55">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-d137ff77-ce59-461a-a124-aee3cdba2e55" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f3007fdd-5239-450a-bc51-5a3226e4898b">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-f3007fdd-5239-450a-bc51-5a3226e4898b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y=y_0 k^x.
 \end{equation}\]</div>
 <p>In the previous section on student loans we saw an example with <span class="math notranslate nohighlight">\(k=1.168.\)</span> The plot below shows how the exponential curve looks for some other values of <span class="math notranslate nohighlight">\(k\)</span>, taking <span class="math notranslate nohighlight">\(y_0=1\)</span>. By putting <span class="math notranslate nohighlight">\(x=0\)</span> we obtain <span class="math notranslate nohighlight">\(y=y_0\)</span>, so this is the value at which the curve meets the vertical axis.</p>
@@ -695,8 +710,8 @@ y=y_0 k^x.
 </figcaption>
 </figure>
 <p>Notice that the plots for <span class="math notranslate nohighlight">\(k=0.5\)</span> and <span class="math notranslate nohighlight">\(k=2.0\)</span> are mirror images in the vertical axis. This can be understood from the laws of exponents:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66754944-3d46-451b-bf0f-031bacbca945">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-66754944-3d46-451b-bf0f-031bacbca945" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-688d8266-d2e5-4587-85bf-eb1f062c0f7c">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-688d8266-d2e5-4587-85bf-eb1f062c0f7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 k^{-x}=(k^x)^{-1}=\frac{1}{k^x}=\left(\frac{1}{k}\right)^x.
 \end{equation}\]</div>
 <p>We can describe the shape of the exponential curve for values of the positive constant <span class="math notranslate nohighlight">\(k\)</span> :</p>
@@ -908,13 +923,13 @@ y=\text{log10}(x) \quad \iff \quad 10^y=x \quad \iff \quad \left(e^{\ln(10)}\rig
 y\ln(10)=\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(10)}.
 \end{equation*}\]</div>
 <p>Since we originally defined <span class="math notranslate nohighlight">\(y\)</span> as the base 10 logarithm of <span class="math notranslate nohighlight">\(x\)</span> we have the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c92d5df-1864-41a8-83b3-30fb52c79c64">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-6c92d5df-1864-41a8-83b3-30fb52c79c64" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-840f9b24-b858-480a-915a-bbd93934fbe0">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-840f9b24-b858-480a-915a-bbd93934fbe0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{log10}(x) = \frac{\ln(x)}{\ln(10)}.
 \end{equation}\]</div>
 <p>By using exactly the same algebra we can dwmonstrate that the analogous result applies to the logarithm in any base:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4f59073-a05c-49d2-b81c-5af6976acd8c">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-e4f59073-a05c-49d2-b81c-5af6976acd8c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-beac2d0c-608b-4913-b718-a2a659663579">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-beac2d0c-608b-4913-b718-a2a659663579" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \log_k(x) = \frac{\ln(x)}{\ln(k)}.
 \end{equation}\]</div>
 <p>We can also use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base:</p>

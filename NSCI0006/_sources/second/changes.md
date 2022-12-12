@@ -15,6 +15,11 @@ kernelspec:
 
 # Rates of change
 
+```{admonition} [The Newton-Leibniz Calculus Controversy](https://doi.org/10.1093/oxfordhb/9780199930418.013.9)
+:class: quote
+The philosophical and political dimension of the debate between Leibniz and Newton should not escape our attention. They disagreed over issues concerning the foundations of the calculus: Newton was convinced of the superiority of his method of limits over Leibniz’s mathematical practice where infinitesimals occurred. They were divided over physical questions such as the nature of gravity, time and space, atoms and the void, as well as the issue of which quantities are properly conserved by the laws of nature. In short, they were not just mathematical opponents: they were philosophical enemies as well.
+```
+
 In this chapter we introduce the concept of a derivative and some standard results. After completing this chapter you should be able to:
 
 * obtain a numeric estimate of the derivative using data points representing a curve
@@ -28,11 +33,6 @@ In this chapter we introduce the concept of a derivative and some standard resul
 * find the equation of the tangent at a given point on a curve
 
 * find and classify stationary points of functions
-
-```{admonition} [The Newton-Leibniz Calculus Controversy](https://doi.org/10.1093/oxfordhb/9780199930418.013.9)
-:class: quote
-The philosophical and political dimension of the debate between Leibniz and Newton should not escape our attention. They disagreed over issues concerning the foundations of the calculus: Newton was convinced of the superiority of his method of limits over Leibniz’s mathematical practice where infinitesimals occurred. They were divided over physical questions such as the nature of gravity, time and space, atoms and the void, as well as the issue of which quantities are properly conserved by the laws of nature. In short, they were not just mathematical opponents: they were philosophical enemies as well.
-```
 
 ## Motivation
 

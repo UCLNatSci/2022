@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Maths coursework 1 [20%]" href="../homework/homework.html" />
+    <link rel="next" title="16. Climate tipping points" href="nakedplanet.html" />
     <link rel="prev" title="14. Forestry management" href="faustmann.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -516,11 +531,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="peak-oil">
 <h1><span class="section-number">15. </span>Peak oil<a class="headerlink" href="#peak-oil" title="Permalink to this heading">#</a></h1>
-<p>This case study is provided for you to explore the mathematics of the logistical model. You will be asked to critically evaluate the application of this model to the historic problem of determining when  oil supplies may be insufficient to meet world demand.</p>
 <div class="quote admonition">
 <p class="admonition-title"><a class="reference external" href="https://doi.org/10.1016/j.erss.2021.102407">Energy Research and Social Science</a></p>
 <p>In 2010, an in-depth review of over 500 studies concluded that the global peak in oil supply was likely to take place before 2030, and possibly even before 2020.</p>
 </div>
+<p>This case study is provided for you to explore the mathematics of the logistical model. You will be asked to critically evaluate the application of this model to the historic problem of determining when  oil supplies may be insufficient to meet world demand.</p>
 <section id="resource-exploitation">
 <h2><span class="section-number">15.1. </span>Resource exploitation<a class="headerlink" href="#resource-exploitation" title="Permalink to this heading">#</a></h2>
 <p>The exploitation of a non-renewable resource cannot continue forever. If a supply <span class="math notranslate nohighlight">\(S\)</span> is extracted at constant rate <span class="math notranslate nohighlight">\(C\)</span> per year, then the resource will be fully exhausted in time <span class="math notranslate nohighlight">\(t=S/C\)</span>.</p>
@@ -531,7 +546,7 @@ title="Print to PDF"
 <h2><span class="section-number">15.2. </span>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">#</a></h2>
 <p>In this case study we will examine a mathematical model of resource-limited growth and apply it to oil production data from a single country. You will be asked to provide your thoughts on the model.</p>
 <p>The dataset that we will use are found at <a class="reference external" href="https://ourworldindata.org/grapher/oil-production-by-country">ourworldindata.org</a>. We will examine the dataset for oil usage in the United States only. After completing this case study, if you want to try out the mathematics for another country you are welcome to include your additional work in your submission.</p>
-<p>The US dataset can be downloaded from <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/us-oil.csv">us-oil.csv</a>.</p>
+<p>The US dataset can be downloaded from <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/world-oil.csv">us-oil.csv</a>.</p>
 <div class="exercise admonition" id="ex-po1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 15.1 </span></p>
@@ -586,7 +601,7 @@ title="Print to PDF"
 
 <p class="admonition-title"><span class="caption-number">Exercise 15.4 </span></p>
 <section id="exercise-content">
-<p>Rearrange <a class="reference internal" href="#equation-logistic1">(15.1)</a> to find an explicit expression for <span class="math notranslate nohighlight">\(x(t)\)</span> and hence find the limiting value(s) as <span class="math notranslate nohighlight">\(x\rightarrow\pm\infty\)</span></p>
+<p>Rearrange <a class="reference internal" href="#equation-logistic1">(15.1)</a> to find an explicit expression for <span class="math notranslate nohighlight">\(x(t)\)</span> and hence find the limiting value(s) as <span class="math notranslate nohighlight">\(t\rightarrow\pm\infty\)</span></p>
 </section>
 </div>
 <section id="growth-rates">
@@ -650,8 +665,8 @@ P(x)=rx\left(1-\frac{x}{C}\right).
 </div>
 <p>Due to data fluctuations, we should not expect that the datapoints will lie <em>on</em> the model curve, and therefore we should not expect that the first datapoint will give us a good choice of parameter <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
 <p>Instead, we can use the following rearrangement of <a class="reference internal" href="#equation-logistic1">(15.1)</a>, which allows us to use the accumulated value for <span class="math notranslate nohighlight">\(x\)</span> up to the final datapoint - therefore making use of the whole dataset:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa129e2b-ba7d-44d3-bae5-8dfd3141d54d">
-<span class="eqno">(15.2)<a class="headerlink" href="#equation-aa129e2b-ba7d-44d3-bae5-8dfd3141d54d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ed1f5415-3bb1-4ce4-a4f7-c4a7e9281f66">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-ed1f5415-3bb1-4ce4-a4f7-c4a7e9281f66" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_0 = \frac{C}{1+(C/x-1)e^{rt}}
 \end{equation}\]</div>
 <div class="exercise admonition" id="ex-po8">
@@ -706,10 +721,10 @@ x_0 = \frac{C}{1+(C/x-1)e^{rt}}
             <p class="prev-next-title"><span class="section-number">14. </span>Forestry management</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../homework/homework.html" title="next page">
+    <a class='right-next' id="next-link" href="nakedplanet.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maths coursework 1 [20%]</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>Climate tipping points</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

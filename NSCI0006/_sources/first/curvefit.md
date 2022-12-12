@@ -1,13 +1,14 @@
 # Fitting curves
 
-This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.
-
-The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.
-
 ```{admonition} [John Von Neumann](https://www.nature.com/articles/427297a)
 :class: quote
 "with four parameters I can fit an elephant, and with five I can make him wiggle his trunk".
 ```
+
+This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.
+
+The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.
+
 
 ## Global temperature anomaly
 
