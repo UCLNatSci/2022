@@ -1,17 +1,16 @@
 # Infinite powers
 
-In the section on {ref}`asymptotics` we saw some examples of polynomial approximations for common functions, such as $f(x)=e^x$. We now outline the theory behind the results that were presented. After completing this chapter you should be able to:
-
-* find Maclaurin and Taylor series expansions for given functions
-* Discuss the convergence properties of these series using numeric justification
-
-
 ```{admonition} [Siphonaptera](https://en.wikipedia.org/wiki/Siphonaptera_(poem))
 :class: quote
 Great fleas have little fleas upon their backs to bite 'em,
 
 And little fleas have lesser fleas, and so ad infinitum
 ```
+
+In the section on {ref}`asymptotics` we saw some examples of polynomial approximations for common functions, such as $f(x)=e^x$. We now outline the theory behind the results that were presented. After completing this chapter you should be able to:
+
+* find Maclaurin and Taylor series expansions for given functions
+* Discuss the convergence properties of these series using numeric justification
 
 
 ## Motivation

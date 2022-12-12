@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -482,12 +497,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="fitting-curves">
 <h1><span class="section-number">4. </span>Fitting curves<a class="headerlink" href="#fitting-curves" title="Permalink to this heading">#</a></h1>
-<p>This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.</p>
-<p>The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.</p>
 <div class="quote admonition">
 <p class="admonition-title"><a class="reference external" href="https://www.nature.com/articles/427297a">John Von Neumann</a></p>
 <p>“with four parameters I can fit an elephant, and with five I can make him wiggle his trunk”.</p>
 </div>
+<p>This chapter illustrates how curves can be fitted to data to estimate the values of theoretical parameters. After completing this chapter you should be able to fit a specified function to a numerical dataset and use the obtained coefficients in further calculations.</p>
+<p>The curve fitting in this chapter is done by the method of least squares, which aims to minimise the sum of the squared residual errors between the fitted function and the data.</p>
 <section id="global-temperature-anomaly">
 <h2><span class="section-number">4.1. </span>Global temperature anomaly<a class="headerlink" href="#global-temperature-anomaly" title="Permalink to this heading">#</a></h2>
 <p>Loosely speaking, radiative forcing refers to the amount of additional solar energy (Watts per square metre, Wm-2) absorbed by the Earth due to climate factors.</p>
@@ -685,8 +700,8 @@ title="Print to PDF"
 <hr class="docutils" />
 <p>A dose of radiation is often delivered in smaller amounts called <a class="reference external" href="https://radiopaedia.org/articles/fractionation-radiation-therapy">fractions</a>. This can allow healthy cells to repair sub-lethal damage to their DNA between fractions. A treatment plan may be developed that depends on the type of cancer and proximity to organs.</p>
 <p>The clinical effect of treatment can be modelled by the following “Linear-Quadratic” (LQ) relationship</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eaf9a411-eff8-454c-9ec6-aa3a67352b12">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-eaf9a411-eff8-454c-9ec6-aa3a67352b12" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d3b786ce-5ccc-4a6c-8450-fcb03e810109">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-d3b786ce-5ccc-4a6c-8450-fcb03e810109" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E = n(\alpha d +\beta d^2) = \alpha D\left(1+\frac{d}{\alpha/\beta}\right),
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(D\)</span> is the total dose, <span class="math notranslate nohighlight">\(d\)</span> is the dose per fraction, <span class="math notranslate nohighlight">\(n\)</span> is the number of fractions. The first term represents lethal damage due to single-hit double strand chromsome breaks, and the second term represents lethal damage due to a combination of two sub-lethal single strand chromasome breaks. The coeffcicients <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> depend on the <a class="reference external" href="https://ro-journal.biomedcentral.com/articles/10.1186/s13014-018-1040-z">tumour site and histology</a>. Notice that if the same dose <span class="math notranslate nohighlight">\(D\)</span> is delivered in a larger number of fractions (thereby reducing <span class="math notranslate nohighlight">\(d\)</span>) the clinical effect <span class="math notranslate nohighlight">\(E\)</span> is reduced, with the amount of sparing depending on the <span class="math notranslate nohighlight">\(\alpha/\beta\)</span> ratio.</p>
@@ -695,8 +710,8 @@ E = n(\alpha d +\beta d^2) = \alpha D\left(1+\frac{d}{\alpha/\beta}\right),
 <span class="eqno">(4.4)<a class="headerlink" href="#equation-survivalp" title="Permalink to this equation">#</a></span>\[e^{-E}=e^{-n(\alpha d +\beta d^2)} = e^{-\alpha D\left(1+\frac{d}{\alpha/\beta}\right)}.\]</div>
 <p>Clinical data on radiotherapy often refers to one of two quantities related to the clinical effect, which are EQD2 and BED. These quantifications are used to compare a given treatment plan to either the equivalent dose required in 2Gy fractions (EQD2) or the effective hypothetical dose if the treatment was delivered over an infinite number of “zero fractions” (BED).</p>
 <p>For EQD2 we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b6045f82-4bba-4687-95ad-19b646eecc61">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-b6045f82-4bba-4687-95ad-19b646eecc61" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-96a62ab9-541a-4910-9eec-0846e1f3cb49">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-96a62ab9-541a-4910-9eec-0846e1f3cb49" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E = \alpha D\left(1+\frac{d}{\alpha/\beta}\right) =  \alpha \text{EQD2}\left(1+\frac{2}{\alpha/\beta}\right) \quad \Rightarrow \quad \text{EQD2}=D\left(\frac{d+\frac{\alpha}{\beta}}{2+\frac{\alpha}{\beta}}\right).
 \end{equation}\]</div>
 <p>For BED we may write</p>
@@ -934,8 +949,8 @@ D=(15.00,12.50,8.75,5.00,4.00,2.00,1.00)
 <p>Many wearable devices allow heart rate and activity data to be tracked and downloaded as txt or csv files. It may be possible to estimate <a class="reference external" href="https://nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx">circadian rhythms</a> from this data.</p>
 <p>The <a class="reference external" href="https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/hrdata2.csv?d=w30f852f1fa3e471a92661dfb7dd70ba2&amp;csf=1&amp;web=1&amp;e=ew8gGA">hrdata2.csv</a> dataset contains “fitbit” measurements of activity and heart rate (HR) for a single individual, obtained from a <a class="reference external" href="https://doi.org/10.1016/j.crmeth.2021.100058">recent research paper</a>. The data are for a period of 96 hours, averaged every five minutes. The HR is measured in beats per minute (bpm), and the activity level is measured in steps per minute.</p>
 <p>The heart rate can be modelled by the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-546108df-94da-4d06-8058-2ba2c6854d70">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-546108df-94da-4d06-8058-2ba2c6854d70" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f20aca58-df4a-45f1-8006-aec1ad2fa669">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-f20aca58-df4a-45f1-8006-aec1ad2fa669" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \text{HR} = \mu + A\sin\left(\frac{\pi}{12}t\right)+E(a)+\epsilon
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the average background HR, <span class="math notranslate nohighlight">\(A\)</span> is the amplitude of the 24hr circadian cycle, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is statistical error (e.g. due to measurement inaccuracies).</p>

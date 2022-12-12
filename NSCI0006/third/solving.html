@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -486,26 +501,26 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-std-prob">
 <span class="eqno">(10.1)<a class="headerlink" href="#equation-std-prob" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}x}{\mathrm{d}t} = f(x,t).\]</div>
 <p>To obtain a numeric estimate of the solution we can use the discrete derivative formula</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae77c8a6-01b6-45c4-a18a-5f10456403d6">
-<span class="eqno">(10.2)<a class="headerlink" href="#equation-ae77c8a6-01b6-45c4-a18a-5f10456403d6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7cc91633-a763-4301-a7b9-3733f6c95f8c">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-7cc91633-a763-4301-a7b9-3733f6c95f8c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\Delta x}{\Delta t}  =\frac{x_{i+1}-x_i}{h},
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(h\)</span> is the step size of <span class="math notranslate nohighlight">\(t\)</span>. By using this formula to estimate the continuous derivative in <a class="reference internal" href="#equation-std-prob">(10.1)</a> we the may obtain the rearrangement</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ff25bb7-f68f-4ff8-9c6f-ed70859a9c94">
-<span class="eqno">(10.3)<a class="headerlink" href="#equation-4ff25bb7-f68f-4ff8-9c6f-ed70859a9c94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3056add5-23d2-42f1-8719-7f940628a188">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-3056add5-23d2-42f1-8719-7f940628a188" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{i+1} = x_i + h f(x_i,t_i).
 \end{equation}\]</div>
 <p>This allows us to start from a given initial value <span class="math notranslate nohighlight">\(x_0\)</span> and “step forward” successively to obtain <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, etc.</p>
 <section id="example">
 <h3><span class="section-number">10.1.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>Consider the equation governing exponential growth/decay:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd6fd2c0-894f-4d29-bae0-97a635e4c574">
-<span class="eqno">(10.4)<a class="headerlink" href="#equation-dd6fd2c0-894f-4d29-bae0-97a635e4c574" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7101bfe8-ce82-4ba0-8f18-2e5ad00fd950">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-7101bfe8-ce82-4ba0-8f18-2e5ad00fd950" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}t} = \alpha x.
 \end{equation}\]</div>
 <p>The discrete formula for this problem is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7543d954-c774-45ee-a1b5-e42647401e42">
-<span class="eqno">(10.5)<a class="headerlink" href="#equation-7543d954-c774-45ee-a1b5-e42647401e42" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c084a24b-9bc2-472e-bae5-12477a4320bd">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-c084a24b-9bc2-472e-bae5-12477a4320bd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{i+1} = (1+\alpha h)x_i.
 \end{equation}\]</div>
 <p>Notice that the solution grows if <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span>, which matches what we expect to see for exponential growth.</p>

@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>16. Climate tipping points &#8212; Mathematics for Natural Sciences B</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Maths coursework 1 [20%]" href="../homework/homework.html" />
+    <link rel="prev" title="15. Peak oil" href="oil.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA TRENDS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/numbers.html">
+   1. Representing numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/plotstuff.html">
+   2. Graphing data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/exponentials.html">
+   3. Exponential trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../first/curvefit.html">
+   4. Fitting curves
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  INFINITESIMALS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/pfrac.html">
+   5. Rational functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/limits.html">
+   6. Know your limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/changes.html">
+   7. Rates of change
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../second/powers.html">
+   8. Infinite powers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DYNAMIC MODELS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/first_order.html">
+   9. Simple models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../third/solving.html">
+   10. Accumulating change
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE STUDIES
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chemicals.html">
+   11. Chemical concentrations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="freshwater.html">
+   12. Freshwater sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coronavirus.html">
+   13. Viral trends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faustmann.html">
+   14. Forestry management
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oil.html">
+   15. Peak oil
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   16. Climate tipping points
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ASSIGNMENTS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/homework.html">
+   Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/case-studies/nakedplanet.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcase-studies/nakedplanet.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/case-studies/nakedplanet.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/case-studies/nakedplanet.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naked-planet-model">
+   16.1. Naked planet model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-inflow">
+     16.1.1. Energy inflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-outflow">
+     16.1.2. Energy outflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rate-of-change">
+     16.1.3. Rate of change
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equilibrium">
+     16.1.4. Equilibrium
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greenhouse-effect">
+   16.2. Greenhouse effect
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-albedo-feedback">
+   16.3. Ice albedo feedback
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investigation">
+   16.4. Investigation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Climate tipping points</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naked-planet-model">
+   16.1. Naked planet model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-inflow">
+     16.1.1. Energy inflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-outflow">
+     16.1.2. Energy outflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rate-of-change">
+     16.1.3. Rate of change
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equilibrium">
+     16.1.4. Equilibrium
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greenhouse-effect">
+   16.2. Greenhouse effect
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-albedo-feedback">
+   16.3. Ice albedo feedback
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investigation">
+   16.4. Investigation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="climate-tipping-points">
+<h1><span class="section-number">16. </span>Climate tipping points<a class="headerlink" href="#climate-tipping-points" title="Permalink to this heading">#</a></h1>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.science.org/doi/10.1126/science.abn7950">Getting tipsy</a></p>
+<p>Climate tipping points are conditions beyond which changes in a part of the climate system become self-perpetuating. These changes may lead to abrupt, irreversible, and dangerous impacts with serious implications for humanity.</p>
+</div>
+<p>This case study is provided for you to understand how mathematical models can give insight about system behaviour. You will be introduced to a dynamic model of Earth’s energy balance, which you will use to identify tipping point phenomena.</p>
+<p>To accompany this case study you are recommended to watch the Mathematical Association of America <a class="reference external" href="https://www.youtube.com/watch?v=s9OW8vaRVdQ">lecture</a> by Mary Lou Zeeman, co-director of the Mathematics and Climate Research Network.</p>
+<section id="naked-planet-model">
+<h2><span class="section-number">16.1. </span>Naked planet model<a class="headerlink" href="#naked-planet-model" title="Permalink to this heading">#</a></h2>
+<p>The naked planet model is a model of Earth’s energy balance that ignores the effect of the atmosphere. It is a simple one-stock model in which the Earth is warmed by the suns rays and radiates the additional heat back to space.</p>
+<section id="energy-inflow">
+<h3><span class="section-number">16.1.1. </span>Energy inflow<a class="headerlink" href="#energy-inflow" title="Permalink to this heading">#</a></h3>
+<p>The Earth is warmed by energy radiated from the sun onto the facing surface area. The rate of incoming energy from the sun is known as the <a class="reference external" href="https://www.nasa.gov/mission_pages/Glory/solar_irradiance/total_solar_irradiance.html"><em>solar constant</em></a>. It can be measured by satellites above the Earth’s atmosphere and is <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0038092X18303463">found</a> to be roughly <span class="math notranslate nohighlight">\(1361\text{W/m}^2\)</span>. Although for historic reasons it is known as a constant, the incoming energy does vary over the solar cycle, and over the long-term life of the sun.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One watt is equal to one joule of energy per second.</p>
+</div>
+<p>Not all of the energy received by the Earth is absorbed. Some of the incoming solar radiation is reflected back to space, for example due to cloud cover or due to the reflectivity of Earth’s surfaces. More energy is absorbed by the oceans than by land, and areas that are covered by snow and ice have higher reflectivity than green forest.</p>
+<p>The fraction of energy that is reflected is known as <em>albedo</em>. It can be estimated by satellite imaging, as shown in the figure below. From such observations the Earth’s average albedo is estimated to be around 29.5%.</p>
+<figure class="align-default" id="albedo-earth">
+<img alt="../_images/albedo.jpg" src="../_images/albedo.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 16.1 </span><span class="caption-text">The spherical albedo of the Earth. Darker and bluer values indicate lower albedo, brighter and more yellow values higher albedo. [<a class="reference external" href="https://www.frontiersin.org/articles/10.3389/frsen.2022.790723/full">paper</a>]</span><a class="headerlink" href="#albedo-earth" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The inflow of energy at Earth’s surface is therefore estimated by</p>
+<div class="math notranslate nohighlight" id="equation-qin">
+<span class="eqno">(16.1)<a class="headerlink" href="#equation-qin" title="Permalink to this equation">#</a></span>\[Q_{in} = \pi R^2 L(1-\alpha),\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the radius of Earth, <span class="math notranslate nohighlight">\(L\)</span> is the solar constant, <span class="math notranslate nohighlight">\(\alpha\)</span> is the albedo (fraction reflected). In this formula, <span class="math notranslate nohighlight">\(\pi R^2\)</span> is the area of Earth perpendicular to the sun’s rays. Multiplying this area by <span class="math notranslate nohighlight">\(L\)</span> gives the solar energy, and multiplying by <span class="math notranslate nohighlight">\((1-\alpha)\)</span> gives the amount absorbed.</p>
+</section>
+<section id="energy-outflow">
+<h3><span class="section-number">16.1.2. </span>Energy outflow<a class="headerlink" href="#energy-outflow" title="Permalink to this heading">#</a></h3>
+<p>The rate of energy radiated from the Earth’s surface to space is estimated from the <a class="reference external" href="https://en.wikipedia.org/wiki/Stefan%E2%80%93Boltzmann_law">blackbody radiation law</a>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+Q_{out} = 4\pi R^2\sigma T^4,
+\end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the Stefan-Boltzmann constant. In this formula, <span class="math notranslate nohighlight">\(4\pi R^2\)</span> is the surface area of the Earth and <span class="math notranslate nohighlight">\(\sigma T^4\)</span> is thermal radiation per square metre at a temperature of <span class="math notranslate nohighlight">\(T\)</span> Kelvin.</p>
+</section>
+<section id="rate-of-change">
+<h3><span class="section-number">16.1.3. </span>Rate of change<a class="headerlink" href="#rate-of-change" title="Permalink to this heading">#</a></h3>
+<p>The rate of energy absorption <strong>per unit area</strong> is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}Q}{\mathrm{d}t}=\frac{Q_{in}-Q_{out}}{4\pi R^2}=\frac{L(1-\alpha)}{4}-\sigma T^4.
+\end{equation*}\]</div>
+<p>The rate of change of temperature is related to the rate of energy absorption by the <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2007JD008746">effective heat capacity of Earth</a>, <span class="math notranslate nohighlight">\(C\simeq 0.53\text{GJm}^{-2}\text{K}^{-1}\)</span>, which gives</p>
+<div class="math notranslate nohighlight" id="equation-eq-naked">
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-eq-naked" title="Permalink to this equation">#</a></span>\[C\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{L(1-\alpha)}{4}-\sigma T^4\]</div>
+<p>A summary of the parameter values is given in the table below, for convenience. To be consistent with these units, time is measured in seconds. If we want to measure time in years, we multiply the right hand side of <a class="reference internal" href="#equation-eq-naked">(16.2)</a> by the number of seconds in one year.</p>
+<table class="table" id="nakd-planet">
+<caption><span class="caption-number">Table 16.1 </span><span class="caption-text">Summary of parameters in the naked planet model. Values shown in green are for Earth.</span><a class="headerlink" href="#nakd-planet" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-align:right"><p>Symbol</th><th>Represents</th><th>Value</th><th>Units</th><tr style="background-color:#D5FFFF"><td align="left"><span class="math notranslate nohighlight">\(\sigma\)</span></td><td>Stefan-Boltzmann constant</td><td><span class="math notranslate nohighlight">\(5.67\times 10^{-8}\)</span></td><td><span class="math notranslate nohighlight">\(\text{W/m}^2\text{K}^4\)</span></td></tr><tr style="background-color:#DFF1D6"><td align="left"><span class="math notranslate nohighlight">\(\alpha\)</span></td><td>Albedo</td><td><span class="math notranslate nohighlight">\(0.295\)</span></td><td>—</td></tr><tr style="background-color:#DFF1D6"><td align="left"><span class="math notranslate nohighlight">\(C\)</span></td><td>Effective heat capacity</td><td><span class="math notranslate nohighlight">\(5.3\times 10^8\)</span></td><td><span class="math notranslate nohighlight">\(\text{Jm}^{-2}\text{K}\)</span></td></tr><tr style="background-color:#DFF1D6"><td align="left"><span class="math notranslate nohighlight">\(L\)</span></td><td>Solar constant</td><td><span class="math notranslate nohighlight">\(1361\)</span></td><td><span class="math notranslate nohighlight">\(\text{W/m}^2\)</span></td></tr><tr style="background-color:#DFF1D6"><td align="left"><span class="math notranslate nohighlight">\(T\)</span></td><td>Temperature of the planet</td><td>?</td><td><span class="math notranslate nohighlight">\(K\)</span></td></tr></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="case-studies/nakedplanet-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.1 </span></p>
+<section id="exercise-content">
+<p>Solve the climate model <a class="reference internal" href="#equation-eq-naked">(16.2)</a> for <span class="math notranslate nohighlight">\(T(0)=250\)</span> and for <span class="math notranslate nohighlight">\(T(0)=260\)</span>, and plot the solutions on the same figure. Ensure that the axes are correctly labelled, with the units included.</p>
+<p>You should find that the solution approaches an equilibrium value, which is the same in both cases.</p>
+</section>
+</div>
+</section>
+<section id="equilibrium">
+<h3><span class="section-number">16.1.4. </span>Equilibrium<a class="headerlink" href="#equilibrium" title="Permalink to this heading">#</a></h3>
+<p>When the inflow and outflow are balanced, the model is in equilibrium and the temperature remains constant. The equilibrium value is at the intersection of the inflow and outflow curves plotted below.</p>
+<div class="toggle docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mf">0.295</span>   <span class="c1">#Albedo</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1">#Stefan-Boltzmann constant</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1361</span>    <span class="c1">#Solar constant</span>
+
+<span class="n">Tmax</span><span class="o">=</span><span class="mi">300</span> <span class="c1">#set plot range</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">Tmax</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">inflow</span>  <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>  <span class="c1">#constant</span>
+<span class="n">outflow</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="n">T</span><span class="o">**</span><span class="mi">4</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">outflow</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;inflow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">Tmax</span><span class="p">],</span><span class="mi">2</span><span class="o">*</span><span class="p">[</span><span class="n">inflow</span><span class="p">],</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;outflow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">Tmax</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">outflow</span><span class="p">)])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temp /K&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-default" id="naked-intersection">
+<img alt="../_images/nakedplanet_1_0.png" src="../_images/nakedplanet_1_0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16.2 </span><span class="caption-text">The equilibrium temperature is at the intersection between the inflow and outflow energy curves. Here, the energy is measured in <span class="math notranslate nohighlight">\(\text{W/m}^2.\)</span></span><a class="headerlink" href="#naked-intersection" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="case-studies/nakedplanet-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.2 </span></p>
+<section id="exercise-content">
+<p>Find the equilibrium temperature in Celsius, based on <a class="reference internal" href="#equation-eq-naked">(16.2)</a>. Comment on your answer.</p>
+</section>
+</div>
+</section>
+</section>
+<section id="greenhouse-effect">
+<h2><span class="section-number">16.2. </span>Greenhouse effect<a class="headerlink" href="#greenhouse-effect" title="Permalink to this heading">#</a></h2>
+<p>The interior of a greenhouse (glass house) warms up more than its surroundings because it traps heat. Glass is fairly transparent to incoming short-wave solar radiation, but is much less transparent to the long-wave radiation that is re-emitted from surfaces in the greenhouse such as soil and plants.</p>
+<p>The atmosphere of Earth behaves in similar manner to the glass of a greenhouse, which results in less heat emitted to space than what the naked earth model predicts. Today it is possible to directly observe the greenhouse effect by comparing the amount of Earth’s heat radiated from the upper atmosphere to the amount leaving the surface, but the idea that CO2 in the Earth’s upper atmosphere could result in atmospheric warming appears to have been first suggested in 1856 by <a class="reference external" href="https://physicstoday.scitation.org/do/10.1063/pt.6.4.20210823a/full/">Eunice Newton Foote</a>.</p>
+<p>We can amend the naked earth model to account for the greenhouse effect by multiplying the long wave radiation term by a fraction <span class="math notranslate nohighlight">\(1/(1+g)\)</span> that reduces the amount of short wave radiation outflow:</p>
+<div class="math notranslate nohighlight" id="equation-eq-modif">
+<span class="eqno">(16.3)<a class="headerlink" href="#equation-eq-modif" title="Permalink to this equation">#</a></span>\[C\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{L(1-\alpha)}{4} -\frac{\sigma T^4}{1+g}\]</div>
+<p>When <span class="math notranslate nohighlight">\(g=0\)</span> we have the naked Earth model. It can be shown that when <span class="math notranslate nohighlight">\(g=1\)</span> the equilibrium state of the model is equivalent to a hypothetical model of the Earth contained within a glass ball. Values of <span class="math notranslate nohighlight">\(g&gt;1\)</span> can be used to model a “super greenhouse effect”.</p>
+<div class="exercise admonition" id="goldy">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.3 </span></p>
+<section id="exercise-content">
+<p>The 20th century <a class="reference external" href="https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature">average temperature</a> of Earth was about 13.9°C. By taking this to be the equilibrium state of model <a class="reference internal" href="#equation-eq-modif">(16.3)</a>, estimate the value of the greenhouse parameter <span class="math notranslate nohighlight">\(g\)</span>.</p>
+</section>
+</div>
+</section>
+<section id="ice-albedo-feedback">
+<h2><span class="section-number">16.3. </span>Ice albedo feedback<a class="headerlink" href="#ice-albedo-feedback" title="Permalink to this heading">#</a></h2>
+<p>At colder temperatures the earth would be covered in snow and ice, resulting in a higher albedo. An example model of how the albedo changes with temperature is shown below.</p>
+<figure class="align-default" id="albedo-model">
+<img alt="../_images/albedo.png" src="../_images/albedo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16.3 </span><span class="caption-text">At frozen temperatures the albedo (reflectivity) of Earth is high. In the model, the snowball Earth thaws between 263K and 283K.</span><a class="headerlink" href="#albedo-model" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="case-studies/nakedplanet-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.4 </span></p>
+<section id="exercise-content">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">albedo</span></code> that resembles the above figure by using a scaled and shifted sigmoid</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\alpha(T) = A+\frac{(B-A)e^{k(T-T_m)}}{1+e^{k(T-T_m)}}
+\end{equation*}\]</div>
+<p>for appropriate choices of <span class="math notranslate nohighlight">\(A,B,k,T_m\)</span>.</p>
+</section>
+</div>
+</section>
+<section id="investigation">
+<h2><span class="section-number">16.4. </span>Investigation<a class="headerlink" href="#investigation" title="Permalink to this heading">#</a></h2>
+<p>By including both the effects of ice-albedo feedback and the greenhouse effect in model <a class="reference internal" href="#equation-eq-modif">(16.3)</a>, investigate the equilibrium state of the planet at follows:</p>
+<div class="exercise admonition" id="case-studies/nakedplanet-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.5 </span></p>
+<section id="exercise-content">
+<p>Suppose the earth starts in “Goldilocks” equilibrium state described in <a class="reference internal" href="#goldy"><span class="std std-numref">Exercise 16.3</span></a>. Describe what happens to the equilibrium state of the system as <span class="math notranslate nohighlight">\(g\)</span> decreases, with reference to the tipping point. What are the approximate values of <span class="math notranslate nohighlight">\(g,T\)</span> at the tipping point?</p>
+</section>
+</div>
+<div class="exercise admonition" id="case-studies/nakedplanet-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 16.6 </span></p>
+<section id="exercise-content">
+<p>Suppose that the Earth is in a snowball state with <span class="math notranslate nohighlight">\(g\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(T\sim 227\text{K}\)</span>. Explain what is required to happen in this model for Earth to return to the Goldilocks state.</p>
+</section>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./case-studies"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="oil.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">15. </span>Peak oil</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../homework/homework.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Maths coursework 1 [20%]</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

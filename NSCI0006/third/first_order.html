@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case-studies/nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -520,16 +535,16 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="simple-models">
 <h1><span class="section-number">9. </span>Simple models<a class="headerlink" href="#simple-models" title="Permalink to this heading">#</a></h1>
+<div class="quote admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.sciencefriday.com/articles/the-language-of-calculus/">The Language of Calculus, Strogatz</a></p>
+<p>Without calculus, we wouldn’t have cell phones, computers, or microwave ovens. We wouldn’t have radio. Or television. Or ultrasound for expectant mothers, or GPS for lost travelers. We wouldn’t have split the atom, unraveled the human genome, or put astronauts on the moon. We might not even have the Declaration of Independence.</p>
+</div>
 <p>In this chapter we will start to write down some differential equations and “spot” their solutions. We will focus especially on the model for exponential growth. We will also begin to understand some other models by relating them to the exponential model for non-constant growth rate.</p>
 <p>After working through the chapter you should be able to</p>
 <ul class="simple">
 <li><p>state the differential equation governing exponential growth/decay, and its corresponding solution for a particular initial condition.</p></li>
 <li><p>Examine models of non-constant growth via their relationship with the exponential model.</p></li>
 </ul>
-<div class="quote admonition">
-<p class="admonition-title"><a class="reference external" href="https://www.sciencefriday.com/articles/the-language-of-calculus/">The Language of Calculus, Strogatz</a></p>
-<p>Without calculus, we wouldn’t have cell phones, computers, or microwave ovens. We wouldn’t have radio. Or television. Or ultrasound for expectant mothers, or GPS for lost travelers. We wouldn’t have split the atom, unraveled the human genome, or put astronauts on the moon. We might not even have the Declaration of Independence.</p>
-</div>
 <section id="describing-change">
 <h2><span class="section-number">9.1. </span>Describing change<a class="headerlink" href="#describing-change" title="Permalink to this heading">#</a></h2>
 <p>Most things change, and we are already quite familiar with discussing how quickly they do so in our day-to-day lives. The formal study of time-dependent systems is called “mathematical dynamics”. To describe change we use the language of calculus because it allows us to write down mathematical models that govern the behaviour of systems. By investigating these models, we often can gain great insights about the systems they represent. It all starts with the first derivative, which defines the rate of change.</p>
@@ -786,7 +801,7 @@ e^{\mu\tau}=2 \quad \Rightarrow \quad x=x_0 2^{t/\tau}\ .
 <p>A comparison of the two model predictions for the cell mass is shown below. In the logistic model <span class="math notranslate nohighlight">\(C\)</span> denotes the “carrying capacity”, which is the maximum value of <span class="math notranslate nohighlight">\(S\)</span> that can be obtained. It occurs when the substrate is exhausted, <span class="math notranslate nohighlight">\(S=0\)</span>, which gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-C=X_0+SY
+C=X_0+S_0 Y
 \end{equation*}\]</div>
 <p>Taking <span class="math notranslate nohighlight">\(r=\mu K/S_0\)</span> ensures that growth rate in the logistic equation is equal to the growth rate in the Monod equation for low substrate concentrations.</p>
 <a class="reference internal image-reference" href="../_images/model-comparison.png"><img alt="model-comparison" class="align-center" src="../_images/model-comparison.png" style="width: 60%;" /></a>

@@ -1,13 +1,13 @@
 # Chemical concentrations
 
-This case study provides a demonstration of how technical definitions can be used to obtain measurement results. In some of the problems it can be quite challenging to balance the involved units or to accurately relate the given ratios to the physical scenarios.
-
 ```{admonition} [The Sign of Four, Sir Arthur Conan Doyle, (1890)](https://blog.sciencemuseum.org.uk/the-addictive-history-of-medicine-the-curious-case-of-the-7-percent-solution/)
 :class: quote
 “Which is it to-day,” I asked, “morphine or cocaine?”<br>
 He raised his eyes languidly from the old black-letter volume which he had opened.<br>
 “It is cocaine,” he said, “a seven-per-cent solution. Would you care to try it?”
 ```
+
+This case study provides a demonstration of how technical definitions can be used to obtain measurement results. In some of the problems it can be quite challenging to balance the involved units or to accurately relate the given ratios to the physical scenarios.
 
 ## Definition
 

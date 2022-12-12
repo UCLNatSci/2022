@@ -1,5 +1,10 @@
 # Simple models
 
+```{admonition} [The Language of Calculus, Strogatz](https://www.sciencefriday.com/articles/the-language-of-calculus/)
+:class: quote
+Without calculus, we wouldn’t have cell phones, computers, or microwave ovens. We wouldn’t have radio. Or television. Or ultrasound for expectant mothers, or GPS for lost travelers. We wouldn’t have split the atom, unraveled the human genome, or put astronauts on the moon. We might not even have the Declaration of Independence.
+```
+
 In this chapter we will start to write down some differential equations and "spot" their solutions. We will focus especially on the model for exponential growth. We will also begin to understand some other models by relating them to the exponential model for non-constant growth rate.
 
 After working through the chapter you should be able to
@@ -7,11 +12,6 @@ After working through the chapter you should be able to
 * state the differential equation governing exponential growth/decay, and its corresponding solution for a particular initial condition.
 
 * Examine models of non-constant growth via their relationship with the exponential model.
-
-```{admonition} [The Language of Calculus, Strogatz](https://www.sciencefriday.com/articles/the-language-of-calculus/)
-:class: quote
-Without calculus, we wouldn’t have cell phones, computers, or microwave ovens. We wouldn’t have radio. Or television. Or ultrasound for expectant mothers, or GPS for lost travelers. We wouldn’t have split the atom, unraveled the human genome, or put astronauts on the moon. We might not even have the Declaration of Independence.
-```
 
 ## Describing change
 
@@ -301,7 +301,7 @@ Monod's model may be compared to the logistic model, which is given by
 
 A comparison of the two model predictions for the cell mass is shown below. In the logistic model $C$ denotes the "carrying capacity", which is the maximum value of $S$ that can be obtained. It occurs when the substrate is exhausted, $S=0$, which gives
 \begin{equation*}
-C=X_0+SY
+C=X_0+S_0 Y
 \end{equation*}
 
 Taking $r=\mu K/S_0$ ensures that growth rate in the logistic equation is equal to the growth rate in the Monod equation for low substrate concentrations.

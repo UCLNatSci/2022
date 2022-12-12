@@ -222,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    15. Peak oil
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nakedplanet.html">
+   16. Climate tipping points
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +237,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../homework/homework.html">
    Maths coursework 1 [20%]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/freshwater_solutions.html">
+   Freshwater solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homework/viral_solutions.html">
+   Viral trends solutions
   </a>
  </li>
 </ul>
@@ -508,8 +523,8 @@ title="Print to PDF"
 <p>It is assumed that the timber (wood) value of a tress increases with age up to full maturity. Eventually decay will cause a decline in the tree value, but many commercial tree species continue to grow and increase in value for several hundred years.</p>
 <p>We wish to determine the value of cutting down trees at the present time in comparison to the future. Our method will take into account the possibility of interest accrued on a present payment.</p>
 <p>Let <span class="math notranslate nohighlight">\(\hat{V}\)</span> denote the present value of a future payment, and let <span class="math notranslate nohighlight">\(V(t)\)</span> denote the commercial value of a tree. Then,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-451fb43d-cb65-43e7-8461-e2a914890875">
-<span class="eqno">(14.1)<a class="headerlink" href="#equation-451fb43d-cb65-43e7-8461-e2a914890875" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f78ead20-e3c3-44fa-b3ba-79995f319d2b">
+<span class="eqno">(14.1)<a class="headerlink" href="#equation-f78ead20-e3c3-44fa-b3ba-79995f319d2b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta t}(V(t)-c)
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the cost of felling, and <span class="math notranslate nohighlight">\(\delta\)</span> is the annual rate of interest.</p>
@@ -533,19 +548,19 @@ title="Print to PDF"
 <section id="with-replanting">
 <h2><span class="section-number">14.2. </span>With replanting<a class="headerlink" href="#with-replanting" title="Permalink to this heading">#</a></h2>
 <p>The basic analysis above neglects the opportunity to replant. When replanting is taken into account we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-85401120-cc05-40cc-8b44-3d62e925d454">
-<span class="eqno">(14.2)<a class="headerlink" href="#equation-85401120-cc05-40cc-8b44-3d62e925d454" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-870561eb-c137-4c02-bfb8-a7da5554aee0">
+<span class="eqno">(14.2)<a class="headerlink" href="#equation-870561eb-c137-4c02-bfb8-a7da5554aee0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=e^{-\delta T_1}[V(T_1)-c]+e^{-\delta T_2}[V(T_2-T_1)-c]+e^{-\delta T_3}[V(T_3-T_2)-c]+\dots
 \end{equation}\]</div>
 <p>Assuming that the interest rate will stay constant, the second rotation problem is identical to the first (and so on). We can therefore assume that all rotation periods are equal and so <span class="math notranslate nohighlight">\(T_k=kT\)</span>, <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>.</p>
 <p>Thus, we may write :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36a4508c-349c-4dbd-8970-b5d9687d107a">
-<span class="eqno">(14.3)<a class="headerlink" href="#equation-36a4508c-349c-4dbd-8970-b5d9687d107a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8bd0eead-8e96-4b69-b69d-9ea000082b18">
+<span class="eqno">(14.3)<a class="headerlink" href="#equation-8bd0eead-8e96-4b69-b69d-9ea000082b18" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\sum_{k=1}^{\infty}e^{-k\delta T}[V(T)-c]=[V(t)-c]\sum_{k=1}^{\infty}e^{-k\delta T}.
 \end{equation}\]</div>
 <p>The sum is a geometric progression With first term and common difference both equal to <span class="math notranslate nohighlight">\(e^{-\delta T}\)</span>. From the formula for the infinite sum we therefore obtain the modified value function:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c71e9c93-ca52-415c-b176-60330a1eaa17">
-<span class="eqno">(14.4)<a class="headerlink" href="#equation-c71e9c93-ca52-415c-b176-60330a1eaa17" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a038f4c2-ebb8-4e55-af07-7a90119ff0bb">
+<span class="eqno">(14.4)<a class="headerlink" href="#equation-a038f4c2-ebb8-4e55-af07-7a90119ff0bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}=\frac{V(T)-c}{e^{\delta T}-1}
 \end{equation}\]</div>
 <div class="exercise admonition" id="case-studies/faustmann-exercise-1">
@@ -553,8 +568,8 @@ title="Print to PDF"
 <p class="admonition-title"><span class="caption-number">Exercise 14.2 </span></p>
 <section id="exercise-content">
 <p>Show that the modified value function is maximised for</p>
-<div class="amsmath math notranslate nohighlight" id="equation-123e49f3-a423-42cc-8ef2-e9ce1c7b11a8">
-<span class="eqno">(14.5)<a class="headerlink" href="#equation-123e49f3-a423-42cc-8ef2-e9ce1c7b11a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c414023e-6ddc-4b9d-b3db-65738ccaee20">
+<span class="eqno">(14.5)<a class="headerlink" href="#equation-c414023e-6ddc-4b9d-b3db-65738ccaee20" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{V^{\prime}}{V-c}=\frac{\delta}{1-e^{-\delta T}}
 \end{equation}\]</div>
 <p>This is the Faustmann formula.</p>
@@ -562,8 +577,8 @@ title="Print to PDF"
 </div>
 <div class="toggle docutils container">
 <p>Differentiating gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5aff99c-dfb8-471b-94e4-49424fc5e9dc">
-<span class="eqno">(14.6)<a class="headerlink" href="#equation-a5aff99c-dfb8-471b-94e4-49424fc5e9dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6294f102-d8d0-4cb7-a739-149b6af1d77d">
+<span class="eqno">(14.6)<a class="headerlink" href="#equation-6294f102-d8d0-4cb7-a739-149b6af1d77d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \hat{V}^{\prime}=\frac{(e^{\delta T}-1)V^{\prime}-(V-c)\delta e^{\delta T}}{(e^{\delta T}-1)^2}
 \end{equation}\]</div>
 <p>The result is then obtained by setting <span class="math notranslate nohighlight">\(\hat{V}^{\prime}=0\)</span>.</p>
@@ -573,8 +588,8 @@ title="Print to PDF"
 <h3><span class="section-number">14.2.1. </span>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this heading">#</a></h3>
 <p>Because <span class="math notranslate nohighlight">\(1-e^{-\delta T}&lt;1\)</span>, taking rotation into account leads to a decrease in the age of cutting.</p>
 <p>The Faustmann formula can be understood by rearrangement to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-617f83f5-2588-48b3-b4a5-8a3db75e81e2">
-<span class="eqno">(14.7)<a class="headerlink" href="#equation-617f83f5-2588-48b3-b4a5-8a3db75e81e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dd3351ff-c709-4402-bbcd-e1a8380c2cc0">
+<span class="eqno">(14.7)<a class="headerlink" href="#equation-dd3351ff-c709-4402-bbcd-e1a8380c2cc0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 \end{equation}\]</div>
 <ul class="simple">
@@ -696,8 +711,8 @@ V^{\prime}=\delta(V-c)+\delta\left(\frac{V-c}{e^{\delta T}-1}\right)
 <p class="admonition-title"><span class="caption-number">Exercise 14.4 </span></p>
 <section id="exercise-content">
 <p>Fit a Weibull function to the net stumpage value. The Weibull function is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57e709d6-e492-4c63-95ae-41627a50f524">
-<span class="eqno">(14.8)<a class="headerlink" href="#equation-57e709d6-e492-4c63-95ae-41627a50f524" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-36e5749c-1b6d-4961-980c-6056acd16ed0">
+<span class="eqno">(14.8)<a class="headerlink" href="#equation-36e5749c-1b6d-4961-980c-6056acd16ed0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 w(t) = 1-e^{-(t/k)^s}
 \end{equation}\]</div>
 <p><em>Hint: The data need to be transformed to the range [0,1] on both axes to perform the fit, and then the inverse transform needs to be performed. It’s worth it though, as the data fit very nicely!</em></p>

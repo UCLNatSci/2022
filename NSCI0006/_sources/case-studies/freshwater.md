@@ -1,15 +1,15 @@
 # Freshwater sustainability
 
-This case study on freshwater sustainability is provided for you to practice solving mathematical problems in context and using your results to make informed conclusions or judgements.
-
-The case study also includes a question on fitting straight lines to data points, which is an important background technique for the work that we will do on calculus.
-
 ```{admonition} [Mami Mitzuri](https://twitter.com/HeadUNDRR), UN Special Representative for Disaster Risk Reduction
 :class: quote
 
 Drought could be next pandemic and there is no vaccine to cure it. Drought has directly affected 1.5 billion people this century. This number will grow dramatically unless we manage this risk, understand its root causes and take preventive action [[Twitter](https://twitter.com/headundrr/status/1405653654636535820)]
 
 ```
+
+This case study on freshwater sustainability is provided for you to practice solving mathematical problems in context and using your results to make informed conclusions or judgements.
+
+The case study also includes a question on fitting straight lines to data points, which is an important background technique for the work that we will do on calculus.
 
 ## Water Stress
 

@@ -1,17 +1,16 @@
 # Know your limits
 
+```{admonition} [Bishop George Berkeley (1685-1753)](https://www.maa.org/press/periodicals/convergence/mathematical-treasure-berkeleys-critique-of-calculus#:~:text=%E2%80%9CThe%20ghosts%20of%20departed%20quantities,entitled%20The%20Analyst%20(1734).)
+:class: quote
+And what are these Fluxions? The Velocities of evanescent Increments? And what are these same evanescent Increments? They are neither finite Quantities nor Quantities infinitely small, nor yet nothing. May we not call them the ghosts of departed quantities?
+```
+
 In this chapter we introduce the concept of a limit by studying some examples. We do not provide a formal or in-depth treatment of this topic, but by the end of the chapter you should be able to:
 
 * use correct mathematical notation and language to describe a limit
 * deal with ratios of infinitesimally small or large quantities
 * find limits and asymptotic expansions either by hand or using Python
 * avoid misconceptions involving "a difference of infinities" or "a sum of infinitesimals"
-
-```{admonition} [Bishop George Berkeley (1685-1753)](https://www.maa.org/press/periodicals/convergence/mathematical-treasure-berkeleys-critique-of-calculus#:~:text=%E2%80%9CThe%20ghosts%20of%20departed%20quantities,entitled%20The%20Analyst%20(1734).)
-:class: quote
-And what are these Fluxions? The Velocities of evanescent Increments? And what are these same evanescent Increments? They are neither finite Quantities nor Quantities infinitely small, nor yet nothing. May we not call them the ghosts of departed quantities?
-```
-
 
 ## Informal notion of limit
 
@@ -341,7 +340,7 @@ Therefore,
 
 \begin{align*}
 y &= \frac{\left(1-\frac{x^2}{2}\right)-\left(1+\frac{1}{2}x -\frac{1}{8}x^2\right) +\mathcal{O}(x^3)}{x}\\
-  &=\frac{1}{2}-\frac{3}{8}x+\mathcal{O}(x^2)
+  &=-\frac{1}{2}-\frac{3}{8}x+\mathcal{O}(x^2)
 \end{align*}
 
 In the limit:

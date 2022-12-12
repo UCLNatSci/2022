@@ -1,15 +1,15 @@
 # Exponential trends
 
+```{admonition} [Scale of student loans in England](https://commonslibrary.parliament.uk/research-briefings/sn01079/#:~:text=%C2%A3460%20billion)
+:class: quote
+The Government forecasts the value of outstanding loans to reach around £460 billion (2021-22 prices) by the mid2040s.
+```
+
 This chapter introduces the natural exponent and natural logarithm. After working through this chapter you should be able to:
 
 * Calculate absolute and relative growth rates from a given dataset
 * Understand the relationship between exponential behaviour and growth rates
 * Manipulate exponentials and logarithms algebraically
-
-```{admonition} [Scale of student loans in England](https://commonslibrary.parliament.uk/research-briefings/sn01079/#:~:text=%C2%A3460%20billion)
-:class: quote
-The Government forecasts the value of outstanding loans to reach around £460 billion (2021-22 prices) by the mid2040s.
-```
 
 ## Student debt in England
 
