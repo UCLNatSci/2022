@@ -327,15 +327,39 @@ const thebe_selector_output = ".output, .cell_output"
      4.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../2d_arrays/2d_arrays_answers.html">
+       4.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../2d_arrays/2d_arrays_homework_answers.html">
+       4.4.1. Homework Answers
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../2d_arrays/2d_arrays_extra.html">
@@ -348,8 +372,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -601,7 +625,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="cellular-automata">
 <h1><span class="section-number">5.2. </span>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this headline">#</a></h1>
 <section id="advanced-plotting">
-<h2><span class="section-number">5.2.1. </span>Advanced Plotting<a class="headerlink" href="#advanced-plotting" title="Permalink to this headline">#</a></h2>
+<span id="notes-subplots-ref"></span><h2><span class="section-number">5.2.1. </span>Advanced Plotting<a class="headerlink" href="#advanced-plotting" title="Permalink to this headline">#</a></h2>
 <p>The plotting library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is capable of producing quite sophisticated and professional-looking figures. The <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">online documentation</a> contains a number of <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">examples including demonstration code</a>.</p>
 <p>One of the most useful techniques allows you to include multiple plots in a single Figure. To use it we have to use Matplotlib’s ‘explicit’ interface, where we create <code class="docutils literal notranslate"><span class="pre">figure</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code> objects and then call methods on them using an ‘object-oriented’ style syntax. A full understanding of this style of programming is out of the scope of this course, but you should nevertheless be able to make use of this functionality by adapting the examples below.</p>
 <p>First let’s take an example using Matplotlib’s ‘implicit’ (conventional) syntax to plot the functions <span class="math notranslate nohighlight">\(\sin(x)\)</span> and <span class="math notranslate nohighlight">\(\sin(2x)\)</span> on two separate figures.</p>
@@ -623,7 +647,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x157fcb34e88&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2064d28d0c8&gt;]
 </pre></div>
 </div>
 <img alt="../_images/cellular_automata_notes_1_1.png" src="../_images/cellular_automata_notes_1_1.png" />
@@ -642,7 +666,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x157fcc41c48&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2064b1db388&gt;]
 </pre></div>
 </div>
 <img alt="../_images/cellular_automata_notes_3_1.png" src="../_images/cellular_automata_notes_3_1.png" />
