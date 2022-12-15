@@ -21,7 +21,7 @@ In this case study we will examine a mathematical model of resource-limited grow
 
 The dataset that we will use are found at [ourworldindata.org](https://ourworldindata.org/grapher/oil-production-by-country). We will examine the dataset for oil usage in the United States only. After completing this case study, if you want to try out the mathematics for another country you are welcome to include your additional work in your submission.
 
-The US dataset can be downloaded from [us-oil.csv](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/world-oil.csv).
+The US dataset can be downloaded from [us-oil.csv](https://liveuclac-my.sharepoint.com/:x:/r/personal/ucqssjm_ucl_ac_uk/Documents/Shared%20with%20Everyone/nsci0006_data/us-oil.csv).
 
 
 ```{exercise}
@@ -150,6 +150,7 @@ By using the parameter values $r,C$ that you calculated, find an estimate for $x
 ```
 
 ```{exercise}
+:label: ex-po9
 With reference to your figure and to literature, write two or three paragraphs to explain whether you think the logistic model is useful to describe and/or predict world oil production in future.
 
 You must write in your own words, and provide references to support your assertions where appropriate.

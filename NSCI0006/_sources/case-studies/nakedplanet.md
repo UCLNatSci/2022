@@ -92,6 +92,7 @@ A summary of the parameter values is given in the table below, for convenience. 
 ```
 
 ```{exercise}
+:label: ex-ct1
 Solve the climate model {eq}`eq-naked` for $T(0)=250$ and for $T(0)=260$, and plot the solutions on the same figure. Ensure that the axes are correctly labelled, with the units included.
 
 You should find that the solution approaches an equilibrium value, which is the same in both cases.
@@ -136,6 +137,7 @@ The equilibrium temperature is at the intersection between the inflow and outflo
 ```
 
 ```{exercise}
+:label: ex-ct2
 Find the equilibrium temperature in Celsius, based on {eq}`eq-naked`. Comment on your answer.
 ```
 
@@ -157,7 +159,7 @@ C\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{L(1-\alpha)}{4} -\frac{\sigma T^4}{1+g}
 When $g=0$ we have the naked Earth model. It can be shown that when $g=1$ the equilibrium state of the model is equivalent to a hypothetical model of the Earth contained within a glass ball. Values of $g>1$ can be used to model a "super greenhouse effect".
 
 ```{exercise}
-:label: goldy
+:label: ex-ct3
 The 20th century [average temperature](https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature) of Earth was about 13.9°C. By taking this to be the equilibrium state of model {eq}`eq-modif`, estimate the value of the greenhouse parameter $g$.
 ```
 
@@ -173,6 +175,7 @@ At frozen temperatures the albedo (reflectivity) of Earth is high. In the model,
 ```
 
 ```{exercise}
+:label: ex-ct4
 Write a function `albedo` that resembles the above figure by using a scaled and shifted sigmoid
 \begin{equation*}
 \alpha(T) = A+\frac{(B-A)e^{k(T-T_m)}}{1+e^{k(T-T_m)}}
@@ -185,9 +188,11 @@ for appropriate choices of $A,B,k,T_m$.
 By including both the effects of ice-albedo feedback and the greenhouse effect in model {eq}`eq-modif`, investigate the equilibrium state of the planet at follows:
 
 ```{exercise}
-Suppose the earth starts in "Goldilocks" equilibrium state described in {numref}`goldy`. Describe what happens to the equilibrium state of the system as $g$ decreases, with reference to the tipping point. What are the approximate values of $g,T$ at the tipping point?
+:label: ex-ct5
+Suppose the earth starts in "Goldilocks" equilibrium state described in {numref}`ex-ct3`. Describe what happens to the equilibrium state of the system as $g$ decreases, with reference to the tipping point. What are the approximate values of $g,T$ at the tipping point?
 ```
 
 ```{exercise}
+:label: ex-ct6
 Suppose that the Earth is in a snowball state with $g\sim 0.5$ and $T\sim 227\text{K}$. Explain what is required to happen in this model for Earth to return to the Goldilocks state.
 ```
