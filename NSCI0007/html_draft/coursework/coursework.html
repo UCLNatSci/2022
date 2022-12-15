@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Projects" href="../projects/projects.html" />
-    <link rel="prev" title="5. Tutorial 5: Cellular Automata" href="../cellular_automata/cellular_automata.html" />
+    <link rel="prev" title="5.5. Further Practice" href="../cellular_automata/cellular_automata_extra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -380,10 +380,61 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../cellular_automata/cellular_automata.html">
-   5. Tutorial 5: Cellular Automata
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
+   5. Cellular Automata
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cellular_automata/cellular_automata_notes.html">
+     5.2. Notes
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../cellular_automata/cellular_automata.html">
+     5.3. Workshop
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
+     5.4. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Cellular Automata: Example Solution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
+     5.5. Further Practice
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -571,13 +622,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission">
+   Submission
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
    Background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coursework-brief">
-   Coursework Brief
+  <a class="reference internal nav-link" href="#instructions">
+   Instructions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -642,13 +703,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission">
+   Submission
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#background">
    Background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coursework-brief">
-   Coursework Brief
+  <a class="reference internal nav-link" href="#instructions">
+   Instructions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -705,6 +776,18 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="nsci0007-coursework">
 <h1>NSCI0007 Coursework<a class="headerlink" href="#nsci0007-coursework" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>You will produce a Python notebook which simulates the movement of organisms around a neighbourhood. In Part 1 (35 marks) you will build the model, and in Part 2 (15 marks) you will investigate the behaviour of the model for various values of its parameters.</p>
+</section>
+<section id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">#</a></h2>
+<p>You have been provided a new Cocalc project called <code class="docutils literal notranslate"><span class="pre">[your</span> <span class="pre">name]</span> <span class="pre">-</span> <span class="pre">NSCI0007</span> <span class="pre">COURSEWORK</span> <span class="pre">22/23</span></code> which contains a folder <code class="docutils literal notranslate"><span class="pre">COURSEWORK_FILES</span></code>. The contents of this folder will be automatically collected at the end of the assessment period.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You MUST complete your work in the folder above. Work completed in any other location will not be marked.</p>
+</div>
+</section>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>Suppose there are two species of organism living in a neighbourhood. The organisms are initially spread about the neighbourhood at random, but are free to move around the neighbourhood as they wish. The organisms are lazy and so in general will stay where they are; however they have a slight preference for being surrounded by organisms of the same species. If too many of their immediate neighbours are of the opposite species, they will move to another location in the neighbourhood. Over time, the distribution of organisms will shift (<a class="reference internal" href="#fig-neighbourhood"><span class="std std-numref">Fig. 1</span></a>).</p>
@@ -750,8 +833,8 @@ title="Print to PDF"
 </figcaption>
 </figure>
 </section>
-<section id="coursework-brief">
-<h2>Coursework Brief<a class="headerlink" href="#coursework-brief" title="Permalink to this headline">#</a></h2>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
 <p>Your goal is to simulate the evolution of the distribution of organisms for various values of the parameter <span class="math notranslate nohighlight">\(f\)</span>. Your solution should be presented as a single Python notebook including working code and explanatory text.</p>
 <p>Your notebook should:</p>
 <ul class="simple">
@@ -771,7 +854,7 @@ title="Print to PDF"
 <section id="step-1">
 <h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">#</a></h3>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">initialise_grid(N,</span> <span class="pre">n)</span></code> which returns an <code class="docutils literal notranslate"><span class="pre">N</span></code> by <code class="docutils literal notranslate"><span class="pre">N</span></code> array containing <code class="docutils literal notranslate"><span class="pre">n</span></code> <code class="docutils literal notranslate"><span class="pre">1</span></code>s and <code class="docutils literal notranslate"><span class="pre">n</span></code> <code class="docutils literal notranslate"><span class="pre">2</span></code>s placed at random cells in the array. Be sure that the returned array contains <strong>exactly</strong> the right number of <code class="docutils literal notranslate"><span class="pre">1</span></code>s and <code class="docutils literal notranslate"><span class="pre">2</span></code>s.</p>
-<p>You can use the following pseudocode to help you. It creates an <code class="docutils literal notranslate"><span class="pre">N</span></code> by <code class="docutils literal notranslate"><span class="pre">N</span></code> array with exactly <code class="docutils literal notranslate"><span class="pre">n</span></code> <code class="docutils literal notranslate"><span class="pre">1</span></code>s.</p>
+<p>One (rather inefficient) way to do this is shown in following pseudocode, which creates an <code class="docutils literal notranslate"><span class="pre">N</span></code> by <code class="docutils literal notranslate"><span class="pre">N</span></code> array with exactly <code class="docutils literal notranslate"><span class="pre">n</span></code> <code class="docutils literal notranslate"><span class="pre">1</span></code>s.</p>
 <div class="pseudocode docutils">
 <p>Set x to empty N by N array<br />
 Set counter to zero<br />
@@ -782,7 +865,7 @@ Repeat until counter equals n:<br />
         set the value of x at i, j to 1<br />
         increase counter by 1</p>
 </div>
-<p>You can use the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> function <code class="docutils literal notranslate"><span class="pre">randint</span></code> to generate a random integer in a given range.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> function <a class="reference external" href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html"><code class="docutils literal notranslate"><span class="pre">randint</span></code></a> to generate a random integer in a given range.</p>
 <p>Test that your code works as below (your function will not return this exact output, but it should return a 4 by 4 array with exactly the right number of <code class="docutils literal notranslate"><span class="pre">1</span></code>s and <code class="docutils literal notranslate"><span class="pre">2</span></code>s.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -803,7 +886,7 @@ Repeat until counter equals n:<br />
 </div>
 </div>
 <blockquote>
-<div><p><strong>5 marks</strong> will be awarded for a function which correctly returns an array as described and <strong>1 mark</strong> for including the test case.</p>
+<div><p><strong>4 marks</strong> will be awarded for a function which correctly returns an array as described and <strong>1 mark</strong> for including the test case.</p>
 </div></blockquote>
 </section>
 <section id="step-2">
@@ -835,7 +918,7 @@ Repeat until counter equals n:<br />
 </div>
 </div>
 <blockquote>
-<div><p><strong>5 marks</strong> for a function which returns the correct value for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>, and <strong>1 mark</strong> for including the test cases.</p>
+<div><p><strong>4 marks</strong> for a function which returns the correct value for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>, and <strong>1 mark</strong> for including the test cases.</p>
 </div></blockquote>
 </section>
 <section id="step-3">
@@ -860,7 +943,7 @@ Repeat until counter equals n:<br />
 </div>
 </div>
 <blockquote>
-<div><p><strong>5 marks</strong> for a function which returns the correct value for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>, and <strong>1 mark</strong> for including the test cases.</p>
+<div><p><strong>2 marks</strong> for a function which returns the correct value for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>, and <strong>1 mark</strong> for including the test cases.</p>
 </div></blockquote>
 </section>
 <section id="step-4">
@@ -886,7 +969,7 @@ Repeat until counter equals n:<br />
 </div>
 </div>
 <blockquote>
-<div><p><strong>5 marks</strong> for a function which executes correctly for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">f</span></code>, and <strong>1 mark</strong> for including the test case.</p>
+<div><p><strong>4 marks</strong> for a function which executes correctly for all possible arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">f</span></code>, and <strong>1 mark</strong> for including the test case.</p>
 </div></blockquote>
 </section>
 <section id="step-5">
@@ -918,27 +1001,27 @@ Repeat until counter equals n:<br />
 </div>
 </div>
 <blockquote>
-<div><p><strong>8 marks</strong> for a function which works as described for all possible imputs of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">f</span></code>, <strong>1 mark</strong> for including the test case.</p>
+<div><p><strong>6 marks</strong> for a function which works as described for all possible imputs of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">f</span></code>, <strong>1 mark</strong> for including the test case.</p>
 </div></blockquote>
 </section>
 <section id="step-6">
 <h3>Step 6<a class="headerlink" href="#step-6" title="Permalink to this headline">#</a></h3>
 <p>Initialise a grid an <code class="docutils literal notranslate"><span class="pre">20</span></code> by <code class="docutils literal notranslate"><span class="pre">20</span></code> array with 45% of cells occupied by species 1, 45% occupied by species 2 and 10% unoccupied. Run the simulation for <code class="docutils literal notranslate"><span class="pre">10</span></code> iterations with <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">0.4</span></code>. Display the contents of the array at each step using the function <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code>.</p>
 <blockquote>
-<div><p><strong>2 marks</strong> for correctly initialising the grid, <strong>6 marks</strong> for executing the simulation and displaying the results.</p>
+<div><p><strong>2 marks</strong> for correctly initialising the grid, <strong>3 marks</strong> for executing the simulation and displaying the results.</p>
 </div></blockquote>
 </section>
 </section>
 <section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">#</a></h2>
 <p>In some cases the simulation reaches a stable pattern, whereas in others the distribution keeps changing indefinitely.</p>
-<p>For what values of <span class="math notranslate nohighlight">\(f\)</span> does the grid eventually reaching a stable pattern? Investigate how the behaviour of the model depends on the value this parameter.</p>
-<p>Express your answer using code, figures and text. Take care with the presentation of your answer, including professionally formatted figures and explanations written in paragraph form.</p>
+<p>For what values of <span class="math notranslate nohighlight">\(f\)</span> does the grid eventually reaching a stable pattern? Investigate how the behaviour of the model depends on the value this parameter. Does it also depend on the size of the grid and the initial distribution of organisms?</p>
+<p>Express your answer using code, figures and text. Take care with the presentation of your answer, including professionally formatted figures and explanations written in paragraph form. Use markdown cells to format your text.</p>
 <blockquote>
-<div><p>A maximum of <strong>14 marks</strong> for an investigation that fully explores the question.</p>
+<div><p>A maximum of <strong>15 marks</strong> for an investigation that fully explores the question.</p>
 </div></blockquote>
 <hr class="docutils" />
-<p><strong>Total marks: 60</strong></p>
+<p><strong>Total: 50 marks</strong></p>
 </section>
 </section>
 
@@ -969,11 +1052,11 @@ Repeat until counter equals n:<br />
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../cellular_automata/cellular_automata.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../cellular_automata/cellular_automata_extra.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Tutorial 5: Cellular Automata</p>
+            <p class="prev-next-title"><span class="section-number">5.5. </span>Further Practice</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../projects/projects.html" title="next page">

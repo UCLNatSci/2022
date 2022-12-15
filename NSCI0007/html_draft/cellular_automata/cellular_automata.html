@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Tutorial 5: Cellular Automata &#8212; Scientific Computing Workbook</title>
+    <title>5.3. Cellular Automata &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="NSCI0007 Coursework" href="../coursework/coursework.html" />
-    <link rel="prev" title="4.5. Further Practice" href="../2d_arrays/2d_arrays_extra.html" />
+    <link rel="next" title="5.3.3. Solutions" href="cellular_automata_answers.html" />
+    <link rel="prev" title="5.2. Cellular Automata" href="cellular_automata_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -380,10 +380,61 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. Tutorial 5: Cellular Automata
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="cellular_automata_intro.html">
+   5. Cellular Automata
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="cellular_automata_notes.html">
+     5.2. Notes
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     5.3. Workshop
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="cellular_automata_homework.html">
+     5.4. Homework
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cellular_automata_homework_answers.html">
+       5.4.1. Cellular Automata: Example Solution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cellular_automata_extra.html">
+     5.5. Further Practice
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -571,33 +622,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diffusion-model">
+   5.3.1. Diffusion Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conway-s-game-of-life">
-   5.1. Conway’s Game of Life
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programming-the-game-of-life">
-   5.2. Programming the Game of Life
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   5.3. Question 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   5.4. Question 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-4">
-   5.5. Question 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-5">
-   5.6. Question 5
+   5.3.2. Conway’s Game of Life
   </a>
  </li>
 </ul>
@@ -609,7 +640,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial 5: Cellular Automata</h1>
+                <h1>Cellular Automata</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -620,33 +651,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diffusion-model">
+   5.3.1. Diffusion Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conway-s-game-of-life">
-   5.1. Conway’s Game of Life
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programming-the-game-of-life">
-   5.2. Programming the Game of Life
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   5.3. Question 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   5.4. Question 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-4">
-   5.5. Question 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-5">
-   5.6. Question 5
+   5.3.2. Conway’s Game of Life
   </a>
  </li>
 </ul>
@@ -659,94 +670,131 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-5-cellular-automata">
-<h1><span class="section-number">5. </span>Tutorial 5: Cellular Automata<a class="headerlink" href="#tutorial-5-cellular-automata" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cellular-automata">
+<h1><span class="section-number">5.3. </span>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this headline">#</a></h1>
 <p>A cellular automaton is a collection of cells on a rectangular grid that evolves through a number of discrete time steps according to a set of rules based on the states of neighbouring cells. The rules are then applied iteratively for as many time steps as desired.</p>
 <p>You will investigate a cellular automaton model as part of your group project.</p>
 <figure class="align-default" id="epidemic-fig">
 <a class="reference internal image-reference" href="../_images/epidemic.png"><img alt="../_images/epidemic.png" src="../_images/epidemic.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Cellular automata models of the spread of an epidemic on a 2-dimensional grid of cells. Each timestep corresponds to one day <a class="footnote-reference brackets" href="#footcite-gagliardi2010small" id="id1">1</a>.</span><a class="headerlink" href="#epidemic-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Cellular automata models of the spread of an epidemic on a 2-dimensional grid of cells. Each timestep corresponds to one day <a class="footnote-reference brackets" href="#footcite-gagliardi2010small" id="id1">1</a>.</span><a class="headerlink" href="#epidemic-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="diffusion-model">
+<h2><span class="section-number">5.3.1. </span>Diffusion Model<a class="headerlink" href="#diffusion-model" title="Permalink to this headline">#</a></h2>
+<p>Diffusion is the movement of a substance from an area of high concentration to an area of lower concentration. For example, suppose we have an 2-dimensional region which is initially empty except for a square region at the centre where we inject a high concentration of a chemical. As time progresses, the chemical gradually diffuses throughout the region until the concentration is everywhere equal (<a class="reference internal" href="#diffusion-fig"><span class="std std-numref">Fig. 5.3</span></a>).</p>
+<figure class="align-default" id="diffusion-fig" style="width: 600px">
+<div class="cell_output docutils container">
+<img alt="../_images/cellular_automata_0_0.png" src="../_images/cellular_automata_0_0.png" />
+</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">A chemical introduced into the centre of a square region (left) gradually diffuses across the region. Eventually the chemical would be distributed evenly throughout the region.</span><a class="headerlink" href="#diffusion-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can model this using a 2-dimensional array representing the concentration at each point in space (<a class="reference internal" href="#diffusion-fig"><span class="std std-numref">Fig. 5.3</span></a>). At each timestep, the concentration <span class="math notranslate nohighlight">\(x_{i,j}\)</span> at each point changes as the chemical flows between the 8 immediate neighbouring cells.</p>
+<p>We can construct a (very crude) model of diffusion using 2d averaging. In this model, we repeatedly apply a moving average, so that at each timestep the concentration of cell <code class="docutils literal notranslate"><span class="pre">x[i,j]</span></code> is replaced by the average of the 9 cells in the 3 by 3 subarray centred at <code class="docutils literal notranslate"><span class="pre">i,j</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moving_average_2d</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># create empty array of correct dimensions</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
+    
+    <span class="c1"># fill in moving avg</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">sub_array</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sub_array</span><span class="p">)</span>
+           
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="exercise_5_3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.3 </span></p>
+<section id="exercise-content">
+<p>Build a simulation model similar to <a class="reference internal" href="#diffusion-fig"><span class="std std-numref">Fig. 5.3</span></a>. First create an square array whose elements are zero everywhere except for a square of cells in the centre. Then repeatedly apply the function <code class="docutils literal notranslate"><span class="pre">moving_average_2d</span></code>. Use <code class="docutils literal notranslate"><span class="pre">imshow</span></code> to plot the array at each timestep.</p>
+<p>Experiment with different arrays sizes. Can you achieve a result that looks like <a class="reference internal" href="#diffusion-fig"><span class="std std-numref">Fig. 5.3</span></a>?</p>
+</section>
+</div>
+</section>
 <section id="conway-s-game-of-life">
-<h2><span class="section-number">5.1. </span>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">#</a></h2>
-<p>The <strong>Game of Life</strong> is a simple cellular automaton devised by mathematician John Conway in 1970. The automaton mimics the dynamical evolution of “life-forms” existing in the grid of cells <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.2</span></a> shows an example evolution of the Game of Life for two iterations.</p>
-<div class="admonition-the-rules-of-conway-s-game-of-life admonition">
-<p class="admonition-title">The Rules of Conway’s Game of Life</p>
+<h2><span class="section-number">5.3.2. </span>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">#</a></h2>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a> is a simple cellular automaton devised by mathematician John Conway in 1970. The automaton mimics the dynamical evolution of “life-forms” existing in the grid of cells <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.4</span></a> shows an example evolution of the Game of Life.</p>
+<figure class="align-default" id="game-of-life-fig">
+<a class="reference internal image-reference" href="../_images/GOL.gif"><img alt="../_images/GOL.gif" src="../_images/GOL.gif" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">The Game of Life is an example of a 2-dimensional cellular automaton.</span><a class="headerlink" href="#game-of-life-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The rules of Conway’s Game of Life are given below, and an example of two iterations of the Game are shown in <a class="reference internal" href="#game-of-life-2-iterations-fig"><span class="std std-numref">Fig. 5.5</span></a>.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+The Rules of Conway’s Game of Life</div>
 <ol class="simple">
-<li><p>Start with a rectangular grid of cells, each of which is “alive” (black) or “dead” (white).</p></li>
-<li><p>Count the number of each cell’s 8 immediate neighbours that are alive, and<br />
+<li><p class="sd-card-text">Start with a rectangular grid of cells, each of which is “alive” (black) or “dead” (white).</p></li>
+<li><p class="sd-card-text">Count the number of each cell’s 8 immediate neighbours that are alive, and<br />
 a. any live cell with fewer than 2 live neighbours dies;<br />
 b. any live cell with more than 3 live neighbours dies;<br />
 c. any live cell with 2 or 3 live neighbours lives on;<br />
 d. any dead cell with exactly three live neighbours becomes alive, and otherwise stays dead.</p></li>
-<li><p>Repeat step 2 as many times as desired.</p></li>
+<li><p class="sd-card-text">Repeat step 2 as many times as desired.</p></li>
 </ol>
 </div>
-<figure class="align-default" id="game-of-life-fig">
+</div>
+<figure class="align-default" id="game-of-life-2-iterations-fig">
 <a class="reference internal image-reference" href="../_images/game_of_life_example.png"><img alt="../_images/game_of_life_example.png" src="../_images/game_of_life_example.png" style="height: 150px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Two iterations of the Game of Life on a 5 by 5 grid.</span><a class="headerlink" href="#game-of-life-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">An initial configuration of cells (left) and two iterations of the Game of Life (centre and right).</span><a class="headerlink" href="#game-of-life-2-iterations-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The remainder of this workshop involves constructing code to execute the Game of Life</p>
-<div class="exercise admonition" id="cellular_automata/cellular_automata-exercise-0">
+<div class="exercise admonition" id="exercise_5_4">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 5.4 </span></p>
 <section id="exercise-content">
-<p>What would the next iteration of the Game of Life in <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.2</span></a> look like?</p>
+<p>What would the next iteration of the Game of Life in <a class="reference internal" href="#game-of-life-2-iterations-fig"><span class="std std-numref">Fig. 5.5</span></a> look like?</p>
 <p>Using pseudocode, sketch an algorithm for calculating one iteration of the Game of Life.</p>
 </section>
 </div>
-</section>
-<section id="programming-the-game-of-life">
-<h2><span class="section-number">5.2. </span>Programming the Game of Life<a class="headerlink" href="#programming-the-game-of-life" title="Permalink to this headline">#</a></h2>
-<p>Below is template code for a Python program which executes a single iteration of the game of life. The first function <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> calculates the number of live neighbours of single cell, whereas the function <code class="docutils literal notranslate"><span class="pre">advance</span></code> calculates the next iteration of the entire grid of cells.</p>
+<p>Below is template code for a Python program which executes a single iteration of the game of life. The grid is represented by an <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> array where dead cells are <code class="docutils literal notranslate"><span class="pre">0</span></code> and live cells are <code class="docutils literal notranslate"><span class="pre">1</span></code>. The function <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> calculates the number of live neighbours of single cell, whereas the function <code class="docutils literal notranslate"><span class="pre">advance</span></code> calculates the next iteration of the entire grid of cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="k">def</span> <span class="nf">count_neighbours</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">count_neighbours</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="k">pass</span>
     <span class="c1"># Return the number of live neighbours</span>
     <span class="c1"># of the cell at position i, j</span>
+    <span class="c1"># (NB you should delete &#39;pass&#39; which</span>
+    <span class="c1"># is a Python keyword which does nothing)</span>
 
-<span class="k">def</span> <span class="nf">advance</span><span class="p">(</span><span class="n">grid</span><span class="p">):</span>
-    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">shape</span>
-    <span class="n">new_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">))</span>
-    
-    <span class="c1"># Loop over each of the cells in the grid.</span>
+<span class="k">def</span> <span class="nf">advance</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">pass</span>
+    <span class="c1"># Loop over each of the cells in the array x.</span>
     <span class="c1"># For each cell, determine the number of live neighbours.</span>
     <span class="c1"># Use the game of life rules to determine if the cell lives or dies.</span>
-    <span class="c1"># Finally, set the value of the equivalent cell in new_grid</span>
+    <span class="c1"># Finally, set the value of the equivalent cell in the output array.</span>
 
-    <span class="k">return</span> <span class="n">new_grid</span>
 
 <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">grid1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">grid0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 
-<span class="c1"># set the initial value of grid1</span>
+<span class="c1"># set the initial value of grid0 where</span>
+<span class="c1"># 0 represents &#39;alive&#39; and 1 represents &#39;dead&#39;  </span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grid1:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">grid1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grid0:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid0</span><span class="p">)</span>
 
-<span class="n">grid2</span> <span class="o">=</span> <span class="n">advance</span><span class="p">(</span><span class="n">grid1</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grid2:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">grid2</span><span class="p">)</span>
+<span class="c1"># Simulation code goes here</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grid1:
-[[0. 0. 0. 0. 0.]
- [0. 0. 0. 0. 0.]
- [0. 0. 0. 0. 0.]
- [0. 0. 0. 0. 0.]
- [0. 0. 0. 0. 0.]]
-grid2:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grid0:
 [[0. 0. 0. 0. 0.]
  [0. 0. 0. 0. 0.]
  [0. 0. 0. 0. 0.]
@@ -756,55 +804,19 @@ grid2:
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="cellular_automata/cellular_automata-exercise-1">
+<div class="exercise admonition" id="exercise_5_5">
 
-<p class="admonition-title"><span class="caption-number">Exercise 5.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 5.5 </span></p>
 <section id="exercise-content">
-<p>Complete the function <code class="docutils literal notranslate"><span class="pre">count_neighbours(grid,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> so that it returns the total number of live neighbours of cell <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
-<p><strong>Hint:</strong> for cells that aren’t on one of the edges, the following code will calculate the total number of neighours in the 3 by 3 grid of cells centred at <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-</div>
-<p>You will need to adapt this code for</p>
+<p>1. Complete the function <code class="docutils literal notranslate"><span class="pre">count_neighbours(x,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> so that it returns the total number of live neighbours of cell <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>. Test that the function works by setting <code class="docutils literal notranslate"><span class="pre">grid0</span></code> to the initial configuration in <a class="reference internal" href="#game-of-life-2-iterations-fig"><span class="std std-numref">Fig. 5.5</span></a> and checking your function gives the expected result for various values of <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+<p>2. Complete the function <code class="docutils literal notranslate"><span class="pre">advance(x)</span></code> so that it returns the array after applying the rules of the Game of Life simulation. Test the function by applying it to the initial configuration in <a class="reference internal" href="#game-of-life-2-iterations-fig"><span class="std std-numref">Fig. 5.5</span></a>.</p>
+<p>3. By repeatedly calling <code class="docutils literal notranslate"><span class="pre">advance</span></code>, execute the simulation for 10 or more steps, using <code class="docutils literal notranslate"><span class="pre">imshow</span></code> to display the array at each step. Check that your simulation works by comparing to an <a class="reference external" href="https://academo.org/demos/conways-game-of-life/">online Game of Life simulator</a>.</p>
 </section>
-</div>
-<p>In this question, you will write code which implements Conway’s Game of Life on an <span class="math notranslate nohighlight">\(n\)</span> by <span class="math notranslate nohighlight">\(n\)</span> grid. Template code is given below - copy and paste this into a new notebook then replace the comments with your own code to get this working.</p>
-<p>NB <code class="docutils literal notranslate"><span class="pre">pass</span></code> is Python keyword which means ‘do nothing’. You will also need to delete this!</p>
-<p>Once you have got your code working, test it out with some of the patterns here.</p>
-<p>Hints</p>
-<ul class="simple">
-<li><p>First get <code class="docutils literal notranslate"><span class="pre">count_neighbours</span></code> working and test it on specific cells</p></li>
-<li><p>if you’re struggling to get the full Game of Life rules working, first try a ‘simplified’ version. E.g a cell is alive in the next step if <em>any</em> of its neighbours is alive in the current step</p></li>
-</ul>
-</section>
-<section id="question-2">
-<h2><span class="section-number">5.3. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
-<p>Get this working on a 3-d <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">t</span></code> array where <code class="docutils literal notranslate"><span class="pre">t</span></code> is the number of time steps.</p>
-<p>Generate embedded video</p>
-</section>
-<section id="question-3">
-<h2><span class="section-number">5.4. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
-<p>You’ll have noticed that some starting patterns quickly die out, whereas some spawn a complicted series of activity which lasts a long time. To invesitage this, we’d like to generate a line graph which shows the total number of active cells at each timestep.</p>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">activity_graph(grid)</span></code> which plots a line graph as shown.</p>
-</section>
-<section id="question-4">
-<h2><span class="section-number">5.5. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
-<p>Some starting patterns eventually settle down to an oscillating between states. Write a function which returns the number of states in the cycle.</p>
-<p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cycle_period(grid):</span></code></p>
-</section>
-<section id="question-5">
-<h2><span class="section-number">5.6. </span>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
-<p>Some starting patterns ‘gliders’ oscillate between states, but shifted by a cell in some direction. Write a function which idenfities if a starting pattern is a glider.</p>
-<p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">is_glider(grid):</span></code></p>
-<div class="docutils container" id="id2">
-<dl class="footnote brackets">
-<dt class="label" id="footcite-gagliardi2010small"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Henrique Fabricio Gagliardi and Domingos Alves. Small-world effect in epidemics using cellular automata. <em>Mathematical Population Studies</em>, 17(2):79–90, 2010.</p>
-</dd>
-</dl>
 </div>
 <hr class="footnotes docutils" />
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -834,17 +846,17 @@ grid2:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../2d_arrays/2d_arrays_extra.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="cellular_automata_notes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.5. </span>Further Practice</p>
+            <p class="prev-next-title"><span class="section-number">5.2. </span>Cellular Automata</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../coursework/coursework.html" title="next page">
+    <a class='right-next' id="next-link" href="cellular_automata_answers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">NSCI0007 Coursework</p>
+        <p class="prev-next-title"><span class="section-number">5.3.3. </span>Solutions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
