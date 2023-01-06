@@ -696,10 +696,10 @@ title="Print to PDF"
 <section id="navier-stokes-equations">
 <span id="navstokeqn"></span><h2><span class="section-number">31.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">#</a></h2>
 <p>The conservation of momentum equation for a Newtonian fluid, together with the conservation of mass equation for incompressible flow are called the Navier-Stokes equations. The equations are given below, where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9355263-0175-485d-bab1-bf138708a086">
-<span class="eqno">(31.3)<a class="headerlink" href="#equation-b9355263-0175-485d-bab1-bf138708a086" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3476baf4-f44e-4660-82df-7c465151c7d2">
-<span class="eqno">(31.4)<a class="headerlink" href="#equation-3476baf4-f44e-4660-82df-7c465151c7d2" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-86a5e41f-6e43-4380-81d5-fe0d655391cb">
+<span class="eqno">(31.3)<a class="headerlink" href="#equation-86a5e41f-6e43-4380-81d5-fe0d655391cb" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-69cb8abb-ade5-4f3b-92e6-10cb1bafaf4e">
+<span class="eqno">(31.4)<a class="headerlink" href="#equation-69cb8abb-ade5-4f3b-92e6-10cb1bafaf4e" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Euler’s equations</p>
@@ -714,8 +714,8 @@ title="Print to PDF"
 </section>
 </div>
 <div class="toggle docutils container">
-<div class="amsmath math notranslate nohighlight" id="equation-90a38bc6-3b46-4b46-8436-5d30603c1357">
-<span class="eqno">(31.5)<a class="headerlink" href="#equation-90a38bc6-3b46-4b46-8436-5d30603c1357" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c297fa31-7c03-42ce-85f6-3135860d18fd">
+<span class="eqno">(31.5)<a class="headerlink" href="#equation-c297fa31-7c03-42ce-85f6-3135860d18fd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
@@ -726,14 +726,14 @@ title="Print to PDF"
 <span id="navstok-cylindrical"></span><h2><span class="section-number">31.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">#</a></h2>
 <p>Written out in cylindrical coordinates, the components of the Navier-Stokes equations for <span class="math notranslate nohighlight">\(\underline{u}=(u_r,u_{\theta},u_z)\)</span> are given by</p>
 <p><strong>Conservation of momentum:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-a0deb156-ecff-4e3d-9d02-c148dff2b95e">
-<span class="eqno">(31.6)<a class="headerlink" href="#equation-a0deb156-ecff-4e3d-9d02-c148dff2b95e" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0c8a156f-cce0-40e4-b5fb-21747fa1a73a">
+<span class="eqno">(31.6)<a class="headerlink" href="#equation-0c8a156f-cce0-40e4-b5fb-21747fa1a73a" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
 <p><strong>Incompressibility:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3119d321-d0cf-4956-a367-b07e15d1020c">
-<span class="eqno">(31.7)<a class="headerlink" href="#equation-3119d321-d0cf-4956-a367-b07e15d1020c" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a7d03041-166c-464f-b056-fc93a317f61a">
+<span class="eqno">(31.7)<a class="headerlink" href="#equation-a7d03041-166c-464f-b056-fc93a317f61a" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
 <p>where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-89524dba-90b0-4aac-b242-c2548e3aa9f3">
-<span class="eqno">(31.8)<a class="headerlink" href="#equation-89524dba-90b0-4aac-b242-c2548e3aa9f3" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1ca30084-f753-46bd-b689-0bf71144d7ec">
+<span class="eqno">(31.8)<a class="headerlink" href="#equation-1ca30084-f753-46bd-b689-0bf71144d7ec" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
 </section>
 </section>
 
