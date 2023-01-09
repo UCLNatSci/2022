@@ -168,10 +168,12 @@ and write these functions as:
 ```{math}
 u(x,\,t) =  A \cos(kx + \omega t - \phi_1) + B \cos(kx - \omega t - \phi_2)
 ```
-Each of the constants $phi_1,\,\phi_2$ represents a **phase** along each wave.  Although we can think of these wave solutions in 
-a fiven domain, it is typical to think of them as a continuous oscillation.  Hence we just need to think about where to start 
-(and finish) examining our wave solution.  If we have a wave set up such that we start from a peak, then we can just discard 
-the phases, $\phi_1 = \phi_2 = 0$.  So a very common way to write wave solutions is:
+Each of the constants $\phi_1,\,\phi_2$ represents a **phase** along each wave and we call this the 
+**phasor representation** of the oscillations.  Although we can think of these wave solutions in a 
+fiven domain, it is typical to think of them as a continuous oscillation.  Hence we just need to think 
+about where to start (and finish) examining our wave solution.  If we have a wave set up such that we 
+start from a peak, then we can just discard the phases, $\phi_1 = \phi_2 = 0$.  So a very common way to 
+write wave solutions is:
 ```{math}
 u(x,\,t) =  A \cos(kx + \omega t ) + B \cos(kx - \omega t)
 ```
