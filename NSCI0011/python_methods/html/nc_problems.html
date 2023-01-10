@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Small-World Networks &#8212; Neural Circuits</title>
+    <title>Small-World Networks &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Further Graphs" href="ws3/ws3.html" />
-    <link rel="prev" title="Graphs with Python" href="ws2/ws2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,14 +88,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="_static/brain.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      <h1 class="site-logo" id="site-title">Topics in Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,46 +102,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Introduction
+                    Python Methods
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programming Tools, Concepts and Techniques
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="programming/tools.html">
-   Tools and Libraries
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Neural Circuits
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="ws1/ws1.html">
-   Graphs
+   1. Tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ws2/ws2.html">
-   Graphs with Python
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Small-World Networks
+  <a class="reference internal" href="programming/concepts.html">
+   2. Concepts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ws3/ws3.html">
-   Further Graphs
+  <a class="reference internal" href="programming/exercises.html">
+   3. Exercises
   </a>
  </li>
 </ul>
@@ -449,7 +421,7 @@ title="Print to PDF"
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This worksheet explores the formation of networks that result in the “small world” phenomenon. A popular example of the small world phenomenon is the network formed by actors appearing in the same movie (e.g., “Six Degrees of Kevin Bacon”), but small worlds are not limited to people-only networks. Other examples range from power grids to the neural networks of worms. This model illustrates some general, theoretical conditions under which small world networks between people or things might occur.</p>
-<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="#id5" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">1</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
+<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">WS98</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
 <a class="reference internal image-reference" href="_images/watts_strogatz.png"><img alt="L(12, 2)" class="align-center" src="_images/watts_strogatz.png" style="width: 400px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -528,12 +500,12 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
 </section>
 <section id="question-6">
 <h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">#</a></h3>
-<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="#id5" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">1</a>]</span>?</p>
+<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">WS98</a>]</span>?</p>
 </section>
 <section id="question-7-open-ended">
 <h3>Question 7 [Open-ended]<a class="headerlink" href="#question-7-open-ended" title="Permalink to this headline">#</a></h3>
 <p>How did Watts and Strogatz determine the small-worldness of the graph of the <em>C-Elegans</em> nervous system?</p>
-<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="#id5" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">1</a>]</span>.</p>
+<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">WS98</a>]</span>.</p>
 <p><a href="herm_full_edgelist.csv" download>Download C Elegans Nervous System Data</a></p>
 </section>
 </section>
@@ -541,8 +513,14 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <div class="docutils container" id="id4">
 <dl class="citation">
-<dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dt class="label" id="id6"><span class="brackets">SKotter04</span></dt>
+<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">WS98</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
 <dd><p>Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. <em>nature</em>, 393(6684):440–442, 1998.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">XJL+20</span></dt>
+<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
 </dd>
 </dl>
 </div>
@@ -576,20 +554,6 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ws2/ws2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Graphs with Python</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="ws3/ws3.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Further Graphs</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

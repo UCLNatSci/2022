@@ -105,7 +105,7 @@ print(a)
 [5, 4, 3, 2, 1]
 ```
 
-Write a function `reverse_array(x)` which reverses an array **in place** (ie without creating a new array).
+Write a function `reverse_array(x)` which reverses a Numpy array **in place** (ie without creating a new array).
 
 ```
 def reverse_array(x):

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Graphs &#8212; Neural Circuits</title>
+    <title>Graphs &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Graphs with Python" href="../ws2/ws2.html" />
-    <link rel="prev" title="Tools and Libraries" href="../programming/tools.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,14 +88,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="../_static/brain.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      <h1 class="site-logo" id="site-title">Topics in Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -108,46 +102,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Introduction
+                    Python Methods
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programming Tools, Concepts and Techniques
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../programming/tools.html">
-   Tools and Libraries
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Neural Circuits
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Graphs
+   1. Tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ws2/ws2.html">
-   Graphs with Python
+  <a class="reference internal" href="../programming/concepts.html">
+   2. Concepts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../nc_problems.html">
-   Small-World Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ws3/ws3.html">
-   Further Graphs
+  <a class="reference internal" href="../programming/exercises.html">
+   3. Exercises
   </a>
  </li>
 </ul>
@@ -597,7 +569,7 @@ title="Print to PDF"
 <figure class="align-default" id="egg-laying-circuit">
 <a class="reference internal image-reference" href="../_images/graphs.png"><img alt="../_images/graphs.png" src="../_images/graphs.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Simple, directed and multigraphs.</span><a class="headerlink" href="#egg-laying-circuit" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Simple, directed and multigraphs.</span><a class="headerlink" href="#egg-laying-circuit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="graph-representations">
@@ -697,11 +669,11 @@ title="Print to PDF"
 <p>In this section we will study some properties properties of directed graphs which we can use to compare brain circuits. For a more detailed explanation of these definitions, see [1].</p>
 <p>The <strong>degree</strong> of a node is defined as the edges which connect to the node.</p>
 <p>For a directed graph, the <strong>indegree</strong> and <strong>outdegree</strong> of a node is defined as the number of incoming and outgoing connections respectively.</p>
-<p>By calculating the histogram of node degrees, we arrive at the <strong>degree distribution</strong> of the graph (see <a class="reference internal" href="#degree-distribution"><span class="std std-numref">Fig. 2</span></a>).</p>
+<p>By calculating the histogram of node degrees, we arrive at the <strong>degree distribution</strong> of the graph (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">degree-distribution</span></code>).</p>
 <figure class="align-default" id="degree-distribution">
 <a class="reference internal image-reference" href="../_images/degree_distribution.png"><img alt="../_images/degree_distribution.png" src="../_images/degree_distribution.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Directed graph and a histogram of its outdegree distribution. Its average connection density is <span class="math notranslate nohighlight">\(12/(6^2−6) = 0.4\)</span>. The cluster index of node 1 is <span class="math notranslate nohighlight">\(\gamma(1) = 6/(5^2−5) = 0.4\)</span> since it has 5 neighbours connected by 6 edges.</span><a class="headerlink" href="#degree-distribution" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Directed graph and a histogram of its outdegree distribution. Its average connection density is <span class="math notranslate nohighlight">\(12/(6^2−6) = 0.4\)</span>. The cluster index of node 1 is <span class="math notranslate nohighlight">\(\gamma(1) = 6/(5^2−5) = 0.4\)</span> since it has 5 neighbours connected by 6 edges.</span><a class="headerlink" href="#degree-distribution" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <strong>distance matrix</strong> of a graph is the matrix [<span class="math notranslate nohighlight">\(d_{ij}\)</span>] where <span class="math notranslate nohighlight">\(d_{ij}\)</span> is the path distance from node <span class="math notranslate nohighlight">\(i\)</span> to node <span class="math notranslate nohighlight">\(j\)</span>. If <span class="math notranslate nohighlight">\(i=j\)</span> then <span class="math notranslate nohighlight">\(d_{ij} =0\)</span>, and if <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> are not connected then <span class="math notranslate nohighlight">\(d_{ij}\)</span> is infinite. The <strong>average path length</strong> is the mean of the finite off-diagonal elements of the distance matrix.</p>
@@ -718,7 +690,7 @@ title="Print to PDF"
 <figure class="align-default" id="clustering-coefficient">
 <a class="reference internal image-reference" href="../_images/clustering_example.png"><img alt="../_images/clustering_example.png" src="../_images/clustering_example.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Calculating a node’s clustering coefficient in a directed graph. Node 1 has <span class="math notranslate nohighlight">\(n=3\)</span> neighbours, nodes 2, 3 and 4. The subgraph consisting of nodes 2, 3 and 4 has <span class="math notranslate nohighlight">\(m=3\)</span> edges, out of a possible <span class="math notranslate nohighlight">\(n^2 - n = 6\)</span> edges (dashed). Therefore the clustering coefficient of node 1 is <span class="math notranslate nohighlight">\(\gamma(\mu) = m/(n^2 −n) = 3/6 = 0.5.\)</span></span><a class="headerlink" href="#clustering-coefficient" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Calculating a node’s clustering coefficient in a directed graph. Node 1 has <span class="math notranslate nohighlight">\(n=3\)</span> neighbours, nodes 2, 3 and 4. The subgraph consisting of nodes 2, 3 and 4 has <span class="math notranslate nohighlight">\(m=3\)</span> edges, out of a possible <span class="math notranslate nohighlight">\(n^2 - n = 6\)</span> edges (dashed). Therefore the clustering coefficient of node 1 is <span class="math notranslate nohighlight">\(\gamma(\mu) = m/(n^2 −n) = 3/6 = 0.5.\)</span></span><a class="headerlink" href="#clustering-coefficient" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="question-5">
@@ -754,7 +726,7 @@ title="Print to PDF"
 <figure class="align-default" id="egg-laying-circuit-subgraph">
 <a class="reference internal image-reference" href="../_images/egg_laying_circuit+subgraph.png"><img alt="../_images/egg_laying_circuit+subgraph.png" src="../_images/egg_laying_circuit+subgraph.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">The graph on the right is a subgraph of the graph on the left consisting of the nodes [3, 4, 7].</span><a class="headerlink" href="#egg-laying-circuit-subgraph" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The graph on the right is a subgraph of the graph on the left consisting of the nodes [3, 4, 7].</span><a class="headerlink" href="#egg-laying-circuit-subgraph" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="question-7">
@@ -785,7 +757,7 @@ title="Print to PDF"
 <figure class="align-default" id="egg-laying-circuit-scc">
 <a class="reference internal image-reference" href="../_images/egg_laying_circuit_scc.jpg"><img alt="../_images/egg_laying_circuit_scc.jpg" src="../_images/egg_laying_circuit_scc.jpg" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">The strongly connected components of the egg-laying circuit are <span class="math notranslate nohighlight">\([1, 2], [3, 6, 7], [4]\)</span> and <span class="math notranslate nohighlight">\([5]\)</span>.</span><a class="headerlink" href="#egg-laying-circuit-scc" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The strongly connected components of the egg-laying circuit are <span class="math notranslate nohighlight">\([1, 2], [3, 6, 7], [4]\)</span> and <span class="math notranslate nohighlight">\([5]\)</span>.</span><a class="headerlink" href="#egg-laying-circuit-scc" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -901,20 +873,6 @@ Path distances from node 6: <span class="math notranslate nohighlight">\(d = [in
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../programming/tools.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tools and Libraries</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../ws2/ws2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Graphs with Python</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

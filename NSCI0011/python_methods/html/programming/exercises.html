@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Exercises &#8212; Neural Circuits</title>
+    <title>Exercises &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Answers" href="answers.html" />
-    <link rel="prev" title="2. Tools" href="concepts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,14 +86,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="../_static/brain.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      <h1 class="site-logo" id="site-title">Topics in Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -107,29 +100,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Introduction
+                    Python Methods
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tools.html">
-   1. Tools and Libraries
+   1. Tools
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="concepts.html">
-   2. Tools
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="answers.html">
-   4. Answers
+   2. Concepts
   </a>
  </li>
 </ul>
@@ -267,10 +250,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1><span class="section-number">3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
 <div class="exercise admonition" id="programming/exercises-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
+<p class="admonition-title"></p>
 <section id="exercise-content">
 <p>Only one of the following cases is possible. For that case, write the function <code class="docutils literal notranslate"><span class="pre">increase_by_one</span></code>. For the other cases, explain why it is not possible.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="mf">5.0</span>
@@ -309,7 +292,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="programming/exercises-exercise-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span> (Object References and Lists)</p>
+<p class="admonition-title"> (Object References and Lists)</p>
 <section id="exercise-content">
 <p>5 students (numbered 0 to 4) are studying 4 modules (numbered 0 to 3):</p>
 <ul class="simple">
@@ -357,7 +340,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="programming/exercises-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span> (Functions and Mutable Variables)</p>
+<p class="admonition-title"> (Functions and Mutable Variables)</p>
 <section id="exercise-content">
 <p>The method <code class="docutils literal notranslate"><span class="pre">list.reverse()</span></code> performs an <strong>in-place</strong> reversal of a list (i.e. it reverses the elements of a list without creating a new list).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -368,7 +351,7 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">reverse_array(x)</span></code> which reverses an array <strong>in place</strong> (ie without creating a new array).</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">reverse_array(x)</span></code> which reverses a Numpy array <strong>in place</strong> (ie without creating a new array).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_array</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="c1"># your code here</span>
 </pre></div>
@@ -414,20 +397,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="concepts.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Tools</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="answers.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Answers</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

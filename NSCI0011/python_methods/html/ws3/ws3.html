@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Further Graphs &#8212; Neural Circuits</title>
+    <title>Further Graphs &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Small-World Networks" href="../nc_problems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,14 +88,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
       
       
-      <img src="../_static/brain.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      <h1 class="site-logo" id="site-title">Topics in Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -107,46 +102,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Introduction
+                    Python Methods
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programming Tools, Concepts and Techniques
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../programming/tools.html">
-   Tools and Libraries
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Neural Circuits
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ws1/ws1.html">
-   Graphs
+   1. Tools
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ws2/ws2.html">
-   Graphs with Python
+  <a class="reference internal" href="../programming/concepts.html">
+   2. Concepts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../nc_problems.html">
-   Small-World Networks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Further Graphs
+  <a class="reference internal" href="../programming/exercises.html">
+   3. Exercises
   </a>
  </li>
 </ul>
@@ -544,19 +517,19 @@ title="Print to PDF"
 <p>Given a graph of a neural circuit, a <strong>null model</strong> is a random graph with identical basic properties such as number of nodes and edges. By comparing global properties of the neural circuit graph with the random graph, it is possible to determine whether the properties of the circuit are large or small in relation to the null model.</p>
 <section id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p><a class="reference internal" href="#ped-r"><span class="std std-numref">Fig. 6</span></a> shows the graph of a region of the <em>Drosophila</em> connectome, PED®, with connection weight greater than or equal to 10. The graph of PED® has <span class="math notranslate nohighlight">\(n=197\)</span> nodes and <span class="math notranslate nohighlight">\(e=516\)</span> edges, resulting in an edge probability of <span class="math notranslate nohighlight">\(p=e/(n^2-n)=0.0134\)</span>. We construct a null model consisting of a random graph with <span class="math notranslate nohighlight">\(n=197\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p=0.0134\)</span> (<a class="reference internal" href="#ped-r-rand"><span class="std std-numref">Fig. 7</span></a>).</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">PED_R</span></code> shows the graph of a region of the <em>Drosophila</em> connectome, PED®, with connection weight greater than or equal to 10. The graph of PED® has <span class="math notranslate nohighlight">\(n=197\)</span> nodes and <span class="math notranslate nohighlight">\(e=516\)</span> edges, resulting in an edge probability of <span class="math notranslate nohighlight">\(p=e/(n^2-n)=0.0134\)</span>. We construct a null model consisting of a random graph with <span class="math notranslate nohighlight">\(n=197\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p=0.0134\)</span> (<code class="xref std std-numref docutils literal notranslate"><span class="pre">PED_R_rand</span></code>).</p>
 <p>PED® has average path length 2.1 and global clustering coefficient 0.69, compared to 5.3 and 0.02 for the null model.</p>
 <p>The \textbf{normalised} average path length and global clustering coefficient are <span class="math notranslate nohighlight">\(2.1/5.3=0.40\)</span> and <span class="math notranslate nohighlight">\(0.69/0.02=34.5\)</span> respectively.</p>
 <figure class="align-default" id="ped-r">
 <a class="reference internal image-reference" href="../_images/graph_PED(R)_10.png"><img alt="../_images/graph_PED(R)_10.png" src="../_images/graph_PED(R)_10.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Graph of PED® with connection weight greater than 10</span><a class="headerlink" href="#ped-r" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Graph of PED® with connection weight greater than 10</span><a class="headerlink" href="#ped-r" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="ped-r-rand">
 <a class="reference internal image-reference" href="../_images/graph_null_PED(R)_10.png"><img alt="../_images/graph_null_PED(R)_10.png" src="../_images/graph_null_PED(R)_10.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Graph of a null model with the same number of nodes and connection density as the graph in <a class="reference internal" href="#ped-r"><span class="std std-numref">Fig. 6</span></a>.}</span><a class="headerlink" href="#ped-r-rand" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Graph of a null model with the same number of nodes and connection density as the graph in <code class="xref std std-numref docutils literal notranslate"><span class="pre">PED_R</span></code>.}</span><a class="headerlink" href="#ped-r-rand" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -590,13 +563,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../nc_problems.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Small-World Networks</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
