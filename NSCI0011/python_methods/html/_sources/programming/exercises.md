@@ -41,57 +41,6 @@ print(val)
 
 :::
 
-:::{exercise} Object References and Lists
-
-5 students (numbered 0 to 4) are studying 4 modules (numbered 0 to 3):
-
- - Student 0 is studying Module 0 and Module 2;
- - Student 1 is studying Module 1 and 2;
- - Student 2 is studying Module 3;
- - Student 3 is studying all modules;
- - Student 4 isn't studying any of the modules.
-
- This information is stored in a list-of-lists `u` where `u[i]` is a list of the modules taken by student `i`.
-
- 1\. Write a Python program which generates a new list-of-lists `v` where `v[i]` is a list of students taking module `i`.
-
-```
-n_students = 5
-n_modules = 4
-u = [[0, 2],
-     [1, 2],
-     [3],
-     [0, 1, 2, 3],
-     []]
-
-# your code here
-
-print(v)
-```
-```
-[[0, 3], [1, 3], [0, 1, 3], [2, 3]]
-```
-
-2\. Now, write a function `transpose_list(x)` which does the same. Your function should work for arguments `x` with any number of students and modules.
-
-```
-def transpose_list(x):
-    # your code here
-
-u = [[0, 2],
-     [1, 2],
-     [3],
-     [0, 1, 2, 3],
-     []]
-v = transpose_list(u)
-print(v)
-```
-```
-[[0, 3], [1, 3], [0, 1, 3], [2, 3]]
-```
-
-:::
-
 :::{exercise} Functions and Mutable Variables
 
 The method `list.reverse()` performs an **in-place** reversal of a list (i.e. it reverses the elements of a list without creating a new list).
@@ -123,4 +72,86 @@ print(x)
 ```
 [5 4 3 2 1]
 ```
+:::
+
+:::{exercise} Nested Lists
+
+A nested list is a list whose elements are also list. For example,
+
+```
+x = [[1, 2], [3, 4], [5, 6, 7]]
+```
+
+1\. What is type and value of each of the following expressions?
+
+a. `x[2]`
+b. `x[0][1]`
+
+Lsts are mutable, which can have some rather surprising consequences.
+
+2\. What is the value of `x` and `y` after executing the following code? Explain why.
+
+a\.
+```
+x = [1, 2, 3]
+y = [x, x]
+x.append(4)
+```
+
+b\.
+```
+x = [1, 2]
+y = []
+for i in range(5):
+    y.append(x)
+x[0] = 100
+```
+
+c\.
+
+```
+x = [1]
+for z in x:
+    x.append(z)
+```
+
+d\.
+```
+x = []
+y = []
+x.append(y)
+y.append(x)
+```
+
+3\. Write a function which *flattens* a list-of-lists. That is, given the array
+```
+[[1, 2, 3], [4, 5, 6], [7], [8, 9]]
+```
+your function should return
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+:::
+
+:::{exercise}
+
+Write a function which transposes a list of list. That is, if 
+
+```
+[[1, 2, 3, 4, 5],
+ [2, 3, 4, 5, 6],
+ [3, 4, 5, 6, 7]]
+```
+
+Then your function should return
+
+```
+[[1, 2, 3],
+ [2, 3, 4],
+ [3, 4, 5],
+ [4, 5, 6],
+ [5, 6, 7]]
+```
+
+[There are many ways to do this. You should try to find a solution that uses only loops and lists.]
 :::
