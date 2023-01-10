@@ -2,40 +2,34 @@
 
 :::{exercise}
 
-Only one of the following cases is possible. For that case, write the function `increase_by_one`. For the other cases, explain why it is not possible.
+Only one of the following cases is possible. For that case, write the function `increase_by_one`. For the other cases, explain why it is not possible to write such a function.
+
+a\.
 ```
-val = 5.0
-increase_by_one(val)
-print(val)
-```
-```
+>>> val = 5.0
+>>> increase_by_one(val)
+>>> print(val)
 6.0
 ```
-
+b\.
 ```
-val = "hello"
-increase_by_one(val)
-print(val)
+>>> val = "hello"
+>>> increase_by_one(val)
+>>> print(val)
+hello1
 ```
+c\.
 ```
-'hello1'
-```
-
-```
-val = [0, 0, 0]
-increase_by_one(val)
-print(val)
-```
-```
+>>> val = [0, 0, 0]
+>>> increase_by_one(val)
+>>> print(val)
 [0, 0, 0, 1]
 ```
-
+d\.
 ```
-val = np.array([0, 0, 0])
-increase_by_one(val)
-print(val)
-```
-```
+>>> val = np.array([0, 0, 0])
+>>> increase_by_one(val)
+>>> print(val)
 [0 0 0 1]
 ```
 
@@ -46,11 +40,9 @@ print(val)
 The method `list.reverse()` performs an **in-place** reversal of a list (i.e. it reverses the elements of a list without creating a new list).
 
 ```
-a = [1, 2, 3, 4, 5]
-a.reverse()
-print(a)
-```
-```
+>>> a = [1, 2, 3, 4, 5]
+>>> a.reverse()
+>>> print(a)
 [5, 4, 3, 2, 1]
 ```
 
@@ -64,12 +56,10 @@ def reverse_array(x):
 Test your code works as below:
 
 ```
-import numpy as np
-x = np.array([1, 2, 3, 4, 5])
-reverse_array(x)
-print(x)
-```
-```
+>>> import numpy as np
+>>> x = np.array([1, 2, 3, 4, 5])
+>>> reverse_array(x)
+>>> print(x)
 [5 4 3 2 1]
 ```
 :::
@@ -82,12 +72,12 @@ A nested list is a list whose elements are also list. For example,
 x = [[1, 2], [3, 4], [5, 6, 7]]
 ```
 
-1\. What is type and value of each of the following expressions?
+1\. What is the type and value of each of the following expressions?
 
 a. `x[2]`
 b. `x[0][1]`
 
-Lsts are mutable, which can have some rather surprising consequences.
+Lists are mutable, which can have some rather surprising consequences when they are nested inside each other.
 
 2\. What is the value of `x` and `y` after executing the following code? Explain why.
 
