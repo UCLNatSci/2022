@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphs &#8212; Neural Circuits</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Manipulating graphs with Python" href="ws2.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/brain.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ws2.html">
+   Manipulating graphs with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nc_problems.html">
+   Small-World Networks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="_sources/ws1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ws1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graph-representations">
+   Graph Representations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#walks-and-paths">
+   Walks and Paths
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shortest-paths">
+   Shortest Paths
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-5">
+     Question 5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#breadth-first-search">
+   Breadth First Search
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-6">
+     Question 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subgraphs">
+   Subgraphs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-7">
+     Question 7
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connectedness">
+   Connectedness
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-8">
+     Question 8
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-9">
+     Question 9
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-10">
+     Question 10
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#answers">
+   Answers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Question 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Question 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Question 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Question 8
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Question 9
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="graphs">
+<h1>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h1>
+<p>A <strong>graph</strong> is a collection of <strong>nodes</strong> (or <strong>vertices</strong>) connected by <strong>edges</strong>. In the following example, which represents part of the egg-laying circuit of C-Elegans, nodes represent neurons and edges represent synaptic connections between them:</p>
+<div class="admonition-definitions admonition">
+<p class="admonition-title">Definitions</p>
+<dl class="simple myst">
+<dt>Graph</dt><dd><p>A graph <span class="math notranslate nohighlight">\(G = (V, E)\)</span> is a set of nodes <span class="math notranslate nohighlight">\(V = \{v_1, v_2, \dots, v_n\}\)</span> and edges <span class="math notranslate nohighlight">\(E = \{(v_i, v_j), \dots\}\)</span> where <span class="math notranslate nohighlight">\((v_i, v_j)\)</span> is an edge joining nodes <span class="math notranslate nohighlight">\(v_i\)</span> and <span class="math notranslate nohighlight">\(v_j\)</span>.</p>
+</dd>
+<dt>Order</dt><dd><p>The order of a graph <span class="math notranslate nohighlight">\(G\)</span> is number of nodes in <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</dd>
+<dt>Directed Graph</dt><dd><p>A directed graph (or digraph) is a graph where each edge <span class="math notranslate nohighlight">\((v_i, v_j)\)</span> has an associated direction from <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span>.</p>
+</dd>
+<dt>Simple Graph</dt><dd><p>A simple graph is a graph which does not have any loops (edges from a node to itself) or multiple edges (two edges joining the same two nodes in the same direction).</p>
+</dd>
+<dt>Multigraph</dt><dd><p>A multigraph is a graph which is not a simple graph.</p>
+</dd>
+</dl>
+</div>
+<p>In this course we will mostly be considering <strong>simple directed graphs</strong>, since these are the most useful for representing neural circuits.</p>
+<div class="figure align-default" id="egg-laying-circuit">
+<a class="reference internal image-reference" href="_images/graphs.png"><img alt="_images/graphs.png" src="_images/graphs.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Simple, directed and multigraphs.</span><a class="headerlink" href="#egg-laying-circuit" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="graph-representations">
+<h2>Graph Representations<a class="headerlink" href="#graph-representations" title="Permalink to this headline">¶</a></h2>
+<p>Given a graph, we would like to be able to answer various questions: Do two graphs have the same structure?  Is there a path from node X to node Y? What is the minimum length path from node X to node Y? To answer these questions, we need a way to represent the graph in a computer. There are three main ways to represent a graph: edge list, adjacency list and adjacency matrix.</p>
+<div class="admonition-definitions admonition">
+<p class="admonition-title">Definitions</p>
+<dl class="simple myst">
+<dt>Edge List</dt><dd><p>An edge list consists of a list of pairs of numbers, one pair for each edge. The numbers represent the starting and ending nodes of each edge. Here is the edge list corresponding to the egg-laying graph:</p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[\begin{split}[1, 2], [1, 3], [1, 4], [2, 1], [2, 4], [3, 4], [3, 5],\\
+[3, 7], [5, 4], [6, 4], [6, 7], [7, 3], [7, 4], [7, 6]\end{split}\]</div>
+<p>For a directed graph, the order that we write the pair <span class="math notranslate nohighlight">\([i, j]\)</span> is important, but the order that we write the list of pairs is not.</p>
+<dl class="simple myst">
+<dt>Adjacency List</dt><dd><p>An adjacency list consists of a sequence of lists. The list at position <span class="math notranslate nohighlight">\(i\)</span> contains all the nodes which node <span class="math notranslate nohighlight">\(i\)</span> connects to. Here is the adjacency list corresponding to the egg-laying graph:</p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[[2, 3, 4], [1, 4], [4, 5, 7], [], [4], [4, 7], [3, 4, 6]\]</div>
+<dl class="simple myst">
+<dt>Adjacency Matrix</dt><dd><p>An adjacency list consists of a sequence of lists. The list at position <span class="math notranslate nohighlight">\(i\)</span> contains all the nodes which node <span class="math notranslate nohighlight">\(i\)</span> connects to. Here is the adjacency list corresponding to the egg-laying graph:</p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+	0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0
+	
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<p>For the following directed graph, write out its:</p>
+<ol class="simple">
+<li><p>Edge list.</p></li>
+<li><p>Adjacency list.</p></li>
+<li><p>Adjacency matrix.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/graph2.png"><img alt="Graph for Question 1" class="align-center" src="_images/graph2.png" style="height: 200px;" /></a>
+</div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+<p>Draw a picture of the directed graph defined by:</p>
+<ol class="simple">
+<li><p>Edge list <span class="math notranslate nohighlight">\( [1, 2], [5, 4], [5, 5], [5, 3], [3, 1], [1, 3], [3, 4], [4, 1]\)</span></p></li>
+<li><p>Adjacency list <span class="math notranslate nohighlight">\([2, 3], [], [1, 4], [1], [5, 4, 3]\)</span></p></li>
+<li><p>Adjacency matrix:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+		\begin{bmatrix}
+		0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+		0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+		1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+		0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+		0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+		0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0
+		\end{bmatrix}
+\end{split}\]</div>
+<p>Two of the three graphs are the same. Which two?</p>
+</div>
+</div>
+<div class="section" id="walks-and-paths">
+<h2>Walks and Paths<a class="headerlink" href="#walks-and-paths" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>walk</strong> in a graph is a sequence of nodes formed by following edges. A walk may visit the same node several times. For example, in the egg-laying graph <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a walk from node 1 to node 6, and <span class="math notranslate nohighlight">\([1,2,1,3]\)</span> is a walk from node 1 to node 3.</p>
+<p>A <strong>path</strong> is a walk which does not visit any node more than once. So <span class="math notranslate nohighlight">\([1, 3, 7, 6]\)</span> is a path but <span class="math notranslate nohighlight">\([1, 2, 1, 3]\)</span> is not.</p>
+<p>The <strong>length</strong> of a walk (or path) is the number of edges (which is one less than the number of nodes).</p>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>The <strong>complete directed graph</strong> <span class="math notranslate nohighlight">\(K_n\)</span> is a directed graph with <span class="math notranslate nohighlight">\(n\)</span> nodes and an edge connecting every node to every other node (but no node is connected to itself). Sketch <span class="math notranslate nohighlight">\(K_3\)</span>. In <span class="math notranslate nohighlight">\(K_3\)</span>, how many distinct length 10 walks are there?</p></li>
+<li><p>In the egg-laying circuit, identify all paths from node 6 to node 4, and all paths from node 4 to node 6.</p></li>
+<li><p>Find the longest path in the egg-laying circuit.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="shortest-paths">
+<h2>Shortest Paths<a class="headerlink" href="#shortest-paths" title="Permalink to this headline">¶</a></h2>
+<p>Given two nodes in a directed graph, there may be zero, one or multiple paths between them. The <strong>path distance</strong> from node <span class="math notranslate nohighlight">\(v_i\)</span> to node <span class="math notranslate nohighlight">\(v_j\)</span> is the length of the shortest path connecting <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span>. In this section we will build an algorithm which calculates the path distance between nodes, using a technique called breadth first search.</p>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+<p>Determine the path distance between node 1 and every other vertex in the egg-laying circuit by completing the following steps:</p>
+<ol class="simple">
+<li><p>Label node 1 with a distance of 0.</p></li>
+<li><p>Label every node directly connected by an edge from node 1 with a distance 1.</p></li>
+<li><p>Label every unlabelled node directly connected by an edge from a distance-1 node with a distance of 2.</p></li>
+<li><p>Continue until the whole graph is labelled.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/egg_laying_circuit.png"><img alt="Graph for Question 5" class="align-center" src="_images/egg_laying_circuit.png" style="height: 200px;" /></a>
+<blockquote>
+<div><p>The previous question should have given you an intuition about how to build an algorithm which calculates the shortest path between the starting node and every other node. In the next section we explore this technique.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="breadth-first-search">
+<h2>Breadth First Search<a class="headerlink" href="#breadth-first-search" title="Permalink to this headline">¶</a></h2>
+<p>A search algorithm is a method of traversing a graph by following edges. In <strong>breadth first search</strong> (BFS), we start at the origin node and traverse the graph in levels, increasing the distance from the origin one level at a time.</p>
+<a class="reference internal image-reference" href="_images/bfs.png"><img alt="BFS" class="align-center" src="_images/bfs.png" style="height: 200px;" /></a>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Compute a breadth first search of the undirected graph above, starting from node 1.</p>
+<p>At the first level, we visit the direct neighbours of node 1, which are nodes 3 and 7. In the second level, we visit nodes 4, 5 and 6 which are the direct neighbours of nodes 3 and 7. Finally, we visit node 2 which is the direct neighbour of nodes 4, 5 and 6. The output of the breadth first search is <span class="math notranslate nohighlight">\([1, 3, 7, 4, 5, 6, 2]\)</span>.</p>
+<p>Note that within each level, the nodes may be visited in any order.</p>
+</div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Compute a breadth first search of the egg-laying graph, starting from node 2, and use this to determine the path distance of each node from node 2.</p></li>
+<li><p>Do the same starting from node 6.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="subgraphs">
+<h2>Subgraphs<a class="headerlink" href="#subgraphs" title="Permalink to this headline">¶</a></h2>
+<p>Given a graph <span class="math notranslate nohighlight">\(G\)</span>, a <strong>subgraph</strong> is a subset of nodes of <span class="math notranslate nohighlight">\(G\)</span> along with their corresponding edges.</p>
+<div class="figure align-default" id="egg-laying-circuit-subgraph">
+<a class="reference internal image-reference" href="_images/egg_laying_circuit+subgraph.png"><img alt="_images/egg_laying_circuit+subgraph.png" src="_images/egg_laying_circuit+subgraph.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The graph on the right is a subgraph of the graph on the left consisting of the nodes [3, 4, 7].</span><a class="headerlink" href="#egg-laying-circuit-subgraph" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+<p>For the subgraph of the egg-laying circuit consisting of nodes <span class="math notranslate nohighlight">\([1, 2, 3, 6]\)</span>:</p>
+<ol class="simple">
+<li><p>Draw its graph</p></li>
+<li><p>Write down its adjacency matrix</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="connectedness">
+<h2>Connectedness<a class="headerlink" href="#connectedness" title="Permalink to this headline">¶</a></h2>
+<p>An undirected graph is <strong>connected</strong> if there is a path between every node and every other node.</p>
+<p>If a graph is not connected, then we can split it into <strong>connected components</strong> by declaring that two vertices are in the same component if and only if there is a path between them.</p>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+<p>Use breadth first search to determine all connected components of the undirected graph given by the edge list <span class="math notranslate nohighlight">\([1, 7], [2, 3], [6, 9], [5, 7], [8, 4], [10, 2], [5, 6], [5, 1]\)</span>.</p>
+<ol class="simple">
+<li><p>Draw the graph.</p></li>
+<li><p>Choose any node as the starting point of BFS. All nodes visited by the BFS belong to a single component.</p></li>
+<li><p>Choose any unvisited node as the starting point of a new BFS.</p></li>
+<li><p>Continue until all nodes have been allocated to a component.</p></li>
+</ol>
+<p>A directed graph is <strong>strongly connected</strong> if there is a path between every node and every other node (in both directions).</p>
+<p>A directed graph is <strong>weakly connected</strong> if it is not strongly connected but its underlying undirected graph is connected, where the <strong>underlying undirected graph</strong> of a digraph is the undirected graph formed by replacing directed edges by undirected edges.</p>
+<p>Two nodes are in the same <strong>strongly connected component</strong> of a directed graph if and only if there is a path between them in both directions.</p>
+<div class="figure align-default" id="egg-laying-circuit-scc">
+<a class="reference internal image-reference" href="_images/egg_laying_circuit_scc.jpg"><img alt="_images/egg_laying_circuit_scc.jpg" src="_images/egg_laying_circuit_scc.jpg" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The strongly connected components of the egg-laying circuit are <span class="math notranslate nohighlight">\([1, 2], [3, 6, 7], [4]\)</span> and <span class="math notranslate nohighlight">\([5]\)</span>.</span><a class="headerlink" href="#egg-laying-circuit-scc" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+<p>Determine the strongly connected components of the digraph below.</p>
+<ol class="simple">
+<li><p>Choose any node <span class="math notranslate nohighlight">\(v_0\)</span> as the starting point of a breadth first search to determine all nodes reachable from <span class="math notranslate nohighlight">\(v_0\)</span>.</p></li>
+<li><p>For each reachable node, use BFS to determine if there is a path back to <span class="math notranslate nohighlight">\(v_0\)</span>. All such nodes are in the same strongly connected component.</p></li>
+<li><p>Repeat from step 1, starting from any vertex not yet assigned to a strongly connected component.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/question_scc.png"><img alt="SCC question" class="align-center" src="_images/question_scc.png" style="height: 200px;" /></a>
+<div class="admonition-info admonition">
+<p class="admonition-title">Info</p>
+<p>The algorithm described in the previous question is very inefficient. In practice, more efficient algorithms based on depth first search are used.</p>
+</div>
+</div>
+<div class="section" id="question-10">
+<h3>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h3>
+<p>Consider the graph given by adjacency list <span class="math notranslate nohighlight">\([5], [1, 3], [2, 4, 6], [2], [1], [4]\)</span>.</p>
+<ol class="simple">
+<li><p><em>Without</em> drawing the graph, use BFS to determine all shortest paths starting from node 3.</p></li>
+<li><p>Draw the graph and determine its strongly and weakly connected components.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="answers">
+<h2>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Question 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\([1,6],[6,1],[3,1],[3,4],[6,4],[4,4],[3,2],[4,2],[4,5],[2,5]\)</span> (in any order)</p></li>
+<li><p><span class="math notranslate nohighlight">\([6],[5],[1,4,2],[4,2,5],[],[1,4]\)</span></p></li>
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+	0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\ 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="id2">
+<h3>Question 2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>and 2)</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/question_2.png"><img alt="Answer question 2" class="align-center" src="_images/question_2.png" style="height: 400px;" /></a>
+<ol class="simple">
+<li></li>
+</ol>
+<a class="reference internal image-reference" href="_images/question2.png"><img alt="Answer question 2" class="align-center" src="_images/question2.png" style="height: 400px;" /></a>
+</div>
+<div class="section" id="id3">
+<h3>Question 4<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>There are 3 choices for the first node, and 2 choices for each of the 10 subsequent nodes. The total number of walks is therefore <span class="math notranslate nohighlight">\(3 × 2^{10}\)</span>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/K3.png"><img alt="Answer question 4" class="align-center" src="_images/K3.png" style="height: 200px;" /></a>
+<ol class="simple">
+<li><p>Paths from node 6 to node 4: <span class="math notranslate nohighlight">\([6,4],[6,7,4],[6,7,3,4],[6,7,3,5,4]\)</span>. Paths from node 4 to node 6: none. <br></p></li>
+<li><p><span class="math notranslate nohighlight">\([2,1,3,7,6,4]\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>Question 6<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>BFS starting at node 2:<span class="math notranslate nohighlight">\([2,1,4,3,5,7,6]\)</span> <br>
+Path distances from node 2: <span class="math notranslate nohighlight">\(d = [1,0,2,1,3,4,3]\)</span> where <span class="math notranslate nohighlight">\(d(i)\)</span> is the distance from node <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+<li><p>BFS starting at node 6: <span class="math notranslate nohighlight">\([6, 4, 7, 3, 5]\)</span> <br>
+Path distances from node 6: <span class="math notranslate nohighlight">\(d = [inf, inf, 2, 1, 3, 0, 1]\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h3>Question 7<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li></li>
+</ol>
+<a class="reference internal image-reference" href="_images/subgraph.png"><img alt="Answer question 7" class="align-center" src="_images/subgraph.png" style="height: 200px;" /></a>
+<ol class="simple">
+<li><p>For node order 1, 2, 3, 6:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+	0 &amp; 1 &amp; 1 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}  
+\end{split}\]</div>
+</div>
+<div class="section" id="id6">
+<h3>Question 8<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Connected components: <span class="math notranslate nohighlight">\([1, 5, 6, 7, 9], [4, 8], [2, 3, 10]\)</span></p>
+</div>
+<div class="section" id="id7">
+<h3>Question 9<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Strongly connected components: <span class="math notranslate nohighlight">\([3, 6, 8], [2, 4], [1, 5, 7, 9]\)</span></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ws2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Manipulating graphs with Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
