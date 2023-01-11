@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Line Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Line Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Surface Integrals" href="surfaceintegrals.html" />
-    <link rel="prev" title="4. Variations of Fields" href="divandcurl.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,49 +94,14 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector calculus
+   Welcome to Linear Algebra and Vector Calculus
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   2. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="calculusonfields.html">
-   3. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
-   4. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ODEs.html">
-   8. Solving Ordinary Differential Equations
   </a>
  </li>
 </ul>
@@ -214,12 +177,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-line-integrals">
-   5.1. Calculating Line Integrals
+   Calculating Line Integrals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservative-vector-fields">
-   5.2. Conservative Vector Fields
+   Conservative Vector Fields
   </a>
  </li>
 </ul>
@@ -244,12 +207,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-line-integrals">
-   5.1. Calculating Line Integrals
+   Calculating Line Integrals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservative-vector-fields">
-   5.2. Conservative Vector Fields
+   Conservative Vector Fields
   </a>
  </li>
 </ul>
@@ -262,12 +225,12 @@
               <div>
                 
   <div class="section" id="line-integrals">
-<h1><span class="section-number">5. </span>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this headline">¶</a></h1>
+<h1>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Following on from the idea of breaking up a function into infintesimal sections <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span>, we can think about a path through a vector field <span class="math notranslate nohighlight">\(\bf A(r)\)</span>, as depicted
-in <a class="reference internal" href="#lineintegral"><span class="std std-numref">Fig. 5.1</span></a>.</p>
+in <code class="xref std std-numref docutils literal notranslate"><span class="pre">lineintegral</span></code>.</p>
 <div class="figure align-default" id="lineintegral">
 <img alt="../_images/lineintegral.png" src="../_images/lineintegral.png" />
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Ilustration of a line integral, with <span class="math notranslate nohighlight">\(I = \int_{\mathcal{C}} {\bf G(r)}\cdot \mathrm{d}{\bf r}\)</span></span><a class="headerlink" href="#lineintegral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Ilustration of a line integral, with <span class="math notranslate nohighlight">\(I = \int_{\mathcal{C}} {\bf G(r)}\cdot \mathrm{d}{\bf r}\)</span></span><a class="headerlink" href="#lineintegral" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -282,7 +245,7 @@ line element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf r}\)</s
 \[I = \oint_{\mathcal{C}} {\bf G(r)} \cdot \mathrm{d}{\bf r}\]</div>
 </div>
 <div class="section" id="calculating-line-integrals">
-<h2><span class="section-number">5.1. </span>Calculating Line Integrals<a class="headerlink" href="#calculating-line-integrals" title="Permalink to this headline">¶</a></h2>
+<h2>Calculating Line Integrals<a class="headerlink" href="#calculating-line-integrals" title="Permalink to this headline">¶</a></h2>
 <p>Whilst the notation for a line integral looks compact, it does not really make it clear <em>how</em> we can evaluate over a path <span class="math notranslate nohighlight">\(C\)</span>.  In order to make progress,
 we need to parametrise the path, lets say with some variable <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -358,7 +321,7 @@ we need to parametrise the path, lets say with some variable <span class="math n
 </div>
 </div>
 <div class="section" id="conservative-vector-fields">
-<h2><span class="section-number">5.2. </span>Conservative Vector Fields<a class="headerlink" href="#conservative-vector-fields" title="Permalink to this headline">¶</a></h2>
+<h2>Conservative Vector Fields<a class="headerlink" href="#conservative-vector-fields" title="Permalink to this headline">¶</a></h2>
 <p>There is an important class of vector fields, known as <strong>conservative</strong> vector fields, for which line integrals do not depend on
 which path is taken from rA to rB, and for which all loop integrals are zero.  We see that our example</p>
 <div class="math notranslate nohighlight">
@@ -439,21 +402,7 @@ that <span class="math notranslate nohighlight">\({\bf G} = \nabla \phi\)</span>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="divandcurl.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Variations of Fields</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="surfaceintegrals.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Surface Integrals</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

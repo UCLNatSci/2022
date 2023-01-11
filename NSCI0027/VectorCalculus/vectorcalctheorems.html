@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Solving Ordinary Differential Equations" href="ODEs.html" />
-    <link rel="prev" title="6. Surface Integrals" href="surfaceintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,49 +94,14 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector calculus
+   Welcome to Linear Algebra and Vector Calculus
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   2. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="calculusonfields.html">
-   3. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
-   4. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
-   5. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ODEs.html">
-   8. Solving Ordinary Differential Equations
   </a>
  </li>
 </ul>
@@ -214,24 +177,24 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   7.1. (Gauss-)Divergence Theorem
+   (Gauss-)Divergence Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
-     7.1.1. A Sketch of a Proof
+     A Sketch of a Proof
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   7.2. (Kelvin-)Stoke’s Theorem
+   (Kelvin-)Stoke’s Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     7.2.1. A Sketch of a Proof
+     A Sketch of a Proof
     </a>
    </li>
   </ul>
@@ -258,24 +221,24 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   7.1. (Gauss-)Divergence Theorem
+   (Gauss-)Divergence Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
-     7.1.1. A Sketch of a Proof
+     A Sketch of a Proof
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   7.2. (Kelvin-)Stoke’s Theorem
+   (Kelvin-)Stoke’s Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     7.2.1. A Sketch of a Proof
+     A Sketch of a Proof
     </a>
    </li>
   </ul>
@@ -290,17 +253,17 @@
               <div>
                 
   <div class="section" id="vector-calculus-theorems">
-<h1><span class="section-number">7. </span>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">¶</a></h1>
+<h1>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">¶</a></h1>
 <p>Although the ideas in vector calculus seem quite distinct, area, surface and volume integrals as well as the gradient, divergence and curl, it turns out
 that they are connected together thanks to a couple of quite important theorems.  These can in some cases simplify a calculation that we are aiming to
 do and/or give us a better intution about a system.</p>
 <div class="section" id="gauss-divergence-theorem">
-<h2><span class="section-number">7.1. </span>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Lets think about a closed surface <span class="math notranslate nohighlight">\(S\)</span> in a space, this surface area therefore encloses a volume <span class="math notranslate nohighlight">\(V\)</span>, i.e. it forms the boundary <span class="math notranslate nohighlight">\(S = \partial V\)</span> (not
-to be confused with taking some partial derivative!), as depicted in <a class="reference internal" href="#gaussdivergence"><span class="std std-numref">Fig. 7.1</span></a>.</p>
+to be confused with taking some partial derivative!), as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">gaussdivergence</span></code>.</p>
 <div class="figure align-default" id="gaussdivergence">
 <img alt="../_images/gaussdivergence.png" src="../_images/gaussdivergence.png" />
-<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
+<p class="caption"><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
 <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \hat{\bf n} \mathrm{d}S\)</span> points outwards.</span><a class="headerlink" href="#gaussdivergence" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition-definition admonition">
@@ -319,10 +282,10 @@ This result gives us the <b>Divergence Theorem</b>:</p>
 <p>Consider the vector field:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf G}({\bf r}) = \begin{pmatrix} x^2 \\ y \\ z \end{pmatrix}\end{split}\]</div>
-<p>over a cubic volume surface, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <a class="reference internal" href="#divergencecube"><span class="std std-numref">Fig. 7.2</span></a>.</p>
+<p>over a cubic volume surface, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">divergencecube</span></code>.</p>
 <div class="figure align-default" id="divergencecube">
 <img alt="../_images/divergencecube.png" src="../_images/divergencecube.png" />
-<p class="caption"><span class="caption-number">Fig. 7.2 </span><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we compute the surface integral:</p>
 <div class="math notranslate nohighlight">
@@ -346,22 +309,22 @@ I &amp;=  \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}
 <p>In agreement with the previous result and whole lot easier to do!</p>
 </div>
 <div class="section" id="a-sketch-of-a-proof">
-<h3><span class="section-number">7.1.1. </span>A Sketch of a Proof<a class="headerlink" href="#a-sketch-of-a-proof" title="Permalink to this headline">¶</a></h3>
-<p>We can sketch out a proof of this result, using the same set up as previously, as seen in <a class="reference internal" href="#divergencecubeproof"><span class="std std-numref">Fig. 7.3</span></a>,</p>
+<h3>A Sketch of a Proof<a class="headerlink" href="#a-sketch-of-a-proof" title="Permalink to this headline">¶</a></h3>
+<p>We can sketch out a proof of this result, using the same set up as previously, as seen in <code class="xref std std-numref docutils literal notranslate"><span class="pre">divergencecubeproof</span></code>,</p>
 <div class="figure align-default" id="divergencecubeproof">
 <img alt="../_images/divergencecubeproof.png" src="../_images/divergencecubeproof.png" />
-<p class="caption"><span class="caption-number">Fig. 7.3 </span><span class="caption-text">An infinitesimal cubic surface <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> around some vector field divergence.</span><a class="headerlink" href="#divergencecubeproof" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">An infinitesimal cubic surface <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> around some vector field divergence.</span><a class="headerlink" href="#divergencecubeproof" title="Permalink to this image">¶</a></p>
 </div>
 <p>Thinking about an infinitesimal flux element <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> for a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> crossing the sides of the infinitesimal
 volume element <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-divtheoremproof">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-divtheoremproof" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d}F &amp;=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
+<span class="eqno">()<a class="headerlink" href="#equation-divtheoremproof" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d}F &amp;=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\,\mathrm{d}y\,\mathrm{d}z\\
 &amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf y} \right)\cdot (-\hat{\bf y})\,\mathrm{d}x\,\mathrm{d}z\\
 &amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}z\,\hat{\bf z} \right)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf z} \right)\cdot (-\hat{\bf z})\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
-<p>The first line of <a class="reference internal" href="#equation-divtheoremproof">(7.1)</a> reduces to:</p>
+<p>The first line of <a class="reference internal" href="#equation-divtheoremproof">()</a> reduces to:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\right]\,\mathrm{d}y\,\mathrm{d}z\\
@@ -372,20 +335,20 @@ volume element <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathr
 \[\begin{split}&amp;=  \left[G_x({\bf r}) + \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x 
 - \left(G_x({\bf r}) - \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
 &amp;=  \partial_x G_x \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\end{split}\]</div>
-<p>We can do similar for the second and third lines of <a class="reference internal" href="#equation-divtheoremproof">(7.1)</a> to find the result:</p>
+<p>We can do similar for the second and third lines of <a class="reference internal" href="#equation-divtheoremproof">()</a> to find the result:</p>
 <p>And through suitable coordinate transforms we could prove this result for any coordinate system.  Hence the flux across the cubes sides
 is related to the divergence of the vector field over the volume element.</p>
 <p>If we then proceed with integrating this flux over the over a given volume, then we can think of this as summing up little cubes with volume
-<span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, as depicted in <a class="reference internal" href="#infinitesimalcubes"><span class="std std-numref">Fig. 7.4</span></a>.</p>
+<span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">infinitesimalcubes</span></code>.</p>
 <div class="figure align-default" id="infinitesimalcubes">
 <img alt="../_images/infinitesimalcubes.png" src="../_images/infinitesimalcubes.png" />
-<p class="caption"><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Infinitesimal cubic volume <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> making up some volume <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#infinitesimalcubes" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Infinitesimal cubic volume <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> making up some volume <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#infinitesimalcubes" title="Permalink to this image">¶</a></p>
 </div>
 <p>This means we are summing up neighbouring cubes, where the outgoing flux <span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &gt; 0\)</span> from one will be an incoming flux
-<span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &lt; 0\)</span> for another cube, as depicted in <a class="reference internal" href="#inoutgoingflux"><span class="std std-numref">Fig. 7.5</span></a>.</p>
+<span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &lt; 0\)</span> for another cube, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">inoutgoingflux</span></code>.</p>
 <div class="figure align-default" id="inoutgoingflux">
 <img alt="../_images/inoutgoingflux.png" src="../_images/inoutgoingflux.png" />
-<p class="caption"><span class="caption-number">Fig. 7.5 </span><span class="caption-text">A schematic of the infinitesimal flux contributions from neighbouring infintesimal cubic volumes.</span><a class="headerlink" href="#inoutgoingflux" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A schematic of the infinitesimal flux contributions from neighbouring infintesimal cubic volumes.</span><a class="headerlink" href="#inoutgoingflux" title="Permalink to this image">¶</a></p>
 </div>
 <p>Therefore we see that the <b>only</b> remaining contributions to the summing of the fluxes over the volume will be from the volumes surface,
 hence:</p>
@@ -396,26 +359,26 @@ hence:</p>
 </div>
 </div>
 <div class="section" id="kelvin-stokes-theorem">
-<h2><span class="section-number">7.2. </span>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>Stokes’s theorem states that the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around the boundary <span class="math notranslate nohighlight">\(C = \partial S\)</span> of an open surface <span class="math notranslate nohighlight">\(S\)</span> is
 equal to the flux of the curl of the vector field, <span class="math notranslate nohighlight">\(\nabla \times {\bf G}({\bf r})\)</span> through the surface;</p>
 <div class="math notranslate nohighlight">
 \[\oint_{C = \partial S} {\bf G}({\bf r}) \cdot \mathrm{d}{\bf r} = \iint_{S} \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\]</div>
-<p>where the orientation of this closed contour is given by the right hand rule, as depicted in <a class="reference internal" href="#stokesrhrule"><span class="std std-numref">Fig. 7.6</span></a>.</p>
+<p>where the orientation of this closed contour is given by the right hand rule, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">stokesRHrule</span></code>.</p>
 </div>
 <div class="figure align-default" id="stokesrhrule">
 <img alt="../_images/stokesRHrule.png" src="../_images/stokesRHrule.png" />
-<p class="caption"><span class="caption-number">Fig. 7.6 </span><span class="caption-text">The relevant orientation of the closed contour used in Stoke’s theorem.</span><a class="headerlink" href="#stokesrhrule" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The relevant orientation of the closed contour used in Stoke’s theorem.</span><a class="headerlink" href="#stokesrhrule" title="Permalink to this image">¶</a></p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>Consider the vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}\)</span> over a closed circular arc path around the origin, which we depict
-in <a class="reference internal" href="#contourexample"><span class="std std-numref">Fig. 7.7</span></a>:</p>
+in <code class="xref std std-numref docutils literal notranslate"><span class="pre">contourexample</span></code>:</p>
 <div class="figure align-default" id="contourexample">
 <img alt="../_images/contourexample.png" src="../_images/contourexample.png" />
-<p class="caption"><span class="caption-number">Fig. 7.7 </span><span class="caption-text">Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.</span><a class="headerlink" href="#contourexample" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.</span><a class="headerlink" href="#contourexample" title="Permalink to this image">¶</a></p>
 </div>
 <p>The parameterisation of the line integral will not change its result (nor should the starting point for a loop integral), so we will start
 at the origin and parameterise the three sections of the contour <span class="math notranslate nohighlight">\(C_1,\,C_2,\, C_3\)</span> using <span class="math notranslate nohighlight">\(t\)</span>, with <span class="math notranslate nohighlight">\(t \in [0,\,1]\)</span> along each piece:</p>
@@ -444,12 +407,12 @@ right hand rule, we have <span class="math notranslate nohighlight">\(\mathrm{d}
 <p>Therefore for quite a lot less work, we find the same result!</p>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">7.2.1. </span>A Sketch of a Proof<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>A Sketch of a Proof<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Lets consider a vectorial surface area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}x\,\mathrm{d}y\,\hat{\bf z}\)</span>, as depicted
-in <a class="reference internal" href="#infinitesimalcontour"><span class="std std-numref">Fig. 7.8</span></a>:</p>
+in <code class="xref std std-numref docutils literal notranslate"><span class="pre">infinitesimalcontour</span></code>:</p>
 <div class="figure align-default" id="infinitesimalcontour">
 <img alt="../_images/infinitesimalcontour.png" src="../_images/infinitesimalcontour.png" />
-<p class="caption"><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Closed infinitesimal contour around some point <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#infinitesimalcontour" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Closed infinitesimal contour around some point <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#infinitesimalcontour" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can therefore find the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around this contour as:</p>
 <div class="math notranslate nohighlight">
@@ -468,10 +431,10 @@ in <a class="reference internal" href="#infinitesimalcontour"><span class="std s
 &amp;=  \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\end{split}\]</div>
 <p>Which if we integrate up, we find <span class="math notranslate nohighlight">\(I = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}\)</span>.  Thinking carefully these loop integrals however,
 if we sum up infinitesimal areas (plaquettes if you will), then along the surface neighbouring areas will have cancellation occuring, as depicted in
-<a class="reference internal" href="#neighbouringcontours"><span class="std std-numref">Fig. 7.9</span></a>:</p>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">neighbouringcontours</span></code>:</p>
 <div class="figure align-default" id="neighbouringcontours">
 <img alt="../_images/neighbouringcontours.png" src="../_images/neighbouringcontours.png" />
-<p class="caption"><span class="caption-number">Fig. 7.9 </span><span class="caption-text">Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.</span><a class="headerlink" href="#neighbouringcontours" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.</span><a class="headerlink" href="#neighbouringcontours" title="Permalink to this image">¶</a></p>
 </div>
 <p>This means that the only interbal contributions to summing up these loop integrals will be those along the boundary, hence:</p>
 <div class="math notranslate nohighlight">
@@ -505,21 +468,7 @@ if we sum up infinitesimal areas (plaquettes if you will), then along the surfac
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="surfaceintegrals.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Surface Integrals</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="ODEs.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Solving Ordinary Differential Equations</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

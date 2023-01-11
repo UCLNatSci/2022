@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Vector Fields &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Vector Fields &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Variations of Fields" href="divandcurl.html" />
-    <link rel="prev" title="2. Multidimensional Integrals" href="volumeintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,49 +94,14 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector calculus
+   Welcome to Linear Algebra and Vector Calculus
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   2. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
-   4. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
-   5. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ODEs.html">
-   8. Solving Ordinary Differential Equations
   </a>
  </li>
 </ul>
@@ -214,29 +177,29 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-fields">
-   3.1. Scalar Fields
+   Scalar Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   3.2. Vector Fields
+   Vector Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculus-on-fields">
-   3.3. Calculus on Fields
+   Calculus on Fields
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gradient-operator">
-     3.3.1. Gradient Operator
+     Gradient Operator
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#total-differential">
-   3.4. Total Differential
+   Total Differential
   </a>
  </li>
 </ul>
@@ -261,29 +224,29 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-fields">
-   3.1. Scalar Fields
+   Scalar Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   3.2. Vector Fields
+   Vector Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculus-on-fields">
-   3.3. Calculus on Fields
+   Calculus on Fields
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gradient-operator">
-     3.3.1. Gradient Operator
+     Gradient Operator
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#total-differential">
-   3.4. Total Differential
+   Total Differential
   </a>
  </li>
 </ul>
@@ -296,7 +259,7 @@
               <div>
                 
   <div class="section" id="vector-fields">
-<h1><span class="section-number">3. </span>Vector Fields<a class="headerlink" href="#vector-fields" title="Permalink to this headline">¶</a></h1>
+<h1>Vector Fields<a class="headerlink" href="#vector-fields" title="Permalink to this headline">¶</a></h1>
 <p>A field in a mathematical sense is some function which can be defined within some domain <span class="math notranslate nohighlight">\(D\)</span>, we will examine fields in two and three spatial dimensions,
 (but this can be extended to more later as required), therefore <span class="math notranslate nohighlight">\(D \subset \mathbb{R}^2\)</span> or <span class="math notranslate nohighlight">\(D \subset \mathbb{R}^3\)</span> respectively.  If <span class="math notranslate nohighlight">\(D\)</span> is not specified, then
 we assume the whole of the space is being used as the domain.</p>
@@ -305,7 +268,7 @@ acceleations, forces, electric and magnetic fields.</p>
 <p>One important distinction to make between fields is whether they are <b>Scalar</b>, <b>Vector</b> or some other (e.g. <b>Tensor</b> although this is beyond
 the scope of this course).</p>
 <div class="section" id="scalar-fields">
-<h2><span class="section-number">3.1. </span>Scalar Fields<a class="headerlink" href="#scalar-fields" title="Permalink to this headline">¶</a></h2>
+<h2>Scalar Fields<a class="headerlink" href="#scalar-fields" title="Permalink to this headline">¶</a></h2>
 <p>A scalar field is a physical quantity which has some value (or magnitude) but contains no information about direction, at every point <span class="math notranslate nohighlight">\({\bf r} = (x, \,y, \,z)\)</span>
 within a domain. Physical examples include pressure and temperature.  Mathematically we can write this as a function <span class="math notranslate nohighlight">\(\phi\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -313,7 +276,7 @@ within a domain. Physical examples include pressure and temperature.  Mathematic
 {\bf r} &amp;\longrightarrow&amp;\, \phi({\bf r})\end{split}\]</div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">3.2. </span>Vector Fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Vector Fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A vector field A scalar field is a physical quantity which has both magnitude and direction, at every point <span class="math notranslate nohighlight">\({\bf r} = (x, \,y, \,z)\)</span> within a domain.  Physical
 examples include 8velocity*, <em>force</em>, <em>electric</em> and <em>magnetic fields</em>.  Mathematically we can write this as a function <span class="math notranslate nohighlight">\(\bf A(r)\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -323,10 +286,10 @@ examples include 8velocity*, <em>force</em>, <em>electric</em> and <em>magnetic 
  A_y \,({\bf r})\\
  A_z \,({\bf r}) 
 \end{pmatrix}\end{split}\]</div>
-<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 3.1</span></a>, outlining the difference between scalar and vecor fields.</p>
+<p>We can picture these fields in <code class="xref std std-numref docutils literal notranslate"><span class="pre">scalarvectorfield</span></code>, outlining the difference between scalar and vecor fields.</p>
 <div class="figure align-default" id="scalarvectorfield">
 <img alt="../_images/scalarvectorfield.png" src="../_images/scalarvectorfield.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
+<p class="caption"><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
 over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \leq 1\)</span> (shown in red on the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane),
 <b> Center Pane:</b> Contour lines of the scalar field, showing lines of constant <span class="math notranslate nohighlight">\(\phi\)</span> in blue, within the domain <span class="math notranslate nohighlight">\(D\)</span>,
 <b> Right Pane:</b> The vector field <span class="math notranslate nohighlight">\({\bf A(r)} = \frac{1}{10}\begin{pmatrix}
@@ -336,9 +299,9 @@ over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \le
 </div>
 </div>
 <div class="section" id="calculus-on-fields">
-<h2><span class="section-number">3.3. </span>Calculus on Fields<a class="headerlink" href="#calculus-on-fields" title="Permalink to this headline">¶</a></h2>
+<h2>Calculus on Fields<a class="headerlink" href="#calculus-on-fields" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="gradient-operator">
-<h3><span class="section-number">3.3.1. </span>Gradient Operator<a class="headerlink" href="#gradient-operator" title="Permalink to this headline">¶</a></h3>
+<h3>Gradient Operator<a class="headerlink" href="#gradient-operator" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have defined fields, which can vary according to different parameters at every point within a domain, we can begin to apply
 our toolkit of mathematical tools, here calculus.</p>
 <p>We can find the partial derivatives of fields in a similar way to functions,</p>
@@ -407,19 +370,19 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
  x \\
  y
 \end{pmatrix}\end{split}\]</div>
-<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 3.2</span></a>.</p>
+<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <code class="xref std std-numref docutils literal notranslate"><span class="pre">scalarfieldgradient</span></code>.</p>
 <div class="figure align-default" id="scalarfieldgradient">
 <img alt="../_images/scalarfieldgradient.png" src="../_images/scalarfieldgradient.png" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalar field <span class="math notranslate nohighlight">\(\phi({\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
+<p class="caption"><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalar field <span class="math notranslate nohighlight">\(\phi({\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
-which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 3.1</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
+which from <code class="xref std std-numref docutils literal notranslate"><span class="pre">scalarvectorfield</span></code> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
 <p>The gradient of <span class="math notranslate nohighlight">\(\phi(x,\,y,\,z)\)</span> will therefore be perpendicular to the surface <span class="math notranslate nohighlight">\(\phi=c\)</span>, and we can use this to find the tangent plane
 to the surface at a given point.  The gradient of <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span> will be perpendicular to the contours of <span class="math notranslate nohighlight">\(z\)</span>, projected in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane,
-as illustrated in <a class="reference internal" href="#quiver"><span class="std std-numref">Fig. 3.3</span></a>.</p>
+as illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">quiver</span></code>.</p>
 <div class="figure align-default" id="quiver">
 <img alt="../_images/quiver.png" src="../_images/quiver.png" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">A contour plot of the surface <span class="math notranslate nohighlight">\(z = x^3−y^3−2xy+2\)</span>, together with the gradient field given by <span class="math notranslate nohighlight">\(\nabla z = (3x^2−2y,\,−3y^2−2x,\,0)\)</span>.</span><a class="headerlink" href="#quiver" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A contour plot of the surface <span class="math notranslate nohighlight">\(z = x^3−y^3−2xy+2\)</span>, together with the gradient field given by <span class="math notranslate nohighlight">\(\nabla z = (3x^2−2y,\,−3y^2−2x,\,0)\)</span>.</span><a class="headerlink" href="#quiver" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <p>We can always take some surface <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span> and convert it into a scalar field <span class="math notranslate nohighlight">\(\phi\)</span> with some surface normal <span class="math notranslate nohighlight">\({\bf n} = \nabla \phi\)</span>.</p>
@@ -449,7 +412,7 @@ derivative of this function in the direction <span class="math notranslate nohig
 </div>
 </div>
 <div class="section" id="total-differential">
-<h2><span class="section-number">3.4. </span>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
+<h2>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
 <p>Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z\]</div>
@@ -492,21 +455,7 @@ Likewise we can define the vectorial line element:</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="volumeintegrals.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Multidimensional Integrals</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Variations of Fields</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Vector Calculus Theorems" href="vectorcalctheorems.html" />
-    <link rel="prev" title="5. Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,49 +94,14 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector calculus
+   Welcome to Linear Algebra and Vector Calculus
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   2. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="calculusonfields.html">
-   3. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
-   4. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
-   5. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ODEs.html">
-   8. Solving Ordinary Differential Equations
   </a>
  </li>
 </ul>
@@ -214,7 +177,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-surface-integrals">
-   6.1. Calculating Surface Integrals
+   Calculating Surface Integrals
   </a>
  </li>
 </ul>
@@ -239,7 +202,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-surface-integrals">
-   6.1. Calculating Surface Integrals
+   Calculating Surface Integrals
   </a>
  </li>
 </ul>
@@ -252,7 +215,7 @@
               <div>
                 
   <div class="section" id="surface-integrals">
-<h1><span class="section-number">6. </span>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
+<h1>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Now that we are happy with flat area and volume integrals, we can turn our attention to surfaces that are not flat, if we can break up the surface into area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> and then
 integrate over the whole surface, we can use all the same techniques described so far to think about this.  It is typical to define here an area vector <span class="math notranslate nohighlight">\({\bf A}\)</span> which points outwards from a
 surface and is in the normal direction to it:</p>
@@ -261,10 +224,10 @@ surface and is in the normal direction to it:</p>
 <p>although sometimes for a curves surface we will use the letter <span class="math notranslate nohighlight">\(S\)</span> for the surface normal.  We can write the inifinitesimal area element as:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}{\bf S} = \hat{\bf n} \,\mathrm{d}S\]</div>
-<p>and this is depicted in <a class="reference internal" href="#surfacenormal"><span class="std std-numref">Fig. 6.1</span></a>.</p>
+<p>and this is depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">surfacenormal</span></code>.</p>
 <div class="figure align-default" id="surfacenormal">
 <img alt="../_images/surfacenormal.png" src="../_images/surfacenormal.png" />
-<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Some general surfece surface <span class="math notranslate nohighlight">\(S\)</span> with an infinitesimal surface element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span>.</span><a class="headerlink" href="#surfacenormal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Some general surfece surface <span class="math notranslate nohighlight">\(S\)</span> with an infinitesimal surface element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span>.</span><a class="headerlink" href="#surfacenormal" title="Permalink to this image">¶</a></p>
 </div>
 <p>For any scalar field <span class="math notranslate nohighlight">\(f(r) = f(x,\, y,\, z)\)</span> that is defined on all the points of
 the surface <span class="math notranslate nohighlight">\(S\)</span> we can define the <b>Surface Integral</b> as:</p>
@@ -277,7 +240,7 @@ given by:</p>
 <p>We define this quantity as the <b>flux</b> of the vector field <span class="math notranslate nohighlight">\(\bf G\)</span> crossing the surface <span class="math notranslate nohighlight">\(S\)</span>.  Clearly as this has a scalar product, only the components parallel to <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> (perpendicular
 to <span class="math notranslate nohighlight">\(S\)</span>) will be summed over in the integral.</p>
 <div class="section" id="calculating-surface-integrals">
-<h2><span class="section-number">6.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h2>
+<h2>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h2>
 <p>Similar to line integrals, we must parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> in order for this integral to be possible, so we will pick
 <span class="math notranslate nohighlight">\(S = S({\bf r})\)</span> with <span class="math notranslate nohighlight">\({\bf r} = {\bf r}(s,\, t)\)</span> with <span class="math notranslate nohighlight">\(s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]\)</span>.<br />
 This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes
@@ -370,21 +333,7 @@ field we have <span class="math notranslate nohighlight">\(I = \int f\,\mathrm{d
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="lineintegrals.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Line Integrals</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="vectorcalctheorems.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Vector Calculus Theorems</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
