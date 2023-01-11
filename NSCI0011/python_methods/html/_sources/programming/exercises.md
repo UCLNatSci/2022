@@ -1,6 +1,7 @@
 # Exercises
 
 :::{exercise}
+:label: exercise_increase_by_one
 
 Only one of the following cases is possible. For that case, write the function `increase_by_one`. For the other cases, explain why it is not possible to write such a function.
 
