@@ -6,7 +6,7 @@ A cellular automaton is a grid of cells with assigned states (such as on/off but
 
 <!-- Your group’s task is to produce a Jupyter Notebook which presents a solution to the scientific problem described in your chosen project brief, {ref}`viral_epidemics` or {ref}`neurosphere_growth`. The notebook should be a self-contained document containing text, working code and output and should be accessible and informative to a fellow second year Natural Sciences student. -->
 
-Your group’s task is to produce a Jupyter Notebook which presents a solution to the scientific problem described in your chosen project brief, **Viral Epidemics** or **Neursphere Growth**. The notebook should be a self-contained document containing text, working code and output and should be accessible and informative to a fellow second year Natural Sciences student.
+Your group’s task is to produce a Jupyter Notebook which presents a solution to the scientific problem described in your chosen project brief, [](epidemic.md) or [](neurosphere.md). The notebook should be a self-contained document containing text, working code and output and should be accessible and informative to a fellow second year Natural Sciences student.
 
 ## Guidelines
 

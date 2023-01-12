@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Viral Epidemics" href="epidemic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -452,11 +453,28 @@ const thebe_selector_output = ".output, .cell_output"
   Projects
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="projects.html">
    Projects
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -683,16 +701,17 @@ title="Print to PDF"
 <section id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <p>The steps required to setup the grid and compute the number of neighbours are not too difficult, but the implementation of the update steps is made challenging here due to the time-dependence of some of the phenomena.</p>
-<p>The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Projenator (P) and Dead (D) cells. Starting with a single Projenator cell:</p>
+<p>The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Progenator (P) and Dead (D) cells. Starting with a single Progenator cell:</p>
 <ol class="simple">
-<li><p>If a projenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability <span class="math notranslate nohighlight">\(p_\mathrm{mit}\)</span>.</p></li>
+<li><p>If a progenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability <span class="math notranslate nohighlight">\(p_\mathrm{mit}\)</span>.</p></li>
 <li><p>The resulting new cell goes in one of the empty neighbouring cells.</p></li>
-<li><p>The projenator cell dies with probability <span class="math notranslate nohighlight">\(p_\mathrm{death}\)</span>.</p></li>
+<li><p>The progenator cell dies with probability <span class="math notranslate nohighlight">\(p_\mathrm{death}\)</span>.</p></li>
 </ol>
 </section>
 <section id="extensions">
 <h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">#</a></h2>
-<p>An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. (Cite paper)</p>
+<p>An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. See the paper below.</p>
+<p><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S002251931930030X?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S002251931930030X?via=ihub</a></p>
 </section>
 </section>
 
@@ -723,6 +742,13 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="epidemic.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Viral Epidemics</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
