@@ -129,9 +129,9 @@ First we generate the dataset, using either `linspace` or `arange` to create an 
 from numpy import pi, linspace, sin, arange
 
 # generate n=100 datapoints on the interval
-x=np.linspace(-pi,pi,100) 
-#x = arange(-pi,pi,2*pi/99) #equivalent
-y=np.sin(x)+x
+x=linspace(-pi,pi,100) 
+#x=arange(-pi,pi,2*pi/99) #equivalent
+y=sin(x)+x
 ```
 
 Next we apply the difference formula:
@@ -228,12 +228,12 @@ We can estimate the error in this approximation at any given point by comparing 
 from numpy import pi, sin, cos, abs
 
 xk=pi/3; h=0.1           #chosen values
-d=(sin(xk+h)-sin(xk))/h #numeric estimate
+d=(sin(xk+h)-sin(xk))/h  #numeric estimate
 e=abs(d-cos(xk))          #error
 print(e)     
 ```
 
-By adjusting the value of the step size $h$ you can start to see how the accuracy of the result is affected. For instance making the step size ten times smaller results in an error that is also around ten times smaller. The plot below illustrates how the error changes with the step size for $x_k=\pi/3$.
+By adjusting the value of the step size $h$ you can start to see how the accuracy of the result is affected. For instance, making the step size ten times smaller results in an error that is also around ten times smaller. The plot below illustrates how the error changes with the step size for $x_k=\pi/3$.
 
 ```{code-cell} ipython3
 ---
@@ -245,31 +245,31 @@ tags: [hide-input]
 import numpy as np
 import matplotlib.pyplot as plt
 
-xk=np.pi/3                      #location
+xk=pi/3                         #location
 
-y = lambda x: sin(x)            #function to be differentiated
-yp= lambda x: cos(x)            #analytic result
-                                #(see below comment on lambda functions)
-h=np.logspace(-1,-15,num=15)    #array of h values
-#j=np.arange(1, 15, 1); 
-#h=10.0 ** -j                   #alternative way to create h
-d = (y(xk + h) - y(xk))/h       #finite difference formula
-e = np.abs(d-yp(xk))            #error in estimate
-plt.loglog(h,e,'o')             #Log-Log scale
+y = lambda x: sin(x)           #function to be differentiated
+yp= lambda x: cos(x)           #analytic result
+                               #(see below comment on lambda functions)
+h=np.logspace(-1,-15,num=15)   #array of h values
+#j=arange(1, 15, 1) 
+#h=10.0 ** -j                  #alternative way to create h
+d = (y(xk + h) - y(xk))/h      #finite difference formula
+e = abs(d-yp(xk))              #error in estimate
+plt.loglog(h,e,'o')            #Log-Log scale
 
-plt.xlim(max(h),min(h))         #reverse x axis
+plt.xlim(max(h),min(h))        #reverse x axis
 plt.xlabel("step size $h$")
 plt.ylabel("error")
 plt.show()
 ```
 
-Notice that the size of the error is linearly proportional to the step size $h$, down to around $h=10^{-8}$. We expected that shrinking $h$ would reduce the error, but might not have anticipated that the relationship would be linear. Changing the function $f(x)$ or the value $x_k$ will not affect the result, which will be explained in the next chapter.
+Notice that the size of the error is linearly proportional to the step size $h$, down to around $h=10^{-8}$. We expected that shrinking $h$ would reduce the error, but might not have anticipated that the relationship would be linear. Changing the function $f(x)$ or the value $x_k$ will not affect this finding, which will be explained in the next chapter.
 
-For step sizes smaller than $10^{-8}$ the error starts to grow again or behave unpredictably. This is not a mathematical error, but is due to roundoff errors that occur due to the way that computers handle numeric calculations.
+For step sizes smaller than $10^{-8}$ the error starts to grow again or behave unpredictably. This is not a mathematical error, but is due to roundoff errors that occur due to the way that computers handle numeric calculations, as outlined in {numref}`rounderr`.
 
 ### For Python gurus
 
-The **def** keyword allow you to create functions that take a given input (or inputs) and return a calculated output. For instance, we can define the function and its derivative:
+The **def** keyword allows you to create functions that take a given input (or inputs) and return a calculated output. For instance, we can define the function and its derivative:
 
 ```{code}
 def y(x):
@@ -308,7 +308,7 @@ def fdiff(f,xRange,h=1e-3):
     return x[0:-1],y[0:-1],yd
 ```
 
-The function has been constructed so that the common step size $h$ can be defined by the user, but defaults to `h=1e-3`. There are three outputs, which are the values of $x$, $f(x)$ and the numeric esimate of $f^{\prime}(x)$.
+The function has been constructed so that the common step size $h$ can be defined by the user, but defaults to `h=1e-3`. There are three outputs, which are the values of $x$, $f(x)$ and the numeric estimate of $f^{\prime}(x)$.
 
 An example usage of the function is shown below, for the case where $f(x)=\sin(x)$, using the default step size.
 
@@ -325,7 +325,7 @@ plt.show()
 ````{note}
 When calling a function, the positional order of the inputs must match that of the function definition. For instance, our `fdiff` function expects the arguments to be in the order `f`,`xRange`,`h`.
 
-However, it is possible to lift the restriction on argument order by using the function's keywords to specify the arguments. For instance, we can write
+However, it is possible to lift the restriction on argument order by using the function's **keywords** to specify the arguments. For instance, we can write
 
 ```{code}
 x,y,yd=fdiff(xRange=[-pi,pi],f=myf)
@@ -334,12 +334,10 @@ x,y,yd=fdiff(xRange=[-pi,pi],f=myf)
 ````
 
 
-**Keyword arguments** can be used as an alternative to positional ones to 
-
-
+(rounderr)=
 ### Roundoff errors
 
-In most computers and software applications, numbers are stored in computer memory using either a 32 bit or a 64 bit binary representation. The latter, which is used by Python's `float` is equivalent to around 16 significant digits of decimal precision. As a result, the difference between two numbers that are very close together may be computed inaccurately.
+In most computers and software applications, numbers are stored in computer memory using either a 32 bit or a 64 bit binary representation. The latter, which is used by Python's `float` is roughly equivalent to 16 significant digits of decimal precision. As a result, the difference between two numbers that are very close together may be computed inaccurately.
 
 ```{admonition} See also
 :class: readmore

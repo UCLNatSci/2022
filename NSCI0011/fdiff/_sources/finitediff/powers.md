@@ -171,6 +171,8 @@ Here we will not develop the tools of analysis required to undertake a formal in
 
 ```{exercise}
 Demonstrate that with only five terms in the expansion of $\ln(1+x)$ we obtain a result that is accurate to within 1% on the interval $[-0.5,0.5]$
+
+Optional: How many terms are needed in the expansion to obtain a result that is accurate to within 1% on the interval $[-0.99,0.99]$ ?
 ```
 
 ````{toggle}
@@ -192,23 +194,22 @@ print(100*m)
 
 The maximum relative error is 0.664%
 
-
 To obtain an expansion that is accurate to within 1% on the interval $[-0.99,0.99]$ requires 203 terms. For practical purposes, we normally want to use expansions with only a few terms.
 __________
 ````
 
 ## Generalization
 
-In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of $x=0$. For some series derived in this way the results can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept in order to obtain a good approximation away from the origin.
+In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of $x=0$. For some series derived in this way the results can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept to obtain a good approximation away from the origin.
 
-Where we require a power series approximation to a function near to a location other than $x=0$, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of that point. We do this using a shifted version of the expansion formula:
+Where we require a power series approximation to a function near to a non-zero location, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of the point of interest. We do this using a shifted version of the expansion formula:
 
 ```{math}
 :label: taylor
 p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(x-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)
 ```
 
-By applying the technique of matching derivatives at the location $x=a$, we obtain the result
+By applying the technique of matching derivatives at $x=a$, we obtain the result
 
 ```{math}
 :label: taylor-coeff
@@ -275,32 +276,33 @@ This can be seen by defining $\hat{x}=x-1$.
 
 ## Order of accuracy
 
-Assuming that the Taylor series expansion is to be used in the neighbourhood of the expansion point means that $(x-a)$ is a small quantity. We say that the degree $n$ series has "order $(x-a)^n$ accuracy" and we may write
+We assume the Taylor series is to be used in the neighbourhood of the expansion point, so $(x-a)$ is a small quantity. We say that the degree $n$ series has "order $(x-a)^n$ accuracy" and we may write
 
 \begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}
 
 where the "big-O" notation describes the size of the error terms.
 
-This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter.
-
-Discarding all terms of degree greater than one in Taylor's expansion about $x=x_k$ gives:
+This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter. Discarding all terms of degree greater than one in Taylor's expansion about $x=x_k$ gives:
 
 \begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}
 
-If we label $h=(x-x_k)$, then we may rewrite the expression as shown below. The result is known as Euler's forward difference formula or the explicit Euler method.
+If we label $h=(x-x_k)$, then we may rewrite the expression as shown below. The result is known as Euler's forward difference formula or the **explicit Euler method**.
 
-\begin{equation}y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1\end{equation}
+```{math}
+:label: eeuler
+y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1
+```
 
 A simple rearrangement of Euler's forward difference formula gives the previously obtained expression for the derivative at $x_k$
 
 ```{math}
 :label: fwdest
-y^{\prime}(x_k)= \frac{y(x_k+h)-y(x_k)}{h}+\mathcal{O}(h)
+y^{\prime}(x_k)= \frac{y(x_k+h)-y(x_k)}{h}+\mathcal{O}(h).
 ```
 
- The result also shows that the error in this expression is order $h$, as discovered when we plotted the error against the step size.
-
- The error occurs due to working with finite approximations to infinitesimal quantities, and is a result of truncating the Taylor expansion after just two terms. We should distinguish **truncation error** from the previously seen **roundoff errors** that occur as a computational artefact due to working with finite precision arithmetic.
+ The result also shows that the error in this expression is order $h$, as discovered when we plotted the error against the step size. The error is due to working with finite approximations to infinitesimal quantities, and is a result of truncating the Taylor expansion after just two terms. 
+ 
+ We should distinguish **truncation error** from the previously seen **roundoff errors** that occur as a computational artefact due to working with finite precision arithmetic.
 
 
  ```{warning}

@@ -608,6 +608,7 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 <p class="admonition-title"><span class="caption-number">Exercise 2.5 </span></p>
 <section id="exercise-content">
 <p>Demonstrate that with only five terms in the expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> we obtain a result that is accurate to within 1% on the interval <span class="math notranslate nohighlight">\([-0.5,0.5]\)</span></p>
+<p>Optional: How many terms are needed in the expansion to obtain a result that is accurate to within 1% on the interval <span class="math notranslate nohighlight">\([-0.99,0.99]\)</span> ?</p>
 </section>
 </div>
 <div class="toggle docutils container">
@@ -632,11 +633,11 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 <hr class="docutils" />
 <section id="generalization">
 <h2><span class="section-number">2.5. </span>Generalization<a class="headerlink" href="#generalization" title="Permalink to this heading">#</a></h2>
-<p>In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of <span class="math notranslate nohighlight">\(x=0\)</span>. For some series derived in this way the results can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept in order to obtain a good approximation away from the origin.</p>
-<p>Where we require a power series approximation to a function near to a location other than <span class="math notranslate nohighlight">\(x=0\)</span>, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of that point. We do this using a shifted version of the expansion formula:</p>
+<p>In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of <span class="math notranslate nohighlight">\(x=0\)</span>. For some series derived in this way the results can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept to obtain a good approximation away from the origin.</p>
+<p>Where we require a power series approximation to a function near to a non-zero location, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of the point of interest. We do this using a shifted version of the expansion formula:</p>
 <div class="math notranslate nohighlight" id="equation-taylor">
 <span class="eqno">(2.3)<a class="headerlink" href="#equation-taylor" title="Permalink to this equation">#</a></span>\[p(x;a)= c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(x-a)^n+\mathcal{O}\left((x-a)^{n+1}\right)\]</div>
-<p>By applying the technique of matching derivatives at the location <span class="math notranslate nohighlight">\(x=a\)</span>, we obtain the result</p>
+<p>By applying the technique of matching derivatives at <span class="math notranslate nohighlight">\(x=a\)</span>, we obtain the result</p>
 <div class="math notranslate nohighlight" id="equation-taylor-coeff">
 <span class="eqno">(2.4)<a class="headerlink" href="#equation-taylor-coeff" title="Permalink to this equation">#</a></span>\[c_n = \frac{f^{(n)}(a)}{n!}.\]</div>
 <p>The formula <a class="reference internal" href="#equation-taylor">(2.3)</a> together with <a class="reference internal" href="#equation-taylor-coeff">(2.4)</a> is known as <em>Taylor’s series</em>. The special case when <span class="math notranslate nohighlight">\(a=0\)</span> is known as the Maclaurin series for historical reasons.</p>
@@ -745,22 +746,21 @@ p\left(x;\frac{\pi}{3}\right)\sim \frac{\sqrt{3}}{2}+\frac{x}{2}-\frac{\sqrt{3}}
 </section>
 <section id="order-of-accuracy">
 <h2><span class="section-number">2.6. </span>Order of accuracy<a class="headerlink" href="#order-of-accuracy" title="Permalink to this heading">#</a></h2>
-<p>Assuming that the Taylor series expansion is to be used in the neighbourhood of the expansion point means that <span class="math notranslate nohighlight">\((x-a)\)</span> is a small quantity. We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy” and we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3ab9e9af-bf60-422e-9b5f-db7a5fe71b10">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-3ab9e9af-bf60-422e-9b5f-db7a5fe71b10" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
+<p>We assume the Taylor series is to be used in the neighbourhood of the expansion point, so <span class="math notranslate nohighlight">\((x-a)\)</span> is a small quantity. We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy” and we may write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f107ccec-21e6-4039-bf7a-97d1c2a9509a">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-f107ccec-21e6-4039-bf7a-97d1c2a9509a" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
 <p>where the “big-O” notation describes the size of the error terms.</p>
-<p>This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter.</p>
-<p>Discarding all terms of degree greater than one in Taylor’s expansion about <span class="math notranslate nohighlight">\(x=x_k\)</span> gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac792a8a-f6f3-4342-b301-119bb50be674">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-ac792a8a-f6f3-4342-b301-119bb50be674" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
-<p>If we label <span class="math notranslate nohighlight">\(h=(x-x_k)\)</span>, then we may rewrite the expression as shown below. The result is known as Euler’s forward difference formula or the explicit Euler method.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-23d5ffed-40a1-4f89-ab03-3bd7e9d46645">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-23d5ffed-40a1-4f89-ab03-3bd7e9d46645" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1\end{equation}\]</div>
+<p>This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter. Discarding all terms of degree greater than one in Taylor’s expansion about <span class="math notranslate nohighlight">\(x=x_k\)</span> gives:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-75786217-09f2-4b42-a267-1ed1e0922874">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-75786217-09f2-4b42-a267-1ed1e0922874" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
+<p>If we label <span class="math notranslate nohighlight">\(h=(x-x_k)\)</span>, then we may rewrite the expression as shown below. The result is known as Euler’s forward difference formula or the <strong>explicit Euler method</strong>.</p>
+<div class="math notranslate nohighlight" id="equation-eeuler">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eeuler" title="Permalink to this equation">#</a></span>\[y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1\]</div>
 <p>A simple rearrangement of Euler’s forward difference formula gives the previously obtained expression for the derivative at <span class="math notranslate nohighlight">\(x_k\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fwdest">
-<span class="eqno">(2.8)<a class="headerlink" href="#equation-fwdest" title="Permalink to this equation">#</a></span>\[y^{\prime}(x_k)= \frac{y(x_k+h)-y(x_k)}{h}+\mathcal{O}(h)\]</div>
-<p>The result also shows that the error in this expression is order <span class="math notranslate nohighlight">\(h\)</span>, as discovered when we plotted the error against the step size.</p>
-<p>The error occurs due to working with finite approximations to infinitesimal quantities, and is a result of truncating the Taylor expansion after just two terms. We should distinguish <strong>truncation error</strong> from the previously seen <strong>roundoff errors</strong> that occur as a computational artefact due to working with finite precision arithmetic.</p>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-fwdest" title="Permalink to this equation">#</a></span>\[y^{\prime}(x_k)= \frac{y(x_k+h)-y(x_k)}{h}+\mathcal{O}(h).\]</div>
+<p>The result also shows that the error in this expression is order <span class="math notranslate nohighlight">\(h\)</span>, as discovered when we plotted the error against the step size. The error is due to working with finite approximations to infinitesimal quantities, and is a result of truncating the Taylor expansion after just two terms.</p>
+<p>We should distinguish <strong>truncation error</strong> from the previously seen <strong>roundoff errors</strong> that occur as a computational artefact due to working with finite precision arithmetic.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A proper mathematical description of the order of magnitude requires the Lagrange remainder theorem, which places an upper bound on the size of the error. The error in the truncated expansion is found to be proportional to the next power of that was discarded in the expansion.</p>

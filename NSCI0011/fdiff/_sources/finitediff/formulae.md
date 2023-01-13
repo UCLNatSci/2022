@@ -24,11 +24,9 @@ This chapter introduces finite difference formulae for the first and second deri
 ## General idea
 
 
-We can derive other finite difference formulas from Taylor's series, by taking weighted sums of expansions about different points to eliminate unwanted terms in the series. Some of them are favoured because they exhibit higher order accuracy than Euler's formula (reduced truncation error), whilst others may be favoured in practical applications for their numeric stability, computational efficiency or ease of practical implementation. 
+We can derive other finite difference formulas from Taylor's series, by taking weighted sums of expansions about different points to eliminate unwanted terms in the series. Some of them are favoured because they exhibit higher order accuracy than Euler's formula {eq}`eeulerr`, whilst others may be favoured in practical applications for their numeric stability, computational efficiency or ease of practical implementation. 
 
-A few examples of finite difference formulas are given below, though this list is far from exhaustive.
-
-You may notice that the forward, backward and central differences formulae are simply location-shifted versions of each other. However, this property does not extend to other finite difference formulae.
+A few examples of finite difference formulas are given below, though this list is far from exhaustive. You may notice that the forward, backward and central differences formulae are simply location-shifted versions of each other. However, this property does not extend to other finite difference formulae.
 
 ## First derivative formulae
 
@@ -62,7 +60,7 @@ y_{k-1}&=y_k - h y^{\prime}_k + \frac{h^2}{2!}y^{\prime\prime}_k -\frac{h^3}{3!}
 \end{align}
 ```
 
-The backward difference formula gives an estimate of the derivative at the interior points $[x_2,x_3,\dots,x_{n}]$. Computing the derivative at the $x_1$ requires the function value $y$ at the exterior point $x_{0}$.
+The backward difference formula gives an estimate of the derivative at the interior points $[x_2,x_3,\dots,x_{n}]$. Computing the derivative at $x_1$ requires the function value $y$ at the exterior point $x_{0}$.
 
 <br>
 
@@ -75,7 +73,7 @@ The result is obtained by subtracting the backward difference expression {eq}`ba
 y^{\prime}_{k} = \frac{y_{k+1} - y_{k-1}}{2h}+h^2\left[-\frac{2}{3}y^{\prime\prime}_k+\dots\right]
 ```
 
-The central difference formula gives an estimate of the derivative at the interior points $[x_2,x_3,\dots,x_{n-1}]$. Computing the derivative at the two end points $x_1$ and $x_n$ requires the function value $y$ at the exterior points $x_{0}$ and $x_{n+1}$
+The central difference formula gives an estimate of the derivative at the interior points $[x_2,x_3,\dots,x_{n-1}].$ Computing the derivative at the two end points $x_1$ and $x_n$ requires the function value $y$ at the exterior points $x_{0}$ and $x_{n+1}$
 
 
 
@@ -98,7 +96,7 @@ The given results for the first derivative all require only two points to calcul
 
   which rearranges to:
 
-  \begin{equation*}y^{\prime}(x_k)=\frac{-3y(x_k)+4y(x_k+h)-y(x_k+2h)}{2h}+\frac{h^3}{3}y^{\prime\prime\prime}(x_k)\end{equation*}
+  \begin{equation*}y^{\prime}(x_k)=\frac{-3y(x_k)+4y(x_k+h)-y(x_k+2h)}{2h}+\frac{h^3}{3}y^{\prime\prime\prime}(x_k).\end{equation*}
 
 ```
 
@@ -185,9 +183,7 @@ name: num-errors
 Errors in the numeric derivative of $y=\sin(x)+x$ on $[-\pi,\pi]$ with `h=1e-3`.
 ```
 
-We see that the central difference approximation is much more accurate for the same step size. 
-
-To illustrate the power relationship with $h$, we can compute the maximum error in the approximation for a range of step sizes and plot the result. Since the resulting errors $E$ are proportional to $h^n$, a plot of $\log(E)$ against $\log(h)$ should show a linear relationship:
+We see that the central difference approximation is much more accurate for the same step size. To illustrate the power relationship with $h$, we can compute the maximum error in the approximation for a range of step sizes and plot the result. Since the resulting errors $E$ are proportional to $h^n$, a plot of $\log(E)$ against $\log(h)$ should show a linear relationship:
 
 
 ```{code-cell}
