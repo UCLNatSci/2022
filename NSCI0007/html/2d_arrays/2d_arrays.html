@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4.3. Workshop 4: Modelling Space &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="4.3.3. Solutions" href="2d_arrays_answers.html" />
     <link rel="prev" title="4.2. Modelling Space" href="2d_arrays_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -693,7 +688,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="workshop-4-modelling-space">
-<h1><span class="section-number">4.3. </span>Workshop 4: Modelling Space<a class="headerlink" href="#workshop-4-modelling-space" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4.3. </span>Workshop 4: Modelling Space<a class="headerlink" href="#workshop-4-modelling-space" title="Permalink to this headline">#</a></h1>
 <p>We’ve already seen that we can use arrays to store one-dimensional sequences of numerical data. Such data might represent a time series of measurements, such as daily recordings of atmospheric pressure (<a class="reference internal" href="#pressure-fig"><span class="std std-numref">Fig. 4.3</span></a>) where the value <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> in the array <code class="docutils literal notranslate"><span class="pre">x</span></code> corresponds to the pressure on day <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <figure class="align-default" id="pressure-fig" style="width: 400px">
 <div class="cell_output docutils container">
@@ -713,7 +708,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="d-moving-average">
-<h2><span class="section-number">4.3.1. </span>1D Moving Average<a class="headerlink" href="#d-moving-average" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3.1. </span>1D Moving Average<a class="headerlink" href="#d-moving-average" title="Permalink to this headline">#</a></h2>
 <p>A <strong>moving average</strong> is commonly used when visualising time series data in order to smooth out short-term fluctuations in the data. <a class="reference internal" href="#moving-average-fig"><span class="std std-numref">Fig. 4.5</span></a> shows 113 days of atmospheric pressure along with the 10-day and 5-day moving averages.</p>
 <figure class="align-default" id="moving-average-fig" style="width: 600px">
 <div class="cell_output docutils container">
@@ -844,7 +839,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="id1">
-<h2><span class="section-number">4.3.2. </span>2D Moving Average<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3.2. </span>2D Moving Average<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>We can extend the definition of moving average to 2-dimensional data. One application of moving averages on 2-dimensional data is smoothing images. In <a class="reference internal" href="#cats-fig"><span class="std std-numref">Fig. 4.7</span></a> the image on the left is an <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">m</span></code> array where the colour intensity of each pixel corresponds to the value of each array element. Applying a 2-dimensional moving average to each pixel result in the smoothed image on the right.</p>
 <figure class="align-default" id="cats-fig" style="width: 600px">
 <div class="cell_output docutils container">
@@ -954,7 +949,7 @@ average: 2.6666666666666665
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1c853d57130&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x2064ae85608&gt;
 </pre></div>
 </div>
 <img alt="../_images/2d_arrays_22_1.png" src="../_images/2d_arrays_22_1.png" />

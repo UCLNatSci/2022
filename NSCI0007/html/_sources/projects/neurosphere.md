@@ -28,11 +28,13 @@ Following this diagram, the project can be broken down into a few steps:
 
 The steps required to setup the grid and compute the number of neighbours are not too difficult, but the implementation of the update steps is made challenging here due to the time-dependence of some of the phenomena.
 
-The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Projenator (P) and Dead (D) cells. Starting with a single Projenator cell:
-1. If a projenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability $p_\mathrm{mit}$.
+The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Progenator (P) and Dead (D) cells. Starting with a single Progenator cell:
+1. If a progenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability $p_\mathrm{mit}$.
 2. The resulting new cell goes in one of the empty neighbouring cells.
-3. The projenator cell dies with probability $p_\mathrm{death}$.
+3. The progenator cell dies with probability $p_\mathrm{death}$.
 
 ## Extensions 
 
-An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. (Cite paper) 
+An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. See the paper below.
+
+https://www.sciencedirect.com/science/article/abs/pii/S002251931930030X?via%3Dihub

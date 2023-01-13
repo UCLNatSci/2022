@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>3.2. Functions &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.3. Workshop 3: Functions" href="functions.html" />
     <link rel="prev" title="3. Functions" href="functions_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -743,9 +738,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="functions">
-<h1><span class="section-number">3.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
 <section id="calling-functions">
-<h2><span class="section-number">3.2.1. </span>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.1. </span>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">#</a></h2>
 <p>A function is a named sequence of computer instructions that performs a specific task. With the help of functions, we can break our program into small modular chunks. So, as we start to write larger programs, functions help us to make it more organized and manageable.</p>
 <p>Let’s start by examining the built-in Python function <code class="docutils literal notranslate"><span class="pre">round</span></code>.</p>
 <div class="cell docutils container">
@@ -793,7 +788,7 @@ round(number, ndigits=None)
 </div>
 <div class="solution dropdown admonition" id="functions/functions_notes-solution-1">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_3_1">Solution to Exercise 3.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_3_1"> Exercise 3.1</a></p>
 <section id="solution-content">
 <p>First, let’s see what happens when we call <code class="docutils literal notranslate"><span class="pre">round(-0.5)</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
@@ -811,7 +806,7 @@ round(number, ndigits=None)
 </div>
 </section>
 <section id="defining-functions">
-<h2><span class="section-number">3.2.2. </span>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.2. </span>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">#</a></h2>
 <p>Let’s start with a very simple example of a mathematical function:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = x^2.\]</div>
@@ -903,7 +898,7 @@ round(number, ndigits=None)
 </div>
 <div class="solution dropdown admonition" id="functions/functions_notes-solution-3">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_3_2">Solution to Exercise 3.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_3_2"> Exercise 3.2</a></p>
 <section id="solution-content">
 <ol class="simple">
 <li></li>
@@ -930,7 +925,7 @@ round(number, ndigits=None)
 </div>
 </section>
 <section id="functions-definition-notation">
-<h2><span class="section-number">3.2.3. </span>Functions Definition Notation<a class="headerlink" href="#functions-definition-notation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.3. </span>Functions Definition Notation<a class="headerlink" href="#functions-definition-notation" title="Permalink to this headline">#</a></h2>
 <p><img alt="" src="../_images/51.png" /></p>
 <p>A function definition consists of</p>
 <ol class="simple">
@@ -944,7 +939,7 @@ round(number, ndigits=None)
 </div>
 </section>
 <section id="example">
-<h2><span class="section-number">3.2.4. </span>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.4. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
 <p>Consider the following code, which calculates and prints the number of digits in a number <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">19583</span></code>. The variable <code class="docutils literal notranslate"><span class="pre">i</span></code> is initialised to 0 and then incremented each time the while loop is executed. When the loop exits, <code class="docutils literal notranslate"><span class="pre">i</span></code> contains the result - the total number of times the loop body was executed, which is the same as the number of digits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1002,7 +997,7 @@ round(number, ndigits=None)
 </div>
 <div class="solution dropdown admonition" id="functions/functions_notes-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_3_3">Solution to Exercise 3.3</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_3_3"> Exercise 3.3</a></p>
 <section id="solution-content">
 <p>We thought about how we could do this in <a class="reference internal" href="../calculations/calculations_homework_solutions.html#calculations-homework-answers"><span class="std std-ref">Homework 1</span></a> by using the fact that a negative number <span class="math notranslate nohighlight">\(-n\)</span> has the same number of digits as the positive number <span class="math notranslate nohighlight">\(n\)</span>. We checked whether the input was negative using an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and if it was we multiplied it by <span class="math notranslate nohighlight">\(-1\)</span> before counting the number of digits.
 Now, we can take a slightly smarter approach by using the <code class="docutils literal notranslate"><span class="pre">abs</span></code> function in the while loop to check whether the absolute value of the input is greater than 1.</p>
@@ -1026,7 +1021,7 @@ Now, we can take a slightly smarter approach by using the <code class="docutils 
 </div>
 </section>
 <section id="combining-functions-and-loops">
-<h2><span class="section-number">3.2.5. </span>Combining Functions and Loops<a class="headerlink" href="#combining-functions-and-loops" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.5. </span>Combining Functions and Loops<a class="headerlink" href="#combining-functions-and-loops" title="Permalink to this headline">#</a></h2>
 <p>We really start to see the utility of functions when we combine them with loops. What is the total number of digits in all the numbers from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">99</span></code> inclusive? At each execution of the loop, <code class="docutils literal notranslate"><span class="pre">number_of_digits(i)</span></code> is added to the variable <code class="docutils literal notranslate"><span class="pre">total</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +1048,7 @@ Now, we can take a slightly smarter approach by using the <code class="docutils 
 </div>
 <div class="solution dropdown admonition" id="functions/functions_notes-solution-7">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_3_4">Solution to Exercise 3.4</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_3_4"> Exercise 3.4</a></p>
 <section id="solution-content">
 <p>Let’s follow the same structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1068,7 +1063,7 @@ Now, we can take a slightly smarter approach by using the <code class="docutils 
 </div>
 </section>
 <section id="combining-functions">
-<h2><span class="section-number">3.2.6. </span>Combining Functions<a class="headerlink" href="#combining-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.6. </span>Combining Functions<a class="headerlink" href="#combining-functions" title="Permalink to this headline">#</a></h2>
 <p>It is possible to ‘chain together’ functions so that one function is called inside the body of another function. In the example below, <code class="docutils literal notranslate"><span class="pre">total_digits(n)</span></code> returns the total number of digits in numbers between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> (not counting <code class="docutils literal notranslate"><span class="pre">n</span></code> itself). I have repeated the definition of the <code class="docutils literal notranslate"><span class="pre">number_of_digits</span></code> functions here so we can see how it all fits together.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1110,7 +1105,7 @@ Now, we can take a slightly smarter approach by using the <code class="docutils 
 </div>
 <div class="solution dropdown admonition" id="functions/functions_notes-solution-9">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_3_5">Solution to Exercise 3.5</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_3_5"> Exercise 3.5</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">number_of_digits_2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1135,7 +1130,7 @@ Now, we can take a slightly smarter approach by using the <code class="docutils 
 </div>
 </section>
 <section id="keep-your-program-tidy">
-<h2><span class="section-number">3.2.7. </span>Keep Your Program Tidy!<a class="headerlink" href="#keep-your-program-tidy" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.7. </span>Keep Your Program Tidy!<a class="headerlink" href="#keep-your-program-tidy" title="Permalink to this headline">#</a></h2>
 <p>When you use functions, you might find your Python programs growing quite large. It is good practice in this case to keep your program tidy by keeping your program in a consistent order, as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import statements at the top</span>
 

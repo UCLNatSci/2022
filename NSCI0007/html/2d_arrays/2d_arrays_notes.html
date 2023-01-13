@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4.2. Modelling Space &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="4.3. Workshop 4: Modelling Space" href="2d_arrays.html" />
     <link rel="prev" title="4. Modelling Space" href="2d_arrays_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -733,7 +728,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modelling-space">
-<h1><span class="section-number">4.2. </span>Modelling Space<a class="headerlink" href="#modelling-space" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4.2. </span>Modelling Space<a class="headerlink" href="#modelling-space" title="Permalink to this headline">#</a></h1>
 <p>Recall that a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array is a data type used for storing a sequence of numerical values. The following code creates an array containing the values 5, 7, 4, 5:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -753,7 +748,7 @@ title="Print to PDF"
 </div>
 <p>The array <code class="docutils literal notranslate"><span class="pre">x</span></code> is a <strong>one-dimensional</strong> array since the elements are organised in a single row and a single index is required to access each element <code class="docutils literal notranslate"><span class="pre">x[i]</span></code>.</p>
 <section id="two-dimensional-arrays">
-<h2><span class="section-number">4.2.1. </span>Two-dimensional Arrays<a class="headerlink" href="#two-dimensional-arrays" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.1. </span>Two-dimensional Arrays<a class="headerlink" href="#two-dimensional-arrays" title="Permalink to this headline">#</a></h2>
 <p>A two-dimensional array is similar to a one-dimensional array, but it can be visualised as a grid (or table) with rows and columns (<a class="reference internal" href="#d-array-fig"><span class="std std-numref">Fig. 4.1</span></a>).</p>
 <figure class="align-default" id="d-array-fig">
 <a class="reference internal image-reference" href="../_images/2d_array.png"><img alt="../_images/2d_array.png" src="../_images/2d_array.png" style="height: 200px;" /></a>
@@ -814,7 +809,7 @@ title="Print to PDF"
 </div>
 <div class="solution dropdown admonition" id="2d_arrays/2d_arrays_notes-solution-1">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_4_1">Solution to Exercise 4.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_4_1"> Exercise 4.1</a></p>
 <section id="solution-content">
 <p>The second row only has 3 elements in, so we just need to add in the missing number. To change the element in the last row and column, remember that python starts counting from zero, so row 2 is the last row and column 3 is the last column.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
@@ -826,7 +821,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="slicing">
-<h2><span class="section-number">4.2.2. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.2. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">#</a></h2>
 <p>Use a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> in place of a row or column index in order to extract an entire row or column from an array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -884,7 +879,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="array-functions">
-<h2><span class="section-number">4.2.3. </span>Array functions<a class="headerlink" href="#array-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.3. </span>Array functions<a class="headerlink" href="#array-functions" title="Permalink to this headline">#</a></h2>
 <p>To create a 2-dimensional array filled with zeros, use the function <code class="docutils literal notranslate"><span class="pre">np.zeros((n,</span> <span class="pre">m))</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of rows and <code class="docutils literal notranslate"><span class="pre">m</span></code> is the number of columns. Note that we have to use two pairs of brackets in this case.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -951,7 +946,7 @@ cols: 17
 </div>
 <div class="solution dropdown admonition" id="2d_arrays/2d_arrays_notes-solution-3">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_4_2">Solution to Exercise 4.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_4_2"> Exercise 4.2</a></p>
 <section id="solution-content">
 <p>To work out the number of rows and colums in <code class="docutils literal notranslate"><span class="pre">big_array</span></code> we can use shape:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">big_array</span><span class="o">.</span><span class="n">shape</span>
@@ -971,7 +966,7 @@ cols: 17
 </div>
 </section>
 <section id="nested-loops">
-<h2><span class="section-number">4.2.4. </span>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.4. </span>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">#</a></h2>
 <p>For loops may be <strong>nested</strong> by placing one inside another. The following example repeats the inner loop 4 times for each pass through the outer loop, resulting in a total of 20 iterations.</p>
 <p>Note that we must use distinct iterator variables <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> for the outer and inner loops.</p>
 <div class="cell docutils container">
@@ -1022,7 +1017,7 @@ cols: 17
 </div>
 <div class="solution dropdown admonition" id="2d_arrays/2d_arrays_notes-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_4_3">Solution to Exercise 4.3</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_4_3"> Exercise 4.3</a></p>
 <section id="solution-content">
 <p>The first pattern has five lines so the outer for loop should have 5 iterations. Then on line 1, we should print 1 star, 2 on line 2, 3 on line 3, and so on. In order to do this, we can use the iterator variable from the outer loop inside the <code class="docutils literal notranslate"><span class="pre">range</span></code> of the inner loop. Notice that <code class="docutils literal notranslate"><span class="pre">range(0)</span></code> is empty, so we need to set the upper limit of the inner iterator variable as one more than the outer iterator variable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -1047,7 +1042,7 @@ cols: 17
 </div>
 </section>
 <section id="creating-and-building-arrays">
-<h2><span class="section-number">4.2.5. </span>Creating and Building Arrays<a class="headerlink" href="#creating-and-building-arrays" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.5. </span>Creating and Building Arrays<a class="headerlink" href="#creating-and-building-arrays" title="Permalink to this headline">#</a></h2>
 <p>Arrays are fixed-size, which means that once created we can’t add extra elements. A common pattern when working with arrays is to firstly create an emtpy array of the ultimate size, then to gradually fill it with values.</p>
 <p>Suppose we would like to create a 5 by 5 array whose elements are the sum of the row and column numbers. First, let’s create an empty array with 5 rows and 5 columns.</p>
 <div class="cell docutils container">
@@ -1112,7 +1107,7 @@ cols: 17
 </div>
 <div class="solution dropdown admonition" id="2d_arrays/2d_arrays_notes-solution-7">
 
-<p class="admonition-title"><a class="reference internal" href="#exercise_4_4">Solution to Exercise 4.4</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_4_4"> Exercise 4.4</a></p>
 <section id="solution-content">
 <p>We can start both arrays with an array containing zeros with 5 rows and 5 columns.
 In the first array, the element at row <code class="docutils literal notranslate"><span class="pre">i</span></code> and column <code class="docutils literal notranslate"><span class="pre">j</span></code> takes the value <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code> when <code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">&lt;=</span> <span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise. So to fill the array we can combine two nested for loops and an if statement:</p>
@@ -1144,7 +1139,7 @@ In the first array, the element at row <code class="docutils literal notranslate
 </div>
 </section>
 <section id="vector-operations">
-<h2><span class="section-number">4.2.6. </span>Vector Operations<a class="headerlink" href="#vector-operations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.6. </span>Vector Operations<a class="headerlink" href="#vector-operations" title="Permalink to this headline">#</a></h2>
 <p>Arrays support <strong>vector operations</strong>. These allow us to perform operations on every item in the array simultaneously, without having to use a loop. For example, to add <code class="docutils literal notranslate"><span class="pre">10</span></code> to every element in an array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

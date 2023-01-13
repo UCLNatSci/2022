@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>3.4.1. Homework solutions &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.5. Further Practice" href="functions_extra.html" />
     <link rel="prev" title="3.4. Homework" href="functions_homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -709,7 +704,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-solutions">
-<h1><span class="section-number">3.4.1. </span>Homework solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.4.1. </span>Homework solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this headline">#</a></h1>
 <p>First, to run the simulation we can use the same approach as last week.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -753,7 +748,7 @@ title="Print to PDF"
 </div>
 </div>
 <section id="determine-the-steady-state">
-<h2><span class="section-number">3.4.1.1. </span>Determine the steady state<a class="headerlink" href="#determine-the-steady-state" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4.1.1. </span>Determine the steady state<a class="headerlink" href="#determine-the-steady-state" title="Permalink to this headline">#</a></h2>
 <p>We are told that the system is in equilibrium after <span class="math notranslate nohighlight">\(1000\)</span> steps (and we can see from the figure that oscillations are not visible after about 600 steps), so to determine the steady state value of <span class="math notranslate nohighlight">\(X\)</span> we just need to check the value of <span class="math notranslate nohighlight">\(X_{1000}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -769,7 +764,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="turning-into-a-function">
-<h2><span class="section-number">3.4.1.2. </span>Turning into a function<a class="headerlink" href="#turning-into-a-function" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4.1.2. </span>Turning into a function<a class="headerlink" href="#turning-into-a-function" title="Permalink to this headline">#</a></h2>
 <p>As we saw in the tutorial, we just need to wrap our existing code in a few extra lines to turn it into a function that can handle lots of values of <span class="math notranslate nohighlight">\(k_4\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -811,7 +806,7 @@ title="Print to PDF"
 <p>As we expected!</p>
 </section>
 <section id="explore-behaviour-for-changing-k-4">
-<h2><span class="section-number">3.4.1.3. </span>Explore behaviour for changing <span class="math notranslate nohighlight">\(k_4\)</span><a class="headerlink" href="#explore-behaviour-for-changing-k-4" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4.1.3. </span>Explore behaviour for changing <span class="math notranslate nohighlight">\(k_4\)</span><a class="headerlink" href="#explore-behaviour-for-changing-k-4" title="Permalink to this headline">#</a></h2>
 <p>We would like to explore how the steady state value of <span class="math notranslate nohighlight">\(X\)</span> changes for values of <span class="math notranslate nohighlight">\(k_4\)</span> between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(0.3\)</span>. We did something similar in the tutorial, so we can modify our existing code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -885,7 +880,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2140762f2b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1c1231a7188&gt;
 </pre></div>
 </div>
 <img alt="../_images/functions_homework_answers_11_1.png" src="../_images/functions_homework_answers_11_1.png" />

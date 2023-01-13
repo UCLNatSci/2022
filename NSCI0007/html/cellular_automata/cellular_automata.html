@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>5.3. Cellular Automata &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5.3.3. Solutions" href="cellular_automata_answers.html" />
     <link rel="prev" title="5.2. Cellular Automata" href="cellular_automata_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -693,17 +688,17 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="cellular-automata">
-<h1><span class="section-number">5.3. </span>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.3. </span>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this headline">#</a></h1>
 <p>A cellular automaton is a collection of cells on a rectangular grid that evolves through a number of discrete time steps according to a set of rules based on the states of neighbouring cells. The rules are then applied iteratively for as many time steps as desired.</p>
 <p>You will investigate a cellular automaton model as part of your group project.</p>
 <figure class="align-default" id="epidemic-fig">
 <a class="reference internal image-reference" href="../_images/epidemic.png"><img alt="../_images/epidemic.png" src="../_images/epidemic.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Cellular automata models of the spread of an epidemic on a 2-dimensional grid of cells. Each timestep corresponds to one day <a class="footnote-reference brackets" href="#gagliardi2010small" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#epidemic-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Cellular automata models of the spread of an epidemic on a 2-dimensional grid of cells. Each timestep corresponds to one day <a class="footnote-reference brackets" href="#footcite-gagliardi2010small" id="id1">1</a>.</span><a class="headerlink" href="#epidemic-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="diffusion-model">
-<h2><span class="section-number">5.3.1. </span>Diffusion Model<a class="headerlink" href="#diffusion-model" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3.1. </span>Diffusion Model<a class="headerlink" href="#diffusion-model" title="Permalink to this headline">#</a></h2>
 <p>Diffusion is the movement of a substance from an area of high concentration to an area of lower concentration. For example, suppose we have an 2-dimensional region which is initially empty except for a square region at the centre where we inject a high concentration of a chemical. As time progresses, the chemical gradually diffuses throughout the region until the concentration is everywhere equal (<a class="reference internal" href="#diffusion-fig"><span class="std std-numref">Fig. 5.3</span></a>).</p>
 <figure class="align-default" id="diffusion-fig" style="width: 600px">
 <div class="cell_output docutils container">
@@ -743,7 +738,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="conway-s-game-of-life">
-<h2><span class="section-number">5.3.2. </span>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3.2. </span>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a> is a simple cellular automaton devised by mathematician John Conway in 1970. The automaton mimics the dynamical evolution of “life-forms” existing in the grid of cells <a class="reference internal" href="#game-of-life-fig"><span class="std std-numref">Fig. 5.4</span></a> shows an example evolution of the Game of Life.</p>
 <figure class="align-default" id="game-of-life-fig">
 <a class="reference internal image-reference" href="../_images/GOL.gif"><img alt="../_images/GOL.gif" src="../_images/GOL.gif" style="height: 300px;" /></a>

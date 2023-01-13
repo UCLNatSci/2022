@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4.4.1. Homework Answers &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -61,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="4.5. Further Practice" href="2d_arrays_extra.html" />
     <link rel="prev" title="4.4. Homework" href="2d_arrays_homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -703,7 +698,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-answers">
-<h1><span class="section-number">4.4.1. </span>Homework Answers<a class="headerlink" href="#homework-answers" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4.4.1. </span>Homework Answers<a class="headerlink" href="#homework-answers" title="Permalink to this headline">#</a></h1>
 <p>Downsampling is the process of reducing the size of an image. For example, Downsampling by a factor of 2 would reduce a 10 by 10 image to a 5 by 5 image. One way to do this is to divide the image into 2 x 2 blocks and calculate the average of each block as in <a class="reference internal" href="#downsampling-fig"><span class="std std-numref">Fig. 4.11</span></a>.</p>
 <figure class="align-default" id="downsampling-fig">
 <a class="reference internal image-reference" href="../_images/downsampling.jpg"><img alt="../_images/downsampling.jpg" src="../_images/downsampling.jpg" style="height: 150px;" /></a>
@@ -724,7 +719,7 @@ title="Print to PDF"
 </figure>
 <p>3. Write a function <code class="docutils literal notranslate"><span class="pre">upsample(x,</span> <span class="pre">k)</span></code> which upsamples the array <code class="docutils literal notranslate"><span class="pre">x</span></code> by a factor <code class="docutils literal notranslate"><span class="pre">k</span></code>. Test your function against the falling cat image for various values of <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
 <section id="downsampling">
-<h2><span class="section-number">4.4.1.1. </span>Downsampling<a class="headerlink" href="#downsampling" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.4.1.1. </span>Downsampling<a class="headerlink" href="#downsampling" title="Permalink to this headline">#</a></h2>
 <p>Let’s think about the approach we will take to downsampling the image. To downsample by a factor of two, the pseudocode might look like this:</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -802,7 +797,7 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x29781a35f10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x25097fb8e48&gt;
 </pre></div>
 </div>
 <img alt="../_images/2d_arrays_homework_answers_2_1.png" src="../_images/2d_arrays_homework_answers_2_1.png" />
@@ -810,7 +805,7 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 </section>
 <section id="turning-into-a-function">
-<h2><span class="section-number">4.4.1.2. </span>Turning into a function<a class="headerlink" href="#turning-into-a-function" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.4.1.2. </span>Turning into a function<a class="headerlink" href="#turning-into-a-function" title="Permalink to this headline">#</a></h2>
 <p>Now we need to write a function that is able to downsample by a factor <code class="docutils literal notranslate"><span class="pre">k</span></code>. Let’s think about how we need to change the code above to work for any value of <code class="docutils literal notranslate"><span class="pre">k</span></code>:</p>
 <ul class="simple">
 <li><p>The size of the new image will be <code class="docutils literal notranslate"><span class="pre">n_out</span> <span class="pre">//</span> <span class="pre">k</span></code> by <code class="docutils literal notranslate"><span class="pre">m_out</span> <span class="pre">//</span> <span class="pre">k</span></code></p></li>
@@ -881,7 +876,7 @@ The most complicated steps will be to calculate the shape of the new image and t
 </div>
 </section>
 <section id="upsampling">
-<h2><span class="section-number">4.4.1.3. </span>Upsampling<a class="headerlink" href="#upsampling" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.4.1.3. </span>Upsampling<a class="headerlink" href="#upsampling" title="Permalink to this headline">#</a></h2>
 <p>The idea is similar here, but we want to make the image larger rather than smaller. The size of the new image will be <code class="docutils literal notranslate"><span class="pre">n*k</span></code> rows by <code class="docutils literal notranslate"><span class="pre">m*k</span></code> columns. The tricky part is assigning the subarray. When we downsample we want to take lots of cells from the old image and map them to one in the new image. For upsampling we want to take one cells from the image and map it onto many in the new image. We can either iterate through each individual cell in the new array and try and find the corresponding cell in the old array, or iterate through each individual cell in the old array and try and find the corresponding cells in the new array. Both approaches will end up with the same result.</p>
 <p>To iterate through the new array, the code is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_out</span><span class="p">):</span>

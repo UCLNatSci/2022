@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Neurosphere Growth &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,16 +36,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -60,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Viral Epidemics" href="epidemic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -683,14 +678,14 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="neurosphere-growth">
-<span id="id1"></span><h1>Neurosphere Growth<a class="headerlink" href="#neurosphere-growth" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Neurosphere Growth<a class="headerlink" href="#neurosphere-growth" title="Permalink to this headline">#</a></h1>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>We can model a tissue area using a lattice-type arrangement of cells, where each cell represents an individual biological cell (whether it is a stem (S), progenitor (P) or dead (D) cell). Within the lattice, the different cell types can be labelled with different colours/numbers.</p>
 <p>The neurosphere grows through cell division of the initial cells. In each time step, the cells are updated according to the rules governing the probability that a given cell will undergo mitosis and what daughter cells are produced as a result. This probability is defined by a cell’s neighbours (e.g. its four immediate surrounding neighbours, excluding diagonals, in the case of a <a class="reference external" href="https://en.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Von_Neumann_neighborhood">von Neumann neighbourhood</a>).</p>
 </section>
 <section id="the-project">
-<h2>The Project<a class="headerlink" href="#the-project" title="Permalink to this heading">#</a></h2>
+<h2>The Project<a class="headerlink" href="#the-project" title="Permalink to this headline">#</a></h2>
 <p>In this project you will investigate a model of neurosphere growth, clonal cell clusters made up of neural stem and progenitor cells that drive parts of brain development. It is a poorly understood biological mechanism at present but which can be nicely simulated using cellular automata. This kind of model has widely reaching applications, with its use in modelling any type of tissue growth.</p>
 <p>Implement the computational model of the neurosphere growth as described in the following paper and try to replicate some of their results:</p>
 <p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0022519318300857">https://www.sciencedirect.com/science/article/pii/S0022519318300857</a></p>
@@ -704,18 +699,19 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <p>The steps required to setup the grid and compute the number of neighbours are not too difficult, but the implementation of the update steps is made challenging here due to the time-dependence of some of the phenomena.</p>
-<p>The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Projenator (P) and Dead (D) cells. Starting with a single Projenator cell:</p>
+<p>The flowchart may look complicated however you can start with a simpler model by setting fixed probabilities on a small grid and testing for one iteration. It may be helpful to start with a simpler model incorporating only Progenator (P) and Dead (D) cells. Starting with a single Progenator cell:</p>
 <ol class="simple">
-<li><p>If a projenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability <span class="math notranslate nohighlight">\(p_\mathrm{mit}\)</span>.</p></li>
+<li><p>If a progenator has fewer than 4 neighbours then it undergoes mitosis (cell division) with probability <span class="math notranslate nohighlight">\(p_\mathrm{mit}\)</span>.</p></li>
 <li><p>The resulting new cell goes in one of the empty neighbouring cells.</p></li>
-<li><p>The projenator cell dies with probability <span class="math notranslate nohighlight">\(p_\mathrm{death}\)</span>.</p></li>
+<li><p>The progenator cell dies with probability <span class="math notranslate nohighlight">\(p_\mathrm{death}\)</span>.</p></li>
 </ol>
 </section>
 <section id="extensions">
-<h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this heading">#</a></h2>
-<p>An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. (Cite paper)</p>
+<h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">#</a></h2>
+<p>An extension to the project might involve the presence of cancerous cells in the growth of the neurospheres. Depending on the initial grid, you could look at how a cancerous cell might successfully or fail to invade the tissue area. See the paper below.</p>
+<p><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S002251931930030X?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S002251931930030X?via=ihub</a></p>
 </section>
 </section>
 
