@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Cocalc and Jupyter Notebooks &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -54,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1. Fundamentals" href="../calculations/calculations_intro.html" />
     <link rel="prev" title="Introduction" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -179,10 +184,22 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../calculations/calculations_extra.html">
      1.5. Further Practice
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../calculations/calculations_extra_solutions.html">
+       1.5.1. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -190,8 +207,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../rate_equations/rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -205,8 +222,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations.html">
      2.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -222,8 +239,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -239,8 +256,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations_extra.html">
      2.5. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -258,8 +275,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +290,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions.html">
      3.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -290,8 +307,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions_homework.html">
      3.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -314,8 +331,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -329,8 +346,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -370,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -381,15 +398,39 @@ const thebe_selector_output = ".output, .cell_output"
      5.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
@@ -409,6 +450,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -758,7 +828,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="cocalc-and-jupyter-notebooks">
-<h1>Cocalc and Jupyter Notebooks<a class="headerlink" href="#cocalc-and-jupyter-notebooks" title="Permalink to this headline">#</a></h1>
+<h1>Cocalc and Jupyter Notebooks<a class="headerlink" href="#cocalc-and-jupyter-notebooks" title="Permalink to this heading">#</a></h1>
 <p>We will be using an online platform called <code class="docutils literal notranslate"><span class="pre">Cocalc</span></code> to run and edit <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> which run <code class="docutils literal notranslate"><span class="pre">Python</span></code> code. <code class="docutils literal notranslate"><span class="pre">Cocalc</span></code> is a collaborative computing platform, which means that you can interactively share your code with other users of the platform.</p>
 <div class="tip admonition">
 <p class="admonition-title">What you will learn</p>
@@ -776,10 +846,10 @@ title="Print to PDF"
 <p>The remainder was included in last year’s module NSCI0010 so you only need to do this if you didn’t do that course or if you want to refresh your understanding.</p>
 </div>
 <section id="part-1-editing-and-running-notebooks">
-<h2>Part 1: Editing and Running Notebooks<a class="headerlink" href="#part-1-editing-and-running-notebooks" title="Permalink to this headline">#</a></h2>
+<h2>Part 1: Editing and Running Notebooks<a class="headerlink" href="#part-1-editing-and-running-notebooks" title="Permalink to this heading">#</a></h2>
 <p>Follow the the instruction below to create a Cocalc account and run a notebook file.</p>
 <section id="step-1-set-up-your-cocalc-project">
-<h3>Step 1: Set up your Cocalc Project<a class="headerlink" href="#step-1-set-up-your-cocalc-project" title="Permalink to this headline">#</a></h3>
+<h3>Step 1: Set up your Cocalc Project<a class="headerlink" href="#step-1-set-up-your-cocalc-project" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Follow these steps to log in to Cocalc and set up collaboration:</p>
 </div></blockquote>
@@ -803,7 +873,7 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="step-2-open-the-week-1-folder">
-<h3>Step 2: Open the Week 1 Folder<a class="headerlink" href="#step-2-open-the-week-1-folder" title="Permalink to this headline">#</a></h3>
+<h3>Step 2: Open the Week 1 Folder<a class="headerlink" href="#step-2-open-the-week-1-folder" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Click on the <code class="docutils literal notranslate"><span class="pre">Tutorials</span></code> folder then the <code class="docutils literal notranslate"><span class="pre">Before_you_begin</span></code> folder.</p>
 </div></blockquote>
@@ -822,7 +892,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="step-3-open-the-barnsley-fern-ipynb-notebook-file">
-<h3>Step 3: Open the <em>Barnsley_Fern.ipynb</em> notebook file<a class="headerlink" href="#step-3-open-the-barnsley-fern-ipynb-notebook-file" title="Permalink to this headline">#</a></h3>
+<h3>Step 3: Open the <em>Barnsley_Fern.ipynb</em> notebook file<a class="headerlink" href="#step-3-open-the-barnsley-fern-ipynb-notebook-file" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Click on the file <code class="docutils literal notranslate"><span class="pre">Barnsley_Fern.ipynb</span></code> to open the Jupyter Notebook file.</p>
 </div></blockquote>
@@ -839,7 +909,7 @@ title="Print to PDF"
 <p>Nothing will happen until you run the final cell. This is because none of the other cells generate any output! The final cell, however, should generate a plot of a green fern-like shape.</p>
 </section>
 <section id="step-4-edit-code-cell">
-<h3>Step 4: Edit Code Cell<a class="headerlink" href="#step-4-edit-code-cell" title="Permalink to this headline">#</a></h3>
+<h3>Step 4: Edit Code Cell<a class="headerlink" href="#step-4-edit-code-cell" title="Permalink to this heading">#</a></h3>
 <p>Jupyter notebooks have two different modes, <strong>edit</strong> and <strong>command</strong>. To change to edit mode, press the <code class="docutils literal notranslate"><span class="pre">Enter</span></code> key; to return to command mode, press the <code class="docutils literal notranslate"><span class="pre">Esc</span></code> key.</p>
 <blockquote>
 <div><p>Identify the code cell which contains the line of code <code class="docutils literal notranslate"><span class="pre">npts</span> <span class="pre">=</span> <span class="pre">50000</span></code> (about half-way down the notebook). Select the cell then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to change to edit mode.</p>
@@ -857,7 +927,7 @@ title="Print to PDF"
 </div></blockquote>
 </section>
 <section id="step-5-create-a-new-code-cell">
-<h3>Step 5: Create a new Code Cell<a class="headerlink" href="#step-5-create-a-new-code-cell" title="Permalink to this headline">#</a></h3>
+<h3>Step 5: Create a new Code Cell<a class="headerlink" href="#step-5-create-a-new-code-cell" title="Permalink to this heading">#</a></h3>
 <p>To create a new code cell, press the new cell button <img alt="a" src="../_images/new_cell.png" />. The new cell will be created immediately below the currently selected cell.</p>
 <blockquote>
 <div><p>Create a new code cell below the bottom cell in the notebook</p>
@@ -869,14 +939,14 @@ title="Print to PDF"
 <p>You should see another identical fern, this time in red.</p>
 </section>
 <section id="step-6-delete-a-cell">
-<h3>Step 6: Delete a Cell<a class="headerlink" href="#step-6-delete-a-cell" title="Permalink to this headline">#</a></h3>
+<h3>Step 6: Delete a Cell<a class="headerlink" href="#step-6-delete-a-cell" title="Permalink to this heading">#</a></h3>
 <p>To delete a cell, first select the cell then press <code class="docutils literal notranslate"><span class="pre">d</span></code> <strong>twice</strong>. (The cell must be in command mode. If the cell is in edit mode, pres <code class="docutils literal notranslate"><span class="pre">Esc</span></code> first).</p>
 <blockquote>
 <div><p>Delete the cell you created in Step 5.</p>
 </div></blockquote>
 </section>
 <section id="step-7-create-a-markdown-cell">
-<h3>Step 7: Create a Markdown Cell<a class="headerlink" href="#step-7-create-a-markdown-cell" title="Permalink to this headline">#</a></h3>
+<h3>Step 7: Create a Markdown Cell<a class="headerlink" href="#step-7-create-a-markdown-cell" title="Permalink to this heading">#</a></h3>
 <p>A markdown cell contains human-readable formatted text. To create a markdown cell, first we must create a code cell then change it to a markdown cell by pressing the <code class="docutils literal notranslate"><span class="pre">m</span></code> key. (To change a cell from a markdown cell to a code cell, press the <code class="docutils literal notranslate"><span class="pre">y</span></code> key).</p>
 <blockquote>
 <div><p>Create a markdown cell at the bottom of the notebook.</p>
@@ -894,7 +964,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="part-2-creating-a-python-notebook">
-<h2>Part 2: Creating a Python Notebook<a class="headerlink" href="#part-2-creating-a-python-notebook" title="Permalink to this headline">#</a></h2>
+<h2>Part 2: Creating a Python Notebook<a class="headerlink" href="#part-2-creating-a-python-notebook" title="Permalink to this heading">#</a></h2>
 <p>We will create a Notebook which generates a plot displaying the path of a Hurricane. It will read a time series of hurricane co-ordinates from a text file, and plot the co-ordinates on an image of the Atlantic Ocean.
 <img alt="a" src="../_images/hurricane.png" /></p>
 <p>We will need to use the following two files:</p>
@@ -904,7 +974,7 @@ title="Print to PDF"
 <div><p>Download the two files <code class="docutils literal notranslate"><span class="pre">atlantic-basin.png</span></code> and <code class="docutils literal notranslate"><span class="pre">irma.csv</span></code> to your computer.</p>
 </div></blockquote>
 <section id="step-1-navigating-the-file-system">
-<h3>Step 1: Navigating the File System<a class="headerlink" href="#step-1-navigating-the-file-system" title="Permalink to this headline">#</a></h3>
+<h3>Step 1: Navigating the File System<a class="headerlink" href="#step-1-navigating-the-file-system" title="Permalink to this heading">#</a></h3>
 <p>The Cocalc Project contains a hierarchical file system much like an ordinary PC. To open the file browser, click the Files button on the toolbar. To navigate the file system, use the ‘Current Folder’ breadcrumb and the File List. Click on a folder in the list to open the folder, and click the breadcrumb to navigate back up the folder tree.</p>
 <p><img alt="a" src="../_images/cocalc.png" /></p>
 <p>To create a new file in the current folder, type its name in the  the ‘New File Name’ box, then click the arrow next to the ‘New File’ button and select the file type. To create a new folder, select ‘Folder’ at the bottom of the list of file types.</p>
@@ -913,7 +983,7 @@ title="Print to PDF"
 </div></blockquote>
 </section>
 <section id="step-2-plotting-points">
-<h3>Step 2: Plotting Points<a class="headerlink" href="#step-2-plotting-points" title="Permalink to this headline">#</a></h3>
+<h3>Step 2: Plotting Points<a class="headerlink" href="#step-2-plotting-points" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Create a new code cell, paste in the following code, then execute it.</p>
 </div></blockquote>
@@ -942,7 +1012,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="step-3-plotting-an-image">
-<h3>Step 3: Plotting an Image<a class="headerlink" href="#step-3-plotting-an-image" title="Permalink to this headline">#</a></h3>
+<h3>Step 3: Plotting an Image<a class="headerlink" href="#step-3-plotting-an-image" title="Permalink to this heading">#</a></h3>
 <p>In the next step we will display an image of the Atlantic Ocean. First we need to upload the image file to our Cocalc project. To upload a file, open the file browser, navigate to the target folder then click the ‘upload file’ button.</p>
 <blockquote>
 <div><p>Upload the file <code class="docutils literal notranslate"><span class="pre">atlantic-basin.png</span></code> to the <code class="docutils literal notranslate"><span class="pre">Before_you_begin</span></code> folder.</p>
@@ -960,7 +1030,7 @@ title="Print to PDF"
 <p>After running the code cell, you should see the map image within a set of axes.</p>
 </section>
 <section id="step-4-plotting-a-point-on-the-image">
-<h3>Step 4: Plotting a Point on the Image<a class="headerlink" href="#step-4-plotting-a-point-on-the-image" title="Permalink to this headline">#</a></h3>
+<h3>Step 4: Plotting a Point on the Image<a class="headerlink" href="#step-4-plotting-a-point-on-the-image" title="Permalink to this heading">#</a></h3>
 <p>We’d like to plot the position of New York on the map. New York has latitude/longitude co-ordinates 40.7, -74.0, but to place it on the map image we need to translate to pixel coordinates.</p>
 <blockquote>
 <div><p>Create a new code cell and add the following code:</p>
@@ -1007,7 +1077,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="step-5-loading-the-data">
-<h3>Step 5: Loading the Data<a class="headerlink" href="#step-5-loading-the-data" title="Permalink to this headline">#</a></h3>
+<h3>Step 5: Loading the Data<a class="headerlink" href="#step-5-loading-the-data" title="Permalink to this heading">#</a></h3>
 <p>The co-ordinates of the Hurricane are contained in the file <code class="docutils literal notranslate"><span class="pre">irma.csv</span></code>.</p>
 <blockquote>
 <div><p>Upload the file <code class="docutils literal notranslate"><span class="pre">irma.csv</span></code> to the <code class="docutils literal notranslate"><span class="pre">Before_you_begin</span></code> folder.</p>
@@ -1052,7 +1122,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="step-6-plotting-the-hurricane">
-<h3>Step 6: Plotting the Hurricane<a class="headerlink" href="#step-6-plotting-the-hurricane" title="Permalink to this headline">#</a></h3>
+<h3>Step 6: Plotting the Hurricane<a class="headerlink" href="#step-6-plotting-the-hurricane" title="Permalink to this heading">#</a></h3>
 <p>Finally, we will plot the hurricane data points on the map.</p>
 <blockquote>
 <div><p>Enter the following code in a new code cell</p>
@@ -1063,7 +1133,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="step-7-optional-animating-the-plot">
-<h3>Step 7 (Optional): Animating the Plot<a class="headerlink" href="#step-7-optional-animating-the-plot" title="Permalink to this headline">#</a></h3>
+<h3>Step 7 (Optional): Animating the Plot<a class="headerlink" href="#step-7-optional-animating-the-plot" title="Permalink to this heading">#</a></h3>
 <p>The following code generates a movie displaying the movement of the Hurricane.</p>
 <blockquote>
 <div><p>Enter the following code in a new cell.</p>
@@ -1100,7 +1170,7 @@ title="Print to PDF"
 </div></blockquote>
 </section>
 <section id="step-8-optional-challenge-bermuda-triangle">
-<h3>Step 8 (Optional Challenge): Bermuda Triangle<a class="headerlink" href="#step-8-optional-challenge-bermuda-triangle" title="Permalink to this headline">#</a></h3>
+<h3>Step 8 (Optional Challenge): Bermuda Triangle<a class="headerlink" href="#step-8-optional-challenge-bermuda-triangle" title="Permalink to this heading">#</a></h3>
 <p>Adapt the <code class="docutils literal notranslate"><span class="pre">Hurricane.ipynb</span></code> notebook so that it plots the vertices of the <a class="reference external" href="https://en.wikipedia.org/wiki/Bermuda_Triangle">Bermuda Triangle</a>.</p>
 <ul class="simple">
 <li><p>Create a new file <code class="docutils literal notranslate"><span class="pre">Bermuda_Triangle.ipynb</span></code> by duplicating the <code class="docutils literal notranslate"><span class="pre">Hurricane.ipynb</span></code> file.</p></li>

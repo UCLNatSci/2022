@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2.2. Modelling Change &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.3. Workshop 2: Modelling Change" href="rate_equations.html" />
     <link rel="prev" title="2. Modelling Change" href="rate_equations_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -181,10 +186,22 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../calculations/calculations_extra.html">
      1.5. Further Practice
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../calculations/calculations_extra_solutions.html">
+       1.5.1. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -192,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +224,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations.html">
      2.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -224,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -241,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_extra.html">
      2.5. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -260,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -275,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions.html">
      3.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -292,8 +309,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions_homework.html">
      3.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -316,8 +333,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -331,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -348,8 +365,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -372,8 +389,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -383,15 +400,39 @@ const thebe_selector_output = ".output, .cell_output"
      5.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
@@ -411,6 +452,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -687,13 +757,13 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modelling-change">
-<h1><span class="section-number">2.2. </span>Modelling Change<a class="headerlink" href="#modelling-change" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.2. </span>Modelling Change<a class="headerlink" href="#modelling-change" title="Permalink to this heading">#</a></h1>
 <section id="python-libraries">
-<h2><span class="section-number">2.2.1. </span>Python Libraries<a class="headerlink" href="#python-libraries" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.1. </span>Python Libraries<a class="headerlink" href="#python-libraries" title="Permalink to this heading">#</a></h2>
 <p>The standard Python language is very extensive, containing a wide range of built-in data types and functions, some of which we looked at last week. In addition, we can access an ever-growing collection of Python code libraries. A library is a package of pre-built code that provides useful functions to extend the standard Python library. Probably the two most useful libraries for scientists are <code class="docutils literal notranslate"><span class="pre">numpy</span></code> (for numerical computing) and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (for plotting graphs).</p>
 </section>
 <section id="importing-libraries">
-<h2><span class="section-number">2.2.2. </span>Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.2. </span>Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this heading">#</a></h2>
 <p>To access <code class="docutils literal notranslate"><span class="pre">numpy</span></code> the numpy library we first have to import it using the <code class="docutils literal notranslate"><span class="pre">import</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -738,7 +808,7 @@ title="Print to PDF"
 </div>
 <div class="solution dropdown admonition" id="rate_equations/rate_equations_notes-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_2_1"> Exercise 2.1</a></p>
+<p class="admonition-title"><a class="reference internal" href="#exercise_2_1">Solution to Exercise 2.1</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -762,7 +832,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="numpy-arrays">
-<h2><span class="section-number">2.2.3. </span><code class="docutils literal notranslate"><span class="pre">numpy</span></code> Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.3. </span><code class="docutils literal notranslate"><span class="pre">numpy</span></code> Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this heading">#</a></h2>
 <p>An array is a Numpy data type that stores a sequence of values. For example, suppose we have the following data representing five years’ population data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -823,7 +893,7 @@ Population in year 3: 54
 </div>
 <div class="solution dropdown admonition" id="rate_equations/rate_equations_notes-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_2_2"> Exercise 2.2</a></p>
+<p class="admonition-title"><a class="reference internal" href="#exercise_2_2">Solution to Exercise 2.2</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span>
@@ -837,7 +907,7 @@ Population in year 3: 54
 </div>
 </section>
 <section id="creating-numpy-arrays">
-<h2><span class="section-number">2.2.4. </span>Creating Numpy Arrays<a class="headerlink" href="#creating-numpy-arrays" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.4. </span>Creating Numpy Arrays<a class="headerlink" href="#creating-numpy-arrays" title="Permalink to this heading">#</a></h2>
 <p>Above, we created an array using the <code class="docutils literal notranslate"><span class="pre">np.array</span></code> function. Other ways to create an array include the functions <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> and <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -876,7 +946,7 @@ Population in year 3: 54
 </div>
 <div class="solution dropdown admonition" id="rate_equations/rate_equations_notes-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_2_3"> Exercise 2.3</a></p>
+<p class="admonition-title"><a class="reference internal" href="#exercise_2_3">Solution to Exercise 2.3</a></p>
 <section id="solution-content">
 <p>The array contains 5 numbers so <code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">=</span> <span class="pre">5</span></code>; it starts at 0 and ends at 1 so we need:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -887,7 +957,7 @@ Population in year 3: 54
 </div>
 </section>
 <section id="for-loops">
-<h2><span class="section-number">2.2.5. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.5. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is used to iterate over a sequence of values. The simplest form of the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is to iterate over a range of <code class="docutils literal notranslate"><span class="pre">n</span></code> integer values. For example, the following code will execute the indented statements once for each integer from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">4</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -907,7 +977,7 @@ i = 4
 </div>
 </div>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">i</span></code> is called the iterator variable and is updated during each iteration. The <code class="docutils literal notranslate"><span class="pre">range</span></code> function specifies the sequence of integer values that the loop variable will take.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>syntax</p></th>
 <th class="head"><p>result</p></th>
@@ -958,7 +1028,7 @@ i = 9
 </div>
 <div class="solution dropdown admonition" id="rate_equations/rate_equations_notes-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_2_4"> Exercise 2.4</a></p>
+<p class="admonition-title"><a class="reference internal" href="#exercise_2_4">Solution to Exercise 2.4</a></p>
 <section id="solution-content">
 <p>The first value is 2, so <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">2</span></code>; the final value is 11 so <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">11</span></code>, therefore <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">12</span></code>; the values increase in steps of 3 so <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">3</span></code>, so we need:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
@@ -969,9 +1039,9 @@ i = 9
 </div>
 </section>
 <section id="plotting-using-matplotlib">
-<h2><span class="section-number">2.2.6. </span>Plotting using Matplotlib<a class="headerlink" href="#plotting-using-matplotlib" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2.6. </span>Plotting using Matplotlib<a class="headerlink" href="#plotting-using-matplotlib" title="Permalink to this heading">#</a></h2>
 <p>Suppose we have collected the following data which we would like to plot on a line graph.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Time (s)</p></th>
 <th class="head"><p>0.1</p></th>
@@ -1014,7 +1084,7 @@ i = 9
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x15e88108f48&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1de7a4ae430&gt;]
 </pre></div>
 </div>
 <img alt="../_images/rate_equations_notes_25_1.png" src="../_images/rate_equations_notes_25_1.png" />
@@ -1032,7 +1102,7 @@ i = 9
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x15e8a6f8c88&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1de7ac67340&gt;]
 </pre></div>
 </div>
 <img alt="../_images/rate_equations_notes_27_1.png" src="../_images/rate_equations_notes_27_1.png" />
@@ -1061,7 +1131,7 @@ i = 9
 <p class="admonition-title"><span class="caption-number">Exercise 2.5 </span></p>
 <section id="exercise-content">
 <p>Plot the following data on a line graph. Include axis labels and a suitable title.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Time (days)</p></th>
 <th class="head"><p>5</p></th>
@@ -1087,7 +1157,7 @@ i = 9
 </div>
 <div class="solution dropdown admonition" id="rate_equations/rate_equations_notes-solution-9">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#exercise_2_5"> Exercise 2.5</a></p>
+<p class="admonition-title"><a class="reference internal" href="#exercise_2_5">Solution to Exercise 2.5</a></p>
 <section id="solution-content">
 <p>The time data contains 6 evenly-spaced time points starting at 5 and ending at 30, so we can use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create the array. The mass data is not a straightforward sequence, so it is easier to just hard code the array.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># record data</span>

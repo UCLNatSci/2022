@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1.3.5. Solutions &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1.4. Homework" href="calculations_homework.html" />
     <link rel="prev" title="1.3. Workshop 1: Fundamentals" href="calculations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -181,10 +186,22 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="calculations_extra.html">
      1.5. Further Practice
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="calculations_extra_solutions.html">
+       1.5.1. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -192,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../rate_equations/rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +224,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations.html">
      2.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -224,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -241,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../rate_equations/rate_equations_extra.html">
      2.5. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -260,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -275,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions.html">
      3.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -292,8 +309,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions_homework.html">
      3.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -316,8 +333,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -331,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -348,8 +365,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -372,8 +389,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -383,15 +400,39 @@ const thebe_selector_output = ".output, .cell_output"
      5.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
@@ -411,6 +452,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -576,10 +646,10 @@ title="Print to PDF"
               <div>
                 
   <section id="solutions">
-<h1><span class="section-number">1.3.5. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1.3.5. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_6"> Exercise 1.6</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_6">Solution to Exercise 1.6</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -595,7 +665,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_7"> Exercise 1.7</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_7">Solution to Exercise 1.7</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -611,7 +681,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-2">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_8"> Exercise 1.8</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_8">Solution to Exercise 1.8</a></p>
 <section id="solution-content">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -628,7 +698,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_9"> Exercise 1.9</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_9">Solution to Exercise 1.9</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">half_life</span> <span class="o">=</span> <span class="mf">8.02</span>
 <span class="n">r</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">half_life</span><span class="p">)</span>
@@ -639,7 +709,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_10"> Exercise 1.10</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_10">Solution to Exercise 1.10</a></p>
 <section id="solution-content">
 <p>We would expect that after 8 days the activity would have approximately halved (<span class="math notranslate nohighlight">\(8.35 \times 10^{11}~\mathrm{Bq}\)</span>).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># starting conditions</span>
@@ -662,7 +732,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_11"> Exercise 1.11</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_11">Solution to Exercise 1.11</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># starting conditions</span>
 <span class="n">activity</span> <span class="o">=</span> <span class="mf">1.67</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">12</span><span class="p">)</span>
@@ -684,7 +754,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_12"> Exercise 1.13</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_12">Solution to Exercise 1.13</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 
@@ -703,7 +773,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_13"> Exercise 1.14</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_13">Solution to Exercise 1.14</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">collatz_num</span> <span class="o">=</span> <span class="mi">1</span>
@@ -729,7 +799,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="calculations/calculations_solutions-solution-8">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations.html#exercise_1_14"> Exercise 1.15 (Challenge)</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations.html#exercise_1_14">Solution to Exercise 1.15 (Challenge)</a></p>
 <section id="solution-content">
 <p>To do this we need to ‘nest’ one while loop (to calculate Collatz numbers) inside another one (to check each if each integer meets the condition).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>

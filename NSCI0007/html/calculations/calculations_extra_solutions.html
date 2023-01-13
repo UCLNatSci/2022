@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1.5.1. Solutions &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -54,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2. Modelling Change" href="../rate_equations/rate_equations_intro.html" />
     <link rel="prev" title="1.5. Further Practice" href="calculations_extra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -419,7 +424,12 @@ const thebe_selector_output = ".output, .cell_output"
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2">
@@ -448,10 +458,27 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/projects.html">
    Projects
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -617,10 +644,10 @@ title="Print to PDF"
               <div>
                 
   <section id="solutions">
-<h1><span class="section-number">1.5.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1.5.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
 <div class="solution admonition" id="calculations/calculations_extra_solutions-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations_extra.html#calculations_extra_factorial"> Exercise 1.16</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations_extra.html#calculations_extra_factorial">Solution to Exercise 1.16</a></p>
 <section id="solution-content">
 <div class="pseudocode docutils">
 <p>Set n to 10<br />
@@ -642,7 +669,7 @@ Print f</p>
 </div>
 <div class="solution admonition" id="calculations/calculations_extra_solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations_extra.html#calculations_extra_quadratic"> Exercise 1.17</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations_extra.html#calculations_extra_quadratic">Solution to Exercise 1.17</a></p>
 <section id="solution-content">
 <p>NB You should test your answer with a variety of values for <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> to check that it is working correctly. At least one test for each of the three type of solution.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
@@ -663,7 +690,7 @@ Print f</p>
 </div>
 <div class="solution admonition" id="calculations/calculations_extra_solutions-solution-2">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="calculations_extra.html#calculations_extra_division"> Exercise 1.18</a></p>
+<p class="admonition-title"><a class="reference internal" href="calculations_extra.html#calculations_extra_division">Solution to Exercise 1.18</a></p>
 <section id="solution-content">
 <div class="pseudocode docutils">
 <p>Set value of n<br />

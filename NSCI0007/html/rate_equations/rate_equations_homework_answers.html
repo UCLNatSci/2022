@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2.4.2. Homework solutions &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.5. Further Practice" href="rate_equations_extra.html" />
     <link rel="prev" title="2.4. Homework" href="rate_equations_homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -181,10 +186,22 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../calculations/calculations_extra.html">
      1.5. Further Practice
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../calculations/calculations_extra_solutions.html">
+       1.5.1. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -192,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +224,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations.html">
      2.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -224,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -241,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_extra.html">
      2.5. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -260,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -275,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions.html">
      3.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -292,8 +309,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions_homework.html">
      3.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -316,8 +333,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -331,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -348,8 +365,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -372,8 +389,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -383,15 +400,39 @@ const thebe_selector_output = ".output, .cell_output"
      5.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
@@ -411,6 +452,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -629,7 +699,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-solutions">
-<h1><span class="section-number">2.4.2. </span>Homework solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.4.2. </span>Homework solutions<a class="headerlink" href="#homework-solutions" title="Permalink to this heading">#</a></h1>
 <p>The BZ reaction can be modelled by the following equations, where <span class="math notranslate nohighlight">\(X_i\)</span> and <span class="math notranslate nohighlight">\(Y_i\)</span> are the concentrations of the two reactants X (red) and Y (colourless) at timestep <span class="math notranslate nohighlight">\(i\)</span>. At each timestep, the concentrations of the two reactants change according to the difference equations below. Each timestep has a duration of one second.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -641,7 +711,7 @@ Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
 <li><p>Experiment with different values of <span class="math notranslate nohighlight">\(k_1\)</span>. For what range of values of <span class="math notranslate nohighlight">\(k_1\)</span> does the reaction exhibit oscillations?</p></li>
 </ol>
 <section id="modelling">
-<h2><span class="section-number">2.4.2.1. </span>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4.2.1. </span>Modelling<a class="headerlink" href="#modelling" title="Permalink to this heading">#</a></h2>
 <p>First, to model the equations we can follow the same structure we used in the tutorial.
 To see how the reactants interact we can model both concentrations on the same graph.</p>
 <div class="cell docutils container">
@@ -693,7 +763,7 @@ To see how the reactants interact we can model both concentrations on the same g
 </div>
 </section>
 <section id="experiment-with-k-1">
-<h2><span class="section-number">2.4.2.2. </span>Experiment with <span class="math notranslate nohighlight">\(k_1\)</span><a class="headerlink" href="#experiment-with-k-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4.2.2. </span>Experiment with <span class="math notranslate nohighlight">\(k_1\)</span><a class="headerlink" href="#experiment-with-k-1" title="Permalink to this heading">#</a></h2>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to test a few different values for <span class="math notranslate nohighlight">\(k_1\)</span>. Let’s try the interval <span class="math notranslate nohighlight">\([0, 0.3]\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -724,16 +794,16 @@ To see how the reactants interact we can model both concentrations on the same g
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: overflow encountered in double_scalars
-  if __name__ == &quot;__main__&quot;:
-c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: overflow encountered in double_scalars
-  # Remove the CWD from sys.path while we load stuff.
-c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: invalid value encountered in double_scalars
-  if __name__ == &quot;__main__&quot;:
-c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:10: RuntimeWarning: invalid value encountered in double_scalars
-  # Remove the CWD from sys.path while we load stuff.
-c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
-  if sys.path[0] == &quot;&quot;:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_21836\2089901663.py:9: RuntimeWarning: overflow encountered in double_scalars
+  X[i+1] = X[i] + k1 - k2*X[i] + k3*X[i]**2*Y[i]
+C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_21836\2089901663.py:10: RuntimeWarning: overflow encountered in double_scalars
+  Y[i+1] = Y[i] + k4*X[i] - k3*X[i]**2*Y[i]
+C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_21836\2089901663.py:9: RuntimeWarning: invalid value encountered in double_scalars
+  X[i+1] = X[i] + k1 - k2*X[i] + k3*X[i]**2*Y[i]
+C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_21836\2089901663.py:10: RuntimeWarning: invalid value encountered in double_scalars
+  Y[i+1] = Y[i] + k4*X[i] - k3*X[i]**2*Y[i]
+C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_21836\2089901663.py:12: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(5,5))
 </pre></div>
 </div>
 <img alt="../_images/rate_equations_homework_answers_5_1.png" src="../_images/rate_equations_homework_answers_5_1.png" />

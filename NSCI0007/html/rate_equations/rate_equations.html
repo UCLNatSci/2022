@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2.3. Workshop 2: Modelling Change &#8212; Scientific Computing Workbook</title>
     
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -36,11 +36,16 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -56,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.3.5. Solutions" href="rate_equations_solutions.html" />
     <link rel="prev" title="2.2. Modelling Change" href="rate_equations_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -181,10 +186,22 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../calculations/calculations_extra.html">
      1.5. Further Practice
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../calculations/calculations_extra_solutions.html">
+       1.5.1. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -192,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +224,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="current reference internal" href="#">
      2.3. Workshop
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -224,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -241,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="rate_equations_extra.html">
      2.5. Further Practice
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -260,8 +277,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../functions/functions_intro.html">
    3. Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -275,8 +292,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions.html">
      3.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -292,8 +309,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../functions/functions_homework.html">
      3.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -316,8 +333,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -331,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -348,8 +365,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -372,8 +389,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -383,15 +400,39 @@ const thebe_selector_output = ".output, .cell_output"
      5.2. Notes
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+       5.3.3. Solutions
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+       5.4.1. Homework Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
@@ -411,6 +452,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/projects.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/epidemic.html">
+     Viral Epidemics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/neurosphere.html">
+     Neurosphere Growth
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -677,9 +747,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="workshop-2-modelling-change">
-<h1><span class="section-number">2.3. </span>Workshop 2: Modelling Change<a class="headerlink" href="#workshop-2-modelling-change" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.3. </span>Workshop 2: Modelling Change<a class="headerlink" href="#workshop-2-modelling-change" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">2.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>A <strong>difference equation</strong> defines a sequence by the difference between consecutive terms. To fully specify the sequence we also need an initial value. For example,</p>
 <div class="math notranslate nohighlight">
 \[x_{i+1} = x_i + 0.1x_i \quad\mathrm{where}\quad x_0=10\]</div>
@@ -754,7 +824,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="multiple-variables">
-<h2><span class="section-number">2.3.2. </span>Multiple Variables<a class="headerlink" href="#multiple-variables" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.2. </span>Multiple Variables<a class="headerlink" href="#multiple-variables" title="Permalink to this heading">#</a></h2>
 <p>We can produce more interesting behaviour if we introduce a second variable. For example,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -786,7 +856,7 @@ y_{i+1} &amp;= y_i + 0.4x_i\quad\mathrm{where}~x_0=y_0=10.
 </div>
 </section>
 <section id="sir-model-of-epidemics">
-<h2><span class="section-number">2.3.3. </span>SIR Model of Epidemics<a class="headerlink" href="#sir-model-of-epidemics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.3. </span>SIR Model of Epidemics<a class="headerlink" href="#sir-model-of-epidemics" title="Permalink to this heading">#</a></h2>
 <p>The spread of an infectious disease amongst a population can be modelled by the SIR model. We divide the the population into three groups: Susceptible, Infected and Recovered. As the epidemic progresses, the number of people in each group changes according to a set of simple rules. Let <span class="math notranslate nohighlight">\(S_i\)</span> represent the number of susceptible people and <span class="math notranslate nohighlight">\(I_i\)</span> the number of infected people on day <span class="math notranslate nohighlight">\(i\)</span>. Then:</p>
 <div class="math notranslate nohighlight" id="equation-sir-equations">
 <span class="eqno">(2.1)<a class="headerlink" href="#equation-sir-equations" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}S_{i+1} &amp;= S_i - bS_iI_i\\
@@ -796,7 +866,7 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 \[R_i = N - (S_i + I_i)\]</div>
 <p>where <span class="math notranslate nohighlight">\(N\)</span> is the total population. There are two parameters: the recovery rate parameter <span class="math notranslate nohighlight">\(a\)</span> and the infection rate parameter <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <section id="simplified-model">
-<h3><span class="section-number">2.3.3.1. </span>Simplified Model<a class="headerlink" href="#simplified-model" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.3.1. </span>Simplified Model<a class="headerlink" href="#simplified-model" title="Permalink to this heading">#</a></h3>
 <p>First, let’s examine a simplified version of this model where we assume that there are no susceptible people in the population and an initial population <span class="math notranslate nohighlight">\(I_0\)</span> of infected people. Then, the equations reduce to:</p>
 <div class="math notranslate nohighlight">
 \[ I_{i+1} = I_i - aI_i \]</div>
@@ -811,7 +881,7 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 </div>
 </section>
 <section id="full-model">
-<h3><span class="section-number">2.3.3.2. </span>Full Model<a class="headerlink" href="#full-model" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.3.2. </span>Full Model<a class="headerlink" href="#full-model" title="Permalink to this heading">#</a></h3>
 <p>Next we will model the full set of two equations <a class="reference internal" href="#equation-sir-equations">(2.1)</a>. We’ll assume that parameter values <span class="math notranslate nohighlight">\(a = 0.1\)</span> and <span class="math notranslate nohighlight">\(b = 0.00005\)</span> and the initial populations <span class="math notranslate nohighlight">\(S_0 = 20000\)</span> and <span class="math notranslate nohighlight">\(I_0 = 100\)</span>.</p>
 <div class="exercise admonition" id="exercise_2_10">
 
@@ -823,7 +893,7 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 </div>
 </section>
 <section id="investigating-the-model">
-<h3><span class="section-number">2.3.3.3. </span>Investigating the Model<a class="headerlink" href="#investigating-the-model" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.3.3. </span>Investigating the Model<a class="headerlink" href="#investigating-the-model" title="Permalink to this heading">#</a></h3>
 <p>One of the benefits of modelling is that we can investigate the effect of changing particular parameters. For example, the Government can influence the rate parameter <span class="math notranslate nohighlight">\(b\)</span> through public policy (for example the imposition of social distancing, vaccination or other measures) and so it would like to understand how changing the value of <span class="math notranslate nohighlight">\(b\)</span> affects the outcome of the epidemic.</p>
 <div class="exercise admonition" id="exercise_2_11">
 
@@ -836,7 +906,7 @@ I_{i+1} &amp;= I_i + bS_iI_i - aI_i.\end{align}\end{split}\]</div>
 </section>
 </section>
 <section id="ballistics">
-<h2><span class="section-number">2.3.4. </span>Ballistics<a class="headerlink" href="#ballistics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.4. </span>Ballistics<a class="headerlink" href="#ballistics" title="Permalink to this heading">#</a></h2>
 <p>Suppose a cannon located at position <span class="math notranslate nohighlight">\(x = 0, y = 0\)</span> fires a cannonball at an angle <span class="math notranslate nohighlight">\(\theta\)</span> from the horizontal (measured in radians) and speed <span class="math notranslate nohighlight">\(s\)</span> m/s. We’d like to simulate the trajectory of the cannonball as in <a class="reference internal" href="#cannon-fig"><span class="std std-numref">Fig. 2.1</span></a>.</p>
 <figure class="align-default" id="cannon-fig">
 <a class="reference internal image-reference" href="../_images/cannon.jpg"><img alt="../_images/cannon.jpg" src="../_images/cannon.jpg" style="height: 150px;" /></a>
