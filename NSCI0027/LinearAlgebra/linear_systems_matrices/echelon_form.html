@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>8. Linear Systems of Equations &#8212; Mathematics for Natural Sciences 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Systems of Equations &#8212; Mathematics for Natural Sciences 2</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,44 +18,43 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="9. Matrices" href="matrices.html" />
-    <link rel="prev" title="7. Vector Calculus Theorems" href="../../VectorCalculus/vectorcalctheorems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -65,21 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -88,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -109,99 +91,43 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../intro.html">
-                    Welcome to NSCI0027
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to Linear Algebra and Vector Calculus
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
+   1. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/doubletripleintegrals.html">
+   2. Multidimensional Integrals
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   1. Vector Fields
+   3. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   2. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   3. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   4. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/volumeintegrals.html">
-   5. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   8. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="matrices.html">
-   9. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linear_maps.html">
-   10. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="inverses.html">
-   11. Inverses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="determinants.html">
-   12. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../eigenvectors/notes.html">
-   13. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="diagonalisation.html">
-   14. Matrix Diagonalisation
+   4. Variations of Fields
   </a>
  </li>
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -209,175 +135,120 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/LinearAlgebra/linear_systems_matrices/echelon_form.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/echelon_form.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
-   8.1. Gaussian Elimination
+   Gaussian Elimination
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     8.1.1. Motivation
+     Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-systematic-technique-for-solving-systems-of-equations">
-     8.1.2. A systematic technique for solving systems of equations
+     A systematic technique for solving systems of equations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generalisation">
-     8.1.3. Generalisation
+     Generalisation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#row-echelon-form">
-   8.2. Row Echelon Form
+   Row Echelon Form
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gaussian-elimination-for-reduction-to-echelon-form">
-     8.2.1. Gaussian Elimination for Reduction to Echelon Form
+     Gaussian Elimination for Reduction to Echelon Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-solutions-to-a-linear-system">
-   8.3. Parametric Solutions to a Linear System
+   Parametric Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     8.3.1. General Solution Set
+     General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   8.4. Solutions
+   Solutions
   </a>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Linear Systems of Equations</h1>
@@ -392,53 +263,53 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
-   8.1. Gaussian Elimination
+   Gaussian Elimination
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     8.1.1. Motivation
+     Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-systematic-technique-for-solving-systems-of-equations">
-     8.1.2. A systematic technique for solving systems of equations
+     A systematic technique for solving systems of equations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generalisation">
-     8.1.3. Generalisation
+     Generalisation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#row-echelon-form">
-   8.2. Row Echelon Form
+   Row Echelon Form
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gaussian-elimination-for-reduction-to-echelon-form">
-     8.2.1. Gaussian Elimination for Reduction to Echelon Form
+     Gaussian Elimination for Reduction to Echelon Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-solutions-to-a-linear-system">
-   8.3. Parametric Solutions to a Linear System
+   Parametric Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     8.3.1. General Solution Set
+     General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   8.4. Solutions
+   Solutions
   </a>
  </li>
 </ul>
@@ -447,20 +318,19 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-systems-of-equations">
-<h1><span class="section-number">8. </span>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">#</a></h1>
-<section id="gaussian-elimination">
-<h2><span class="section-number">8.1. </span>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">#</a></h2>
+  <div class="section" id="linear-systems-of-equations">
+<h1>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gaussian-elimination">
+<h2>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">¶</a></h2>
 <p>The technique studied here makes solving large systems of equations (e.g. 200 equations in 200 unknowns) practical, and it can be implemented on a computer in a basic programming language. You might be surprised to learn that it is necessary to solve vast systems of linear equations as a matter of routine in many practical scientific applications.</p>
-<section id="motivation">
-<h3><span class="section-number">8.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h3>
+<div class="section" id="motivation">
+<h3>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6a506fcb-12d1-4cee-ade5-4bc9759acc85">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-6a506fcb-12d1-4cee-ade5-4bc9759acc85" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18731409-cd09-43f6-be61-ff1c9d71af6f">
+<span class="eqno">()<a class="headerlink" href="#equation-18731409-cd09-43f6-be61-ff1c9d71af6f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -470,8 +340,8 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-084ba2ee-96cb-4514-a3c9-70ce86804748">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-084ba2ee-96cb-4514-a3c9-70ce86804748" title="Permalink to this equation">#</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-351b0f44-9efc-4dda-9f90-b0a50879dd36">
+<span class="eqno">()<a class="headerlink" href="#equation-351b0f44-9efc-4dda-9f90-b0a50879dd36" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -479,9 +349,9 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <li><p>If they are parallel and coincident (same line), there are an infinite number of solutions.</p></li>
 </ul>
 </div>
-</section>
-<section id="a-systematic-technique-for-solving-systems-of-equations">
-<span id="id1"></span><h3><span class="section-number">8.1.2. </span>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="a-systematic-technique-for-solving-systems-of-equations">
+<span id="id1"></span><h3>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">¶</a></h3>
 <p>We will begin by finding a solution to the following system:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{alignat*}{5}
@@ -568,8 +438,8 @@ Repeat from Step 2 until the matrix is in upper triangular form (containing all 
 </div>
 <div class="exercise admonition" id="q_elimination">
 
-<p class="admonition-title"><span class="caption-number">Exercise 8.1 </span></p>
-<section id="exercise-content">
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
 <p>Write the following system as an augmented matrix then solve it using the Naive Gaussian elimination algorithm.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -579,11 +449,11 @@ Repeat from Step 2 until the matrix is in upper triangular form (containing all 
 4x &amp; {}-{} &amp;  7y &amp; {}+{} &amp; z &amp; {}={} &amp; -1
 \end{alignat*}
 \end{split}\]</div>
-</section>
 </div>
-</section>
-<section id="generalisation">
-<h3><span class="section-number">8.1.3. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="generalisation">
+<h3>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h3>
 <p>The naive algorithm introduced here can be generalised to include additional row operations. In general, the acceptable row operations that we can perform are:</p>
 <ul class="simple">
 <li><p>multiplication of any row by a constant (e.g. <span class="math notranslate nohighlight">\(\frac{1}{2}r_1 \rightarrow r_1\)</span>)</p></li>
@@ -638,10 +508,10 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 \end{array}
 \end{split}\]</div>
 <p>We have obtained row-reduced form and the solutions for <span class="math notranslate nohighlight">\(x_1,x_2,x_3\)</span> can now be read off from the final column.</p>
-</section>
-</section>
-<section id="row-echelon-form">
-<h2><span class="section-number">8.2. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="row-echelon-form">
+<h2>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h2>
 <p>In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are zero, one or infinitely many solutions. It works by converting system of equations to <strong>reduced row echelon form</strong>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -651,8 +521,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>The first nonzero entry of a row is to the right of the first nonzero entry of the row above.</p></li>
 <li><p>Below the first nonzero entry of a row, all entries are zero.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-ac9e8c37-40eb-4867-93c3-7ee20c52e506">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-ac9e8c37-40eb-4867-93c3-7ee20c52e506" title="Permalink to this equation">#</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-ece16644-221b-48a2-bad8-940b307dc268">
+<span class="eqno">()<a class="headerlink" href="#equation-ece16644-221b-48a2-bad8-940b307dc268" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 \boxed{\star} &amp; \star &amp;\star &amp;\star &amp;\star \\
 0     &amp; \boxed{\star} &amp;\star &amp;\star &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; \boxed{\star} &amp;\star \\
@@ -665,8 +535,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>Each pivot is equal to 1.</p></li>
 <li><p>Each pivot is the only nonzero entry in its column.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-5ad8fc4d-6a40-48a3-b047-30fc96c5ada8">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-5ad8fc4d-6a40-48a3-b047-30fc96c5ada8" title="Permalink to this equation">#</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-2b75dc80-2290-4a34-afc4-5309c5b842c4">
+<span class="eqno">()<a class="headerlink" href="#equation-2b75dc80-2290-4a34-afc4-5309c5b842c4" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 1 &amp; 0 &amp;\star &amp; 0 &amp;\star \\
 0     &amp; 1 &amp;\star &amp;0 &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; 1 &amp;\star \\
@@ -675,8 +545,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 </div>
 <div class="exercise admonition" id="q_row_echelon_form">
 
-<p class="admonition-title"><span class="caption-number">Exercise 8.2 </span></p>
-<section id="exercise-content">
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
 <p>Which of the following matrices are in (a) row echelon form (b) reduced row echelon formed?</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -702,10 +572,10 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 \end{pmatrix}
 \end{align*}
 \end{split}\]</div>
-</section>
 </div>
-<section id="gaussian-elimination-for-reduction-to-echelon-form">
-<h3><span class="section-number">8.2.1. </span>Gaussian Elimination for Reduction to Echelon Form<a class="headerlink" href="#gaussian-elimination-for-reduction-to-echelon-form" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="gaussian-elimination-for-reduction-to-echelon-form">
+<h3>Gaussian Elimination for Reduction to Echelon Form<a class="headerlink" href="#gaussian-elimination-for-reduction-to-echelon-form" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-row-reduction-algorithm-gaussian-elimination admonition">
 <p class="admonition-title">Row Reduction Algorithm (Gaussian Elimination)</p>
 <p><strong>Step 1</strong> If necessary, swap the 1st row with a lower one so a leftmost nonzero entry is in the 1st row.</p>
@@ -815,8 +685,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 </div>
 <div class="exercise admonition" id="q_echelon_form_2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 8.3 </span></p>
-<section id="exercise-content">
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
 <!-- https://www.math.uh.edu/~jiwenhe/math2331/lectures/sec1_2.pdf -->
 <p>Use Gaussian elimination to reduce the following matrix to row echelon form and reduced row echelon form:</p>
 <div class="math notranslate nohighlight">
@@ -826,12 +696,12 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 3 &amp; -7 &amp; 8 &amp; -5 &amp; 8 &amp; 9\\
 3 &amp; -9 &amp; 12 &amp; -9 &amp; 6 &amp; 15
 \end{pmatrix}\end{split}\]</div>
-</section>
 </div>
-</section>
-</section>
-<section id="parametric-solutions-to-a-linear-system">
-<h2><span class="section-number">8.3. </span>Parametric Solutions to a Linear System<a class="headerlink" href="#parametric-solutions-to-a-linear-system" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="parametric-solutions-to-a-linear-system">
+<h2>Parametric Solutions to a Linear System<a class="headerlink" href="#parametric-solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
 <p>The reduced row echelon form of the augmented matrix allows us to determine the solutions to the system. There are three cases:</p>
 <p>1. <strong>Every column except the last column is a pivot column</strong>. In this case, the system of equations is consistent and there is a single unique solution. For example,</p>
 <div class="math notranslate nohighlight">
@@ -859,8 +729,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 0 &amp; 0 &amp; \boxed{1} &amp; -2 &amp; -2
 \end{array}\right)\end{split}\]</div>
 <p>has infinitely many solutions since columns 2 and 4 are non-pivot columns. The variables corresponding to a non-pivot column of the matrix are termed <strong>free variables</strong>. In the next section will explore how these solutions can be determined.</p>
-<section id="general-solution-set">
-<h3><span class="section-number">8.3.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">#</a></h3>
+<div class="section" id="general-solution-set">
+<h3>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
 <p>The following system of equations,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -954,8 +824,8 @@ x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
 </div>
 <div class="exercise admonition" id="q_parametric_form">
 
-<p class="admonition-title"><span class="caption-number">Exercise 8.4 </span></p>
-<section id="exercise-content">
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
 <p>The reduced row echelon form of the matrix for a linear system in four variables <span class="math notranslate nohighlight">\(x_1, x_2, x_3, x_4\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left(\begin{array}{cccc|c}1 &amp; 0 &amp; 0 &amp; 3 &amp; 2\\
@@ -964,16 +834,16 @@ x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
 <li><p>Identify the pivot variables and free variables.</p></li>
 <li><p>Write the solution to the system in parametric form.</p></li>
 </ol>
-</section>
 </div>
-</section>
-</section>
-<section id="solutions">
-<h2><span class="section-number">8.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_elimination"> Exercise 8.1</a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_elimination">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p><strong>Gaussian elimination</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1027,20 +897,20 @@ r_3-\frac{1}{5}r_2 &amp; \longrightarrow &amp; (r_3)
 x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
 \end{align*}\]</div>
 <p>The solution is <span class="math notranslate nohighlight">\(\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}3\\2\\1\end{pmatrix}\)</span>.</p>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_row_echelon_form"> Exercise 8.2</a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_row_echelon_form">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>1, 4, 5, 6 are in row echelon form.</p>
 <p>1, 5 are in reduced row echelon form.</p>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_echelon_form_2"> Exercise 8.3</a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_echelon_form_2">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>Row echelon form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1059,12 +929,12 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 4
 \end{pmatrix}
 \end{split}\]</div>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_parametric_form"> Exercise 8.4</a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_parametric_form">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>1. The pivots are <span class="math notranslate nohighlight">\(x_1, x_3\)</span>; the free variables are <span class="math notranslate nohighlight">\(x_2, x_4\)</span>.</p>
 <p>2. Write the system of equations:</p>
 <div class="math notranslate nohighlight">
@@ -1094,10 +964,10 @@ x_1\\x_2\\x_3\\x_4
 \end{pmatrix}
 \end{split}\]</div>
 <p>for any values of <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span>.</p>
-</section>
 </div>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1121,48 +991,28 @@ x_1\\x_2\\x_3\\x_4
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../VectorCalculus/vectorcalctheorems.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Vector Calculus Theorems</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="matrices.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Matrices</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Natural Sciences<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

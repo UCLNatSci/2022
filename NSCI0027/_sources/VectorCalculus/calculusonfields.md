@@ -12,44 +12,45 @@ the scope of this course).
 
 ### Scalar Fields
 A scalar field is a physical quantity which has some value (or magnitude) but contains no information about direction, at every point ${\bf r} = (x, \,y, \,z)$ 
-within a domain. Physical examples include pressure and temperature.  Mathematically we can write this as a function $\phi$ such that:
+within a domain. Physical examples include *pressure*, *density* and *temperature*.  Mathematically we can write this as a function $\phi = \phi({\bf r})$.    We can 
+picture scalar fields in {numref}`scalarfield`, where the value of the scalar could be plotted as a surface or contour plot.
 
-```{math}
-\phi \,:\, D \,\subset\, \mathbb{R}^3 \,&\longrightarrow&\, \mathbb{R} \\
-{\bf r} &\longrightarrow&\, \phi({\bf r})
+```{figure} ../figures/scalarfieldexample.png
+---
+name: scalarfield
+---
+<b> Left Pane:</b> An example of a two-dimensional scalar field, $\phi(x,\, y) = \exp(-(x^2+y^2))$ (plotted in green on the $z$ axis) defined 
+over the domain $D\,:\,x^2 + y^2 \leq 1$ (shown in red on the $(x,\,y)$ plane),
+<b> Right Pane:</b> Contour lines of the scalar field, showing lines of constant $\phi$ in blue, within the domain $D$.
 ```
 
 ### Vector Fields
 A vector field A scalar field is a physical quantity which has both magnitude and direction, at every point ${\bf r} = (x, \,y, \,z)$ within a domain.  Physical 
-examples include 8velocity*, *force*, *electric* and *magnetic fields*.  Mathematically we can write this as a function $\bf A(r)$ such that:
+examples include *velocity*, *force*, *electric field* and *magnetic field*.  Mathematically we can write this as a function $\bf A(r)$ such that:
 
 ```{math}
-\phi \,:\, D \,\subset\, \mathbb{R}^3 \,&\longrightarrow \, \mathbb{R}^3 \\
-{\bf r} &\longrightarrow\, {\bf A(r)} = \begin{pmatrix}
+{\bf A(r)} = 
+\begin{pmatrix}
  A_x \,({\bf r})\\
  A_y \,({\bf r})\\
  A_z \,({\bf r}) 
 \end{pmatrix}
 ```
 
-We can picture these fields in {numref}`scalarvectorfield`, outlining the difference between scalar and vecor fields.
+We can picture vector fields in {numref}`vectorfield`, outlining a vector field 
 
-```{figure} ../figures/scalarvectorfield.png
+```{figure} ../figures/vectorfieldexample.png
 ---
-name: scalarvectorfield
+name: vectorfield
 ---
-<b> Left Pane:</b> An example of a two-dimensional scalar field, $\phi(x,\, y) = \exp(-(x^2+y^2))$ (plotted in green on the $z$ axis) defined 
-over the domain $D\,:\,x^2 + y^2 \leq 1$ (shown in red on the $(x,\,y)$ plane),
-<b> Center Pane:</b> Contour lines of the scalar field, showing lines of constant $\phi$ in blue, within the domain $D$,
-<b> Right Pane:</b> The vector field ${\bf A(r)} = \frac{1}{10}\begin{pmatrix}
+The vector field $\displaystyle {\bf A(r)} = \frac{1}{10}\begin{pmatrix}
  x\\
  y^2
-\end{pmatrix}$ over the same domain $D$.
+\end{pmatrix}$ over the domain $D\,:\,x^2 + y^2 \leq 1$ (shown in red on the $(x,\,y)$ plane)
 ```
 
 ## Calculus on Fields
 
-### Gradient Operator
 Now that we have defined fields, which can vary according to different parameters at every point within a domain, we can begin to apply 
 our toolkit of mathematical tools, here calculus.  
 
@@ -123,8 +124,11 @@ Looking at this expression further:
 therefore $|\nabla_{\hat{\bf u}} \phi|$ is maximised when $\theta = 0$ - The gradient $\nabla \phi$ of a scalar field $\phi$ always points toward the 
 direction of maximum increase of $\phi$ (i.e. a maxima).  
 
-Likewise the directional derivative is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = C$ which is 
-one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D there would be contour lines).
+Likewise the directional derivative is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = \text{constant}$ which is 
+one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D they would be contour lines).
+
+We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$.
+
 
 ````{admonition} Worked example
 :class: seealso 
@@ -146,32 +150,22 @@ name: scalarfieldgradient
 ---
 Gradients $\nabla \phi$ for a scalar field $\phi({\bf r}) = \exp(-(x^2+y^2))$ at a few different points along the contour plot (denoted 
 $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of $\phi$, 
-which from {numref}`scalarvectorfield` we know is a maxima.
+which from the surface plot in {numref}`scalarfield` we know is a maxima.
 ```
-
 
 The gradient of $\phi(x,\,y,\,z)$ will therefore be perpendicular to the surface $\phi=c$, and we can use this to find the tangent plane 
-to the surface at a given point.  The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, 
-as illustrated in {numref}`quiver`.
-
-```{figure} ../figures/quiver.png
----
-name: quiver
----
-A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla z = (3x^2−2y,\,−3y^2−2x,\,0)$.
-```
+to the surface at a given point. 
 ````
-We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$.
 
-````{admonition} Worked examples
-:class: seealso
+````{admonition} Further worked examples
+:class: seealso, dropdown
 
 1\. Find the tangent plane for the surface 
 ```{math}
 z = x^3−y^3−2xy+2
 ```
 
-This equation means we can write $\phi = x^3−y^3−2xy+2 - z$ and therefore:
+This equation means we can write $\phi = x^3−y^3−2xy+2 - z = 0$ and therefore:
 ```{math}
 {\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}
 ```
@@ -181,6 +175,15 @@ $\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface 
 ```{math}
 {\bf n}_A &=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
 {\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=  {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
+```
+
+The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, as illustrated in {numref}`quiver`.
+
+```{figure} ../figures/quiver.png
+---
+name: quiver
+---
+A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla \phi = (3x^2−2y,\,−3y^2−2x,\,-1)$.
 ```
 
 2\. Find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and find the directional 
@@ -218,6 +221,10 @@ To find the <em>vector total differential</em>:
 \mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
 
 ````
+
+## Polar Coordinates
+
+
 
 
 

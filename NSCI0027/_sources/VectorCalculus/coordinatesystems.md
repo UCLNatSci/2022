@@ -54,7 +54,21 @@ In doing so we can rewrite the coordinate vector and find the infinitesimal chan
  &=  \begin{pmatrix} \cos(\theta) \\ \sin(\theta)\end{pmatrix}\mathrm{d}r + \begin{pmatrix} -\sin(\theta) \\ \cos(\theta) \end{pmatrix}r\mathrm{d}\theta\\
  &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta} \mathrm{d}\theta
 ```
-where we have defined unit vectors for the $r,\,\theta$ directions.  We can see these illustrated in 
+where we have defined vectors for the $r,\,\theta$ directions.  
+
+We notice here that these are actually unit vectors:
+```{math}
+|\hat{\bf r}|^2 &= \cos^2(\theta) + \sin^2(\theta) = 1 \\
+|\hat{\bf \theta}|^2 &= (-\sin(\theta))^2 + \cos^2(\theta) = 1
+```
+and they are also orthogonal (perpendicular):
+```{math}
+\hat{\bf r} \cdot \hat{\bf \theta} = -\cos(\theta)\,\sin(\theta) + \sin(\theta)\,\cos(\theta) = 0
+```
+
+So 2D polar coordinates actually make up an *orthonormal* coordinate basis (orthongoal and normalised)
+
+We can see these illustrated in 
 {numref}`polaraxes`, where the $\hat{\bf r},\, \hat{\bf \theta}$ coordinates can we see to be perpendicular 
 and from the definition we see that that they staisfy all the properties of Equation {eq}`vectorproperties`.
 
@@ -79,7 +93,7 @@ diagram in {numref}`cartesian` to indicate the right handed axis convention.
 ---
 name: cartesian
 ---
-A set of 3D right handed Cartesian coordinate axes.
+**Left:** A set of 3D right handed Cartesian coordinate axes.  **Right:** *Upper figure* left handed coordainte axes, *Lower figure* right handed coordinate axes.
 ```
 
 Here we see that the coordindates can take any value in $x \in (\infty,\, \infty), \,y \in (\infty,\, \infty),\, z \in (\infty,\, \infty)$
@@ -95,9 +109,9 @@ where we have clarified the basis vectors.  Note that these satisfy the followin
 :label: vectorproperties
 |\hat{\bf x }| &=  |\hat{\bf y }| = |\hat{\bf z }| = 1\\
 \hat{\bf x} \cdot \hat{\bf y} &=  \hat{\bf x} \cdot \hat{\bf y} = \hat{\bf x} \cdot \hat{\bf y} = 0 \\
-\hat{\bf x} \cdot \hat{\bf y} &=  \hat{\bf z} \\
-\hat{\bf y} \cdot \hat{\bf z} &=  \hat{\bf x} \\
-\hat{\bf z} \cdot \hat{\bf x} &=  \hat{\bf y} 
+\hat{\bf x} \times \hat{\bf y} &=  \hat{\bf z} \\
+\hat{\bf y} \times \hat{\bf z} &=  \hat{\bf x} \\
+\hat{\bf z} \times \hat{\bf x} &=  \hat{\bf y} 
 ```
 
 Another way to represent this is using a coordinate vector ${\bf r}$:
@@ -161,7 +175,21 @@ We can then write the infinitesimal changes in the coordinate vector $\bf r$ as:
  &=  \hat{\bf r} \,\mathrm{d}r + \hat{\bf \phi}\,r\,\mathrm{d}\phi + \hat{\bf \theta} \,r\,\sin(\phi)\,\mathrm{d}\theta
 ```
 
-Each coordinate here has a range, $r \in [0,\, \infty)$, whereas the two angles here have $\theta \in [0,\, 2\pi),\, \phi \in [0,\, \pi)$.  
+and once again notice these are unit vectors:
+```{math}
+|\hat{\bf r}|^2 &= \sin^2(\phi)\left(\cos^2(\theta) + \sin^2(\theta)\right) + \cos^2(\phi) = \sin^2(\phi) + \cos^2(\phi)= 1 \\
+|\hat{\bf \phi}|^2 &= \cos^2(\phi)\left(\cos^2(\theta) + \sin^2(\theta)\right) + \sin^2(\phi) = \cos^2(\phi) + \sin^2(\phi)= 1 \\
+|\hat{\bf \theta}|^2 &= (-\sin(\theta))^2 + \cos^2(\theta) = 1 
+```
+and they are also orthogonal (perpendicular):
+```{math}
+\hat{\bf r} \cdot \hat{\bf \phi} = \hat{\bf r} \cdot \hat{\bf \theta} = \hat{\bf \phi} \cdot \hat{\bf \theta} = 0
+```
+so spherical polar coordinates also form an *orthonormal* coordinate basis.
+
+Each coordinate here has a range, $r \in [0,\, \infty)$, whereas the two angles here have $\theta \in [0,\, 2\pi),\, \phi \in [0,\, \pi)$.  It might be a little confusing why 
+the angles do not both go to $2\pi$, however if we think about the going form $\phi = 0 \rightarrow \phi = \pi$ this will form a semicircle.  Rotating this around 
+$\theta = 0\rightarrow \theta = 2\pi$ does give a full sphere - so only *one* of the two spherical angles should be up to $\pi$ and the other up to $2\pi$.
 
 In this convention, the volume element $\mathrm{d}V$ is given by:
 ```{math}
