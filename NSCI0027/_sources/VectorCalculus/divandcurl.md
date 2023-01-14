@@ -10,7 +10,7 @@ operator, means the expression has the form:
 \nabla\cdot {\bf A(r)} = \partial_x\, A_x + \partial_y\, A_y + \partial_z\, A_z
 ```
 
-This is often known as the <b>Divergence</b> of ${\bf A(r)}$ or $\text{div}\,{\bf A(r)}$.  Note that in the case of operators we need to be a little careful of the 
+This is often known as the <b>Divergence</b> of ${\bf A}$ or $\text{div}\,{\bf A}$.  Note that in the case of operators we need to be a little careful of the 
 ordering of the terms, since ${\bf A(r)}\cdot \nabla$ would give:
 
 ```{math}
@@ -35,11 +35,56 @@ Plotting the vector field ${\bf A_1}$ which has non-zero divergence.
 ```
 
 We can see that the origin here really plays the role of a centre of the divergence, the field lines all appear to flow outwards, becuase here $\nabla \cdot {\bf A} > 0$.  In the case of 
-$\nabla \cdot {\bf A} < 0$, field lines would flow into a point and there would be a <em>convergnece</em> of the field. 
+$\nabla \cdot {\bf A} < 0$, field lines would flow into a point and there would be a <em>convergence</em> of the field. 
+
+### Other coordinate systems
+In cylindrical polar coordinates, we have the additional complication that the unit vectors:
+```{math}
+ \hat{\bf r}  = \begin{pmatrix} 
+\cos(\theta) \\ 
+\sin(\theta) \\ 
+0
+\end{pmatrix}, \qquad  \hat{\bf \theta } = \begin{pmatrix} 
+-\sin(\theta) \\ 
+\cos(\theta)\\ 
+0
+\end{pmatrix},  \qquad \hat{\bf z} = 
+\begin{pmatrix} 
+0 \\ 
+0\\ 
+1\end{pmatrix} \\
+```
+are now not all constant, so in fact when we apply the derivative operator, we need to do any derivatives *ahead* of the dot product:
+
+```{math}
+\nabla \cdot {\bf A} &= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial }{\partial \theta}  
++ \hat{\bf z} \,\frac{\partial }{\partial z} 
+ \right) \cdot \left( A_r\,\hat{\bf r} + A_\theta\,\hat{\bf \theta} + A_z\,\hat{\bf z}\right) \\
+ &=\hat{\bf r}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial r} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial r}  + \frac{\partial (A_z\,\hat{\bf z})}{\partial r} \right) 
+\\ &+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r\,\hat{\bf r})}{\partial \theta} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial \theta} + \frac{\partial (A_z\,\hat{\bf z})}{\partial \theta}  \right) 
+\\ &+ \hat{\bf z}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial z}  + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial z} +\frac{\partial (A_z\,\hat{\bf z})}{\partial z}  \right) 
+```
+So whereas the first and third sets of terms here will not have additional terms, the middle set of terms will be more complicated, because $\hat{\bf r} = \hat{\bf r} (\theta), \, \hat{\bf \theta} = \hat{\bf \theta} (\theta)$.
+
+We find that:
+```{math}
+\frac{\partial \hat{\bf r}}{\partial \theta} = \begin{pmatrix} -\sin(\theta) \\ \cos(\theta)\end{pmatrix} = \hat{\bf \theta}, 
+\qquad \frac{\partial \hat{\bf \theta}}{\partial \theta} = \begin{pmatrix} -\cos(\theta) \\ -\sin(\theta)\end{pmatrix} = - \hat{\bf r}
+```
+which means that:
+```{math}
+\nabla \cdot {\bf A} &= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
+\\ &+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
+\\ &+ \hat{\bf z}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial z}  + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
+&= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
+\Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}
+```
+
 
 ## Curl
 
-We can likewise take a vector field $${\bf A(r)} $ and here take the vector product with the gradient operator $\nabla\times {\bf A(r)}$, which has components:
+We can likewise take a vector field ${\bf A(r)} $ and here take the vector product with the gradient operator $\nabla\times {\bf A(r)}$, which has components:
 
 ```{math}
 \nabla\times {\bf A(r)} = \begin{pmatrix} \partial_y\, A_z - \partial_z\, A_y \\ \partial_z\, A_x - \partial_x\, A_z \\ \partial_x\, A_y - \partial_y\, A_x  \end{pmatrix}
@@ -79,7 +124,7 @@ We can see that a linear combination of vector fields $\bf A_1 + A_2$ would prod
 ---
 name: divcurl
 ---
-The effect of adding a divergence (curl free) field to a curl (divergence free) field.
+The effect of adding a divergence (curl free) field (left hand figure) to a curl (divergence free) field (middle figure) is shown in the right hand figure.
 ```
 
 We can use the product rule as well as the rules following scalar and vector products to find a vareity of vector calculus relations:
@@ -91,7 +136,7 @@ We can use the product rule as well as the rules following scalar and vector pro
 \nabla \times ({\bf A \times B}) &=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}
 ```
 
-## 2nd Order Variations of Fields
+## Second order variations of fields
 We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field $\phi$, 
 ```{math}
 \textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = (\partial_x^2 + \partial_y^2 + \partial_z^2)\phi
@@ -118,4 +163,5 @@ In general we can write a vector field as having two sets of components, one cur
 ```{math}
 {\bf B} = -\nabla \phi + \nabla \times {\bf A}
 ```
+
 

@@ -195,6 +195,13 @@
   <a class="reference internal nav-link" href="#divergence">
    4.1. Divergence
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-coordinate-systems">
+     4.1.1. Other coordinate systems
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#curl">
@@ -202,8 +209,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nd-order-variations-of-fields">
-   4.3. 2nd Order Variations of Fields
+  <a class="reference internal nav-link" href="#second-order-variations-of-fields">
+   4.3. Second order variations of fields
   </a>
  </li>
 </ul>
@@ -230,6 +237,13 @@
   <a class="reference internal nav-link" href="#divergence">
    4.1. Divergence
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-coordinate-systems">
+     4.1.1. Other coordinate systems
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#curl">
@@ -237,8 +251,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nd-order-variations-of-fields">
-   4.3. 2nd Order Variations of Fields
+  <a class="reference internal nav-link" href="#second-order-variations-of-fields">
+   4.3. Second order variations of fields
   </a>
  </li>
 </ul>
@@ -259,7 +273,7 @@
 operator, means the expression has the form:</p>
 <div class="math notranslate nohighlight">
 \[\nabla\cdot {\bf A(r)} = \partial_x\, A_x + \partial_y\, A_y + \partial_z\, A_z\]</div>
-<p>This is often known as the <b>Divergence</b> of <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> or <span class="math notranslate nohighlight">\(\text{div}\,{\bf A(r)}\)</span>.  Note that in the case of operators we need to be a little careful of the
+<p>This is often known as the <b>Divergence</b> of <span class="math notranslate nohighlight">\({\bf A}\)</span> or <span class="math notranslate nohighlight">\(\text{div}\,{\bf A}\)</span>.  Note that in the case of operators we need to be a little careful of the
 ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A(r)}\cdot \nabla\)</span> would give:</p>
 <div class="math notranslate nohighlight">
 \[{\bf A(r)} \cdot \nabla= A_x\,\partial_x  + A_y\,\partial_y  + A_z\,\partial_z  \]</div>
@@ -274,11 +288,50 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 <p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Plotting the vector field <span class="math notranslate nohighlight">\({\bf A_1}\)</span> which has non-zero divergence.</span><a class="headerlink" href="#div" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can see that the origin here really plays the role of a centre of the divergence, the field lines all appear to flow outwards, becuase here <span class="math notranslate nohighlight">\(\nabla \cdot {\bf A} &gt; 0\)</span>.  In the case of
-<span class="math notranslate nohighlight">\(\nabla \cdot {\bf A} &lt; 0\)</span>, field lines would flow into a point and there would be a <em>convergnece</em> of the field.</p>
+<span class="math notranslate nohighlight">\(\nabla \cdot {\bf A} &lt; 0\)</span>, field lines would flow into a point and there would be a <em>convergence</em> of the field.</p>
+<div class="section" id="other-coordinate-systems">
+<h3><span class="section-number">4.1.1. </span>Other coordinate systems<a class="headerlink" href="#other-coordinate-systems" title="Permalink to this headline">¶</a></h3>
+<p>In cylindrical polar coordinates, we have the additional complication that the unit vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \hat{\bf r}  = \begin{pmatrix} 
+\cos(\theta) \\ 
+\sin(\theta) \\ 
+0
+\end{pmatrix}, \qquad  \hat{\bf \theta } = \begin{pmatrix} 
+-\sin(\theta) \\ 
+\cos(\theta)\\ 
+0
+\end{pmatrix},  \qquad \hat{\bf z} = 
+\begin{pmatrix} 
+0 \\ 
+0\\ 
+1\end{pmatrix} \\\end{split}\]</div>
+<p>are now not all constant, so in fact when we apply the derivative operator, we need to do any derivatives <em>ahead</em> of the dot product:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf A} &amp;= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial }{\partial \theta}  
++ \hat{\bf z} \,\frac{\partial }{\partial z} 
+ \right) \cdot \left( A_r\,\hat{\bf r} + A_\theta\,\hat{\bf \theta} + A_z\,\hat{\bf z}\right) \\
+ &amp;=\hat{\bf r}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial r} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial r}  + \frac{\partial (A_z\,\hat{\bf z})}{\partial r} \right) 
+\\ &amp;+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r\,\hat{\bf r})}{\partial \theta} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial \theta} + \frac{\partial (A_z\,\hat{\bf z})}{\partial \theta}  \right) 
+\\ &amp;+ \hat{\bf z}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial z}  + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial z} +\frac{\partial (A_z\,\hat{\bf z})}{\partial z}  \right) \end{split}\]</div>
+<p>So whereas the first and third sets of terms here will not have additional terms, the middle set of terms will be more complicated, because <span class="math notranslate nohighlight">\(\hat{\bf r} = \hat{\bf r} (\theta), \, \hat{\bf \theta} = \hat{\bf \theta} (\theta)\)</span>.</p>
+<p>We find that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial \hat{\bf r}}{\partial \theta} = \begin{pmatrix} -\sin(\theta) \\ \cos(\theta)\end{pmatrix} = \hat{\bf \theta}, 
+\qquad \frac{\partial \hat{\bf \theta}}{\partial \theta} = \begin{pmatrix} -\cos(\theta) \\ -\sin(\theta)\end{pmatrix} = - \hat{\bf r}\end{split}\]</div>
+<p>which means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf A} &amp;= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
+\\ &amp;+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
+\\ &amp;+ \hat{\bf z}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial z}  + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
+&amp;= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
+\Rightarrow \nabla \cdot {\bf A}&amp;= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="curl">
 <h2><span class="section-number">4.2. </span>Curl<a class="headerlink" href="#curl" title="Permalink to this headline">¶</a></h2>
-<p>We can likewise take a vector field $<span class="math notranslate nohighlight">\({\bf A(r)} \)</span> and here take the vector product with the gradient operator <span class="math notranslate nohighlight">\(\nabla\times {\bf A(r)}\)</span>, which has components:</p>
+<p>We can likewise take a vector field <span class="math notranslate nohighlight">\({\bf A(r)} \)</span> and here take the vector product with the gradient operator <span class="math notranslate nohighlight">\(\nabla\times {\bf A(r)}\)</span>, which has components:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla\times {\bf A(r)} = \begin{pmatrix} \partial_y\, A_z - \partial_z\, A_y \\ \partial_z\, A_x - \partial_x\, A_z \\ \partial_x\, A_y - \partial_y\, A_x  \end{pmatrix}\end{split}\]</div>
 <p>which is know as the <b>Curl</b> or <b>Rotation</b> of the vector field <span class="math notranslate nohighlight">\(\bf A(r)\)</span> or <span class="math notranslate nohighlight">\(\text{curl}\,{\bf A(r)}\)</span>.</p>
@@ -300,7 +353,7 @@ hand rule, depicted in <a class="reference internal" href="#righthandcurl"><span
 <p>We can see that a linear combination of vector fields <span class="math notranslate nohighlight">\(\bf A_1 + A_2\)</span> would produce a vector field with <em>both</em> divergence and curl, which is shown in <a class="reference internal" href="#divcurl"><span class="std std-numref">Fig. 4.4</span></a>.</p>
 <div class="figure align-default" id="divcurl">
 <img alt="../_images/divcurl.png" src="../_images/divcurl.png" />
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The effect of adding a divergence (curl free) field to a curl (divergence free) field.</span><a class="headerlink" href="#divcurl" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The effect of adding a divergence (curl free) field (left hand figure) to a curl (divergence free) field (middle figure) is shown in the right hand figure.</span><a class="headerlink" href="#divcurl" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can use the product rule as well as the rules following scalar and vector products to find a vareity of vector calculus relations:</p>
 <div class="math notranslate nohighlight">
@@ -310,8 +363,8 @@ hand rule, depicted in <a class="reference internal" href="#righthandcurl"><span
 \nabla \cdot ({\bf A \times B}) &amp;=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
 \nabla \times ({\bf A \times B}) &amp;=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}\end{split}\]</div>
 </div>
-<div class="section" id="nd-order-variations-of-fields">
-<h2><span class="section-number">4.3. </span>2nd Order Variations of Fields<a class="headerlink" href="#nd-order-variations-of-fields" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="second-order-variations-of-fields">
+<h2><span class="section-number">4.3. </span>Second order variations of fields<a class="headerlink" href="#second-order-variations-of-fields" title="Permalink to this headline">¶</a></h2>
 <p>We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = (\partial_x^2 + \partial_y^2 + \partial_z^2)\phi\]</div>

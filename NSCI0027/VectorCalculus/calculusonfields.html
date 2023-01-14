@@ -213,9 +213,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#polar-coordinates">
-   3.5. Polar Coordinates
+  <a class="reference internal nav-link" href="#different-coordinate-systems">
+   3.5. Different coordinate systems
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cylindrical-polar-coordinates">
+     3.5.1. Cylindrical polar coordinates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spherical-polar-coordinates">
+     3.5.2. Spherical polar coordinates
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -258,9 +270,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#polar-coordinates">
-   3.5. Polar Coordinates
+  <a class="reference internal nav-link" href="#different-coordinate-systems">
+   3.5. Different coordinate systems
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cylindrical-polar-coordinates">
+     3.5.1. Cylindrical polar coordinates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spherical-polar-coordinates">
+     3.5.2. Spherical polar coordinates
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -352,14 +376,14 @@ operator:</p>
  \partial/\partial x \\
  \partial/\partial y \\
  \partial/\partial z 
-\end{pmatrix} \end{split}\]</div>
+\end{pmatrix} = \frac{\partial}{\partial x} \, \hat {\bf x} + \frac{\partial }{\partial y} \, \hat {\bf y}+ \frac{\partial}{\partial z} \, \hat {\bf z}\end{split}\]</div>
 <p>which as an operator needs to act on a scalar field:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla \phi = \begin{pmatrix}
  \partial\phi/\partial x \\
  \partial\phi/\partial y \\
  \partial\phi/\partial z 
-\end{pmatrix} \end{split}\]</div>
+\end{pmatrix} = \frac{\partial \phi}{\partial x} \, \hat {\bf x} + \frac{\partial \phi}{\partial y} \, \hat {\bf y}+ \frac{\partial \phi}{\partial z} \, \hat {\bf z}\end{split}\]</div>
 <p>We see that this is now a vector field, which we can resolve in the <span class="math notranslate nohighlight">\(\hat{\bf u}\)</span> direction:</p>
 <div class="math notranslate nohighlight">
 \[\hat{\bf u} \cdot \nabla \phi\]</div>
@@ -367,10 +391,12 @@ operator:</p>
 <p>Looking at this expression further:</p>
 <div class="math notranslate nohighlight">
 \[|\nabla_{\hat{\bf u}} \phi| = \hat{\bf u} \cdot \nabla \phi = |\hat{\bf u}||\nabla \phi|\cos (\theta) = |\nabla \phi|\cos (\theta)\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(|\nabla_{\hat{\bf u}} \phi|\)</span> is maximised when <span class="math notranslate nohighlight">\(\theta = 0\)</span> - The gradient <span class="math notranslate nohighlight">\(\nabla \phi\)</span> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span> always points toward the
-direction of maximum increase of <span class="math notranslate nohighlight">\(\phi\)</span> (i.e. a maxima).</p>
-<p>Likewise the directional derivative is zero when <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span>, i.e. tangential surfaces, which would be given by <span class="math notranslate nohighlight">\(\phi({\bf r}) = \text{constant}\)</span> which is
-one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D they would be contour lines).</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|\nabla_{\hat{\bf u}} \phi|\)</span> is maximised when <span class="math notranslate nohighlight">\(\theta = 0\)</span> - The gradient <span class="math notranslate nohighlight">\(\nabla \phi\)</span> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span> always points toward the
+direction of maximum increase of <span class="math notranslate nohighlight">\(\phi\)</span> (i.e. a maxima).</p></li>
+<li><p><span class="math notranslate nohighlight">\(|\nabla_{\hat{\bf u}} \phi|\)</span> is zero when <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span>, i.e. tangential surfaces, which would be given by <span class="math notranslate nohighlight">\(\phi({\bf r}) = \text{constant}\)</span> - this
+is always therefore one dimension lower than the dimension of the problem (therefore in 3D these would be surface areas and in 2D they would be contour lines).</p></li>
+</ul>
 <p>We can always take some surface <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span> and convert it into a scalar field <span class="math notranslate nohighlight">\(\phi\)</span> with some surface normal <span class="math notranslate nohighlight">\({\bf n} = \nabla \phi\)</span>.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
@@ -395,23 +421,7 @@ to the surface at a given point.</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Further worked examples</p>
-<p>1. Find the tangent plane for the surface</p>
-<div class="math notranslate nohighlight">
-\[z = x^3−y^3−2xy+2\]</div>
-<p>This equation means we can write <span class="math notranslate nohighlight">\(\phi = x^3−y^3−2xy+2 - z = 0\)</span> and therefore:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}\end{split}\]</div>
-<p>If we want to find the equation of the resulting tangent surface at a given point, say <span class="math notranslate nohighlight">\(A:(1,\,1,\,0)\)</span>, then we know that the scalar products of all vectors
-<span class="math notranslate nohighlight">\(\begin{pmatrix} x\\y\\z \end{pmatrix}\)</span> on the tangent surface with the surface normal must agree, hence:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}{\bf n}_A &amp;=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
-{\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &amp;=  {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4\end{split}\]</div>
-<p>The gradient of <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span> will be perpendicular to the contours of <span class="math notranslate nohighlight">\(z\)</span>, projected in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, as illustrated in <a class="reference internal" href="#quiver"><span class="std std-numref">Fig. 3.4</span></a>.</p>
-<div class="figure align-default" id="quiver">
-<img alt="../_images/quiver.png" src="../_images/quiver.png" />
-<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">A contour plot of the surface <span class="math notranslate nohighlight">\(z = x^3−y^3−2xy+2\)</span>, together with the gradient field given by <span class="math notranslate nohighlight">\(\nabla \phi = (3x^2−2y,\,−3y^2−2x,\,-1)\)</span>.</span><a class="headerlink" href="#quiver" title="Permalink to this image">¶</a></p>
-</div>
-<p>2. Find the gradient of the function <span class="math notranslate nohighlight">\(f(x,\,y,\,z) = xyz\)</span> at the point <span class="math notranslate nohighlight">\((−2,\,3,\,4)\)</span> and find the directional
+<p>1. Find the gradient of the function <span class="math notranslate nohighlight">\(f(x,\,y,\,z) = xyz\)</span> at the point <span class="math notranslate nohighlight">\((−2,\,3,\,4)\)</span> and find the directional
 derivative of this function in the direction <span class="math notranslate nohighlight">\({\bf v} = (3, \,-4, \,12)\)</span>.</p>
 <p>We can find <span class="math notranslate nohighlight">\(\nabla f\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -420,6 +430,28 @@ derivative of this function in the direction <span class="math notranslate nohig
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{|{\bf v}|}{\bf v} \cdot \nabla f\Bigg|_{(−2,\,3,\,4)} \Rightarrow 
 \frac{1}{\sqrt{3^2 + 4^2 + 12^2}} \begin{pmatrix} 3 \\ -4 \\ 12 \end{pmatrix}\cdot \begin{pmatrix} 12 \\ -8 \\ -6\end{pmatrix} = -\frac{4}{13}\end{split}\]</div>
+<p>2. Find the tangent plane for the surface</p>
+<div class="math notranslate nohighlight">
+\[z = x^3−y^3−2xy+2\]</div>
+<p>at <span class="math notranslate nohighlight">\(x=y=1\)</span>.</p>
+<p>This equation means we can write <span class="math notranslate nohighlight">\(\phi = x^3−y^3−2xy+2 - z = 0\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}\end{split}\]</div>
+<p>The gradient of <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span> will be perpendicular to the contours of <span class="math notranslate nohighlight">\(z\)</span>, projected in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane,
+as illustrated in <a class="reference internal" href="#quiver"><span class="std std-numref">Fig. 3.4</span></a>.</p>
+<div class="figure align-default" id="quiver">
+<img alt="../_images/quiver.png" src="../_images/quiver.png" />
+<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">A contour plot of the surface <span class="math notranslate nohighlight">\(z = x^3−y^3−2xy+2\)</span>, together with the gradient field given by <span class="math notranslate nohighlight">\(\nabla \phi = (3x^2−2y,\,−3y^2−2x,\,-1)\)</span>.</span><a class="headerlink" href="#quiver" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can see that the gradient field vectors map out the stationary points on the function.</p>
+<p>If we want to find the equation of the resulting tangent surface at a <span class="math notranslate nohighlight">\(x=y=1\)</span> we find <span class="math notranslate nohighlight">\(z = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[A:(1,\,1,\,0)\]</div>
+<p>then we know that the scalar form of the tangent plane, which must satisfy <span class="math notranslate nohighlight">\({\bf n}\cdot ({\bf r}- {\bf r_0}) = 0\)</span> means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf n}|_A &amp;=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
+{\bf n}\cdot ({\bf r}- {\bf r_0}) = 0 &amp;\Rightarrow  \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \cdot\begin{pmatrix} x-1\\y-1\\z-0 \end{pmatrix} =  0 \\
+&amp;\Rightarrow x - 5y - z  =-4\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="total-differential">
@@ -428,20 +460,48 @@ derivative of this function in the direction <span class="math notranslate nohig
 <div class="math notranslate nohighlight">
 \[\mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z\]</div>
 <p>which measures the infinitesimal change of  <span class="math notranslate nohighlight">\(\phi\)</span> as we change <span class="math notranslate nohighlight">\(x, \,y,\,z\)</span> by infinitesimal amounts <span class="math notranslate nohighlight">\(\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z\)</span>.<br />
-Likewise we can define the vectorial line element:</p>
+Likewise we can can the vectorial line element:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix}\end{split}\]</div>
-<p>or to write in a slightly more compact notation:</p>
+\[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix} = \hat{\bf x}\, \mathrm{d}x  + \hat{\bf y}\, \mathrm{d}y  + \hat{\bf z} \, \mathrm{d}z \end{split}\]</div>
+<p>to write the total differential in a slightly more compact notation:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\]</div>
-<p>To find the <em>vector total differential</em>:</p>
+<p>To find the <em>vector total differential</em>, we can just use the multi-variate chain rule expression for a vectorised variable:</p>
 <div class="math notranslate nohighlight">
-\[\mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
-\]</div>
+\[\mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z\]</div>
 </div>
-<div class="section" id="polar-coordinates">
-<h2><span class="section-number">3.5. </span>Polar Coordinates<a class="headerlink" href="#polar-coordinates" title="Permalink to this headline">¶</a></h2>
-<p></p>
+<div class="section" id="different-coordinate-systems">
+<h2><span class="section-number">3.5. </span>Different coordinate systems<a class="headerlink" href="#different-coordinate-systems" title="Permalink to this headline">¶</a></h2>
+<p>The gradient operator does not need to be specified in Cartesian coordinates, we can also look at it in other
+coordinate systems too.</p>
+<p>Using the result <span class="math notranslate nohighlight">\(\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\)</span>, we can examine the change in <span class="math notranslate nohighlight">\(\mathrm{d}{\bf r}\)</span> over
+different systems of coordinates, which will tell us how <span class="math notranslate nohighlight">\(\nabla \phi\)</span> will be different.</p>
+<div class="section" id="cylindrical-polar-coordinates">
+<h3><span class="section-number">3.5.1. </span>Cylindrical polar coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">¶</a></h3>
+<p>Here the vectorial line element has the form:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf r} = \hat{\bf r}\, \mathrm{d}r + \hat{\bf \theta }\,r\,\mathrm{d}\theta  + \hat{\bf z} \,\mathrm{d}z\]</div>
+<p>and looking at what we expect to get <span class="math notranslate nohighlight">\(\mathrm{d}\phi\)</span> from the multi-variate chain rule:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta + \frac{\partial \phi}{\partial z} \mathrm{d} z\]</div>
+<p>then our expression for and so for <span class="math notranslate nohighlight">\(\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\)</span> to match, we must have a gradient operator to be of the form:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial \phi}{\partial \theta}  + \hat{\bf z} \,\frac{\partial \phi}{\partial z} \]</div>
+</div>
+<div class="section" id="spherical-polar-coordinates">
+<h3><span class="section-number">3.5.2. </span>Spherical polar coordinates<a class="headerlink" href="#spherical-polar-coordinates" title="Permalink to this headline">¶</a></h3>
+<p>Here the vectorial line element has the form:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf r} = \hat{\bf r} \,\mathrm{d}r + \hat{\bf \phi}\,r\,\mathrm{d}\phi + \hat{\bf \theta} \,r\,\sin(\phi)\,\mathrm{d}\theta\]</div>
+<p>and looking at what we expect to get <span class="math notranslate nohighlight">\(\mathrm{d}\phi\)</span> from the multi-variate chain rule:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \phi} \mathrm{d} \phi + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta\]</div>
+<p>then our expression for and so for <span class="math notranslate nohighlight">\(\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\)</span> to match, we must have a gradient operator to be of the form:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \phi}\,\frac{1}{r}\,\frac{\partial \phi}{\partial \phi}  + \hat{\bf \theta} \,\frac{1}{r\sin(\phi)}\,\frac{\partial \phi}{\partial \theta} \]</div>
+<p>A very good resource for all these expressions can be found at
+<a href="https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates" target="_blank">Del in cylindrical and spherical coordinates</a></p>
+</div>
 </div>
 </div>
 

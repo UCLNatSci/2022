@@ -97,7 +97,7 @@ operator:
  \partial/\partial x \\
  \partial/\partial y \\
  \partial/\partial z 
-\end{pmatrix} 
+\end{pmatrix} = \frac{\partial}{\partial x} \, \hat {\bf x} + \frac{\partial }{\partial y} \, \hat {\bf y}+ \frac{\partial}{\partial z} \, \hat {\bf z}
 ```
 which as an operator needs to act on a scalar field:
 ```{math}
@@ -105,7 +105,7 @@ which as an operator needs to act on a scalar field:
  \partial\phi/\partial x \\
  \partial\phi/\partial y \\
  \partial\phi/\partial z 
-\end{pmatrix} 
+\end{pmatrix} = \frac{\partial \phi}{\partial x} \, \hat {\bf x} + \frac{\partial \phi}{\partial y} \, \hat {\bf y}+ \frac{\partial \phi}{\partial z} \, \hat {\bf z}
 ```
 We see that this is now a vector field, which we can resolve in the $\hat{\bf u}$ direction:
 
@@ -121,11 +121,11 @@ Looking at this expression further:
 |\nabla_{\hat{\bf u}} \phi| = \hat{\bf u} \cdot \nabla \phi = |\hat{\bf u}||\nabla \phi|\cos (\theta) = |\nabla \phi|\cos (\theta)
 ```
 
-therefore $|\nabla_{\hat{\bf u}} \phi|$ is maximised when $\theta = 0$ - The gradient $\nabla \phi$ of a scalar field $\phi$ always points toward the 
+-  $|\nabla_{\hat{\bf u}} \phi|$ is maximised when $\theta = 0$ - The gradient $\nabla \phi$ of a scalar field $\phi$ always points toward the 
 direction of maximum increase of $\phi$ (i.e. a maxima).  
 
-Likewise the directional derivative is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = \text{constant}$ which is 
-one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D they would be contour lines).
+- $|\nabla_{\hat{\bf u}} \phi|$ is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = \text{constant}$ - this 
+is always therefore one dimension lower than the dimension of the problem (therefore in 3D these would be surface areas and in 2D they would be contour lines).
 
 We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$.
 
@@ -160,33 +160,7 @@ to the surface at a given point.
 ````{admonition} Further worked examples
 :class: seealso, dropdown
 
-1\. Find the tangent plane for the surface 
-```{math}
-z = x^3−y^3−2xy+2
-```
-
-This equation means we can write $\phi = x^3−y^3−2xy+2 - z = 0$ and therefore:
-```{math}
-{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}
-```
-
-If we want to find the equation of the resulting tangent surface at a given point, say $A:(1,\,1,\,0)$, then we know that the scalar products of all vectors 
-$\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface normal must agree, hence:
-```{math}
-{\bf n}_A &=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
-{\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=  {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
-```
-
-The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, as illustrated in {numref}`quiver`.
-
-```{figure} ../figures/quiver.png
----
-name: quiver
----
-A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla \phi = (3x^2−2y,\,−3y^2−2x,\,-1)$.
-```
-
-2\. Find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and find the directional 
+1\. Find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and find the directional 
 derivative of this function in the direction ${\bf v} = (3, \,-4, \,12)$.   
 
 We can find $\nabla f$:
@@ -199,6 +173,41 @@ and therefore the directional derivative is given by:
 \frac{1}{|{\bf v}|}{\bf v} \cdot \nabla f\Bigg|_{(−2,\,3,\,4)} \Rightarrow 
 \frac{1}{\sqrt{3^2 + 4^2 + 12^2}} \begin{pmatrix} 3 \\ -4 \\ 12 \end{pmatrix}\cdot \begin{pmatrix} 12 \\ -8 \\ -6\end{pmatrix} = -\frac{4}{13}
 ```
+
+
+2\. Find the tangent plane for the surface 
+```{math}
+z = x^3−y^3−2xy+2
+```
+at $x=y=1$.
+
+This equation means we can write $\phi = x^3−y^3−2xy+2 - z = 0$ and therefore:
+```{math}
+{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}
+```
+
+The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, 
+as illustrated in {numref}`quiver`.
+
+```{figure} ../figures/quiver.png
+---
+name: quiver
+---
+A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla \phi = (3x^2−2y,\,−3y^2−2x,\,-1)$.
+```
+
+We can see that the gradient field vectors map out the stationary points on the function.
+
+If we want to find the equation of the resulting tangent surface at a $x=y=1$ we find $z = 0$:
+```{math}
+A:(1,\,1,\,0)
+```
+then we know that the scalar form of the tangent plane, which must satisfy ${\bf n}\cdot ({\bf r}- {\bf r_0}) = 0$ means:
+```{math}
+{\bf n}|_A &=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
+{\bf n}\cdot ({\bf r}- {\bf r_0}) = 0 &\Rightarrow  \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \cdot\begin{pmatrix} x-1\\y-1\\z-0 \end{pmatrix} =  0 \\
+&\Rightarrow x - 5y - z  =-4
+```
 ````
 
 ## Total Differential
@@ -208,26 +217,59 @@ Recall from our discussions about partial derivatives, we can also define a <em>
 \mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
 ```
 which measures the infinitesimal change of  $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
-Likewise we can define the vectorial line element:
+Likewise we can can the vectorial line element:
 ```{math}
-\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix}
+\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix} = \hat{\bf x}\, \mathrm{d}x  + \hat{\bf y}\, \mathrm{d}y  + \hat{\bf z} \, \mathrm{d}z 
 ```
-or to write in a slightly more compact notation:
+to write the total differential in a slightly more compact notation:
 ```{math}
 \mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}
 ```
-To find the <em>vector total differential</em>:
+To find the <em>vector total differential</em>, we can just use the multi-variate chain rule expression for a vectorised variable:
 ```{math}
 \mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
-
-````
-
-## Polar Coordinates
+```
 
 
 
 
+## Different coordinate systems
 
+The gradient operator does not need to be specified in Cartesian coordinates, we can also look at it in other 
+coordinate systems too.
 
+Using the result $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$, we can examine the change in $\mathrm{d}{\bf r}$ over 
+different systems of coordinates, which will tell us how $\nabla \phi$ will be different.
 
-
+### Cylindrical polar coordinates
+
+Here the vectorial line element has the form:
+```{math}
+\mathrm{d}{\bf r} = \hat{\bf r}\, \mathrm{d}r + \hat{\bf \theta }\,r\,\mathrm{d}\theta  + \hat{\bf z} \,\mathrm{d}z
+```
+and looking at what we expect to get $\mathrm{d}\phi$ from the multi-variate chain rule:
+```{math}
+\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta + \frac{\partial \phi}{\partial z} \mathrm{d} z
+```
+then our expression for and so for $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$ to match, we must have a gradient operator to be of the form:
+```{math}
+\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial \phi}{\partial \theta}  + \hat{\bf z} \,\frac{\partial \phi}{\partial z} 
+```
+
+### Spherical polar coordinates
+
+Here the vectorial line element has the form:
+```{math}
+\mathrm{d}{\bf r} = \hat{\bf r} \,\mathrm{d}r + \hat{\bf \phi}\,r\,\mathrm{d}\phi + \hat{\bf \theta} \,r\,\sin(\phi)\,\mathrm{d}\theta
+```
+and looking at what we expect to get $\mathrm{d}\phi$ from the multi-variate chain rule:
+```{math}
+\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \phi} \mathrm{d} \phi + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta
+```
+then our expression for and so for $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$ to match, we must have a gradient operator to be of the form:
+```{math}
+\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \phi}\,\frac{1}{r}\,\frac{\partial \phi}{\partial \phi}  + \hat{\bf \theta} \,\frac{1}{r\sin(\phi)}\,\frac{\partial \phi}{\partial \theta} 
+```
+
+A very good resource for all these expressions can be found at 
+<a href="https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates" target="_blank">Del in cylindrical and spherical coordinates</a>
