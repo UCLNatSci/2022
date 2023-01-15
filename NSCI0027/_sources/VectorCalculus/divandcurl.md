@@ -37,7 +37,7 @@ Plotting the vector field ${\bf A_1}$ which has non-zero divergence.
 We can see that the origin here really plays the role of a centre of the divergence, the field lines all appear to flow outwards, becuase here $\nabla \cdot {\bf A} > 0$.  In the case of 
 $\nabla \cdot {\bf A} < 0$, field lines would flow into a point and there would be a <em>convergence</em> of the field. 
 
-### Other coordinate systems
+### Cylindrical coordinate system
 In cylindrical polar coordinates, we have the additional complication that the unit vectors:
 ```{math}
  \hat{\bf r}  = \begin{pmatrix} 
@@ -58,7 +58,7 @@ are now not all constant, so in fact when we apply the derivative operator, we n
 
 ```{math}
 \nabla \cdot {\bf A} &= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
-+ \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial }{\partial \theta}  
++ \frac{\hat{\bf \theta }}{r}\,\frac{\partial }{\partial \theta}  
 + \hat{\bf z} \,\frac{\partial }{\partial z} 
  \right) \cdot \left( A_r\,\hat{\bf r} + A_\theta\,\hat{\bf \theta} + A_z\,\hat{\bf z}\right) \\
  &=\hat{\bf r}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial r} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial r}  + \frac{\partial (A_z\,\hat{\bf z})}{\partial r} \right) 
@@ -76,10 +76,89 @@ which means that:
 ```{math}
 \nabla \cdot {\bf A} &= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
 \\ &+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
-\\ &+ \hat{\bf z}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial z}  + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
+\\ &+ \hat{\bf z}\cdot \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
 &= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
 \Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}
 ```
+
+### Spherical coordinate system
+In spherical polar coordinates, we also have the additional complication that the unit vectors:
+```{math}
+ \hat{\bf r}  = \begin{pmatrix} 
+\cos(\theta)\,\sin(\phi) \\ 
+\sin(\theta)\,\sin(\phi) \\ 
+\cos(\phi)
+\end{pmatrix}, \qquad  \hat{\bf \phi } = \begin{pmatrix} 
+\cos(\theta)\,\cos(\phi) \\ 
+\sin(\theta)\,\cos(\phi) \\ 
+\cos(\phi)
+\end{pmatrix},  \qquad \hat{\bf \theta} = 
+\begin{pmatrix} 
+-\sin(\theta) \\ 
+\cos(\theta)\\ 
+0
+\end{pmatrix} \\
+```
+are now not all constant, so we need to do any derivatives *ahead* of the dot product:
+
+```{math}
+\nabla \cdot {\bf A} &= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \frac{\hat{\bf \phi }}{r}\,\frac{\partial }{\partial \phi}  
++ \frac{\hat{\bf \theta}}{r\sin(\phi)} \,\frac{\partial }{\partial \theta} 
+ \right) \cdot \left( A_r\,\hat{\bf r} + A_\phi\,\hat{\bf \phi} + A_\theta\,\hat{\bf \theta}\right) \\
+ &=\hat{\bf r}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial r} + \frac{\partial (A_\phi\,\hat{\bf \phi})}{\partial r}  + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial r} \right) 
+\\ &+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r\,\hat{\bf r})}{\partial \phi} + \frac{\partial (A_\phi\,\hat{\bf \phi})}{\partial \phi} + \frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial \phi}  \right) 
+\\ &+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r\,\hat{\bf r})}{\partial \theta}  + \frac{\partial (A_\phi\,\hat{\bf \phi})}{\partial \theta} +\frac{\partial (A_\theta\,\hat{\bf \theta})}{\partial \theta}  \right) 
+```
+So whereas the first set of terms here will not have additional terms, the second and third set of terms will be more complicated, because $\hat{\bf r} = \hat{\bf r} (\phi,\, \theta), \, \hat{\bf \phi} = \hat{\bf \phi}(\phi,\,\theta),\, \hat{\bf \theta} = \hat{\bf \theta} (\phi,\,\theta)$.
+
+We find that:
+```{math}
+\frac{\partial \hat{\bf r}}{\partial \phi} &= \begin{pmatrix} 
+\cos(\theta)\,\cos(\phi) \\ 
+\sin(\theta)\,\cos(\phi) \\ 
+\cos(\phi)
+\end{pmatrix} = \hat{\bf \phi}, 
+\qquad 
+\frac{\partial \hat{\bf \phi}}{\partial \phi} = \begin{pmatrix} 
+-\cos(\theta)\,\sin(\phi) \\ 
+-\sin(\theta)\,\sin(\phi) \\ 
+-\cos(\phi)
+\end{pmatrix} = - \hat{\bf r},
+\qquad
+\frac{\partial \hat{\bf \theta}}{\partial \phi} = \begin{pmatrix} 
+0 \\ 
+0 \\ 
+0
+\end{pmatrix} 
+\\
+\frac{\partial \hat{\bf r}}{\partial \theta} &= \begin{pmatrix} 
+-\sin(\theta)\,\sin(\phi) \\ 
+\cos(\theta)\,\sin(\phi)\\ 
+0
+\end{pmatrix} = \sin(\phi)\,\hat{\bf \theta}, 
+\qquad 
+\frac{\partial \hat{\bf \phi}}{\partial \theta} = \begin{pmatrix} 
+-\sin(\theta)\,\cos(\phi) \\ 
+\cos(\theta)\,\cos(\phi)\\ 
+0
+\end{pmatrix} = - \cos(\phi)\,\hat{\bf \theta},\\
+\frac{\partial \hat{\bf \theta}}{\partial \theta} &= \begin{pmatrix} 
+-\cos(\theta) \\ 
+-\sin(\theta) \\ 
+0
+\end{pmatrix} = - (\sin(\phi)\,\hat{\bf r} + \cos(\phi)\,\hat{\bf \phi}),
+```
+which means that:
+```{math}
+\nabla \cdot {\bf A} &= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \phi} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta}\right) 
+\\ &+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} \right) 
+\\ &+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} \right.\\
+&\left.\qquad \qquad - A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \\
+&= \frac{\partial (A_r)}{\partial r} + \frac{A_r}{r} + \frac{2}{r}\frac{\partial (A_\phi)}{\partial \phi}  - \frac{A_\phi\,\cos(\phi)}{r\,\sin(\phi)} + \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\theta)}{\partial \theta} \\
+\Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r^2}\frac{\partial (r^2\,A_r)}{\partial r} + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (\sin(\phi)\,A_\phi)}{\partial \phi}  + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (A_\theta)}{\partial \theta}
+```
+
 
 
 ## Curl
@@ -87,7 +166,9 @@ which means that:
 We can likewise take a vector field ${\bf A(r)} $ and here take the vector product with the gradient operator $\nabla\times {\bf A(r)}$, which has components:
 
 ```{math}
-\nabla\times {\bf A(r)} = \begin{pmatrix} \partial_y\, A_z - \partial_z\, A_y \\ \partial_z\, A_x - \partial_x\, A_z \\ \partial_x\, A_y - \partial_y\, A_x  \end{pmatrix}
+\nabla\times {\bf A(r)} = 
+\begin{vmatrix} \hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ A_x & A_y & A_z\end{vmatrix}
+= \begin{pmatrix} \partial_y\, A_z - \partial_z\, A_y \\ \partial_z\, A_x - \partial_x\, A_z \\ \partial_x\, A_y - \partial_y\, A_x  \end{pmatrix}
 ```
 
 which is know as the <b>Curl</b> or <b>Rotation</b> of the vector field $\bf A(r)$ or $\text{curl}\,{\bf A(r)}$.
@@ -135,6 +216,40 @@ We can use the product rule as well as the rules following scalar and vector pro
 \nabla \cdot ({\bf A \times B}) &=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
 \nabla \times ({\bf A \times B}) &=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}
 ```
+
+### Cylindrical coordinate systems
+
+As with the divergence, the variation of the unit vectors causes additional complexity in calculating the curl:
+```{math}
+\nabla \times {\bf A} = \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \frac{\hat{\bf \theta }}{r}\,\frac{\partial }{\partial \theta}  
++ \hat{\bf z} \,\frac{\partial }{\partial z} 
+ \right) \times \left( A_r\,\hat{\bf r} + A_\theta\,\hat{\bf \theta} + A_z\,\hat{\bf z}\right)
+```
+
+which given our expressions for variation of unit vectors with coordinate variables means:
+```{math}
+\nabla \times {\bf A} &= \hat{\bf r}\times \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
+\\ &+ \frac{\hat{\bf \theta}}{r}\times\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
+\\ &+ \hat{\bf z}\times \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
+```
+Given the cylic nature of unit vectors and their orthongality:
+```{math}
+\hat{\bf r} \times \hat{\bf \theta} &= \hat{\bf z}\\
+\hat{\bf \theta} \times \hat{\bf z} &= \hat{\bf r}\\
+\hat{\bf z} \times \hat{\bf r} &= \hat{\bf \theta}\\
+\hat{\bf r} \times \hat{\bf r} &= \hat{\bf \theta} \times \hat{\bf \theta} = \hat{\bf z} \times \hat{\bf z} = 0
+```
+means we find that:
+```{math}
+\nabla \times {\bf A} &= \left(\frac{\partial (A_\theta)}{\partial r} \,\hat{\bf z} - \frac{\partial (A_z)}{\partial r} \,\hat{\bf \theta}\right) 
++ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf z} + \frac{1}{A_\theta}\,\hat{\bf z} + \frac{1}{r}\frac{\partial (A_z)}{\partial \theta} \,\hat{\bf r} \right) \\
+&+ \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf \theta} - \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf r}\right)\\
+\Rightarrow \nabla \cdot {\bf A}&= \left(\frac{1}{r}\,\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right)\,\hat{\bf r} + \left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)\,\hat{\bf \theta} + \frac{1}{r}\left(\frac{\partial (r\,A_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta}\right)\,\hat{\bf z}
+```
+
+
+%### Spherical coordinate systems
 
 ## Second order variations of fields
 We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field $\phi$, 

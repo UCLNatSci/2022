@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Multivariable Calculus &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,41 +20,40 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +63,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +86,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +107,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector Calculus
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
@@ -122,12 +139,17 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -135,61 +157,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/VectorCalculus/partialdifferentiation.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/VectorCalculus/partialdifferentiation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#first-partial-derivatives">
    First Partial Derivatives
@@ -251,12 +329,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Multivariable Calculus</h1>
@@ -334,13 +411,14 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="multivariable-calculus">
-<h1>Multivariable Calculus<a class="headerlink" href="#multivariable-calculus" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="first-partial-derivatives">
-<h2>First Partial Derivatives<a class="headerlink" href="#first-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="multivariable-calculus">
+<h1>Multivariable Calculus<a class="headerlink" href="#multivariable-calculus" title="Permalink to this headline">#</a></h1>
+<section id="first-partial-derivatives">
+<h2>First Partial Derivatives<a class="headerlink" href="#first-partial-derivatives" title="Permalink to this headline">#</a></h2>
 <p>The plot shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">surf1</span></code> is of a function, <span class="math notranslate nohighlight">\(f(x,\, y)= x^3 - y^3 - 2xy + 2\)</span>, on which curves marked on the surface for lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</p>
 <p>We can consider the rate of change of the function, however since it is a function of two variables, we can see there are two possible kinds of derivative we can find:</p>
 <ul class="simple">
@@ -353,10 +431,12 @@
 \frac{\partial f}{\partial y} &amp;=  -3y^2 - 2x \quad \textrm{(holding $x$ constant and differentiating with respect to $y$)}\end{split}\]</div>
 <p>note that the notation <span class="math notranslate nohighlight">\(\partial\)</span> is distinct from the <span class="math notranslate nohighlight">\(\mathrm{d}\)</span> used for one variable calculus.  It is <em>partial</em> because we
 consider only variations in one of the two variables here.  The results show the local rate of change parallel to each axis at a point <span class="math notranslate nohighlight">\((x,\,y)\)</span>.</p>
-<div class="figure align-default" id="surf1">
+<figure class="align-default" id="surf1">
 <img alt="../_images/surf1.png" src="../_images/surf1.png" />
-<p class="caption"><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span>, along with lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</span><a class="headerlink" href="#surf1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span>, along with lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</span><a class="headerlink" href="#surf1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Just like the one variable derivative, there is a limit definition for partial derivatives for a function <span class="math notranslate nohighlight">\(f = f(x,\,y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial f}{\partial x} &amp;=  \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
@@ -380,9 +460,9 @@ consider only variations in one of the two variables here.  The results show the
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial z}{\partial x} &amp;=  \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
 \frac{\partial z}{\partial y} &amp;=  \frac{2y\sin(x)}{x+y^2\sin(x)}\end{split}\]</div>
-</div>
-<div class="section" id="second-partial-derivatives">
-<h2>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="second-partial-derivatives">
+<h2>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">#</a></h2>
 <p>The second partial derivatives with respect to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are denoted as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial^2 f}{\partial x^2} &amp;=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
@@ -398,9 +478,9 @@ these two expressions are <em>always</em> equal.  The proof of this result (call
 \[\begin{split}\frac{\partial f}{\partial x} = 9 x^2 y^2, &amp;\quad&amp;\, \frac{\partial f}{\partial y} = 6 x^3 y + 2, \\
 \frac{\partial^2 f}{\partial x^2} = 18x y^2, &amp;\quad&amp;\, \frac{\partial^2 f}{\partial y^2} = 6x^3, \\
 \frac{\partial^2 f}{\partial y\,\partial x} = 18x^2 y, &amp;\quad&amp;\, \frac{\partial^2 f}{\partial x\,\partial y} = 18x^2 y \end{split}\]</div>
-</div>
-<div class="section" id="a-common-mistake">
-<h2>A Common Mistake<a class="headerlink" href="#a-common-mistake" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="a-common-mistake">
+<h2>A Common Mistake<a class="headerlink" href="#a-common-mistake" title="Permalink to this headline">#</a></h2>
 <p>Lets look at the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^2 y^3 + x + y\)</span> at the point <span class="math notranslate nohighlight">\((1,\, 1)\)</span>, calculating the mixed partial derivative:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2}{\partial y\,\partial x}(x^2 y^3 + x + y)\]</div>
@@ -420,9 +500,9 @@ perform differentiation first and only substitute in the values in the very last
 <div class="math notranslate nohighlight">
 \[\Bigg[\frac{\partial^2}{\partial y\,\partial x}\left(x^2 y^3 +x+y\right)\Bigg]_{(1,1)} 
 = \Bigg[\frac{\partial }{\partial y}(2xy^3+1)\Big]_{(1,1)} = \Big[6xy^2\Bigg]_{(1,1)} = 6\]</div>
-</div>
-<div class="section" id="notation-for-partial-derivatives">
-<h2>Notation for Partial Derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="notation-for-partial-derivatives">
+<h2>Notation for Partial Derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">#</a></h2>
 <p>Partial derivatives are commonly denoted using subscript notation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_x=\frac{\partial f}{\partial x}, &amp;\quad&amp;\, f_y=\frac{\partial f}{\partial y}, \\
@@ -434,14 +514,16 @@ f_{yx} &amp;=  (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{split}
 <p>You will likely come across yet more alternative notations in the literature, another common one being:</p>
 <div class="math notranslate nohighlight">
 \[D_x=\frac{\partial}{\partial x}\]</div>
-</div>
-<div class="section" id="multivariable-chain-rule">
-<h2>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="multivariable-chain-rule">
+<h2>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">#</a></h2>
 <p>We now consider a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> subjected to small variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">two_step</span></code>.</p>
-<div class="figure align-default" id="two-step">
+<figure class="align-default" id="two-step">
 <img alt="../_images/two_step.png" src="../_images/two_step.png" />
-<p class="caption"><span class="caption-text">Showing the variations <span class="math notranslate nohighlight">\(f(x+\Delta x, \,y+\Delta y)\)</span> in two steps.</span><a class="headerlink" href="#two-step" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Showing the variations <span class="math notranslate nohighlight">\(f(x+\Delta x, \,y+\Delta y)\)</span> in two steps.</span><a class="headerlink" href="#two-step" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Loosely speaking, the total change in the function <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> is the sum of changes due to each variable:</p>
 <div class="math notranslate nohighlight">
 \[\Delta f = \frac{\partial f}{\partial x}\Delta x + \frac{\partial f}{\partial y}\Delta y\]</div>
@@ -473,20 +555,24 @@ is held constant. Written formally:</p>
 \frac{\partial f}{\partial x} &amp;=  \lim_{\Delta x\rightarrow 0}\frac{f(x+\Delta x,y)-f(x,v)}{\Delta x}
 =\lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u,v))-f(x(u,v),y(u,v))}{\Delta u}\end{split}\]</div>
 <p>The lesson here is - <em>it is dangerous to treat partial derivatives as fractions!</em></p>
-</div>
-<div class="section" id="dependency-trees">
-<h2>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dependency-trees">
+<h2>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">#</a></h2>
 <p>The multivariate chain rule can be illustrated as a dependency tree, in <code class="xref std std-numref docutils literal notranslate"><span class="pre">dependency1</span></code>, where we examine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> with <span class="math notranslate nohighlight">\(x = x(u,\, v)\)</span> and <span class="math notranslate nohighlight">\(y = y(u,\, v)\)</span>:</p>
-<div class="figure align-default" id="dependency1">
+<figure class="align-default" id="dependency1">
 <img alt="../_images/dependency1.png" src="../_images/dependency1.png" />
-<p class="caption"><span class="caption-text">Dependency tree for first derivatives.</span><a class="headerlink" href="#dependency1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Dependency tree for first derivatives.</span><a class="headerlink" href="#dependency1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For instance, if we follow the dependency routes involving <span class="math notranslate nohighlight">\(u\)</span>, we get <span class="math notranslate nohighlight">\(f_u = f_x\, x_u + f_y\, y_u\)</span>.</p>
 <p>We can do the same thing for the second derivatives (a repeat application of the chain rule), in <code class="xref std std-numref docutils literal notranslate"><span class="pre">dependency2</span></code>.</p>
-<div class="figure align-default" id="dependency2">
+<figure class="align-default" id="dependency2">
 <img alt="../_images/dependency2.png" src="../_images/dependency2.png" />
-<p class="caption"><span class="caption-text">Dependency tree for second derivatives.</span><a class="headerlink" href="#dependency2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Dependency tree for second derivatives.</span><a class="headerlink" href="#dependency2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>As an example lets look at the function <span class="math notranslate nohighlight">\(f(x,y)=x^2 y+y^2\)</span>, if we have <span class="math notranslate nohighlight">\(x = u+v\)</span> and <span class="math notranslate nohighlight">\(y = u-v\)</span>, then we can calculate <span class="math notranslate nohighlight">\(f_u,\, f_v\)</span> using dependency trees:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_u = f_x\, x_u + f_y\, y_u\\
@@ -507,9 +593,9 @@ f_v = f_x\, x_v + f_y\, y_v &amp;=  2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)\en
 <p>To find <span class="math notranslate nohighlight">\(f_x\)</span>, we can let <span class="math notranslate nohighlight">\(u = x^2 + 2xy\)</span>, <span class="math notranslate nohighlight">\(v = x-y\)</span>, then:</p>
 <div class="math notranslate nohighlight">
 \[f_x = f_u\, u_x +f_v\, v_x = \cos(u)(2x+2y)+2v = 2(x+y)\cos(x^2+2xy) + 2(x-y)\]</div>
-</div>
-<div class="section" id="exact-derivatives-and-differentials">
-<h2>Exact derivatives and differentials<a class="headerlink" href="#exact-derivatives-and-differentials" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="exact-derivatives-and-differentials">
+<h2>Exact derivatives and differentials<a class="headerlink" href="#exact-derivatives-and-differentials" title="Permalink to this headline">#</a></h2>
 <p>The multivariate chain rule is sometimes written in <b>differential form</b>:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}F=\frac{\partial F}{\partial x}\,\mathrm{d}x+\frac{\partial F}{\partial y}\,\mathrm{d}y\]</div>
@@ -542,8 +628,8 @@ B &amp;=  \sin{x}+x\cos{y}+x\end{split}\]</div>
 \frac{\partial B}{\partial x} &amp;=  \cos{x} + \cos{y} + 1\\
 \Rightarrow \frac{\partial A}{\partial y} &amp;=  \frac{\partial B}{\partial x}\end{split}\]</div>
 <p>and therefore the expression is exact.</p>
-<div class="section" id="solving-1st-order-odes">
-<h3>Solving 1st order ODEs *<a class="headerlink" href="#solving-1st-order-odes" title="Permalink to this headline">¶</a></h3>
+<section id="solving-1st-order-odes">
+<h3>Solving 1st order ODEs *<a class="headerlink" href="#solving-1st-order-odes" title="Permalink to this headline">#</a></h3>
 <p>Optionally, this result could be used to solve the nonlinear 1st order ODE:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y\cos{x} + \sin{y} + y}{\sin{x} + x\cos{y} + x}=0\]</div>
@@ -570,10 +656,10 @@ allows us to write the given ODE as:</p>
 <div class="math notranslate nohighlight">
 \[F(x,\, y) = y\sin{x} + x\sin{y} + xy + k\]</div>
 <p>and <span class="math notranslate nohighlight">\(k\)</span> here is an arbitrary constant.</p>
-</div>
-</div>
-<div class="section" id="stationary-points">
-<h2>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="stationary-points">
+<h2>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">#</a></h2>
 <p>If we think about stationary points in multivariable calculus:</p>
 <ul class="simple">
 <li><p>When <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x}=0\)</span> the function is stationary (flat) with respect to the <span class="math notranslate nohighlight">\(x\)</span>-axis</p></li>
@@ -594,8 +680,8 @@ however, we can proceed by rearranging one of the equations to substitute into t
 \[3\left(\frac{3}{2}x^2\right)^2+2x=0 \quad \leftrightarrow\quad x(27x^3+8)=0\]</div>
 <p>This equation has solutions <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=-\frac{2}{3}\)</span>, as well as a complex conjugate pair of solutions <span class="math notranslate nohighlight">\(\frac{1}{3}(1\pm\sqrt{3}i)\)</span>, which we will discard here.</p>
 <p>Hence, the stationary points are <span class="math notranslate nohighlight">\((0,\, 0,\, 2)\)</span> and <span class="math notranslate nohighlight">\(\left(-\frac{2}{3},\, \frac{2}{3},\, \frac{62}{27}\right)\)</span>, where we write <span class="math notranslate nohighlight">\((x,\, y,\, f)\)</span></p>
-<div class="section" id="classification-of-stationary-points">
-<h3>Classification of Stationary Points<a class="headerlink" href="#classification-of-stationary-points" title="Permalink to this headline">¶</a></h3>
+<section id="classification-of-stationary-points">
+<h3>Classification of Stationary Points<a class="headerlink" href="#classification-of-stationary-points" title="Permalink to this headline">#</a></h3>
 <p>For a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>, we might expect to classify stationary points using <span class="math notranslate nohighlight">\(f_{xx}\)</span> and <span class="math notranslate nohighlight">\(f_{yy}\)</span>. After all:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f_{xx}\)</span> tells us the function concavity parallel to the <span class="math notranslate nohighlight">\(y\)</span> axis</p></li>
@@ -604,50 +690,58 @@ however, we can proceed by rearranging one of the equations to substitute into t
 <li><p>If the function is concave down in both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions through a stationary point, then our intuition tells us that this is a local maximum.</p></li>
 </ul>
 <p>We can examine this through some example functions,</p>
-<div class="figure align-default" id="bowl1">
+<figure class="align-default" id="bowl1">
 <img alt="../_images/bowl1.png" src="../_images/bowl1.png" />
-<p class="caption"><span class="caption-text">Left: Local minimum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave upwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&gt;0\)</span>.
+<figcaption>
+<p><span class="caption-text">Left: Local minimum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave upwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&gt;0\)</span>.
 The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
 Right: Contour plot showing locations in the <span class="math notranslate nohighlight">\((x,y)\)</span> plane where <span class="math notranslate nohighlight">\(f(x,y)\)</span> is constant.
 The colour scheme blue<span class="math notranslate nohighlight">\(\rightarrow\)</span>yellow is used to indicate the height of the contours, with yellow representing points at higher elevation.
-The contour plot shows that the function is increasing in all directions away from the stationary point.</span><a class="headerlink" href="#bowl1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="hill1">
+The contour plot shows that the function is increasing in all directions away from the stationary point.</span><a class="headerlink" href="#bowl1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="hill1">
 <img alt="../_images/hill1.png" src="../_images/hill1.png" />
-<p class="caption"><span class="caption-text"><b>Left Panel:</b> Local maximum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&lt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&lt;0\)</span>.
+<figcaption>
+<p><span class="caption-text"><b>Left Panel:</b> Local maximum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&lt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&lt;0\)</span>.
 The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
 <b>Right Panel:</b> Contour plot showing locations in the <span class="math notranslate nohighlight">\((x,y)\)</span> plane where <span class="math notranslate nohighlight">\(f(x,y)\)</span> is constant. The colour scheme blue<span class="math notranslate nohighlight">\(\rightarrow\)</span>yellow is used to indicate
 the height of the contours, with yellow representing points at higher elevation. The contour plot shows that the function is decreasing in all directions away
-from the stationary point.</span><a class="headerlink" href="#hill1" title="Permalink to this image">¶</a></p>
-</div>
+from the stationary point.</span><a class="headerlink" href="#hill1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>However, a local maximum/minimum is not the only type of stationary point that a surface <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> can have. For instance, a surface may have a stationary
 point that sits where the function is concave upwards with respect to one axis and concave downwards with respect to the other axis. This type of point is called
 a saddle point (it looks like a saddle for a horse). The figure below shows an example:</p>
-<div class="figure align-default" id="saddle1">
+<figure class="align-default" id="saddle1">
 <img alt="../_images/saddle1.png" src="../_images/saddle1.png" />
-<p class="caption"><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>. The red lines illustrate the concave upwards/downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions
+<figcaption>
+<p><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>. The red lines illustrate the concave upwards/downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions
 <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&lt;0\)</span>. The black contours are plotted on the surface at constant height. Notice that the contours cross at a saddle point.
 <b>Right Panel:</b> Contour plot showing locations in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane where <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> is constant. The colour scheme blue<span class="math notranslate nohighlight">\(\rightarrow\)</span>yellow
 is used to indicate the height of the contours, with yellow representing points at higher elevation. The contour plot also shows the function concavity in the
-<span class="math notranslate nohighlight">\(x,\, y\)</span> directions.</span><a class="headerlink" href="#saddle1" title="Permalink to this image">¶</a></p>
-</div>
+<span class="math notranslate nohighlight">\(x,\, y\)</span> directions.</span><a class="headerlink" href="#saddle1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We conclude that at a stationary point, if <span class="math notranslate nohighlight">\(f_{xx}\)</span> and <span class="math notranslate nohighlight">\(f_{yy}\)</span> are opposite sign, then the point is a saddle point. However, the converse is not
 necessarily true! It turns out that we can have a saddle point where <span class="math notranslate nohighlight">\(f_{xx}\)</span> and <span class="math notranslate nohighlight">\(f_{yy}\)</span> are both the same sign (or even when they are both zero). An example is
 illustrated in the figure below. In this case the saddle point is not aligned squarely with the <span class="math notranslate nohighlight">\((x,\,y)\)</span> coordinate directions.</p>
-<div class="figure align-default" id="squish">
+<figure class="align-default" id="squish">
 <img alt="../_images/squish1.png" src="../_images/squish1.png" />
-<p class="caption"><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span> that is not aligned squarely with the <span class="math notranslate nohighlight">\(x,\,y\)</span> axes. The red lines illustrate the concave upwards
+<figcaption>
+<p><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span> that is not aligned squarely with the <span class="math notranslate nohighlight">\(x,\,y\)</span> axes. The red lines illustrate the concave upwards
 behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&gt;0\)</span>. The curve has concave down behaviour at approximately <span class="math notranslate nohighlight">\(45^{\circ}\)</span> to the <span class="math notranslate nohighlight">\(x\)</span>-axis.
 <b>Right Panel:</b> Contour plot showing locations in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane where <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> is constant. The colour scheme blue<span class="math notranslate nohighlight">\(\rightarrow\)</span>yellow is used
-to indicate the height of the contours, with yellow representing points at higher elevation. The competing concave up/down behaviour is apparent from the contour plot.</span><a class="headerlink" href="#squish" title="Permalink to this image">¶</a></p>
-</div>
+to indicate the height of the contours, with yellow representing points at higher elevation. The competing concave up/down behaviour is apparent from the contour plot.</span><a class="headerlink" href="#squish" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>So, it turns outs that the condition for a maximum/minimum is more complicated than we first thought! A valid classification algorithm is presented in the box below.</p>
 <p>The result can be proved by utilising a multivariate Taylor series expansion about the stationary point and retaining terms only up to quadratic order
 so that the shape of the function may be inferred from the properties of a quadratic. Neglecting the higher order terms in the expansion is justified in the
 limit approaching the stationary point. We have not studied the multivariate chain rule, so the proof is not presented here.</p>
-</div>
-<div class="section" id="hessian-matrix">
-<h3>Hessian Matrix<a class="headerlink" href="#hessian-matrix" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hessian-matrix">
+<h3>Hessian Matrix<a class="headerlink" href="#hessian-matrix" title="Permalink to this headline">#</a></h3>
 <p>At a stationary point, <span class="math notranslate nohighlight">\(f_x(x_0,y_0)=f_y(x_0,y_0)\)</span>, we calculate the determinant of the Hessian matrix at <span class="math notranslate nohighlight">\(H(x_0,\,y_0)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\det(H) = \begin{vmatrix}
@@ -672,13 +766,15 @@ f_{yx}&amp;f_{yy}
 <p><span class="math notranslate nohighlight">\(\det\biggr(H\biggr(-\frac{2}{3},\frac{2}{3}\biggr)\biggr)=12&gt;0\)</span> and <span class="math notranslate nohighlight">\(f_{xx}\left(-\frac{2}{3},\frac{2}{3}\right)&lt;0\)</span>, so the point
 <span class="math notranslate nohighlight">\(\left(-\frac{2}{3}\frac{2}{3}\right)\)</span> is a local maximum.</p>
 <p>A contour plot of the function, shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">example1</span></code>, confirms these findings.</p>
-<div class="figure align-default" id="example1">
+<figure class="align-default" id="example1">
 <img alt="../_images/example1.png" src="../_images/example1.png" />
-<p class="caption"><span class="caption-text">Contour plot of <span class="math notranslate nohighlight">\(f=x^3-y^3-2xy+2\)</span>, showing stationary points clearly.</span><a class="headerlink" href="#example1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-text">Contour plot of <span class="math notranslate nohighlight">\(f=x^3-y^3-2xy+2\)</span>, showing stationary points clearly.</span><a class="headerlink" href="#example1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -702,28 +798,34 @@ f_{yx}&amp;f_{yy}
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

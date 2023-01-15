@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2. Multidimensional Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,41 +20,40 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Vector Fields" href="calculusonfields.html" />
@@ -64,7 +65,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +88,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -93,14 +109,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to Linear Algebra and Vector Calculus
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
@@ -124,12 +141,17 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -137,61 +159,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/VectorCalculus/doubletripleintegrals.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/VectorCalculus/doubletripleintegrals.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#area-integrals">
    2.1. Area Integrals
@@ -228,12 +306,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Multidimensional Integrals</h1>
@@ -286,19 +363,22 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="multidimensional-integrals">
-<h1><span class="section-number">2. </span>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="multidimensional-integrals">
+<h1><span class="section-number">2. </span>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">#</a></h1>
 <p>Although we are used to find the area under a curve from the integral of a function <span class="math notranslate nohighlight">\(f(x)\)</span> over some limits <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[A = \int_a^b f(x)\,\mathrm{d}x\]</div>
 <p>we could think about area of a space a difference way.  Suppose we had a revion described by some boundary function <span class="math notranslate nohighlight">\(B(x,\,y)\)</span>, as depicted in <a class="reference internal" href="#infinitesimalarea"><span class="std std-numref">Fig. 2.1</span></a>:</p>
-<div class="figure align-default" id="infinitesimalarea">
+<figure class="align-default" id="infinitesimalarea">
 <img alt="../_images/infinitesimalarea.png" src="../_images/infinitesimalarea.png" />
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Division of a 2-dimensional area A into infinitesimal area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span>.</span><a class="headerlink" href="#infinitesimalarea" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Division of a 2-dimensional area A into infinitesimal area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span>.</span><a class="headerlink" href="#infinitesimalarea" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The easiest way to calculate the area here would be break up the space into infinitesimal building blocks of size <span class="math notranslate nohighlight">\(\mathrm{d}A = \mathrm{d}x\,\mathrm{d}y\)</span>.  Then
 all that we would need to do is perform the integration in the relevant region - i.e. the limits of the integration are quite important.  Conceptually we can think of <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> just like we do for the one variable case of integration, breaking up a shape into infintesimal blocks
 which we then sum up over the integral,</p>
@@ -306,8 +386,8 @@ which we then sum up over the integral,</p>
 how the area contained within the bounded shape has a weighting at each point due to <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>.  Likewise if we have some
 function <span class="math notranslate nohighlight">\(f(x,\,y,\,z)\)</span> describing some shape in 3D space,.  We can think of these as multidimensional integals as extending integral calculus
 to multi-dimensions, akin to partial differentiation extending differential calculus to multi-varibles.</p>
-<div class="section" id="area-integrals">
-<h2><span class="section-number">2.1. </span>Area Integrals<a class="headerlink" href="#area-integrals" title="Permalink to this headline">¶</a></h2>
+<section id="area-integrals">
+<h2><span class="section-number">2.1. </span>Area Integrals<a class="headerlink" href="#area-integrals" title="Permalink to this headline">#</a></h2>
 <div class="notice admonition">
 <p class="admonition-title">Definition</p>
 <p>Formally we can think of the area in some space that we define through the relevant limits:</p>
@@ -329,10 +409,12 @@ variables (this can happen as when the integration is done, all the other variab
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>Lets think about a flat 2D sheet with some density <span class="math notranslate nohighlight">\(\sigma(x,\,y)\)</span> (mass per unit area), as depcited in <a class="reference internal" href="#areaintegral"><span class="std std-numref">Fig. 2.2</span></a>,</p>
-<div class="figure align-default" id="areaintegral">
+<figure class="align-default" id="areaintegral">
 <img alt="../_images/areaintegral.png" src="../_images/areaintegral.png" />
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Rectangular plate with some density <span class="math notranslate nohighlight">\(\sigma(x,\,y)\)</span>.</span><a class="headerlink" href="#areaintegral" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Rectangular plate with some density <span class="math notranslate nohighlight">\(\sigma(x,\,y)\)</span>.</span><a class="headerlink" href="#areaintegral" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>To find the area of the plate we can perform a double integral, knowing that there are boundaries at
 <span class="math notranslate nohighlight">\(x \in [0,\,a]\)</span> and <span class="math notranslate nohighlight">\(y \in [0,\,b]\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -359,15 +441,17 @@ variables (this can happen as when the integration is done, all the other variab
 &amp;= \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3\end{split}\]</div>
 <p>So we see in this case, the order of integration does not matter.</p>
 </div>
-<div class="section" id="non-constant-limits">
-<h3><span class="section-number">2.1.1. </span>Non-constant limits<a class="headerlink" href="#non-constant-limits" title="Permalink to this headline">¶</a></h3>
+<section id="non-constant-limits">
+<h3><span class="section-number">2.1.1. </span>Non-constant limits<a class="headerlink" href="#non-constant-limits" title="Permalink to this headline">#</a></h3>
 <p>Sometimes however we have to deal with boundaries that are not constant (at least in the coordinate system, e.g. a circular arc can be described with constant in
 polar coordinates, but the Cartesian coordinates would be varying).</p>
 <p>Think about a straight line boundary but now one at an angle, as depicted in <a class="reference internal" href="#areaintegraltriangle"><span class="std std-numref">Fig. 2.3</span></a>.</p>
-<div class="figure align-default" id="areaintegraltriangle">
+<figure class="align-default" id="areaintegraltriangle">
 <img alt="../_images/areaintegraltriangle.png" src="../_images/areaintegraltriangle.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Triangular area bounded by coodinate axes as well as linear function <span class="math notranslate nohighlight">\(y = 1-x\)</span>.</span><a class="headerlink" href="#areaintegraltriangle" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Triangular area bounded by coodinate axes as well as linear function <span class="math notranslate nohighlight">\(y = 1-x\)</span>.</span><a class="headerlink" href="#areaintegraltriangle" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We see here that the limits of the two integrals cannot both be constant - upper limit of the <span class="math notranslate nohighlight">\(y\)</span> integral will change depending on the value of <span class="math notranslate nohighlight">\(x\)</span>
 (or vice-versa), hence we need limits of the form <span class="math notranslate nohighlight">\(x \in[0,\, 1]\)</span> and <span class="math notranslate nohighlight">\(y \in [0,\, 1-x]\)</span>.  This makes the double integral take the form:</p>
 <div class="math notranslate nohighlight">
@@ -382,10 +466,12 @@ polar coordinates, but the Cartesian coordinates would be varying).</p>
 <p>So the order of the integration does matter in this example - if we did the <span class="math notranslate nohighlight">\(x\)</span> integral first, the final result would appear to depend on <span class="math notranslate nohighlight">\(x\)</span>, which the area here clearly cannot.</p>
 <p>In fact the choice of coordinates we choose will not change the value of the integral either, lets look at doing these sorts of integral in polar
 coordinates, given <span class="math notranslate nohighlight">\(y^2 + x^2 = R^2\)</span> for <span class="math notranslate nohighlight">\(y \geq 0\)</span>, as depicted in <a class="reference internal" href="#semicircle"><span class="std std-numref">Fig. 2.4</span></a>:</p>
-<div class="figure align-default" id="semicircle">
+<figure class="align-default" id="semicircle">
 <img alt="../_images/semicircle.png" src="../_images/semicircle.png" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Area shown as a shaded region composed of a half circle.</span><a class="headerlink" href="#semicircle" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Area shown as a shaded region composed of a half circle.</span><a class="headerlink" href="#semicircle" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In Cartesian coordinates to find this area we have <span class="math notranslate nohighlight">\(x \in [-R,\,R]\)</span> but since</p>
 <div class="math notranslate nohighlight">
 \[x^2 + y^2 = r^2 \Rightarrow y = \pm \sqrt{R^2-x^2}\]</div>
@@ -417,10 +503,12 @@ we have to find:</p>
 <p>2.
 This looks at a trickier set of limits, lets try and calculate the integral <span class="math notranslate nohighlight">\(I_A = \iint_A x^2y\,\mathrm{d}A\)</span> for an area composed of
 a rectangle and a semi-circle, as depicted in <a class="reference internal" href="#areaintegralsemicircle"><span class="std std-numref">Fig. 2.5</span></a>:</p>
-<div class="figure align-default" id="areaintegralsemicircle">
+<figure class="align-default" id="areaintegralsemicircle">
 <img alt="../_images/areaintegralsemicircle.png" src="../_images/areaintegralsemicircle.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Area shown as a shaded region composed of a rectangle and a half circle.</span><a class="headerlink" href="#areaintegralsemicircle" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Area shown as a shaded region composed of a rectangle and a half circle.</span><a class="headerlink" href="#areaintegralsemicircle" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>If we pick <span class="math notranslate nohighlight">\(x \in [-1,\,1]\)</span>, then the <span class="math notranslate nohighlight">\(y\)</span> limits for the two integrals would be from the lower limit <span class="math notranslate nohighlight">\(y = -1\)</span> to the coorsiante axes <span class="math notranslate nohighlight">\(y = 0\)</span> and from the
 coordinate axes <span class="math notranslate nohighlight">\(y = 0\)</span> up to the upper limit at the semi-circle edge <span class="math notranslate nohighlight">\(y = \sqrt{R^2-x^2}\)</span>.  So this becomes:</p>
 <div class="math notranslate nohighlight">
@@ -432,10 +520,10 @@ coordinate axes <span class="math notranslate nohighlight">\(y = 0\)</span> up t
 &amp;=  \frac{1}{2}\int_{-1}^1\left(x^2(1-x^2) - x^2\right) \,\mathrm{d}x = -\frac{1}{2}\int_{-1}^1 x^4\,\mathrm{d}x = -\frac{1}{5}\end{split}\]</div>
 <p>We could do this integral the other way round, but this is quite a bit tricker!</p>
 </div>
-</div>
-</div>
-<div class="section" id="volume-integrals">
-<h2><span class="section-number">2.2. </span>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="volume-integrals">
+<h2><span class="section-number">2.2. </span>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this headline">#</a></h2>
 <p>The concept of an area integral can be extended to volume integrals, moving from a 2D space with a double integral to a 3D space with a triple integal.</p>
 <div class="notice admonition">
 <p class="admonition-title">Defintion</p>
@@ -449,12 +537,14 @@ function here also, e.g. to calculate a total mass from a density function:</p>
 <div class="math notranslate nohighlight">
 \[I_V = \iiint_V \phi(x,\,y,\,z)\,\mathrm{d}V\]</div>
 </div>
-<div class="figure align-default" id="multiintegrals">
+<figure class="align-default" id="multiintegrals">
 <img alt="../_images/multiintegrals.png" src="../_images/multiintegrals.png" />
-<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">A triple integral of a surface based on the infinitesimal building blocks of the volume, here in Cartesian coordinates <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}x\)</span>.</span><a class="headerlink" href="#multiintegrals" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id1">
-<h3><span class="section-number">2.2.1. </span>Non-constant limits<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">A triple integral of a surface based on the infinitesimal building blocks of the volume, here in Cartesian coordinates <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}x\)</span>.</span><a class="headerlink" href="#multiintegrals" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id1">
+<h3><span class="section-number">2.2.1. </span>Non-constant limits<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>We can try to find three dimensional equivalent of the wedge in <a class="reference internal" href="#areaintegraltriangle"><span class="std std-numref">Fig. 2.3</span></a>, with a space bounded by the coorindate axes as well as the plane</p>
 <div class="math notranslate nohighlight">
 \[x + y+ z = 1\]</div>
@@ -477,9 +567,9 @@ x = 0 &amp; \qquad y + z = 1 \Rightarrow z = 1-y\end{split}\]</div>
 <p>If we thought about this problem in terms of vectors, then we could have used the triple scalar product to find the area of a triangular pyramid:</p>
 <div class="math notranslate nohighlight">
 \[\left|\frac{1}{6}\hat{\bf x}\cdot (\hat{\bf y}\times \hat{\bf z})\right| = \frac{1}{6}\]</div>
-</div>
-<div class="section" id="spherical-polar-coordinates">
-<h3><span class="section-number">2.2.2. </span>Spherical polar coordinates<a class="headerlink" href="#spherical-polar-coordinates" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spherical-polar-coordinates">
+<h3><span class="section-number">2.2.2. </span>Spherical polar coordinates<a class="headerlink" href="#spherical-polar-coordinates" title="Permalink to this headline">#</a></h3>
 <p>If we wanted to find the volume of a sphere of radius <span class="math notranslate nohighlight">\(R\)</span>, we could calculate this using cartesian coordinates, where
 <span class="math notranslate nohighlight">\(x \in [-R,\, R]\)</span> and then akin to the circle area in 2D <span class="math notranslate nohighlight">\(y \in[-\sqrt{R^2 - x^2},\,-\sqrt{R^2 - x^2}]\)</span> and finally to elevate this
 to a volume in 3D <span class="math notranslate nohighlight">\(z \in[-\sqrt{R^2 - x^2 - y^2},\,-\sqrt{R^2 - x^2 - y^2}]\)</span></p>
@@ -492,9 +582,9 @@ to a volume in 3D <span class="math notranslate nohighlight">\(z \in[-\sqrt{R^2 
 \[\begin{split}V &amp;=  \iiint\,\mathrm{d}V = \int_0^R r^2\,\mathrm{d}r\,\int_0^\pi\sin(\phi)\,\mathrm{d}\phi\,\int_0^{2\pi}\,\mathrm{d}\theta \\
 &amp;=  2(2\pi)\Bigg[\frac{1}{3}r^3\Bigg]_0^R = \frac{4}{3}\pi R^3\end{split}\]</div>
 <p>as expected.</p>
-</div>
-<div class="section" id="cylindrical-polar-coordinates">
-<h3><span class="section-number">2.2.3. </span>Cylindrical polar coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="cylindrical-polar-coordinates">
+<h3><span class="section-number">2.2.3. </span>Cylindrical polar coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">#</a></h3>
 <p>We can find the volume of a cylinder with radius <span class="math notranslate nohighlight">\(R\)</span> and height <span class="math notranslate nohighlight">\(H\)</span> (recall this could be done through a solid of revolution type
 calculation, but here we aim to think about 3D axes), in Cartesian coordinates this would take the form of <span class="math notranslate nohighlight">\(x \in [-R,\, R]\)</span> then in 2D
 the circular cross section would be found through <span class="math notranslate nohighlight">\(y \in [-\sqrt{R^2 - x^2},\,\sqrt{R^2 - x^2}]\)</span> and then the height <span class="math notranslate nohighlight">\(z \in [0,\, H]\)</span>, giving:</p>
@@ -538,9 +628,9 @@ hence along with <span class="math notranslate nohighlight">\(x \in[0,\, 1]\)</s
 &amp;=  \frac{1}{6}\int_0^1\left(x^2 - 3x^3 + 3x^4 - x^5\right)\,\mathrm{d}x \\
 &amp;=  \frac{1}{6}\Bigg[\frac{1}{3}x^3 - \frac{3}{4}x^4 + \frac{3}{5}x^5 - \frac{1}{6}x^6\Bigg]_0^{1}= \frac{1}{360}\end{split}\]</div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -564,9 +654,11 @@ hence along with <span class="math notranslate nohighlight">\(x \in[0,\, 1]\)</s
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="coordinatesystems.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -582,24 +674,28 @@ hence along with <span class="math notranslate nohighlight">\(x \in[0,\, 1]\)</s
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

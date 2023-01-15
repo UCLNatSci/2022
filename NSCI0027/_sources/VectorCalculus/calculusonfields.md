@@ -214,7 +214,7 @@ then we know that the scalar form of the tangent plane, which must satisfy ${\bf
 
 Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:
 ```{math}
-\mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
+\mathrm{d}\phi(x,\,y,\,z) = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi){\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
 ```
 which measures the infinitesimal change of  $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
 Likewise we can can the vectorial line element:
@@ -227,11 +227,8 @@ to write the total differential in a slightly more compact notation:
 ```
 To find the <em>vector total differential</em>, we can just use the multi-variate chain rule expression for a vectorised variable:
 ```{math}
-\mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
+\mathrm{d}{\bf A}(x,\,y,\,z) = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
 ```
-
-
-
 
 ## Different coordinate systems
 
@@ -249,11 +246,11 @@ Here the vectorial line element has the form:
 ```
 and looking at what we expect to get $\mathrm{d}\phi$ from the multi-variate chain rule:
 ```{math}
-\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta + \frac{\partial \phi}{\partial z} \mathrm{d} z
+\mathrm{d}f = \frac{\partial f}{\partial r} \mathrm{d} r + \frac{\partial f}{\partial \theta} \mathrm{d} \theta + \frac{\partial f}{\partial z} \mathrm{d} z
 ```
 then our expression for and so for $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$ to match, we must have a gradient operator to be of the form:
 ```{math}
-\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial \phi}{\partial \theta}  + \hat{\bf z} \,\frac{\partial \phi}{\partial z} 
+\nabla f = \hat{\bf r}\, \frac{\partial f}{\partial r}  + \hat{\bf \theta }\,\frac{1}{r}\,\frac{\partial f}{\partial \theta}  + \hat{\bf z} \,\frac{\partial f}{\partial z} 
 ```
 
 ### Spherical polar coordinates
@@ -264,11 +261,11 @@ Here the vectorial line element has the form:
 ```
 and looking at what we expect to get $\mathrm{d}\phi$ from the multi-variate chain rule:
 ```{math}
-\mathrm{d}\phi = \frac{\partial \phi}{\partial r} \mathrm{d} r + \frac{\partial \phi}{\partial \phi} \mathrm{d} \phi + \frac{\partial \phi}{\partial \theta} \mathrm{d} \theta
+\mathrm{d}f = \frac{\partial f}{\partial r} \mathrm{d} r + \frac{\partial f}{\partial \phi} \mathrm{d} \phi + \frac{\partial f}{\partial \theta} \mathrm{d} \theta
 ```
 then our expression for and so for $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$ to match, we must have a gradient operator to be of the form:
 ```{math}
-\nabla \phi = \hat{\bf r}\, \frac{\partial \phi}{\partial r}  + \hat{\bf \phi}\,\frac{1}{r}\,\frac{\partial \phi}{\partial \phi}  + \hat{\bf \theta} \,\frac{1}{r\sin(\phi)}\,\frac{\partial \phi}{\partial \theta} 
+\nabla f = \hat{\bf r}\, \frac{\partial f}{\partial r}  + \hat{\bf \phi}\,\frac{1}{r}\,\frac{\partial f}{\partial \phi}  + \hat{\bf \theta} \,\frac{1}{r\sin(\phi)}\,\frac{\partial f}{\partial \theta} 
 ```
 
 A very good resource for all these expressions can be found at 

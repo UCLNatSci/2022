@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Inverses &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,41 +20,40 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +63,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +86,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +107,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Welcome to Linear Algebra and Vector Calculus
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -122,12 +139,17 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -135,61 +157,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/inverses.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/LinearAlgebra/linear_systems_matrices/inverses.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inverse-functions">
    Inverse Functions
@@ -254,12 +332,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Inverses</h1>
@@ -340,34 +417,37 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="inverses">
-<h1>Inverses<a class="headerlink" href="#inverses" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="inverse-functions">
-<h2>Inverse Functions<a class="headerlink" href="#inverse-functions" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="inverses">
+<h1>Inverses<a class="headerlink" href="#inverses" title="Permalink to this headline">#</a></h1>
+<section id="inverse-functions">
+<h2>Inverse Functions<a class="headerlink" href="#inverse-functions" title="Permalink to this headline">#</a></h2>
 <p>The inverse of a function <span class="math notranslate nohighlight">\(f\)</span> is a function which ‘undoes’ the action of <span class="math notranslate nohighlight">\(f\)</span>. In other words if <span class="math notranslate nohighlight">\(g\)</span> is an inverse of <span class="math notranslate nohighlight">\(f\)</span> then <span class="math notranslate nohighlight">\(g(f(x)) = x\)</span> for all values of <span class="math notranslate nohighlight">\(x\)</span> in the domain of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(f(g(y)) = y\)</span> for all values of <span class="math notranslate nohighlight">\(y\)</span> in the domain of <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(g\)</span> is the inverse of <span class="math notranslate nohighlight">\(f\)</span> then we write <span class="math notranslate nohighlight">\(g = f^{-1}\)</span>.</p>
-<div class="figure align-default" id="inverse">
+<figure class="align-default" id="inverse">
 <a class="reference internal image-reference" href="../../_images/inverse.png"><img alt="../../_images/inverse.png" src="../../_images/inverse.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">The inverse of a function <span class="math notranslate nohighlight">\(f\)</span> is the function <span class="math notranslate nohighlight">\(f^{-1}\)</span> for which <span class="math notranslate nohighlight">\(f^{-1}(f(x)) = x\)</span> and <span class="math notranslate nohighlight">\(f(f^{-1}(y)) = y\)</span>.</span><a class="headerlink" href="#inverse" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The inverse of a function <span class="math notranslate nohighlight">\(f\)</span> is the function <span class="math notranslate nohighlight">\(f^{-1}\)</span> for which <span class="math notranslate nohighlight">\(f^{-1}(f(x)) = x\)</span> and <span class="math notranslate nohighlight">\(f(f^{-1}(y)) = y\)</span>.</span><a class="headerlink" href="#inverse" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="exercise admonition" id="q_inverse_functions">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>For each of the functions below, state whether it has an inverse and if so write it down.</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(f:\mathbb{R} \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(g:\mathbb{R}^+ \rightarrow \mathbb{R}^+\)</span>, <span class="math notranslate nohighlight">\(g(x) = x^2\)</span>, where <span class="math notranslate nohighlight">\(\mathbb{R}^+\)</span> is the set of positive real numbers.</p></li>
 <li><p><span class="math notranslate nohighlight">\(h:\mathbb{R}^2 \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(h(x, y) = x + y\)</span>.</p></li>
 </ol>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="matrix-inverses">
-<h2>Matrix Inverses<a class="headerlink" href="#matrix-inverses" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="matrix-inverses">
+<h2>Matrix Inverses<a class="headerlink" href="#matrix-inverses" title="Permalink to this headline">#</a></h2>
 <p>Since a matrix represents a linear transformation, which is a function, we can consider if a matrix has an inverse. For example, consider the <span class="math notranslate nohighlight">\((2 \times 2)\)</span> matrix <span class="math notranslate nohighlight">\(R_{\pi/2}\)</span> which represents a <span class="math notranslate nohighlight">\(\pi/2\)</span> anticlockwise rotation about the origin:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}R_{\pi/2} = \begin{pmatrix}0 &amp; -1 \\1 &amp; 0\end{pmatrix}.\end{split}\]</div>
@@ -387,32 +467,34 @@
 <p>then <span class="math notranslate nohighlight">\(A\)</span> is <strong>invertible</strong> and <span class="math notranslate nohighlight">\(B\)</span> is the <strong>inverse</strong> of A.</p>
 <p>We write <span class="math notranslate nohighlight">\(B = A^{-1}\)</span>.</p>
 </div>
-<div class="figure align-default" id="inverse-transformation">
+<figure class="align-default" id="inverse-transformation">
 <a class="reference internal image-reference" href="../../_images/linear_transformations_8_0.png"><img alt="../../_images/linear_transformations_8_0.png" src="../../_images/linear_transformations_8_0.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">If the matrix <span class="math notranslate nohighlight">\(A = R_{\pi/2}\)</span> is a <span class="math notranslate nohighlight">\(\pi/2\)</span> anticlockwise rotation about the origin then its inverse <span class="math notranslate nohighlight">\(A^{-1} = R_{3\pi/2}\)</span> is a <span class="math notranslate nohighlight">\(\pi/2\)</span> clockwise rotation about the origin. The matrix <span class="math notranslate nohighlight">\(A^{-1}A = I\)</span> represents the identity transformation.</span><a class="headerlink" href="#inverse-transformation" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">If the matrix <span class="math notranslate nohighlight">\(A = R_{\pi/2}\)</span> is a <span class="math notranslate nohighlight">\(\pi/2\)</span> anticlockwise rotation about the origin then its inverse <span class="math notranslate nohighlight">\(A^{-1} = R_{3\pi/2}\)</span> is a <span class="math notranslate nohighlight">\(\pi/2\)</span> clockwise rotation about the origin. The matrix <span class="math notranslate nohighlight">\(A^{-1}A = I\)</span> represents the identity transformation.</span><a class="headerlink" href="#inverse-transformation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="exercise admonition" id="q_matrix_inverse_1">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <ol class="simple">
 <li><p>Show that <span class="math notranslate nohighlight">\(R_{3\pi/2}\)</span> is the inverse of <span class="math notranslate nohighlight">\(R_{\pi/2}\)</span>.</p></li>
 <li><p>What is the inverse of the matrix <span class="math notranslate nohighlight">\(R_{\theta}\)</span> representing an anticlockwise rotation about the origin by <span class="math notranslate nohighlight">\(\theta\)</span>? Calculate <span class="math notranslate nohighlight">\(R_{\theta}R_{\theta}^{-1}\)</span> and show that it equals the identity matrix.</p></li>
 <li><p>Given that <span class="math notranslate nohighlight">\(C X D = E\)</span>, write down the solution for <span class="math notranslate nohighlight">\(X\)</span> explicitly in terms of inverse matrices <span class="math notranslate nohighlight">\(C^{-1}\)</span> and <span class="math notranslate nohighlight">\(D^{-1}\)</span>.</p></li>
 </ol>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="solving-matrix-equations">
-<h2>Solving Matrix Equations<a class="headerlink" href="#solving-matrix-equations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solving-matrix-equations">
+<h2>Solving Matrix Equations<a class="headerlink" href="#solving-matrix-equations" title="Permalink to this headline">#</a></h2>
 <p>Suppose that we are given the definitions below and asked to compute the result for <span class="math notranslate nohighlight">\(B\)</span> :</p>
 <div class="math notranslate nohighlight" id="equation-a-ab">
-<span class="eqno">()<a class="headerlink" href="#equation-a-ab" title="Permalink to this equation">¶</a></span>\[\begin{split}A=\left(\begin{array}{cc}1 &amp; 2 \\2 &amp; 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-a-ab" title="Permalink to this equation">#</a></span>\[\begin{split}A=\left(\begin{array}{cc}1 &amp; 2 \\2 &amp; 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)\end{split}\]</div>
 <p>If this was ordinary scalar algebra, then <span class="math notranslate nohighlight">\(B\)</span> would be given by <span class="math notranslate nohighlight">\(\frac{AB}{A}\)</span>, but we have not defined the concept of division for matrices. Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems <span class="math notranslate nohighlight">\(Q X = P\)</span> and <span class="math notranslate nohighlight">\(X Q=P\)</span> do not generally have the same solution, and so the expression <span class="math notranslate nohighlight">\(X=\frac{P}{Q}\)</span> would be ambiguous.</p>
 <p>The difficulty could be addressed by introducing separate concepts of “left-division” and “right-division”, and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.</p>
 <p>To illustrate the use of the inverse matrix, we multiply each side of the equation for <span class="math notranslate nohighlight">\(A B\)</span> in <a class="reference internal" href="#equation-a-ab">()</a> by <span class="math notranslate nohighlight">\(A^{-1}\)</span> as follows:</p>
 <div class="math notranslate nohighlight" id="equation-a-inverse-ab">
-<span class="eqno">()<a class="headerlink" href="#equation-a-inverse-ab" title="Permalink to this equation">¶</a></span>\[\begin{split}A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&amp;3\\4&amp;3\end{array}\right)\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-a-inverse-ab" title="Permalink to this equation">#</a></span>\[\begin{split}A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&amp;3\\4&amp;3\end{array}\right)\end{split}\]</div>
 <p>It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the left-hand side by <span class="math notranslate nohighlight">\(A^{-1}\)</span>, we must also pre-multiply the right-hand side by <span class="math notranslate nohighlight">\(A^{-1}\)</span>.</p>
 <p>Due to the non-commutative nature of matrix multiplication, the result <span class="math notranslate nohighlight">\(A^{-1}(A B)\)</span> is not the same as the result <span class="math notranslate nohighlight">\((A B)A^{-1}\)</span>.</p>
 <p>Now, since matrix multiplication is associative, the left hand side of <a class="reference internal" href="#equation-a-inverse-ab">()</a> can be rewritten as <span class="math notranslate nohighlight">\((A^{-1} A)B\)</span>, and by the definitions of the inverse and identity matrix, we can write <span class="math notranslate nohighlight">\((A^{-1} A)B=I B=B\)</span> in order to obtain</p>
@@ -425,9 +507,9 @@
 <p><span class="math notranslate nohighlight">\(A X = B\)</span> has solution <span class="math notranslate nohighlight">\(X=A^{-1}B \)</span></p>
 <p><span class="math notranslate nohighlight">\(X A = B\)</span> has solution <span class="math notranslate nohighlight">\(X=B A^{-1}\)</span>.</p>
 </div>
-</div>
-<div class="section" id="calculating-the-2x2-inverse">
-<h2>Calculating the (2x2) inverse<a class="headerlink" href="#calculating-the-2x2-inverse" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="calculating-the-2x2-inverse">
+<h2>Calculating the (2x2) inverse<a class="headerlink" href="#calculating-the-2x2-inverse" title="Permalink to this headline">#</a></h2>
 <p>The (2x2) matrix that satisfies the definition <span class="math notranslate nohighlight">\(A A^{-1} = A^{-1}A=I\)</span> is outlined in the box below. In section 3.6 we will examine how the result may be derived from first principles, but for now you may simply verify the claim by checking the result of the products <span class="math notranslate nohighlight">\(A A^{-1}\)</span> and <span class="math notranslate nohighlight">\(A^{-1}A\)</span>.</p>
 <div class="admonition-the-inverse-of-a-2x2-matrix admonition">
 <p class="admonition-title">The inverse of a (2x2) matrix</p>
@@ -448,7 +530,7 @@
 <div class="exercise admonition" id="q_twobytwo_inverse">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>1. 	Calculate the determinant of the matrix <span class="math notranslate nohighlight">\(M=\left(\begin{array}{cc}2 &amp; -1 \\3 &amp; 4 \end{array}\right)\)</span>.</p>
 <p>2. 	Write the equations below in the form <span class="math notranslate nohighlight">\(Ax=b\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -458,17 +540,17 @@
 \end{align*}\]</div>
 <p>Calculate the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and hence obtain the solution for <span class="math notranslate nohighlight">\(x\)</span></p>
 <p>3.	Solve the problem given in <a class="reference internal" href="#equation-a-ab">()</a> to find B.</p>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="what-it-means-if-det-a-0">
-<h2>What it means if <span class="math notranslate nohighlight">\(\det(A)=0\)</span><a class="headerlink" href="#what-it-means-if-det-a-0" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-it-means-if-det-a-0">
+<h2>What it means if <span class="math notranslate nohighlight">\(\det(A)=0\)</span><a class="headerlink" href="#what-it-means-if-det-a-0" title="Permalink to this headline">#</a></h2>
 <p>The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix <span class="math notranslate nohighlight">\(A\)</span> is not <strong>invertible</strong> and the problem will not have a unique solution.</p>
 <p>To illustrate, we will consider two examples of a system of two equations in two unknowns:</p>
 <div class="math notranslate nohighlight" id="equation-inconsistent-1">
-<span class="eqno">()<a class="headerlink" href="#equation-inconsistent-1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{array}{c}2 x-3 y&amp;=1 \\9 y-6 x&amp;=3 \end{array}\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-inconsistent-1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{array}{c}2 x-3 y&amp;=1 \\9 y-6 x&amp;=3 \end{array}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-inconsistent-2">
-<span class="eqno">()<a class="headerlink" href="#equation-inconsistent-2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{array}{c}2 x-3 y&amp;=1 \\9 y-6 x&amp;=-3 \end{array}\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-inconsistent-2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{array}{c}2 x-3 y&amp;=1 \\9 y-6 x&amp;=-3 \end{array}\end{split}\]</div>
 <p>Both sets of equations can be written in the form <span class="math notranslate nohighlight">\(Ax=b\)</span>, where <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}2 &amp; -3 \\-6 &amp; 9 \end{array}\right)\)</span>. In that case, <span class="math notranslate nohighlight">\(\det(A)=18-18=0\)</span>, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>The two equations in <a class="reference internal" href="#equation-inconsistent-1">()</a> are inconsistent, and so there is no solution, whilst the two equations in <a class="reference internal" href="#equation-inconsistent-2">()</a> have an infinite number of solutions satisfying <span class="math notranslate nohighlight">\(y=\frac{2}{3}x-\frac{1}{3}\)</span>.</p>
 <p>You can also think about this problem graphically. In general, the determinant of a (2x2) matrix <span class="math notranslate nohighlight">\(A\)</span> is zero if and only if the second row is a constant multiple of the first row. For a problem of the form <span class="math notranslate nohighlight">\(Ax=b\)</span>, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.</p>
@@ -487,7 +569,7 @@
 <div class="exercise admonition" id="q_invertible_matrix_theorem">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}1 &amp; 0 &amp; 1\\
@@ -498,14 +580,14 @@
 <li><p>Is <span class="math notranslate nohighlight">\(A\)</span> is Invertible?</p></li>
 <li><p>What is <span class="math notranslate nohighlight">\(\mathrm{det}(A)\)</span>?</p></li>
 </ol>
+</section>
 </div>
-</div>
-<div class="section" id="derivation-of-the-2x2-inverse-from-first-principles">
-<h3>Derivation of the (2x2) inverse from first principles<a class="headerlink" href="#derivation-of-the-2x2-inverse-from-first-principles" title="Permalink to this headline">¶</a></h3>
+<section id="derivation-of-the-2x2-inverse-from-first-principles">
+<h3>Derivation of the (2x2) inverse from first principles<a class="headerlink" href="#derivation-of-the-2x2-inverse-from-first-principles" title="Permalink to this headline">#</a></h3>
 <p>Consider the problem <span class="math notranslate nohighlight">\(A X = I\)</span>, which has solution <span class="math notranslate nohighlight">\(X=A^{-1}\)</span>. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix <span class="math notranslate nohighlight">\(\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\)</span>.</p>
 <p>The algorithm proceeds as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae12e9f3-9264-429b-949f-4812654daa6e">
-<span class="eqno">()<a class="headerlink" href="#equation-ae12e9f3-9264-429b-949f-4812654daa6e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c|c}U&amp;L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c|c}I&amp;A^{-1}\end{array}\biggr]\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d5dc21d0-c12a-424e-b5d3-32238a3540c7">
+<span class="eqno">()<a class="headerlink" href="#equation-d5dc21d0-c12a-424e-b5d3-32238a3540c7" title="Permalink to this equation">#</a></span>\[\begin{equation}\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c|c}U&amp;L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c|c}I&amp;A^{-1}\end{array}\biggr]\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(U\)</span> is an upper-diagonal matrix and <span class="math notranslate nohighlight">\(L\)</span> is a lower-diagonal matrix.</p>
 <p>For the (2x2) problem we start with the augmented matrix:</p>
 <div class="math notranslate nohighlight">
@@ -517,16 +599,16 @@
 <li><p><span class="math notranslate nohighlight">\(\hat{r}_1=r_1-r_2 a_{12}/a_{11}\)</span></p></li>
 </ol>
 <p>We obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1c635286-9a4f-4f24-8598-8267e45d0656">
-<span class="eqno">()<a class="headerlink" href="#equation-1c635286-9a4f-4f24-8598-8267e45d0656" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\begin{array}{cc|cc}a_{11}&amp;a_{12}&amp;1&amp;0\\a_{21}&amp;a_{22}&amp;0&amp;1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc|cc}1&amp;0&amp;\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&amp;1&amp;\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2f0038be-4b65-4607-af96-f1e2d4720f71">
+<span class="eqno">()<a class="headerlink" href="#equation-2f0038be-4b65-4607-af96-f1e2d4720f71" title="Permalink to this equation">#</a></span>\[\begin{equation}\left[\begin{array}{cc|cc}a_{11}&amp;a_{12}&amp;1&amp;0\\a_{21}&amp;a_{22}&amp;0&amp;1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc|cc}1&amp;0&amp;\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&amp;1&amp;\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}\]</div>
 <p>from which the following result for the inverse matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> is inferred:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} &amp; -a_{12} \\ -a_{22} &amp; a_{11} \end{array}\right)\end{split}\]</div>
 <p>The steps that were carried out here were purely algebraic manipulations, and so we can see that the result for <span class="math notranslate nohighlight">\(A^{-1}\)</span> can always be computed, providing that <span class="math notranslate nohighlight">\(a_{11} a_{22}-a_{12} a_{21}\neq 0\)</span>.</p>
-</div>
-</div>
-<div class="section" id="the-3x3-inverse">
-<h2>The (3x3) inverse<a class="headerlink" href="#the-3x3-inverse" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="the-3x3-inverse">
+<h2>The (3x3) inverse<a class="headerlink" href="#the-3x3-inverse" title="Permalink to this headline">#</a></h2>
 <p>We can extend the method used in the previous section to calculate the inverse of higher order matrices. For example, you could have a go at calculating the inverse of a general (3x3) matrix by Gaussian elimination. The algebra would get very tedious.</p>
 <p>However, given the systematic nature of Gaussian elimination, you may not be surprised that there is a pattern that can be spotted, which allows the inverse to be calculated by a recursive method. The result is given in the box below.</p>
 <div class="admonition-the-3x3-inverse-formula admonition">
@@ -562,7 +644,7 @@
 <div class="exercise admonition" id="three_by_three_inverse">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Calculate the inverse of the matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. Check your answer by checking that <span class="math notranslate nohighlight">\(A^{-1}A=I\)</span> and <span class="math notranslate nohighlight">\(B^{-1}B=I\)</span>.</p>
 <p>1.</p>
 <div class="math notranslate nohighlight">
@@ -572,11 +654,11 @@
 <div class="math notranslate nohighlight">
 \[\begin{split}B = \begin{pmatrix}0&amp;4&amp;1\\0&amp;2&amp;1\\
 1&amp;1&amp;1\end{pmatrix}\end{split}\]</div>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="inverse-of-the-matrix-product">
-<h2>Inverse of the Matrix Product<a class="headerlink" href="#inverse-of-the-matrix-product" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="inverse-of-the-matrix-product">
+<h2>Inverse of the Matrix Product<a class="headerlink" href="#inverse-of-the-matrix-product" title="Permalink to this headline">#</a></h2>
 <p>By associativity of matrix multiplication,</p>
 <div class="math notranslate nohighlight">
 \[(A^{-1}B^{-1})(BA) = A^{-1}(B^{-1}B)A = A^{-1}IA=A^{-1}A=I\]</div>
@@ -585,31 +667,31 @@
 \[(BA)^{-1} = A^{-1}B^{-1}\]</div>
 <p>This result satisfies the “common sense” idea (seen in function composition) that inversion comes in reverse order. If transform B follows transform A then we have to reverse transform B before reversing A. We remove the outer operation first.</p>
 <p>We can liken the result to the operation of getting dressed/undressed: If you put your socks on before your shoes, you have to take your shoes off before you can remove your socks!</p>
-<div class="section" id="linking-matrix-multiplication-and-gaussian-elimination">
-<h3>Linking matrix multiplication and Gaussian elimination<a class="headerlink" href="#linking-matrix-multiplication-and-gaussian-elimination" title="Permalink to this headline">¶</a></h3>
+<section id="linking-matrix-multiplication-and-gaussian-elimination">
+<h3>Linking matrix multiplication and Gaussian elimination<a class="headerlink" href="#linking-matrix-multiplication-and-gaussian-elimination" title="Permalink to this headline">#</a></h3>
 <p>The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in <a class="reference internal" href="echelon_form.html#id1"><span class="std std-ref">A systematic technique for solving systems of equations</span></a> for the augmented coefficient matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4c8662e1-4506-4e0b-b060-5f9da1b352d8">
-<span class="eqno">()<a class="headerlink" href="#equation-4c8662e1-4506-4e0b-b060-5f9da1b352d8" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc|c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fc078c81-11fe-4ebe-a302-8e86540cf1d9">
+<span class="eqno">()<a class="headerlink" href="#equation-fc078c81-11fe-4ebe-a302-8e86540cf1d9" title="Permalink to this equation">#</a></span>\[\begin{equation}A = \left(\begin{array}{ccc|c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
 <p>In the first step we used the row operations <span class="math notranslate nohighlight">\(r_2-2r_1\longrightarrow r_2\)</span>,   <span class="math notranslate nohighlight">\(r_3+r_1\longrightarrow r_3\)</span>, and in the second step we used the row operation <span class="math notranslate nohighlight">\(r_3-2r_2\longrightarrow r_3\)</span>. These are equivalent to the following row operation matrices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L_1 = \left(\begin{array}{ccc}1&amp;0&amp;0\\-2&amp;1&amp;0\\1&amp;0&amp;1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right) \end{split}\]</div>
 <p>The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f4263fc2-93a6-4a39-a053-93b0f36d3cd8">
-<span class="eqno">()<a class="headerlink" href="#equation-f4263fc2-93a6-4a39-a053-93b0f36d3cd8" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-50b2c918-a190-48b5-a845-10b65977c30c">
+<span class="eqno">()<a class="headerlink" href="#equation-50b2c918-a190-48b5-a845-10b65977c30c" title="Permalink to this equation">#</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
 <p>The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8ab7e44-2c45-4f67-b150-f76ad626311a">
-<span class="eqno">()<a class="headerlink" href="#equation-c8ab7e44-2c45-4f67-b150-f76ad626311a" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5d2df396-f902-456f-961e-94a324ccf316">
+<span class="eqno">()<a class="headerlink" href="#equation-5d2df396-f902-456f-961e-94a324ccf316" title="Permalink to this equation">#</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>You may verify the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc|c}1 &amp; 0 &amp; 0 &amp; -\frac{15}{19} \\0 &amp; 1 &amp; 0 &amp; \frac{31}{19} \\0 &amp; 0 &amp; 1 &amp; \frac{11}{19} \\\end{array}\right)\end{split}\]</div>
 <p>It is also possible to combine the row reduction operations into a single multiplication matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-689a4275-46ac-4abe-8090-1994e3fc99e2">
-<span class="eqno">()<a class="headerlink" href="#equation-689a4275-46ac-4abe-8090-1994e3fc99e2" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7fdc8180-0ec1-4971-b68a-63f0797f00a8">
+<span class="eqno">()<a class="headerlink" href="#equation-7fdc8180-0ec1-4971-b68a-63f0797f00a8" title="Permalink to this equation">#</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>Later, we will come to think of this as the inverse of the coefficient matrix.</p>
-</div>
-</div>
-<div class="section" id="transpose-property">
-<h2>Transpose Property<a class="headerlink" href="#transpose-property" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="transpose-property">
+<h2>Transpose Property<a class="headerlink" href="#transpose-property" title="Permalink to this headline">#</a></h2>
 <p>The following result is true in general (provided that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can be multiplied). Have a go at proving it for the case where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are both (2x2) matrices.
 a general proof using element notation, is given below.</p>
 <div class="math notranslate nohighlight">
@@ -617,24 +699,24 @@ a general proof using element notation, is given below.</p>
 <p><strong>Proof</strong></p>
 <div class="math notranslate nohighlight">
 \[(A B)^T{}_{i,j}=(A B)_{j,i}=\sum _k A_{j,k} B_{k,i}=\sum _k A^T{}_{k,j} B^T{}_{i,k}=\sum _k B^T{}_{i,k} A^T{}_{k,j} =(B^T A^T{})_{i,j}\]</div>
-</div>
-<div class="section" id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/inverses-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#q_inverse_functions">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_inverse_functions"> Exercise </a></p>
+<section id="solution-content">
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(f\)</span> does not have an inverse because for any negative number <span class="math notranslate nohighlight">\(y\)</span> there is no <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(f(x) = y\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(g\)</span> has an inverse and <span class="math notranslate nohighlight">\(g^{-1}(x) = +\sqrt{x}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(h\)</span> does not have an inverse. To prove this, suppose <span class="math notranslate nohighlight">\(k\)</span> is the inverse of <span class="math notranslate nohighlight">\(h\)</span>. Then <span class="math notranslate nohighlight">\(h(0, 0) = 0\)</span> so we must have <span class="math notranslate nohighlight">\(k(0) = (0, 0)\)</span>. But also <span class="math notranslate nohighlight">\(h(1, -1) = 0\)</span> so we must also have <span class="math notranslate nohighlight">\(k(0) = (1, -1)\)</span>. In general, any function which is not one-to-one (<em>injective</em>) does not have an inverse.</p></li>
 </ol>
-</div>
+</section>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/inverses-solution-6">
 
-<p class="admonition-title"><a class="reference internal" href="#q_matrix_inverse_1">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_inverse_1"> Exercise </a></p>
+<section id="solution-content">
 <p>1.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -659,23 +741,23 @@ R_{\theta}^{-1} R_{\theta} = \begin{pmatrix}1 &amp; 0\\0&amp;1 \end{pmatrix}.
 <p>3.</p>
 <p>We left multiply by <span class="math notranslate nohighlight">\(C^{-1}\)</span> and right multiply by <span class="math notranslate nohighlight">\(D^{-1}\)</span> to obtain <span class="math notranslate nohighlight">\(X=C^{-1} E D^{-1}\)</span>.
 If you wrote down any other answer then it is incorrect!</p>
-</div>
+</section>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/inverses-solution-7">
 
-<p class="admonition-title"><a class="reference internal" href="#q_twobytwo_inverse">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_twobytwo_inverse"> Exercise </a></p>
+<section id="solution-content">
 <p>1. <span class="math notranslate nohighlight">\(\det  M=(2*4)-(-1*3)=11\)</span></p>
 <p>2. We have <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}2 &amp; -3 \\3 &amp; -2 \end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}=\left(\begin{array}{c}x\\y\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(b=\left(\begin{array}{c}1 \\2 \end{array}\right)\)</span></p>
 <p><span class="math notranslate nohighlight">\(A^{-1}=\frac{1}{9-4}\left(\begin{array}{cc}-2 &amp; 3 \\-3 &amp; 2 \end{array}\right)\)</span> so <span class="math notranslate nohighlight">\(\mathbf{x}=\frac{1}{5} \left(\begin{array}{cc}-2 &amp; 3 \\-3 &amp; 2 \end{array}\right) \left(\begin{array}{c}1 \\2 \end{array}\right)=\frac{1}{5} \left(\begin{array}{c}6-2 \\4-3 \end{array}\right)\)</span></p>
 <p>That is, <span class="math notranslate nohighlight">\(x=4/5\)</span>, <span class="math notranslate nohighlight">\(y=1/5\)</span>. (Check it!)</p>
 <p>3. <span class="math notranslate nohighlight">\(B=A^{-1}\left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}1 &amp; -2 \\-2 &amp; 1 \end{array}\right) \left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}5-8 &amp; 3-6 \\4-10 &amp; 3-6 \end{array}\right)=\left(\begin{array}{cc} 1 &amp; 1 \\2 &amp; 1 \\\end{array}\right)\)</span></p>
-</div>
+</section>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/inverses-solution-8">
 
-<p class="admonition-title"><a class="reference internal" href="#q_invertible_matrix_theorem">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_invertible_matrix_theorem"> Exercise </a></p>
+<section id="solution-content">
 <p>Reduce <span class="math notranslate nohighlight">\(A\)</span> to echelon form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}1 &amp; 0 &amp; 1\\
@@ -686,10 +768,10 @@ If you wrote down any other answer then it is incorrect!</p>
 <li><p><span class="math notranslate nohighlight">\(A\)</span> is not invertible. By the invertible matrix theorem a matrix is invertible if and only if its null space is not zero.</p></li>
 <li><p>By the invertible matrix theorem, <span class="math notranslate nohighlight">\(\det(A)=0\)</span>.</p></li>
 </ol>
+</section>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -713,28 +795,34 @@ If you wrote down any other answer then it is incorrect!</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
