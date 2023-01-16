@@ -204,17 +204,17 @@ A:(1,\,1,\,0)
 ```
 then we know that the scalar form of the tangent plane, which must satisfy ${\bf n}\cdot ({\bf r}- {\bf r_0}) = 0$ means:
 ```{math}
-{\bf n}|_A &=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
-{\bf n}\cdot ({\bf r}- {\bf r_0}) = 0 &\Rightarrow  \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \cdot\begin{pmatrix} x-1\\y-1\\z-0 \end{pmatrix} =  0 \\
+{\bf n}|_A &=  \begin{pmatrix} 3-2\\-3-2\\-1 \end{pmatrix} = \begin{pmatrix} 1\\-5\\-1 \end{pmatrix} \\
+{\bf n}\cdot ({\bf r}- {\bf r_0}) = 0 &\Rightarrow  \begin{pmatrix} 1\\-5\\-1 \end{pmatrix} \cdot\begin{pmatrix} x-1\\y-1\\z-0 \end{pmatrix} =  0 \\
 &\Rightarrow x - 5y - z  =-4
 ```
 ````
 
 ## Total Differential
 
-Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:
+Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em> for a scalar field $\phi(x,\,y,\,z)$:
 ```{math}
-\mathrm{d}\phi(x,\,y,\,z) = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi){\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
+\mathrm{d}\phi(x,\,y,\,z) = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
 ```
 which measures the infinitesimal change of  $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
 Likewise we can can the vectorial line element:

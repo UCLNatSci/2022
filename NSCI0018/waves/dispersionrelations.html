@@ -584,10 +584,10 @@ to the wave equation produce their own equations.  Lets start with the simplest 
 <span class="eqno">(7.1)<a class="headerlink" href="#equation-waveform" title="Permalink to this equation">#</a></span>\[u = u_0\,\exp(i(kx-\omega t))\]</div>
 <p>Plugging this into the wave equation:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u_{xx} &amp;=&amp; \,-k^2 \,u\\ 
-u_{tt} &amp;=&amp; \, -\omega^2 \,u \\
-u_{tt} &amp;=&amp; \, c^2\,u_{xx} \\
--\omega^2 \,u &amp;=&amp; \, -c^2\,k^2\,u \Rightarrow \omega^2 &amp;=&amp; \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k\end{split}\]</div>
+\[\begin{split}u_{xx} &amp;= \,-k^2 \,u\\ 
+u_{tt} &amp;= \, -\omega^2 \,u \\
+u_{tt} &amp;= \, c^2\,u_{xx} \\
+-\omega^2 \,u &amp;= \, -c^2\,k^2\,u \Rightarrow \omega^2 &amp;=&amp; \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k\end{split}\]</div>
 <p>Since we have two roots for <span class="math notranslate nohighlight">\(\omega\)</span> here, we can see that these correspond to either left or right hand moving waves.<br />
 Therefore if we use <a class="reference internal" href="#equation-waveform">(7.1)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the d’Alembert wave solutions.</p>
 <p>The function <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span> is known as a <b>dispersion relation</b>.  In this case, <span class="math notranslate nohighlight">\(\omega(k)\)</span> is a linear function of <span class="math notranslate nohighlight">\(k\)</span>, but in
@@ -627,7 +627,7 @@ if we have multiple waves?</p>
 <p>Lets consider a sum of two waves, of equal amplitude, but different frequencies and wavelengths:</p>
 <div class="math notranslate nohighlight">
 \[u = u_1 + u_2 = u_0\cos(k_1x-\omega_1t) + u_0\cos(k_2x - \omega_2t)\]</div>
-<p>we cna rewrite this using trigonometric identities:</p>
+<p>we can rewrite this using trigonometric identities:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\cos(A+B) &amp;= \cos(A)\cos(B) - \sin(A)\sin(B) \\
 \cos(A-B) &amp;= \cos(A)\cos(B) + \sin(A)\sin(B) \\
@@ -635,11 +635,16 @@ if we have multiple waves?</p>
 \Rightarrow \cos(C) + \cos(D) &amp;= 2\cos\left(\frac{C+D}{2}\right)\,\cos\left(\frac{C-D}{2}\right)\end{split}\]</div>
 <p>So we can rewrite our superposition of two waves as:</p>
 <div class="math notranslate nohighlight">
-\[u = 2u_0\,\cos\left(k_{avg}x - \omega_{avg}t\right)\,\cos\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\right)\]</div>
+\[u = 2u_0\,\cos\left(k_{avg}\,x - \omega_{avg}\,t\right)\,\cos\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\right)\]</div>
 <p>where we have defined:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}k_{avg} = \frac{k_1+k_2}{2} &amp;\qquad \omega_{avg} = \frac{\omega_1+\omega_2}{2} \\
-\Delta k = \frac{k_1-k_2}{2} &amp;\qquad \Delta \omega = \frac{\omega_1-\omega_2}{2} \\\end{split}\]</div>
+\Delta k = k_1-k_2 &amp;\qquad \Delta \omega = \omega_1-\omega_2 \end{split}\]</div>
+<p>Equally we could do this in the complex representation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u &amp;= u_0\,\exp\left[i(k_1x-\omega_1t)\right] + u_0\,\exp\left[i(k_2x-\omega_2t)\right] \\
+&amp;= u_0\exp\left[i\left(\frac{k_1+k_2}{2}x - \frac{\omega_1+\omega_2}{2}t\right)\right]\,\exp\left[i\left(\frac{k_1-k_2}{2}x - \frac{\omega_1-\omega_2}{2}t\right)\right]\\
+&amp;= u_0\exp\left[i(k_{avg}\,x - \omega_{avg}\,t)\right]\,\exp\left[i\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\right)\right]\end{split}\]</div>
 <p>The result of this can be visualised in <a class="reference internal" href="#beats"><span class="std std-numref">Fig. 7.2</span></a></p>
 <figure class="align-default" id="beats">
 <img alt="../_images/Beating_Frequency.png" src="../_images/Beating_Frequency.png" />
@@ -650,12 +655,12 @@ follows an outer envelope function (dashed line), even though the overall phase 
 </figure>
 <p>We can track the phase of the waves now with the first cosine term, which we see follows:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Phi_1 &amp;= k_{avg}x - \omega_{avg}t \\
-\Rightarrow v_p = \frac{\omega_{avg}}{k_{avg}}\end{split}\]</div>
-<p>but the wave moves as a group, signified by the second cosine term:</p>
+\[\begin{split}\Phi_1 &amp;= k_{avg}\,x - \omega_{avg}\,t \\
+\Rightarrow \frac{\partial x}{\partial t} &amp;= v_p = \frac{\omega_{avg}}{k_{avg}}\end{split}\]</div>
+<p>but the combined wave moves as a group, signified by the second cosine term:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Phi_2 &amp;= \frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\\
-\Rightarrow v &amp;= \frac{\Delta \omega}{\Delta k}\end{split}\]</div>
+\[\begin{split}\Phi_2 &amp;= \frac{\Delta k}{2}\,x - \frac{\Delta \omega}{2}\,t\\
+\Rightarrow \frac{\partial x}{\partial t} &amp;= v = \frac{\Delta \omega}{\Delta k}\end{split}\]</div>
 <p>If we pick a continuum of waves, then in the limit of <span class="math notranslate nohighlight">\(\Delta k \rightarrow 0\)</span>, each of the waves is separated by
 an infinitesimal difference <span class="math notranslate nohighlight">\(\mathrm{d}k\)</span>, meaning:</p>
 <div class="math notranslate nohighlight">
@@ -666,7 +671,7 @@ dimensionally equivalent to <span class="math notranslate nohighlight">\(v_p\)</
 <p>We can extend this to two and higher dimensions using partial derivatives and the gradient operator:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\bf{v_p} &amp;=&amp; \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
-\bf{v_g} &amp;=&amp; \,\nabla_k \omega \end{split}\]</div>
+\bf{v_g} &amp;=&amp; \,\nabla_k \,\omega \end{split}\]</div>
 <p>Usually these vectors point in the same direction, but there are examples in nature, for instance
 the anisotropic structure within a crystal, where the two vectors are not parallel.</p>
 </section>

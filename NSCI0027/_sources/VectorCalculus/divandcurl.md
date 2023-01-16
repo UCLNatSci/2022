@@ -299,7 +299,7 @@ We can also find the divergence of the curl of a vector field:
 \text{div}\,\,\text{curl}\,{\bf A} = \nabla \cdot (\nabla \times {\bf A}) = 0
 ```
 
-which holds for <em>all</em> vector fields.  Thinking again about the fields shown in {numref}`divcurl`,w e can think of these two processes as complementary, 
+which holds for <em>all</em> vector fields.  Thinking again about the fields shown in {numref}`divcurl`, we can think of these two processes as complementary, 
 rotation around a point compared with emergence from / convergence to a point.
 
 Likewise if we look at the curl of a gradient field:
