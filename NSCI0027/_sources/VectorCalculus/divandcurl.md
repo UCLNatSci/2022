@@ -77,8 +77,14 @@ which means that:
 \nabla \cdot {\bf A} &= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
 \\ &+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
 \\ &+ \hat{\bf z}\cdot \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
-&= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
-\Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}
+&= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_\theta)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
+\Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_\theta)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}
+```
+
+If we consider a vector in cylindrical coordinates, a vector with constant coefficients, e.g. $\displaystyle {\bf A} = \begin{pmatrix} a\\b\\c \end{pmatrix}$ will have non-zero divergence if 
+and only if the $A_r \neq 0$, since:
+```{math}
+\nabla \cdot {\bf A} = \frac{1}{r}\frac{\partial (r\,a)}{\partial r} + \frac{1}{r}\frac{\partial b}{\partial \theta}  + \frac{\partial c}{\partial z} = \frac{a}{r}
 ```
 
 ### Spherical coordinate system
@@ -91,7 +97,7 @@ In spherical polar coordinates, we also have the additional complication that th
 \end{pmatrix}, \qquad  \hat{\bf \phi } = \begin{pmatrix} 
 \cos(\theta)\,\cos(\phi) \\ 
 \sin(\theta)\,\cos(\phi) \\ 
-\cos(\phi)
+-\sin(\phi)
 \end{pmatrix},  \qquad \hat{\bf \theta} = 
 \begin{pmatrix} 
 -\sin(\theta) \\ 
@@ -117,7 +123,7 @@ We find that:
 \frac{\partial \hat{\bf r}}{\partial \phi} &= \begin{pmatrix} 
 \cos(\theta)\,\cos(\phi) \\ 
 \sin(\theta)\,\cos(\phi) \\ 
-\cos(\phi)
+-\sin(\phi)
 \end{pmatrix} = \hat{\bf \phi}, 
 \qquad 
 \frac{\partial \hat{\bf \phi}}{\partial \phi} = \begin{pmatrix} 
@@ -142,7 +148,7 @@ We find that:
 -\sin(\theta)\,\cos(\phi) \\ 
 \cos(\theta)\,\cos(\phi)\\ 
 0
-\end{pmatrix} = - \cos(\phi)\,\hat{\bf \theta},\\
+\end{pmatrix} = \cos(\phi)\,\hat{\bf \theta},\\
 \frac{\partial \hat{\bf \theta}}{\partial \theta} &= \begin{pmatrix} 
 -\cos(\theta) \\ 
 -\sin(\theta) \\ 
@@ -152,14 +158,12 @@ We find that:
 which means that:
 ```{math}
 \nabla \cdot {\bf A} &= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \phi} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta}\right) 
-\\ &+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} \right) 
-\\ &+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} \right.\\
-&\left.\qquad \qquad - A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \\
-&= \frac{\partial (A_r)}{\partial r} + \frac{A_r}{r} + \frac{2}{r}\frac{\partial (A_\phi)}{\partial \phi}  - \frac{A_\phi\,\cos(\phi)}{r\,\sin(\phi)} + \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\theta)}{\partial \theta} \\
+\\ &+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf \theta} \right) 
+\\ &+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf \phi} \right.\\
+&\left.\qquad \qquad + A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \\
+&= \frac{\partial (A_r)}{\partial r} + \frac{A_r}{r} + \frac{2}{r}\frac{\partial (A_\phi)}{\partial \phi} + \frac{A_\phi\,\cos(\phi)}{r\,\sin(\phi)} + \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\theta)}{\partial \theta} \\
 \Rightarrow \nabla \cdot {\bf A}&= \frac{1}{r^2}\frac{\partial (r^2\,A_r)}{\partial r} + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (\sin(\phi)\,A_\phi)}{\partial \phi}  + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (A_\theta)}{\partial \theta}
 ```
-
-
 
 ## Curl
 
@@ -243,13 +247,44 @@ Given the cylic nature of unit vectors and their orthongality:
 means we find that:
 ```{math}
 \nabla \times {\bf A} &= \left(\frac{\partial (A_\theta)}{\partial r} \,\hat{\bf z} - \frac{\partial (A_z)}{\partial r} \,\hat{\bf \theta}\right) 
-+ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf z} + \frac{1}{A_\theta}\,\hat{\bf z} + \frac{1}{r}\frac{\partial (A_z)}{\partial \theta} \,\hat{\bf r} \right) \\
++ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf z} + \frac{A_\theta}{r}\,\hat{\bf z} + \frac{1}{r}\frac{\partial (A_z)}{\partial \theta} \,\hat{\bf r} \right) \\
 &+ \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf \theta} - \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf r}\right)\\
-\Rightarrow \nabla \cdot {\bf A}&= \left(\frac{1}{r}\,\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right)\,\hat{\bf r} + \left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)\,\hat{\bf \theta} + \frac{1}{r}\left(\frac{\partial (r\,A_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta}\right)\,\hat{\bf z}
+\Rightarrow \nabla \times {\bf A}&= \left(\frac{1}{r}\,\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right)\,\hat{\bf r} + \left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)\,\hat{\bf \theta} + \frac{1}{r}\left(\frac{\partial (r\,A_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta}\right)\,\hat{\bf z}
 ```
 
+### Spherical coordinate systems
 
-%### Spherical coordinate systems
+In a similar fashion to the cylindrical polar coordinates, we need to consider how the unit vectors change under differentiation first before 
+applying the cross product, therefore:
+```{math}
+\nabla \times {\bf A} &= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \frac{\hat{\bf \phi }}{r}\,\frac{\partial }{\partial \phi}  
++ \frac{\hat{\bf \theta}}{r\sin(\phi)} \,\frac{\partial }{\partial \theta} 
+ \right) \times \left( A_r\,\hat{\bf r} + A_\phi\,\hat{\bf \phi} + A_\theta\,\hat{\bf \theta}\right) \\
+ &=\hat{\bf r}\times \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \phi} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta}\right) 
+\\ &+ \frac{\hat{\bf \phi}}{r}\times\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf \theta} \right) 
+\\ &+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\times \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf \phi} \right.\\
+&\left.\qquad \qquad + A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) 
+```
+Given the cylic nature of unit vectors and their orthongality:
+```{math}
+\hat{\bf r} \times \hat{\bf \phi} &= \hat{\bf \theta}\\
+\hat{\bf \phi} \times \hat{\bf \theta} &= \hat{\bf r}\\
+\hat{\bf \theta} \times \hat{\bf r} &= \hat{\bf \phi}\\
+\hat{\bf r} \times \hat{\bf r} &= \hat{\bf \phi} \times \hat{\bf \phi} = \hat{\bf \theta} \times \hat{\bf \theta} = 0
+```
+means we find that:
+```{math}
+\nabla \times {\bf A} &= \left(\frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \theta} - \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \phi}\right) 
++ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf \theta} + \frac{A_\phi}{r}\,\hat{\bf \theta} 
++ \frac{1}{r}\frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf r} \right) \\
+&+ \left(\frac{1}{r\,\sin(\phi)}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf \phi} - \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf r} - \frac{A_\theta}{r}\,\hat{\bf \phi} 
++ \frac{A_\theta\,\cos(\phi)}{r\,\sin(\phi)}\,\hat{\bf r}\right)\\
+\Rightarrow \nabla \times {\bf A}&= \frac{1}{r\,\sin(\phi)}\left(\frac{\partial (A_\theta\,\sin(\phi))}{\partial \phi} - \frac{\partial A_\phi}{\partial \theta} \right)\,\hat{\bf r} 
+\\&+ \frac{1}{r}\left(\frac{1}{\sin(\phi)}\frac{\partial A_r}{\partial \theta} - \frac{\partial (r\,A_\theta)}{\partial r}\right)\,\hat{\bf \phi} 
+\\&+ \frac{1}{r}\left(\frac{\partial (r\,A_\phi)}{\partial r}-\frac{\partial A_r}{\partial \phi}\right)\,\hat{\bf \theta}
+```
+
 
 ## Second order variations of fields
 We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field $\phi$, 
@@ -280,3 +315,58 @@ In general we can write a vector field as having two sets of components, one cur
 ```
 
 
+## Conservative vector fields
+
+Recall the concept of a perfect (or exact) differential where the following property holds:
+
+```{math}
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0 \Longleftrightarrow \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} 
+```
+where this holds because there is some function $f(x,\,y)$ which is constant such that $\mathrm{d}f = 0$ and so this expression 
+is really just:
+```{math}
+\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y = 0
+```
+and the expression calculated is just:
+```{math}
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial f}{\partial x\,\partial y}
+```
+There is a vector calculus generalisation of this sort of scalar function, known as the **conservative vector field**.
+
+````{admonition} Definition
+:class: notice
+A conservative vector field ${\bf v}$ is one which is formed solely from the gradient of some function $f(x,\,y,\,z)$:
+```{math}
+{\bf v} = \nabla f
+```
+
+Such a vector field is therefore curl free:
+```{math}
+\nabla \times {\bf v} = \nabla \times \nabla f = 0
+```
+
+Such a vector field also has a path independent line integral (more on this property later).
+````
+
+Lets examine the case of a vector field $\bf v$ formed from the function $f(x,\,y,\,z) = xyz$, the gradient of this function is given by:
+```{math}
+{\bf v} = \nabla f = \begin{pmatrix} yz \\ xz \\ xy \end{pmatrix}
+```
+
+and if we take the curl of such a vector field:
+```{math}
+\nabla \times {\bf v} &= \begin{vmatrix} \hat{\bf x} & \hat{\bf y} & \hat{\bf z} \\ \partial_x & \partial_y & \partial_z \\ yz & xz & xy\end{vmatrix} \\
+&= (x - x)\,\hat{\bf x} + (y - y)\,\hat{\bf y} + (z - z)\,\hat{\bf z} = 0
+```
+Likewise if we started with some vector field and wanted to work out if it is conservative (and if so which scalar field sourced it), we could examine 
+each component and integrate, for instance if:
+```{math}
+{\bf v} = \begin{pmatrix} 2x\sin(y) \\ x^2\cos(y) \\ 2 \end{pmatrix}
+```
+then examining each component we find:
+```{math}
+v_x = 2x\sin(y) &\Rightarrow \phi = \int 2x\sin(y)\,\mathrm{d}x = x^2\sin(y) + a(y,\,z) \\
+v_y = x^2\cos(y) &\Rightarrow \phi = \int 2x\sin(y)\,\mathrm{d}x = x^2\sin(y) + b(x,\,z) \\
+v_z = 2 &\Rightarrow \phi = \int 2\,\mathrm{d}z = 2z + c(x,\,y) 
+```
+Comparing all three expressions we find that $f = x^2\sin(y) + 2z$ and hence ${\bf v} = \nabla f$.  

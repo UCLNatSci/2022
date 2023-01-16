@@ -296,11 +296,21 @@ title="Print to PDF"
      4.2.1. Cylindrical coordinate systems
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spherical-coordinate-systems">
+     4.2.2. Spherical coordinate systems
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-order-variations-of-fields">
    4.3. Second order variations of fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservative-vector-fields">
+   4.4. Conservative vector fields
   </a>
  </li>
 </ul>
@@ -349,11 +359,21 @@ title="Print to PDF"
      4.2.1. Cylindrical coordinate systems
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spherical-coordinate-systems">
+     4.2.2. Spherical coordinate systems
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-order-variations-of-fields">
    4.3. Second order variations of fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservative-vector-fields">
+   4.4. Conservative vector fields
   </a>
  </li>
 </ul>
@@ -429,8 +449,12 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 \[\begin{split}\nabla \cdot {\bf A} &amp;= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta} + \frac{\partial (A_z)}{\partial r} \,\hat{\bf z}\right) 
 \\ &amp;+ \frac{\hat{\bf \theta}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r \,\hat{\bf \theta} + \frac{\partial (A_\theta)}{\partial \theta}\,\hat{\bf \theta} - A_\theta\,\hat{\bf r} + \frac{\partial (A_z)}{\partial \theta} \,\hat{\bf z} \right) 
 \\ &amp;+ \hat{\bf z}\cdot \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf \theta} +\frac{\partial (A_z)}{\partial z} \,\hat{\bf z} \right) \\
-&amp;= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
-\Rightarrow \nabla \cdot {\bf A}&amp;= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_r)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}\end{split}\]</div>
+&amp;= \frac{\partial (A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_\theta)}{\partial \theta} + \frac{A_r}{r} + \frac{\partial (A_z)}{\partial z} \\
+\Rightarrow \nabla \cdot {\bf A}&amp;= \frac{1}{r}\frac{\partial (r\,A_r)}{\partial r} + \frac{1}{r}\frac{\partial (A_\theta)}{\partial \theta}  + \frac{\partial (A_z)}{\partial z}\end{split}\]</div>
+<p>If we consider a vector in cylindrical coordinates, a vector with constant coefficients, e.g. <span class="math notranslate nohighlight">\(\displaystyle {\bf A} = \begin{pmatrix} a\\b\\c \end{pmatrix}\)</span> will have non-zero divergence if
+and only if the <span class="math notranslate nohighlight">\(A_r \neq 0\)</span>, since:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot {\bf A} = \frac{1}{r}\frac{\partial (r\,a)}{\partial r} + \frac{1}{r}\frac{\partial b}{\partial \theta}  + \frac{\partial c}{\partial z} = \frac{a}{r}\]</div>
 </section>
 <section id="spherical-coordinate-system">
 <h3><span class="section-number">4.1.2. </span>Spherical coordinate system<a class="headerlink" href="#spherical-coordinate-system" title="Permalink to this headline">#</a></h3>
@@ -443,7 +467,7 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 \end{pmatrix}, \qquad  \hat{\bf \phi } = \begin{pmatrix} 
 \cos(\theta)\,\cos(\phi) \\ 
 \sin(\theta)\,\cos(\phi) \\ 
-\cos(\phi)
+-\sin(\phi)
 \end{pmatrix},  \qquad \hat{\bf \theta} = 
 \begin{pmatrix} 
 -\sin(\theta) \\ 
@@ -465,7 +489,7 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 \[\begin{split}\frac{\partial \hat{\bf r}}{\partial \phi} &amp;= \begin{pmatrix} 
 \cos(\theta)\,\cos(\phi) \\ 
 \sin(\theta)\,\cos(\phi) \\ 
-\cos(\phi)
+-\sin(\phi)
 \end{pmatrix} = \hat{\bf \phi}, 
 \qquad 
 \frac{\partial \hat{\bf \phi}}{\partial \phi} = \begin{pmatrix} 
@@ -490,7 +514,7 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 -\sin(\theta)\,\cos(\phi) \\ 
 \cos(\theta)\,\cos(\phi)\\ 
 0
-\end{pmatrix} = - \cos(\phi)\,\hat{\bf \theta},\\
+\end{pmatrix} = \cos(\phi)\,\hat{\bf \theta},\\
 \frac{\partial \hat{\bf \theta}}{\partial \theta} &amp;= \begin{pmatrix} 
 -\cos(\theta) \\ 
 -\sin(\theta) \\ 
@@ -499,10 +523,10 @@ ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A
 <p>which means that:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla \cdot {\bf A} &amp;= \hat{\bf r}\cdot \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \phi} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta}\right) 
-\\ &amp;+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} \right) 
-\\ &amp;+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} \right.\\
-&amp;\left.\qquad \qquad - A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \\
-&amp;= \frac{\partial (A_r)}{\partial r} + \frac{A_r}{r} + \frac{2}{r}\frac{\partial (A_\phi)}{\partial \phi}  - \frac{A_\phi\,\cos(\phi)}{r\,\sin(\phi)} + \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\theta)}{\partial \theta} \\
+\\ &amp;+ \frac{\hat{\bf \phi}}{r}\cdot\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf \theta} \right) 
+\\ &amp;+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\cdot \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf \phi} \right.\\
+&amp;\left.\qquad \qquad + A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \\
+&amp;= \frac{\partial (A_r)}{\partial r} + \frac{A_r}{r} + \frac{2}{r}\frac{\partial (A_\phi)}{\partial \phi} + \frac{A_\phi\,\cos(\phi)}{r\,\sin(\phi)} + \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\theta)}{\partial \theta} \\
 \Rightarrow \nabla \cdot {\bf A}&amp;= \frac{1}{r^2}\frac{\partial (r^2\,A_r)}{\partial r} + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (\sin(\phi)\,A_\phi)}{\partial \phi}  + \frac{1}{r\,\sin(\phi)}\,\frac{\partial (A_\theta)}{\partial \theta}\end{split}\]</div>
 </section>
 </section>
@@ -569,9 +593,39 @@ hand rule, depicted in <a class="reference internal" href="#righthandcurl"><span
 <p>means we find that:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla \times {\bf A} &amp;= \left(\frac{\partial (A_\theta)}{\partial r} \,\hat{\bf z} - \frac{\partial (A_z)}{\partial r} \,\hat{\bf \theta}\right) 
-+ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf z} + \frac{1}{A_\theta}\,\hat{\bf z} + \frac{1}{r}\frac{\partial (A_z)}{\partial \theta} \,\hat{\bf r} \right) \\
++ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf z} + \frac{A_\theta}{r}\,\hat{\bf z} + \frac{1}{r}\frac{\partial (A_z)}{\partial \theta} \,\hat{\bf r} \right) \\
 &amp;+ \left(\frac{\partial (A_r)}{\partial z}\,\hat{\bf \theta} - \frac{\partial (A_\theta)}{\partial z}\,\hat{\bf r}\right)\\
-\Rightarrow \nabla \cdot {\bf A}&amp;= \left(\frac{1}{r}\,\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right)\,\hat{\bf r} + \left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)\,\hat{\bf \theta} + \frac{1}{r}\left(\frac{\partial (r\,A_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta}\right)\,\hat{\bf z}\end{split}\]</div>
+\Rightarrow \nabla \times {\bf A}&amp;= \left(\frac{1}{r}\,\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right)\,\hat{\bf r} + \left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)\,\hat{\bf \theta} + \frac{1}{r}\left(\frac{\partial (r\,A_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta}\right)\,\hat{\bf z}\end{split}\]</div>
+</section>
+<section id="spherical-coordinate-systems">
+<h3><span class="section-number">4.2.2. </span>Spherical coordinate systems<a class="headerlink" href="#spherical-coordinate-systems" title="Permalink to this headline">#</a></h3>
+<p>In a similar fashion to the cylindrical polar coordinates, we need to consider how the unit vectors change under differentiation first before
+applying the cross product, therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf A} &amp;= \left(\hat{\bf r}\, \frac{\partial }{\partial r}  
++ \frac{\hat{\bf \phi }}{r}\,\frac{\partial }{\partial \phi}  
++ \frac{\hat{\bf \theta}}{r\sin(\phi)} \,\frac{\partial }{\partial \theta} 
+ \right) \times \left( A_r\,\hat{\bf r} + A_\phi\,\hat{\bf \phi} + A_\theta\,\hat{\bf \theta}\right) \\
+ &amp;=\hat{\bf r}\times \left(\frac{\partial (A_r)}{\partial r}\,\hat{\bf r} + \frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \phi} + \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \theta}\right) 
+\\ &amp;+ \frac{\hat{\bf \phi}}{r}\times\left(\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf r} + A_r \,\hat{\bf \phi} + \frac{\partial (A_\phi)}{\partial \phi}\,\hat{\bf \phi} - A_\phi\,\hat{\bf r} + \frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf \theta} \right) 
+\\ &amp;+ \frac{\hat{\bf \theta}}{r\,\sin(\phi)}\times \left(\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf r} + A_r\,\sin(\phi)\,\hat{\bf \theta} + \frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf \phi} \right.\\
+&amp;\left.\qquad \qquad + A_\phi\,\cos(\theta)\,\hat{\bf \theta} +\frac{\partial (A_\theta)}{\partial \theta} \,\hat{\bf \theta} - A_\theta(\hat{\bf r}\,\sin(\phi) + \hat{\bf \phi}\,\cos(\phi)) \right) \end{split}\]</div>
+<p>Given the cylic nature of unit vectors and their orthongality:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\bf r} \times \hat{\bf \phi} &amp;= \hat{\bf \theta}\\
+\hat{\bf \phi} \times \hat{\bf \theta} &amp;= \hat{\bf r}\\
+\hat{\bf \theta} \times \hat{\bf r} &amp;= \hat{\bf \phi}\\
+\hat{\bf r} \times \hat{\bf r} &amp;= \hat{\bf \phi} \times \hat{\bf \phi} = \hat{\bf \theta} \times \hat{\bf \theta} = 0\end{split}\]</div>
+<p>means we find that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf A} &amp;= \left(\frac{\partial (A_\phi)}{\partial r} \,\hat{\bf \theta} - \frac{\partial (A_\theta)}{\partial r} \,\hat{\bf \phi}\right) 
++ \left(-\frac{1}{r}\frac{\partial (A_r)}{\partial \phi}\,\hat{\bf \theta} + \frac{A_\phi}{r}\,\hat{\bf \theta} 
++ \frac{1}{r}\frac{\partial (A_\theta)}{\partial \phi} \,\hat{\bf r} \right) \\
+&amp;+ \left(\frac{1}{r\,\sin(\phi)}\frac{\partial (A_r)}{\partial \theta}\,\hat{\bf \phi} - \frac{1}{r\,\sin(\phi)}\frac{\partial (A_\phi)}{\partial \theta}\,\hat{\bf r} - \frac{A_\theta}{r}\,\hat{\bf \phi} 
++ \frac{A_\theta\,\cos(\phi)}{r\,\sin(\phi)}\,\hat{\bf r}\right)\\
+\Rightarrow \nabla \times {\bf A}&amp;= \frac{1}{r\,\sin(\phi)}\left(\frac{\partial (A_\theta\,\sin(\phi))}{\partial \phi} - \frac{\partial A_\phi}{\partial \theta} \right)\,\hat{\bf r} 
+\\&amp;+ \frac{1}{r}\left(\frac{1}{\sin(\phi)}\frac{\partial A_r}{\partial \theta} - \frac{\partial (r\,A_\theta)}{\partial r}\right)\,\hat{\bf \phi} 
+\\&amp;+ \frac{1}{r}\left(\frac{\partial (r\,A_\phi)}{\partial r}-\frac{\partial A_r}{\partial \phi}\right)\,\hat{\bf \theta}\end{split}\]</div>
 </section>
 </section>
 <section id="second-order-variations-of-fields">
@@ -592,6 +646,47 @@ rotation around a point compared with emergence from / convergence to a point.</
 <p>In general we can write a vector field as having two sets of components, one curl free and one divergence free, this is known as the <b>Helmholtz Decomposition</b> of a vector field:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = -\nabla \phi + \nabla \times {\bf A}\]</div>
+</section>
+<section id="conservative-vector-fields">
+<h2><span class="section-number">4.4. </span>Conservative vector fields<a class="headerlink" href="#conservative-vector-fields" title="Permalink to this headline">#</a></h2>
+<p>Recall the concept of a perfect (or exact) differential where the following property holds:</p>
+<div class="math notranslate nohighlight">
+\[P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0 \Longleftrightarrow \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \]</div>
+<p>where this holds because there is some function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> which is constant such that <span class="math notranslate nohighlight">\(\mathrm{d}f = 0\)</span> and so this expression
+is really just:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y = 0\]</div>
+<p>and the expression calculated is just:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial f}{\partial x\,\partial y}\]</div>
+<p>There is a vector calculus generalisation of this sort of scalar function, known as the <strong>conservative vector field</strong>.</p>
+<div class="notice admonition">
+<p class="admonition-title">Definition</p>
+<p>A conservative vector field <span class="math notranslate nohighlight">\({\bf v}\)</span> is one which is formed solely from the gradient of some function <span class="math notranslate nohighlight">\(f(x,\,y,\,z)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{\bf v} = \nabla f\]</div>
+<p>Such a vector field is therefore curl free:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times {\bf v} = \nabla \times \nabla f = 0\]</div>
+<p>Such a vector field also has a path independent line integral (more on this property later).</p>
+</div>
+<p>Lets examine the case of a vector field <span class="math notranslate nohighlight">\(\bf v\)</span> formed from the function <span class="math notranslate nohighlight">\(f(x,\,y,\,z) = xyz\)</span>, the gradient of this function is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf v} = \nabla f = \begin{pmatrix} yz \\ xz \\ xy \end{pmatrix}\end{split}\]</div>
+<p>and if we take the curl of such a vector field:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf v} &amp;= \begin{vmatrix} \hat{\bf x} &amp; \hat{\bf y} &amp; \hat{\bf z} \\ \partial_x &amp; \partial_y &amp; \partial_z \\ yz &amp; xz &amp; xy\end{vmatrix} \\
+&amp;= (x - x)\,\hat{\bf x} + (y - y)\,\hat{\bf y} + (z - z)\,\hat{\bf z} = 0\end{split}\]</div>
+<p>Likewise if we started with some vector field and wanted to work out if it is conservative (and if so which scalar field sourced it), we could examine
+each component and integrate, for instance if:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf v} = \begin{pmatrix} 2x\sin(y) \\ x^2\cos(y) \\ 2 \end{pmatrix}\end{split}\]</div>
+<p>then examining each component we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_x = 2x\sin(y) &amp;\Rightarrow \phi = \int 2x\sin(y)\,\mathrm{d}x = x^2\sin(y) + a(y,\,z) \\
+v_y = x^2\cos(y) &amp;\Rightarrow \phi = \int 2x\sin(y)\,\mathrm{d}x = x^2\sin(y) + b(x,\,z) \\
+v_z = 2 &amp;\Rightarrow \phi = \int 2\,\mathrm{d}z = 2z + c(x,\,y) \end{split}\]</div>
+<p>Comparing all three expressions we find that <span class="math notranslate nohighlight">\(f = x^2\sin(y) + 2z\)</span> and hence <span class="math notranslate nohighlight">\({\bf v} = \nabla f\)</span>.</p>
 </section>
 </section>
 
