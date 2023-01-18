@@ -400,6 +400,11 @@ title="Print to PDF"
 </div>
 </section>
 </div>
+<p><strong>Marks</strong><br />
+<strong>1 mark</strong> for identifying this case [c].<br />
+[a, b] <strong>1 mark</strong> for stating that floats/strings are immutable and <strong>1 mark</strong> for stating that the value referenced by immutable variables cannot be changed (or similar).<br />
+[c] <strong>1 mark</strong>  for a correct function definition. No marks if a <code class="docutils literal notranslate"><span class="pre">return</span></code> statment included, or if the function call has been changed (eg <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">increase_by_one(val)</span></code>)<br />
+[d] Even though arrays are mutable <strong>1 mark</strong> they are of fixed size (or do not have an append function or similar) <strong>1 mark</strong></p>
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
@@ -411,7 +416,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Note that this works because <code class="docutils literal notranslate"><span class="pre">x[:]</span></code> makes a copy of the values of <code class="docutils literal notranslate"><span class="pre">x</span></code>. Another way to do the exact same is <code class="docutils literal notranslate"><span class="pre">x.copy()</span></code>.</p>
-<p>This solution is fine, but we might like to consider if there are other solutions which don’t require making a copy of the list elements. For example, the following code moves one value at a time from <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code> then one item at a time from <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>This solution is fine, but we might like to consider if there are other solutions which don’t require making a copy of the list elements. For example, the following code moves one value at a time from <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code> then one item at a time from <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code>. Note that we must be careful to move items in the correct order - otherwise we end up revering the list!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">swap_lists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -426,6 +431,11 @@ title="Print to PDF"
 </div>
 <p>In most applications this second method is probably not better (it is certainly more complicated) but it has one key advantage: it doesn’t copy any data and therefore doesn’t use any extra memory.</p>
 <p>It is not possible to write a function which swaps two strings because strings are immutable (see Question 1d).</p>
+<p><strong>Marks</strong></p>
+<p><strong>4 marks</strong> for a function which correctly swaps the arrays in place.  <strong>2 marks</strong> if the function works correctly except to reverse the order of the elements.
+Deduct 1 mark if a redundant <code class="docutils literal notranslate"><span class="pre">return</span></code> statement is included or an attempt is made to change global variables from inside the function, but the function otherwise works.</p>
+<p><strong>0 marks</strong> if the function does not swap the lists in-place or if the function call is changed to an assignment (eg <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">swap_lists(x,</span> <span class="pre">y)</span></code>).</p>
+<p><strong>1 mark</strong> for stating that strings are immutable.</p>
 </section>
 </section>
 
