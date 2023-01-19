@@ -210,7 +210,6 @@ Visualisation of the differences between phase and group velocity in the case of
 relation $\displaystyle \omega = \frac{A}{k^r}$.  Note that this shows $v_g = -r v_p$.
 ```
 
-
 ## Wavepackets
 Our simplest form of dispersion relation for travelling waves suggested $\omega = \pm ck$, which we can write as:
 ```{math}
