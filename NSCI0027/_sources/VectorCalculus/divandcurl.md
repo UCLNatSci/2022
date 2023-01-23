@@ -217,7 +217,7 @@ We can use the product rule as well as the rules following scalar and vector pro
 \nabla(\phi\,\psi) &=  \psi(\nabla \phi) + \phi(\nabla \psi)\\
 \nabla \cdot(\phi {\bf A}) &=  (\nabla \phi)\cdot {\bf A} + \phi(\nabla \cdot {\bf A})\\
 \nabla \times(\phi {\bf A}) &=  (\nabla \phi)\times {\bf A} + \phi(\nabla \times {\bf A})\\
-\nabla \cdot ({\bf A \times B}) &=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
+\nabla \cdot ({\bf A \times B}) &=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}\cdot(\nabla \times {\bf B})\\
 \nabla \times ({\bf A \times B}) &=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}
 ```
 
@@ -289,7 +289,7 @@ means we find that:
 ## Second order variations of fields
 We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field $\phi$, 
 ```{math}
-\textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = (\partial_x^2 + \partial_y^2 + \partial_z^2)\phi
+\textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = \left(\frac{\partial}{\partial_x^2} + \frac{\partial}{\partial_y^2} + \frac{\partial}{\partial_z^2}\right)\phi
 ```
 This is sometimes also written as $\Delta\phi = \nabla^2 \phi $ and is known as the Laplacian of $\phi$.  
 
@@ -308,11 +308,17 @@ Likewise if we look at the curl of a gradient field:
 ```
 which is true for <em>all</em> scalar fields.
 
+Also we sometimes find the curl of the curl a useful quantity:
+```{math}
+\nabla \times \left(\nabla \times {\bf A}\right) = \nabla \left(\nabla \cdot {\bf A} \right) - \nabla^2 {\bf A}
+```
+
 In general we can write a vector field as having two sets of components, one curl free and one divergence free, this is known as the <b>Helmholtz Decomposition</b> of a vector field:
 
 ```{math}
 {\bf B} = -\nabla \phi + \nabla \times {\bf A}
 ```
+
 
 
 ## Conservative vector fields
@@ -329,7 +335,7 @@ is really just:
 ```
 and the expression calculated is just:
 ```{math}
-\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial f}{\partial x\,\partial y}
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial^2 f}{\partial x\,\partial y}
 ```
 There is a vector calculus generalisation of this sort of scalar function, known as the **conservative vector field**.
 

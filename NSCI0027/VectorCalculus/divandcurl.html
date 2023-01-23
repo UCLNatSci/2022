@@ -569,7 +569,7 @@ hand rule, depicted in <a class="reference internal" href="#righthandcurl"><span
 \[\begin{split}\nabla(\phi\,\psi) &amp;=  \psi(\nabla \phi) + \phi(\nabla \psi)\\
 \nabla \cdot(\phi {\bf A}) &amp;=  (\nabla \phi)\cdot {\bf A} + \phi(\nabla \cdot {\bf A})\\
 \nabla \times(\phi {\bf A}) &amp;=  (\nabla \phi)\times {\bf A} + \phi(\nabla \times {\bf A})\\
-\nabla \cdot ({\bf A \times B}) &amp;=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
+\nabla \cdot ({\bf A \times B}) &amp;=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}\cdot(\nabla \times {\bf B})\\
 \nabla \times ({\bf A \times B}) &amp;=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}\end{split}\]</div>
 <section id="cylindrical-coordinate-systems">
 <h3><span class="section-number">4.2.1. </span>Cylindrical coordinate systems<a class="headerlink" href="#cylindrical-coordinate-systems" title="Permalink to this headline">#</a></h3>
@@ -632,7 +632,7 @@ applying the cross product, therefore:</p>
 <h2><span class="section-number">4.3. </span>Second order variations of fields<a class="headerlink" href="#second-order-variations-of-fields" title="Permalink to this headline">#</a></h2>
 <p>We can combine two or more gradients in a vector expression, one of the most useful is to find the divergence of the gradient of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = (\partial_x^2 + \partial_y^2 + \partial_z^2)\phi\]</div>
+\[\textrm{div grad} \,\phi = \nabla \cdot (\nabla \phi) = \nabla^2 \phi = \left(\frac{\partial}{\partial_x^2} + \frac{\partial}{\partial_y^2} + \frac{\partial}{\partial_z^2}\right)\phi\]</div>
 <p>This is sometimes also written as <span class="math notranslate nohighlight">\(\Delta\phi = \nabla^2 \phi \)</span> and is known as the Laplacian of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p>We can also find the divergence of the curl of a vector field:</p>
 <div class="math notranslate nohighlight">
@@ -643,6 +643,9 @@ rotation around a point compared with emergence from / convergence to a point.</
 <div class="math notranslate nohighlight">
 \[\text{curl}\,\,\text{grad}\,\phi = \nabla \times \nabla \phi = 0\]</div>
 <p>which is true for <em>all</em> scalar fields.</p>
+<p>Also we sometimes find the curl of the curl a useful quantity:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times \left(\nabla \times {\bf A}\right) = \nabla \left(\nabla \cdot {\bf A} \right) - \nabla^2 {\bf A}\]</div>
 <p>In general we can write a vector field as having two sets of components, one curl free and one divergence free, this is known as the <b>Helmholtz Decomposition</b> of a vector field:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = -\nabla \phi + \nabla \times {\bf A}\]</div>
@@ -658,7 +661,7 @@ is really just:</p>
 \[\mathrm{d}f = \frac{\partial f}{\partial x}\,\mathrm{d}x + \frac{\partial f}{\partial y}\,\mathrm{d}y = 0\]</div>
 <p>and the expression calculated is just:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial f}{\partial x\,\partial y}\]</div>
+\[\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}  = \frac{\partial^2 f}{\partial x\,\partial y}\]</div>
 <p>There is a vector calculus generalisation of this sort of scalar function, known as the <strong>conservative vector field</strong>.</p>
 <div class="notice admonition">
 <p class="admonition-title">Definition</p>
