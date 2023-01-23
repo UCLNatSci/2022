@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. NSCI0011 Coursework - Neural Circuits &#8212; Neural Circuits</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3. Small-World Networks" href="../nc_problems.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/brain.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Neural Circuits</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ws1/ws1.html">
+   1. Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ws2/ws2.html">
+   2. Graphs with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nc_problems.html">
+   3. Small-World Networks
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. NSCI0011 Coursework - Neural Circuits
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/project/neural_circuits_project.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   4.1. Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-brief">
+   4.2. Project Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   4.3. References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>NSCI0011 Coursework - Neural Circuits</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   4.1. Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-brief">
+   4.2. Project Brief
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   4.3. References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="nsci0011-coursework-neural-circuits">
+<h1><span class="section-number">4. </span>NSCI0011 Coursework - Neural Circuits<a class="headerlink" href="#nsci0011-coursework-neural-circuits" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background">
+<h2><span class="section-number">4.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="#motifs"><span class="std std-numref">Fig. 4.1</span></a>). The aim of motif analysis is to determine which specific motifs are present in a network with a frequency that is significantly different to chance. This can be achieved by repeated sampling from a network in order to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="#histogram"><span class="std std-numref">Fig. 4.2</span></a>). Motif analysis has revealed functionally important features in the nervous systems of the macaque, cat and <em>C. elegans</em> <span id="id1">[<a class="reference internal" href="#id9">1</a>]</span>.</p>
+<div class="figure align-default" id="motifs">
+<a class="reference internal image-reference" href="../_images/motifs.png"><img alt="../_images/motifs.png" src="../_images/motifs.png" style="height: 220px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id2">[]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="histogram">
+<a class="reference internal image-reference" href="../_images/histogram.png"><img alt="../_images/histogram.png" src="../_images/histogram.png" style="height: 120px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id3">[]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">¶</a></p>
+</div>
+<p>A ‘connectome’ is a complete description of the structural connectivity of an organism’s nervous system, typically as a graph of nodes (neurons) and directed edges (synaptic connections between neurons). To date, the only whole-animal connectome to be completely determined is the nervous system of hermaphrodite <em>C. elegans</em>, comprising a graph of 460 nodes and 4887 directed edges. In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="#drosophila"><span class="std std-numref">Fig. 4.3</span></a>) <span id="id4">[<a class="reference internal" href="#id10">3</a>]</span>.</p>
+<div class="figure align-default" id="drosophila">
+<a class="reference internal image-reference" href="../_images/drosophila.png"><img alt="../_images/drosophila.png" src="../_images/drosophila.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id5">[<a class="reference internal" href="#id10">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="project-brief">
+<h2><span class="section-number">4.2. </span>Project Brief<a class="headerlink" href="#project-brief" title="Permalink to this headline">¶</a></h2>
+<p>You should perform a motif analysis of the connectome of <em>Drosophila Melanogaster</em>. By reviewing relevant scientific literature, investigate how motif analysis can be performed in nervous systems, then apply appropriate techniques to the <em>Drosophila Melanogaster</em> connectome detailed in <span id="id6">[<a class="reference internal" href="#id10">3</a>]</span>. Using diagrams and equations, clearly describe how the motif analysis is performed.</p>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">4.3. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id7"><dl class="citation">
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets">2</span></dt>
+<dd><p>Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. <em>nature</em>, 393(6684):440–442, 1998.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
+<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../nc_problems.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Small-World Networks</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
