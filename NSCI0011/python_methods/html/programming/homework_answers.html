@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Homework Answers &#8212; Topics in Scientific Computing</title>
+    <title>4.3. Homework Answers &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="4. Homework" href="homework.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,7 +105,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tools.html">
    1. Tools
@@ -120,10 +121,22 @@ const thebe_selector_output = ".output, .cell_output"
    3. Exercises
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="homework.html">
    4. Homework
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     4.3. Homework Answers
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -288,12 +301,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-1">
-   Question 1
+   4.3.1. Question 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-2">
-   Question 2
+   4.3.2. Question 2
   </a>
  </li>
 </ul>
@@ -317,12 +330,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-1">
-   Question 1
+   4.3.1. Question 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-2">
-   Question 2
+   4.3.2. Question 2
   </a>
  </li>
 </ul>
@@ -336,9 +349,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-answers">
-<h1>Homework Answers<a class="headerlink" href="#homework-answers" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4.3. </span>Homework Answers<a class="headerlink" href="#homework-answers" title="Permalink to this headline">#</a></h1>
 <section id="question-1">
-<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3.1. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="programming/homework_answers-solution-0">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="exercises.html#exercise_increase_by_one"> Exercise 3.1</a></p>
@@ -350,7 +363,7 @@ title="Print to PDF"
 <span class="go">6.0</span>
 </pre></div>
 </div>
-<p>This is not possible because the variable <code class="docutils literal notranslate"><span class="pre">val</span></code> is of type <code class="docutils literal notranslate"><span class="pre">float</span></code> which is an immutable type. The attempt below won’t work. Even though the local variable <code class="docutils literal notranslate"><span class="pre">x</span></code> and the global variable <code class="docutils literal notranslate"><span class="pre">val</span></code> reference the same object <code class="docutils literal notranslate"><span class="pre">5.0</span></code>, the line <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> creates a <em>new</em> local varaible <code class="docutils literal notranslate"><span class="pre">x</span></code> rather than mutating the value of the object <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p>
+<p>This is not possible because the variable <code class="docutils literal notranslate"><span class="pre">val</span></code> is of type <code class="docutils literal notranslate"><span class="pre">float</span></code> which is an immutable type. The attempt below won’t work. Even though the local variable <code class="docutils literal notranslate"><span class="pre">x</span></code> and the global variable <code class="docutils literal notranslate"><span class="pre">val</span></code> reference the same object <code class="docutils literal notranslate"><span class="pre">5.0</span></code>, the line <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> creates a <em>new</em> local variable <code class="docutils literal notranslate"><span class="pre">x</span></code> rather than mutating the value of the object <code class="docutils literal notranslate"><span class="pre">5.0</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increase_by_one</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
@@ -407,7 +420,7 @@ title="Print to PDF"
 [d] Even though arrays are mutable <strong>1 mark</strong> they are of fixed size (or do not have an append function or similar) <strong>1 mark</strong></p>
 </section>
 <section id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3.2. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
 <p>One way to swap the two arrays is to make a temporary copy of the values. Perhaps the simplest way to do this is to copy all of the value into a temporary array first. This works:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">swap_lists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:]</span> <span class="c1"># create temporary copy of x</span>
@@ -466,6 +479,13 @@ Deduct 1 mark if a redundant <code class="docutils literal notranslate"><span cl
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="homework.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Homework</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
