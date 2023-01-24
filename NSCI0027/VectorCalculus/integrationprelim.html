@@ -136,6 +136,26 @@ const thebe_selector_output = ".output, .cell_output"
    4. Variations of Fields
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   6. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEreduction.html">
+   7. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEvariation.html">
+   8. ODE Methods - Variation of Parameters
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -323,7 +343,7 @@ title="Print to PDF"
 <h2>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">#</a></h2>
 <p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">FunctionArea</span></code>.</p>
 <figure class="align-default" id="functionarea">
-<img alt="../_images/FunctionArea.png" src="../_images/FunctionArea.png" />
+<img alt="figures/FunctionArea.png" src="figures/FunctionArea.png" />
 <figcaption>
 <p><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -331,7 +351,7 @@ title="Print to PDF"
 <p>Another question that we could ask however is what is the length of the path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the range <span class="math notranslate nohighlight">\([a,\,b]\)</span>, as shown in
 <code class="xref std std-numref docutils literal notranslate"><span class="pre">FunctionPathLength</span></code>.</p>
 <figure class="align-default" id="functionpathlength">
-<img alt="../_images/FunctionPathLength.png" src="../_images/FunctionPathLength.png" />
+<img alt="figures/FunctionPathLength.png" src="figures/FunctionPathLength.png" />
 <figcaption>
 <p><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -341,7 +361,7 @@ process in <code class="xref std std-numref docutils literal notranslate"><span 
 <div class="math notranslate nohighlight">
 \[(\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
 <figure class="align-default" id="arclength">
-<img alt="../_images/ArcLength2.png" src="../_images/ArcLength2.png" />
+<img alt="figures/ArcLength2.png" src="figures/ArcLength2.png" />
 <figcaption>
 <p><span class="caption-text"><b>Left Pane:</b> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> comoonents <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>,
 <b>Right Pane:</b> Effect of taking the limit of smaller <span class="math notranslate nohighlight">\(\Delta x\)</span> in finding the path length.</span><a class="headerlink" href="#arclength" title="Permalink to this image">#</a></p>
@@ -371,7 +391,7 @@ process in <code class="xref std std-numref docutils literal notranslate"><span 
 <h2>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">#</a></h2>
 <p>Lets now go further, what happens if we take a function and rotate it around an axis, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">AreaVolumeRevolution</span></code>.</p>
 <figure class="align-default" id="areavolumerevolution">
-<img alt="../_images/AreaVolumeRevolution.png" src="../_images/AreaVolumeRevolution.png" />
+<img alt="figures/AreaVolumeRevolution.png" src="figures/AreaVolumeRevolution.png" />
 <figcaption>
 <p><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
 <b>Right Pane:</b> Breaking down the volume into discrete slices, each of width <span class="math notranslate nohighlight">\(\mathrm{d} x\)</span>.</span><a class="headerlink" href="#areavolumerevolution" title="Permalink to this image">#</a></p>
@@ -403,7 +423,7 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 &amp;=  \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
 <figure class="align-default" id="cone">
-<img alt="../_images/cone.png" src="../_images/cone.png" />
+<img alt="figures/cone.png" src="figures/cone.png" />
 <figcaption>
 <p><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone" title="Permalink to this image">#</a></p>
 </figcaption>

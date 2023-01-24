@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
+    <title>6. Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -56,6 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. ODE Methods - Reduction of Order" href="../odes/ODEreduction.html" />
+    <link rel="prev" title="5. Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
    1. Coordinate Systems
@@ -134,6 +136,26 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
    4. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEreduction.html">
+   7. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEvariation.html">
+   8. ODE Methods - Variation of Parameters
   </a>
  </li>
 </ul>
@@ -270,24 +292,24 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   (Gauss-)Divergence Theorem
+   6.1. (Gauss-)Divergence Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
-     A Sketch of a Proof
+     6.1.1. A Sketch of a Proof
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   (Kelvin-)Stoke’s Theorem
+   6.2. (Kelvin-)Stoke’s Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     A Sketch of a Proof
+     6.2.1. A Sketch of a Proof
     </a>
    </li>
   </ul>
@@ -313,24 +335,24 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   (Gauss-)Divergence Theorem
+   6.1. (Gauss-)Divergence Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-sketch-of-a-proof">
-     A Sketch of a Proof
+     6.1.1. A Sketch of a Proof
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   (Kelvin-)Stoke’s Theorem
+   6.2. (Kelvin-)Stoke’s Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     A Sketch of a Proof
+     6.2.1. A Sketch of a Proof
     </a>
    </li>
   </ul>
@@ -346,18 +368,18 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="vector-calculus-theorems">
-<h1>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">6. </span>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">#</a></h1>
 <p>Although the ideas in vector calculus seem quite distinct, area, surface and volume integrals as well as the gradient, divergence and curl, it turns out
 that they are connected together thanks to a couple of quite important theorems.  These can in some cases simplify a calculation that we are aiming to
 do and/or give us a better intution about a system.</p>
 <section id="gauss-divergence-theorem">
-<h2>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.1. </span>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">#</a></h2>
 <p>Lets think about a closed surface <span class="math notranslate nohighlight">\(S\)</span> in a space, this surface area therefore encloses a volume <span class="math notranslate nohighlight">\(V\)</span>, i.e. it forms the boundary <span class="math notranslate nohighlight">\(S = \partial V\)</span> (not
-to be confused with taking some partial derivative!), as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">gaussdivergence</span></code>.</p>
+to be confused with taking some partial derivative!), as depicted in <a class="reference internal" href="#gaussdivergence"><span class="std std-numref">Fig. 6.1</span></a>.</p>
 <figure class="align-default" id="gaussdivergence">
 <img alt="../_images/gaussdivergence.png" src="../_images/gaussdivergence.png" />
 <figcaption>
-<p><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
 <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \hat{\bf n} \mathrm{d}S\)</span> points outwards.</span><a class="headerlink" href="#gaussdivergence" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -377,11 +399,11 @@ This result gives us the <b>Divergence Theorem</b>:</p>
 <p>Consider the vector field:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf G}({\bf r}) = \begin{pmatrix} x^2 \\ y \\ z \end{pmatrix}\end{split}\]</div>
-<p>over a cubic volume surface, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">divergencecube</span></code>.</p>
+<p>over a cubic volume surface, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <a class="reference internal" href="#divergencecube"><span class="std std-numref">Fig. 6.2</span></a>.</p>
 <figure class="align-default" id="divergencecube">
 <img alt="../_images/divergencecube.png" src="../_images/divergencecube.png" />
 <figcaption>
-<p><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we compute the surface integral:</p>
@@ -406,24 +428,24 @@ I &amp;=  \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}
 <p>In agreement with the previous result and whole lot easier to do!</p>
 </div>
 <section id="a-sketch-of-a-proof">
-<h3>A Sketch of a Proof<a class="headerlink" href="#a-sketch-of-a-proof" title="Permalink to this headline">#</a></h3>
-<p>We can sketch out a proof of this result, using the same set up as previously, as seen in <code class="xref std std-numref docutils literal notranslate"><span class="pre">divergencecubeproof</span></code>,</p>
+<h3><span class="section-number">6.1.1. </span>A Sketch of a Proof<a class="headerlink" href="#a-sketch-of-a-proof" title="Permalink to this headline">#</a></h3>
+<p>We can sketch out a proof of this result, using the same set up as previously, as seen in <a class="reference internal" href="#divergencecubeproof"><span class="std std-numref">Fig. 6.3</span></a>,</p>
 <figure class="align-default" id="divergencecubeproof">
 <img alt="../_images/divergencecubeproof.png" src="../_images/divergencecubeproof.png" />
 <figcaption>
-<p><span class="caption-text">An infinitesimal cubic surface <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> around some vector field divergence.</span><a class="headerlink" href="#divergencecubeproof" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">An infinitesimal cubic surface <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> around some vector field divergence.</span><a class="headerlink" href="#divergencecubeproof" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Thinking about an infinitesimal flux element <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> for a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> crossing the sides of the infinitesimal
 volume element <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-divtheoremproof">
-<span class="eqno">()<a class="headerlink" href="#equation-divtheoremproof" title="Permalink to this equation">#</a></span>\[\begin{split}\mathrm{d}F &amp;=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-divtheoremproof" title="Permalink to this equation">#</a></span>\[\begin{split}\mathrm{d}F &amp;=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\,\mathrm{d}y\,\mathrm{d}z\\
 &amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf y} \right)\cdot (-\hat{\bf y})\,\mathrm{d}x\,\mathrm{d}z\\
 &amp;+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}z\,\hat{\bf z} \right)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf z} \right)\cdot (-\hat{\bf z})\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
-<p>The first line of <a class="reference internal" href="#equation-divtheoremproof">()</a> reduces to:</p>
+<p>The first line of <a class="reference internal" href="#equation-divtheoremproof">(6.1)</a> reduces to:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\right]\,\mathrm{d}y\,\mathrm{d}z\\
@@ -434,23 +456,23 @@ volume element <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathr
 \[\begin{split}&amp;=  \left[G_x({\bf r}) + \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x 
 - \left(G_x({\bf r}) - \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
 &amp;=  \partial_x G_x \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\end{split}\]</div>
-<p>We can do similar for the second and third lines of <a class="reference internal" href="#equation-divtheoremproof">()</a> to find the result:</p>
+<p>We can do similar for the second and third lines of <a class="reference internal" href="#equation-divtheoremproof">(6.1)</a> to find the result:</p>
 <p>And through suitable coordinate transforms we could prove this result for any coordinate system.  Hence the flux across the cubes sides
 is related to the divergence of the vector field over the volume element.</p>
 <p>If we then proceed with integrating this flux over the over a given volume, then we can think of this as summing up little cubes with volume
-<span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">infinitesimalcubes</span></code>.</p>
+<span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, as depicted in <a class="reference internal" href="#infinitesimalcubes"><span class="std std-numref">Fig. 6.4</span></a>.</p>
 <figure class="align-default" id="infinitesimalcubes">
 <img alt="../_images/infinitesimalcubes.png" src="../_images/infinitesimalcubes.png" />
 <figcaption>
-<p><span class="caption-text">Infinitesimal cubic volume <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> making up some volume <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#infinitesimalcubes" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Infinitesimal cubic volume <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span> making up some volume <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#infinitesimalcubes" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This means we are summing up neighbouring cubes, where the outgoing flux <span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &gt; 0\)</span> from one will be an incoming flux
-<span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &lt; 0\)</span> for another cube, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">inoutgoingflux</span></code>.</p>
+<span class="math notranslate nohighlight">\(\int \,\mathrm{d}F &lt; 0\)</span> for another cube, as depicted in <a class="reference internal" href="#inoutgoingflux"><span class="std std-numref">Fig. 6.5</span></a>.</p>
 <figure class="align-default" id="inoutgoingflux">
 <img alt="../_images/inoutgoingflux.png" src="../_images/inoutgoingflux.png" />
 <figcaption>
-<p><span class="caption-text">A schematic of the infinitesimal flux contributions from neighbouring infintesimal cubic volumes.</span><a class="headerlink" href="#inoutgoingflux" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">A schematic of the infinitesimal flux contributions from neighbouring infintesimal cubic volumes.</span><a class="headerlink" href="#inoutgoingflux" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Therefore we see that the <b>only</b> remaining contributions to the summing of the fluxes over the volume will be from the volumes surface,
@@ -462,29 +484,29 @@ hence:</p>
 </section>
 </section>
 <section id="kelvin-stokes-theorem">
-<h2>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.2. </span>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">#</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>Stokes’s theorem states that the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around the boundary <span class="math notranslate nohighlight">\(C = \partial S\)</span> of an open surface <span class="math notranslate nohighlight">\(S\)</span> is
 equal to the flux of the curl of the vector field, <span class="math notranslate nohighlight">\(\nabla \times {\bf G}({\bf r})\)</span> through the surface;</p>
 <div class="math notranslate nohighlight">
 \[\oint_{C = \partial S} {\bf G}({\bf r}) \cdot \mathrm{d}{\bf r} = \iint_{S} \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\]</div>
-<p>where the orientation of this closed contour is given by the right hand rule, as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">stokesRHrule</span></code>.</p>
+<p>where the orientation of this closed contour is given by the right hand rule, as depicted in <a class="reference internal" href="#stokesrhrule"><span class="std std-numref">Fig. 6.6</span></a>.</p>
 </div>
 <figure class="align-default" id="stokesrhrule">
 <img alt="../_images/stokesRHrule.png" src="../_images/stokesRHrule.png" />
 <figcaption>
-<p><span class="caption-text">The relevant orientation of the closed contour used in Stoke’s theorem.</span><a class="headerlink" href="#stokesrhrule" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">The relevant orientation of the closed contour used in Stoke’s theorem.</span><a class="headerlink" href="#stokesrhrule" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>Consider the vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}\)</span> over a closed circular arc path around the origin, which we depict
-in <code class="xref std std-numref docutils literal notranslate"><span class="pre">contourexample</span></code>:</p>
+in <a class="reference internal" href="#contourexample"><span class="std std-numref">Fig. 6.7</span></a>:</p>
 <figure class="align-default" id="contourexample">
 <img alt="../_images/contourexample.png" src="../_images/contourexample.png" />
 <figcaption>
-<p><span class="caption-text">Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.</span><a class="headerlink" href="#contourexample" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text">Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.</span><a class="headerlink" href="#contourexample" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The parameterisation of the line integral will not change its result (nor should the starting point for a loop integral), so we will start
@@ -514,13 +536,13 @@ right hand rule, we have <span class="math notranslate nohighlight">\(\mathrm{d}
 <p>Therefore for quite a lot less work, we find the same result!</p>
 </div>
 <section id="id1">
-<h3>A Sketch of a Proof<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.2.1. </span>A Sketch of a Proof<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Lets consider a vectorial surface area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}x\,\mathrm{d}y\,\hat{\bf z}\)</span>, as depicted
-in <code class="xref std std-numref docutils literal notranslate"><span class="pre">infinitesimalcontour</span></code>:</p>
+in <a class="reference internal" href="#infinitesimalcontour"><span class="std std-numref">Fig. 6.8</span></a>:</p>
 <figure class="align-default" id="infinitesimalcontour">
 <img alt="../_images/infinitesimalcontour.png" src="../_images/infinitesimalcontour.png" />
 <figcaption>
-<p><span class="caption-text">Closed infinitesimal contour around some point <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#infinitesimalcontour" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Closed infinitesimal contour around some point <span class="math notranslate nohighlight">\({\bf r}\)</span>.</span><a class="headerlink" href="#infinitesimalcontour" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We can therefore find the loop integral of a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> around this contour as:</p>
@@ -540,11 +562,11 @@ in <code class="xref std std-numref docutils literal notranslate"><span class="p
 &amp;=  \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}\end{split}\]</div>
 <p>Which if we integrate up, we find <span class="math notranslate nohighlight">\(I = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}\)</span>.  Thinking carefully these loop integrals however,
 if we sum up infinitesimal areas (plaquettes if you will), then along the surface neighbouring areas will have cancellation occuring, as depicted in
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">neighbouringcontours</span></code>:</p>
+<a class="reference internal" href="#neighbouringcontours"><span class="std std-numref">Fig. 6.9</span></a>:</p>
 <figure class="align-default" id="neighbouringcontours">
 <img alt="../_images/neighbouringcontours.png" src="../_images/neighbouringcontours.png" />
 <figcaption>
-<p><span class="caption-text">Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.</span><a class="headerlink" href="#neighbouringcontours" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.</span><a class="headerlink" href="#neighbouringcontours" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This means that the only interbal contributions to summing up these loop integrals will be those along the boundary, hence:</p>
@@ -582,6 +604,20 @@ if we sum up infinitesimal areas (plaquettes if you will), then along the surfac
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lineintegrals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Line Integrals</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../odes/ODEreduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>ODE Methods - Reduction of Order</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

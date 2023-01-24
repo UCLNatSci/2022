@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Solving Ordinary Differential Equations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>7. ODE Methods - Reduction of Order &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -56,6 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. ODE Methods - Variation of Parameters" href="ODEvariation.html" />
+    <link rel="prev" title="6. Vector Calculus Theorems" href="../VectorCalculus/vectorcalctheorems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,35 +117,45 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="coordinatesystems.html">
+  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="doubletripleintegrals.html">
+  <a class="reference internal" href="../VectorCalculus/doubletripleintegrals.html">
    2. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="calculusonfields.html">
+  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
    3. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
+  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
    4. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
+  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
    5. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   6. Surface Integrals
+  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
+   6. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODEvariation.html">
+   8. ODE Methods - Variation of Parameters
   </a>
  </li>
 </ul>
@@ -219,7 +231,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/VectorCalculus/ODEs.md"
+        <a href="../_sources/odes/ODEreduction.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -279,30 +291,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reduction-of-order-method">
-   Reduction of order method
+  <a class="reference internal nav-link" href="#euler-equations">
+   7.1. Euler Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduction-of-order">
+   7.2. Reduction of Order
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     Finding homogeneous solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variation-of-parameters-method">
-   Variation of parameters method
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#first-order-systems">
-     First order systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#second-order-systems">
-     Second order systems
+     7.2.1. Finding homogeneous solutions
     </a>
    </li>
   </ul>
@@ -316,7 +316,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Solving Ordinary Differential Equations</h1>
+                <h1>ODE Methods - Reduction of Order</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -327,30 +327,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reduction-of-order-method">
-   Reduction of order method
+  <a class="reference internal nav-link" href="#euler-equations">
+   7.1. Euler Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduction-of-order">
+   7.2. Reduction of Order
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     Finding homogeneous solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variation-of-parameters-method">
-   Variation of parameters method
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#first-order-systems">
-     First order systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#second-order-systems">
-     Second order systems
+     7.2.1. Finding homogeneous solutions
     </a>
    </li>
   </ul>
@@ -365,8 +353,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="solving-ordinary-differential-equations">
-<h1>Solving Ordinary Differential Equations<a class="headerlink" href="#solving-ordinary-differential-equations" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ode-methods-reduction-of-order">
+<h1><span class="section-number">7. </span>ODE Methods - Reduction of Order<a class="headerlink" href="#ode-methods-reduction-of-order" title="Permalink to this headline">#</a></h1>
 <p>Whilst we can feel confident about solving first order ODEs that are linear (and in some cases non-linear) as well as second order ODEs with constant coefficients,
 there clearly remain many classes of ODEs which we cannot currently solve.  We can however use a series of generalisations of our current methods to solve more
 complicated problems.  Here we will focus on two such methods, <em>reduction of order</em> and <em>variation of parameters</em>.</p>
@@ -374,11 +362,14 @@ complicated problems.  Here we will focus on two such methods, <em>reduction of 
 <p class="admonition-title">Definition</p>
 <p>Recall that in general a linear second order differential equation is of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2general">
-<span class="eqno">()<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">#</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">#</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,\,b,\,c\)</span> are arbitrary constants.</p>
 </div>
-<section id="reduction-of-order-method">
-<h2>Reduction of order method<a class="headerlink" href="#reduction-of-order-method" title="Permalink to this headline">#</a></h2>
+<section id="euler-equations">
+<h2><span class="section-number">7.1. </span>Euler Equations<a class="headerlink" href="#euler-equations" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="reduction-of-order">
+<h2><span class="section-number">7.2. </span>Reduction of Order<a class="headerlink" href="#reduction-of-order" title="Permalink to this headline">#</a></h2>
 <p>Recall the following linear homogeneous second order ODE:</p>
 <div class="math notranslate nohighlight">
 \[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+\frac{b^2}{4a}\,y(x)=0\]</div>
@@ -404,7 +395,7 @@ independent solution <span class="math notranslate nohighlight">\(y_2(x)\)</span
 <p class="admonition-title">Definition</p>
 <p>We employ this method to solve inhomogeneous linear differential equations of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2redorder">
-<span class="eqno">()<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">#</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \Rightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">#</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \Rightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
 <p>where we have relabelled <span class="math notranslate nohighlight">\(\displaystyle p(x) = \frac{b(x)}{a(x)},\, q(x) = \frac{c(x)}{a(x)},\, r(x) = \frac{f(x)}{a(x)}\)</span> for simplicity.</p>
 <p>If we know a solution <span class="math notranslate nohighlight">\(y_1(x)\)</span> of the homogeneous problem <span class="math notranslate nohighlight">\(y_1'' + p\,y_1'+q\,y_1 = 0\)</span>, then the solution to
 the inhomogeneous problem will be of the form:</p>
@@ -422,7 +413,7 @@ the inhomogeneous problem will be of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y_2' &amp;= u'\,y_1 + u\,y_1' \\
 y_2'' &amp;= u''\,y_1 + 2u'\,y_1+ f\,y_1'' \end{split}\]</div>
-<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">()</a>:</p>
+<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">(7.2)</a>:</p>
 <div class="math notranslate nohighlight">
 \[y_1\,u'' + (2y_1' + p\,y_1)\,u' + (y_1''+p\,y_1'+q\,y_1)\,u = r\]</div>
 <p>but since <span class="math notranslate nohighlight">\(y_1\)</span> satisfies <span class="math notranslate nohighlight">\(y_1'' + p\,y_1' + q\,y_1 = 0\)</span>, then this reduces do:</p>
@@ -441,8 +432,8 @@ if we started with an <span class="math notranslate nohighlight">\(n^{th}\)</spa
 \Rightarrow u'(x) &amp;= \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\\
 u(x) &amp;= \int \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\,\mathrm{d}x\end{split}\]</div>
 <section id="finding-homogeneous-solutions">
-<h3>Finding homogeneous solutions<a class="headerlink" href="#finding-homogeneous-solutions" title="Permalink to this headline">#</a></h3>
-<p>If the form of <span class="math notranslate nohighlight">\(p(x),\, q(x)\)</span> are just polynomial, then finding homogeneous solution(s) to ODEs of the form <a class="reference internal" href="#equation-ode2redorder">()</a> can be done,
+<h3><span class="section-number">7.2.1. </span>Finding homogeneous solutions<a class="headerlink" href="#finding-homogeneous-solutions" title="Permalink to this headline">#</a></h3>
+<p>If the form of <span class="math notranslate nohighlight">\(p(x),\, q(x)\)</span> are just polynomial, then finding homogeneous solution(s) to ODEs of the form <a class="reference internal" href="#equation-ode2redorder">(7.2)</a> can be done,
 using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>.  Obviously this may only work for one of the solutions, however for the reduction of order method this is exactly what
 is required.</p>
 <p>To see this in action, lets pick the example:</p>
@@ -477,191 +468,6 @@ problems <span class="math notranslate nohighlight">\(y = \sum_{n=1}^\infty a_n\
 </div>
 </section>
 </section>
-<section id="variation-of-parameters-method">
-<h2>Variation of parameters method<a class="headerlink" href="#variation-of-parameters-method" title="Permalink to this headline">#</a></h2>
-<p>Whilst the method of undetermined coefficients works for specific set of source terms <span class="math notranslate nohighlight">\(f(x)\)</span> (i.e. those of certain elementary functions with symmetries
-in their derivatives), we could ask what is the more general method for solving these sorts of ODEs?</p>
-<div class="admonition-definition admonition">
-<p class="admonition-title">Definition</p>
-<p>The variation of parameters method can be used to solve <span class="math notranslate nohighlight">\(n^{th}\)</span> degree linear  ODEs of the form:</p>
-<div class="math notranslate nohighlight">
-\[y^{(n)}(x) + \sum^{n-1}_{i=0} a_i(x)\,y^{(i)}(x) = f(x)\]</div>
-<p>which can be shown to have the solution:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i=1}^{n} u_i(x)\, \int \frac{W_i(x)}{W(x)}\,\mathrm{d}x\]</div>
-<p>where <span class="math notranslate nohighlight">\(u_i(x),\, i \in \{1,\, 2,\, \dots,\, n\}\)</span> are the the homogeneous solutions of the ODE, <span class="math notranslate nohighlight">\(W(x)\)</span> is the Wronskian of these homogeneous solutions:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}W \Big(u_{1}, \ldots ,u_{n}\Big)=
-\begin{vmatrix}
-u_{1}(x) &amp; u_{2}(x) &amp; \cdots &amp; u_{n}(x)\\
-u_{1}'(x) &amp; u_{2}'(x) &amp; \cdots &amp; u_{n}'(x)\\
-\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\
-u_{1}^{(n-1)}(x) &amp; u_{2}^{(n-1)}(x) &amp; \cdots &amp; u_{n}^{(n-1)}(x)
-\end{vmatrix}\end{split}\]</div>
-<p>and <span class="math notranslate nohighlight">\(W_i(x)\)</span> is the reduced Wronskian:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}W_i(x) = \begin{vmatrix}
-u_{1}(x) &amp; u_{2}(x) &amp; \cdots &amp; 0 &amp; \cdots &amp; u_{n}(x)\\
-u_{1}'(x) &amp; u_{2}'(x) &amp; \cdots &amp; 0&amp; \cdots &amp; u_{n}'(x)\\
-\vdots &amp;\vdots &amp;\ddots &amp;\vdots &amp;\vdots &amp;\vdots \\
-u_{1}^{(n-1)}(x) &amp; u_{2}^{(n-1)}(x) &amp; \cdots &amp; f(x)&amp; \cdots &amp; u_{n}^{(n-1)}(x)
-\end{vmatrix}\end{split}\]</div>
-<p>where the <span class="math notranslate nohighlight">\(i^{th}\)</span> column of the Wronskian <span class="math notranslate nohighlight">\(W(x)\)</span> has been replaced with:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix}
-0 \\ 0 \\ \vdots \\ f(x)
-\end{pmatrix}\end{split}\]</div>
-</div>
-<section id="first-order-systems">
-<h3>First order systems<a class="headerlink" href="#first-order-systems" title="Permalink to this headline">#</a></h3>
-<p>If we start with a general first order linear ODE:</p>
-<div class="math notranslate nohighlight" id="equation-inhomofirstorder">
-<span class="eqno">()<a class="headerlink" href="#equation-inhomofirstorder" title="Permalink to this equation">#</a></span>\[y’ + p(x)\,y = q(x)\]</div>
-<p>we can think of this a sourced first order problem, so the homogenous equation is:</p>
-<div class="math notranslate nohighlight">
-\[y’ + p(x)\,y = 0\]</div>
-<p>which we can solve, for instance with separation of variables:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int \frac{1}{y}\,\mathrm{d}y &amp;= - \int p\,\mathrm{d}x\\
-\ln(y) &amp;= - \int p\,\mathrm{d}x + \ln(y_0) \\
-y_h &amp;= y_0\,e^{- \int p\,\mathrm{d}x}\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(y_0\)</span> is a constant.</p>
-<p>Now we can use this homogeneous solution <span class="math notranslate nohighlight">\(y_h(x)\)</span> to solve for the inhomogeneous case <span class="math notranslate nohighlight">\(y_p(x)\)</span>, by multiplying this solution with a (yet unknown) function <span class="math notranslate nohighlight">\(C(x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[y_p = C(x)\,e^{- \int p\,\mathrm{d}x}\]</div>
-<p>If we substitute this back into <a class="reference internal" href="#equation-inhomofirstorder">()</a> we will find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp; C’(x)\,e^{- \int p\,\mathrm{d}x} - C(x)\,p(x)\,e^{- \int p\,\mathrm{d}x} + p(x)\, C(x)\,e^{- \int p\,\mathrm{d}x} = q(x)\\
-&amp; \Rightarrow C’(x)\,e^{- \int p\,\mathrm{d}x} = q(x)\end{split}\]</div>
-<p>which by straight integration means that:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}C(x) &amp;= \int q(x)\, e^{\int p\,\mathrm{d}x}\,\mathrm{d}x \\
-\Rightarrow y_p &amp;= e^{- \int p\,\mathrm{d}x}\,\int q(x)\, e^{\int p\,\mathrm{d}x}\,\mathrm{d}x\end{split}\]</div>
-<p>and so the final solution is given by the sum of:</p>
-<div class="math notranslate nohighlight">
-\[y = y_h + y_p =  e^{- \int p\,\mathrm{d}x}\,\Big(\int q(x)\, e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + y_0\Big)\]</div>
-<p>which we have seen before with integrating factors for first order systems.</p>
-</section>
-<section id="second-order-systems">
-<h3>Second order systems<a class="headerlink" href="#second-order-systems" title="Permalink to this headline">#</a></h3>
-<p>Let’s begin again with the form of the inhomogeneous second order ODE in <code class="xref eq docutils literal notranslate"><span class="pre">ode2order</span></code>:</p>
-<div class="math notranslate nohighlight">
-\[L\,y(x) = y^{\prime\prime}(x)+p(x)\,y^{\prime}(x)+q(x)\,y(x) = r(x)\]</div>
-<p>firstly we aim to solve the homogeneous equation:</p>
-<div class="math notranslate nohighlight">
-\[L\,y(x) = y^{\prime\prime}(x)+p(x)\,y^{\prime}(x)+q(x)\,y(x) = 0\]</div>
-<p>which will admit solutions <span class="math notranslate nohighlight">\(u_1(x),\, u_2(x)\)</span>. Hence we will construct a solution to the general equation of the form:</p>
-<div class="math notranslate nohighlight" id="equation-cond1">
-<span class="eqno">()<a class="headerlink" href="#equation-cond1" title="Permalink to this equation">#</a></span>\[y(x) = A(x)\,u_1(x) + B(x)\,u_2(x)\]</div>
-<p>We note that if <span class="math notranslate nohighlight">\(A(x),\, B(x)\)</span> here were just constants, then this would be a linear superposition of the homogeneous solutions - therefore in general these
-should contain some additive constant with each function.  In order to have two equations with two unknowns, we need to enforce a separate condition on <span class="math notranslate nohighlight">\(A(x),\, B(x)\)</span>,
-as we will see the most helpful condition to simplify later algebra turns out to be:</p>
-<div class="math notranslate nohighlight" id="equation-cond2">
-<span class="eqno">()<a class="headerlink" href="#equation-cond2" title="Permalink to this equation">#</a></span>\[A'(x)\,u_1(x) + B'(x)\,u_2(x) = 0\]</div>
-<p>If we try to constuct the form of <a class="reference internal" href="#equation-ode2general">()</a> using <a class="reference internal" href="#equation-cond1">()</a>, we will find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y'(x) &amp;= \Big(A(x)\,u_1(x) + B(x)\,u_2(x)\Big)' \\
-&amp;= A'(x)\,u_1(x) + B'(x)\,u_2(x) + A(x)\,u_1'(x) + B(x)\,u_2'(x)\\
-&amp;= A(x)\,u_1'(x) + B(x)\,u_2'(x)\end{split}\]</div>
-<p>where we have used our condition <a class="reference internal" href="#equation-cond2">()</a> to reach the final line.  Likewise for second derivatives:</p>
-<div class="math notranslate nohighlight">
-\[y''(x) = A(x)\,u_1''(x) + B(x)\,u_2''(x) + A'(x)\,u_1'(x) + B'(x)\,u_2'(x)\]</div>
-<p>and so using the linear derivative operator:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}L\, y(x) &amp;= A(x)\,u_1''(x) + B(x)\,u_2''(x) + A'(x)\,u_1'(x) + B'(x)\,u_2'(x) \\ &amp;+ p(x)\,(A(x)\,u_1'(x) + B(x)\,u_2'(x)) \\ &amp;+ q(x)\,(A(x)\,u_1(x) + B(x)\,u_2(x)) = f(x)\\
-&amp;= A(x)(u''(x) + u'(x) + u(x)) + B(x)(u''(x) + u'(x) + u(x)) \\
-&amp;+ A'(x)\,u_1'(x) + B'(x)\,u_2'(x)\\
-&amp;= A'(x)\,u_1'(x) + B'(x)\,u_2'(x) + A'(x)\,L\,u_1(x) + B'(x)\,L\,u_2(x)\\
-&amp;= A'(x)\,u_1'(x) + B'(x)\,u_2'(x)\end{split}\]</div>
-<p>where we have used the fact that the terms with <span class="math notranslate nohighlight">\(A(x),\, B(x)\)</span> coefficients are actually just the homogeneous equations, hence they equal zero.  So this leaves a coupled ODE system:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A'(x)\,u_1(x) + B'(x)\,u_2(x) &amp;= 0\\
-A'(x)\,u_1'(x) + B'(x)\,u_2'(x) &amp;= r(x)\end{split}\]</div>
-<p>which if we write as a matrix system <span class="math notranslate nohighlight">\(W(x)\,a = b\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix}
-u_1(x) &amp; u_2(x) \\
-u_1'(x) &amp; u_2'(x)
-\end{pmatrix}
-\begin{pmatrix}
-A'(x) \\
-B'(x)
-\end{pmatrix} = 
-\begin{pmatrix}
-0 \\
-r(x)
-\end{pmatrix}\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(W(x)\)</span> is the Wronskian of the system.</p>
-<p>So to find the solutions <span class="math notranslate nohighlight">\(a = W^{-1}\,b\)</span> we can invert this matrix as:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix}
-A'(x) \\
-B'(x)
-\end{pmatrix} = \frac{1}{W}\begin{pmatrix}
-u_2'(x) &amp; -u_2(x) \\
--u_1'(x) &amp; u_1(x)
-\end{pmatrix}
-\begin{pmatrix}
-0 \\
-f(x)
-\end{pmatrix} = \frac{1}{W}\begin{pmatrix}
--u_2(x)\,r(x) \\
-u_1(x)\,r(x)
-\end{pmatrix}\end{split}\]</div>
-<p>which means the final solutions can be found from:</p>
-<div class="math notranslate nohighlight" id="equation-varparsolns">
-<span class="eqno">()<a class="headerlink" href="#equation-varparsolns" title="Permalink to this equation">#</a></span>\[\begin{split}A(x) &amp;= -\int \frac{1}{W}\,u_2(x)\,r(x) \,\mathrm{d}x \\
-B(x) &amp;= \int \frac{1}{W}\,u_1(x)\,r(x) \,\mathrm{d}x \\\end{split}\]</div>
-<div class="seealso admonition">
-<p class="admonition-title">Worked example</p>
-<p>Lets try and solve the ODE:</p>
-<div class="math notranslate nohighlight">
-\[y'' + 4y' + 3y = \cosh(2x)\]</div>
-<p>subject to the conditions <span class="math notranslate nohighlight">\(y(0) = -\frac{7}{15}, \,y'(0)=\frac{1}{15}\)</span>.  We note that this could be solved with method of undetermined coefficients, but this
-means we can double check our results later!</p>
-<p>The solutions to the homoegenous ODE can be found from the ansatz <span class="math notranslate nohighlight">\(y = e^{\lambda\,x}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\lambda^2 + 4\lambda + 3 = 0 &amp;\Rightarrow \lambda = -1,\, -3 \\
-u_1(x) &amp;= e^{-x} \\
-u_2(x) &amp;= e^{-3x}\end{split}\]</div>
-<p>which means that in order to construct the full solution:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = A(x)\,u_1(x) + B(x)\,u_2(x)\]</div>
-<p>We need the Wronskian <span class="math notranslate nohighlight">\(W(x)\)</span> of the system, here given by:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}W = \begin{vmatrix} 
-e^{-x} &amp; e^{-3x} \\
--e^{-x} &amp; -3e^{-3x}
-\end{vmatrix} = -3e^{-4x} - (-e^{-4x}) = -2e^{-4x}\end{split}\]</div>
-<p>and so using <a class="reference internal" href="#equation-varparsolns">()</a>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A(x) &amp;= \frac{1}{2}\int e^{4x}\,e^{-3x}\,\cosh(2x) \,\mathrm{d}x  = \frac{1}{4}\int \Big(e^{3x}+e^{-x}\Big) \,\mathrm{d}x = \frac{1}{4}\Big(\frac{1}{3}e^{3x} - e^{-x}\Big) + C_1 \\
-B(x) &amp;= -\frac{1}{2}\int e^{4x}\,e^{-x}\,\cosh(2x) \,\mathrm{d}x = -\frac{1}{4}\int \Big(e^{5x} + e^{x}\Big) \,\mathrm{d}x = -\frac{1}{4}\Big(\frac{1}{5}e^{5x} + e^{x}\Big) + C_2\end{split}\]</div>
-<p>wher <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants.  This means the final solution is given by:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y &amp;= \Big(\frac{1}{12}e^{3x} - \frac{1}{4}e^{-x}\Big)e^{-x} - \Big(\frac{1}{20}e^{5x} - \frac{1}{4}e^{x}\Big)e^{-3x} + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big) \\
-&amp;= \frac{1}{12}e^{2x} - \frac{1}{4}e^{-2x} - \frac{1}{20}e^{2x} - \frac{1}{4}e^{-2x} + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)\\
-&amp;= \frac{1}{60}\Big(2e^{2x} - 30e^{-2x} \Big) + \Big(C_1\,e^{-x} + C_2\,e^{-3x}\Big)\end{split}\]</div>
-<p>Given the initial conditions, we find that:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y(0) &amp;= \frac{-28}{60} + \Big(C_1 + C_2\Big) = -\frac{7}{15} \Rightarrow C_1 + C_2 = 0\\
-y'(x) &amp;= \frac{1}{60}\Big(4e^{2x} + 60e^{-2x} \Big) + \Big(-C_1\,e^{-x} -3 C_2\,e^{-3x}\Big)\\
-y'(0) &amp;= \frac{64}{60} + \Big(-C_1 - 3C_2\Big) = \frac{1}{15} \Rightarrow -C_1 - 3C_2 = -1\end{split}\]</div>
-<p>which we can solve as <span class="math notranslate nohighlight">\(C_1 = 1/2,\, C_2 = -1/2\)</span>, which gives final solutions as:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \frac{1}{30}\Big(e^{2x} - 15e^{-2x} +15e^{-x} - 15 \,e^{-3x}\Big)\]</div>
-<p>which we can check gives the right answer as:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y(x) &amp;= \frac{1}{30}\Big(e^{2x} - 15e^{-2x} +15e^{-x} - 15 \,e^{-3x}\Big)\\
-y'(x) &amp;= \frac{1}{30}\Big(2e^{2x} + 30e^{-2x} - 15e^{-x} + 45 \,e^{-3x}\Big)\\
-y''(x) &amp;= \frac{1}{30}\Big(4e^{2x} - 60e^{-2x} + 15e^{-x} - 135 \,e^{-3x}\Big) \\
-\Rightarrow y'' + 4y' + 3y &amp;= \frac{1}{30}\Big[(4+8+3)e^{2x} + (-60 + 120 -45) e^{-2x} \\
-&amp;+ (15-60+45)e^{-x} + (-135+180-45)\,e^{-3x}\Big] \\
-&amp;= \frac{1}{30}\Big(15e^{2x} + 15 e^{-2x}\Big) = \cosh(2x)\end{split}\]</div>
-<p>and so the solutions are correct!</p>
-</div>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -677,7 +483,7 @@ y''(x) &amp;= \frac{1}{30}\Big(4e^{2x} - 60e^{-2x} + 15e^{-x} - 135 \,e^{-3x}\Bi
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./VectorCalculus"
+            path: "./odes"
         },
         predefinedOutput: true
     }
@@ -691,6 +497,20 @@ y''(x) &amp;= \frac{1}{30}\Big(4e^{2x} - 60e^{-2x} + 15e^{-x} - 135 \,e^{-3x}\Bi
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../VectorCalculus/vectorcalctheorems.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Vector Calculus Theorems</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ODEvariation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ODE Methods - Variation of Parameters</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

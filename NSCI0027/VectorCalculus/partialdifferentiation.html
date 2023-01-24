@@ -136,6 +136,26 @@ const thebe_selector_output = ".output, .cell_output"
    4. Variations of Fields
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   6. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEreduction.html">
+   7. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/ODEvariation.html">
+   8. ODE Methods - Variation of Parameters
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -432,7 +452,7 @@ title="Print to PDF"
 <p>note that the notation <span class="math notranslate nohighlight">\(\partial\)</span> is distinct from the <span class="math notranslate nohighlight">\(\mathrm{d}\)</span> used for one variable calculus.  It is <em>partial</em> because we
 consider only variations in one of the two variables here.  The results show the local rate of change parallel to each axis at a point <span class="math notranslate nohighlight">\((x,\,y)\)</span>.</p>
 <figure class="align-default" id="surf1">
-<img alt="../_images/surf1.png" src="../_images/surf1.png" />
+<img alt="figures/surf1.png" src="figures/surf1.png" />
 <figcaption>
 <p><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span>, along with lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</span><a class="headerlink" href="#surf1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -519,7 +539,7 @@ f_{yx} &amp;=  (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{split}
 <h2>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">#</a></h2>
 <p>We now consider a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> subjected to small variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">two_step</span></code>.</p>
 <figure class="align-default" id="two-step">
-<img alt="../_images/two_step.png" src="../_images/two_step.png" />
+<img alt="figures/two_step.png" src="figures/two_step.png" />
 <figcaption>
 <p><span class="caption-text">Showing the variations <span class="math notranslate nohighlight">\(f(x+\Delta x, \,y+\Delta y)\)</span> in two steps.</span><a class="headerlink" href="#two-step" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -560,7 +580,7 @@ is held constant. Written formally:</p>
 <h2>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">#</a></h2>
 <p>The multivariate chain rule can be illustrated as a dependency tree, in <code class="xref std std-numref docutils literal notranslate"><span class="pre">dependency1</span></code>, where we examine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> with <span class="math notranslate nohighlight">\(x = x(u,\, v)\)</span> and <span class="math notranslate nohighlight">\(y = y(u,\, v)\)</span>:</p>
 <figure class="align-default" id="dependency1">
-<img alt="../_images/dependency1.png" src="../_images/dependency1.png" />
+<img alt="figures/dependency1.png" src="figures/dependency1.png" />
 <figcaption>
 <p><span class="caption-text">Dependency tree for first derivatives.</span><a class="headerlink" href="#dependency1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -568,7 +588,7 @@ is held constant. Written formally:</p>
 <p>For instance, if we follow the dependency routes involving <span class="math notranslate nohighlight">\(u\)</span>, we get <span class="math notranslate nohighlight">\(f_u = f_x\, x_u + f_y\, y_u\)</span>.</p>
 <p>We can do the same thing for the second derivatives (a repeat application of the chain rule), in <code class="xref std std-numref docutils literal notranslate"><span class="pre">dependency2</span></code>.</p>
 <figure class="align-default" id="dependency2">
-<img alt="../_images/dependency2.png" src="../_images/dependency2.png" />
+<img alt="figures/dependency2.png" src="figures/dependency2.png" />
 <figcaption>
 <p><span class="caption-text">Dependency tree for second derivatives.</span><a class="headerlink" href="#dependency2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -691,7 +711,7 @@ however, we can proceed by rearranging one of the equations to substitute into t
 </ul>
 <p>We can examine this through some example functions,</p>
 <figure class="align-default" id="bowl1">
-<img alt="../_images/bowl1.png" src="../_images/bowl1.png" />
+<img alt="figures/bowl1.png" src="figures/bowl1.png" />
 <figcaption>
 <p><span class="caption-text">Left: Local minimum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave upwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&gt;0\)</span>.
 The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
@@ -701,7 +721,7 @@ The contour plot shows that the function is increasing in all directions away fr
 </figcaption>
 </figure>
 <figure class="align-default" id="hill1">
-<img alt="../_images/hill1.png" src="../_images/hill1.png" />
+<img alt="figures/hill1.png" src="figures/hill1.png" />
 <figcaption>
 <p><span class="caption-text"><b>Left Panel:</b> Local maximum of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span>. The red lines illustrate the concave downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&lt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&lt;0\)</span>.
 The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
@@ -714,7 +734,7 @@ from the stationary point.</span><a class="headerlink" href="#hill1" title="Perm
 point that sits where the function is concave upwards with respect to one axis and concave downwards with respect to the other axis. This type of point is called
 a saddle point (it looks like a saddle for a horse). The figure below shows an example:</p>
 <figure class="align-default" id="saddle1">
-<img alt="../_images/saddle1.png" src="../_images/saddle1.png" />
+<img alt="figures/saddle1.png" src="figures/saddle1.png" />
 <figcaption>
 <p><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>. The red lines illustrate the concave upwards/downwards behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions
 <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&lt;0\)</span>. The black contours are plotted on the surface at constant height. Notice that the contours cross at a saddle point.
@@ -727,7 +747,7 @@ is used to indicate the height of the contours, with yellow representing points 
 necessarily true! It turns out that we can have a saddle point where <span class="math notranslate nohighlight">\(f_{xx}\)</span> and <span class="math notranslate nohighlight">\(f_{yy}\)</span> are both the same sign (or even when they are both zero). An example is
 illustrated in the figure below. In this case the saddle point is not aligned squarely with the <span class="math notranslate nohighlight">\((x,\,y)\)</span> coordinate directions.</p>
 <figure class="align-default" id="squish">
-<img alt="../_images/squish1.png" src="../_images/squish1.png" />
+<img alt="figures/squish1.png" src="figures/squish1.png" />
 <figcaption>
 <p><span class="caption-text"><b>Left Panel:</b> Saddle point of a function <span class="math notranslate nohighlight">\(f(x,y)\)</span> that is not aligned squarely with the <span class="math notranslate nohighlight">\(x,\,y\)</span> axes. The red lines illustrate the concave upwards
 behaviour in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions <span class="math notranslate nohighlight">\(f_{xx}&gt;0\)</span>, <span class="math notranslate nohighlight">\(f_{yy}&gt;0\)</span>. The curve has concave down behaviour at approximately <span class="math notranslate nohighlight">\(45^{\circ}\)</span> to the <span class="math notranslate nohighlight">\(x\)</span>-axis.
@@ -767,7 +787,7 @@ f_{yx}&amp;f_{yy}
 <span class="math notranslate nohighlight">\(\left(-\frac{2}{3}\frac{2}{3}\right)\)</span> is a local maximum.</p>
 <p>A contour plot of the function, shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">example1</span></code>, confirms these findings.</p>
 <figure class="align-default" id="example1">
-<img alt="../_images/example1.png" src="../_images/example1.png" />
+<img alt="figures/example1.png" src="figures/example1.png" />
 <figcaption>
 <p><span class="caption-text">Contour plot of <span class="math notranslate nohighlight">\(f=x^3-y^3-2xy+2\)</span>, showing stationary points clearly.</span><a class="headerlink" href="#example1" title="Permalink to this image">#</a></p>
 </figcaption>
