@@ -68,20 +68,8 @@ $$
 \end{bmatrix}  
 $$
 
-**Question 8**
+:::{solution} exercise_connected_components
 
 Connected components: $[1, 5, 6, 7, 9], [4, 8], [2, 3, 10]$
 
-**Question 9**
-
-Strongly connected components: $[3, 6, 8], [2, 4], [1, 5, 7, 9]$
-
-
-**Question 5**
-
-1. Average path length = 1 since every node is directly connected to every other
-node in both directions. Global clustering coefficient = 1 since the neighbours
-of every node are all connected to each other in both directions.
-2. The global clustering coefficient expresses how nodes share common neigh-
-bours that connect to one another. A high clustering coefficient represents a
-network with small groups of nodes that share local connections.
+:::

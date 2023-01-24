@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Further Graphs &#8212; Neural Circuits</title>
+    <title>Further Graphs &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="4. Small-World Networks" href="../nc_problems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Introduction
+                    Neural Circuits
                 </a>
             </li>
         </ul>
@@ -117,30 +116,44 @@ const thebe_selector_output = ".output, .cell_output"
   Introductory Material
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ws1/ws1.html">
    1. Introduction to Graphs
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ws1/ws1_answers.html">
+     1.7. Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ws1/ws1_computing.html">
+   2. Computing with Graphs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ws1/ws1_computing_answers.html">
+     2.5. Answers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ws1/ws1_answers.html">
-   2. Answers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ws2/ws2.html">
-   3. Graphs with Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../nc_problems.html">
-   4. Small-World Networks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. Further Graphs
+  <a class="reference internal" href="../ws1/ws1_homework.html">
+   3. Homework
   </a>
  </li>
 </ul>
@@ -277,71 +290,71 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#isomorphic-graphs">
-   5.1. Isomorphic Graphs
+   Isomorphic Graphs
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example">
-     5.1.1. Example
+     Example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1">
-     5.1.2. Question 1
+     Question 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     5.1.3. Example
+     Example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-2">
-     5.1.4. Question 2
+     Question 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#isomorphism-from-adjacency-matrix">
-     5.1.5. Isomorphism from Adjacency Matrix
+     Isomorphism from Adjacency Matrix
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-3">
-     5.1.6. Question 3
+     Question 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#graph-invariants">
-     5.1.7. Graph Invariants
+     Graph Invariants
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question">
-     5.1.8. Question
+     Question
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#random-graphs">
-   5.2. Random Graphs
+   Random Graphs
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-4">
-     5.2.1. Question 4
+     Question 4
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#null-models">
-   5.3. Null Models
+   Null Models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     5.3.1. Example
+     Example
     </a>
    </li>
   </ul>
@@ -367,71 +380,71 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#isomorphic-graphs">
-   5.1. Isomorphic Graphs
+   Isomorphic Graphs
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example">
-     5.1.1. Example
+     Example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1">
-     5.1.2. Question 1
+     Question 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     5.1.3. Example
+     Example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-2">
-     5.1.4. Question 2
+     Question 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#isomorphism-from-adjacency-matrix">
-     5.1.5. Isomorphism from Adjacency Matrix
+     Isomorphism from Adjacency Matrix
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-3">
-     5.1.6. Question 3
+     Question 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#graph-invariants">
-     5.1.7. Graph Invariants
+     Graph Invariants
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question">
-     5.1.8. Question
+     Question
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#random-graphs">
-   5.2. Random Graphs
+   Random Graphs
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-4">
-     5.2.1. Question 4
+     Question 4
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#null-models">
-   5.3. Null Models
+   Null Models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     5.3.1. Example
+     Example
     </a>
    </li>
   </ul>
@@ -447,9 +460,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="further-graphs">
-<h1><span class="section-number">5. </span>Further Graphs<a class="headerlink" href="#further-graphs" title="Permalink to this headline">#</a></h1>
+<h1>Further Graphs<a class="headerlink" href="#further-graphs" title="Permalink to this headline">#</a></h1>
 <section id="isomorphic-graphs">
-<h2><span class="section-number">5.1. </span>Isomorphic Graphs<a class="headerlink" href="#isomorphic-graphs" title="Permalink to this headline">#</a></h2>
+<h2>Isomorphic Graphs<a class="headerlink" href="#isomorphic-graphs" title="Permalink to this headline">#</a></h2>
 <p>We say that two graphs are <em>isomorphic</em> if they have the same network structure. Graphs <span class="math notranslate nohighlight">\(G_1\)</span> and <span class="math notranslate nohighlight">\(G_2\)</span> are isomorphic if there exists a matching between their nodes such that two nodes are connected by an edge in <span class="math notranslate nohighlight">\(G_1\)</span> if and only if their corresponding nodes are connected by an edge in <span class="math notranslate nohighlight">\(G_2\)</span>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -460,14 +473,14 @@ title="Print to PDF"
 <p>If an isomorphism exists between two graphs, we say that the graphs are <strong>isomorphic</strong>.</p>
 </div>
 <section id="example">
-<h3><span class="section-number">5.1.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
 <p>Find an isomorphism between the following two graphs.</p>
 <p><img alt="" src="../_images/isomorphic_graphs.png" /></p>
 <p><strong>Solution</strong></p>
 <p>These two graphs are isomorphic under the isomorphism <span class="math notranslate nohighlight">\(f\colon \{1, 2, 3\}\to \{A, B, C\}\)</span> where <span class="math notranslate nohighlight">\(f(1) = C, f(2) = B \)</span> and <span class="math notranslate nohighlight">\(f(3) = A\)</span>.</p>
 </section>
 <section id="question-1">
-<h3><span class="section-number">5.1.2. </span>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h3>
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h3>
 <p>1. Find an isomorphism between the following two directed graphs:</p>
 <p><img alt="" src="../_images/isomorphic_graphs_2.png" /></p>
 <p>2. Find a subgraph of the egg-laying circuit isomorphic to the directed graph below.</p>
@@ -475,28 +488,28 @@ title="Print to PDF"
 <p>3. Use NetworkX functions <code class="docutils literal notranslate"><span class="pre">subgraph</span></code> and <code class="docutils literal notranslate"><span class="pre">is_isomorphic</span></code> to confirm your answer to 2.</p>
 </section>
 <section id="id1">
-<h3><span class="section-number">5.1.3. </span>Example<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>How many simple directed graphs are there with 3 nodes and two edges?</p>
 <p><strong>Solution</strong></p>
 <p>There are 4. Any other simple directed digraph with 3 nodes and 2 edges is isomorphic to one of these.</p>
 <p><img alt="" src="../_images/triplet_motifs_2.png" /></p>
 </section>
 <section id="question-2">
-<h3><span class="section-number">5.1.4. </span>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h3>
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h3>
 <p>Draw all simple directed graphs with 3 nodes and 3 edges.</p>
 </section>
 <section id="isomorphism-from-adjacency-matrix">
-<h3><span class="section-number">5.1.5. </span>Isomorphism from Adjacency Matrix<a class="headerlink" href="#isomorphism-from-adjacency-matrix" title="Permalink to this headline">#</a></h3>
+<h3>Isomorphism from Adjacency Matrix<a class="headerlink" href="#isomorphism-from-adjacency-matrix" title="Permalink to this headline">#</a></h3>
 <p>Given two graphs <span class="math notranslate nohighlight">\(G_1\)</span> and <span class="math notranslate nohighlight">\(G_2\)</span>, we can check whether they are isomorphic by calculating the adjacency matrix of every permutation of the nodes of <span class="math notranslate nohighlight">\(G_1\)</span>. If one of them is equal to the adjacency matrix of <span class="math notranslate nohighlight">\(G_2\)</span>, then the two graphs are isomorphic.</p>
 <p>There are <span class="math notranslate nohighlight">\(n!\)</span> permutations of <span class="math notranslate nohighlight">\(n\)</span> nodes, so even for relatively small graphs, checking for isomorphism can take a long time. There are <span class="math notranslate nohighlight">\(2.4\times 10^{24}\)</span> possible permutations of a graph with 20 nodes.</p>
 </section>
 <section id="question-3">
-<h3><span class="section-number">5.1.6. </span>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h3>
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h3>
 <p>Write down all <span class="math notranslate nohighlight">\(3! = 6\)</span> adjacency matrices of the following digraph.</p>
 <p><img alt="" src="../_images/triplet_adj.png" /></p>
 </section>
 <section id="graph-invariants">
-<h3><span class="section-number">5.1.7. </span>Graph Invariants<a class="headerlink" href="#graph-invariants" title="Permalink to this headline">#</a></h3>
+<h3>Graph Invariants<a class="headerlink" href="#graph-invariants" title="Permalink to this headline">#</a></h3>
 <p>Fortunately, the problem of checking whether two graphs are <em>not</em> isomorphic is often easier. For example, if <span class="math notranslate nohighlight">\(G_1\)</span> has 5 nodes and <span class="math notranslate nohighlight">\(G_2\)</span> has 6 nodes, they certainly are not isomorphic. A graph property which is preserved by isomorphism is called a <strong>graph invariant</strong>.</p>
 <p>Some examples of graph invariants:</p>
 <ol class="simple">
@@ -508,14 +521,14 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="question">
-<h3><span class="section-number">5.1.8. </span>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h3>
+<h3>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h3>
 <p>1. Show that the following pairs of graphs are not isomorphic by finding an invariant that they do not share.
 <img alt="" src="../_images/question_invariant_1.png" /> <img alt="" src="../_images/question_invariant_2.png" /></p>
 <p>2. Write down two more graph invariants.</p>
 </section>
 </section>
 <section id="random-graphs">
-<h2><span class="section-number">5.2. </span>Random Graphs<a class="headerlink" href="#random-graphs" title="Permalink to this headline">#</a></h2>
+<h2>Random Graphs<a class="headerlink" href="#random-graphs" title="Permalink to this headline">#</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">definition</p>
 <p>A <strong>random graph</strong> is a graph in which the edges are determined in a random way. Given a set of <span class="math notranslate nohighlight">\(n\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p\)</span>, we define a random simple digraph such that for each node pair <span class="math notranslate nohighlight">\(i, j\)</span> <span class="math notranslate nohighlight">\((i\neq j)\)</span> there exists an edge <span class="math notranslate nohighlight">\((i, j)\)</span> with probability <span class="math notranslate nohighlight">\(p\)</span>.</p>
@@ -523,7 +536,7 @@ title="Print to PDF"
 </div>
 <p>We can easily generate random directed graphs using the adjacency matrix graph representation. For a simple digraph, diagonal elements of the matrix are 0, each other element is 1 with probability <span class="math notranslate nohighlight">\(p\)</span> and 0 with probability <span class="math notranslate nohighlight">\(1-p\)</span>.</p>
 <section id="question-4">
-<h3><span class="section-number">5.2.1. </span>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h3>
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>What is the expected number of edges of a random digraph with <span class="math notranslate nohighlight">\(n\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p\)</span>?</p></li>
 <li><p>Write a program which, given integer <span class="math notranslate nohighlight">\(n\)</span> and probability <span class="math notranslate nohighlight">\(p\)</span>, generates a random simple digraph and determines if it is connected.</p></li>
@@ -532,11 +545,11 @@ title="Print to PDF"
 </section>
 </section>
 <section id="null-models">
-<h2><span class="section-number">5.3. </span>Null Models<a class="headerlink" href="#null-models" title="Permalink to this headline">#</a></h2>
+<h2>Null Models<a class="headerlink" href="#null-models" title="Permalink to this headline">#</a></h2>
 <p>What do the graph statistics that we have studied — such as degree distribution and average path length — tell us about brain circuits? These statistics scale with the number of edges and nodes in the graph, and so depend on the graph size and connection density as well as other basic properties of the graph.</p>
 <p>Given a graph of a neural circuit, a <strong>null model</strong> is a random graph with identical basic properties such as number of nodes and edges. By comparing global properties of the neural circuit graph with the random graph, it is possible to determine whether the properties of the circuit are large or small in relation to the null model.</p>
 <section id="id2">
-<h3><span class="section-number">5.3.1. </span>Example<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>The graph of a region of the <em>Drosophila</em> connectome, PED(R), with connection weight greater than or equal to 10, has <span class="math notranslate nohighlight">\(n=197\)</span> nodes and <span class="math notranslate nohighlight">\(e=516\)</span> edges, resulting in an edge probability of <span class="math notranslate nohighlight">\(p=e/(n^2-n)=0.0134\)</span>. We construct a null model consisting of a random graph with <span class="math notranslate nohighlight">\(n=197\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p=0.0134\)</span>.</p>
 <p>PED(R) has average path length 2.1 and global clustering coefficient 0.69, compared to 5.3 and 0.02 for the null model.</p>
 <p>The <strong>normalised</strong> average path length and global clustering coefficient are <span class="math notranslate nohighlight">\(2.1/5.3=0.40\)</span> and <span class="math notranslate nohighlight">\(0.69/0.02=34.5\)</span> respectively.</p>
@@ -571,13 +584,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../nc_problems.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Small-World Networks</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>

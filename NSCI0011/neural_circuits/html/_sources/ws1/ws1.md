@@ -202,6 +202,7 @@ In the example below, the left hand graph is connected. The graph on the right i
 ![](components.png)
 
 :::{exercise}
+:label: exercise_connected_components
 
 Use breadth first search to determine all connected components of the undirected graph given by the edge list $[1, 7], [2, 3], [6, 9], [5, 7], [8, 4], [10, 2], [5, 6], [5, 1]$.
 

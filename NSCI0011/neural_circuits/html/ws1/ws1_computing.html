@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Computing with Graphs &#8212; Neural Circuits</title>
+    <title>2. Computing with Graphs &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="2. Answers" href="ws1_answers.html" />
+    <link rel="prev" title="1. Introduction to Graphs" href="ws1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Introduction
+                    Neural Circuits
                 </a>
             </li>
         </ul>
@@ -123,14 +123,9 @@ const thebe_selector_output = ".output, .cell_output"
    1. Introduction to Graphs
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ws1_answers.html">
-   2. Answers
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Computing with Graphs
+   2. Computing with Graphs
   </a>
  </li>
 </ul>
@@ -295,23 +290,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-undirected-graphs">
-   3.1. [TODO] Undirected Graphs
+  <a class="reference internal nav-link" href="#graph-representation">
+   2.1. Graph Representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#walks-and-paths">
+   2.2. Walks and Paths
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#path-distance">
-   3.2. Path Distance
+   2.3. Path Distance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#breadth-first-search">
-   3.3. Breadth First Search
+   2.4. Breadth First Search
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-algorithm-explained">
-     3.3.1. The Algorithm Explained
+     2.4.1. The Algorithm Explained
     </a>
    </li>
   </ul>
@@ -336,23 +336,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-undirected-graphs">
-   3.1. [TODO] Undirected Graphs
+  <a class="reference internal nav-link" href="#graph-representation">
+   2.1. Graph Representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#walks-and-paths">
+   2.2. Walks and Paths
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#path-distance">
-   3.2. Path Distance
+   2.3. Path Distance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#breadth-first-search">
-   3.3. Breadth First Search
+   2.4. Breadth First Search
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-algorithm-explained">
-     3.3.1. The Algorithm Explained
+     2.4.1. The Algorithm Explained
     </a>
    </li>
   </ul>
@@ -368,9 +373,12 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="computing-with-graphs">
-<span id="section-computing-graphs"></span><h1><span class="section-number">3. </span>Computing with Graphs<a class="headerlink" href="#computing-with-graphs" title="Permalink to this headline">#</a></h1>
+<span id="section-computing-graphs"></span><h1><span class="section-number">2. </span>Computing with Graphs<a class="headerlink" href="#computing-with-graphs" title="Permalink to this headline">#</a></h1>
+<p>In this section we learn how to use a computer to perform the analysis of graphs studied in <a class="reference internal" href="ws1.html#section-introduction-to-graphs"><span class="std std-numref">Section 1</span></a>. The main goal is to develop an algorithm which computes path distances between nodes in a graph, by implementing a variant of the breadth first search algorithm.</p>
+<section id="graph-representation">
+<h2><span class="section-number">2.1. </span>Graph Representation<a class="headerlink" href="#graph-representation" title="Permalink to this headline">#</a></h2>
 <p>In Python, we can represent a graph’s adjacency list as a list-of-lists, where the element at index <code class="docutils literal notranslate"><span class="pre">i</span></code> is a list containing the nodes connected directly to node <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
-<p>For example, consider the <em>C Elegans</em> egg-laying circuit. The nodes have been labelled 0 to 6 rather than 1 to 7, in order to conform with Python’s zero indexing convention.</p>
+<p>For example, consider the directed graph of the <em>C Elegans</em> egg-laying circuit. The nodes have been labelled 0 to 6 rather than 1 to 7, in order to conform with Python’s zero indexing convention.</p>
 <p><img alt=".png" src="../_images/egg_laying_0.png" /></p>
 <p>The graph’s adjacency list is given by:</p>
 <div class="cell docutils container">
@@ -380,22 +388,20 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code> (the nodes connected directly to node <code class="docutils literal notranslate"><span class="pre">i</span></code>) are simply the <code class="docutils literal notranslate"><span class="pre">i</span></code>th element of <code class="docutils literal notranslate"><span class="pre">c_elegans_graph</span></code>:</p>
+<p>The neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code> (the nodes connected directly by a directed edge from node <code class="docutils literal notranslate"><span class="pre">i</span></code>) are simply the <code class="docutils literal notranslate"><span class="pre">i</span></code>th element of <code class="docutils literal notranslate"><span class="pre">c_elegans_graph</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;is connected directly to the following nodes:&quot;</span><span class="p">,</span> <span class="n">c_elegans_graph</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;is connected directly to :&quot;</span><span class="p">,</span> <span class="n">c_elegans_graph</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 5 is connected directly to the following nodes: [3, 6]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 5 is connected directly to : [3, 6]
 </pre></div>
 </div>
 </div>
 </div>
-<section id="todo-undirected-graphs">
-<h2><span class="section-number">3.1. </span>[TODO] Undirected Graphs<a class="headerlink" href="#todo-undirected-graphs" title="Permalink to this headline">#</a></h2>
 <p>We can use this adjacency list representation to answer local questions about the graph. For example, to determine whether node <code class="docutils literal notranslate"><span class="pre">i</span></code> is directly connected to node <code class="docutils literal notranslate"><span class="pre">j</span></code>, we can use the python <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -416,20 +422,23 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="walks-and-paths">
+<h2><span class="section-number">2.2. </span>Walks and Paths<a class="headerlink" href="#walks-and-paths" title="Permalink to this headline">#</a></h2>
 <p>Recall that a length-<span class="math notranslate nohighlight">\(n\)</span> walk is a sequence of <span class="math notranslate nohighlight">\(n+1\)</span> nodes connected by <span class="math notranslate nohighlight">\(n\)</span> edges in a graph. A length-1 walk is simply two nodes directly connected by an edge, so the nodes that can be reached from node <code class="docutils literal notranslate"><span class="pre">i</span></code> by a length-1 walk are the nodes in the <code class="docutils literal notranslate"><span class="pre">i</span></code>th element of the adjacency list.</p>
 <p>We can extend this idea to consider length-2 walks. Which nodes can be reached starting at node <code class="docutils literal notranslate"><span class="pre">i</span></code> and following exactly two edges? In other words which nodes can be reached via a length-2 walk from node <code class="docutils literal notranslate"><span class="pre">i</span></code>?</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">length_2_walks(adjacency_list,</span> <span class="pre">i)</span></code> below prints all nodes that can be reached from node <code class="docutils literal notranslate"><span class="pre">i</span></code> by a length-2 walk. The outer <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over each of the neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code>; the inner loop interates over the neighbours of the neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code>. To avoid repetitions, each node found is only added to <code class="docutils literal notranslate"><span class="pre">node_list</span></code> if doesn’t already exist in the list.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">length_2_walk_nodes(adj,</span> <span class="pre">i)</span></code> below returns a list of nodes that can be reached from node <code class="docutils literal notranslate"><span class="pre">i</span></code> by a length-2 walk. The outer <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over each of the neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code>; the inner loop interates over the neighbours of the neighbours of node <code class="docutils literal notranslate"><span class="pre">i</span></code>. To avoid repetitions, each node found is only added to <code class="docutils literal notranslate"><span class="pre">node_list</span></code> if doesn’t already exist in the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_2_walk</span><span class="p">(</span><span class="n">adjacency_list</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_2_walk_nodes</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="n">node_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">adjacency_list</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">adjacency_list</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">node_list</span><span class="p">:</span>
                 <span class="n">node_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">node_list</span>
 
-<span class="n">length_2_walk</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">length_2_walk_nodes</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -439,39 +448,38 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ws1/ws1_computing-exercise-0">
+<div class="exercise admonition" id="exercise_length_3_walk_nodes">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.1 </span></p>
 <section id="exercise-content">
-<p>1. Write a function <code class="docutils literal notranslate"><span class="pre">length_3_walk(adjacency_list,</span> <span class="pre">i)</span></code> which returns all nodes reachable via a length-3 walk from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. Check that it works in the case of node <code class="docutils literal notranslate"><span class="pre">0</span></code> of the egg-laying circuit.</p>
-<p>2. Recall that a <em>path</em> is a walk that does not contain any repeated node. Write a function <code class="docutils literal notranslate"><span class="pre">length_2_path(adjacency_list,</span> <span class="pre">i)</span></code> which returns a list of nodes that can be reached from node <code class="docutils literal notranslate"><span class="pre">i</span></code> by a length-2 path.</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">length_3_walk_nodes(adj,</span> <span class="pre">i)</span></code> which returns all nodes reachable via a length-3 walk from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. Check that it works in the case of node <code class="docutils literal notranslate"><span class="pre">0</span></code> of the egg-laying circuit.</p>
 </section>
 </div>
 </section>
 <section id="path-distance">
-<h2><span class="section-number">3.2. </span>Path Distance<a class="headerlink" href="#path-distance" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>Path Distance<a class="headerlink" href="#path-distance" title="Permalink to this headline">#</a></h2>
 <p>The <strong>path distance</strong> between two nodes in a graph is the number of edges in the shortest path between them.</p>
 <p>The goal of this section is to develop a Python function which determines the path distance between nodes in a graph. In other words, given an adjacency list of a graph, and two nodes <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>, what is the length of the shortest path between them?</p>
 <p>Consider the following proposed algorithm:</p>
 <ol class="simple">
 <li><p>If <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">j</span></code> then they are the same node and the shortest path has length zero.</p></li>
-<li><p>Otherwise, determine all nodes reachable by a length-1 path from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. If <code class="docutils literal notranslate"><span class="pre">j</span></code> is amongst these nodes then the shortest path has length <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p>Otherwise, determine all nodes reachable by a length-2 path from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. If <code class="docutils literal notranslate"><span class="pre">j</span></code> is amongst these nodes then the shortest path has length <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+<li><p>Otherwise, determine all nodes reachable by a length-1 walk from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. If <code class="docutils literal notranslate"><span class="pre">j</span></code> is amongst these nodes then the shortest path has length <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p>Otherwise, determine all nodes reachable by a length-2 walk from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. If <code class="docutils literal notranslate"><span class="pre">j</span></code> is amongst these nodes then the shortest path has length <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
 <li><p>Continue in this manner until node <code class="docutils literal notranslate"><span class="pre">j</span></code> is reached.</p></li>
 </ol>
-<p>Unfortunately such an algorithm cannot in general be implemented!</p>
-<div class="exercise admonition" id="ws1/ws1_computing-exercise-1">
+<p>Unfortunately this algorithm as described cannot in be implemented in Python!</p>
+<div class="exercise admonition" id="exercise_impossible_length_n_walk_nodes">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.2 </span></p>
 <section id="exercise-content">
-<p>Why do you think it is impossible to write a program which works in this manner? (Hint: what would a function <code class="docutils literal notranslate"><span class="pre">length_n_path(adjacency_list,</span> <span class="pre">i,</span> <span class="pre">n)</span></code> look like?)</p>
+<p>Why do you think it is impossible to write a program which works in this manner? (Hint: what would a function <code class="docutils literal notranslate"><span class="pre">length_n_walk_nodes(adj,</span> <span class="pre">i,</span> <span class="pre">n)</span></code> look like?)</p>
 </section>
 </div>
 <p>Instead, we will construct an algorithm based on breadth first search.</p>
 </section>
 <section id="breadth-first-search">
-<h2><span class="section-number">3.3. </span>Breadth First Search<a class="headerlink" href="#breadth-first-search" title="Permalink to this headline">#</a></h2>
-<p>Breadth first search works by traversing the graph in layers from a starting node. The first layer consists of all nodes connected directly to the starting node, the second layer consists of all nodes connected directly to layer-1 nodes, and so-on. The tricky part of the algorithm is to ensure that we don’t visit any nodes twice by keeping track of ‘already visited’ nodes.</p>
+<h2><span class="section-number">2.4. </span>Breadth First Search<a class="headerlink" href="#breadth-first-search" title="Permalink to this headline">#</a></h2>
+<p>Breadth first search works by traversing the graph in levels from a starting node. The first level consists of all nodes connected directly to the starting node, the second level consists of all nodes connected directly to level-1 nodes, and so-on. The tricky part of the algorithm is to ensure that we don’t visit any nodes twice by keeping track of ‘already visited’ nodes.</p>
 <p>A Python function which implements the breadth first search algorithm is shown below. The arguments of the function <code class="docutils literal notranslate"><span class="pre">bfs(adj,</span> <span class="pre">i)</span></code> are the adjacency list <code class="docutils literal notranslate"><span class="pre">adj</span></code> and starting node <code class="docutils literal notranslate"><span class="pre">i</span></code>. It returns a list of nodes in the order that they are visited by the breadth first search algorithm.</p>
 <p>The returned list has the property that nodes appearing earlier in the list are closer (in terms of path distance) to node <code class="docutils literal notranslate"><span class="pre">i</span></code> than nodes appearing later in the list.</p>
 <div class="cell docutils container">
@@ -501,36 +509,37 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ws1/ws1_computing-exercise-2">
+<div class="exercise admonition" id="exercise_bfs_egg_laying">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.3 </span></p>
 <section id="exercise-content">
 <p>Apply the function <code class="docutils literal notranslate"><span class="pre">bfs</span></code> to node <code class="docutils literal notranslate"><span class="pre">2</span></code> of the egg-laying circuit. Compare the result to your answer to <a class="reference internal" href="ws1.html#exercise_bfs"><span class="std std-numref">Exercise 1.5</span></a>.</p>
+<p>Which nodes are never visited? Why not?</p>
 </section>
 </div>
 <section id="the-algorithm-explained">
-<h3><span class="section-number">3.3.1. </span>The Algorithm Explained<a class="headerlink" href="#the-algorithm-explained" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.4.1. </span>The Algorithm Explained<a class="headerlink" href="#the-algorithm-explained" title="Permalink to this headline">#</a></h3>
 <p>The algorithm works by maintaining two lists, <code class="docutils literal notranslate"><span class="pre">visited</span></code> and <code class="docutils literal notranslate"><span class="pre">frontier</span></code>. <code class="docutils literal notranslate"><span class="pre">visited</span></code> is used to store the nodes in the order visited; <code class="docutils literal notranslate"><span class="pre">frontier</span></code> is used to store nodes that have been visited, but whose neighbours have yet to be visited. At each iteration of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, the list <code class="docutils literal notranslate"><span class="pre">frontier</span></code> is populated with the next layer of nodes. The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop terminates once there are no further nodes to be visited in <code class="docutils literal notranslate"><span class="pre">frontier</span></code>.</p>
-<div class="exercise admonition" id="ws1/ws1_computing-exercise-3">
+<div class="exercise admonition" id="exercise_print_bfs">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.4 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.4 </span></p>
 <section id="exercise-content">
-<p>By adding a <code class="docutils literal notranslate"><span class="pre">print</span></code> function at an appropriate point in the function, determine which nodes are added to the <code class="docutils literal notranslate"><span class="pre">visited</span></code> list at each iteration of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop for node <code class="docutils literal notranslate"><span class="pre">0</span></code> of the egg-laying circuit.</p>
+<p>By adding a <code class="docutils literal notranslate"><span class="pre">print</span></code> function at an appropriate point in the function, determine which nodes are added to the <code class="docutils literal notranslate"><span class="pre">frontier</span></code> list at each iteration of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop for node <code class="docutils literal notranslate"><span class="pre">2</span></code> of the egg-laying circuit.</p>
 </section>
 </div>
 <p>The previous exercise should give you a clue as to how the <code class="docutils literal notranslate"><span class="pre">bfs</span></code> function can be adapted in order to determine path distances.</p>
-<div class="exercise admonition" id="ws1/ws1_computing-exercise-4">
+<div class="exercise admonition" id="exercise_path_distances_bfs">
 
-<p class="admonition-title"><span class="caption-number">Exercise 3.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.5 </span></p>
 <section id="exercise-content">
-<p>By adapting the <code class="docutils literal notranslate"><span class="pre">bfs</span></code> function, Write a function <code class="docutils literal notranslate"><span class="pre">path_distances(adj,</span> <span class="pre">i)</span></code> which returns an array of path distances from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. That is, if</p>
+<p>By adapting the <code class="docutils literal notranslate"><span class="pre">bfs</span></code> function, Write a function <code class="docutils literal notranslate"><span class="pre">path_distances(adj,</span> <span class="pre">i)</span></code> which returns an Numpy array of path distances from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. That is, if</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">path_distances</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>then <code class="docutils literal notranslate"><span class="pre">x[j]</span></code> is the length of the shortest path from node <code class="docutils literal notranslate"><span class="pre">i</span></code> to node <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+<p>then <code class="docutils literal notranslate"><span class="pre">x[j]</span></code> is the length of the shortest path from node <code class="docutils literal notranslate"><span class="pre">i</span></code> to node <code class="docutils literal notranslate"><span class="pre">j</span></code>. If there is no path from node <code class="docutils literal notranslate"><span class="pre">i</span></code> to node <code class="docutils literal notranslate"><span class="pre">j</span></code> then set <code class="docutils literal notranslate"><span class="pre">x[j]</span> <span class="pre">=</span> <span class="pre">-1</span></code></p>
 <p>Check that your function returns the correct values for the egg-laying circuit, as below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path_distances</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="go">[0 1 ]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path_distances</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">array([-1., -1.,  0.,  1.,  1.,  2.,  1.])</span>
 </pre></div>
 </div>
 </section>
@@ -566,11 +575,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ws1_answers.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ws1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Answers</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Introduction to Graphs</p>
         </div>
     </a>
 </div>
