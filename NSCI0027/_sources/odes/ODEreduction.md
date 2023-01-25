@@ -132,7 +132,7 @@ problems $y = \sum_{n=1}^\infty a_n\,x^n$.
 
 
 ````{admonition} Worked examples
-:class: seealso
+:class: seealso, dropdown
 1\. Solve the ODE $x^2y'' - 2y = 0$
 
 Using the ansatz $y = x^n$:
@@ -148,8 +148,36 @@ y = Ax^2 + Bx^{-1}
 
 Using the ansatz $y = x^n$:
 ```{math}
-x^{n}\Big( \Big) = 0
+x^{n}\Big(n(n-1)-3n+4 \Big) &= 0 \Rightarrow n^2-4n+4 = 0 \\
+(n-2)^2 &= 0
 ```
+which has a repeated root of $n=2$, so one of the solutions is $y = Ax^2$.  We can then use:
+```{math}
+y &= x^2 \,f(x) \\
+y' &= 2x\,f + x^2\,f' \\
+y'' &= 2\,f + 2x\,f' + 2x\,f' + x^2\,f'' = 2\,f + 4x\,f' + x^2\,f''
+```
+substituting these results in we find:
+```{math}
+x^2\,y'' - 3x\,y' + 4y = x^4\,f''+ (4x^3-3x^3)\,f' + (2x^2-6x^2+4x^2)\,f = 0 
+```
+which means we have to solve:
+```{math}
+x^4\,f'' + x^3\,f' = 0 \Rightarrow f'' + \frac{1}{x}f' = 0
+```
+Using the integrating factor method, with $\mu = e^{\int \frac{1}{x}\,\mathrm{d}x} = x$ we find:
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\left(x\,f' \right) = 0 \Rightarrow x\,f' = C 
+```
+and so the solution is found as:
+```{math}
+f' = \frac{C}{x} \Rightarrow f(x) = C\ln(x)+D
+```
+where $C,\, D$ are constants to be found, so the final solution is:
+```{math}
+y = x^2(A + B\ln(x))
+```
+
 
 ````
 

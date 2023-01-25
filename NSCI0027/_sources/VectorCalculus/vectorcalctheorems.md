@@ -111,7 +111,6 @@ If we do a Taylor expansion of each vector field, around $G_x({\bf r})$:
 
 We can do similar for the second and third lines of {eq}`divtheoremproof` to find the result:
 ```{math}
-:lanel: 
 \mathrm{d}F = \Bigg(\partial G_x + \partial G_y + \partial G_z \Bigg)\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z = 
 \Bigg( \nabla \cdot {\bf G}\Bigg)\,\mathrm{d}V
 ```
