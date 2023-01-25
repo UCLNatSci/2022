@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Vector Calculus Theorems" href="vectorcalctheorems.html" />
+    <link rel="next" title="7. ODE Methods - Reduction of Order" href="../odes/ODEreduction.html" />
     <link rel="prev" title="5. Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -132,18 +132,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   7. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../odes/ODEreduction.html">
-   8. ODE Methods - Reduction of Order
+   7. ODE Methods - Reduction of Order
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../odes/ODEvariation.html">
-   9. ODE Methods - Variation of Parameters
+   8. ODE Methods - Variation of Parameters
   </a>
  </li>
 </ul>
@@ -218,9 +213,16 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calculating-surface-integrals">
-   6.1. Calculating Surface Integrals
+  <a class="reference internal nav-link" href="#vector-flux">
+   6.1. Vector Flux
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculating-surface-integrals">
+     6.1.1. Calculating Surface Integrals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surfaces-of-the-form-z-f-x-y">
@@ -251,9 +253,16 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calculating-surface-integrals">
-   6.1. Calculating Surface Integrals
+  <a class="reference internal nav-link" href="#vector-flux">
+   6.1. Vector Flux
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculating-surface-integrals">
+     6.1.1. Calculating Surface Integrals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surfaces-of-the-form-z-f-x-y">
@@ -274,6 +283,8 @@
                 
   <div class="section" id="surface-integrals">
 <h1><span class="section-number">6. </span>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="vector-flux">
+<h2><span class="section-number">6.1. </span>Vector Flux<a class="headerlink" href="#vector-flux" title="Permalink to this headline">¶</a></h2>
 <p>We can look at surface integrals next, these are the natural extension to line integrals, now we require a two variable parameterisation, here we
 will use <span class="math notranslate nohighlight">\((u,\, v)\)</span> as variables which can parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> we are interested in.</p>
 <p>Lets start by thinking about some surface, as depicted in <a class="reference internal" href="#parametrized-surface"><span class="std std-numref">Fig. 6.1</span></a>, which we will break up
@@ -311,29 +322,22 @@ we use the derivatives with respect to the two parameters <span class="math notr
 <p class="admonition-title">Definition</p>
 <p>We can define:</p>
 <div class="math notranslate nohighlight">
-\[\iint_S {\bf F}({\bf r}) \cdot \mathrm{d}{\bf S} = \iint_S {\bf F}({\bf r}(u,\,v)) \cdot \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right)\,\mathrm{d}u\,\mathrm{d}v\]</div>
-<p>as a <em>vector surface integral</em> along some surface <span class="math notranslate nohighlight">\(S\)</span>.</p>
+\[\iint_S {\bf F} \cdot \mathrm{d}{\bf S} = \iint_S {\bf F} \cdot \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right)\,\mathrm{d}u\,\mathrm{d}v\]</div>
+<p>as a <em>vector surface integral</em> along some surface <span class="math notranslate nohighlight">\(S\)</span>, which is parameterised by variables <span class="math notranslate nohighlight">\((u,\, v)\)</span>.</p>
 <p>We can also define a <em>scalar surface integral</em>:</p>
 <div class="math notranslate nohighlight">
-\[\iint_S f({\bf r}(u,\,v))\left|\frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right|\,\mathrm{d}u\,\mathrm{d}v\]</div>
+\[\iint_S f\left|\frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right|\,\mathrm{d}u\,\mathrm{d}v\]</div>
+<p>along some surface <span class="math notranslate nohighlight">\(S\)</span>, which is parameterised by variables <span class="math notranslate nohighlight">\((u,\, v)\)</span>.</p>
 </div>
 <div class="section" id="calculating-surface-integrals">
-<h2><span class="section-number">6.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h2>
-<p>Similar to line integrals, we must parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> in order for this integral to be possible, so we will pick
-<span class="math notranslate nohighlight">\(S = S({\bf r})\)</span> with <span class="math notranslate nohighlight">\({\bf r} = {\bf r}(s,\, t)\)</span> with <span class="math notranslate nohighlight">\(s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]\)</span>.<br />
-This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes
-<span class="math notranslate nohighlight">\(\mathrm{d}s,\, \mathrm{d}t\)</span> that make up the <span class="math notranslate nohighlight">\(\mathrm{d}S\)</span> on the surface.  We can then
-define vectors <span class="math notranslate nohighlight">\(\bf u,\, v\)</span> which live on the surface:</p>
+<h3><span class="section-number">6.1.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h3>
+<p>Similar to line integrals, we must parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> in order for this integral to be possible, so
+we will pick <span class="math notranslate nohighlight">\(S = S({\bf r})\)</span> such that <span class="math notranslate nohighlight">\({\bf r} = {\bf r}(u,\, v)\)</span> with <span class="math notranslate nohighlight">\(a \leq u \leq b,\, c \leq v \leq d\)</span>. Hence
+to actually calculate these we will have:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf u} &amp;= \frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
-\mathrm{d}{\bf v} &amp;= \frac{\partial {\bf r}}{\partial t}\,\mathrm{d}t\end{split}\]</div>
-<p>and the final step is to find a cross product, this will produce the normal area vector, hence:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{d}{\bf S} = \mathrm{d}{\bf u} \times \mathrm{d}{\bf v} = \left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\,\mathrm{d}s\,\mathrm{d}t\]</div>
-<p>This means that in order to actually calculate the surface integrals we will need:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}I_f &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
-I_{\bf G} &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\end{split}\]</div>
+\[\begin{split}I_f &amp;=  \int_{a}^{b} \,\mathrm{d}u\,\int_{c}^{d} \, \mathrm{d}v\,f({\bf r}(u,\,v)\,\left| \frac{\partial {\bf r}}{\partial u} \times \frac{\partial {\bf r}}{\partial v} \right|\\
+I_{\bf G} &amp;=  \int_{a}^{b} \,\mathrm{d}u\,\int_{c}^{d} \, \mathrm{d}v\,{\bf F}({\bf r}(u,\,v))\cdot\left(\frac{\partial {\bf r}}{\partial u} \times \frac{\partial {\bf r}}{\partial v} \right)\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="surfaces-of-the-form-z-f-x-y">
 <h2><span class="section-number">6.2. </span>Surfaces of the form <span class="math notranslate nohighlight">\(z = f(x,\, y)\)</span><a class="headerlink" href="#surfaces-of-the-form-z-f-x-y" title="Permalink to this headline">¶</a></h2>
@@ -348,7 +352,7 @@ Here the parameterisation of the surface is given for free in terms of <span cla
 &amp;= \begin{vmatrix} \hat{\bf x} &amp; \hat{\bf y} &amp; \hat{\bf z} \\ 1 &amp; 0 &amp; f_x \\ 0&amp; 1&amp; f_y\end{vmatrix}\,\mathrm{d}x\,\mathrm{d}y =  \begin{pmatrix} -f_x \\ -f_y \\ 1  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
 <p>If we have a scalar surface integral, then area element will involve the magnitude of this vector:</p>
 <div class="math notranslate nohighlight">
-\[\mathrm{d}{S} = \left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y\]</div>
+\[\mathrm{d}{S} = \left(\sqrt{{f_x}^2 + {f_y}^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y\]</div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>1.
@@ -377,7 +381,8 @@ Lets find the surface area of a sphere with radius <span class="math notranslate
 Find the surface area for <span class="math notranslate nohighlight">\(0 \leq x \leq 3\)</span>, <span class="math notranslate nohighlight">\(0 \leq y \leq 3\)</span> for a sphere:</p>
 <div class="math notranslate nohighlight">
 \[x^2 + y^2 + z^2 = 9\]</div>
-<p>This means that <span class="math notranslate nohighlight">\(z = f(x,\,y) = \sqrt{9 - x^2 - y^2}\)</span>,</p>
+<p>We can try to solve this using Cartesian coordinates instead of polar here (spherical polar will also work though!)  Lets try to
+apply <span class="math notranslate nohighlight">\(z = f(x,\,y) = \sqrt{9 - x^2 - y^2}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\iint_A \mathrm{d}S &amp;=  \int_{-R}^R\,\mathrm{d}x\,\int_{-R}^R\,\mathrm{d}y\,\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1} \\
 &amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\sqrt{ \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}}  + 1} \\
@@ -443,10 +448,10 @@ describe any point in cylindrical polar coordinates:</p>
             <p class="prev-next-title"><span class="section-number">5. </span>Line Integrals</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="vectorcalctheorems.html" title="next page">
+    <a class='right-next' id="next-link" href="../odes/ODEreduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Vector Calculus Theorems</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>ODE Methods - Reduction of Order</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

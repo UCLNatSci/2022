@@ -1,5 +1,7 @@
 # Surface Integrals
 
+## Vector Flux 
+
 We can look at surface integrals next, these are the natural extension to line integrals, now we require a two variable parameterisation, here we
 will use $(u,\, v)$ as variables which can parameterise the surface $S$ we are interested in.  
 
@@ -58,37 +60,25 @@ We call this the **flux** of the vector field ${\bf F}$ crossing the surface $S$
 
 We can define:
 ```{math}
-\iint_S {\bf F}({\bf r}) \cdot \mathrm{d}{\bf S} = \iint_S {\bf F}({\bf r}(u,\,v)) \cdot \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right)\,\mathrm{d}u\,\mathrm{d}v
+\iint_S {\bf F} \cdot \mathrm{d}{\bf S} = \iint_S {\bf F} \cdot \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right)\,\mathrm{d}u\,\mathrm{d}v
 ```
-as a *vector surface integral* along some surface $S$.
+as a *vector surface integral* along some surface $S$, which is parameterised by variables $(u,\, v)$.
 
 We can also define a *scalar surface integral*:
 ```{math}
-\iint_S f({\bf r}(u,\,v))\left|\frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right|\,\mathrm{d}u\,\mathrm{d}v
+\iint_S f\left|\frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v} \right|\,\mathrm{d}u\,\mathrm{d}v
 ```
+along some surface $S$, which is parameterised by variables $(u,\, v)$.
 ````
 
-## Calculating Surface Integrals
+### Calculating Surface Integrals
 
-Similar to line integrals, we must parameterise the surface $S$ in order for this integral to be possible, so we will pick 
-$S = S({\bf r})$ with ${\bf r} = {\bf r}(s,\, t)$ with $s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]$.  
-This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes 
-$\mathrm{d}s,\, \mathrm{d}t$ that make up the $\mathrm{d}S$ on the surface.  We can then 
-define vectors $\bf u,\, v$ which live on the surface:
+Similar to line integrals, we must parameterise the surface $S$ in order for this integral to be possible, so 
+we will pick $S = S({\bf r})$ such that ${\bf r} = {\bf r}(u,\, v)$ with $a \leq u \leq b,\, c \leq v \leq d$. Hence 
+to actually calculate these we will have:
 ```{math}
-\mathrm{d}{\bf u} &= \frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
-\mathrm{d}{\bf v} &= \frac{\partial {\bf r}}{\partial t}\,\mathrm{d}t
-```
-
-and the final step is to find a cross product, this will produce the normal area vector, hence:
-```{math}
-\mathrm{d}{\bf S} = \mathrm{d}{\bf u} \times \mathrm{d}{\bf v} = \left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\,\mathrm{d}s\,\mathrm{d}t
-```
-
-This means that in order to actually calculate the surface integrals we will need:
-```{math}
-I_f &=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
-I_{\bf G} &=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)
+I_f &=  \int_{a}^{b} \,\mathrm{d}u\,\int_{c}^{d} \, \mathrm{d}v\,f({\bf r}(u,\,v)\,\left| \frac{\partial {\bf r}}{\partial u} \times \frac{\partial {\bf r}}{\partial v} \right|\\
+I_{\bf G} &=  \int_{a}^{b} \,\mathrm{d}u\,\int_{c}^{d} \, \mathrm{d}v\,{\bf F}({\bf r}(u,\,v))\cdot\left(\frac{\partial {\bf r}}{\partial u} \times \frac{\partial {\bf r}}{\partial v} \right)
 ```
 
 ## Surfaces of the form $z = f(x,\, y)$
@@ -107,7 +97,7 @@ and the infinitesimal area element is given by:
 ```
 If we have a scalar surface integral, then area element will involve the magnitude of this vector:
 ```{math}
-\mathrm{d}{S} = \left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y
+\mathrm{d}{S} = \left(\sqrt{{f_x}^2 + {f_y}^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y
 ```
 
 ````{admonition} Worked example
@@ -147,12 +137,14 @@ A = \iint_A \mathrm{d}S = R^2 \int_0^{2\pi}\,\mathrm{d}\phi\,\int_0^\pi\,\sin(\t
 
 ````{admonition} Further worked examples:
 :class: seealso, dropdown
-1\.
+1\. 
 Find the surface area for $0 \leq x \leq 3$, $0 \leq y \leq 3$ for a sphere:
 ```{math}
 x^2 + y^2 + z^2 = 9
 ```
-This means that $z = f(x,\,y) = \sqrt{9 - x^2 - y^2}$, 
+
+We can try to solve this using Cartesian coordinates instead of polar here (spherical polar will also work though!)  Lets try to 
+apply $z = f(x,\,y) = \sqrt{9 - x^2 - y^2}$, 
 ```{math}
 \iint_A \mathrm{d}S &=  \int_{-R}^R\,\mathrm{d}x\,\int_{-R}^R\,\mathrm{d}y\,\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1} \\
 &=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\sqrt{ \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}}  + 1} \\
