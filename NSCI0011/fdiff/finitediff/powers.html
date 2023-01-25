@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2. Infinite powers &#8212; Finite Differences</title>
     
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -60,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3. Formulae" href="formulae.html" />
     <link rel="prev" title="1. Preliminaries" href="background.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -132,6 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="formulae.html">
    3. Formulae
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex1.html">
+   Chapter exercise 1.3
   </a>
  </li>
 </ul>
@@ -447,10 +461,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="infinite-powers">
-<h1><span class="section-number">2. </span>Infinite powers<a class="headerlink" href="#infinite-powers" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2. </span>Infinite powers<a class="headerlink" href="#infinite-powers" title="Permalink to this heading">#</a></h1>
 <p>This chapter is about the mathematical concepts of order of magnitude and Taylor series. After working through the chapter you should be able to find Maclaurin and Taylor series expansions for given functions and discuss their convergence using numeric justification</p>
 <section id="order-of-magnitude">
-<h2><span class="section-number">2.1. </span>Order of magnitude<a class="headerlink" href="#order-of-magnitude" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1. </span>Order of magnitude<a class="headerlink" href="#order-of-magnitude" title="Permalink to this heading">#</a></h2>
 <p>When describing the smallness or bigness of numbers it can be helpful to classify them into powers of a given reference quantity (called the base). Customarily we use base 10, though base 2 is used to describe computer memory, and in advanced mathematics it is common to use a base defined by a property of the system being investigated. We may denote the order of magnitude using the symbol <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>.</p>
 <p>In base 10, the order of magnitude is given by the power in scientific notation. For example, the value <span class="math notranslate nohighlight">\(3.124\times 10^3\)</span> is <span class="math notranslate nohighlight">\(\mathcal{O}(10^3)\)</span>.</p>
 <p>An order of magnitude estimate keeps only the most significant digit in scientific number format. For instance, an order of magnitude estimate for the number of humans on Earth is <span class="math notranslate nohighlight">\(8\times 10^{9}\)</span>. More precise values can be used in the steps towards working out an order of magnitude estimate.</p>
@@ -474,7 +488,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="asymptotic-equivalence">
-<h2><span class="section-number">2.2. </span>Asymptotic equivalence<a class="headerlink" href="#asymptotic-equivalence" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Asymptotic equivalence<a class="headerlink" href="#asymptotic-equivalence" title="Permalink to this heading">#</a></h2>
 <p>Whereas the <em>limit</em> of a function refers to tendency towards a single value, asymptotic equivalence refers to tendency towards a relationship.</p>
 <p>For “very small” <span class="math notranslate nohighlight">\(x\)</span>, the following expressions are asymptotically equivalent:</p>
 <div class="math notranslate nohighlight" id="equation-multexpr">
@@ -496,7 +510,7 @@ title="Print to PDF"
 <p>We see that the linear approximation is an accurate representation of the curve in a very small domain close to <span class="math notranslate nohighlight">\(x=0\)</span>, and that by adding the quadratic and cubic terms we successively improve the approximation on the domain <span class="math notranslate nohighlight">\([-1,1]\)</span>.</p>
 </section>
 <section id="power-series-construction">
-<h2><span class="section-number">2.3. </span>Power series construction<a class="headerlink" href="#power-series-construction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>Power series construction<a class="headerlink" href="#power-series-construction" title="Permalink to this heading">#</a></h2>
 <p>To construct expansions of this type, we suppose that we can express a given function <span class="math notranslate nohighlight">\(f(x)\)</span> as a sum of the form</p>
 <div class="math notranslate nohighlight" id="equation-maclaurin">
 <span class="eqno">(2.2)<a class="headerlink" href="#equation-maclaurin" title="Permalink to this equation">#</a></span>\[p(x) = c_0 + c_1x +c_2 x^2 + \dots + c_n x^n+\mathcal{O}(x^{n+1}).\]</div>
@@ -540,7 +554,7 @@ p^{\prime\prime\prime}(x)&amp;=    &amp;&amp;       &amp;\  \ &amp; 6c_3    &amp
 </section>
 </div>
 <div class="toggle docutils container">
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(x)\)</span></p></th>
@@ -595,7 +609,7 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 </section>
 <hr class="docutils" />
 <section id="convergence">
-<h2><span class="section-number">2.4. </span>Convergence<a class="headerlink" href="#convergence" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4. </span>Convergence<a class="headerlink" href="#convergence" title="Permalink to this heading">#</a></h2>
 <p>In the above discussion we assumed that <span class="math notranslate nohighlight">\(|x|&lt;1\)</span> so that the powers of <span class="math notranslate nohighlight">\(x\)</span> grow successively smaller. However, it is not guaranteed that the infinite sum <span class="math notranslate nohighlight">\(p(x)\)</span> will converge to <span class="math notranslate nohighlight">\(f(x)\)</span> on the whole interval <span class="math notranslate nohighlight">\([-1,1]\)</span>. By constructing the expansion to match the derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span> we have only ensured that the representation is accurate in some local neighbourhood of this point.</p>
 <p>It is possible to use tools of mathematical analysis to formally determine the interval of convergence for the infinite series, which will be different for each function <span class="math notranslate nohighlight">\(f(x)\)</span>. In the case of the series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> it turns out that the infinite series converges to the correct value on the whole interval <span class="math notranslate nohighlight">\([-1,1]\)</span>, albeit rather slowly for some values of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>What is truly remarkable is that for some functions the expansions constructed by the method outlined above are valid over a wider interval than <span class="math notranslate nohighlight">\([-1,1]\)</span>. In fact, the expansions for some functions are valid <em>for all</em> values of <span class="math notranslate nohighlight">\(x\)</span>. Examples include the functions <span class="math notranslate nohighlight">\(e^x\)</span>, <span class="math notranslate nohighlight">\(\sin(x)\)</span> and <span class="math notranslate nohighlight">\(\cos(x)\)</span>.</p>
@@ -630,7 +644,7 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 </section>
 <hr class="docutils" />
 <section id="generalization">
-<h2><span class="section-number">2.5. </span>Generalization<a class="headerlink" href="#generalization" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.5. </span>Generalization<a class="headerlink" href="#generalization" title="Permalink to this heading">#</a></h2>
 <p>In the outline above we developed a power series expansion technique that was accurate in the neighbourhood of <span class="math notranslate nohighlight">\(x=0\)</span>. For some series derived in this way the results can converge to the correct value on an extended interval. However, even where this is the case we normally require a large number of terms to be kept to obtain a good approximation away from the origin.</p>
 <p>Where we require a power series approximation to a function near to a non-zero location, a better technique is to construct the expansion so that it has greatest accuracy in the neighbourhood of the point of interest. We do this using a shifted version of the expansion formula:</p>
 <div class="math notranslate nohighlight" id="equation-taylor">
@@ -651,7 +665,7 @@ p(x) = x-\frac{x^2}{2}+\frac{x^3}{3}+\mathcal{O}(x^4)
 </section>
 </div>
 <div class="toggle docutils container">
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(x)\)</span></p></th>
@@ -691,7 +705,7 @@ e^{1+x}=e^1 e^x
 <p>and obtaining the expansion for <span class="math notranslate nohighlight">\(e^x\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </div>
 <div class="toggle docutils container">
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(f^{(n)}(x)\)</span></p></th>
@@ -743,14 +757,14 @@ p\left(x;\frac{\pi}{3}\right)\sim \frac{\sqrt{3}}{2}+\frac{x}{2}-\frac{\sqrt{3}}
 </div>
 </section>
 <section id="order-of-accuracy">
-<h2><span class="section-number">2.6. </span>Order of accuracy<a class="headerlink" href="#order-of-accuracy" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.6. </span>Order of accuracy<a class="headerlink" href="#order-of-accuracy" title="Permalink to this heading">#</a></h2>
 <p>We assume the Taylor series is to be used in the neighbourhood of the expansion point, so <span class="math notranslate nohighlight">\((x-a)\)</span> is a small quantity. We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy” and we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de1153c1-1eb4-441e-a2bd-8149dd63bc42">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-de1153c1-1eb4-441e-a2bd-8149dd63bc42" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-813de59a-a332-4b32-a2e4-e6ff48fbc052">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-813de59a-a332-4b32-a2e4-e6ff48fbc052" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
 <p>where the “big-O” notation describes the size of the error terms.</p>
 <p>This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter. Discarding all terms of degree greater than one in Taylor’s expansion about <span class="math notranslate nohighlight">\(x=x_k\)</span> gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aad250ed-83f4-4de6-8f59-50a5b8bc1d26">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-aad250ed-83f4-4de6-8f59-50a5b8bc1d26" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-db735a27-3e40-4676-aab7-7aa8e5d30ffb">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-db735a27-3e40-4676-aab7-7aa8e5d30ffb" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
 <p>If we label <span class="math notranslate nohighlight">\(h=(x-x_k)\)</span>, then we may rewrite the expression as shown below. The result is known as Euler’s forward difference formula or the <strong>explicit Euler method</strong>.</p>
 <div class="math notranslate nohighlight" id="equation-eeuler">
 <span class="eqno">(2.7)<a class="headerlink" href="#equation-eeuler" title="Permalink to this equation">#</a></span>\[y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1\]</div>

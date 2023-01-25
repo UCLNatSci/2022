@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1. Preliminaries &#8212; Finite Differences</title>
     
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -60,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2. Infinite powers" href="powers.html" />
     <link rel="prev" title="Finite Differences" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -132,6 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="formulae.html">
    3. Formulae
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex1.html">
+   Chapter exercise 1.3
   </a>
  </li>
 </ul>
@@ -475,14 +489,14 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="preliminaries">
-<h1><span class="section-number">1. </span>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1. </span>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h1>
 <p>This chapter introduces the basic concept of the finite difference formula, which can be used to obtain a numeric estimate of the slope of a curve. After completing this chapter you should be able to:</p>
 <ul class="simple">
 <li><p>Compute a numeric estimate of the derivative from a set a datapoints representing a function</p></li>
 <li><p>Understand how the accuracy of the result may be affected by both mathematical and computer errors</p></li>
 </ul>
 <section id="estimating-slope-of-a-curve">
-<h2><span class="section-number">1.1. </span>Estimating slope of a curve<a class="headerlink" href="#estimating-slope-of-a-curve" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.1. </span>Estimating slope of a curve<a class="headerlink" href="#estimating-slope-of-a-curve" title="Permalink to this heading">#</a></h2>
 <p>We can obtain an approximation to a curve by joining up a set of points with straight lines. This is known as a “linear interpolation”. It is the approach we use to plot curves on the computer. For example, the following code produces a plot of <span class="math notranslate nohighlight">\(y=x^2\)</span>, using 30 data points connected by straight lines.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -683,42 +697,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_imge4dd07875ff04f9dacdba7f5a8ea4a38">
+  <img id="_anim_imga612eaff4d3a4de8af37df38e6fa9dca">
   <div class="anim-controls">
-    <input id="_anim_slidere4dd07875ff04f9dacdba7f5a8ea4a38" type="range" class="anim-slider"
+    <input id="_anim_slidera612eaff4d3a4de8af37df38e6fa9dca" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anime4dd07875ff04f9dacdba7f5a8ea4a38.set_frame(parseInt(this.value));">
+           oninput="anima612eaff4d3a4de8af37df38e6fa9dca.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anime4dd07875ff04f9dacdba7f5a8ea4a38.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anima612eaff4d3a4de8af37df38e6fa9dca.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selecte4dd07875ff04f9dacdba7f5a8ea4a38"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selecta612eaff4d3a4de8af37df38e6fa9dca"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_e4dd07875ff04f9dacdba7f5a8ea4a38"
+      <input type="radio" name="state" value="once" id="_anim_radio1_a612eaff4d3a4de8af37df38e6fa9dca"
              >
-      <label for="_anim_radio1_e4dd07875ff04f9dacdba7f5a8ea4a38">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_e4dd07875ff04f9dacdba7f5a8ea4a38"
+      <label for="_anim_radio1_a612eaff4d3a4de8af37df38e6fa9dca">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_a612eaff4d3a4de8af37df38e6fa9dca"
              checked>
-      <label for="_anim_radio2_e4dd07875ff04f9dacdba7f5a8ea4a38">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_e4dd07875ff04f9dacdba7f5a8ea4a38"
+      <label for="_anim_radio2_a612eaff4d3a4de8af37df38e6fa9dca">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_a612eaff4d3a4de8af37df38e6fa9dca"
              >
-      <label for="_anim_radio3_e4dd07875ff04f9dacdba7f5a8ea4a38">Reflect</label>
+      <label for="_anim_radio3_a612eaff4d3a4de8af37df38e6fa9dca">Reflect</label>
     </form>
   </div>
 </div>
@@ -728,13 +742,13 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_imge4dd07875ff04f9dacdba7f5a8ea4a38";
-    var slider_id = "_anim_slidere4dd07875ff04f9dacdba7f5a8ea4a38";
-    var loop_select_id = "_anim_loop_selecte4dd07875ff04f9dacdba7f5a8ea4a38";
+    var img_id = "_anim_imga612eaff4d3a4de8af37df38e6fa9dca";
+    var slider_id = "_anim_slidera612eaff4d3a4de8af37df38e6fa9dca";
+    var loop_select_id = "_anim_loop_selecta612eaff4d3a4de8af37df38e6fa9dca";
     var frames = new Array(13);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA7dElEQVR4nO3deVxU9f4G8GeYgWEfWUWUfQcNTTMt9wXcrbyVVqa3NG/LbbmZ\
 19wQt6zsZnVvdc20xbTb79Y1t9xSRHPPtFRkB1FUUNmRZZjz+2NgkEQbdOA7M+d5v178MQewp/Hg\
 9+GczzlHIUmSBCIiIiIyGRvRAYiIiIisDQsWERERkYmxYBERERGZGAsWERERkYmxYBERERGZGAsW\
@@ -1005,7 +1019,7 @@ pNPpREdsdTyCRURERGRiVnxsjoiIiEgMFiwiIiIiE2PBIiIiIjIxFiwiIiIiE2PBIiIiIjIxFiwi\
 IiIiE2PBIiIiIjKx/wfRHtmJaAdwMgAAAABJRU5ErkJggg==\
 "
   frames[1] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA9WElEQVR4nO3deVxU5eI/8M/MsC8DsokCIoJC4oKASxYpWWDLLRUrLRXCzPra\
 t9tqdfve0upetVtdW34tZoBJ1vW61O1aqeWCZoqAu6mgggyICMiwwwxzfn8MjBmaiAPPzJzP+/Xi\
 9erMAfs4HjgfznnO8ygkSZJARERERGajFB2AiIiIyNawYBERERGZGQsWERERkZmxYBERERGZGQsW\
@@ -1285,7 +1299,7 @@ kZmxYBERERGZGQsWERERkZmxYBERERGZGQsWERERkZmxYBERERGZ2f8HStyI/gjfq+wAAAAASUVO\
 RK5CYII=\
 "
   frames[2] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA850lEQVR4nO3dd3RUZf4G8Gcyk14mPaGkF0IoCRI6oUhT10IRCAqCArIrrCi4\
 /kBXARtiQbCgIhIQpImYtYuIEHo1dEghlZZGMunJZO7vj0kGkAABJnln5j6fc3LO3ptJeHacZJ68\
 997vVUiSJIGIiIiIjMZKdAAiIiIiS8OCRURERGRkLFhERERERsaCRURERGRkLFhERERERsaCRURE\
@@ -1563,7 +1577,7 @@ iIiMjAWLiIiIyMhYsIiIiIiMjAWLiIiIyMhYsIiIiIiMjAWLiIiIyMj+H5+TUkUlABuUAAAAAElF\
 TkSuQmCC\
 "
   frames[3] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA8S0lEQVR4nO3deVxU5eI/8M/AwLDOoCCgyKKiIqsLmllkLkkuJWqLVipa5u3X\
 ve23xNyX1Ky+dut7r5kJmum3bm6ZbZq5m7gL4gIqi6Kgsgz7Nuf3x8AgSTbiwDMz5/N+vXi9OgdG\
 P04HzofnnPM8CkmSJBARERGRydiIDkBERERkbViwiIiIiEyMBYuIiIjIxFiwiIiIiEyMBYuIiIjI\
@@ -1838,7 +1852,7 @@ yMSseGyOiIiISAwWLCIiIiITY8EiIiIiMjEWLCIiIiITY8EiIiIiMjEWLCIiIiITY8EiIiIiMrH/\
 D0W01HJ00+07AAAAAElFTkSuQmCC\
 "
   frames[4] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA9YklEQVR4nO3deXhM9+LH8fdkXyRBImIJiQSR1K6KUpRSddtqaYsudFF1b3e9\
 /Sm3RUt1vVeri1Zbequ63epKF62iaq2tdkEQgojILuuc3x8TQ2ppMMmZ5fN6njyPOUnkY5zM+cw5\
 3/P9WgzDMBARERERh/EyO4CIiIiIu1HBEhEREXEwFSwRERERB1PBEhEREXEwFSwRERERB1PBEhER\
@@ -2118,7 +2132,7 @@ IiIiIuZQwRIRERFxMBUsEREREQdTwRIRERFxMBUsEREREQdTwRIRERFxMBUsEREREQf7f7ZV9qP7\
 pjwZAAAAAElFTkSuQmCC\
 "
   frames[5] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA9o0lEQVR4nO3deVxU5eIG8GcWGNZBdlxANhE0FU3RVFTScOtXbrmUpmFqZZvZ\
 7aZtWi5laVZaXjNxy8pb6q3UUkPcMnfMBZVdXMEFhnVgmPP7Y2CU3BAH3lme7+fD59M5A/I0HjkP\
 57znfWWSJEkgIiIiIpORiw5AREREZG1YsIiIiIhMjAWLiIiIyMRYsIiIiIhMjAWLiIiIyMRYsIiI\
@@ -2399,7 +2413,7 @@ ERGZmBVfmyMiIiISgwWLiIiIyMRYsIiIiIhMjAWLiIiIyMRYsIiIiIhMjAWLiIiIyMRYsIiIiIhM\
 7P8BdmxjtFPCCkwAAAAASUVORK5CYII=\
 "
   frames[6] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA+J0lEQVR4nO3dd3xT5eIG8CdN2nQmpZvRQWmhzJY9tGIFKc4rQ5YsGaJXr4p6\
 EeF6gesAceHl3p/KsIwK4kAc4FWGgMgehUIZLdABhU7adKZNcn5/pA1WVgtp3yTn+X4+/dx7Tpry\
 EE85T855874KSZIkEBEREZHVOIkOQERERORoWLCIiIiIrIwFi4iIiMjKWLCIiIiIrIwFi4iIiMjK\
@@ -2682,7 +2696,7 @@ N6lHjx5SYmKi6Fg2a8KECTc9nubMmSM6os251WsGLjd0jd9++02aOHGiFBUVJWk0GkmlUkkBAQHS\
 IiIiK2PBIiIiIrIyFiwiIiIiK/t/nrUZhKdSO28AAAAASUVORK5CYII=\
 "
   frames[7] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA+FklEQVR4nO3dd3hUZcLG4d+kF5IQSEIooSSUQOhVUUSUZlmlqBQLiCK6ytor\
 IrCK2BfFT11kCQjCLtJ0BQuKNEV6SagJEEhoAUIa6Zn5/phkgAUlwCRnynNfVy49ZzLkYTiZ88wp\
 72uyWCwWRERERMRuPIwOICIiIuJqVLBERERE7EwFS0RERMTOVLBERERE7EwFS0RERMTOVLBERERE\
@@ -2965,7 +2979,7 @@ RERExM5c+NiciIiIiDFUsERERETsTAVLRERExM5UsERERETsTAVLRERExM5UsERERETsTAVLRERE\
 xM7+HynsrEWf0xmhAAAAAElFTkSuQmCC\
 "
   frames[8] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA9ZklEQVR4nO3deVhUZcMG8HtmgAFZBtkEFUEWRRBXcjc1FUzNXNK03MrMFt/K\
 bNHK1NRMs7Js8TUTLT8tfTNbMPdQUcvcRUUBAVFUVIQRZBvmfH8MDJJogAPPzJn7d11cV+fMAHfj\
 wLk55znPo5AkSQIRERERmYxSdAAiIiIiuWHBIiIiIjIxFiwiIiIiE2PBIiIiIjIxFiwiIiIiE2PB\
@@ -3245,7 +3259,7 @@ yfjcHBEREZEYLFhEREREJsaCRURERGRiLFhEREREJsaCRURERGRiLFhEREREJsaCRURERGRi/w86\
 PCJzpgMWrQAAAABJRU5ErkJggg==\
 "
   frames[9] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA/RUlEQVR4nO3deVxU5eIG8GcWGPZRdhcUWQRRxH3LDTXM0jK31FLJMvPazUoz\
 rVtqVrbZT7PFzMTKzEzNrkuLO7lrihsuIIIIyiLCgOzM+f0xMMoVDXDgnZnzfD8fPnXODPI4HuY8\
 c5b3VUiSJIGIiIiITEYpOgARERGRtWHBIiIiIjIxFiwiIiIiE2PBIiIiIjIxFiwiIiIiE2PBIiIi\
@@ -3533,7 +3547,7 @@ Qw89JK1evVrS6/WiI9Y5HsEiIiIiMjErPjZHREREJAYLFhEREZGJsWARERERmRgLFhEREZGJsWAR\
 ERERmRgLFhEREZGJsWARERERmdj/A2n7Enn4zp+XAAAAAElFTkSuQmCC\
 "
   frames[10] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA+W0lEQVR4nO3deXxM5+IG8GeWZLJPZJMiiySy2FXsS6TU0vbWVkVrSS3F1Xtb\
 v7ZaqlVFbbetbpeiQinV2tqLqq2x78QeEpIQQRJkQybJzPn9McmQoiImeWfmPN/PJ5+Pc2Yij3HM\
 eZx5z/sqJEmSQERERERmoxQdgIiIiMjWsGARERERmRkLFhEREZGZsWARERERmRkLFhEREZGZsWAR\
@@ -3817,7 +3831,7 @@ bJlkMBhER6x0vIJFREREZGY2fG2OiIiISAwWLCIiIiIzY8EiIiIiMjMWLCIiIiIzY8EiIiIiMjMW\
 LCIiIiIzY8EiIiIiMrP/B9VsrAPLehO/AAAAAElFTkSuQmCC\
 "
   frames[11] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA+dElEQVR4nO3deVxU5eIG8GcWGHZkFVFQARV33JckRQ2t/KXmkvuWZmW73dI2\
 NfWatlzLW1mZUC6lVtqiddWM3PcNd1Q2RUVAGNZhlvP7Y2DUREUceGfmPN/Ph0+dw4CP48B55rzn\
 vK9CkiQJRERERGQ1StEBiIiIiBwNCxYRERGRlbFgEREREVkZCxYRERGRlbFgEREREVkZCxYRERGR\
@@ -4102,7 +4116,7 @@ WRkLFhEREZGVsWARERERWRkLFhEREZGVsWARERERWRkLFhEREZGV/T9Bo6SzQL2sMAAAAABJRU5E\
 rkJggg==\
 "
   frames[12] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
-bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9h\
+bGliIHZlcnNpb24zLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy89olMNAAAACXBIWXMAAA9h\
 AAAPYQGoP6dpAAA+DUlEQVR4nO3deVxU5eIG8GdgYNh3EBd2FxARF1yyTE1zq1zTwDQtNdu1n+XW\
 opZmWfemmdU1EyvTNDUrLcsNl1zQFBRXUFYREVmGdVjm/P4YGCW1EAfemTnP9/Phc+85A/o4HTgP\
 73nPeRWSJEkgIiIiIoOxEB2AiIiIyNywYBEREREZGAsWERERkYGxYBEREREZGAsWERERkYGxYBER\
@@ -4389,7 +4403,7 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anime4dd07875ff04f9dacdba7f5a8ea4a38 = new Animation(frames, img_id, slider_id, 200.0,
+        anima612eaff4d3a4de8af37df38e6fa9dca = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -4397,8 +4411,8 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
 </div></div>
 </div>
 <p>We can use the linear interpolation to estimate the slope of the curve at each datapoint. The formula can be written mathematically by labelling the points as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c059321-879d-4849-ade7-d147b3483834">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-2c059321-879d-4849-ade7-d147b3483834" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a1aff93c-751f-43ce-ba2e-209fa57b6def">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-a1aff93c-751f-43ce-ba2e-209fa57b6def" title="Permalink to this equation">#</a></span>\[\begin{equation}
 (x_k,y_k), \qquad k=1,2,\dots n.
 \end{equation}\]</div>
 <p>The slope of a particular line segment is then given by</p>
@@ -4413,7 +4427,7 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
 <p>Notice that with <span class="math notranslate nohighlight">\(n\)</span> data points we can only find the slope at the first <span class="math notranslate nohighlight">\((n−1)\)</span> points, because the forward projection of the function at the final point is not known. If we wish to obtain the slope at <span class="math notranslate nohighlight">\(x_n\)</span>, we require the exterior value <span class="math notranslate nohighlight">\((x_{n+1},y_{n+1})\)</span>.</p>
 </div>
 <section id="example">
-<h3><span class="section-number">1.1.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>In the following example the difference formula is utilised with <span class="math notranslate nohighlight">\(n=100\)</span> datapoints on the interval <span class="math notranslate nohighlight">\(x\in[-\pi,\pi]\)</span> to find the slope of the function</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -4449,7 +4463,7 @@ y(x)=\sin(x)+x.
 <a class="reference internal image-reference" href="../_images/first_derivative.png"><img alt="slope-estimate" class="align-center" src="../_images/first_derivative.png" style="width: 60%;" /></a>
 </section>
 <section id="for-python-gurus">
-<span id="guru1"></span><h3><span class="section-number">1.1.2. </span>For Python gurus<a class="headerlink" href="#for-python-gurus" title="Permalink to this headline">#</a></h3>
+<span id="guru1"></span><h3><span class="section-number">1.1.2. </span>For Python gurus<a class="headerlink" href="#for-python-gurus" title="Permalink to this heading">#</a></h3>
 <p><strong>Indexing</strong> techniques use the position of items in list or array to access their values. In Python indexing starts from 0, so for a given array <code class="docutils literal notranslate"><span class="pre">x</span></code>,</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">x[0]</span></code> refers to the first value.</p></li>
@@ -4469,8 +4483,8 @@ y(x)=\sin(x)+x.
 <li><p>If a negative index is used this refers to the position counted from the end of the list instead of the start of the list. For instance, <code class="docutils literal notranslate"><span class="pre">x[0:-1]</span></code> gets everything except the last value.</p></li>
 </ul>
 <p>Slicing allows us to generate the array of differences without using a loop. We first note that formula <a class="reference internal" href="#equation-thebasic">(1.3)</a> can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e080fda0-7ec0-4034-a8be-762ce811e224">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-e080fda0-7ec0-4034-a8be-762ce811e224" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-87f4f7d1-8574-4b44-83c8-b5a6adcfd4d1">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-87f4f7d1-8574-4b44-83c8-b5a6adcfd4d1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n]-[x_1,x_2,\dots,x_{n-1}]}
 \end{equation}\]</div>
 <p>This can be coded as follows:</p>
@@ -4482,7 +4496,7 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 </section>
 </section>
 <section id="relation-to-derivative">
-<h2><span class="section-number">1.2. </span>Relation to derivative<a class="headerlink" href="#relation-to-derivative" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>Relation to derivative<a class="headerlink" href="#relation-to-derivative" title="Permalink to this heading">#</a></h2>
 <p>By introducing <span class="math notranslate nohighlight">\(h_k=(x_{k+1}-x_k)\)</span> the finite difference formula <a class="reference internal" href="#equation-fd-init">(1.2)</a> may be written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-fdiff1">
 <span class="eqno">(1.5)<a class="headerlink" href="#equation-eq-fdiff1" title="Permalink to this equation">#</a></span>\[s_k = \frac{y(x_k+h_k)-y(x_k)}{h_k}.\]</div>
@@ -4492,10 +4506,10 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 <p>In the work that follows we will always assume that the step sizes <span class="math notranslate nohighlight">\(h_k\)</span> are constant and so we will dispense with the subscript <span class="math notranslate nohighlight">\(k\)</span> on this parameter.</p>
 </div>
 <section id="id1">
-<h3><span class="section-number">1.2.1. </span>Example<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Example<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=\sin(x)\)</span> in the finite difference formula <a class="reference internal" href="#equation-eq-fdiff1">(1.5)</a> gives us an approximation for the derivative of this function:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-07393c18-d760-4319-a5bf-2c134e30d6ca">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-07393c18-d760-4319-a5bf-2c134e30d6ca" title="Permalink to this equation">#</a></span>\[\begin{equation}y^{\prime}(x_k)\approx \frac{\sin\left(x_k+h\right)-\sin\left(x_k\right)}{h}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-93ad35c9-3782-4769-afd5-3d7a178ac9d7">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-93ad35c9-3782-4769-afd5-3d7a178ac9d7" title="Permalink to this equation">#</a></span>\[\begin{equation}y^{\prime}(x_k)\approx \frac{\sin\left(x_k+h\right)-\sin\left(x_k\right)}{h}.\end{equation}\]</div>
 <p>We can estimate the error in this approximation at any given point by comparing to the known analytic result <span class="math notranslate nohighlight">\(y^{\prime}=\cos(x)\)</span>. For example, with <span class="math notranslate nohighlight">\(x_k=\pi/3\)</span> and <span class="math notranslate nohighlight">\(h=0.1\)</span> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4547,7 +4561,7 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 <p>For step sizes smaller than <span class="math notranslate nohighlight">\(10^{-8}\)</span> the error starts to grow again or behave unpredictably. This is not a mathematical error, but is due to roundoff errors that occur due to the way that computers handle numeric calculations, as outlined in <a class="reference internal" href="#rounderr"><span class="std std-numref">Section 1.2.3</span></a>.</p>
 </section>
 <section id="id2">
-<h3><span class="section-number">1.2.2. </span>For Python gurus<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>For Python gurus<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>The <strong>def</strong> keyword allows you to create functions that take a given input (or inputs) and return a calculated output. For instance, we can define the function and its derivative:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -4616,18 +4630,18 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 </div>
 </section>
 <section id="roundoff-errors">
-<span id="rounderr"></span><h3><span class="section-number">1.2.3. </span>Roundoff errors<a class="headerlink" href="#roundoff-errors" title="Permalink to this headline">#</a></h3>
+<span id="rounderr"></span><h3><span class="section-number">1.2.3. </span>Roundoff errors<a class="headerlink" href="#roundoff-errors" title="Permalink to this heading">#</a></h3>
 <p>In most computers and software applications, numbers are stored in computer memory using either a 32 bit or a 64 bit binary representation. The latter, which is used by Python’s <code class="docutils literal notranslate"><span class="pre">float</span></code> is roughly equivalent to 16 significant digits of decimal precision. As a result, the difference between two numbers that are very close together may be computed inaccurately.</p>
 <div class="readmore admonition">
 <p class="admonition-title">See also</p>
 <p>A description of the issues and limitations can be found in the Python documentation on <a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html">Floating Point Arithmetic</a>. The terminology refers to the fact that there isn’t a fixed number of digits either side of the point separating the integer part of the number from its fractional part, so the point can “float” during calculation.</p>
 </div>
 <p>For this example, at step size <span class="math notranslate nohighlight">\(h=10^{-9}\)</span> the difference between the two sine terms can be accurately computed (using high precision arithmetic) as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f1eb15c-ce57-4d71-98fb-721270f9f150">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-4f1eb15c-ce57-4d71-98fb-721270f9f150" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 4.999999995669873\times 10^{-10}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b2762425-cd6c-4553-aa6f-e7c976cfdfe0">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-b2762425-cd6c-4553-aa6f-e7c976cfdfe0" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 4.999999995669873\times 10^{-10}\end{equation}\]</div>
 <p>However, with the precision available to <code class="docutils literal notranslate"><span class="pre">float</span></code> it is determined to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-51582f6a-c30b-4ca2-9d88-c0deba92b537">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-51582f6a-c30b-4ca2-9d88-c0deba92b537" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 5.000000413701855\times 10^{-10}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1549633c-ce93-4e89-ab51-2c5ad90fffc5">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-1549633c-ce93-4e89-ab51-2c5ad90fffc5" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 5.000000413701855\times 10^{-10}\end{equation}\]</div>
 <p>The difference occurs in the seventh significant figure and this explains why the error in the computed answer is around <span class="math notranslate nohighlight">\(10^{-7}\)</span></p>
 <p>We can eliminate roundoff errors by increasing the number of digits used in internal computations to obtain a graph like the one below, in which the errors are seen to continue decreasing linearly for smaller step sizes.</p>
 <div class="cell tag_remove-input docutils container">
@@ -4644,10 +4658,10 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 </section>
 </section>
 <section id="chapter-exercise">
-<span id="chapex1"></span><h2><span class="section-number">1.3. </span>Chapter exercise<a class="headerlink" href="#chapter-exercise" title="Permalink to this headline">#</a></h2>
+<span id="chapex1"></span><h2><span class="section-number">1.3. </span>Chapter exercise<a class="headerlink" href="#chapter-exercise" title="Permalink to this heading">#</a></h2>
 <p>The logistic function is given by the following expression in which parameters <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(r\)</span> are constants determining the location, scale and shape of the curve:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cab69eaf-9906-40f9-ad63-6507d1229354">
-<span class="eqno">(1.9)<a class="headerlink" href="#equation-cab69eaf-9906-40f9-ad63-6507d1229354" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3d61031e-a23a-460a-b7b8-9f759ef2517a">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-3d61031e-a23a-460a-b7b8-9f759ef2517a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x=\frac{C}{1+e^{-r(t-t_0)}}.
 \end{equation}\]</div>
 <p>Produce a plot of the function using a step size <code class="docutils literal notranslate"><span class="pre">h=1e-3</span></code> for the case where <span class="math notranslate nohighlight">\(t_0=3\)</span>, <span class="math notranslate nohighlight">\(C=75\)</span>, <span class="math notranslate nohighlight">\(r=1.5\)</span>, Use the difference formula to estimate the first and second derivatives numerically.</p>
