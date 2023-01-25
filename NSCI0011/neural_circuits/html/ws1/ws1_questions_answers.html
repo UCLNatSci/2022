@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Answers &#8212; Neural Circuits</title>
+    <title>Exercises &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,6 +48,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -189,7 +191,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ws1/ws1_computing_answers.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ws1/ws1_questions_answers.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -232,7 +234,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/ws1/ws1_computing_answers.ipynb"
+        <a href="../_sources/ws1/ws1_questions_answers.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -281,7 +283,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Answers</h1>
+                <h1>Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -293,54 +295,21 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="answers">
-<h1>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">#</a></h1>
-<div class="solution admonition" id="ws1/ws1_computing_answers-solution-0">
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
+<div class="solution admonition" id="ws1/ws1_questions_answers-solution-0">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="ws1_computing.html#exercise_length_3_walk_nodes"> Exercise 2.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="ws1_questions.html#exercise_undirected_graph_G"> Exercise 3.1</a></p>
 <section id="solution-content">
 </section>
 </div>
+<p>1.</p>
+<p><img alt="" src="../_images/g.png" /></p>
+<p>The connected components are <span class="math notranslate nohighlight">\([1, 2, 4, 7]\)</span>, <span class="math notranslate nohighlight">\([0, 5, 6]\)</span> and <span class="math notranslate nohighlight">\([3]\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_3_walk_nodes</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="n">node_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">node_list</span><span class="p">:</span>
-                    <span class="n">node_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">node_list</span>
-
-<span class="n">c_elegans_graph</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
-
-<span class="n">length_3_walk_nodes</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="solution admonition" id="ws1/ws1_computing_answers-solution-1">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="ws1_computing.html#exercise_impossible_length_n_walk_nodes"> Exercise 2.2</a></p>
-<section id="solution-content">
-<p>The function <code class="docutils literal notranslate"><span class="pre">length_2_walk_nodes</span></code> has two nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. The function <code class="docutils literal notranslate"><span class="pre">length_3_walk_nodes</span></code> has three nested loops. A function <code class="docutils literal notranslate"><span class="pre">length_n_walk_nodes(adj,</span> <span class="pre">i,</span> <span class="pre">n)</span></code> would have to have <code class="docutils literal notranslate"><span class="pre">n</span></code> nested loops for arbitrary <code class="docutils literal notranslate"><span class="pre">n</span></code>. Such a structure doesn’t exist in Python (or other programming languages, as far as I am aware…)</p>
-</section>
-</div>
-<div class="solution admonition" id="ws1/ws1_computing_answers-solution-2">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="ws1_computing.html#exercise_bfs_egg_laying"> Exercise 2.3</a></p>
-<section id="solution-content">
-<p>Nodes <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code> are never visited because there exists no path from node <code class="docutils literal notranslate"><span class="pre">2</span></code> to node <code class="docutils literal notranslate"><span class="pre">0</span></code> or node <code class="docutils literal notranslate"><span class="pre">1</span></code> .</p>
-</section>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2.</span>
+<span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="n">frontier</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
@@ -355,83 +324,24 @@ title="Print to PDF"
                     <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">visited</span>
 
-<span class="n">bfs</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 4, 6, 5]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="solution admonition" id="ws1/ws1_computing_answers-solution-3">
+<span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 
-<p class="admonition-title">Solution to<a class="reference internal" href="ws1_computing.html#exercise_print_bfs"> Exercise 2.4</a></p>
-<section id="solution-content">
-</section>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">frontier</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
 
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span> <span class="c1"># print nodes in the current frontier   </span>
-        <span class="nb">next</span> <span class="o">=</span> <span class="n">frontier</span>
-        <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">next</span><span class="p">:</span>
-            <span class="n">neighbours</span> <span class="o">=</span> <span class="n">adj</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">neighbours</span><span class="p">:</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
-                    <span class="n">frontier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-                    <span class="n">visited</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">visited</span>
+<span class="c1"># 3.</span>
 
-<span class="n">bfs</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2]
-[3, 4, 6]
-[5]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 4, 6, 5]
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">[2]</span></code> is level 0: just the starting node <code class="docutils literal notranslate"><span class="pre">2</span></code>.<br />
-<code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">6]</span></code> is level 1: nodes connected directly from node <code class="docutils literal notranslate"><span class="pre">2</span></code>.<br />
-<code class="docutils literal notranslate"><span class="pre">[5]</span></code> is level 2: nodes connected directly to nodes in level 1.</p>
-<div class="solution admonition" id="ws1/ws1_computing_answers-solution-4">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="ws1_computing.html#exercise_path_distances_bfs"> Exercise 2.5</a></p>
-<section id="solution-content">
-<p>The path distance to a node is just the number of the level that it appears in.</p>
-</section>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">path_distances</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="n">frontier</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-    <span class="c1"># create an array of the correct length</span>
     <span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">adj</span><span class="p">))</span>
-    <span class="c1"># set all nodes to a distance of -1</span>
     <span class="n">distances</span><span class="p">[:]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="c1"># node i is at a distance 0</span>
     <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="c1"># d will count the layers</span>
     <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increase d by 1 at each iteration</span>
+        <span class="n">d</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="nb">next</span> <span class="o">=</span> <span class="n">frontier</span>
         <span class="n">frontier</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">next</span><span class="p">:</span>
@@ -443,15 +353,113 @@ title="Print to PDF"
                     <span class="n">distances</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span>
     <span class="k">return</span> <span class="n">distances</span>
 
-<span class="n">path_distances</span><span class="p">(</span><span class="n">c_elegans_graph</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">path_distances</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1., -1.,  0.,  1.,  1.,  2.,  1.])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 5, 6]
+[1, 7, 2, 4]
+[2, 7, 1, 4]
+[3]
+[4, 7, 1, 2]
+[5, 0, 6]
+[6, 0, 5]
+[7, 1, 2, 4]
+[[ 0. -1. -1. -1. -1.  1.  1. -1.]
+ [-1.  0.  2. -1.  2. -1. -1.  1.]
+ [-1.  2.  0. -1.  2. -1. -1.  1.]
+ [-1. -1. -1.  0. -1. -1. -1. -1.]
+ [-1.  2.  2. -1.  0. -1. -1.  1.]
+ [ 1. -1. -1. -1. -1.  0.  1. -1.]
+ [ 1. -1. -1. -1. -1.  1.  0. -1.]
+ [-1.  1.  1. -1.  1. -1. -1.  0.]]
 </pre></div>
 </div>
 </div>
+</div>
+<div class="solution admonition" id="ws1/ws1_questions_answers-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="ws1_questions.html#exercise_walks_paths"> Exercise 3.2</a></p>
+<section id="solution-content">
+</section>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1.</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="p">[]]</span>
+
+<span class="c1"># 2.</span>
+
+<span class="k">def</span> <span class="nf">print_length_2_walks</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length 2 walks:&quot;</span><span class="p">)</span>               
+<span class="n">print_length_2_walks</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># 3.</span>
+
+<span class="k">def</span> <span class="nf">print_length_2_paths</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">i</span><span class="o">!=</span><span class="n">k</span> <span class="ow">and</span> <span class="n">j</span><span class="o">!=</span> <span class="n">k</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length 2 paths:&quot;</span><span class="p">)</span>            
+<span class="n">print_length_2_paths</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>length 2 walks:
+8 3 2
+8 6 4
+8 6 5
+length 2 paths:
+8 3 2
+8 6 4
+8 6 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="ws1/ws1_questions_answers-exercise-2">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
+<p>1. Determine the adjacency list of the directed graph below.</p>
+<p><img alt="" src="../_images/ex1.png" /></p>
+<p>2. Write a function <code class="docutils literal notranslate"><span class="pre">print_length_3_walks(adj,</span> <span class="pre">i)</span></code> which prints out all length 2 walks starting from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. Test that it produces the correct output for node <code class="docutils literal notranslate"><span class="pre">6</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">print_length_3_walks</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">6 5 4 8</span>
+<span class="go">6 4 8 6</span>
+<span class="go">6 4 8 3</span>
+<span class="go">6 4 8 10</span>
+</pre></div>
+</div>
+<p>3. Write a function <code class="docutils literal notranslate"><span class="pre">print_length_3_paths(adj,</span> <span class="pre">i)</span></code> which prints out all length 2 <em>paths</em> starting from node <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<p>4. Under what circumstances do the two functions produce different results?</p>
+</section>
+</div>
+<div class="exercise admonition" id="ws1/ws1_questions_answers-exercise-3">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
+<p>The <em>reverse</em> of a directed graph is is the graph formed by reversing the directions of its edges.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Transpose_graph">https://en.wikipedia.org/wiki/Transpose_graph</a></p>
+<p>1. Sketch the reverse of the directed graph of the egg-laying circuit and write down its adjacency list.<br />
+2. Write a function <code class="docutils literal notranslate"><span class="pre">reverse(adj)</span></code> which reverses the adjacency list <code class="docutils literal notranslate"><span class="pre">adj</span></code>. That is, if <code class="docutils literal notranslate"><span class="pre">adj</span></code> is the adjacency list of a directed graph, then <code class="docutils literal notranslate"><span class="pre">reverse(adj)</span></code> is the adjacency list of the reverse graph.
+3. Check that your function correctly reverses the adjacency list of the egg-laying circuit.</p>
+</section>
 </div>
 </section>
 
