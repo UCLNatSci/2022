@@ -473,6 +473,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/modules/Modules.html">
+   Modules
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -861,24 +866,39 @@ title="Print to PDF"
 <span class="g g-Whitespace">    </span><span class="mi">237</span>         <span class="k">finally</span><span class="p">:</span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">save</span><span class="nt">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1090</span>                     <span class="c1"># TODO: See if turning off blit is really necessary</span>
-<span class="ne">-&gt; </span><span class="mi">1091</span>                     <span class="n">anim</span><span class="o">.</span><span class="n">_draw_next_frame</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1092</span>                     <span class="k">if</span> <span class="n">progress_callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1094</span>                         <span class="n">frame_number</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="ne">-&gt; </span><span class="mi">1095</span>                 <span class="n">writer</span><span class="o">.</span><span class="n">grab_frame</span><span class="p">(</span><span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span> 
 
-<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">_draw_next_frame</span><span class="nt">(self, framedata, blit)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1126</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_draw_frame</span><span class="p">(</span><span class="n">framedata</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1127</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_post_draw</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span> 
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">grab_frame</span><span class="nt">(self, **savefig_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span>         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">stdin</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">354</span>                          <span class="n">dpi</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span> 
 
-<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">_post_draw</span><span class="nt">(self, framedata, blit)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1151</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1152</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1153</span> 
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\figure.py</span> in <span class="ni">savefig</span><span class="nt">(self, fname, transparent, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3018</span> 
+<span class="ne">-&gt; </span><span class="mi">3019</span>             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">print_figure</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3020</span> 
 
-<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py</span> in <span class="ni">draw_idle</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2059</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_idle_draw_cntx</span><span class="p">():</span>
-<span class="ne">-&gt; </span><span class="mi">2060</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2061</span> 
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py</span> in <span class="ni">print_figure</span><span class="nt">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2324</span>                         <span class="n">bbox_inches_restore</span><span class="o">=</span><span class="n">_bbox_inches_restore</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">2325</span>                         <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2326</span>             <span class="k">finally</span><span class="p">:</span>
+
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1647</span> 
+<span class="ne">-&gt; </span><span class="mi">1648</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1649</span> 
+
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\_api\deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">411</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">412</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">413</span> 
+
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backends\backend_agg.py</span> in <span class="ni">print_raw</span><span class="nt">(self, filename_or_obj, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">482</span>     <span class="k">def</span> <span class="nf">print_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename_or_obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">483</span>         <span class="n">FigureCanvasAgg</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span>         <span class="n">renderer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_renderer</span><span class="p">()</span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backends\backend_agg.py</span> in <span class="ni">draw</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">435</span>               <span class="k">else</span> <span class="n">nullcontext</span><span class="p">()):</span>
@@ -935,62 +955,72 @@ title="Print to PDF"
 <span class="ne">---&gt; </span><span class="mi">50</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="k">finally</span><span class="p">:</span>
 
-<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\text.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
-<span class="g g-Whitespace">    </span><span class="mi">734</span>                                            <span class="bp">self</span><span class="o">.</span><span class="n">_fontproperties</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">735</span>                                            <span class="n">ismath</span><span class="o">=</span><span class="n">ismath</span><span class="p">,</span> <span class="n">mtext</span><span class="o">=</span><span class="n">mtext</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">736</span> 
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\collections.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">990</span>         <span class="bp">self</span><span class="o">.</span><span class="n">set_sizes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sizes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">dpi</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">991</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">992</span> 
 
-<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\backends\backend_agg.py</span> in <span class="ni">draw_text</span><span class="nt">(self, gc, x, y, s, prop, angle, ismath, mtext)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="c1"># space) in the following call to draw_text_image).</span>
-<span class="ne">--&gt; </span><span class="mi">237</span>         <span class="n">font</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">flags</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">238</span>         <span class="n">font</span><span class="o">.</span><span class="n">draw_glyphs_to_bitmap</span><span class="p">(</span>
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="ne">---&gt; </span><span class="mi">50</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="k">finally</span><span class="p">:</span>
+
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\collections.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_antialiaseds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_urls</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_offset_position</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> 
+
+<span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\path.py</span> in <span class="ni">vertices</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">205</span><span class="s2">         return self._vertices</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="s2"> </span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+<span class="s2">During handling of the above exception, another exception occurred:</span>
 
 <span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_25344</span>\<span class="mf">1258740523.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> 
-<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="c1">#Save the animation as an avi movie file to be played at 30 frames per second.</span>
-<span class="ne">--&gt; </span><span class="mi">178</span> <span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;wave_animation.avi&#39;</span><span class="p">,</span> <span class="n">fps</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span> 
-<span class="g g-Whitespace">    </span><span class="mi">180</span> <span class="c1">#Display the resulting animated wave map, which shows how wave amplitude changes over time.</span>
+<span class="s2">~\AppData\Local\Temp\ipykernel_32476</span><span class="se">\125</span><span class="s2">8740523.py in &lt;module&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span><span class="s2"> #Save the animation as an avi movie file to be played at 30 frames per second.</span>
+<span class="ne">--&gt; </span><span class="mi">178</span><span class="s2"> anim.save(&#39;wave_animation.avi&#39;, fps = 30)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span><span class="s2"> #Display the resulting animated wave map, which shows how wave amplitude changes over time.</span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">save</span><span class="nt">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1093</span>                         <span class="n">progress_callback</span><span class="p">(</span><span class="n">frame_number</span><span class="p">,</span> <span class="n">total_frames</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1094</span>                         <span class="n">frame_number</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">-&gt; </span><span class="mi">1095</span>                 <span class="n">writer</span><span class="o">.</span><span class="n">grab_frame</span><span class="p">(</span><span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="k">def</span> <span class="nf">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span><span class="s2">                         progress_callback(frame_number, total_frames)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1094</span><span class="s2">                         frame_number += 1</span>
+<span class="ne">-&gt; </span><span class="mi">1095</span><span class="s2">                 writer.grab_frame(**savefig_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span><span class="s2">     def _step(self, *args):</span>
 
 <span class="nn">c:\users\natsciteaching\appdata\local\programs\python\python37\lib\contextlib.py</span> in <span class="ni">__exit__</span><span class="nt">(self, type, value, traceback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>                 <span class="n">value</span> <span class="o">=</span> <span class="nb">type</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">130</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">throw</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>             <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span>                 <span class="c1"># Suppress StopIteration *unless* it&#39;s the same exception that</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span><span class="s2">                 value = type()</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">130</span><span class="s2">                 self.gen.throw(type, value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span><span class="s2">             except StopIteration as exc:</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span><span class="s2">                 # Suppress StopIteration *unless* it&#39;s the same exception that</span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">saving</span><span class="nt">(self, fig, outfile, dpi, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span>             <span class="k">yield</span> <span class="bp">self</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>         <span class="k">finally</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">238</span>             <span class="bp">self</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">239</span> 
-<span class="g g-Whitespace">    </span><span class="mi">240</span> 
+<span class="g g-Whitespace">    </span><span class="mi">236</span><span class="s2">             yield self</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span><span class="s2">         finally:</span>
+<span class="ne">--&gt; </span><span class="mi">238</span><span class="s2">             self.finish()</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span><span class="s2"> </span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">finish</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span>             <span class="n">overridden_cleanup</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">343</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">344</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_cleanup</span><span class="p">()</span>  <span class="c1"># Inline _cleanup() once cleanup() is removed.</span>
-<span class="g g-Whitespace">    </span><span class="mi">345</span> 
-<span class="g g-Whitespace">    </span><span class="mi">346</span>     <span class="k">def</span> <span class="nf">grab_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span><span class="s2">             overridden_cleanup()</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2">         else:</span>
+<span class="ne">--&gt; </span><span class="mi">344</span><span class="s2">             self._cleanup()  # Inline _cleanup() once cleanup() is removed.</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span><span class="s2">     def grab_frame(self, **savefig_kwargs):</span>
 
 <span class="nn">~\AppData\Roaming\Python\Python37\site-packages\matplotlib\animation.py</span> in <span class="ni">_cleanup</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">374</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">returncode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">375</span>             <span class="k">raise</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">376</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">returncode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">377</span> 
-<span class="g g-Whitespace">    </span><span class="mi">378</span>     <span class="nd">@_api</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="s2">&quot;3.4&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">374</span><span class="s2">         if self._proc.returncode:</span>
+<span class="g g-Whitespace">    </span><span class="mi">375</span><span class="s2">             raise subprocess.CalledProcessError(</span>
+<span class="ne">--&gt; </span><span class="mi">376</span><span class="s2">                 self._proc.returncode, self._proc.args, out, err)</span>
+<span class="g g-Whitespace">    </span><span class="mi">377</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">378</span><span class="s2">     @_api.deprecated(&quot;3.4&quot;)</span>
 
 <span class="ne">CalledProcessError</span>: Command &#39;[&#39;ffmpeg&#39;, &#39;-f&#39;, &#39;rawvideo&#39;, &#39;-vcodec&#39;, &#39;rawvideo&#39;, &#39;-s&#39;, &#39;640x480&#39;, &#39;-pix_fmt&#39;, &#39;rgba&#39;, &#39;-r&#39;, &#39;30&#39;, &#39;-loglevel&#39;, &#39;error&#39;, &#39;-i&#39;, &#39;pipe:&#39;, &#39;-vcodec&#39;, &#39;h264&#39;, &#39;-pix_fmt&#39;, &#39;yuv420p&#39;, &#39;-y&#39;, &#39;wave_animation.avi&#39;]&#39; returned non-zero exit status 15.
 </pre></div>

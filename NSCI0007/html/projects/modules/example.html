@@ -6,55 +6,53 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.4. Homework &#8212; Scientific Computing Workbook</title>
+    <title>Example Notebook &#8212; Scientific Computing Workbook</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.4.2. Homework solutions" href="rate_equations_homework_answers.html" />
-    <link rel="prev" title="2.3.5. Solutions" href="rate_equations_solutions.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,19 +87,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/nsci0007_logo.png" class="logo" alt="logo">
+      <img src="../../_static/nsci0007_logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Scientific Computing Workbook</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -109,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="../../intro.html">
                     Introduction
                 </a>
             </li>
@@ -121,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Before_you_begin/getting_started.html">
+  <a class="reference internal" href="../../Before_you_begin/getting_started.html">
    Cocalc and Jupyter Notebooks
   </a>
  </li>
@@ -131,9 +129,9 @@ const thebe_selector_output = ".output, .cell_output"
   Programming with Python
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../calculations/calculations_intro.html">
+  <a class="reference internal" href="../../calculations/calculations_intro.html">
    1. Fundamentals
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -143,12 +141,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../calculations/calculations_notes.html">
+    <a class="reference internal" href="../../calculations/calculations_notes.html">
      1.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../calculations/calculations.html">
+    <a class="reference internal" href="../../calculations/calculations.html">
      1.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -158,14 +156,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../calculations/calculations_solutions.html">
+      <a class="reference internal" href="../../calculations/calculations_solutions.html">
        1.3.5. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../calculations/calculations_homework.html">
+    <a class="reference internal" href="../../calculations/calculations_homework.html">
      1.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -175,14 +173,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../calculations/calculations_homework_solutions.html">
+      <a class="reference internal" href="../../calculations/calculations_homework_solutions.html">
        1.4.1. Homework Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../calculations/calculations_extra.html">
+    <a class="reference internal" href="../../calculations/calculations_extra.html">
      1.5. Further Practice
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -192,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../calculations/calculations_extra_solutions.html">
+      <a class="reference internal" href="../../calculations/calculations_extra_solutions.html">
        1.5.1. Solutions
       </a>
      </li>
@@ -200,23 +198,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="rate_equations_intro.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rate_equations/rate_equations_intro.html">
    2. Modelling Change
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="rate_equations_notes.html">
+    <a class="reference internal" href="../../rate_equations/rate_equations_notes.html">
      2.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="rate_equations.html">
+    <a class="reference internal" href="../../rate_equations/rate_equations.html">
      2.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -226,31 +224,31 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="rate_equations_solutions.html">
+      <a class="reference internal" href="../../rate_equations/rate_equations_solutions.html">
        2.3.5. Solutions
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../rate_equations/rate_equations_homework.html">
      2.4. Homework
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
     <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="rate_equations_homework_answers.html">
+      <a class="reference internal" href="../../rate_equations/rate_equations_homework_answers.html">
        2.4.2. Homework solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="rate_equations_extra.html">
+    <a class="reference internal" href="../../rate_equations/rate_equations_extra.html">
      2.5. Further Practice
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -260,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="rate_equations_extra_solutions.html">
+      <a class="reference internal" href="../../rate_equations/rate_equations_extra_solutions.html">
        2.5.1. Solutions
       </a>
      </li>
@@ -269,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../functions/functions_intro.html">
+  <a class="reference internal" href="../../functions/functions_intro.html">
    3. Functions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -279,12 +277,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_notes.html">
+    <a class="reference internal" href="../../functions/functions_notes.html">
      3.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../functions/functions.html">
+    <a class="reference internal" href="../../functions/functions.html">
      3.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -294,14 +292,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../functions/functions_solutions.html">
+      <a class="reference internal" href="../../functions/functions_solutions.html">
        3.3.4. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../functions/functions_homework.html">
+    <a class="reference internal" href="../../functions/functions_homework.html">
      3.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
@@ -311,21 +309,21 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../functions/functions_homework_answers.html">
+      <a class="reference internal" href="../../functions/functions_homework_answers.html">
        3.4.1. Homework solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../functions/functions_extra.html">
+    <a class="reference internal" href="../../functions/functions_extra.html">
      3.5. Further Practice
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2d_arrays/2d_arrays_intro.html">
+  <a class="reference internal" href="../../2d_arrays/2d_arrays_intro.html">
    4. Modelling Space
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -335,12 +333,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2d_arrays/2d_arrays_notes.html">
+    <a class="reference internal" href="../../2d_arrays/2d_arrays_notes.html">
      4.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../2d_arrays/2d_arrays.html">
+    <a class="reference internal" href="../../2d_arrays/2d_arrays.html">
      4.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -350,14 +348,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../2d_arrays/2d_arrays_answers.html">
+      <a class="reference internal" href="../../2d_arrays/2d_arrays_answers.html">
        4.3.3. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../2d_arrays/2d_arrays_homework.html">
+    <a class="reference internal" href="../../2d_arrays/2d_arrays_homework.html">
      4.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
@@ -367,21 +365,21 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../2d_arrays/2d_arrays_homework_answers.html">
+      <a class="reference internal" href="../../2d_arrays/2d_arrays_homework_answers.html">
        4.4.1. Homework Answers
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2d_arrays/2d_arrays_extra.html">
+    <a class="reference internal" href="../../2d_arrays/2d_arrays_extra.html">
      4.5. Further Practice
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cellular_automata/cellular_automata_intro.html">
+  <a class="reference internal" href="../../cellular_automata/cellular_automata_intro.html">
    5. Cellular Automata
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
@@ -391,12 +389,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cellular_automata/cellular_automata_notes.html">
+    <a class="reference internal" href="../../cellular_automata/cellular_automata_notes.html">
      5.2. Notes
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../cellular_automata/cellular_automata.html">
+    <a class="reference internal" href="../../cellular_automata/cellular_automata.html">
      5.3. Workshop
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
@@ -406,14 +404,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../cellular_automata/cellular_automata_answers.html">
+      <a class="reference internal" href="../../cellular_automata/cellular_automata_answers.html">
        5.3.3. Solutions
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../cellular_automata/cellular_automata_homework.html">
+    <a class="reference internal" href="../../cellular_automata/cellular_automata_homework.html">
      5.4. Homework
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
@@ -423,14 +421,14 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../cellular_automata/cellular_automata_homework_answers.html">
+      <a class="reference internal" href="../../cellular_automata/cellular_automata_homework_answers.html">
        5.4.1. Homework Solution
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cellular_automata/cellular_automata_extra.html">
+    <a class="reference internal" href="../../cellular_automata/cellular_automata_extra.html">
      5.5. Further Practice
     </a>
    </li>
@@ -444,7 +442,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../coursework/coursework.html">
+  <a class="reference internal" href="../../coursework/coursework.html">
    NSCI0007 Coursework
   </a>
  </li>
@@ -456,7 +454,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../projects/projects.html">
+  <a class="reference internal" href="../projects.html">
    Projects
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
@@ -466,19 +464,19 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/epidemic.html">
+    <a class="reference internal" href="../epidemic.html">
      Viral Epidemics
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/neurosphere.html">
+    <a class="reference internal" href="../neurosphere.html">
      Neurosphere Growth
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../projects/modules/Modules.html">
+  <a class="reference internal" href="Modules.html">
    Modules
   </a>
  </li>
@@ -533,6 +531,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/projects/modules/example.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -555,7 +582,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/rate_equations/rate_equations_homework.md"
+        <a href="../../_sources/projects/modules/example.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -566,7 +593,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -615,8 +642,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bz-reaction">
-   2.4.1. BZ Reaction
+  <a class="reference internal nav-link" href="#using-modules">
+   Using Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations">
+   Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code">
+   Code
   </a>
  </li>
 </ul>
@@ -628,7 +675,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Homework</h1>
+                <h1>Example Notebook</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -639,8 +686,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bz-reaction">
-   2.4.1. BZ Reaction
+  <a class="reference internal nav-link" href="#using-modules">
+   Using Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations">
+   Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code">
+   Code
   </a>
  </li>
 </ul>
@@ -653,25 +720,68 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="homework">
-<h1><span class="section-number">2.4. </span>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h1>
-<section id="bz-reaction">
-<h2><span class="section-number">2.4.1. </span>BZ Reaction<a class="headerlink" href="#bz-reaction" title="Permalink to this headline">#</a></h2>
-<!-- https://www3.nd.edu/~powers/mcdowell.pdf -->
-<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction">Belousov–Zhabotinsky reaction</a>, or BZ reaction, is a chemical reaction which exhibits non-equilbrium dynamics. Under certain conditions, the BZ reaction results in oscillatory behaviour, as demonstrated in <a class="reference external" href="https://www.youtube.com/watch?v=dMF4RjiITGM">this video</a>.</p>
-<p>The BZ reaction can be modelled by the following equations, where <span class="math notranslate nohighlight">\(X_i\)</span> and <span class="math notranslate nohighlight">\(Y_i\)</span> are the concentrations of the two reactants X (red) and Y (colourless) at timestep <span class="math notranslate nohighlight">\(i\)</span>. At each timestep, the concentrations of the two reactants change according to the difference equations below. Each timestep has a duration of one second.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-X_{i+1} &amp;= X_i + k_1-k_2X_i + k_3X_i^2Y_i\\
-Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
-\end{align}\end{split}\]</div>
-<ol class="simple">
-<li><p>Model the evolution of the chemical reaction for <span class="math notranslate nohighlight">\(300\)</span> seconds, assuming the initial concentrations are zero, and using the parameter values <span class="math notranslate nohighlight">\(k_1=0.2,k_2 = 0.4, k_3 = 0.1\mathrm{~and~}k_4 = 0.3\)</span>.</p></li>
-<li><p>Experiment with different values of <span class="math notranslate nohighlight">\(k_1\)</span>. For what range of values of <span class="math notranslate nohighlight">\(k_1\)</span> does the reaction exhibit oscillations?</p></li>
-</ol>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="example-notebook">
+<h1>Example Notebook<a class="headerlink" href="#example-notebook" title="Permalink to this headline">#</a></h1>
+<section id="using-modules">
+<h2>Using Modules<a class="headerlink" href="#using-modules" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">draw_forward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">rotate_left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/example_1_0.png" src="../../_images/example_1_0.png" />
+</div>
+</div>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>This notebook demonstrates <strong>some</strong> useful techniques for integrating formatted text, figures and code into an <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file. Change to edit mode to inspect the contents of this cell.</p>
+<p>This is an embedded image. The file is stored in the same folder as this notebook.</p>
+<p><img alt="Turtle Picture" src="../../_images/220px-Turtle-animation.gif" /></p>
+</section>
+<section id="equations">
+<h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">#</a></h2>
+<p>Inline equations can be included by surrounding LaTeX markup with $ signs, like this:<span class="math notranslate nohighlight">\(x_{i+1} = x_i + i^2\)</span></p>
+<p>To include block equations, surround the LaTeX with $$:</p>
+<div class="math notranslate nohighlight">
+\[x_{i+1} = x_i + i^2\]</div>
+</section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Table</p></th>
+<th class="head"><p>Heading</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>line</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>line</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h2>
+<p>To embed code in the markup, surround it by backticks `.</p>
+<p>Inline code can be included by surrounding with single backticks like this: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">int(&quot;01&quot;)</span></code></p>
+<p>A block of code can be included by surrounding the block with triple backticks ```:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;01&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The embedded code will not be executed.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -687,7 +797,7 @@ Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./rate_equations"
+            path: "./projects\modules"
         },
         predefinedOutput: true
     }
@@ -701,20 +811,6 @@ Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="rate_equations_solutions.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.3.5. </span>Solutions</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="rate_equations_homework_answers.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4.2. </span>Homework solutions</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
@@ -736,7 +832,7 @@ Y_{i+1} &amp;= Y_i + k_4X_i - k_3X_i^2Y_i
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>
