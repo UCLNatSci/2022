@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matrices &#8212; Mathematics for Natural Sciences 2</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,40 +18,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,21 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -86,10 +71,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -107,15 +91,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../intro.html">
-                    Welcome to Linear Algebra and Vector Calculus
-                </a>
-            </li>
-        </ul>
         <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to Linear Algebra and Vector Calculus
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -164,17 +147,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -182,117 +160,61 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/LinearAlgebra/linear_systems_matrices/matrices.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/matrices.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-definitions">
    Matrix Definitions
@@ -367,11 +289,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Matrices</h1>
@@ -462,14 +385,13 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="matrices">
-<h1>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">#</a></h1>
-<section id="matrix-definitions">
-<h2>Matrix Definitions<a class="headerlink" href="#matrix-definitions" title="Permalink to this headline">#</a></h2>
+  <div class="section" id="matrices">
+<h1>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="matrix-definitions">
+<h2>Matrix Definitions<a class="headerlink" href="#matrix-definitions" title="Permalink to this headline">¶</a></h2>
 <p>A matrix (plural: matrices) is essentially just an array of values, arranged in rows and columns. For example, when we were solving systems of linear equations by Gaussian elimination, we formed the <strong>augmented matrix</strong> of coefficients:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -485,18 +407,18 @@ title="Print to PDF"
 <p>The vertical line was used to indicate that the matrix is partitioned into two sub-matrices, representing the coefficients and constant terms, respectively.</p>
 <p>In general, the values contained in a matrix could represent anything, although manipulating systems of linear equations is one of the most valuable uses of matrices.</p>
 <p>The Gaussian elimination technique that we have looked at is a brute force method for solving a given set of equations, whilst matrix methods are more concerned with finding general solutions and simplifications of certain types of problems.</p>
-<section id="notation">
-<h3>Notation<a class="headerlink" href="#notation" title="Permalink to this headline">#</a></h3>
+<div class="section" id="notation">
+<h3>Notation<a class="headerlink" href="#notation" title="Permalink to this headline">¶</a></h3>
 <p>Two example matrices are given below</p>
 <div class="math notranslate nohighlight" id="equation-square-matrix">
-<span class="eqno">()<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">#</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9563be3b-e931-4dfb-a75c-9d5be4d24c7e">
-<span class="eqno">()<a class="headerlink" href="#equation-9563be3b-e931-4dfb-a75c-9d5be4d24c7e" title="Permalink to this equation">#</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
-</section>
-<section id="terminology">
-<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-0f7f1e88-be2a-4990-ae0f-79195db870e4">
+<span class="eqno">()<a class="headerlink" href="#equation-0f7f1e88-be2a-4990-ae0f-79195db870e4" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+</div>
+<div class="section" id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
 <p>The matrix featured in <a class="reference internal" href="#equation-square-matrix">()</a> is referred to as a square matrix because it has the same number of rows and columns. We also can say that it is a (2x2) matrix, because it has two rows and two columns.</p>
 <p>The number of rows must be given first:</p>
 <p><span class="math notranslate nohighlight">\( \left( \begin{matrix} 1 &amp; -3 &amp; 5\\ 2 &amp; -1 &amp; 7\end{matrix} \right) \)</span>  is a (2 x 3) matrix, <span class="math notranslate nohighlight">\( \left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \\ 5 &amp; 7\end{matrix} \right) \)</span> is a (3 x 2) matrix.</p>
@@ -513,29 +435,29 @@ title="Print to PDF"
 <div class="exercise admonition" id="q_matrix_definitions">
 
 <p class="admonition-title"></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>1. What is the order of each of the matrices shown?</p>
 <p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}0 &amp; -1 \\2 &amp; 3 \\-1 &amp; 0 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(b=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(c=0\)</span>.</p>
 <p>2. Given the matrix <span class="math notranslate nohighlight">\(X=\left(\begin{array}{ccc}-3 &amp; 4 &amp; 0 \\1 &amp; 1 &amp; 2 \\7 &amp; -4 &amp; 3 \\\end{array}\right)\)</span>, what element is represented by <span class="math notranslate nohighlight">\((X^T)_{2,3}\)</span> ?</p>
 <p>3. Which of the following matrices is an upper-triangular matrix?</p>
 <p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{cccc}2&amp;8&amp;-1&amp;0\\0&amp;2&amp;2&amp;2\\0&amp;0&amp;1&amp;-5\\0&amp;0&amp;0&amp;3\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cccc}1&amp;-2&amp;5&amp;2\\3&amp;6&amp;-2&amp;0\\8&amp;2&amp;0&amp;0\\-2&amp;0&amp;0&amp;0\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(C=\left(\begin{array}{ccc}6&amp;0&amp;0\\-3&amp;-4&amp;0\\2&amp;7&amp;7\end{array}\right)\)</span>.</p>
-</section>
 </div>
-</section>
-</section>
-<section id="matrix-algebra">
-<h2>Matrix algebra<a class="headerlink" href="#matrix-algebra" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="matrix-algebra">
+<h2>Matrix algebra<a class="headerlink" href="#matrix-algebra" title="Permalink to this headline">¶</a></h2>
 <p>We will look at how real number algebra, such as addition and multiplication, can be extended to work with matrices. These are entirely human constructs, and you may be easily forgiven for asking why do we do it this way?</p>
 <p>However, the best way to appreciate the practicalities is by tackling some problems, and so the definitions will first be introduced without much explanation. From a mathematical perspective, we simply note that the definitions must be consistent and well-determined (unambiguous).</p>
-<section id="multiplication-by-a-scalar">
-<h3>Multiplication by a scalar<a class="headerlink" href="#multiplication-by-a-scalar" title="Permalink to this headline">#</a></h3>
+<div class="section" id="multiplication-by-a-scalar">
+<h3>Multiplication by a scalar<a class="headerlink" href="#multiplication-by-a-scalar" title="Permalink to this headline">¶</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(\lambda\)</span> be a scalar (a single number) and <span class="math notranslate nohighlight">\(M\)</span> be a matrix. Then <span class="math notranslate nohighlight">\(\lambda M\)</span> means that every element in matrix <span class="math notranslate nohighlight">\(M\)</span> is multiplied by <span class="math notranslate nohighlight">\(\lambda\)</span>. This can be written in element notation as follows:</p>
 <div class="math notranslate nohighlight">
 \[ (\lambda M)_{i,j} = \lambda M_{i,j}\]</div>
 <p>For example, <span class="math notranslate nohighlight">\( -3\left( \begin{matrix} 0 &amp; -2 \\ 1 &amp; 5 \\ -1 &amp; 3 \end{matrix} \right) = \left( \begin{matrix} 0 &amp; 6 \\ -3 &amp; -15 \\ 3 &amp; -9 \end{matrix} \right) \)</span>.</p>
-</section>
-<section id="addition">
-<h3>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="addition">
+<h3>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two matrices of the same order. Then,</p>
 <div class="math notranslate nohighlight">
 \[\left(A + B\right)_{i,j} = A_{i,j} + B_{i,j}\]</div>
@@ -551,7 +473,7 @@ title="Print to PDF"
 <div class="exercise admonition" id="q_matrix_arithmetic">
 
 <p class="admonition-title"></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Given the matrices <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}1 &amp; 2 \\-1 &amp; 0 \\3 &amp; 1 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cc}-4 &amp; 1 \\1 &amp; 2 \\-2 &amp; 3 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(C=\left(\begin{array}{cc}0 &amp; 3 \\4 &amp; 2 \\1 &amp; 1 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(D=\left(\begin{array}{cc}5 &amp; 1 \\3 &amp; 2 \\\end{array}\right)\)</span>, what will be the result of the following expressions?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\left(A+B\right)+C\)</span></p></li>
@@ -559,11 +481,11 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(A-2B+\frac{1}{2}C\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(A+D\)</span></p></li>
 </ol>
-</section>
 </div>
-</section>
-<section id="matrix-multiplication">
-<h3>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="matrix-multiplication">
+<h3>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>To multiply two matrices together, their inner dimensions must be the same. That is, to calculate <span class="math notranslate nohighlight">\( \boldsymbol{A}\boldsymbol{B} \)</span>, the number of columns in <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> must be the same as the number of rows in <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>. The order of the product matrix is given by the outer dimensions of the two matrices. We can represent this result visually:</p>
 <p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="../../_images/MatrixDimensions.png" /></p>
 <div class="admonition-matrix-multiplication admonition">
@@ -577,7 +499,7 @@ title="Print to PDF"
 <div class="exercise admonition" id="q_matrix_multiplication">
 
 <p class="admonition-title"></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Given that</p>
 <p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{ccc}3 &amp; 1 &amp; -2 \\0 &amp; 2 &amp; 4 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cc}2 &amp; 3 \\-3 &amp; 0 \\1 &amp; 1 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(C=\left(\begin{array}{cccc}1 &amp; -8 &amp; 2 &amp; 11 \\0 &amp; 4 &amp; -3 &amp; -7 \\6 &amp; 1 &amp; 8 &amp; 1 \\\end{array}\right)\)</span>,    <span class="math notranslate nohighlight">\(D=\left(\begin{array}{ccc}1 &amp; 2 &amp; 3 \\1 &amp; 1 &amp; 1 \\2 &amp; 0 &amp; 1 \end{array}\right)\)</span>,</p>
 <ol class="simple">
@@ -587,7 +509,7 @@ title="Print to PDF"
 <li><p>Calculate the element in the second row and third column of <span class="math notranslate nohighlight">\(AC\)</span></p></li>
 <li><p>Calculate the result <span class="math notranslate nohighlight">\(D^2\)</span> (this question is a bit boring, but good practice!)</p></li>
 </ol>
-</section>
+</div>
 </div>
 <div class="admonition-example-walk-lengths admonition">
 <p class="admonition-title">Example: Walk Lengths</p>
@@ -605,9 +527,9 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[S^N_{i,j}=S^{N-1}_{i,1}S_{1,j}+S^{N-1}_{i,2}S_{2,j}+S^{N-1}_{i,3}S_{3,j}+S^{N-1}_{i,4}S_{4,j}\]</div>
 </div>
-</section>
-<section id="properties-of-matrix-multiplication">
-<h3>Properties of Matrix Multiplication<a class="headerlink" href="#properties-of-matrix-multiplication" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="properties-of-matrix-multiplication">
+<h3>Properties of Matrix Multiplication<a class="headerlink" href="#properties-of-matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>Matrix multiplication is <strong>associative</strong>, that is</p>
 <div class="math notranslate nohighlight">
 \[A (B C)\equiv (A B)C\]</div>
@@ -629,10 +551,10 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}\left(\begin{array}{cc}2 &amp; 1 \\1 &amp; 2 \\\end{array}\right) \left(\begin{array}{cc}1 &amp; 2 \\-3 &amp; 0 \end{array}\right)=\left(\begin{array}{cc}2\ 1+1 (-3) &amp; 2\ 2+1\ 0 \\1\ 1+2 (-3) &amp; 1\ 2+2\ 0 \end{array}\right)=\left(\begin{array}{cc}-1 &amp; 4 \\-5 &amp; 2 \\\end{array}\right)\end{split}\]</div>
 </div>
-</section>
-</section>
-<section id="matrix-equations">
-<h2>Matrix equations<a class="headerlink" href="#matrix-equations" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="matrix-equations">
+<h2>Matrix equations<a class="headerlink" href="#matrix-equations" title="Permalink to this headline">¶</a></h2>
 <p>In this section we make the connection between matrices and linear systems of equations. Our aim is to find the general solution to the equation</p>
 <div class="math notranslate nohighlight">
 \[Ax = b\]</div>
@@ -670,8 +592,8 @@ a_{m,1} &amp; \cdots &amp; a_{m,n}
 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(x=\begin{pmatrix}x_1\\ \vdots \\ x_n\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(b=\begin{pmatrix}b_1\\ \vdots \\b_m\end{pmatrix}\)</span>.</p>
 </div>
 <p>This equivalence means that we can move freely between these two ways of writing and thinking about a linear system.</p>
-<section id="solving-ax-0">
-<h3>Solving <span class="math notranslate nohighlight">\(Ax = 0\)</span><a class="headerlink" href="#solving-ax-0" title="Permalink to this headline">#</a></h3>
+<div class="section" id="solving-ax-0">
+<h3>Solving <span class="math notranslate nohighlight">\(Ax = 0\)</span><a class="headerlink" href="#solving-ax-0" title="Permalink to this headline">¶</a></h3>
 <p>The equation <span class="math notranslate nohighlight">\(Ax=0\)</span> has special significance and is easier to solve than the general equation <span class="math notranslate nohighlight">\(Ax = b\)</span>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -752,9 +674,9 @@ x_2 &amp; {}={} &amp; -4x_3 &amp; {}-{} &amp; 3x_4\\
 <p>The two vectors <span class="math notranslate nohighlight">\(\begin{pmatrix}8 \\-4\\ 1 \\ 0\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix}7 \\ -3 \\ 0\\1\end{pmatrix}\)</span> are the special solutions corresponding to the free variables <span class="math notranslate nohighlight">\(x_3\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span> respectively. The solution is the set of all linear combinations of the special solutions.</p>
 <p><strong>The solution set is a plane passing through the origin</strong>.</p>
 </div>
-</section>
-<section id="solving-ax-b">
-<h3>Solving <span class="math notranslate nohighlight">\(Ax = b\)</span><a class="headerlink" href="#solving-ax-b" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="solving-ax-b">
+<h3>Solving <span class="math notranslate nohighlight">\(Ax = b\)</span><a class="headerlink" href="#solving-ax-b" title="Permalink to this headline">¶</a></h3>
 <p>We now have everything we need to find the general solution to the inhomogeneous equation</p>
 <div class="math notranslate nohighlight">
 \[Ax=b\]</div>
@@ -824,7 +746,7 @@ x_4 &amp; {}={} &amp; x_4
 <div class="exercise admonition" id="q_solve_system">
 
 <p class="admonition-title"></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>For the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}1 &amp; 1 \\ 0 &amp; 0\end{pmatrix},\end{split}\]</div>
@@ -833,16 +755,16 @@ x_4 &amp; {}={} &amp; x_4
 <li><p>What is the null space of <span class="math notranslate nohighlight">\(A\)</span>?</p></li>
 <li><p>Find the general solution to <span class="math notranslate nohighlight">\(Ax = b\)</span>  where <span class="math notranslate nohighlight">\(b = \begin{pmatrix}5 \\ 0\end{pmatrix}\)</span>. Describe the solution geometrically.</p></li>
 </ol>
-</section>
 </div>
-</section>
-</section>
-<section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_definitions"> Exercise </a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_definitions">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>1. <span class="math notranslate nohighlight">\(A\)</span> is a (3 x 2) matrix, since it has 3 rows and 2 columns.
 Matrices are nearly always given upper case letters as variable names.</p>
 <p><span class="math notranslate nohighlight">\(b\)</span> is a (3 x 1) matrix.
@@ -851,22 +773,22 @@ Matrices with a single column are a special case, called a column vector.</p>
 In that case, we could dispense with the brackets, since it is equivalent to a scalar (basically just a single value).</p>
 <p>2. The element in the second row and third column of the transpose matrix is the element in the third row and second column of the original matrix, so the result is -4.</p>
 <p>3. The only upper-triangular matrix here is <span class="math notranslate nohighlight">\(A\)</span>. Matrix <span class="math notranslate nohighlight">\(B\)</span> is an upper anti-triangular matrix and matrix <span class="math notranslate nohighlight">\(C\)</span> is a lower triangular matrix</p>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_arithmetic"> Exercise </a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_arithmetic">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>Matrix addition is both commutative and associative, because it is an elementwise operation and therefore has the same properties as addition of real numbers. Thus, the first two expressions give the same result:</p>
 <p>1. and 2. <span class="math notranslate nohighlight">\((A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 &amp; 2+1+3 \\-1+1+4 &amp; 0+2+2 \\3-2+1 &amp; 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 &amp; 6 \\4 &amp; 4 \\2 &amp; 5 \\\end{array}\right)\)</span></p>
 <p>3. <span class="math notranslate nohighlight">\(A-2 B+\frac{C}{2}=\left(\begin{array}{cc}1+8+0 &amp; 2-2+\frac{3}{2} \\-1-2+2 &amp; 0-4+1 \\3+4+\frac{1}{2} &amp; 1-6+\frac{1}{2} \\\end{array}\right)=\left(\begin{array}{cc}9 &amp; \frac{3}{2} \\-1 &amp; -3 \\\frac{15}{2} &amp; -\frac{9}{2} \\\end{array}\right)\)</span></p>
 <p>4. Since <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span> are not the same order, these two matrices cannot be added</p>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_multiplication"> Exercise </a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_multiplication">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>1.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -895,22 +817,22 @@ BA &amp;= \begin{pmatrix}2 &amp; 3\\-3 &amp;0\\1&amp;1\end{pmatrix}\begin{pmatri
 <p>3. Since <span class="math notranslate nohighlight">\(A\)</span> is (2x3) and <span class="math notranslate nohighlight">\(C\)</span> is (3x4), the result <span class="math notranslate nohighlight">\(AC\)</span> is (2x4). Notice that the result <span class="math notranslate nohighlight">\(CA\)</span> is impossible.</p>
 <p>4. The element in the second row and third column is given by multiplying the second row of <span class="math notranslate nohighlight">\(A\)</span> and the third column of <span class="math notranslate nohighlight">\(C\)</span> to give <span class="math notranslate nohighlight">\((0\times 2)+(2 \times -3)+(4 \times8)=26\)</span>.</p>
 <p>5. <span class="math notranslate nohighlight">\(\left(\begin{array}{ccc}9 &amp; 4 &amp; 8 \\4 &amp; 3 &amp; 5 \\4 &amp; 4 &amp; 7 \\\end{array}\right)\)</span></p>
-</section>
+</div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_solve_system"> Exercise </a></p>
-<section id="solution-content">
+<p class="admonition-title"><a class="reference internal" href="#q_solve_system">Solution to Exercise </a></p>
+<div class="section" id="solution-content">
 <p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is already in reduced row echelon form, and <span class="math notranslate nohighlight">\(x_1\)</span> is a pivot variable and <span class="math notranslate nohighlight">\(x_2\)</span> a free variable.</p>
 <ol class="simple">
 <li><p>There is one special solution corresponding to <span class="math notranslate nohighlight">\(x_2=1\)</span> and it is <span class="math notranslate nohighlight">\(\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}-1\\1\end{pmatrix}\)</span></p></li>
 <li><p>The null space is the space of all vectors <span class="math notranslate nohighlight">\(t\begin{pmatrix}-1\\1\end{pmatrix}, t \in \mathbb{R}\)</span>.</p></li>
 <li><p>The general solution to <span class="math notranslate nohighlight">\(Ax = b\)</span> is <span class="math notranslate nohighlight">\(x = t\begin{pmatrix}-1\\1\end{pmatrix} + \begin{pmatrix}5\\0\end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> which is a straight line parallel to <span class="math notranslate nohighlight">\(\begin{pmatrix}-1\\1\end{pmatrix}\)</span> through the point <span class="math notranslate nohighlight">\(\begin{pmatrix}5\\0\end{pmatrix}\)</span>.</p></li>
 </ol>
-</section>
 </div>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -934,34 +856,28 @@ BA &amp;= \begin{pmatrix}2 &amp; 3\\-3 &amp;0\\1&amp;1\end{pmatrix}\begin{pmatri
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Natural Sciences<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. ODE Methods - Reduction of Order &#8212; Mathematics for Natural Sciences 2</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,40 +18,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9. ODE Methods - Variation of Parameters" href="ODEvariation.html" />
@@ -65,21 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -88,10 +73,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -109,15 +93,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Welcome to Linear Algebra and Vector Calculus
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Linear Algebra and Vector Calculus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -166,17 +149,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -184,141 +162,94 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/odes/ODEreduction.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/odes/ODEreduction.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#euler-equations">
    8.1. Euler Equations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-ranges-of-x">
+     8.1.1. Other ranges of
+     <span class="math notranslate nohighlight">
+      \(x\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-of-order">
    8.2. Reduction of Order
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     8.2.1. Finding homogeneous solutions
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundamental-sets-of-solutions">
+   8.3. Fundamental sets of solutions
+  </a>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>ODE Methods - Reduction of Order</h1>
@@ -335,18 +266,26 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#euler-equations">
    8.1. Euler Equations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-ranges-of-x">
+     8.1.1. Other ranges of
+     <span class="math notranslate nohighlight">
+      \(x\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-of-order">
    8.2. Reduction of Order
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     8.2.1. Finding homogeneous solutions
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundamental-sets-of-solutions">
+   8.3. Fundamental sets of solutions
+  </a>
  </li>
 </ul>
 
@@ -354,12 +293,11 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ode-methods-reduction-of-order">
-<h1><span class="section-number">8. </span>ODE Methods - Reduction of Order<a class="headerlink" href="#ode-methods-reduction-of-order" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="ode-methods-reduction-of-order">
+<h1><span class="section-number">8. </span>ODE Methods - Reduction of Order<a class="headerlink" href="#ode-methods-reduction-of-order" title="Permalink to this headline">¶</a></h1>
 <p>Whilst we can feel confident about solving first order ODEs that are linear (and in some cases non-linear) as well as second order ODEs with constant coefficients,
 there clearly remain many classes of ODEs which we cannot currently solve.  We can however use a series of generalisations of our current methods to solve more
 complicated problems.  Here we will focus on two such methods, <em>reduction of order</em> and <em>variation of parameters</em>.</p>
@@ -367,14 +305,162 @@ complicated problems.  Here we will focus on two such methods, <em>reduction of 
 <p class="admonition-title">Definition</p>
 <p>Recall that in general a linear second order differential equation is of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2general">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">#</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">¶</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,\,b,\,c\)</span> are arbitrary constants.</p>
 </div>
-<section id="euler-equations">
-<h2><span class="section-number">8.1. </span>Euler Equations<a class="headerlink" href="#euler-equations" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="reduction-of-order">
-<h2><span class="section-number">8.2. </span>Reduction of Order<a class="headerlink" href="#reduction-of-order" title="Permalink to this headline">#</a></h2>
+<div class="section" id="euler-equations">
+<h2><span class="section-number">8.1. </span>Euler Equations<a class="headerlink" href="#euler-equations" title="Permalink to this headline">¶</a></h2>
+<p>As a warm up, lets try to solve problems of the form:</p>
+<div class="math notranslate nohighlight" id="equation-eulereqn">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-eulereqn" title="Permalink to this equation">¶</a></span>\[ax^2\,y′′+bx\,y′+cy=0\]</div>
+<p>We do so by using an ansatz of the form <span class="math notranslate nohighlight">\(y = x^n\)</span>, which means that:</p>
+<div class="math notranslate nohighlight">
+\[x^{n}\left( an(n-1) + bn + c\right) = 0\]</div>
+<p>A quadratic (which we call the characteristic equation) that we can solve:</p>
+<div class="math notranslate nohighlight">
+\[an^2 + (b-a)n + c = 0 \Rightarrow n = \frac{a-b \pm \sqrt{b^2-2ab + a^2 - 4ac}}{2a}\]</div>
+<p>which means there are three distinct cases to solve for here (to begin with assume <span class="math notranslate nohighlight">\(x &gt; 0\)</span> to avoid any additional complications with complex solutions)</p>
+<p>1. <em>Two distinct, real roots <span class="math notranslate nohighlight">\(n = n_1,\, n_2\)</span></em></p>
+<p>Since the ODE <a class="reference internal" href="#equation-eulereqn">(8.2)</a> here is linear, we can find the superposition of solutions:</p>
+<div class="math notranslate nohighlight">
+\[y = A\,x^{n_1} + B\,x^{n_2},\, \qquad n_1,\, n_2 \in \mathbb{R}\]</div>
+<p>2. <em>One repeated, real root <span class="math notranslate nohighlight">\(n\)</span></em></p>
+<p>We find that solving the characteristic equation, the only root is:</p>
+<div class="math notranslate nohighlight">
+\[n = \frac{a-b}{2a}\]</div>
+<p>giving a solution <span class="math notranslate nohighlight">\(y_1 = Ax^n\)</span>.  But there should be two solutions to the ODE <a class="reference internal" href="#equation-eulereqn">(8.2)</a>, so we can use an ansatz of the form:</p>
+<div class="math notranslate nohighlight">
+\[y_2 = x^{n}\,f(x)\]</div>
+<p>to find <span class="math notranslate nohighlight">\(y_2\)</span>, by solving for <span class="math notranslate nohighlight">\(f(x)\)</span>.  We can think of <span class="math notranslate nohighlight">\(f(x)\)</span> here is a <strong>bridging</strong> function between the different solutions <span class="math notranslate nohighlight">\(y_1,\,y_2\)</span>.</p>
+<p>Using this ansatz, the ODE takes the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y &amp;= x^n\,f \\
+y' &amp;= nx^{n-1}\,f + x^n\,f' \\
+y'' &amp;= n(n-1)x^{n-2}\,f + 2nx^{n-1}\,f' + x^{n}f''\\
+\Rightarrow ax^2\,y′′+bx\,y′+cy &amp;= ax^{n+1}\,f'' + (2an+b)\,x^{n+1}\,f' + (an(n-1) + bn + c)\,x^n\,f = 0\end{split}\]</div>
+<p>This can be simplified straight away since we are using the value of <span class="math notranslate nohighlight">\(n\)</span> which satisfies the characteristic equation <span class="math notranslate nohighlight">\(an(n-1) + bn + c = 0\)</span>, therefore the equation reduces to:</p>
+<div class="math notranslate nohighlight">
+\[ax^{n+1}\,f'' + (2an+b)\,x^{n+1}\,f' = 0 \]</div>
+<p>using the fact that <span class="math notranslate nohighlight">\(\displaystyle n = \frac{a-b}{2a} \Rightarrow 2an + b = a\)</span> means:</p>
+<div class="math notranslate nohighlight">
+\[ax^{n+1}\left(xf'' + f'\right) = 0\]</div>
+<p>which can be solved as a linear 1st order ODE in <span class="math notranslate nohighlight">\(f'\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\left( xf'\right) = 0 \Rightarrow xf' = A \]</div>
+<p>which means the form of <span class="math notranslate nohighlight">\(f(x)\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = A\ln(x) + B\]</div>
+<p>and therefore the solution here is:</p>
+<div class="math notranslate nohighlight">
+\[y = x^n\,\left(A \ln(x) + B\right)\]</div>
+<p>3. <em>Two complex roots <span class="math notranslate nohighlight">\(n = \lambda \pm i\mu\)</span></em></p>
+<p>We can solve the characteristic equation here, with the proviso <span class="math notranslate nohighlight">\((b-a)^2 - 4ac &lt; 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[n = \frac{(a-b)\pm i\sqrt{4ac-(b-a)^2}}{2a} = \lambda \pm i \mu,\qquad \lambda,\, \mu \in \mathbb{R}\]</div>
+<p>If we look at the solutions here, lets start with <span class="math notranslate nohighlight">\(n = \lambda + i \mu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y_1 = Ax^{\lambda + i\mu} = Ae^{\ln(x^{\lambda + i \mu}} = Ae^{(\lambda + i\mu)\ln(x)} = Ax^{\lambda}\left( \cos(\mu\ln(x)) + i \sin(\mu\ln(x))\right)\]</div>
+<p>where we have used the Ruler function to convert this expression into one with trigonometric and power law functions.  We could do a similar exercise with <span class="math notranslate nohighlight">\(y_2\)</span>, the
+only difference here being a <span class="math notranslate nohighlight">\(-\)</span> sign in the middle, so the overal solution <span class="math notranslate nohighlight">\(y = y_1 + y_2\)</span> can be written as:</p>
+<div class="math notranslate nohighlight">
+\[y = y_1 + y_2 = x^{\lambda}\left(A\cos(\mu\ln(x)) + B \sin(\mu\ln(x))\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,\, B \in \mathbb{C}\)</span> in general, but with real boundary conditions they will turn out to be real.</p>
+<div class="section" id="other-ranges-of-x">
+<h3><span class="section-number">8.1.1. </span>Other ranges of <span class="math notranslate nohighlight">\(x\)</span><a class="headerlink" href="#other-ranges-of-x" title="Permalink to this headline">¶</a></h3>
+<p>So far we have taken <span class="math notranslate nohighlight">\(x&gt;0\)</span> to ensure all of our solutions here are real, however if we look again at <a class="reference internal" href="#equation-eulereqn">(8.2)</a>, taking a coordinate transformation <span class="math notranslate nohighlight">\(t = -x\)</span> and
+defining a function <span class="math notranslate nohighlight">\(z\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[z(t) = y(x) = y(-t)\]</div>
+<p>then this means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}t} z(t) = \dot{z}(t) &amp;= - \frac{\mathrm{d}}{\mathrm{d}x} y(x) = y'(x)\\
+\frac{\mathrm{d}^2}{\mathrm{d}t^2} z(t) = \ddot{z}(t)&amp;= + \frac{\mathrm{d}^2}{\mathrm{d}x^2} y(x) = y''(x)\end{split}\]</div>
+<p>and therefore <a class="reference internal" href="#equation-eulereqn">(8.2)</a> reads as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a(-t)^2\ddot{z} + b(-t)(-\dot{z}) + cz &amp;= 0 \\
+\Rightarrow at^2\ddot{z} + bt\dot{z} + cz = 0\end{split}\]</div>
+<p>This shows that for <span class="math notranslate nohighlight">\(t&gt;0\)</span> we can still have real solutions to this ODE, there would follow the same form as those found for <span class="math notranslate nohighlight">\(&gt;0\)</span> - but this range corresponds to <span class="math notranslate nohighlight">\(x&lt;0\)</span>!</p>
+<p>Looking at how this could change the solutions, say for case (1) with real, distinct roots in <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z(t) = At^{n_1} + Bt^{n_1} \Rightarrow y(x) = A(-x)^{n_1} + B(-x)^{n_2}, \qquad x &lt; 0\]</div>
+<p>Therefore the argument of these solutions is always <span class="math notranslate nohighlight">\(|x|\)</span> irrespective of whether <span class="math notranslate nohighlight">\(x&lt;0\)</span> or <span class="math notranslate nohighlight">\(x &gt; 0\)</span>, therfore we modify our solutions to be of the form:</p>
+<p>1. <span class="math notranslate nohighlight">\(y = A\,x^{n_1} + B\,x^{n_2} \longrightarrow y = A\,|x|^{n_1} + B\,|x|^{n_2}\)</span></p>
+<p>2. <span class="math notranslate nohighlight">\(y = x^n\,\left(A \ln(x) + B\right) \Longrightarrow y = |x|^n\,\left(A \ln|x| + B\right)\)</span></p>
+<p>3. <span class="math notranslate nohighlight">\(y = x^{\lambda}\left(A\cos(\mu\ln(x)) + B \sin(\mu\ln(x))\right) \longrightarrow y = |x|^{\lambda}\left(A\cos(\mu\ln|x|) + B \sin(\mu\ln|x|)\right)\)</span></p>
+<p>We notice that <span class="math notranslate nohighlight">\(x=0\)</span> is not covered by these solutions as it corresponds to <span class="math notranslate nohighlight">\(cy=0\)</span>.</p>
+<p>By a similar principle, we could define a variable of the form <span class="math notranslate nohighlight">\(t = x - s\)</span>, with predicably similar behaviour, therefore we can also shift the ODe to be of the form:</p>
+<div class="math notranslate nohighlight">
+\[a(x-s)^2y'' + b(x-s)y' + cy = 0\]</div>
+<p>giving solutions of the form:
+1. <span class="math notranslate nohighlight">\(y = A\,x^{n_1} + B\,x^{n_2} \longrightarrow y = A\,|x-s|^{n_1} + B\,|x-s|^{n_2}\)</span></p>
+<p>2. <span class="math notranslate nohighlight">\(y = x^n\,\left(A \ln(x) + B\right) \Longrightarrow y = |x-s|^n\,\left(A \ln|x-s| + B\right)\)</span></p>
+<p>3. <span class="math notranslate nohighlight">\(y = x^{\lambda}\left(A\cos(\mu\ln(x)) + B \sin(\mu\ln(x))\right) \longrightarrow y = |x-s|^{\lambda}\left(A\cos(\mu\ln|x-s|) + B \sin(\mu\ln|x-s|)\right)\)</span></p>
+<p>however it is also clear here that this solution cannot contain the point <span class="math notranslate nohighlight">\(x=s\)</span>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Solve the following ODE:</p>
+<div class="math notranslate nohighlight">
+\[x^2\,y'' + xy' - y = 0\]</div>
+<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y(x) &amp;= x^n \\
+y'(x) &amp;= nx^{n-1}\\
+y''(x) &amp;= n(n-1)x^{n-2}\end{split}\]</div>
+<p>which means that the ODE can be written as:</p>
+<div class="math notranslate nohighlight">
+\[x^{n}\Big(n(n-1)+n - 1 \Big) = 0 \Rightarrow n^2 - 1 = 0\]</div>
+<p>which means that <span class="math notranslate nohighlight">\(n = \pm 1\)</span> and therefore the solution will be of the form:</p>
+<div class="math notranslate nohighlight">
+\[y = Ax^1 + Bx^{-1}\]</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Further worked examples</p>
+<p>1. Solve the ODE <span class="math notranslate nohighlight">\(x^2y'' - 2y = 0, \qquad x &gt;0\)</span></p>
+<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x^n \Big(n(n-1) - 2\Big) = 0 \Rightarrow n^2 - n - 2 = (n-2)(n+1) = 0\]</div>
+<p>which has roots of <span class="math notranslate nohighlight">\(n = -1,\, 2\)</span> and hence</p>
+<div class="math notranslate nohighlight">
+\[y = Ax^2 + Bx^{-1}\]</div>
+<p>2. Solve the ODE <span class="math notranslate nohighlight">\(x^2\,y'' - 3x\,y' + 4y = 0, \qquad x &gt;0\)</span></p>
+<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^{n}\Big(n(n-1)-3n+4 \Big) &amp;= 0 \Rightarrow n^2-4n+4 = 0 \\
+(n-2)^2 &amp;= 0\end{split}\]</div>
+<p>which has a repeated root of <span class="math notranslate nohighlight">\(n=2\)</span>, so one of the solutions is <span class="math notranslate nohighlight">\(y = Ax^2\)</span>.  We can then use:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y &amp;= x^2 \,f(x) \\
+y' &amp;= 2x\,f + x^2\,f' \\
+y'' &amp;= 2\,f + 2x\,f' + 2x\,f' + x^2\,f'' = 2\,f + 4x\,f' + x^2\,f''\end{split}\]</div>
+<p>substituting these results in we find:</p>
+<div class="math notranslate nohighlight">
+\[x^2\,y'' - 3x\,y' + 4y = x^4\,f''+ (4x^3-3x^3)\,f' + (2x^2-6x^2+4x^2)\,f = 0 \]</div>
+<p>which means we have to solve:</p>
+<div class="math notranslate nohighlight">
+\[x^4\,f'' + x^3\,f' = 0 \Rightarrow f'' + \frac{1}{x}f' = 0\]</div>
+<p>Using the integrating factor method, with <span class="math notranslate nohighlight">\(\mu = e^{\int \frac{1}{x}\,\mathrm{d}x} = x\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\left(x\,f' \right) = 0 \Rightarrow x\,f' = C \]</div>
+<p>and so the solution is found as:</p>
+<div class="math notranslate nohighlight">
+\[f' = \frac{C}{x} \Rightarrow f(x) = C\ln(x)+D\]</div>
+<p>where <span class="math notranslate nohighlight">\(C,\, D\)</span> are constants to be found, so the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y = x^2(A + B\ln(x))\]</div>
+<p>3. Find the solution to the following differential equation on any interval not containing <span class="math notranslate nohighlight">\(x = - 6\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[3 ( x + 6 )^2 y'' + 25 ( x + 6 ) y' - 16 y = 0\]</div>
+<p>Using the ansatz <span class="math notranslate nohighlight">\(y = |x+6|^n\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[|x+6|^n\left(3n(n-1) + 25n - 16 \right) = 0 \Rightarrow 3n^2 + 22n - 16 = 0\]</div>
+<p>which is solved for <span class="math notranslate nohighlight">\((3n - 2)(n + 8) = 0\)</span> nd so <span class="math notranslate nohighlight">\(n = \frac{2}{3}, \,-8\)</span>, meaning that the general solution is of the form:</p>
+<div class="math notranslate nohighlight">
+\[y = A|x+6|^{2/3} + B|x+6|^{-8}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="reduction-of-order">
+<h2><span class="section-number">8.2. </span>Reduction of Order<a class="headerlink" href="#reduction-of-order" title="Permalink to this headline">¶</a></h2>
 <p>Recall the following linear homogeneous second order ODE:</p>
 <div class="math notranslate nohighlight">
 \[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+\frac{b^2}{4a}\,y(x)=0\]</div>
@@ -400,25 +486,24 @@ independent solution <span class="math notranslate nohighlight">\(y_2(x)\)</span
 <p class="admonition-title">Definition</p>
 <p>We employ this method to solve inhomogeneous linear differential equations of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2redorder">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">#</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \Rightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">¶</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \longrightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
 <p>where we have relabelled <span class="math notranslate nohighlight">\(\displaystyle p(x) = \frac{b(x)}{a(x)},\, q(x) = \frac{c(x)}{a(x)},\, r(x) = \frac{f(x)}{a(x)}\)</span> for simplicity.</p>
 <p>If we know a solution <span class="math notranslate nohighlight">\(y_1(x)\)</span> of the homogeneous problem <span class="math notranslate nohighlight">\(y_1'' + p\,y_1'+q\,y_1 = 0\)</span>, then the solution to
-the inhomogeneous problem will be of the form:</p>
+the homogeneous problem will be of the form:</p>
 <div class="math notranslate nohighlight">
 \[y_2(x) = u(x)\,y_1(x)\]</div>
 <p>where <span class="math notranslate nohighlight">\(u(x)\)</span> can be found from the complicated expression:</p>
 <div class="math notranslate nohighlight">
-\[u(x) = \int \left(\frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\right)\,\mathrm{d}x\]</div>
-<p>and therefore the final solution is of the form:</p>
+\[u(x) = \int \left(C\,y_1^{-2}\,e^{-\int p\,\mathrm{d}x}\right)\,\mathrm{d}x\]</div>
+<p>and for the inhomogeneous problem will be of the form:</p>
 <div class="math notranslate nohighlight">
-\[y(x) = y_1(x)\left(1 + \int \left(\frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x  + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\right)\,\mathrm{d}x
-\right)\]</div>
+\[u(x) = \int \left(\frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\right)\,\mathrm{d}x\]</div>
 </div>
 <p>Using <span class="math notranslate nohighlight">\(y_2(x) = u(x)\,y_1(x)\)</span>, we can find the derivatives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y_2' &amp;= u'\,y_1 + u\,y_1' \\
 y_2'' &amp;= u''\,y_1 + 2u'\,y_1+ f\,y_1'' \end{split}\]</div>
-<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">(8.2)</a>:</p>
+<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">(8.3)</a>:</p>
 <div class="math notranslate nohighlight">
 \[y_1\,u'' + (2y_1' + p\,y_1)\,u' + (y_1''+p\,y_1'+q\,y_1)\,u = r\]</div>
 <p>but since <span class="math notranslate nohighlight">\(y_1\)</span> satisfies <span class="math notranslate nohighlight">\(y_1'' + p\,y_1' + q\,y_1 = 0\)</span>, then this reduces do:</p>
@@ -436,65 +521,59 @@ if we started with an <span class="math notranslate nohighlight">\(n^{th}\)</spa
 \[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\left( u'\,y_1^2\,e^{\int p\,\mathrm{d}x}\right) &amp;= y_1\,r\,e^{\int p\,\mathrm{d}x}\\
 \Rightarrow u'(x) &amp;= \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\\
 u(x) &amp;= \int \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\,\mathrm{d}x\end{split}\]</div>
-<section id="finding-homogeneous-solutions">
-<h3><span class="section-number">8.2.1. </span>Finding homogeneous solutions<a class="headerlink" href="#finding-homogeneous-solutions" title="Permalink to this headline">#</a></h3>
-<p>If the form of <span class="math notranslate nohighlight">\(p(x),\, q(x)\)</span> are just polynomial, then finding homogeneous solution(s) to ODEs of the form <a class="reference internal" href="#equation-ode2redorder">(8.2)</a> can be done,
-using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>.  Obviously this may only work for one of the solutions, however for the reduction of order method this is exactly what
-is required.</p>
-<p>To see this in action, lets pick the example:</p>
+<p>and for the homogeneous problem, where <span class="math notranslate nohighlight">\(r=0\)</span>, we find:</p>
 <div class="math notranslate nohighlight">
-\[x^2\,y'' + xy' - y = 0\]</div>
-<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>, then:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y(x) &amp;= x^n \\
-y'(x) &amp;= nx^{n-1}\\
-y''(x) &amp;= n(n-1)x^{n-2}\end{split}\]</div>
-<p>which means that the ODE can be written as:</p>
-<div class="math notranslate nohighlight">
-\[x^{n}\Big(n(n-1)+n - 1 \Big) = 0 \Rightarrow n^2 - 1 = 0\]</div>
-<p>which means that <span class="math notranslate nohighlight">\(n = \pm 1\)</span> and therefore the solution will be of the form:</p>
-<div class="math notranslate nohighlight">
-\[y = Ax^1 + Bx^{-1}\]</div>
-<p>If one of <span class="math notranslate nohighlight">\(p,\,q\)</span> are <em>NOT</em> polynomial, then we only hope to apply a series solution method to solve these sorts of
-problems <span class="math notranslate nohighlight">\(y = \sum_{n=1}^\infty a_n\,x^n\)</span>.</p>
-<div class="seealso dropdown admonition">
-<p class="admonition-title">Worked examples</p>
-<p>1. Solve the ODE <span class="math notranslate nohighlight">\(x^2y'' - 2y = 0\)</span></p>
-<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[x^n \Big(n(n-1) - 2\Big) = 0 \Rightarrow n^2 - n - 2 = (n-2)(n+1) = 0\]</div>
-<p>which has roots of <span class="math notranslate nohighlight">\(n = -1,\, 2\)</span> and hence</p>
-<div class="math notranslate nohighlight">
-\[y = Ax^2 + Bx^{-1}\]</div>
-<p>2. Solve the ODE <span class="math notranslate nohighlight">\(x^2\,y'' - 3x\,y' + 4y = 0\)</span></p>
-<p>Using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}x^{n}\Big(n(n-1)-3n+4 \Big) &amp;= 0 \Rightarrow n^2-4n+4 = 0 \\
-(n-2)^2 &amp;= 0\end{split}\]</div>
-<p>which has a repeated root of <span class="math notranslate nohighlight">\(n=2\)</span>, so one of the solutions is <span class="math notranslate nohighlight">\(y = Ax^2\)</span>.  We can then use:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}y &amp;= x^2 \,f(x) \\
-y' &amp;= 2x\,f + x^2\,f' \\
-y'' &amp;= 2\,f + 2x\,f' + 2x\,f' + x^2\,f'' = 2\,f + 4x\,f' + x^2\,f''\end{split}\]</div>
-<p>substituting these results in we find:</p>
-<div class="math notranslate nohighlight">
-\[x^2\,y'' - 3x\,y' + 4y = x^4\,f''+ (4x^3-3x^3)\,f' + (2x^2-6x^2+4x^2)\,f = 0 \]</div>
-<p>which means we have to solve:</p>
-<div class="math notranslate nohighlight">
-\[x^4\,f'' + x^3\,f' = 0 \Rightarrow f'' + \frac{1}{x}f' = 0\]</div>
-<p>Using the integrating factor method, with <span class="math notranslate nohighlight">\(\mu = e^{\int \frac{1}{x}\,\mathrm{d}x} = x\)</span> we find:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}}{\mathrm{d}x}\left(x\,f' \right) = 0 \Rightarrow x\,f' = C \]</div>
-<p>and so the solution is found as:</p>
-<div class="math notranslate nohighlight">
-\[f' = \frac{C}{x} \Rightarrow f(x) = C\ln(x)+D\]</div>
-<p>where <span class="math notranslate nohighlight">\(C,\, D\)</span> are constants to be found, so the final solution is:</p>
-<div class="math notranslate nohighlight">
-\[y = x^2(A + B\ln(x))\]</div>
+\[u(x) = \int \left(C\,y_1^{-2}\,e^{-\int p\,\mathrm{d}x}\right)\,\mathrm{d}x\]</div>
 </div>
-</section>
-</section>
-</section>
+<div class="section" id="fundamental-sets-of-solutions">
+<h2><span class="section-number">8.3. </span>Fundamental sets of solutions<a class="headerlink" href="#fundamental-sets-of-solutions" title="Permalink to this headline">¶</a></h2>
+<p>One issue to contend with is what after all the work of bridging function we find that <span class="math notranslate nohighlight">\(y_2 = \alpha\,y_1,\, \alpha \in \mathbb{C}\)</span> - i.e. the two solutions are just multipes of each other.</p>
+<p>We really need a way to consider the distinct-ness of any solutions we find or if we switch representation of solutions that they form a fundamental set, e.g. <span class="math notranslate nohighlight">\(\sin(x),\, \cos(x)\)</span> could be
+considered to be a fundamental set, as could <span class="math notranslate nohighlight">\(e^{ix},\, e^{-ix}\)</span>, but if we mix the two <span class="math notranslate nohighlight">\(\cos(x),\, e^{ix}\)</span> then this is not a fundamental set and we run the risk of having
+duplicte solutions.</p>
+<p>Lets start with a 2nd order system which has two fundamental solutions <span class="math notranslate nohighlight">\(y_1,\, y_2\)</span> and has to satisy initial conditions <span class="math notranslate nohighlight">\(y(x_0) = y_0,\, y'(x_0) = y_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y(x) = Ay_1(x) + By_2(x) \Rightarrow \,&amp;\, y(x_0) = y_0 = Ay_1(x_0) + By_2(x_0)\\
+y'(x) = A{y_1}'(x) + B{y_2}'(x) \Rightarrow \,&amp;\, y'(x_0) = {y_0}' = A{y_1}'(x_0) + B{y_2}'(x_0)\end{split}\]</div>
+<p>This means we have two equations to find two unknowns <span class="math notranslate nohighlight">\(A,\,B\)</span>, we could therefore to solve for these simultaneously, however a different method is to use a 2x2 matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} y_0 \\ {y_0}' \end{pmatrix} = \begin{pmatrix} y_1 &amp; y_2 \\ {y_1}' &amp; {y_2}'\end{pmatrix}\,\begin{pmatrix} A \\ B \end{pmatrix}\end{split}\]</div>
+<p>which means to find <span class="math notranslate nohighlight">\(A,\,B\)</span> we can use a matrix inverse:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{y_1\,{y_2}' - {y_1}'\,y_2}\begin{pmatrix} {y_2}' &amp; -y_2 \\ -{y_1}' &amp; y_1\end{pmatrix}\,\begin{pmatrix} y_0 \\ {y_0}' \end{pmatrix} = \begin{pmatrix} A \\ B \end{pmatrix}\end{split}\]</div>
+<p>Therefore in order for <span class="math notranslate nohighlight">\(A,\,B\)</span> to <em>exist</em>, the matrix determinant must be non-zero - this is feature here that tells us if we have a funamental set of solutions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}W(y_1,\,y_2)(x) = \begin{vmatrix} y_1 &amp; y_2 \\ {y_1}' &amp; {y_2}'\end{vmatrix}\end{split}\]</div>
+<p>We call this determinant the <strong>Wronskian</strong>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Show that the functions <span class="math notranslate nohighlight">\(y_1 = e^{\lambda x}\)</span> and <span class="math notranslate nohighlight">\(y_2 = x\,e^{\lambda x}\)</span> form a fundamental set of solutions.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}W(y_1,\,y_2)(x) = \begin{vmatrix} y_1 &amp; y_2 \\ {y_1}' &amp; {y_2}'\end{vmatrix} &amp;= 
+\begin{vmatrix} e^{\lambda x} &amp; x\,e^{\lambda x} \\ \lambda\,e^{\lambda x} &amp; \lambda\,x\,e^{\lambda x} + e^{\lambda x}\end{vmatrix}\\
+&amp;= e^{2\lambda x} (\lambda x + 1 - \lambda x) = e^{2\lambda x} \end{split}\]</div>
+<p>and clearly for any finite <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(W \neq 0\)</span>, hence we have a fundamental set.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Further worked examples</p>
+<p>1. Show that the functions <span class="math notranslate nohighlight">\(y_1 = x^{n_1}\)</span> and <span class="math notranslate nohighlight">\(y_2 = x^{n_2}\)</span> form a fundamental set of solutions for <span class="math notranslate nohighlight">\(x &gt; 0\)</span></p>
+<p>Lets switch to <span class="math notranslate nohighlight">\(y_1 = e^{n_1\,\ln(x)},\, y_2 = e^{n_2\,\ln(x)}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}W(y_1,\,y_2)(x) = \begin{vmatrix} y_1 &amp; y_2 \\ {y_1}' &amp; {y_2}'\end{vmatrix} &amp;= 
+\begin{vmatrix} e^{n_1\,\ln(x)} &amp; e^{n_2\,\ln(x)} \\ \frac{n_1}{x}\,e^{n_1\,\ln(x)} &amp; \frac{n_2}{x}\,e^{n_2\,\ln(x)} \end{vmatrix}\\
+&amp;= e^{(n_1+n_2)\,\ln(x)} \left(\frac{n_2}{x} - \frac{n_1}{x}\right) = (n_1 - n_1)\,x^{n_1+ n_2 - 1}\end{split}\]</div>
+<p>and clearly for any finite <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(n_1 \neq n_2\)</span>, <span class="math notranslate nohighlight">\(W \neq 0\)</span>, hence we have a fundamental set.</p>
+<p>2. Show that the functions <span class="math notranslate nohighlight">\(y_1 = x^{\lambda + \mu i} = e^{(\lambda + \mu i)\ln (x)}\)</span> and
+<span class="math notranslate nohighlight">\(y_2 = x^{\lambda - \mu i}= e^{(\lambda - \mu i)\ln (x)}\)</span> form a fundamental set of solutions, where <span class="math notranslate nohighlight">\(x &gt; 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}W(y_1,\,y_2)(x) = \begin{vmatrix} y_1 &amp; y_2 \\ {y_1}' &amp; {y_2}'\end{vmatrix} &amp;= 
+\begin{vmatrix} e^{(\lambda + \mu i)\ln (x)} &amp; e^{(\lambda - \mu i)\ln (x)} \\ \frac{(\lambda + \mu i)}{x}e^{(\lambda + \mu i)\ln (x)} &amp; \frac{(\lambda - \mu i)}{x}e^{(\lambda - \mu i)\ln (x)}\end{vmatrix}\\
+&amp;= e^{(\lambda^2 + \mu^2)\ln(x)}\left(\frac{\lambda - \mu i}{x} - \frac{\lambda + \mu i}{x} \right) \\
+&amp;= -\frac{2\mu\,i\,e^{(\lambda^2 + \mu^2)\ln(x)}}{x} = -2\mu\,i\,x^{\lambda^2 + \mu^2-1}\end{split}\]</div>
+<p>and clearly for any finite <span class="math notranslate nohighlight">\(x &gt; 0\)</span>, <span class="math notranslate nohighlight">\(W \neq 0\)</span>, hence we have a fundamental set.</p>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -518,11 +597,9 @@ y'' &amp;= 2\,f + 2x\,f' + 2x\,f' + x^2\,f'' = 2\,f + 4x\,f' + x^2\,f''\end{spli
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../VectorCalculus/vectorcalctheorems.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -538,28 +615,24 @@ y'' &amp;= 2\,f + 2x\,f' + 2x\,f' + x^2\,f'' = 2\,f + 4x\,f' + x^2\,f''\end{spli
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Natural Sciences<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
