@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Answers &#8212; Topics in Scientific Computing</title>
+    <title>2.4. Answers &#8212; Topics in Scientific Computing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Exercises" href="exercises.html" />
+    <link rel="prev" title="2. Concepts" href="concepts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,16 +106,28 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tools.html">
    1. Tools
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="concepts.html">
    2. Concepts
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.4. Answers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="exercises.html">
@@ -124,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="homework.html">
    4. Homework
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -301,7 +315,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="answers">
-<h1>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.4. </span>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">#</a></h1>
 <div class="solution admonition" id="programming/answers-solution-0">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="concepts.html#types_exercise"> Exercise 2.1</a></p>
@@ -319,32 +333,39 @@ title="Print to PDF"
 </ol>
 </section>
 </div>
-<div class="solution admonition" id="programming/answers-solution-1">
+<!--
+:::{solution} reference_exercise
 
-<p class="admonition-title">Solution to<a class="reference internal" href="concepts.html#reference_exercise"> Exercise 2.2</a></p>
-<section id="solution-content">
-<p>1.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p>After executing the first two lines, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> both refer to the same value <code class="docutils literal notranslate"><span class="pre">1</span></code>. But the line <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">5</span></code> is an assigment operation. It evalutes <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">5</span></code> then assigns the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> to the new value. <code class="docutils literal notranslate"><span class="pre">y</span></code> still refers to the value <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
-<p>2.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>After executing the first two lines, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> both refer to the same list <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code>.
-The line <code class="docutils literal notranslate"><span class="pre">x[0]</span> <span class="pre">=</span> <span class="pre">10</span></code> mutates the value of the list. <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> then both refer to the same list <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">2]</span></code>.</p>
-<p>3.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p>After executing the first two lines, <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
-</section>
-</div>
-</section>
+1\.
+
+```
+x = 6
+y = 1
+```
+
+After executing the first two lines, `x` and `y` both refer to the same value `1`. But the line `x += 5` is an assigment operation. It evalutes `x + 5` then assigns the variable `x` to the new value. `y` still refers to the value `1`.
+
+2\.
+
+```
+x = [10, 2]
+y = [10, 2]
+```
+
+After executing the first two lines, `x` and `y` both refer to the same list `[1, 2]`.
+The line `x[0] = 10` mutates the value of the list. `x` and `y` then both refer to the same list `[10, 2]`. 
+
+3\.
+
+```
+x = [5, 2, 3, 4]
+y = 1
+```
+
+After executing the first two lines, `x`
+
+:::
+--></section>
 
     <script type="text/x-thebe-config">
     {
@@ -373,6 +394,20 @@ The line <code class="docutils literal notranslate"><span class="pre">x[0]</span
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="concepts.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Concepts</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="exercises.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Exercises</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

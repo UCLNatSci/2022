@@ -12,7 +12,7 @@ Included in the Anaconda is:
 
 ## Spyder
 
-Spyder is an software development tool designed for scientific computing. The interface of Spyder is very similar to other IDEs such as MATLAB and RStudio including console, code editor, file browser and object viewer. It is important to become familiar with this interface since it is quite different to the notebook-style interface that you might be used to. While it might seem more complicated at first, Spyder has many benefits including:
+Spyder is a software development tool designed for scientific computing. The interface of Spyder is very similar to other IDEs such as MATLAB and RStudio including console, code editor, file browser and object viewer. It is important to become familiar with this interface since it is quite different to the notebook-style interface that you might be used to. While it might seem more complicated at first, Spyder has many benefits including:
 
 - ability to perform computing directly on your computer's hardware
 - ability to dynamically inspect variable values
@@ -57,7 +57,7 @@ Python creates a new variable `y`. What is its type and value, according to the 
 
 The variable explorer shows all four variables that you have created. We can clear all variables by restarting the Python kernel. 
 
-> Select *Consoles* > *Restart kernel*.
+> Select *Consoles* > *Restart kernel* from the Spyder menu.
 
 Python restarts. All declared variables and functions are removed from memory.
 

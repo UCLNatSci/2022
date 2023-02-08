@@ -112,10 +112,22 @@ const thebe_selector_output = ".output, .cell_output"
    1. Tools
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="concepts.html">
    2. Concepts
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="answers.html">
+     2.4. Answers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="exercises.html">
@@ -126,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="homework.html">
    4. Homework
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -345,7 +357,7 @@ title="Print to PDF"
 </section>
 <section id="spyder">
 <h2><span class="section-number">1.2. </span>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">#</a></h2>
-<p>Spyder is an software development tool designed for scientific computing. The interface of Spyder is very similar to other IDEs such as MATLAB and RStudio including console, code editor, file browser and object viewer. It is important to become familiar with this interface since it is quite different to the notebook-style interface that you might be used to. While it might seem more complicated at first, Spyder has many benefits including:</p>
+<p>Spyder is a software development tool designed for scientific computing. The interface of Spyder is very similar to other IDEs such as MATLAB and RStudio including console, code editor, file browser and object viewer. It is important to become familiar with this interface since it is quite different to the notebook-style interface that you might be used to. While it might seem more complicated at first, Spyder has many benefits including:</p>
 <ul class="simple">
 <li><p>ability to perform computing directly on your computer’s hardware</p></li>
 <li><p>ability to dynamically inspect variable values</p></li>
@@ -387,7 +399,7 @@ title="Print to PDF"
 </div></blockquote>
 <p>The variable explorer shows all four variables that you have created. We can clear all variables by restarting the Python kernel.</p>
 <blockquote>
-<div><p>Select <em>Consoles</em> &gt; <em>Restart kernel</em>.</p>
+<div><p>Select <em>Consoles</em> &gt; <em>Restart kernel</em> from the Spyder menu.</p>
 </div></blockquote>
 <p>Python restarts. All declared variables and functions are removed from memory.</p>
 <blockquote>
