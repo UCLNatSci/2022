@@ -117,25 +117,73 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1/ws1.html">
    1. Introduction to Graphs
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1/ws1_answers.html">
+     1.7. Answers
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1/ws1_computing.html">
    2. Computing with Graphs
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1/ws1_computing_answers.html">
+     2.5. Answers
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1/ws1_questions.html">
    3. Exercises
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1/ws1_questions_answers.html">
+     3.1. Exercises
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1/ws1_homework.html">
    4. Homework
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1/ws1_homework_answers.html">
+     4.1. Homework Answers and Mark Scheme
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -436,7 +484,7 @@ title="Print to PDF"
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This worksheet explores the formation of networks that result in the “small world” phenomenon. A popular example of the small world phenomenon is the network formed by actors appearing in the same movie (e.g., “Six Degrees of Kevin Bacon”), but small worlds are not limited to people-only networks. Other examples range from power grids to the neural networks of worms. This model illustrates some general, theoretical conditions under which small world networks between people or things might occur.</p>
-<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
+<p>This model is an adaptation of the Watts-Strogatz model proposed by Duncan Watts and Steve Strogatz <span id="id1">[<a class="reference internal" href="project/neural_circuits_project_2.html#id7" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>, whose definition of small-worldness stipulates significant local clustering as well as small path lengths. It begins with a <em>ring lattice</em> network where each node is connected to <span class="math notranslate nohighlight">\(k\)</span> neighbours on either side. Using this as a starting point, we then modify the network by rewiring edges – removing an edge from the graph and replacing it with an edge between two nodes sampled at random. Over time, we analyse the effect this rewiring has the on various connections between nodes and on the properties of the network. Watts and Strogatz realised that by ‘rewiring’ a small number of edges in a lattice graph, the average path length decreases sharply, but clustering coefficients remain high. This property of short path distances and high clustering characterises a ‘small world’ graph.</p>
 <a class="reference internal image-reference" href="_images/watts_strogatz.png"><img alt="L(12, 2)" class="align-center" src="_images/watts_strogatz.png" style="width: 400px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -515,12 +563,12 @@ connected to each of its <span class="math notranslate nohighlight">\(k\)</span>
 </section>
 <section id="question-6">
 <h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">#</a></h3>
-<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>?</p>
+<p>Create a figure which shows how average path length and global clustering co-efficient vary with rewiring probability. Experiment with different values of <code class="docutils literal notranslate"><span class="pre">N</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code>. For what values of <code class="docutils literal notranslate"><span class="pre">p</span></code> does the resulting graph have small-world properties? Can you reproduce Figure 2 in <span id="id2">[<a class="reference internal" href="project/neural_circuits_project_2.html#id7" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>?</p>
 </section>
 <section id="question-7-open-ended">
 <h3>Question 7 [Open-ended]<a class="headerlink" href="#question-7-open-ended" title="Permalink to this headline">#</a></h3>
 <p>How did Watts and Strogatz determine the small-worldness of the graph of the <em>C-Elegans</em> nervous system?</p>
-<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="project/neural_circuits_project.html#id9" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>.</p>
+<p>Import the graph of the <em>C Elegans</em> nervous system into Python and see if you can reproduce the values in Table 1 of <span id="id3">[<a class="reference internal" href="project/neural_circuits_project_2.html#id7" title="Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. nature, 393(6684):440–442, 1998.">2</a>]</span>.</p>
 <p><a href="herm_full_edgelist.csv" download>Download C Elegans Nervous System Data</a></p>
 </section>
 </section>

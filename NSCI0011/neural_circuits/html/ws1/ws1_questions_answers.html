@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercises &#8212; Neural Circuits</title>
+    <title>3.1. Exercises &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Homework" href="ws1_homework.html" />
+    <link rel="prev" title="3. Exercises" href="ws1_questions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,26 +118,74 @@ const thebe_selector_output = ".output, .cell_output"
   Introductory Material
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1.html">
    1. Introduction to Graphs
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1_answers.html">
+     1.7. Answers
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1_computing.html">
    2. Computing with Graphs
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1_computing_answers.html">
+     2.5. Answers
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="ws1_questions.html">
    3. Exercises
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.1. Exercises
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ws1_homework.html">
    4. Homework
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ws1_homework_answers.html">
+     4.1. Homework Answers and Mark Scheme
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -301,7 +351,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
 <div class="solution admonition" id="ws1/ws1_questions_answers-solution-0">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="ws1_questions.html#exercise_undirected_graph_G"> Exercise 3.1</a></p>
@@ -437,35 +487,6 @@ length 2 paths:
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ws1/ws1_questions_answers-exercise-2">
-
-<p class="admonition-title"></p>
-<section id="exercise-content">
-<p>1. Determine the adjacency list of the directed graph below.</p>
-<p><img alt="" src="../_images/ex1.png" /></p>
-<p>2. Write a function <code class="docutils literal notranslate"><span class="pre">print_length_3_walks(adj,</span> <span class="pre">i)</span></code> which prints out all length 2 walks starting from node <code class="docutils literal notranslate"><span class="pre">i</span></code>. Test that it produces the correct output for node <code class="docutils literal notranslate"><span class="pre">6</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">print_length_3_walks</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="go">6 5 4 8</span>
-<span class="go">6 4 8 6</span>
-<span class="go">6 4 8 3</span>
-<span class="go">6 4 8 10</span>
-</pre></div>
-</div>
-<p>3. Write a function <code class="docutils literal notranslate"><span class="pre">print_length_3_paths(adj,</span> <span class="pre">i)</span></code> which prints out all length 2 <em>paths</em> starting from node <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
-<p>4. Under what circumstances do the two functions produce different results?</p>
-</section>
-</div>
-<div class="exercise admonition" id="ws1/ws1_questions_answers-exercise-3">
-
-<p class="admonition-title"></p>
-<section id="exercise-content">
-<p>The <em>reverse</em> of a directed graph is is the graph formed by reversing the directions of its edges.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Transpose_graph">https://en.wikipedia.org/wiki/Transpose_graph</a></p>
-<p>1. Sketch the reverse of the directed graph of the egg-laying circuit and write down its adjacency list.<br />
-2. Write a function <code class="docutils literal notranslate"><span class="pre">reverse(adj)</span></code> which reverses the adjacency list <code class="docutils literal notranslate"><span class="pre">adj</span></code>. That is, if <code class="docutils literal notranslate"><span class="pre">adj</span></code> is the adjacency list of a directed graph, then <code class="docutils literal notranslate"><span class="pre">reverse(adj)</span></code> is the adjacency list of the reverse graph.
-3. Check that your function correctly reverses the adjacency list of the egg-laying circuit.</p>
-</section>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -495,6 +516,20 @@ length 2 paths:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="ws1_questions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Exercises</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ws1_homework.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Homework</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
