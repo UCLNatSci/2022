@@ -290,9 +290,10 @@ Taking a step size `h=1e-3`, numerically estimate the second derivative of the l
 You will need to extend the function estimate at *two* exterior points to obtain a result for the derivative at each point in the interval.
 
 Plot the error in each of your estimates, given that the analytic result satisfies
-\begin{equation}
+```{math}
+:label: ord2logist
 \frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = \frac{r^2 x(C-x)(C-2x)}{C^2}.
-\end{equation}
+```
 
 Write a short explanation of your findings.
 

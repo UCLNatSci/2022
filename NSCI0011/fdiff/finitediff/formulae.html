@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Chapter exercise 1.3" href="chapex1.html" />
+    <link rel="next" title="4. Preliminaries" href="ivp.html" />
     <link rel="prev" title="2. Infinite powers" href="powers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -139,6 +139,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Initial Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ivp.html">
+   4. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stability.html">
+   5. Stability and stiffness
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
@@ -146,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="chapex1.html">
    Chapter exercise 1.3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex2.html">
+   Chapter exercise 3.5
   </a>
  </li>
 </ul>
@@ -658,10 +680,8 @@ y=\sin(x)+x.
 (b) using the central difference formula.</p>
 <p>You will need to extend the function estimate at <em>two</em> exterior points to obtain a result for the derivative at each point in the interval.</p>
 <p>Plot the error in each of your estimates, given that the analytic result satisfies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1a281b1-bec8-45b7-b515-33b3e8e47deb">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-f1a281b1-bec8-45b7-b515-33b3e8e47deb" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = \frac{r^2 x(C-x)(C-2x)}{C^2}.
-\end{equation}\]</div>
+<div class="math notranslate nohighlight" id="equation-ord2logist">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-ord2logist" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = \frac{r^2 x(C-x)(C-2x)}{C^2}.\]</div>
 <p>Write a short explanation of your findings.</p>
 </section>
 </section>
@@ -700,10 +720,10 @@ y=\sin(x)+x.
             <p class="prev-next-title"><span class="section-number">2. </span>Infinite powers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="chapex1.html" title="next page">
+    <a class='right-next' id="next-link" href="ivp.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter exercise 1.3</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Preliminaries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
