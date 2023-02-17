@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Linear Algebra Coursework &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
+   1. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/doubletripleintegrals.html">
+   2. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
+   3. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
+   4. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/ODEreduction.html">
+   8. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/ODEvariation.html">
+   9. ODE Methods - Variation of Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/echelon_form.html">
+   10. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/vectors.html">
+   11. Vectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/matrix_equations.html">
+   12. Matrix Equation
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/LinearAlgebra/coursework/linear_algebra_coursework.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear Algebra Coursework</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-coursework">
+<h1>Linear Algebra Coursework<a class="headerlink" href="#linear-algebra-coursework" title="Permalink to this headline">#</a></h1>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> be a linear transformation such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T \begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}-2\sqrt{2}\\-\sqrt{2}\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T\begin{pmatrix}3\\1\end{pmatrix}=\begin{pmatrix}-2\sqrt{2}\\\sqrt{2}\end{pmatrix}.\end{split}\]</div>
+<p>a) [<strong>1 mark</strong>] Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix representation of <span class="math notranslate nohighlight">\(T\)</span>. Write down a matrix <span class="math notranslate nohighlight">\(B\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB = \begin{pmatrix}-2\sqrt{2}&amp;-2\sqrt{2}\\-  \sqrt{2}&amp;\sqrt{2}\end{pmatrix}.\end{split}\]</div>
+<p>b) [<strong>3 marks</strong>] Calculate the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>c) [<strong>3 marks</strong>] Sketch the image of the unit coordinate vectors under the linear transformation <span class="math notranslate nohighlight">\(T\)</span> and describe the geometrical effect of the transformation.</p>
+<p>d) [<strong>1 mark</strong>] Describe the null space of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1&amp;0&amp;1\\2&amp;2&amp;2\\3&amp;4&amp;5\end{pmatrix} \mathrm{~and~} B = \begin{pmatrix}0 &amp; 1 &amp; -2\\3 &amp; 0 &amp; 1\\ 1 &amp; 2 &amp; 2\end{pmatrix}.\end{split}\]</div>
+<p>Recall that an <em>elementary matrix</em> is a square matrix which results from applying a single row operation to the identity matrix. For example, the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_1 = \begin{pmatrix}1 &amp; 0 &amp; 0\\-2&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}\end{split}\]</div>
+<p>results from the row operation <span class="math notranslate nohighlight">\(r_2 \to r_2 - 2r_1\)</span>.</p>
+<p>a) [<strong>2 marks</strong>] Describe the row operation is represented by the elementary matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}0 &amp; 1 &amp; 0\\1&amp;0&amp;0\\0&amp;0&amp;1\end{pmatrix}\end{split}\]</div>
+<p>and write down the matrix of its inverse.</p>
+<p>b) [<strong>2 mark</strong>] Write down the matrix which result from the row operation <span class="math notranslate nohighlight">\(r_2 \to r_2 + 2r_1\)</span> and show that it is the inverse of <span class="math notranslate nohighlight">\(E_1\)</span>.</p>
+<p>c) [<strong>3 marks</strong>] By reducing <span class="math notranslate nohighlight">\(A\)</span> to echelon form, determine elementary matrices <span class="math notranslate nohighlight">\(E_1, E_2, E_3\)</span> and an upper triangular matrix <span class="math notranslate nohighlight">\(U\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[E_3E_2E_1A = U.\]</div>
+<p>d) [<strong>3 marks</strong>] Write down the inverses <span class="math notranslate nohighlight">\(E_1^{-1}, E_2^{-1}, E_3^{-1}\)</span> and hence determine a lower triangular matrix <span class="math notranslate nohighlight">\(L\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[A = LU.\]</div>
+<p>e) [<strong>3 marks</strong>] Determine elementary matrices <span class="math notranslate nohighlight">\(F_1, F_2, F_3\)</span> and upper triangular matrix <span class="math notranslate nohighlight">\(V\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[F_3F_2F_1B = V.\]</div>
+<p>Explain why it is not possible to write <span class="math notranslate nohighlight">\(B\)</span> as a product of a lower and upper triangular matrix.</p>
+<p>f) [<strong>2 marks</strong>] A permutation matrix is a square matrix with a single <span class="math notranslate nohighlight">\(1\)</span> in each row and <span class="math notranslate nohighlight">\(0\)</span>s elsewhere. Determine a permutation matrix <span class="math notranslate nohighlight">\(P\)</span> and lower triangular matrix <span class="math notranslate nohighlight">\(M\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[B = PMV.\]</div>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
+<p>Questions 3 and 4 are about <strong>Markov processes</strong>. A Markov process is a mathematical system which transitions through a sequence of states according to probabilistic rules. The rules are defined by a <strong>Markov matrix</strong> which is a square matrix with all nonnegative entries, and where the sum of the entries down any column is 1.</p>
+<p>On any given day, the weather in London is either rainy or cloudy (and no other type of weather is possible). If the weather is rainy today, then there is a 80% chance the weather will be rainy tomorrow. However, if the weather is cloudy today, then there is a 60% chance that the weather will be cloudy tomorrow.</p>
+<p>The Markov matrix corresponding to the system is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}0.8&amp;0.4\\0.2&amp;0.6\end{pmatrix}.\end{split}\]</div>
+<p>The probability of the weather being rainy or cloudy on day <span class="math notranslate nohighlight">\(i\)</span> is given by state vector <span class="math notranslate nohighlight">\(v_i\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[v_{i+1} = Av_i\]</div>
+<p>gives the vector of weather probabilities on day <span class="math notranslate nohighlight">\(i+1\)</span>. For example, if it is rainy today then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_0 = \begin{pmatrix}1\\0\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = Av_0 = \begin{pmatrix}0.8&amp;0.4\\0.2&amp;0.6\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}0.8\\0.2\end{pmatrix}\end{split}\]</div>
+<p>gives the probability of rainy or cloudy weather tomorrow. In turn,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2 = Av_1 = \begin{pmatrix}0.8&amp;0.4\\0.2&amp;0.6\end{pmatrix}\begin{pmatrix}0.8\\0.2\end{pmatrix} = \begin{pmatrix}0.72\\0.28\end{pmatrix}\end{split}\]</div>
+<p>gives the probabilites of rainy or cloudy weather in two days’ time.</p>
+<p>a) [<strong>2 mark</strong>] Given it is cloudy on Monday, calculate the probability that it is cloudy on Wednesday.</p>
+<p>b) [<strong>2 marks</strong>] Determine the eigenvalues of A.</p>
+<p>c) [<strong>2 marks</strong>] Determine the two corresponding eigenvectors.</p>
+<p>d) [<strong>3 marks</strong>] Diagonalise <span class="math notranslate nohighlight">\(A\)</span> and hence derive an expression for <span class="math notranslate nohighlight">\(A^k\)</span> where <span class="math notranslate nohighlight">\(k\in\mathbb{N}\)</span>.</p>
+<p>e) [<strong>3 marks</strong>] Calculcate <span class="math notranslate nohighlight">\(\lim_{k \to \infty} A^k\)</span> and describe what the resulting matrix represents.</p>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
+<p>A mouse lives in a cage that is divided into three rooms. At time <span class="math notranslate nohighlight">\(i=0\)</span> the mouse is in its starting room and at each timestep, the mouse moves with equal probability into one of the two adjacent rooms.</p>
+<a class="reference internal image-reference" href="../../_images/mouse2.jpg"><img alt="mouse" class="align-center" src="../../_images/mouse2.jpg" style="width: 200px;" /></a>
+<p>Let <span class="math notranslate nohighlight">\(v_i\)</span> be a state vector which represents the probability that the mouse is in each of the rooms at timestep <span class="math notranslate nohighlight">\(i\)</span>. The Markov matrix for this system is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M = \begin{pmatrix}0&amp;\frac{1}{2}&amp;\frac{1}{2}\\\frac{1}{2}&amp;0&amp;\frac{1}{2}\\\frac{1}{2}&amp;\frac{1}{2}&amp;0\end{pmatrix}\end{split}\]</div>
+<p>and the initial state is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_0 = \begin{pmatrix}1\\0\\0\end{pmatrix}.\end{split}\]</div>
+<p>a) [<strong>2 marks</strong>] Calculate the probability that the mouse is in its starting room at timesteps <span class="math notranslate nohighlight">\(i=1, 2, 3\)</span>.</p>
+<p>a) [<strong>1 mark</strong>] Show that <span class="math notranslate nohighlight">\(v_1 = \begin{pmatrix}1\\1\\1\end{pmatrix}\)</span> is an eigenvector of the matrix <span class="math notranslate nohighlight">\(M\)</span> and calculate the corresponding eigenvalue.</p>
+<p>b) [<strong>4 marks</strong>] Calculate the characteristic polynomial of <span class="math notranslate nohighlight">\(M\)</span> and determine its remaining eigenvalues and eigenvectors.</p>
+<p>c) [<strong>3 marks</strong>] Write down invertible matrix <span class="math notranslate nohighlight">\(X\)</span> and diagonal matrix <span class="math notranslate nohighlight">\(\Lambda\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[M = X\Lambda X^{-1}.\]</div>
+<p>d) [<strong>5 marks</strong>] Show that the probability that the mouse is in its starting room at time step <span class="math notranslate nohighlight">\(n\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{3} + \frac{2}{3}\left(-\frac{1}{2}\right)^n.\]</div>
+<p><strong>Total Marks 50</strong></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LinearAlgebra\coursework"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

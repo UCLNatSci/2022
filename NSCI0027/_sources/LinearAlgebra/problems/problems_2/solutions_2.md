@@ -158,7 +158,7 @@ $$Ax - Ix = (A-I)x = 0.$$
 
 We just need to find the null space of the matrix $A-I$.
 
-$$A - I = \frac{1}{2}\begin{pmatrix}-3&\sqrt{3}\\\sqrt{3}&-1\end{pmatrix}.$$  
+$$A - I = \begin{pmatrix}-\frac{1}{2}&\frac{\sqrt{3}}{2}\\\frac{\sqrt{3}}{2}&\frac{1}{2}\end{pmatrix} - \begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{1}{2}\begin{pmatrix}-3&\sqrt{3}\\\sqrt{3}&-1\end{pmatrix}.$$  
 
 Reducing to echelon form:
 

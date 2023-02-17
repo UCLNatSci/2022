@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Matrix Diagonalisation &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,41 +20,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +61,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +84,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +105,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Welcome to Linear Algebra and Vector Calculus
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -144,15 +159,38 @@
    9. ODE Methods - Variation of Parameters
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="echelon_form.html">
+   10. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectors.html">
+   11. Vectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrix_equations.html">
+   12. Matrix Equation
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+  </a>
+ </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -160,61 +198,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/diagonalisation.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/LinearAlgebra/linear_systems_matrices/diagonalisation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
    Motivation
@@ -280,12 +374,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Matrix Diagonalisation</h1>
@@ -367,13 +460,14 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="matrix-diagonalisation">
-<h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="matrix-diagonalisation">
+<h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
 <p>Recall that a diagonal matrix is a square matrix with zeros everywhere except the main diagonal. Multiplying a vector by a diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> is easy. Just multiply each entry of the vector by the the element in the corresponding position of the diagonal matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}d_{1}&amp;0&amp;\cdots&amp;0\\0&amp;d_{2}&amp;\cdots&amp;0\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\0&amp;0&amp;\cdots&amp;d_{n}\end{pmatrix}\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} = \begin{pmatrix}d_{1}x_1\\d_{2}x_2\\\vdots\\d_{n}x_n\end{pmatrix}.\end{split}\]</div>
@@ -397,9 +491,9 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="math notranslate nohighlight">
 \[ Ax = a_1\lambda_1v_1 + \cdots + a_n\lambda_nv_n.\]</div>
 <p>We just need to find the values <span class="math notranslate nohighlight">\(a_i\)</span>. It turns out that these are just the inverse of the matrix of eigenvectors, as we will see in the next section.</p>
-</div>
-<div class="section" id="diagonalisation-a-x-lambda-x-1">
-<h2>Diagonalisation <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span><a class="headerlink" href="#diagonalisation-a-x-lambda-x-1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="diagonalisation-a-x-lambda-x-1">
+<h2>Diagonalisation <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span><a class="headerlink" href="#diagonalisation-a-x-lambda-x-1" title="Permalink to this headline">#</a></h2>
 <div class="admonition-matrix-diagonalisation admonition">
 <p class="admonition-title">Matrix Diagonalisation</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with <span class="math notranslate nohighlight">\(n\)</span> eigenvectors <span class="math notranslate nohighlight">\(v_i\)</span> and corresponding eigenvalues <span class="math notranslate nohighlight">\(\lambda_i\)</span>. Let</p>
@@ -454,7 +548,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 \[\begin{split}x = a_1v_1 + \cdots + a_nv_n = X\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}\end{split}\]</div>
 <p>then left-multiplying by <span class="math notranslate nohighlight">\(X^{-1}\)</span> gives the vector of coefficients <span class="math notranslate nohighlight">\(a_i\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-two-by-two-diag">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-two-by-two-diag" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}= X^{-1}x.\end{split}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-eq-two-by-two-diag" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}= X^{-1}x.\end{split}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Diagonalisation is not unique</strong></p>
@@ -470,15 +564,15 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="exercise admonition" id="diagonalise_2_by_2">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Diagonalise the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}\frac{1}{2}&amp;\frac{3}{2}\\\frac{3}{2}&amp;\frac{1}{2}\end{pmatrix}.\end{split}\]</div>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="about-diagonalisation">
-<h2>About Diagonalisation<a class="headerlink" href="#about-diagonalisation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="about-diagonalisation">
+<h2>About Diagonalisation<a class="headerlink" href="#about-diagonalisation" title="Permalink to this headline">#</a></h2>
 <p>Not all matrices can be diagonalised. To diagonalise a matrix, the matrix of eigenvectors <span class="math notranslate nohighlight">\(X\)</span> must be invertible. In this section we will investigate conditions under which this is the case.</p>
 <p>Recall that if <span class="math notranslate nohighlight">\(v\)</span> is an eigenvector then so is any multiple <span class="math notranslate nohighlight">\(av\)</span>. Suppose a <span class="math notranslate nohighlight">\((2 \times 2)\)</span> matrix has eigenvector <span class="math notranslate nohighlight">\(v\)</span>. Then the vector <span class="math notranslate nohighlight">\(2v\)</span> is also an eigenvector, but the eigenvector matrix</p>
 <div class="math notranslate nohighlight">
@@ -488,9 +582,9 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="math notranslate nohighlight">
 \[\begin{split}X = \begin{pmatrix}|&amp;|&amp;|\\v_1&amp;v_2&amp;v_3\\|&amp;|&amp;|\end{pmatrix}\end{split}\]</div>
 <p>is not invertible. To extend this idea to the general case, we need to introduce the important concept of <em>linear independence</em>.</p>
-</div>
-<div class="section" id="linear-independence">
-<h2>Linear Independence<a class="headerlink" href="#linear-independence" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="linear-independence">
+<h2>Linear Independence<a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
 <p>A set of vectors is linearly dependent if one vector can be written as a linear sum of the other vectors.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -506,9 +600,9 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="exercise admonition" id="linear_dependence">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Show that a set of vectors is linearly dependent if (and only if) one of the vectors is a linear sum of the others.</p>
-</div>
+</section>
 </div>
 <p>If we have <span class="math notranslate nohighlight">\(n\)</span> linearly dependent vectors <span class="math notranslate nohighlight">\(v_i \in \mathbb{R}^n\)</span> then it is easy to show that the matrix</p>
 <div class="math notranslate nohighlight">
@@ -527,9 +621,9 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <li><p><strong>The rows of <span class="math notranslate nohighlight">\(A\)</span> are linearly independent.</strong></p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="more-eigenvalues">
-<h2>More Eigenvalues<a class="headerlink" href="#more-eigenvalues" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="more-eigenvalues">
+<h2>More Eigenvalues<a class="headerlink" href="#more-eigenvalues" title="Permalink to this headline">#</a></h2>
 <div class="admonition-theorem admonition">
 <p class="admonition-title">Theorem</p>
 <p>Eigenvectors <span class="math notranslate nohighlight">\(v_1, \ldots, v_n\)</span> corresponding to distinct eigenvalues are linearly independent.</p>
@@ -537,14 +631,14 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 <p>To prove this, suppose that <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> are linearly dependent eigenvectors of the matrix <span class="math notranslate nohighlight">\(A\)</span> with distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-indep">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-indep" title="Permalink to this equation">¶</a></span>\[v_2 = av_1\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-eq-indep" title="Permalink to this equation">#</a></span>\[v_2 = av_1\]</div>
 <p>for some <span class="math notranslate nohighlight">\(a\neq 0\)</span>.</p>
 <p>Multiply by A:</p>
 <div class="math notranslate nohighlight">
 \[\lambda_2v_2 = a\lambda_1v_1\]</div>
 <p>then divide by <span class="math notranslate nohighlight">\(\lambda_2\)</span> (since they are distinct we can assume that at least one of the eigenvalues is nonzero).</p>
 <div class="math notranslate nohighlight" id="equation-eq-indep-2">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-indep-2" title="Permalink to this equation">¶</a></span>\[v_2 = \frac{a\lambda_1}{\lambda_2}v_2.\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-eq-indep-2" title="Permalink to this equation">#</a></span>\[v_2 = \frac{a\lambda_1}{\lambda_2}v_2.\]</div>
 <p>Comparing <a class="reference internal" href="#equation-eq-indep">()</a> and <a class="reference internal" href="#equation-eq-indep-2">()</a> we see that <span class="math notranslate nohighlight">\(\lambda_1/\lambda_2=1\)</span> and so</p>
 <p><span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2\)</span>.</p>
 <p>We have shown that two linearly dependent eigenvectors must have identical eigenvalues. We will not show it here, but it is not difficult to extend this to the general case: eigenvectors from distinct eigenvalues are linearly independent.</p>
@@ -565,26 +659,26 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="exercise admonition" id="q_diagonalise_matrix">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <ol class="simple">
 <li><p>Diagonalise the matrix <span class="math notranslate nohighlight">\(B\)</span> in the example above.</p></li>
 <li><p>Find a diagonalisable matrix with only one distinct eigenvalue.</p></li>
 </ol>
-</div>
+</section>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Diagonalisability is <em>not</em> related to invertibility. Non-invertible matrices can be diagonalisable, as in <span class="math notranslate nohighlight">\(B\)</span> above. Likewise, non-diagonalisable matrices can be invertable as in <span class="math notranslate nohighlight">\(C\)</span> above.</p>
 </div>
-</div>
-<div class="section" id="algebraic-and-geometric-multiplicity">
-<h2>Algebraic and Geometric Multiplicity<a class="headerlink" href="#algebraic-and-geometric-multiplicity" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="algebraic-and-geometric-multiplicity">
+<h2>Algebraic and Geometric Multiplicity<a class="headerlink" href="#algebraic-and-geometric-multiplicity" title="Permalink to this headline">#</a></h2>
 <p>The eigenvalues of a <span class="math notranslate nohighlight">\((n \times n)\)</span> square matrix are the roots of its characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. We have already seen that if there are <span class="math notranslate nohighlight">\(n\)</span> distinct roots then there are <span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors and the matrix is diagonalisable. For example a <span class="math notranslate nohighlight">\((3 \times 3)\)</span> matrix with the following characteristic polynomial is diagonalisable.</p>
 <div class="math notranslate nohighlight">
 \[f(\lambda) = (\lambda-1)(\lambda-2)(\lambda-3)\]</div>
 <p>If there are fewer then <span class="math notranslate nohighlight">\(n\)</span> distinct roots then at least one of the roots must be <em>repeated</em>. For example, the characteristic polynomial</p>
 <div class="math notranslate nohighlight" id="equation-eq-repeated-root">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-repeated-root" title="Permalink to this equation">¶</a></span>\[f(\lambda) =(\lambda-2)(\lambda-1)^2\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-eq-repeated-root" title="Permalink to this equation">#</a></span>\[f(\lambda) =(\lambda-2)(\lambda-1)^2\]</div>
 <p>results in two distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1=2\)</span> and <span class="math notranslate nohighlight">\(\lambda_2=1\)</span>. <span class="math notranslate nohighlight">\(\lambda_2\)</span> is a repeated root with multiplicity <span class="math notranslate nohighlight">\(2\)</span> since the factor <span class="math notranslate nohighlight">\((\lambda-1)\)</span> divides the polynomial twice. To determine whether the matrix is diagonalisable, we need to determine how many independent eigenvectors there are in the eigenspace of each of the eigenvectors.</p>
 <div class="admonition-theorem admonition">
 <p class="admonition-title">Theorem</p>
@@ -602,9 +696,9 @@ TODO
 matrix with repeated root and dimension 1 or 2 null space.
 ```
 -->
-</div>
-<div class="section" id="matrix-powers-a-k">
-<h2>Matrix Powers <span class="math notranslate nohighlight">\(A^k\)</span><a class="headerlink" href="#matrix-powers-a-k" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="matrix-powers-a-k">
+<h2>Matrix Powers <span class="math notranslate nohighlight">\(A^k\)</span><a class="headerlink" href="#matrix-powers-a-k" title="Permalink to this headline">#</a></h2>
 <p>The eigenvector matrix <span class="math notranslate nohighlight">\(X\)</span> produces <span class="math notranslate nohighlight">\(A=X\Lambda X^{-1}\)</span>. This factorisation is useful for computing powers because <span class="math notranslate nohighlight">\(X^{-1}\)</span> multiplies with <span class="math notranslate nohighlight">\(X\)</span> to get <span class="math notranslate nohighlight">\(I\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}A^2 &amp;= X\Lambda X^{-1}X\Lambda X^{-1} = X\Lambda I\Lambda X^{-1}=X\Lambda^2X^{-1}\\
@@ -616,9 +710,9 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 <div class="math notranslate nohighlight">
 \[\begin{split}A^k = X\Lambda^k X^{-1} = X\begin{pmatrix}\lambda_1^k&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n^k \end{pmatrix}X^{-1}.\end{split}\]</div>
 </div>
-</div>
-<div class="section" id="complex-eigenvalues">
-<h2>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="complex-eigenvalues">
+<h2>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">#</a></h2>
 <p>We have seen that from a square matrix <span class="math notranslate nohighlight">\(A\)</span> we can calculate the characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. For an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix the polynomial is degree <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \cdots + a_1\lambda + a_0\]</div>
@@ -628,8 +722,8 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 \[f(\lambda) = (\lambda - \lambda_1)(\lambda - \lambda_2) \cdots (\lambda - \lambda_n).\]</div>
 <p>The roots <span class="math notranslate nohighlight">\(\lambda_i\)</span> are the eigenvalues of the matrix.</p>
 <p>In this section we consider the case where some of the roots are not real numbers.</p>
-<div class="section" id="rotations-in-2d">
-<h3>Rotations in 2D<a class="headerlink" href="#rotations-in-2d" title="Permalink to this headline">¶</a></h3>
+<section id="rotations-in-2d">
+<h3>Rotations in 2D<a class="headerlink" href="#rotations-in-2d" title="Permalink to this headline">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix of an anticlockwise rotation <span class="math notranslate nohighlight">\(\pi/2\)</span> around the origin:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}0&amp;-1\\1&amp;0\end{pmatrix}.\end{split}\]</div>
@@ -667,16 +761,16 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 <div class="exercise admonition" id="q_complex_eigenvector">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Find the complex eigenvectors corresponding to the two complex eigenvalues of</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}.\end{split}\]</div>
+</section>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="trace-and-determinant">
-<h2>Trace and Determinant<a class="headerlink" href="#trace-and-determinant" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="trace-and-determinant">
+<h2>Trace and Determinant<a class="headerlink" href="#trace-and-determinant" title="Permalink to this headline">#</a></h2>
 <p>Calculating eigenvalues is (in general) a difficult problem. However, in some cases we can use some ‘tricks’ to help find them.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -709,17 +803,17 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 <div class="exercise admonition" id="diagonal_eigenvalues">
 
 <p class="admonition-title"></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Show that the eigenvalues of a triangular matrix are its diagonal entries.</p>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="solutions-to-exercises">
-<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solutions-to-exercises">
+<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#diagonalise_2_by_2">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#diagonalise_2_by_2"> Exercise </a></p>
+<section id="solution-content">
 <p>First find the eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\(A\)</span>. The characteristic polynomial is given by:</p>
 <div class="math notranslate nohighlight">
 \[f(\lambda) = \det(A-\lambda I) = \lambda^2-\lambda-2 = (\lambda+1)(\lambda-2)\]</div>
@@ -744,12 +838,12 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 <p>and so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = X\Lambda X^{-1} = \begin{pmatrix}-1&amp;1\\1&amp;1\end{pmatrix}\begin{pmatrix}-1&amp;0\\0&amp;2\end{pmatrix}\begin{pmatrix}-\frac{1}{2}&amp;\frac{1}{2}\\\frac{1}{2}&amp;\frac{1}{2}\end{pmatrix}.\end{split}\]</div>
-</div>
+</section>
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-6">
 
-<p class="admonition-title"><a class="reference internal" href="#q_diagonalise_matrix">Solution to Exercise </a></p>
-<div class="section" id="solution-content">
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_diagonalise_matrix"> Exercise </a></p>
+<section id="solution-content">
 <p>1. Eigenvalues are <span class="math notranslate nohighlight">\(\lambda_1 = 0\)</span>, <span class="math notranslate nohighlight">\(\lambda_2=1\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(B-\lambda_1I = \begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix}\underrightarrow{\mathrm{~RREF~}}\begin{pmatrix}1&amp;1\\0&amp;0\end{pmatrix}\)</span></p>
 <p>Therefore <span class="math notranslate nohighlight">\(v_1 = \begin{pmatrix}1\\-1\end{pmatrix}\)</span>.</p>
@@ -771,10 +865,10 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 \[ (a-\lambda)^2 \]</div>
 <p>and therefore a single repeated eigenvalue <span class="math notranslate nohighlight">\(\lambda=a\)</span>.</p>
 <p>But it is diagonalisable (it is diagonalised by the identity matrix). In fact, every vector <span class="math notranslate nohighlight">\(v \in \mathbb{R}^2\)</span> is an eigenvector of the matrix.</p>
+</section>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -798,28 +892,34 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Linear Algebra Answers 4 &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to Linear Algebra and Vector Calculus
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
+   1. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/doubletripleintegrals.html">
+   2. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
+   3. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
+   4. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/ODEreduction.html">
+   8. ODE Methods - Reduction of Order
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/ODEvariation.html">
+   9. ODE Methods - Variation of Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/echelon_form.html">
+   10. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/vectors.html">
+   11. Vectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/matrix_equations.html">
+   12. Matrix Equation
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/LinearAlgebra/problems/solutions_4.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear Algebra Answers 4</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-answers-4">
+<h1>Linear Algebra Answers 4<a class="headerlink" href="#linear-algebra-answers-4" title="Permalink to this headline">#</a></h1>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
+<p>1.</p>
+<p>The eigenvalues of <span class="math notranslate nohighlight">\(H\)</span> are the values of <span class="math notranslate nohighlight">\(\lambda\)</span> for which <span class="math notranslate nohighlight">\(H-\lambda I\)</span> has nonzero null space, which is exactly when the determinant of <span class="math notranslate nohighlight">\(H-\lambda I\)</span> is zero.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\det\left({H-\lambda I}\right) &amp;= \begin{vmatrix}7/8-\lambda&amp;-3\sqrt{3}/8\\-3\sqrt{3}/8&amp;13/8-\lambda\end{vmatrix}\\
+&amp;= (7/8-\lambda)(13/8-\lambda) - 27/64\\
+&amp;= (\lambda-1/2)(\lambda-2)
+\end{align*}\end{split}\]</div>
+<p>Therefore the eigenvalues of <span class="math notranslate nohighlight">\(H\)</span> are <span class="math notranslate nohighlight">\(\lambda_1-1/2\)</span> and <span class="math notranslate nohighlight">\(\lambda_2=2\)</span>).</p>
+<p>To find the eigenvector <span class="math notranslate nohighlight">\(v_1\)</span>, determine the null space of <span class="math notranslate nohighlight">\(H-\lambda_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}H - \lambda_1I &amp;= \begin{pmatrix}7/8-1/2&amp;-3\sqrt{3}/8\\-3\sqrt{3}/8&amp;13/8-1/2\end{pmatrix}\\
+&amp;= \begin{pmatrix}3/8 &amp; -3\sqrt{3}/8\\-3\sqrt{3}/8&amp;9/8\end{pmatrix} \xrightarrow[]{\mathrm{RREF}}
+\begin{pmatrix}1&amp;-\sqrt{3}\\0&amp;0\end{pmatrix}  \\
+\end{align*}
+\end{split}\]</div>
+<p>Therefore there is a single independent eigenvector corresponding to <span class="math notranslate nohighlight">\(\lambda_1=1/2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1= \begin{pmatrix}\sqrt{3}\\1\end{pmatrix}.\end{split}\]</div>
+<p>To find the eigenvector <span class="math notranslate nohighlight">\(v_2\)</span>, determine the null space of <span class="math notranslate nohighlight">\(H-\lambda_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}H - \lambda_2I &amp;= \begin{pmatrix}7/8-2&amp;-3\sqrt{3}/8\\-3\sqrt{3}/8&amp;13/8-2\end{pmatrix}\\
+&amp;= \begin{pmatrix}-9/8 &amp; -3\sqrt{3}/8\\-3\sqrt{3}/8&amp;-3/8\end{pmatrix} \xrightarrow[]{\mathrm{RREF}}
+\begin{pmatrix}\sqrt{3}&amp;1\\0&amp;0\end{pmatrix}  \\
+\end{align*}
+\end{split}\]</div>
+<p>Therefore there is a single independent eigenvector corresponding to <span class="math notranslate nohighlight">\(\lambda_2=2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2= \begin{pmatrix}1\\-\sqrt{3}\end{pmatrix}.\end{split}\]</div>
+<p>2. Therefore <span class="math notranslate nohighlight">\(H = X\Lambda X^{-1}\)</span> where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X = \begin{pmatrix}\sqrt{3}&amp;1\\1&amp;-\sqrt{3}\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda = \begin{pmatrix}1/2&amp;0\\0&amp;2\end{pmatrix}.\end{split}\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X^{-1} = \frac{1}{4}\begin{pmatrix}\sqrt{3}&amp;1\\1&amp;-\sqrt{3}\end{pmatrix}.\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(X\)</span> represents a rotation <span class="math notranslate nohighlight">\(\pi/6\)</span> anticlockwise followed by a <span class="math notranslate nohighlight">\(\times 2\)</span> dilation. <span class="math notranslate nohighlight">\(\Lambda\)</span> represents a stretch <span class="math notranslate nohighlight">\(\times 1/2\)</span> along the <span class="math notranslate nohighlight">\(x\)</span>-axis and <span class="math notranslate nohighlight">\(\times 2\)</span> along the <span class="math notranslate nohighlight">\(y\)</span>-axis. <span class="math notranslate nohighlight">\(X^{-1}\)</span> represents a rotation <span class="math notranslate nohighlight">\(\pi/6\)</span> anticlockwise followed by a <span class="math notranslate nohighlight">\(\times 2\)</span> dilation.</p>
+<p>The transformations can be worked out sketching the images of the unit vectors. Note that if you chose different eigenvectors during part 1, you would get different eigenvectors. For example, if you chose <span class="math notranslate nohighlight">\(v_1 =\begin{pmatrix}-\sqrt{3}\\-1\end{pmatrix}\)</span> instead of <span class="math notranslate nohighlight">\(\begin{pmatrix}\sqrt{3}\\1\end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(X\)</span> would represent a rotation followed by a reflection - and this is harder to interpret.</p>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
+<p>1. To show that <span class="math notranslate nohighlight">\(1\)</span> is eigenvalue of <span class="math notranslate nohighlight">\(A\)</span>, calculate the null space of <span class="math notranslate nohighlight">\(A -I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A - I = \begin{pmatrix}0&amp;3&amp;3\\-3&amp;-6&amp;-3\\3&amp;3&amp;0\end{pmatrix} \xrightarrow[]{\mathrm{RREF}} \begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;1\\0&amp;0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>The echelon form has only two pivots therefore the null space of <span class="math notranslate nohighlight">\(A - I\)</span> is nonzero and <span class="math notranslate nohighlight">\(1\)</span> is an eigenvalue. The eigenvector is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = \begin{pmatrix}1\\-1\\1\end{pmatrix}.\end{split}\]</div>
+<p>To show that <span class="math notranslate nohighlight">\(-2\)</span> is eigenvalue of <span class="math notranslate nohighlight">\(A\)</span>, calculate the null space of <span class="math notranslate nohighlight">\(A +2I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A  +2I = \begin{pmatrix}3&amp;3&amp;3\\-3&amp;-3&amp;-3\\3&amp;3&amp;3\end{pmatrix} \xrightarrow[]{\mathrm{RREF}} \begin{pmatrix}1&amp;1&amp;1\\0&amp;0&amp;0\\0&amp;0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>The echelon form has only one pivot therefore the null space of <span class="math notranslate nohighlight">\(A +2I\)</span> is nonzero and <span class="math notranslate nohighlight">\(-2\)</span> is an eigenvalue. In fact, because there is only one pivot and two free variables there are two independent eigenvectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2=\begin{pmatrix}-1\\0\\1\end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_3=\begin{pmatrix}-1\\1\\0\end{pmatrix}.\end{split}\]</div>
+<p>To show that <span class="math notranslate nohighlight">\(1\)</span> is eigenvalue of <span class="math notranslate nohighlight">\(B\)</span>, calculate the null space of <span class="math notranslate nohighlight">\(B -I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B - I = \begin{pmatrix}1&amp;4&amp;3\\-4&amp;-7&amp;-3\\3&amp;3&amp;0\end{pmatrix} \xrightarrow[]{\mathrm{RREF}} \begin{pmatrix}1&amp;0&amp;-1\\0&amp;1&amp;1\\0&amp;0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>The echelon form has only two pivots therefore the null space of <span class="math notranslate nohighlight">\(B - I\)</span> is nonzero and <span class="math notranslate nohighlight">\(1\)</span> is an eigenvalue. The eigenvector is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = \begin{pmatrix}1\\-1\\1\end{pmatrix}.\end{split}\]</div>
+<p>To show that <span class="math notranslate nohighlight">\(-2\)</span> is eigenvalue of <span class="math notranslate nohighlight">\(B\)</span>, calculate the null space of <span class="math notranslate nohighlight">\(B +2I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B +2I = \begin{pmatrix}4&amp;4&amp;3\\-4&amp;-4&amp;-3\\3&amp;3&amp;3\end{pmatrix} \xrightarrow[]{\mathrm{RREF}} \begin{pmatrix}1&amp;1&amp;0\\0&amp;0&amp;1\\0&amp;0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>The echelon form has only two pivots therefore the null space of <span class="math notranslate nohighlight">\(B+2I\)</span> is nonzero and <span class="math notranslate nohighlight">\(-2\)</span> is an eigenvalue. The eigenvector is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2 = \begin{pmatrix}-1\\1\\0\end{pmatrix}.\end{split}\]</div>
+<p>2. Because they are <span class="math notranslate nohighlight">\(3\times 3\)</span> matrices know that both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> will have a cubic characteristic polynomial of the form:</p>
+<div class="math notranslate nohighlight">
+\[(\lambda - \lambda_1)(\lambda-\lambda_2)(\lambda-\lambda_3).\]</div>
+<p>Recall that <strong>the algebraic multiplicity of an eigenvalue is greater or equal to the geometric multiplicity</strong>. For <span class="math notranslate nohighlight">\(A\)</span>, the geometrical multiplicity of <span class="math notranslate nohighlight">\(\lambda_2=-2\)</span> is two since there are two independent eigenvectors in its eigenspace. Therefore its algebraic multiplicity must be two and the characteristic polynomial is</p>
+<div class="math notranslate nohighlight">
+\[(\lambda-1)(\lambda+2)^2.\]</div>
+<p>For <span class="math notranslate nohighlight">\(B\)</span>, use the fact that <span class="math notranslate nohighlight">\(\mathrm{tr}(B)=\lambda_1+\lambda_2+\lambda_3\)</span> to determine that the third eigenvalue is <span class="math notranslate nohighlight">\(-2\)</span> and the characteristic polynomial is the same as <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(\lambda - 1)(\lambda+2)^2.\]</div>
+<p>3. and 4. Already calculated above.</p>
+<p>5. <span class="math notranslate nohighlight">\(A\)</span> is diagonalisable since it has three independent eigenvectors. <span class="math notranslate nohighlight">\(B\)</span> is not diagonalisable since it only has two independent eigenvectors.</p>
+<p>6.</p>
+<div class="math notranslate nohighlight">
+\[A = X\Lambda X^{-1}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X = \begin{pmatrix}1&amp;-1&amp;-1\\-1&amp;0&amp;1\\1&amp;1&amp;0\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda = \begin{pmatrix}1&amp;0&amp;0\\0&amp;-2&amp;0\\0&amp;0&amp;-2\end{pmatrix}.\end{split}\]</div>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
+<p>1. Eigenvalues of a triangular matrix are the diagonal entries therefore eigenvalues are <span class="math notranslate nohighlight">\(\lambda_1=a\)</span> and <span class="math notranslate nohighlight">\(\lambda_2=b\)</span>.</p>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-aI = \begin{pmatrix}0&amp;b-a\\0&amp;b-a\end{pmatrix}\xrightarrow[]{\mathrm{RREF}}\begin{pmatrix}0&amp;b-a\\0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = \begin{pmatrix}1\\0\end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-bI = \begin{pmatrix}a-b&amp;b-a\\0&amp;0\end{pmatrix}\xrightarrow[]{\mathrm{RREF}}\begin{pmatrix}1&amp;-1\\0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2 = \begin{pmatrix}1\\1\end{pmatrix}.\end{split}\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = X\Lambda X^{-1} = \begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}\begin{pmatrix}a&amp;0\\0&amp;b\end{pmatrix}\begin{pmatrix}1&amp;-1\\0&amp;1\end{pmatrix}.\end{split}\]</div>
+<p>4.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}A^k &amp;= \begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}\begin{pmatrix}a^k&amp;0\\0&amp;b^k\end{pmatrix}\begin{pmatrix}1&amp;-1\\0&amp;1\end{pmatrix}\\
+&amp;= \begin{pmatrix}a^k&amp;b^k-a^k\\0&amp;b^k\end{pmatrix}.
+\end{align*}\end{split}\]</div>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\det(M-\lambda I) &amp;= (a-\lambda)(d-\lambda) - bc\\
+&amp;=\lambda^2-(a+d)\lambda+ad-bc\\
+&amp;=\lambda^2-\mathrm{tr}(M)\lambda + \det(M).
+\end{align*}\end{split}\]</div>
+<p>Therefore the eigenvalues are</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{tr}(M) \pm \sqrt{\mathrm{tr}(M)^2 - 4\det(M)}}{2}\]</div>
+<p>2. Let</p>
+<div class="math notranslate nohighlight">
+\[D = \mathrm{tr}(M)^2 - 4\det(M).\]</div>
+<p>Then <span class="math notranslate nohighlight">\(D&gt;0 \implies\)</span> two distinct real eigenvalues, <span class="math notranslate nohighlight">\(D=0 \implies\)</span> exactly one eigenvalue, <span class="math notranslate nohighlight">\(D&lt;0 \implies\)</span> no real eigenvalues.</p>
+</section>
+<section id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}u_{i+1} &amp;= \begin{pmatrix}F_{i+2}\\F_{i+1}\end{pmatrix}\\
+&amp;= \begin{pmatrix}F_{i+1} + F_{i}\\F_{i+1}\end{pmatrix}\\
+&amp;= \begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix}\begin{pmatrix}F_{i+1}\\F_i\end{pmatrix}\\
+&amp;= Au_i\end{align*}\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix}.\end{split}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\det(A-\lambda I) &amp;= \begin{vmatrix}1-\lambda&amp;1\\1&amp;-\lambda\end{vmatrix}\\
+&amp;=\lambda(\lambda-1-1)\\
+&amp;=\lambda^2-\lambda-1
+\end{align*}\end{split}\]</div>
+<p>Therefore the two eigenvalues are</p>
+<div class="math notranslate nohighlight">
+\[\lambda_1 = \frac{1+\sqrt{5}}{2}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\lambda_2 = \frac{1-\sqrt{5}}{2}.\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}Av_1 = \begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix}\begin{pmatrix}\frac{1+\sqrt{5}}{2}\\1\end{pmatrix}=\begin{pmatrix}\frac{1+\sqrt{5}}{2}+1\\\frac{1+\sqrt{5}}{2}\end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lambda_1v_1 = \frac{1+\sqrt{5}}{2}\begin{pmatrix}\frac{1+\sqrt{5}}{2}\\1\end{pmatrix}=\begin{pmatrix}\frac{1+\sqrt{5}}{2} + 1\\\frac{1+\sqrt{5}}{2} \end{pmatrix},\end{split}\]</div>
+<p>therefore <span class="math notranslate nohighlight">\(Av_1 = \lambda_1 v_1\)</span> and <span class="math notranslate nohighlight">\(v_1\)</span> is an eigenvector. Similar calculation for <span class="math notranslate nohighlight">\(v_2\)</span>.</p>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[A = X\Lambda X^{-1}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X = \begin{pmatrix}\lambda_1&amp;\lambda_2\\1&amp;1\end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda = \begin{pmatrix}\lambda_1&amp;0\\0&amp;\lambda_2\end{pmatrix}.\end{split}\]</div>
+<p>4.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X^{-1} = \frac{1}{\lambda_1-\lambda_2}\begin{pmatrix}1&amp;-\lambda_2\\-1&amp;\lambda_1\end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+u_{100} &amp;= X\Lambda^{100}X^{-1}u_0\\
+&amp;=\frac{1}{\lambda_1-\lambda_2}\begin{pmatrix}\lambda_1&amp;\lambda_2\\1&amp;1\end{pmatrix}\begin{pmatrix}\lambda_1^{100}&amp;0\\0&amp;\lambda_2^{100}\end{pmatrix}\begin{pmatrix}1&amp;-\lambda_2\\-1&amp;\lambda_1\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}\\
+&amp;=\frac{1}{\lambda_1-\lambda_2}\begin{pmatrix}\lambda_1&amp;\lambda_2\\1&amp;1\end{pmatrix}\begin{pmatrix}\lambda_1^{100}&amp;0\\0&amp;\lambda_2^{100}\end{pmatrix}\begin{pmatrix}1\\-1\end{pmatrix}\\
+&amp;=\frac{1}{\lambda_1-\lambda_2}\begin{pmatrix}\lambda_1&amp;\lambda_2\\1&amp;1\end{pmatrix}\begin{pmatrix}\lambda_1^{100}\\-\lambda_2^{100}\end{pmatrix}\\
+&amp;= \frac{\lambda_1^{100}v_1-\lambda_2^{100}v_2}{\lambda_1-\lambda_2}
+&amp;=\end{align*}.\end{split}\]</div>
+<p>5. Now <span class="math notranslate nohighlight">\(|\lambda_2|&lt;1\)</span> so <span class="math notranslate nohighlight">\(\lambda_2^{100}\)</span> is <em>very</em> small (try it in your calculator). Therefore we can assume <span class="math notranslate nohighlight">\(\lambda_2\approx 0\)</span> and so</p>
+<div class="math notranslate nohighlight">
+\[u_{100} \approx \frac{\lambda_1^{100}}{\lambda_1-\lambda_2}v_1.\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[F_{100} \approx \frac{\lambda_1^{100}}{\lambda_1-\lambda_2} = \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{100}.\]</div>
+<p>6.</p>
+<div class="math notranslate nohighlight">
+\[F_i = \frac{\lambda_1^{100} - \lambda_2^{100}}{\lambda_1-\lambda_2}\]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[F_{i+1}/F_i = \frac{\lambda_1^{i+1}-\lambda_2^{i+1}}{\lambda_1^i-\lambda_2^{i}} = \frac{\lambda_1-\lambda_2\left(\frac{\lambda_2}{\lambda_1}\right)^i}{1 - \left(\frac{\lambda_2}{\lambda_1}\right)^i}.\]</div>
+<p><span class="math notranslate nohighlight">\(|\lambda_2/\lambda_1| &lt; 1\)</span> therefore <span class="math notranslate nohighlight">\(\lim_{i\to\infty}\lambda_2/\lambda_1 = 0\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\lim_{i\to\infty}F_{i+1}/F_{i} = \lambda_1 = \frac{1+\sqrt{5}}{2}.\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LinearAlgebra\problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

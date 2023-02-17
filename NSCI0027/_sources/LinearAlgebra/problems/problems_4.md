@@ -31,9 +31,9 @@ $$A = \begin{pmatrix}1&3&3\\-3&-5&-3\\3&3&1\end{pmatrix}$$
 
 and
 
-$$B = \begin{pmatrix}2&4&3\\-4&6&-3\\3&3&1\end{pmatrix}.$$
+$$B = \begin{pmatrix}2&4&3\\-4&-6&-3\\3&3&1\end{pmatrix}.$$
 
-1. Show that $1$ and $2$ are eigenvalues of both matrices.
+1. Show that $1$ and $-2$ are eigenvalues of both matrices.
 2. Calculate the characteristic polynomials of $A$ and $B$ and show that they are equal [you don't need to calculate a determinant to solve this - check the notes for a useful trick].
 3. Find all eigenvectors of $A$.
 4. Find all eigenvectors of $B$.
@@ -71,7 +71,7 @@ Recall that $\mathrm{tr}(M)$ is the sum of the diagonal entries of $M$.
 
 The *Fibonacci Sequence* is the sequence
 
-$$0, 1, 2, 3, 5, 8, 11, \ldots$$
+$$0, 1, 1, 2, 3, 5, 8, 11, \ldots$$
 
 where each element $F_i$ is the sum of the previous two. That is,
 
