@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>3. Formulae &#8212; Finite Differences</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Preliminaries" href="../ivp/background.html" />
+    <link rel="prev" title="2. Infinite powers" href="powers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Finite Differences</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Finite Differences
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introductory material
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="background.html">
+   1. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="powers.html">
+   2. Infinite powers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Formulae
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Initial Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/background.html">
+   4. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/stability.html">
+   5. Stability and stiffness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/cdiff.html">
+   6. Midpoint method
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex1.html">
+   Chapter exercise 1.3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex2.html">
+   Chapter exercise 3.5
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/dif/formulae.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdif/formulae.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/dif/formulae.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/dif/formulae.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-idea">
+   3.1. General idea
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-derivative-formulae">
+   3.2. First derivative formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-method">
+   3.3. Central method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numeric-error-analysis">
+     3.3.1. Numeric error analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#practical-implementation">
+     3.3.2. Practical implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-derivative-formulae">
+   3.4. Second derivative formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercise">
+   3.5. Chapter exercise
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Formulae</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-idea">
+   3.1. General idea
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-derivative-formulae">
+   3.2. First derivative formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-method">
+   3.3. Central method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numeric-error-analysis">
+     3.3.1. Numeric error analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#practical-implementation">
+     3.3.2. Practical implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-derivative-formulae">
+   3.4. Second derivative formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercise">
+   3.5. Chapter exercise
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="formulae">
+<h1><span class="section-number">3. </span>Formulae<a class="headerlink" href="#formulae" title="Permalink to this heading">#</a></h1>
+<p>This chapter introduces finite difference formulae for the first and second derivative, which are found from Taylor’s series. After completing this chapter you should:</p>
+<ul class="simple">
+<li><p>Recognise the forward and central difference formule for the first and second derivatives, and state their order of accuracy</p></li>
+<li><p>Be able to implement the forward and central difference formulae to numerically estimate first and second derivatives</p></li>
+</ul>
+<section id="general-idea">
+<h2><span class="section-number">3.1. </span>General idea<a class="headerlink" href="#general-idea" title="Permalink to this heading">#</a></h2>
+<p>We can derive other finite difference formulas from Taylor’s series, by taking weighted sums of expansions about different points to eliminate unwanted terms in the series. Some of them are favoured because they exhibit higher order accuracy than Euler’s formula <code class="xref eq docutils literal notranslate"><span class="pre">eeulerr</span></code>, whilst others may be favoured in practical applications for their numeric stability, computational efficiency or ease of practical implementation.</p>
+<p>A few examples of finite difference formulas are given below, though this list is far from exhaustive. You may notice that the forward, backward and central differences formulae are simply location-shifted versions of each other. However, this property does not extend to other finite difference formulae.</p>
+</section>
+<section id="first-derivative-formulae">
+<h2><span class="section-number">3.2. </span>First derivative formulae<a class="headerlink" href="#first-derivative-formulae" title="Permalink to this heading">#</a></h2>
+<br>
+<p><strong>Forward difference</strong> (order <span class="math notranslate nohighlight">\(h\)</span> accuracy) :</p>
+<p>The result is obtained by expanding taking <span class="math notranslate nohighlight">\(x=(x_k+h)\)</span>,  <span class="math notranslate nohighlight">\(a=x_k\)</span> in the Taylor expansion. It is called forward differences because it uses a forward step (from <span class="math notranslate nohighlight">\(x_k\)</span> to <span class="math notranslate nohighlight">\(x_{k+1}\)</span>) to estimate the derivative.</p>
+<div class="math notranslate nohighlight" id="equation-forward1">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-forward1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+y_{k+1}&amp;=y_k + h y^{\prime}_k + \frac{h^2}{2!}y^{\prime\prime}_k +\frac{h^3}{3!}y^{\prime\prime\prime}_k + \frac{h^4}{4!}y^{(4)}_k + \frac{h^5}{5!}y^{(5)}_k + \dots \qquad \text{where }  y_{k+1}=y(x_k+h)\\
+&amp;\Rightarrow \quad y^{\prime}_k= \frac{y_{k+1}-y_k}{h} + h\left[-\frac{1}{2}y^{\prime\prime}_k - \frac{h}{3!}y^{\prime\prime\prime}_k - \frac{h^2}{4!}y^{(4)}_k - \frac{h^3}{5!}y^{(5)}_k + \dots\right]
+\end{align}\end{split}\]</div>
+<p>The forward difference formula gives an estimate of the derivative at the interior points <span class="math notranslate nohighlight">\([x_1,x_2,x_3,\dots,x_{n-1}]\)</span>. Computing the derivative at <span class="math notranslate nohighlight">\(x_n\)</span> requires the function value <span class="math notranslate nohighlight">\(y\)</span> at the exterior point <span class="math notranslate nohighlight">\(x_{n+1}\)</span> as discussed previously.</p>
+<br>
+<p><strong>Backward difference</strong> (order <span class="math notranslate nohighlight">\(h\)</span> accuracy) :</p>
+<p>The result is obtained by expanding taking <span class="math notranslate nohighlight">\(x=x_k\)</span>,  <span class="math notranslate nohighlight">\(a=(x_k+h)\)</span> in the Taylor expansion. It is called backward differences because it uses a backward step (from <span class="math notranslate nohighlight">\(x_k\)</span> to <span class="math notranslate nohighlight">\(x_{k-1}\)</span>) to estimate the derivative.</p>
+<div class="math notranslate nohighlight" id="equation-backwards1">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-backwards1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+y_{k-1}&amp;=y_k - h y^{\prime}_k + \frac{h^2}{2!}y^{\prime\prime}_k -\frac{h^3}{3!}y^{\prime\prime\prime}_k + \frac{h^4}{4!}y^{(4)}_k - \frac{h^5}{5!}y^{(5)}_k + \dots \qquad \text{where }  y_{k-1}=y(x_k-h)\\
+&amp;\Rightarrow \quad y^{\prime}_k = \frac{y_{k}-y_{k-1}}{h} + h\left[\frac{1}{2}y^{\prime\prime}_k - \frac{h}{3!}y^{\prime\prime\prime}_k + \frac{h^2}{4!}y^{(4)}_k - \frac{h^3}{5!}y^{(5)}_k + \dots\right]
+\end{align}\end{split}\]</div>
+<p>The backward difference formula gives an estimate of the derivative at the interior points <span class="math notranslate nohighlight">\([x_2,x_3,\dots,x_{n}]\)</span>. Computing the derivative at <span class="math notranslate nohighlight">\(x_1\)</span> requires the function value <span class="math notranslate nohighlight">\(y\)</span> at the exterior point <span class="math notranslate nohighlight">\(x_{0}\)</span>.</p>
+<br>
+<p><strong>Central difference</strong> (order <span class="math notranslate nohighlight">\(h^2\)</span> accuracy):</p>
+<p>The result is obtained by subtracting the backward difference expression <a class="reference internal" href="#equation-backwards1">(3.2)</a> from the forward difference expression <a class="reference internal" href="#equation-forward1">(3.1)</a>. It is called central differences because it uses both a backward step and a forward step to estimate the derivative.</p>
+<div class="math notranslate nohighlight" id="equation-central1a">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-central1a" title="Permalink to this equation">#</a></span>\[y^{\prime}_{k} = \frac{y_{k+1} - y_{k-1}}{2h}+h^2\left[-\frac{2}{3}y^{\prime\prime}_k+\dots\right]\]</div>
+<p>The central difference formula gives an estimate of the derivative at the interior points <span class="math notranslate nohighlight">\([x_2,x_3,\dots,x_{n-1}].\)</span> Computing the derivative at the two end points <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_n\)</span> requires the function value <span class="math notranslate nohighlight">\(y\)</span> at the exterior points <span class="math notranslate nohighlight">\(x_{0}\)</span> and <span class="math notranslate nohighlight">\(x_{n+1}\)</span></p>
+<div class="exercise admonition" id="dif/formulae-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span> (hand derivation)</p>
+<section id="exercise-content">
+<p>The given results for the first derivative all require only two points to calculate. Can you derive a result from the Taylor series that uses three points <span class="math notranslate nohighlight">\([y_k,y_{k+1},y_{k+2}]\)</span> to calculate an estimate of the first derivative <span class="math notranslate nohighlight">\(y^{\prime}(x_k)\)</span> that gives quadratic order accuracy?</p>
+<p><strong>Hint:</strong> Start by expanding <span class="math notranslate nohighlight">\(y(x_k+2h)\)</span> and <span class="math notranslate nohighlight">\(y(x_{k}+h)\)</span> and use a weighted combination of these two expansions that eliminates the second derivative terms.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(y(x_k+2h)=y(x_k)+2h y^{\prime}(x_k)+\frac{4h^2}{2}y^{\prime\prime}(x_k)+\frac{8h^3}{6}y^{\prime\prime\prime}(x_k)+\dots\)</span></p>
+<p><span class="math notranslate nohighlight">\(y(x_k+h)=y(x_k)+h y^{\prime}(x_k)+h y^{\prime}(x_k)+\frac{h^2}{2}y^{\prime\prime}(x_k)+\frac{h^3}{6}y^{\prime\prime\prime}(x_k)+\dots\)</span></p>
+<p>Subtracting four lots of the second equation from the first gives:</p>
+<p><span class="math notranslate nohighlight">\(y(x_k+2h)-4y(x_k+h)=3y(x_k)-2hy^{\prime}(x_k)+\frac{4h^3}{6}y^{\prime\prime\prime}(x_k)+\dots\)</span></p>
+<p>which rearranges to:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}y^{\prime}(x_k)=\frac{-3y(x_k)+4y(x_k+h)-y(x_k+2h)}{2h}+\frac{h^3}{3}y^{\prime\prime\prime}(x_k).\end{equation*}\]</div>
+</div>
+</section>
+<section id="central-method">
+<h2><span class="section-number">3.3. </span>Central method<a class="headerlink" href="#central-method" title="Permalink to this heading">#</a></h2>
+<p>The central difference formula gives an estimate of the derivative in between points <span class="math notranslate nohighlight">\(y_{k-1}\)</span> and <span class="math notranslate nohighlight">\(y_{k+1}\)</span>. We could adjust the formula to obtain the derivative between points <span class="math notranslate nohighlight">\(y_k\)</span> and <span class="math notranslate nohighlight">\(y_{k+1}\)</span> by writing the following, where <span class="math notranslate nohighlight">\(+1/2\)</span> in the subscript denotes a half-step.</p>
+<div class="math notranslate nohighlight" id="equation-midp12">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-midp12" title="Permalink to this equation">#</a></span>\[y^{\prime}_{k+1/2} = \frac{y_{k+1}-y_k}{x_{k+1}-x_k}+\mathcal{O}(h^2)\]</div>
+<p>We have shown algebraically that the central difference formula is more accurate than the forward or backward difference formulae. We can also understand this graphically by noticing that the straight line connecting two data points usually gives a more accurate estimate of the slope at the mid-point of the interval, rather than at the left-hand point. The graphic below depicts this claim:</p>
+<figure class="align-default" id="midpoint-rule">
+<img alt="dif/images/midpoint.png" src="dif/images/midpoint.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">The line connecting two points on a curve generally estimates the slope of the curve better at the midpoint of the interval than at the ends.</span><a class="headerlink" href="#midpoint-rule" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="numeric-error-analysis">
+<h3><span class="section-number">3.3.1. </span>Numeric error analysis<a class="headerlink" href="#numeric-error-analysis" title="Permalink to this heading">#</a></h3>
+<p>A comparison of the errors in the forward and central difference formulae is given below for the example of differentiating the function</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\sin(x)+x.
+\end{equation*}\]</div>
+<p>The code uses the <code class="docutils literal notranslate"><span class="pre">fdiff</span></code> function that was defined in <a class="reference internal" href="background.html#guru1"><span class="std std-numref">Section 1.1.2</span></a>.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analytic function and derivative</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">x</span>
+<span class="n">fp</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span> 
+
+<span class="c1"># Apply finite difference formula</span>
+<span class="n">h</span><span class="o">=</span><span class="mf">1e-3</span>
+<span class="n">xf</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">yd</span><span class="o">=</span><span class="n">fdiff</span><span class="p">(</span><span class="n">f</span><span class="p">,[</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span><span class="n">pi</span><span class="p">],</span><span class="n">h</span><span class="p">)</span>
+
+<span class="n">xm</span><span class="o">=</span><span class="n">xf</span><span class="o">+</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span>         <span class="c1">#midpoint x values</span>
+<span class="n">errf</span> <span class="o">=</span> <span class="n">yd</span><span class="o">-</span><span class="n">fp</span><span class="p">(</span><span class="n">xf</span><span class="p">)</span>  <span class="c1">#error using forward estimate</span>
+<span class="n">errm</span> <span class="o">=</span> <span class="n">yd</span><span class="o">-</span><span class="n">fp</span><span class="p">(</span><span class="n">xm</span><span class="p">)</span>  <span class="c1">#error using central estimate</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">errf</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Forward difference&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">xm</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">errm</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Central difference&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default" id="num-errors">
+<img alt="dif/images/fwd_mid_errors.png" src="dif/images/fwd_mid_errors.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Errors in the numeric derivative of <span class="math notranslate nohighlight">\(y=\sin(x)+x\)</span> on <span class="math notranslate nohighlight">\([-\pi,\pi]\)</span> with <code class="docutils literal notranslate"><span class="pre">h=1e-3</span></code>.</span><a class="headerlink" href="#num-errors" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We see that the central difference approximation is much more accurate for the same step size. To illustrate the power relationship with <span class="math notranslate nohighlight">\(h\)</span>, we can compute the maximum error in the approximation for a range of step sizes and plot the result. Since the resulting errors <span class="math notranslate nohighlight">\(E\)</span> are proportional to <span class="math notranslate nohighlight">\(h^n\)</span>, a plot of <span class="math notranslate nohighlight">\(\log(E)\)</span> against <span class="math notranslate nohighlight">\(\log(h)\)</span> should show a linear relationship:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hvals</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">errf</span><span class="o">=</span><span class="p">[];</span> <span class="n">errm</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hvals</span><span class="p">:</span>
+  <span class="n">xf</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">yd</span><span class="o">=</span><span class="n">fdiff</span><span class="p">(</span><span class="n">f</span><span class="p">,[</span><span class="o">-</span><span class="n">pi</span><span class="p">,</span><span class="n">pi</span><span class="p">],</span><span class="n">h</span><span class="p">)</span>
+  <span class="n">xm</span><span class="o">=</span><span class="n">xf</span><span class="o">+</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span>
+  <span class="n">errf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">yd</span><span class="o">-</span><span class="n">fp</span><span class="p">(</span><span class="n">xf</span><span class="p">))))</span>
+  <span class="n">errm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">yd</span><span class="o">-</span><span class="n">fp</span><span class="p">(</span><span class="n">xm</span><span class="p">))))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hvals</span><span class="p">,</span><span class="n">errf</span><span class="p">,</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Forward difference&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hvals</span><span class="p">,</span><span class="n">errm</span><span class="p">,</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Central difference&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/formulae_4_0.png" src="../_images/formulae_4_0.png" />
+</div>
+</div>
+<p>The gradient of the line gives the estimated order of the truncation error, <span class="math notranslate nohighlight">\(n\)</span>. As expected, we find that forward difference method has a first order error relationship and central difference method has a quadratic order error relationship.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+</section>
+<section id="practical-implementation">
+<h3><span class="section-number">3.3.2. </span>Practical implementation<a class="headerlink" href="#practical-implementation" title="Permalink to this heading">#</a></h3>
+<p>In the above demonstration we estimated the derivative at locations <span class="math notranslate nohighlight">\(x_{k+1/2}\)</span>, whilst what we generally want is to estimate the derivative at <span class="math notranslate nohighlight">\(x_k\)</span>. For this, we return to formula <a class="reference internal" href="#equation-central1a">(3.3)</a>, which can be implemented as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cdiff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">xRange</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">):</span>
+    
+    <span class="c1">#Construct datapoints (x,y=f(x))</span>
+    <span class="n">xmin</span><span class="p">,</span><span class="n">xmax</span><span class="o">=</span><span class="n">xRange</span>
+    <span class="n">start</span><span class="o">=</span><span class="n">xmin</span><span class="o">-</span><span class="n">h</span>                 <span class="c1">#add left exterior point</span>
+    <span class="n">stop</span> <span class="o">=</span><span class="n">xmax</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span>               <span class="c1">#add right exterior point</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="c1">#Apply finite difference formula</span>
+    <span class="n">ydiff</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>       <span class="c1">#values differing by two positions</span>
+    <span class="n">xdiff</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>       <span class="c1">#equivalent to 2*h</span>
+    <span class="n">yd</span> <span class="o">=</span> <span class="n">ydiff</span><span class="o">/</span><span class="n">xdiff</span>
+    
+    <span class="c1">#Datapoints of func and derivative</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">yd</span>   <span class="c1">#interior points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="second-derivative-formulae">
+<h2><span class="section-number">3.4. </span>Second derivative formulae<a class="headerlink" href="#second-derivative-formulae" title="Permalink to this heading">#</a></h2>
+<br>
+<p><strong>Forward difference</strong> (order <span class="math notranslate nohighlight">\(h\)</span> accuracy):</p>
+<p>The result is obtained by expanding taking <span class="math notranslate nohighlight">\(x=(x_k+2h)\)</span>,  <span class="math notranslate nohighlight">\(a=x_k\)</span> in the Taylor expansion, and then substituting in the result for the first forward difference</p>
+<div class="math notranslate nohighlight" id="equation-forward2">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-forward2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+ y_{k+2}&amp;=y_{k}+2hy^{\prime}_{k}+\frac{(2h)^2}{2!}y^{\prime\prime}_{k}+\frac{(2h)^3}{3!}y^{\prime\prime\prime}_k\dots \qquad \text{where } y_{k+2}=y(x_k+2h)\\
+ &amp;=y_k+2h\left[\frac{y_{k+1}-y_k}{h}-\frac{h}{2}y_k^{\prime\prime}-\frac{h^2}{6}y_k^{\prime\prime\prime}+\dots\right]+2h^2y_k^{\prime\prime}+\frac{4}{3}h^3 y_k^{\prime\prime\prime}+\dots\\
+ &amp;\Rightarrow y^{\prime\prime}_k = \frac{y_{k}-2y_{k+1}+y_{k+2}}{h^2}-hy^{\prime\prime\prime}_k+\dots
+ \end{align}\end{split}\]</div>
+<p>The formula requires two exterior points on the forward side.</p>
+<br>
+<p><strong>Central difference</strong> (order <span class="math notranslate nohighlight">\(h^2\)</span> accuracy):</p>
+<p>By adding the forward difference expression <a class="reference internal" href="#equation-forward1">(3.1)</a> to the backward difference expression <a class="reference internal" href="#equation-backwards1">(3.2)</a> we obtain</p>
+<div class="math notranslate nohighlight" id="equation-central2">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-central2" title="Permalink to this equation">#</a></span>\[y^{\prime\prime}_k = \frac{y_{k-1}-2y_k+y_{k+1}}{h^2} + h^2\left[-\frac{1}{12}y^{(4)}_k +\dots\right]\]</div>
+</section>
+<section id="chapter-exercise">
+<h2><span class="section-number">3.5. </span>Chapter exercise<a class="headerlink" href="#chapter-exercise" title="Permalink to this heading">#</a></h2>
+<p>Taking a step size <code class="docutils literal notranslate"><span class="pre">h=1e-3</span></code>, numerically estimate the second derivative of the logistic function given in <a class="reference internal" href="background.html#chapex1"><span class="std std-numref">Section 1.3</span></a></p>
+<p>(a) using the forward difference formula,<br>
+(b) using the central difference formula.</p>
+<p>You will need to extend the function estimate at <em>two</em> exterior points to obtain a result for the derivative at each point in the interval.</p>
+<p>Plot the error in each of your estimates, given that the analytic result satisfies</p>
+<div class="math notranslate nohighlight" id="equation-ord2logist">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-ord2logist" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = \frac{r^2 x(C-x)(C-2x)}{C^2}.\]</div>
+<p>Write a short explanation of your findings.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./dif"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="powers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Infinite powers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../ivp/background.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Preliminaries</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

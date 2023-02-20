@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>5. Stability and stiffness &#8212; Finite Differences</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Midpoint method" href="cdiff.html" />
+    <link rel="prev" title="4. Preliminaries" href="background.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Finite Differences</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Finite Differences
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introductory material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/background.html">
+   1. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/powers.html">
+   2. Infinite powers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/formulae.html">
+   3. Formulae
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Initial Value Problems
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="background.html">
+   4. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Stability and stiffness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cdiff.html">
+   6. Midpoint method
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex1.html">
+   Chapter exercise 1.3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex2.html">
+   Chapter exercise 3.5
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ivp/stability.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fivp/stability.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/ivp/stability.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/ivp/stability.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accuracy">
+   5.1. Accuracy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stability">
+   5.2. Stability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-euler-method">
+     5.2.1. Explicit Euler method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-euler-scheme">
+     5.2.2. Implicit Euler scheme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation">
+     5.2.3. Interpretation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practical-considerations">
+   5.3. Practical considerations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   5.4. Chapter exercises
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Stability and stiffness</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accuracy">
+   5.1. Accuracy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stability">
+   5.2. Stability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-euler-method">
+     5.2.1. Explicit Euler method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-euler-scheme">
+     5.2.2. Implicit Euler scheme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation">
+     5.2.3. Interpretation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practical-considerations">
+   5.3. Practical considerations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   5.4. Chapter exercises
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="stability-and-stiffness">
+<h1><span class="section-number">5. </span>Stability and stiffness<a class="headerlink" href="#stability-and-stiffness" title="Permalink to this heading">#</a></h1>
+<p>This chapter introduces the concept of stability. It should help you to recognise why we may need modified finite difference formulae, and is warning against careless use of finite difference methods. After completing this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>Describe what is meant by “local” and “global” errors, and how these may be affected by truncation order and problem stability</p></li>
+<li><p>Recognise the potential strengths and drawbacks of various explicit and implicit finite difference methods</p></li>
+<li><p>Implement an implicit technique, by using a fixed point method to solve the problem <span class="math notranslate nohighlight">\(x=F(x)\)</span></p></li>
+</ul>
+<section id="accuracy">
+<h2><span class="section-number">5.1. </span>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
+<p>Before introducing the concept of stability, it is useful to revisit what we mean when we understand by the “error” in a solution, and in doing so we may distinguish between two different measurements of accuracy:</p>
+<p><strong>Local error</strong>:<br>
+The local error is the size of error introduced at each step. Mathematically, the local error in the finite difference method is determined by the truncation order of the Taylor expansion. For the explicit Euler method the trunction error is <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>, since this is the order of the terms discarded.</p>
+<p><strong>Global error</strong>:<br>
+As we are integrating over <span class="math notranslate nohighlight">\(1/h\)</span> steps, we expect that by the time we reach the end of the integration domain the global error will be one order less than the local error. So, for the explicit Euler method the global error is <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>.</p>
+<p>This heuristic description is fairly accurate. However, the detailed picture is a little more complicated, as for some problems the local errors are amplified/compounded in subsequent steps, whilst in other problems the errors are damped out.</p>
+</section>
+<section id="stability">
+<h2><span class="section-number">5.2. </span>Stability<a class="headerlink" href="#stability" title="Permalink to this heading">#</a></h2>
+<p>We say that a method is stable if the local errors are not magnified with each step. In some problems the stability depends on the step size used, whilst other problems are <em>unconditionally</em> stable.</p>
+<p>We will consider an illustrative example, provided by the following problem, which has analytic solution <span class="math notranslate nohighlight">\(x=2e^{-5t}\)</span> :</p>
+<div class="math notranslate nohighlight" id="equation-stab-exemplar">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-stab-exemplar" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}x}{\mathrm{d}t}=-5x, \quad x(0)=2, \quad x\in[0,10]\]</div>
+<section id="explicit-euler-method">
+<h3><span class="section-number">5.2.1. </span>Explicit Euler method<a class="headerlink" href="#explicit-euler-method" title="Permalink to this heading">#</a></h3>
+<p>First, let us demonstrate the solutions obtained by the explicit Euler method for two rather large step sizes. The numeric estimate is shown in blue and the analytic solution is shown in red. We are using the <code class="docutils literal notranslate"><span class="pre">eulerf</span></code> function defined previously:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span>
+<span class="n">tRange</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">tRange</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">xsol</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>               <span class="c1">#Analytic solution</span>
+
+<span class="n">h</span><span class="o">=</span><span class="p">[</span><span class="mf">0.39</span><span class="p">,</span><span class="mf">0.41</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+  <span class="n">te</span><span class="p">,</span><span class="n">xe</span><span class="o">=</span><span class="n">eulerf</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tRange</span><span class="p">,</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>     <span class="c1">#Explicit Euler</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">te</span><span class="p">,</span><span class="n">xe</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">xsol</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;h=</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">tRange</span><span class="p">)</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/stability_3_0.png" class="align-center" src="../_images/stability_3_0.png" />
+</div>
+</div>
+<p>We see that the solution appears to be stable for <span class="math notranslate nohighlight">\(h=0.39\)</span>, despite being very inaccurate. However, when the step size is increased to <span class="math notranslate nohighlight">\(h=0.41\)</span> the solution is no longer stable and the local errors increase with every step.</p>
+</section>
+<section id="implicit-euler-scheme">
+<h3><span class="section-number">5.2.2. </span>Implicit Euler scheme<a class="headerlink" href="#implicit-euler-scheme" title="Permalink to this heading">#</a></h3>
+<p>From the backward difference formula <a class="reference internal" href="../dif/formulae.html#equation-backwards1">(3.2)</a> we may obtain the following scheme</p>
+<div class="math notranslate nohighlight">
+\[x_{k+1}= x_{k}+h \dot{x}_{k+1}+\mathcal{O}(h^2).\]</div>
+<p>Substituting for <span class="math notranslate nohighlight">\(\dot{x}\)</span> from the initial value problem <a class="reference internal" href="background.html#equation-ivp1">(4.1)</a> leads to the following iterative formula, which is known as the implicit Euler method</p>
+<div class="math notranslate nohighlight" id="equation-implicitlyeuler">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-implicitlyeuler" title="Permalink to this equation">#</a></span>\[x_{k+1}\simeq x_{k}+h f(t_{k+1},x_{k+1}).\]</div>
+<p>Here we encounter a complication, since the expression for <span class="math notranslate nohighlight">\(x_k\)</span> is given implicitly. Usually it is not possible to rearrange the expression to obtain an explicit result, so a root-finding algorithm is required, such as the Newton-Raphson technique or a bisection or fixed point algorithm.</p>
+<p>An example implementation is shown in the code below, using <code class="docutils literal notranslate"><span class="pre">fsolve</span></code> from the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> library. To use the root finding function <code class="docutils literal notranslate"><span class="pre">fsolve</span></code>, we need to collect all of the terms in the implicit Euler formula <a class="reference internal" href="#equation-implicitlyeuler">(5.2)</a> onto one side, which gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-55b1f3e3-c880-4650-b58a-7e202ee530e3">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-55b1f3e3-c880-4650-b58a-7e202ee530e3" title="Permalink to this equation">#</a></span>\[\begin{equation}x_{k+1}-x_k-hf(t_{k+1},x_{k+1})=0.\end{equation}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+
+<span class="k">def</span> <span class="nf">euleri</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">tRange</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+  <span class="n">tmin</span><span class="p">,</span><span class="n">tmax</span><span class="o">=</span><span class="n">tRange</span>
+  <span class="n">stop</span><span class="o">=</span><span class="n">tmax</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span>    
+  <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">tmin</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>  <span class="c1">#stop value is not included</span>
+  
+  <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>                   <span class="c1">#get number of values</span>
+  <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x0</span>      <span class="c1">#form output array</span>
+
+  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+      <span class="n">t1</span><span class="p">,</span><span class="n">x1</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>     <span class="c1">#labels introduced for convenience</span>
+      <span class="n">t2</span><span class="o">=</span><span class="n">t1</span><span class="o">+</span><span class="n">h</span>             <span class="c1">#this is the same as t[k+1]</span>
+
+      <span class="n">F</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x2</span><span class="p">:</span> <span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="o">-</span><span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span> 
+      <span class="n">x2</span><span class="o">=</span><span class="n">fsolve</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">x1</span><span class="p">)</span>     <span class="c1">#Solve backward difference</span>
+      <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">x2</span>       
+  <span class="k">return</span> <span class="n">t</span><span class="p">,</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we demonstrate the solutions obtained by the implicit Euler method. The numeric estimate is shown in blue and the analytic solution is shown in red.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span>
+<span class="n">tRange</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">tRange</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">xsol</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>               <span class="c1">#Analytic solution</span>
+
+<span class="n">h</span><span class="o">=</span><span class="p">[</span><span class="mf">0.41</span><span class="p">,</span><span class="mf">0.99</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+  <span class="n">ti</span><span class="p">,</span><span class="n">xi</span><span class="o">=</span><span class="n">euleri</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tRange</span><span class="p">,</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>     <span class="c1">#Implicit Euler</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ti</span><span class="p">,</span><span class="n">xi</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">xsol</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;h=</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">tRange</span><span class="p">)</span>
+  <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/stability_7_0.png" class="align-center" src="../_images/stability_7_0.png" />
+</div>
+</div>
+<p>We see that the solution appears to be stable for the step size <span class="math notranslate nohighlight">\(h=0.41\)</span> where the explicit method failed. Indeed, it remains stable even for <span class="math notranslate nohighlight">\(h=0.99\)</span>.</p>
+</section>
+<section id="interpretation">
+<h3><span class="section-number">5.2.3. </span>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this heading">#</a></h3>
+<p>Both the explicit and implicit Euler solutions have the same level of accuracy over a single step. However, in this example the errors in the explicit solution are amplified, whilst in the implicit solution they are damped. The implicit method is more stable for this example.</p>
+<p>This example can be fully analysed by hand. Since it is linear, a root finding method is not needed to implement the backward formula. We can simply rearrange to obtain an explicit solution.</p>
+<div class="exercise admonition" id="ivp/stability-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
+<section id="exercise-content">
+<p>For the example problem <a class="reference internal" href="#equation-stab-exemplar">(5.1)</a>, both the explicit and implicit formulae can be applied recursively by hand to obtain a closed form discrete solution <span class="math notranslate nohighlight">\(x_k\)</span> in terms of the step size <span class="math notranslate nohighlight">\(h\)</span> and the initial condition <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+<p>Try to carry out the algebra yourself, and use the result to explain the stability properties we have observed.</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>The <strong>explicit formula</strong> gives</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle x_k= (1-5h)x_{k-1} \quad \Rightarrow \quad x_{k}=(1-5h)^k x_0, \qquad t=kh\]</div>
+<p>The <strong>implicit formula</strong> gives</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle x_k=\frac{x_{k-1}}{1+5h} \quad \Rightarrow \quad x_{k}=\frac{x_0}{(1+5h)^k}, \qquad t=kh\]</div>
+<p>Both results converge to the analytic solution in the limit of small step sizes, since</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h\rightarrow 0}(1\pm 5 h)^{t/h} = e^{\pm 5t}.\]</div>
+<p>However, the explicit result displays oscillating growth for <span class="math notranslate nohighlight">\(|1-5h|&gt;1\)</span>  (i.e. for <span class="math notranslate nohighlight">\(h&gt;2/5\)</span>).</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="practical-considerations">
+<h2><span class="section-number">5.3. </span>Practical considerations<a class="headerlink" href="#practical-considerations" title="Permalink to this heading">#</a></h2>
+<p>Besides the explicit and implicit Euler methods there are a range of other finite difference algorithms that can be used to solve initial value problems. The simplest and most well known of these fall into a category called Runge-Kutta (RK) methods, which take a weighted combination of calculations with different step sizes to mathematically improve the truncation order. The trapezoidal method given in the chapter exercises is a second order implicit RK method.</p>
+<p>We should also be aware that improvements in the truncation order may come at a cost: high order explicit methods tend to be less stable, whilst implicit algorithms tend to be more computationally demanding for a given step size. The size of the error at each step depends both on the method used and also the problem being solved.</p>
+<p>To produce a reliable result within specified error tolerances, many algorithms use adaptive step size methods, in which the error is estimated at each step by comparing the results from different algorithms. The step size can then be decreased in regions where the tolerance would be exceeded. The <code class="docutils literal notranslate"><span class="pre">scipy</span></code> package offers a built-in algorithm that does exactly this, called <code class="docutils literal notranslate"><span class="pre">integrate.solve_ivp</span></code>.</p>
+<div class="theory admonition">
+<p class="admonition-title">Stiffness</p>
+<p>For ODEs with a fast decaying or highly oscillatory mode, explicit methods may demand impractically small step sizes so that floating point errors become significant. These types of ODE are called “stiff”. Implicit methods tend to be better for such problems due to their generally superior stability. Amongst the implicit methods, the implicit Euler method is particularly stable.</p>
+</div>
+</section>
+<section id="chapter-exercises">
+<h2><span class="section-number">5.4. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<p><strong>Question 1</strong><br></p>
+<p>Taking the average of the forward and backward difference formulae gives</p>
+<div class="math notranslate nohighlight" id="equation-trapz">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-trapz" title="Permalink to this equation">#</a></span>\[y_{k+1}=y_k+\frac{h}{2}\biggr[f(x_k,y_k)+f(x_{k+1},y_{k+1})\biggr]\]</div>
+<p>This result is equivalent to approximating the integral using the trapezium rule. It can be shown that the global error in this formula is <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>, whilst the global errors in the explicit and implicit Euler methods are both <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>. However, it is less stable than the implicit Euler method.</p>
+<p>Write an implementiation of the trapezoidal rule by modifying the implicit Euler algorithm outlined above Use your function to solve the logistic problem defined in <a class="reference internal" href="background.html#equation-ord1logist">(4.2)</a>. You can use the plotter function below to compare your numeric solution to the analytic one.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myplotter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">yexact</span><span class="p">):</span>
+  <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span> <span class="c1">#increase subplot spacing</span>
+  <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Estimated integral of the given IVP&#39;</span><span class="p">)</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">yexact</span><span class="p">))</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;$x$&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Estimate&#39;</span><span class="p">)</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;$x$&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Error&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum error:&#39;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">yexact</span><span class="p">)))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+  <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 2</strong><br></p>
+<p>As an alternative to using Newton-Raphson algorithm to find the root of an algebraic relationship, we can use a fixed-point iteration technique, designed for problems of the form</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a14fead3-e5e0-455a-821a-1c769385baf5">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-a14fead3-e5e0-455a-821a-1c769385baf5" title="Permalink to this equation">#</a></span>\[\begin{equation}x=F(x).\end{equation}\]</div>
+<p>Such techniques are an important numerical analysis tool, and we will use them more when we study applications to partial differential equations.</p>
+<p>The approach proceeds by taking an initial guess <span class="math notranslate nohighlight">\(x=x_g\)</span> and substituting it into the right hand side of the equation.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(|x_g-F(x_g)|\)</span> is less than some specified tolerance then we conclude that our guess is a good approximation to the root.</p></li>
+<li><p>If the tolerance goal is not met, we use the result <span class="math notranslate nohighlight">\(F(x_g)\)</span> as a new guess, and repeat the process.</p></li>
+</ul>
+<p>Write your own fixed point iteration code to find a root of <span class="math notranslate nohighlight">\(x=\cos(x)\)</span>, with an initial guess of <span class="math notranslate nohighlight">\(x=0.2\)</span>, with a tolerance of <span class="math notranslate nohighlight">\(10^{-7}\)</span>. Compare your result to the value given by <code class="docutils literal notranslate"><span class="pre">fsolve</span></code>.</p>
+<p><strong>Question 3</strong><br>
+Rewrite the second order ODE given in <a class="reference internal" href="../dif/formulae.html#equation-ord2logist">(3.7)</a> as a first order system subject to the initial condition <span class="math notranslate nohighlight">\(x(0)=C/2\)</span>, <span class="math notranslate nohighlight">\(x^{\prime}(0)=rC/4\)</span>. Apply the explicit Euler method to this system. What do you conclude?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ivp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="background.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Preliminaries</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cdiff.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Midpoint method</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
