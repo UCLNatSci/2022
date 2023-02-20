@@ -392,6 +392,13 @@ $$
 $$
 ```
 
+```{seealso}
+Use this online tool to practice row operations.
+
+https://textbooks.math.gatech.edu/ila/demos/rrinter.html
+
+```
+
 ```{exercise}
 :label: q_echelon_form_2
 
