@@ -186,6 +186,28 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Project
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="neural_circuits_project_2.html">
+   5. Project Brief
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="outline.html">
+   6. Outline
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="isomorphisms/graph_isomorphisms.html">
+   7. Isomorphic Graphs
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -400,30 +422,30 @@ title="Print to PDF"
 <h1>NSCI0011: Motif Analysis of Neural Circuits<a class="headerlink" href="#nsci0011-motif-analysis-of-neural-circuits" title="Permalink to this headline">#</a></h1>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
-<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">motifs</span></code>). The aim of motif analysis is to determine which specific motifs are present in a network with a frequency that is significantly different to chance. This can be achieved by repeated sampling from a network in order to construct a <em>motif frequency spectrum</em> (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">histogram</span></code>) and then comparing this to a suitable ‘null model’. Motif analysis has revealed functionally important features in the nervous systems of the macaque, cat and <em>C. elegans</em> <span id="id1">[<a class="reference internal" href="neural_circuits_project_2.html#id8" title="Olaf Sporns and Rolf Kötter. Motifs in brain networks. PLoS biology, 2(11):e369, 2004.">1</a>]</span>.</p>
+<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="neural_circuits_project_2.html#motifs"><span class="std std-numref">Fig. 5.1</span></a>). The aim of motif analysis is to determine which specific motifs are present in a network with a frequency that is significantly different to chance. This can be achieved by repeated sampling from a network in order to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="neural_circuits_project_2.html#histogram"><span class="std std-numref">Fig. 5.2</span></a>) and then comparing this to a suitable ‘null model’. Motif analysis has revealed functionally important features in the nervous systems of the macaque, cat and <em>C. elegans</em> <span id="id1">[<a class="reference internal" href="neural_circuits_project_2.html#id7" title="Olaf Sporns and Rolf Kötter. Motifs in brain networks. PLoS biology, 2(11):e369, 2004.">2</a>]</span>.</p>
 <figure class="align-default" id="motifs">
 <a class="reference internal image-reference" href="../_images/motifs.png"><img alt="../_images/motifs.png" src="../_images/motifs.png" style="height: 220px;" /></a>
 <figcaption>
-<p><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id2">[]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id2">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="histogram">
 <a class="reference internal image-reference" href="../_images/histogram.png"><img alt="../_images/histogram.png" src="../_images/histogram.png" style="height: 120px;" /></a>
 <figcaption>
-<p><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id3">[]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id3">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A ‘connectome’ is a complete description of the structural connectivity of an organism’s nervous system, typically as a graph of nodes (neurons) and directed edges (synaptic connections between neurons). To date, the only whole-animal connectome to be completely determined is the nervous system of hermaphrodite <em>C. elegans</em>, comprising a graph of 460 nodes and 4887 directed edges. In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">drosophila</span></code>) <span id="id4">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>.</p>
+<p>A ‘connectome’ is a complete description of the structural connectivity of an organism’s nervous system, typically as a graph of nodes (neurons) and directed edges (synaptic connections between neurons). To date, the only whole-animal connectome to be completely determined is the nervous system of hermaphrodite <em>C. elegans</em>, comprising a graph of 460 nodes and 4887 directed edges. In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="neural_circuits_project_2.html#drosophila"><span class="std std-numref">Fig. 5.3</span></a>) <span id="id4">[<a class="reference internal" href="neural_circuits_project_2.html#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>.</p>
 <figure class="align-default" id="drosophila">
 <a class="reference internal image-reference" href="../_images/drosophila.png"><img alt="../_images/drosophila.png" src="../_images/drosophila.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id5">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id5">[<a class="reference internal" href="neural_circuits_project_2.html#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="project-brief">
 <h2>Project Brief<a class="headerlink" href="#project-brief" title="Permalink to this headline">#</a></h2>
-<p>You should perform a motif analysis of the connectome of <em>Drosophila Melanogaster</em>. By reviewing relevant scientific literature, investigate how motif analysis can be performed in nervous systems, then apply appropriate techniques to the <em>Drosophila Melanogaster</em> connectome detailed in <span id="id6">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>. Using diagrams and equations, clearly describe how the motif analysis is performed.</p>
+<p>You should perform a motif analysis of the connectome of <em>Drosophila Melanogaster</em>. By reviewing relevant scientific literature, investigate how motif analysis can be performed in nervous systems, then apply appropriate techniques to the <em>Drosophila Melanogaster</em> connectome detailed in <span id="id6">[<a class="reference internal" href="neural_circuits_project_2.html#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>. Using diagrams and equations, clearly describe how the motif analysis is performed.</p>
 </section>
 <section id="suggested-breakdown">
 <h2>Suggested Breakdown<a class="headerlink" href="#suggested-breakdown" title="Permalink to this headline">#</a></h2>
@@ -436,7 +458,7 @@ title="Print to PDF"
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>You should make good use of the available supervision. There are some tricky corners in this project, and there is a risk of getting stuck down some blind alleys if you are unlucky. I am happy to provide assistance, but that means approaching me for help.</p></li>
-<li><p>The suggested text book <span id="id7">[]</span> has some good background and links to further useful information. I recommend reading Chapter 8.1 at least.</p></li>
+<li><p>The suggested text book <span id="id7">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> has some good background and links to further useful information. I recommend reading Chapter 8.1 at least.</p></li>
 <li><p>Familiarise yourself with the notes, which contain fundamentals of graphs, components, subgraphs and so on.</p></li>
 </ol>
 </section>
@@ -444,13 +466,13 @@ title="Print to PDF"
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <div class="docutils container" id="id8">
 <dl class="citation">
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id11"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>,<a href="#id7">3</a>)</span></dt>
+<dd><p>Alex Fornito, Andrew Zalesky, and Edward Bullmore. <em>Fundamentals of brain network analysis</em>. Academic Press, 2016.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
 <dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets">2</span></dt>
-<dd><p>Duncan J Watts and Steven H Strogatz. Collective dynamics of ‘small-world’ networks. <em>nature</em>, 393(6684):440–442, 1998.</p>
-</dd>
-<dt class="label" id="id11"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
+<dt class="label" id="id10"><span class="brackets">3</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
 <dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
 </dd>
 </dl>

@@ -1,4 +1,4 @@
-# NSCI0011: Motif Analysis of Neural Circuits
+# Project Brief
 
 A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see {numref}`motifs`). The aim of motif analysis is to construct a *motif frequency spectrum* (see {numref}`histogram`) which describes the relative abundance of each motif within a graph.
 ```{figure} motifs.png

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Project Brief &#8212; Neural Circuits</title>
+    <title>6. Outline &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Outline" href="outline.html" />
-    <link rel="prev" title="4.1. Homework Answers and Mark Scheme" href="../ws1/ws1_homework_answers.html" />
+    <link rel="next" title="7. Isomorphic Graphs" href="isomorphisms/graph_isomorphisms.html" />
+    <link rel="prev" title="5. Project Brief" href="neural_circuits_project_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -192,13 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="neural_circuits_project_2.html">
    5. Project Brief
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="outline.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    6. Outline
   </a>
  </li>
@@ -280,7 +280,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/project/neural_circuits_project_2.md"
+        <a href="../_sources/project/outline.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -340,18 +340,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aims">
-   5.1. Aims
+  <a class="reference internal nav-link" href="#newtorkx">
+   6.1. NewtorkX
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   5.2. Background
+  <a class="reference internal nav-link" href="#motif-frequency-analysis">
+   6.2. Motif Frequency Analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   5.3. References
+  <a class="reference internal nav-link" href="#drosophila-connectome-data">
+   6.3. Drosophila Connectome Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schedule">
+   6.4. Schedule
   </a>
  </li>
 </ul>
@@ -363,7 +368,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Project Brief</h1>
+                <h1>Outline</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -374,18 +379,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aims">
-   5.1. Aims
+  <a class="reference internal nav-link" href="#newtorkx">
+   6.1. NewtorkX
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   5.2. Background
+  <a class="reference internal nav-link" href="#motif-frequency-analysis">
+   6.2. Motif Frequency Analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   5.3. References
+  <a class="reference internal nav-link" href="#drosophila-connectome-data">
+   6.3. Drosophila Connectome Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schedule">
+   6.4. Schedule
   </a>
  </li>
 </ul>
@@ -398,60 +408,42 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-brief">
-<h1><span class="section-number">5. </span>Project Brief<a class="headerlink" href="#project-brief" title="Permalink to this headline">#</a></h1>
-<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="#motifs"><span class="std std-numref">Fig. 5.1</span></a>). The aim of motif analysis is to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="#histogram"><span class="std std-numref">Fig. 5.2</span></a>) which describes the relative abundance of each motif within a graph.</p>
-<figure class="align-default" id="motifs">
-<a class="reference internal image-reference" href="../_images/motifs.png"><img alt="../_images/motifs.png" src="../_images/motifs.png" style="height: 220px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id1">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="histogram">
-<a class="reference internal image-reference" href="../_images/histogram.png"><img alt="../_images/histogram.png" src="../_images/histogram.png" style="height: 120px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id2">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="aims">
-<h2><span class="section-number">5.1. </span>Aims<a class="headerlink" href="#aims" title="Permalink to this headline">#</a></h2>
-<p>In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="#drosophila"><span class="std std-numref">Fig. 5.3</span></a>) <span id="id3">[<a class="reference internal" href="#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>. The aim of this project is to perform motif analysis by repeatedly sampling from the graph of the drosophila connectome. You will:</p>
-<ul class="simple">
-<li><p>Determine the order-3 isomorphic directed graphs</p></li>
-<li><p>Import the <em>drosophila</em> connectome data and determine how to represent it as a directed graph</p></li>
-<li><p>Develop code to calculate the motif spectrum of the graph of the <em>drosophila</em> connectome</p></li>
-<li><p>Compare the resulting graph to a suitable null (reference) model</p></li>
-</ul>
-<figure class="align-default" id="drosophila">
-<a class="reference internal image-reference" href="../_images/drosophila.png"><img alt="../_images/drosophila.png" src="../_images/drosophila.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id4">[<a class="reference internal" href="#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+  <section class="tex2jax_ignore mathjax_ignore" id="outline">
+<h1><span class="section-number">6. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h1>
+<p>The aim of this project is to perform a ‘motif frequency analysis’ of the <em>Drosophila Melanogaster</em> connectome. Motif analysis is described in Chapter 8.1 of <span id="id1">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> and you should read this chapter carefully for essential background. Some of the cited articles may also prove useful.</p>
+<p>A motif is a small graph with a specific structure, and motif analysis involves counting the frequency that a particular set of motifs appear as a subgraph of a graph of interest (in our case, a graph representing a brain circuit). You should perform a motif analysis for the motifs of order 3 (as shown in the project brief).</p>
+<p>Motif analysis requires us to determine whether two graphs (a motif and a subgraph of the connectome) are ‘the same’. In graph theory, two graphs are the same if they are <em>isomorphic</em>. Graph isomorphisms are explained in <a class="reference internal" href="isomorphisms/graph_isomorphisms.html#graph-isomorphisms-section"><span class="std std-numref">Section 7</span></a> of these notes. Checking if two graphs are isomporphic is a <a class="reference external" href="https://en.wikipedia.org/wiki/Graph_isomorphism_problem">hard</a> computational problem, but fortunately you don’t need to write this algorithm yourself since you can make use of a Python library <a class="reference external" href="https://networkx.org/">NetworkX</a> which contains functions for checking graph isomorphism, as well as other useful functions.</p>
+<p>You’ll need to determine how to sample subgraphs from a connectome graph. If the connectome graph is small enough, it’s possible to sample <em>every</em> triplet of nodes but this may be infeasible for larger connectome graphs. In this case a strategy of random sampling might prove more effective.</p>
+<p>The graph of the <em>Drosophila Melanogaster</em> connectome can be downloaded from <a class="reference external" href="https://neuprint.janelia.org/">https://neuprint.janelia.org/</a> as a text file. It can be tricky to access it from the web site, so it will also be made available here. You will have to determine how best to interpret the data as a directed graph and how to load it into Python using NetworkX.</p>
+<p>Lastly, in order to determine whether any of the motifs appear at a higher or lower frequency than expected, you should build a <em>null model</em> which acts as a ‘reference’ or ‘control’. The easiest way to do this is by generating a suitable <a class="reference external" href="https://en.wikipedia.org/wiki/Random_graph">random graph</a>.</p>
+<section id="newtorkx">
+<h2><span class="section-number">6.1. </span>NewtorkX<a class="headerlink" href="#newtorkx" title="Permalink to this headline">#</a></h2>
+<p>You will also need to understand how to use the <a class="reference external" href="https://networkx.org/">NetworkX</a> Python package. Work through the <a class="reference external" href="https://networkx.org/documentation/stable/tutorial.html">tutorial</a> first.</p>
+<p>Check that you understand how to use the NewtorkX function <code class="docutils literal notranslate"><span class="pre">is_isomorphic</span></code>. The following exercise would be good a good (and useful) exercise to get you started.</p>
+<div class="exercise admonition" id="project/outline-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.1 </span></p>
+<section id="exercise-content">
+<p>Write Python code which uses <code class="docutils literal notranslate"><span class="pre">NetworkX</span></code> to calculate and graph the <a class="reference external" href="https://mathinsight.org/degree_distribution">node degree histogram</a> of an arbitrary graph.</p>
 </section>
-<section id="background">
-<h2><span class="section-number">5.2. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>The suggested text book <span id="id5">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> has some good background and links to further useful information. Chapter 8.1 contains the most relevant material.</p></li>
-<li><p>You will need to understand just a little more graph theory, in particular the idea of <em>graph isomorphisms</em>, for which notes will be provided.</p></li>
-<li><p>We will be using a Python library <a class="reference external" href="https://networkx.org/">NetworkX</a> to automate some of the graph analysis.</p></li>
-</ol>
-</section>
-<section id="references">
-<h2><span class="section-number">5.3. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id6">
-<dl class="citation">
-<dt class="label" id="id9"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id5">3</a>)</span></dt>
-<dd><p>Alex Fornito, Andrew Zalesky, and Edward Bullmore. <em>Fundamentals of brain network analysis</em>. Academic Press, 2016.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets">2</span></dt>
-<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
-</dd>
-</dl>
 </div>
+</section>
+<section id="motif-frequency-analysis">
+<h2><span class="section-number">6.2. </span>Motif Frequency Analysis<a class="headerlink" href="#motif-frequency-analysis" title="Permalink to this headline">#</a></h2>
+<p>The core programming task is to develop code which calculates the triplet motif frequency spectrum of a given graph. Think about how to split this problem up into discrete funcions. For example,</p>
+<ol class="simple">
+<li><p>A function which determines whether a subgraph (identified by a list of nodes) of a given graph (identified by an adjacency list or NetworkX object) is isomorphic to a second given graph. Test your function against a known graph (eg the <em>C Elegans</em> Egg-laying circuit). You can use NetworkX to test for graph isomorphism.</p></li>
+<li><p>A function which determines whether a given subgraph of given graph is isomorphic to one of the triplet motifs.</p></li>
+</ol>
+<p>Don’t get too stuck with this part! If you’re not sure how to proceed then please come to me for guidance.</p>
+</section>
+<section id="drosophila-connectome-data">
+<h2><span class="section-number">6.3. </span>Drosophila Connectome Data<a class="headerlink" href="#drosophila-connectome-data" title="Permalink to this headline">#</a></h2>
+<p><em>Further Information will appear here</em>.</p>
+</section>
+<section id="schedule">
+<h2><span class="section-number">6.4. </span>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">#</a></h2>
+<p>You should expect to spend no more than 1 or 2 weeks developing code to calculate the motif frequency spectrum. Understanding how to convert the <em>drosophila</em> data into a graph might take another week, and the rest of the time should be spent generating results and writing your report.</p>
 </section>
 </section>
 
@@ -482,17 +474,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../ws1/ws1_homework_answers.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="neural_circuits_project_2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.1. </span>Homework Answers and Mark Scheme</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Project Brief</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="outline.html" title="next page">
+    <a class='right-next' id="next-link" href="isomorphisms/graph_isomorphisms.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Outline</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Isomorphic Graphs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

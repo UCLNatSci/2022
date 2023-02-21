@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Project Brief &#8212; Neural Circuits</title>
+    <title>Random Graphs &#8212; Neural Circuits</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,10 +48,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Outline" href="outline.html" />
-    <link rel="prev" title="4.1. Homework Answers and Mark Scheme" href="../ws1/ws1_homework_answers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -191,9 +191,9 @@ const thebe_selector_output = ".output, .cell_output"
   Project
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="neural_circuits_project_2.html">
    5. Project Brief
   </a>
  </li>
@@ -280,7 +280,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/project/neural_circuits_project_2.md"
+        <a href="../_sources/project/random_graphs.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -340,19 +340,21 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aims">
-   5.1. Aims
+  <a class="reference internal nav-link" href="#question">
+   Question
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   5.2. Background
+  <a class="reference internal nav-link" href="#null-models">
+   Null Models
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   5.3. References
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -363,7 +365,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Project Brief</h1>
+                <h1>Random Graphs</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -374,19 +376,21 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aims">
-   5.1. Aims
+  <a class="reference internal nav-link" href="#question">
+   Question
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   5.2. Background
+  <a class="reference internal nav-link" href="#null-models">
+   Null Models
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   5.3. References
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -398,60 +402,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-brief">
-<h1><span class="section-number">5. </span>Project Brief<a class="headerlink" href="#project-brief" title="Permalink to this headline">#</a></h1>
-<p>A motif is a subgraph with a particular topological structure; for example, there are 13 possible motifs consisting of 3 nodes (see <a class="reference internal" href="#motifs"><span class="std std-numref">Fig. 5.1</span></a>). The aim of motif analysis is to construct a <em>motif frequency spectrum</em> (see <a class="reference internal" href="#histogram"><span class="std std-numref">Fig. 5.2</span></a>) which describes the relative abundance of each motif within a graph.</p>
-<figure class="align-default" id="motifs">
-<a class="reference internal image-reference" href="../_images/motifs.png"><img alt="../_images/motifs.png" src="../_images/motifs.png" style="height: 220px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">There are 13 distinct three-node motifs in directed networks. <em>Reprinted from <span id="id1">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#motifs" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="histogram">
-<a class="reference internal image-reference" href="../_images/histogram.png"><img alt="../_images/histogram.png" src="../_images/histogram.png" style="height: 120px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The frequency spectrum of the 13 3-node motifs in four different brain networks. <em>Reprinted from <span id="id2">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span></em></span><a class="headerlink" href="#histogram" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="aims">
-<h2><span class="section-number">5.1. </span>Aims<a class="headerlink" href="#aims" title="Permalink to this headline">#</a></h2>
-<p>In a recent study the connectome of a large part of the <em>Drosophila Melanogaster</em> nervous system was published, consisting of around 25,000 neurons and 20 million synaptic connections (see <a class="reference internal" href="#drosophila"><span class="std std-numref">Fig. 5.3</span></a>) <span id="id3">[<a class="reference internal" href="#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span>. The aim of this project is to perform motif analysis by repeatedly sampling from the graph of the drosophila connectome. You will:</p>
-<ul class="simple">
-<li><p>Determine the order-3 isomorphic directed graphs</p></li>
-<li><p>Import the <em>drosophila</em> connectome data and determine how to represent it as a directed graph</p></li>
-<li><p>Develop code to calculate the motif spectrum of the graph of the <em>drosophila</em> connectome</p></li>
-<li><p>Compare the resulting graph to a suitable null (reference) model</p></li>
-</ul>
-<figure class="align-default" id="drosophila">
-<a class="reference internal image-reference" href="../_images/drosophila.png"><img alt="../_images/drosophila.png" src="../_images/drosophila.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The connectome of the highlighted portion of the drosophila central brain consists of around 25,000 neurons and 20 million synaptic connections. <em>Reprinted from <span id="id4">[<a class="reference internal" href="#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span></em></span><a class="headerlink" href="#drosophila" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="background">
-<h2><span class="section-number">5.2. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="random-graphs">
+<h1>Random Graphs<a class="headerlink" href="#random-graphs" title="Permalink to this headline">#</a></h1>
+<div class="admonition-definition admonition">
+<p class="admonition-title">definition</p>
+<p>A <strong>random graph</strong> is a graph in which the edges are determined in a random way. Given a set of <span class="math notranslate nohighlight">\(n\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p\)</span>, we define a random simple digraph such that for each node pair <span class="math notranslate nohighlight">\(i, j\)</span> <span class="math notranslate nohighlight">\((i\neq j)\)</span> there exists an edge <span class="math notranslate nohighlight">\((i, j)\)</span> with probability <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p>This definition of random graph is more properly called an <strong>Erdös-Rényi</strong> random graph.</p>
+</div>
+<p>We can easily generate random directed graphs using the adjacency matrix graph representation. For a simple digraph, diagonal elements of the matrix are 0, each other element is 1 with probability <span class="math notranslate nohighlight">\(p\)</span> and 0 with probability <span class="math notranslate nohighlight">\(1-p\)</span>.</p>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>The suggested text book <span id="id5">[<a class="reference internal" href="#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> has some good background and links to further useful information. Chapter 8.1 contains the most relevant material.</p></li>
-<li><p>You will need to understand just a little more graph theory, in particular the idea of <em>graph isomorphisms</em>, for which notes will be provided.</p></li>
-<li><p>We will be using a Python library <a class="reference external" href="https://networkx.org/">NetworkX</a> to automate some of the graph analysis.</p></li>
+<li><p>What is the expected number of edges of a random digraph with <span class="math notranslate nohighlight">\(n\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p\)</span>?</p></li>
+<li><p>Write a program which, given integer <span class="math notranslate nohighlight">\(n\)</span> and probability <span class="math notranslate nohighlight">\(p\)</span>, generates a random simple digraph and determines if it is connected.</p></li>
+<li><p>Use your script to estimate the probability that a random directed graph with 10 nodes and <span class="math notranslate nohighlight">\(p= 0.1\)</span> is connected.</p></li>
 </ol>
 </section>
-<section id="references">
-<h2><span class="section-number">5.3. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id6">
-<dl class="citation">
-<dt class="label" id="id9"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id5">3</a>)</span></dt>
-<dd><p>Alex Fornito, Andrew Zalesky, and Edward Bullmore. <em>Fundamentals of brain network analysis</em>. Academic Press, 2016.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets">2</span></dt>
-<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
-</dd>
-</dl>
-</div>
+<section id="null-models">
+<h2>Null Models<a class="headerlink" href="#null-models" title="Permalink to this headline">#</a></h2>
+<p>What do the graph statistics that we have studied — such as degree distribution and average path length — tell us about brain circuits? These statistics scale with the number of edges and nodes in the graph, and so depend on the graph size and connection density as well as other basic properties of the graph.</p>
+<p>Given a graph of a neural circuit, a <strong>null model</strong> is a random graph with identical basic properties such as number of nodes and edges. By comparing global properties of the neural circuit graph with the random graph, it is possible to determine whether the properties of the circuit are large or small in relation to the null model.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<p>The graph of a region of the <em>Drosophila</em> connectome, PED(R), with connection weight greater than or equal to 10, has <span class="math notranslate nohighlight">\(n=197\)</span> nodes and <span class="math notranslate nohighlight">\(e=516\)</span> edges, resulting in an edge probability of <span class="math notranslate nohighlight">\(p=e/(n^2-n)=0.0134\)</span>. We construct a null model consisting of a random graph with <span class="math notranslate nohighlight">\(n=197\)</span> nodes and edge probability <span class="math notranslate nohighlight">\(p=0.0134\)</span>.</p>
+<p>PED(R) has average path length 2.1 and global clustering coefficient 0.69, compared to 5.3 and 0.02 for the null model.</p>
+<p>The <strong>normalised</strong> average path length and global clustering coefficient are <span class="math notranslate nohighlight">\(2.1/5.3=0.40\)</span> and <span class="math notranslate nohighlight">\(0.69/0.02=34.5\)</span> respectively.</p>
+</section>
 </section>
 </section>
 
@@ -482,20 +458,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../ws1/ws1_homework_answers.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.1. </span>Homework Answers and Mark Scheme</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="outline.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Outline</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
