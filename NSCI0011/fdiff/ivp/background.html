@@ -550,8 +550,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-fdiff-basic">
 <span class="eqno">(4.3)<a class="headerlink" href="#equation-fdiff-basic" title="Permalink to this equation">#</a></span>\[\frac{\Delta x}{\Delta t}  =\frac{x_{k+1}-x_k}{h} +\mathcal{O}(h),\]</div>
 <p>where <span class="math notranslate nohighlight">\(h\)</span> is the step size of <span class="math notranslate nohighlight">\(t\)</span>. By using this formula to replace the continuous derivative in <a class="reference internal" href="#equation-ivp1">(4.1)</a> we obtain the following rearrangement, which defines the explicit Euler method:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e904076-a87f-4703-8679-34c9aa360d56">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-6e904076-a87f-4703-8679-34c9aa360d56" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a4682f25-9525-459d-8127-16315e65f909">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-a4682f25-9525-459d-8127-16315e65f909" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{k+1} = x_k + h f(t_k,x_k) + \mathcal{O}(h^2).
 \end{equation}\]</div>
 <p>This iterative formula allows us to sequentially obtain the solution values at a given set of grid-points <span class="math notranslate nohighlight">\([t_1,t_2,\dots,t_n]\)</span>.</p>
@@ -573,7 +573,7 @@ x_2 &amp;= x_1+h f(t_1,x_1)\\
 </div>
 <p>The explicit Euler method can be interpreted graphically: We start from the given initial point <span class="math notranslate nohighlight">\((t_0,x_0)\)</span> and “step forward” along the tangent line defined by <span class="math notranslate nohighlight">\(f(t_0,x_0)\)</span> to obtain the next point <span class="math notranslate nohighlight">\((t_1,x_1)\)</span>. The method is re-applied at each point until the end of the integration domain is reached, as illustrated below. The approximation would be better for smaller step size!</p>
 <br>
-<a class="reference internal image-reference" href="ivp/images/forward1.png"><img alt="forward stepping" class="align-center" src="ivp/images/forward1.png" /></a>
+<a class="reference internal image-reference" href="../_images/forward1.png"><img alt="forward stepping" class="align-center" src="../_images/forward1.png" style="width: 600.0px; height: 120.0px;" /></a>
 <br>
 <p>The following code provides an example of how the method can be implemented.  Notice that in the iterative formula we have used <code class="docutils literal notranslate"><span class="pre">x1</span></code> to represent <span class="math notranslate nohighlight">\(x_k\)</span> and <code class="docutils literal notranslate"><span class="pre">x2</span></code> to represent <span class="math notranslate nohighlight">\(x_{k+1}\)</span> with the understanding that <code class="docutils literal notranslate"><span class="pre">x1</span></code> is updated with each iteration. The implementation uses <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> to pack and unpack a dictionary of keyword arguments (see <a class="reference internal" href="#guru-ivp"><span class="std std-numref">Section 4.1.3</span></a>):</p>
 <div class="cell tag_remove-input docutils container">
@@ -803,15 +803,15 @@ year = 2022
 <section id="first-order-system">
 <h2><span class="section-number">4.2. </span>First order system<a class="headerlink" href="#first-order-system" title="Permalink to this heading">#</a></h2>
 <p>We can extend the explicit Euler method to solve an initial value problem involving a first order system of the following form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9ed32656-5d64-4bd8-99ca-f5365e47241f">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-9ed32656-5d64-4bd8-99ca-f5365e47241f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a92e8eab-e6b9-4f8c-8d78-393871e3f361">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-a92e8eab-e6b9-4f8c-8d78-393871e3f361" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{F}(t,\underline{x}), \qquad \underline{x}(t_0)=\underline{x}_0.
 \end{equation}\]</div>
 <section id="id1">
 <h3><span class="section-number">4.2.1. </span>Example<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>The classic Lotka-Volterra predator prey model is given by the following pair of coupled ODEs, in which <span class="math notranslate nohighlight">\(x\)</span> represents the prey population and <span class="math notranslate nohighlight">\(y\)</span> represents the predator population. The parameters <span class="math notranslate nohighlight">\(a,b,p,q\)</span> are assumed to be constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3e103f23-3feb-463b-9033-9893ab5ff81e">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-3e103f23-3feb-463b-9033-9893ab5ff81e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8ef228c7-2a8c-4197-b64f-87a85216c8cd">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-8ef228c7-2a8c-4197-b64f-87a85216c8cd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{x} &amp;= a x - p xy, \qquad  &amp; x(0)=x_0,\\
 \dot{y} &amp;= -b y + q xy, \qquad &amp; y(0)=y_0.
 \end{align}\]</div>
@@ -878,8 +878,8 @@ Apply the explicit Euler method to numerically solve the following non-autonomou
 \end{equation*}\]</div>
 <p><strong>Question 2</strong><br>
 Apply the explicit Euler method to numerically solve the following coupled ODE system for the case when <span class="math notranslate nohighlight">\(p=28\)</span>, <span class="math notranslate nohighlight">\(s=10\)</span>, <span class="math notranslate nohighlight">\(b=2.667\)</span> and use the code given below to make a parameteric plot of your solution</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d79c04ed-a305-424c-811b-d608f5906751">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-d79c04ed-a305-424c-811b-d608f5906751" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-52b71a02-07e7-4d7f-9844-962d1e216169">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-52b71a02-07e7-4d7f-9844-962d1e216169" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{x} &amp; = s(y-x)\\
 \dot{y} &amp; = x(p-z)-y\\
 \dot{z} &amp; = xy-bz

@@ -529,7 +529,7 @@ title="Print to PDF"
 <p>Notice that if <span class="math notranslate nohighlight">\(x\ll 1\)</span> (“much less than one”) the higher powers are successively smaller. For instance, if <span class="math notranslate nohighlight">\(x=0.1\)</span> the <span class="math notranslate nohighlight">\(x^3=0.001\)</span>. Therefore the leading terms are most significant in the expansion and the higher powers are “corrections”. In most practical applications we only need the first two or three terms as the rest of the terms can be neglected.</p>
 <p>By way of example, consider the plots below, which show the curve <span class="math notranslate nohighlight">\(y=e^x\)</span> together with its linear, quadratic and cubic asymptotic expansions.</p>
 <figure class="align-default" id="maclaurin1">
-<img alt="dif/images/maclaurin1.png" src="dif/images/maclaurin1.png" />
+<img alt="../_images/maclaurin1.png" src="../_images/maclaurin1.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Comparison of asymptotic expansions to the curve <span class="math notranslate nohighlight">\(y=e^x\)</span> on the domain <span class="math notranslate nohighlight">\([-1,1]\)</span>.</span><a class="headerlink" href="#maclaurin1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -786,12 +786,12 @@ p\left(x;\frac{\pi}{3}\right)\sim \frac{\sqrt{3}}{2}+\frac{x}{2}-\frac{\sqrt{3}}
 <section id="order-of-accuracy">
 <h2><span class="section-number">2.6. </span>Order of accuracy<a class="headerlink" href="#order-of-accuracy" title="Permalink to this heading">#</a></h2>
 <p>We assume the Taylor series is to be used in the neighbourhood of the expansion point, so <span class="math notranslate nohighlight">\((x-a)\)</span> is a small quantity. We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy” and we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9aa500c0-f254-4d46-82ba-a3b0ba4ccc97">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-9aa500c0-f254-4d46-82ba-a3b0ba4ccc97" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-57328001-7349-4eb6-a6f7-fff6ec049e96">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-57328001-7349-4eb6-a6f7-fff6ec049e96" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1}),\end{equation}\]</div>
 <p>where the “big-O” notation describes the size of the error terms.</p>
 <p>This finding can be used to describe the size of the error in the finite difference approximation presented in the last chapter. Discarding all terms of degree greater than one in Taylor’s expansion about <span class="math notranslate nohighlight">\(x=x_k\)</span> gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c93b52f8-353b-4d9b-9a1b-4c9e3eb12b71">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-c93b52f8-353b-4d9b-9a1b-4c9e3eb12b71" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-737b3a59-9676-4451-9b21-9b34d504fd4e">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-737b3a59-9676-4451-9b21-9b34d504fd4e" title="Permalink to this equation">#</a></span>\[\begin{equation}y(x)= y(x_k)+y^{\prime}(x_k)(x-x_k)+\mathcal{O}((x-x_k)^2)\end{equation}\]</div>
 <p>If we label <span class="math notranslate nohighlight">\(h=(x-x_k)\)</span>, then we may rewrite the expression as shown below. The result is known as Euler’s forward difference formula or the <strong>explicit Euler method</strong>.</p>
 <div class="math notranslate nohighlight" id="equation-eeuler">
 <span class="eqno">(2.7)<a class="headerlink" href="#equation-eeuler" title="Permalink to this equation">#</a></span>\[y(x_k+h)= y(x_k)+y^{\prime}(x_k)h +\mathcal{O}(h^2), \qquad h\ll 1\]</div>
