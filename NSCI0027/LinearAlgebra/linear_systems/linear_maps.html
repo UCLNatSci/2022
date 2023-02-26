@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>15. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="14. Linear Subspaces" href="subspaces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -175,6 +176,21 @@ const thebe_selector_output = ".output, .cell_output"
    <span class="math notranslate nohighlight">
     \(Ax = b\)
    </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linear_independence.html">
+   13. Linear Independence and Bases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subspaces.html">
+   14. Linear Subspaces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   15. Linear Transformations
   </a>
  </li>
 </ul>
@@ -311,42 +327,32 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Linear Transformations
+   15.1. Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-transformations">
-   Matrix Transformations
+   15.2. Matrix Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
-   Geometrical Interpretation of Matrices
+   15.3. Geometrical Interpretation of Matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformation">
-   The Matrix of a Linear Transformation
+   15.4. The Matrix of a Linear Transformation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
-   Rotation matrices in 2D
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-identity-matrix">
-   The identity matrix
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
-   Composition of Linear Transformations
+   15.5. Rotation matrices in 2D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   15.6. solutions
   </a>
  </li>
 </ul>
@@ -370,42 +376,32 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Linear Transformations
+   15.1. Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-transformations">
-   Matrix Transformations
+   15.2. Matrix Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
-   Geometrical Interpretation of Matrices
+   15.3. Geometrical Interpretation of Matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformation">
-   The Matrix of a Linear Transformation
+   15.4. The Matrix of a Linear Transformation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
-   Rotation matrices in 2D
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-identity-matrix">
-   The identity matrix
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
-   Composition of Linear Transformations
+   15.5. Rotation matrices in 2D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   15.6. solutions
   </a>
  </li>
 </ul>
@@ -419,10 +415,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="linear-transformations">
-<h1>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">15. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">#</a></h1>
 <p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
 <section id="id1">
-<h2>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.1. </span>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>A function is a rule that takes inputs and transforms them to outputs. For example, a function <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[f(x)=x^2\]</div>
@@ -453,13 +449,13 @@ title="Print to PDF"
 <p>You can think of this definition as <em>the transformation of any linear combination of vectors is the same as the linear combination of the transformed vectors</em>.</p>
 <p>Rotation is an example of a linear transformation:</p>
 <ul class="simple">
-<li><p>We can add vectors <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then rotate, or we can rotate <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then add, as illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">linear_transformation</span></code>.</p></li>
+<li><p>We can add vectors <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then rotate, or we can rotate <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then add, as illustrated in <a class="reference internal" href="#linear-transformation"><span class="std std-numref">Fig. 15.1</span></a>.</p></li>
 <li><p>We can scale <span class="math notranslate nohighlight">\(u\)</span> and then rotate, or we can rotate <span class="math notranslate nohighlight">\(u\)</span> and then scale.</p></li>
 </ul>
 <figure class="align-default" id="linear-transformation">
 <a class="reference internal image-reference" href="../../_images/linT.gif"><img alt="../../_images/linT.gif" src="../../_images/linT.gif" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">The parallelogram rule for vector addition shows that <span class="math notranslate nohighlight">\(R_\theta(u + v) = R_\theta(u) + R_\theta(v)\)</span>.</span><a class="headerlink" href="#linear-transformation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15.1 </span><span class="caption-text">The parallelogram rule for vector addition shows that <span class="math notranslate nohighlight">\(R_\theta(u + v) = R_\theta(u) + R_\theta(v)\)</span>.</span><a class="headerlink" href="#linear-transformation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-properties-of-linear-transformations admonition">
@@ -491,7 +487,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="q_linear_transformations">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 15.1 </span></p>
 <section id="exercise-content">
 <p>Which of the following functions are linear transformations?</p>
 <p>1. <span class="math notranslate nohighlight">\(T:\mathbb{R}^2\rightarrow\mathbb{R}^2\)</span>,</p>
@@ -507,7 +503,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="matrix-transformations">
-<h2>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.2. </span>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">#</a></h2>
 <p>Now let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix. Then <span class="math notranslate nohighlight">\(A\)</span> defines a function</p>
 <div class="math notranslate nohighlight">
 \[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]</div>
@@ -534,7 +530,7 @@ T(au) = A(au) = aAu = aT(u).
 <p>There is essentially nothing new here, beyond the notation and a slightly different way of thinking about matrix multiplication. In the next section we will see how thinking of a matrix as a transformation allows us to picture its effect geometrically.</p>
 </section>
 <section id="geometrical-interpretation-of-matrices">
-<h2>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.3. </span>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">#</a></h2>
 <p>Consider the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\end{split}\]</div>
@@ -579,7 +575,7 @@ Ae_2 &amp;= \begin{pmatrix}\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\\frac{1
 </div>
 <div class="exercise admonition" id="q_geometrical_description">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 15.2 </span></p>
 <section id="exercise-content">
 <p>Describe the geometrical effect of the following matrices:</p>
 <p>1. <span class="math notranslate nohighlight">\(A = \begin{pmatrix}\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\end{pmatrix}\)</span></p>
@@ -589,7 +585,7 @@ Ae_2 &amp;= \begin{pmatrix}\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\\frac{1
 </div>
 </section>
 <section id="the-matrix-of-a-linear-transformation">
-<h2>The Matrix of a Linear Transformation<a class="headerlink" href="#the-matrix-of-a-linear-transformation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4. </span>The Matrix of a Linear Transformation<a class="headerlink" href="#the-matrix-of-a-linear-transformation" title="Permalink to this headline">#</a></h2>
 <p>In this section will learn that <em>all</em> linear transformations are matrix transformations - in other words, any function <span class="math notranslate nohighlight">\(T\)</span> which satisfies the linearity properties can be written as a matrix <span class="math notranslate nohighlight">\(T(x) = Ax\)</span>. Before doing so, we need the following important notation.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -631,7 +627,7 @@ T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
 </div>
 <div class="exercise admonition" id="q_transformation_matrix">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 15.3 </span></p>
 <section id="exercise-content">
 <p>1. Find the transformation of the basis vectors under reflection in the line <span class="math notranslate nohighlight">\(y=kx, k\in\mathbb{R}\)</span>, giving your answer in terms of the angle between the line and the <span class="math notranslate nohighlight">\(x\)</span>-axis. Hence, find the image of the triangle with vertices <span class="math notranslate nohighlight">\((1,3)\)</span>, <span class="math notranslate nohighlight">\((3,1)\)</span>, <span class="math notranslate nohighlight">\((2,2)\)</span> under reflection in the line <span class="math notranslate nohighlight">\(y=\sqrt{3}x\)</span>.</p>
 <p>2. Sketch the image of the unit square with vertices <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\((0,1)\)</span>, <span class="math notranslate nohighlight">\((1,0)\)</span>, <span class="math notranslate nohighlight">\((1,1)\)</span> under the linear transform <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1 &amp; 0 \\3 &amp; 1 \\\end{array}\right)\)</span>. Try to describe this transformation in words.</p>
@@ -639,7 +635,7 @@ T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
 </div>
 </section>
 <section id="rotation-matrices-in-2d">
-<h2>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.5. </span>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">#</a></h2>
 <p>Suppose the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponds to an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <figure class="align-default" id="la-fig-4">
 <a class="reference internal image-reference" href="../../_images/linear_transformations_5_0.png"><img alt="../../_images/linear_transformations_5_0.png" src="../../_images/linear_transformations_5_0.png" style="height: 300px;" /></a>
@@ -654,91 +650,19 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
 \[\begin{split}R_\theta = \begin{pmatrix}\cos\theta &amp; -\sin\theta\\\sin\theta &amp; \cos\theta\end{pmatrix}.\end{split}\]</div>
 </div>
 </section>
-<section id="the-identity-matrix">
-<h2>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this headline">#</a></h2>
-<p>The identity matrix <span class="math notranslate nohighlight">\(I_n\)</span> is the unique <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix which has the property</p>
-<div class="math notranslate nohighlight">
-\[I_n x = x \]</div>
-<p>for any <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>.</p>
-<p>The identity matrix transforms the vector <span class="math notranslate nohighlight">\(x\)</span> to itself. It plays the same role in matrix multiplication as the number 1 does for multiplication of real numbers.</p>
-<div class="admonition-definition admonition">
-<p class="admonition-title">Definition</p>
-<p>The <strong>identity matrix</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}I_n = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0\\0 &amp; 1 &amp; \cdots &amp; 0\\\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\0&amp; 0 &amp; \cdots &amp; 1\end{pmatrix}.\end{split}\]</div>
-<p>We usually drop the subscript <span class="math notranslate nohighlight">\(n\)</span> when working with the identity matrix, because the order can be inferred.</p>
-</div>
-<div class="exercise admonition" id="q_matrix_identity">
-
-<p class="admonition-title"></p>
-<section id="exercise-content">
-<ol class="simple">
-<li><p>Calculate <span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I\)</span>.</p></li>
-<li><p>Use the identify matrix to factorise <span class="math notranslate nohighlight">\(AB+\lambda B\)</span> where <span class="math notranslate nohighlight">\(\lambda\)</span> is a scalar and <span class="math notranslate nohighlight">\(A,B\)</span> are square matrices.</p></li>
-</ol>
-</section>
-</div>
-</section>
-<section id="composition-of-linear-transformations">
-<h2>Composition of Linear Transformations<a class="headerlink" href="#composition-of-linear-transformations" title="Permalink to this headline">#</a></h2>
-<p>Given two linear transformations <span class="math notranslate nohighlight">\(T:\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span> and <span class="math notranslate nohighlight">\(U:\mathbb{R}^p\rightarrow\mathbb{R}^n\)</span>, the function <span class="math notranslate nohighlight">\(T \circ U:\mathbb{R}^p\rightarrow\mathbb{R}^m\)</span> is the composition of the two functions. That is, the function corresponding to applying first the function <span class="math notranslate nohighlight">\(U\)</span>, then the function <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[(T\circ U)(x) = T(U(x))\]</div>
-<p>If <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(U\)</span> are linear transformations with matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> respectively, then the product matrix <span class="math notranslate nohighlight">\(AB\)</span> represents the composition function <span class="math notranslate nohighlight">\((T\circ U)\)</span>.</p>
-<p>For example, suppose matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> represent reflection in the <span class="math notranslate nohighlight">\(y\)</span>- and <span class="math notranslate nohighlight">\(x\)</span>-axis respectively:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix}-1 &amp;0\\0&amp;1\end{pmatrix}, \quad B = \begin{pmatrix}1 &amp;0\\0&amp;-1\end{pmatrix}.\end{split}\]</div>
-<p>Then the matrix <span class="math notranslate nohighlight">\(AB\)</span> represents a rotation by <span class="math notranslate nohighlight">\(\pi\)</span> around the origin:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}AB = \begin{pmatrix}-1 &amp;0\\0&amp;1\end{pmatrix}\begin{pmatrix}1 &amp;0\\0&amp;-1\end{pmatrix}=\begin{pmatrix}-1 &amp;0\\0&amp;-1\end{pmatrix}.\end{split}\]</div>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
-<p>In <code class="xref std std-numref docutils literal notranslate"><span class="pre">q_transformation_matrix</span></code> we reflected a set of points in the line through the origin at angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis. An equivalent way to do this would be to rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>, reflect in the line <span class="math notranslate nohighlight">\(y=0\)</span> and then rotate back!</p>
-<figure class="align-default" id="three-step">
-<a class="reference internal image-reference" href="../../_images/three-step.png"><img alt="../../_images/three-step.png" src="../../_images/three-step.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-text">Reflection in a line as a three-step process. Equivalent to a reflection in the dashed line, we can 1) rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span> 2) reflect in the horizontal axis 3) rotate anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#three-step" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The transformation matrix for reflection in the line <span class="math notranslate nohighlight">\(y=0\)</span> is just <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1 &amp; 0 \\0 &amp; -1 \\\end{array}\right)\)</span>, since <span class="math notranslate nohighlight">\(x\mapsto x \)</span>, <span class="math notranslate nohighlight">\(y\mapsto -y\)</span>.</p>
-<p>Therefore, in matrix terms, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-A &amp;=
-\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}
-\begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}
-\begin{pmatrix}\cos\theta&amp;\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
-&amp;=
-\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}
-\begin{pmatrix}\cos\theta&amp;\sin\theta\\\sin\theta&amp;-\cos\theta\end{pmatrix}\\
-&amp;=
-\begin{pmatrix}\cos 2\theta&amp;\sin 2\theta\\\sin 2\theta&amp;-\cos 2\theta\end{pmatrix}
-\end{align*}
-\end{split}\]</div>
-<p>which is the result given previously.</p>
-</div>
-<div class="exercise admonition" id="q_transformation_composition">
-
-<p class="admonition-title"></p>
-<section id="exercise-content">
-<p>Use a composition of three matrix transformations to calculate the 2-d transformation matrix for a stretch, scale factor <span class="math notranslate nohighlight">\(k\)</span> parallel to the line <span class="math notranslate nohighlight">\(y=\tan(\theta)x\)</span>.</p>
-</section>
-</div>
-</section>
 <section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
-<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-5">
+<h2><span class="section-number">15.6. </span>solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_linear_transformations"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_linear_transformations"> Exercise 15.1</a></p>
 <section id="solution-content">
 <p>1. and 2. Non-linear.</p>
 <p>3. Linear.</p>
 </section>
 </div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-6">
+<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_geometrical_description"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_geometrical_description"> Exercise 15.2</a></p>
 <section id="solution-content">
 <p>1. <span class="math notranslate nohighlight">\(A = \begin{pmatrix}\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\end{pmatrix}\)</span></p>
 <p><span class="math notranslate nohighlight">\(A\)</span> <em>projects</em> vectors onto the line <span class="math notranslate nohighlight">\(y=x\)</span>.</p>
@@ -748,9 +672,9 @@ A &amp;=
 <p><span class="math notranslate nohighlight">\(C\)</span> represents a vertical <em>shear</em> by a factor <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </section>
 </div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-7">
+<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_matrix"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_matrix"> Exercise 15.3</a></p>
 <section id="solution-content">
 <p>1. The transformation of the basis vectors, shown in the graphic below is:</p>
 <div class="math notranslate nohighlight">
@@ -758,7 +682,7 @@ A &amp;=
 <figure class="align-default" id="reflection">
 <a class="reference internal image-reference" href="../../_images/refl.png"><img alt="../../_images/refl.png" src="../../_images/refl.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-text">reflection of basis vectors in the line <span class="math notranslate nohighlight">\(y=\mathrm{tan}(\theta)x\)</span>.</span><a class="headerlink" href="#reflection" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15.2 </span><span class="caption-text">reflection of basis vectors in the line <span class="math notranslate nohighlight">\(y=\mathrm{tan}(\theta)x\)</span>.</span><a class="headerlink" href="#reflection" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>and so the transformation matrix is <span class="math notranslate nohighlight">\(T=\left(\begin{array}{cc}\cos 2\theta &amp; \sin 2\theta \\ \sin 2\theta &amp; -\cos 2 \theta \end{array}\right)\)</span></p>
@@ -770,7 +694,7 @@ A &amp;=
 <figure class="align-default" id="reflected-triangle">
 <a class="reference internal image-reference" href="../../_images/triangles.png"><img alt="../../_images/triangles.png" src="../../_images/triangles.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">reflected triangle.</span><a class="headerlink" href="#reflected-triangle" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15.3 </span><span class="caption-text">reflected triangle.</span><a class="headerlink" href="#reflected-triangle" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>2.</p>
@@ -778,37 +702,12 @@ A &amp;=
 <figure class="align-default" id="vertical-shear">
 <a class="reference internal image-reference" href="../../_images/vshear.gif"><img alt="../../_images/vshear.gif" src="../../_images/vshear.gif" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">vertical shear.</span><a class="headerlink" href="#vertical-shear" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15.4 </span><span class="caption-text">vertical shear.</span><a class="headerlink" href="#vertical-shear" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that we can write this transform as <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1 &amp; 0 \\0 &amp; 1 \\\end{array}\right)+\left(\begin{array}{cc}0 &amp; 0 \\k &amp; 0 \\\end{array}\right)\)</span>.</p>
 <p>The first term is just the identity matrix that maps points to themselves, and the second term transforms the y coordinate of each point by an amount proportional to the <span class="math notranslate nohighlight">\(x\)</span> coordinate, so points that are further from the <span class="math notranslate nohighlight">\(y\)</span>-axis are stretched more. This type of transform is known as a vertical shear.</p>
 <p>We can achieve the same effect parallel to the horizontal axis by taking the transform (known as horizontal shear by taking the transform <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1&amp;k\\0&amp;1\end{array}\right)\)</span>.</p>
-</section>
-</div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-8">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_identity"> Exercise </a></p>
-<section id="solution-content">
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I = \begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(AB+\lambda B = (A+\lambda I)B\)</span>.</p></li>
-</ol>
-</section>
-</div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems/linear_maps-solution-9">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_composition"> Exercise </a></p>
-<section id="solution-content">
-<p>We can describe this transformation as a rotation by <span class="math notranslate nohighlight">\(\theta\)</span> followed by a scale 2 stretch parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis followed by a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-A &amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}2&amp;0\\0&amp;1\end{pmatrix}\begin{pmatrix}\cos\theta&amp;\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
-&amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}2\cos\theta&amp;2\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
-&amp;=\begin{pmatrix}k\cos^2\theta+\sin^2\theta &amp; \frac{k-1}{2}\sin 2\theta\\\frac{k-1}{2}\sin 2\theta &amp; k\cos^2\theta+\sin^2\theta\end{pmatrix}
-\end{align*}
-\end{split}\]</div>
 </section>
 </div>
 </section>
@@ -841,6 +740,13 @@ A &amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="subspaces.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">14. </span>Linear Subspaces</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

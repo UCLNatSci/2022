@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Linear Subspaces &#8212; Mathematics for Natural Sciences 2</title>
+    <title>14. Linear Subspaces &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="15. Linear Transformations" href="linear_maps.html" />
+    <link rel="prev" title="13. Linear Independence and Bases" href="linear_independence.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -175,6 +177,21 @@ const thebe_selector_output = ".output, .cell_output"
    <span class="math notranslate nohighlight">
     \(Ax = b\)
    </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linear_independence.html">
+   13. Linear Independence and Bases
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   14. Linear Subspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linear_maps.html">
+   15. Linear Transformations
   </a>
  </li>
 </ul>
@@ -287,12 +304,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#column-space">
+   14.1. Column Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#null-space">
+   14.2. Null Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-bases-for-the-null-space-and-column-space">
+   14.3. Calculating Bases for the Null Space and Column Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rank-nullity-theorem">
+   14.4. Rank-Nullity Theorem
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -304,6 +360,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#column-space">
+   14.1. Column Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#null-space">
+   14.2. Null Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-bases-for-the-null-space-and-column-space">
+   14.3. Calculating Bases for the Null Space and Column Space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rank-nullity-theorem">
+   14.4. Rank-Nullity Theorem
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -312,21 +396,122 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="linear-subspaces">
-<h1>Linear Subspaces<a class="headerlink" href="#linear-subspaces" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">14. </span>Linear Subspaces<a class="headerlink" href="#linear-subspaces" title="Permalink to this headline">#</a></h1>
+<p>Two important definitions.</p>
+<section id="column-space">
+<h2><span class="section-number">14.1. </span>Column Space<a class="headerlink" href="#column-space" title="Permalink to this headline">#</a></h2>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Definition</div>
-<p class="sd-card-text"><strong>Null space and special solutions</strong></p>
-<p class="sd-card-text">The <strong>null space</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is the full solution to the equation</p>
+<p class="sd-card-text">The <strong>column space</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is the span (all linear combinations) of the columns of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Col}(A) = \mathrm{Span}\left(\left\{v_1, \ldots, v_n\right\}\right)\]</div>
+<p class="sd-card-text">where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}|&amp;|&amp;&amp;|\\v_1&amp;v_2&amp;\cdots&amp;v_n\\|&amp;|&amp;&amp;|\end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate the column space of
+<span class="math notranslate nohighlight">\(A = \begin{pmatrix}1&amp;1\\1&amp;1\\1&amp;1\end{pmatrix}\)</span>.</p>
+<p><strong>Solution</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Col}(A) = \mathrm{Span}\left\{\begin{pmatrix}1\\1\\1\end{pmatrix},\begin{pmatrix}1\\1\\1\end{pmatrix}\right\} = \mathrm{Span}\left\{\begin{pmatrix}1\\1\\1\end{pmatrix}\right\}.\end{split}\]</div>
+<p>The column space of <span class="math notranslate nohighlight">\(A\)</span> is a straight line through the origin in the direction <span class="math notranslate nohighlight">\(\begin{pmatrix}1\\1\\1\end{pmatrix}\)</span>.</p>
+</div>
+<p>The column space of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is the set of all possible values of <span class="math notranslate nohighlight">\(Ax\)</span> for any <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+</section>
+<section id="null-space">
+<h2><span class="section-number">14.2. </span>Null Space<a class="headerlink" href="#null-space" title="Permalink to this headline">#</a></h2>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Definition</div>
+<p class="sd-card-text">The <strong>null space</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is the set of all solutions to the equation</p>
 <div class="math notranslate nohighlight">
 \[Ax=0.\]</div>
-<p class="sd-card-text">For each free variable <span class="math notranslate nohighlight">\(x_i\)</span> in the echelon form of <span class="math notranslate nohighlight">\(A\)</span> there is a <strong>special solution</strong> <span class="math notranslate nohighlight">\(v_i\)</span> found by setting <span class="math notranslate nohighlight">\(x_i\)</span> to <span class="math notranslate nohighlight">\(1\)</span> and all other free variables to <span class="math notranslate nohighlight">\(0\)</span>.</p>
-<p class="sd-card-text">The null space is all linear combinations of the special solutions:</p>
+<p class="sd-card-text">The null space of <span class="math notranslate nohighlight">\(A\)</span> is also written <span class="math notranslate nohighlight">\(\mathrm{Null}(A)\)</span>.</p>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate the null space of
+<span class="math notranslate nohighlight">\(A = \begin{pmatrix}1&amp;1\\1&amp;1\\1&amp;1\end{pmatrix}\)</span>.</p>
+<p><strong>Solution</strong></p>
+<p>The reduced row echelon form of <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(\begin{pmatrix}1&amp;1\\0&amp;0\\0&amp;0\end{pmatrix}\)</span>.</p>
+<p>This gives the equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 0\)</span>, or:</p>
 <div class="math notranslate nohighlight">
-\[t_1v_1 + \cdots + t_kv_k\quad \mathrm{for}\quad t_i\in\mathbb{R}.\]</div>
+\[\begin{split}\begin{align*}
+x_1 &amp;= -x_2\\
+x_2 &amp;= x_1\end{align*}\end{split}\]</div>
+<p>which results in parametric vector form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}x_1\\x_2\end{pmatrix} = \begin{pmatrix}-1\\1\end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Null}(A) = \mathrm{Span}\left\{\begin{pmatrix}-1\\1\end{pmatrix}\right\}.\end{split}\]</div>
+<p>The null space of <span class="math notranslate nohighlight">\(A\)</span> is a straight line through the origin in the direction <span class="math notranslate nohighlight">\(\begin{pmatrix}-1\\1\end{pmatrix}\)</span>.</p>
+</div>
+</section>
+<section id="calculating-bases-for-the-null-space-and-column-space">
+<h2><span class="section-number">14.3. </span>Calculating Bases for the Null Space and Column Space<a class="headerlink" href="#calculating-bases-for-the-null-space-and-column-space" title="Permalink to this headline">#</a></h2>
+<p>In the example above, we noticed that the column space of <span class="math notranslate nohighlight">\(A\)</span> was the span of two vectors, but that because the two vectors were linearly dependent we could more compactly write the column space as the span of a single vector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{Col}(A) = \mathrm{Span}\left\{\begin{pmatrix}1\\1\\1\end{pmatrix},\begin{pmatrix}1\\1\\1\end{pmatrix}\right\} = \mathrm{Span}\left\{\begin{pmatrix}1\\1\\1\end{pmatrix}\right\}.\end{split}\]</div>
+<p>In fact, <span class="math notranslate nohighlight">\(\left\{\begin{pmatrix}1\\1\\1\end{pmatrix}\right\}\)</span>is a basis for the column space of <span class="math notranslate nohighlight">\(A\)</span>. It turns out that we can write a basis for the column space and null space of a matrix using its reduced row echelon form.</p>
+<div class="admonition-basis-for-the-column-space-and-null-space admonition">
+<p class="admonition-title">Basis for the Column Space and Null Space</p>
+<p><strong>The pivot columns of <span class="math notranslate nohighlight">\(A\)</span> form a basis for <span class="math notranslate nohighlight">\(\mathrm{Col}(A)\)</span>.</strong></p>
+<p><strong>The vectors in the parametric vector form of the general solution to <span class="math notranslate nohighlight">\(Ax = 0\)</span> form a basis for <span class="math notranslate nohighlight">\(\mathrm{Null}(A)\)</span>.</strong></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate bases for the column space and null space of</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1&amp;2&amp;0&amp;-1\\-2&amp;-3&amp;4&amp;5\\2&amp;4&amp;0&amp;-2\end{pmatrix}.\end{split}\]</div>
+<p><strong>Solution</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1&amp;2&amp;0&amp;-1\\-2&amp;-3&amp;4&amp;5\\2&amp;4&amp;0&amp;-2\end{pmatrix} \xrightarrow{\mathrm{RREF}} \begin{pmatrix}1&amp;0&amp;-8&amp;-7\\0&amp;1&amp;4&amp;3\\0&amp;0&amp;0&amp;0\end{pmatrix}.\end{split}\]</div>
+<p>The first two columns are the pivot columns, therefore the first two columns of <span class="math notranslate nohighlight">\(A\)</span> form a basis for <span class="math notranslate nohighlight">\(\mathrm{Col}(A)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin{pmatrix}1\\-2\\2\end{pmatrix}, \begin{pmatrix}2\\-3\\4\end{pmatrix}\right\}.\end{split}\]</div>
+<p>To find a basis for the null space, use the RREF to write the solution to <span class="math notranslate nohighlight">\(Ax = 0\)</span> in parametric form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = x_3\begin{pmatrix}8\\-4\\1\\0\end{pmatrix} + x_4\begin{pmatrix}7\\-3\\0\\1\end{pmatrix}\end{split}\]</div>
+<p>which gives the following basis for <span class="math notranslate nohighlight">\(\mathrm{Null}(A)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin{pmatrix}8\\-4\\1\\0\end{pmatrix}, \begin{pmatrix}7\\-3\\0\\1\end{pmatrix}\right\}.\end{split}\]</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Definition</div>
+<p class="sd-card-text">The vectors in the basis of <span class="math notranslate nohighlight">\(\mathrm{Null}(A)\)</span> found from the reduced row echelon form of <span class="math notranslate nohighlight">\(A\)</span> are called the <strong>special solutions</strong> to <span class="math notranslate nohighlight">\(Ax=0\)</span>.</p>
 </div>
 </div>
+</section>
+<section id="rank-nullity-theorem">
+<h2><span class="section-number">14.4. </span>Rank-Nullity Theorem<a class="headerlink" href="#rank-nullity-theorem" title="Permalink to this headline">#</a></h2>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Definition</div>
+<p class="sd-card-text">The number of vectors in a basis for the column space of <span class="math notranslate nohighlight">\(A\)</span> is called the <strong>rank</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p class="sd-card-text">The number of vectors in a basis for the null space of <span class="math notranslate nohighlight">\(A\)</span> is called the <strong>nullity</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+</div>
+<p>In the previous example we saw that The rank of <span class="math notranslate nohighlight">\(A\)</span> is the the same as the number of pivots in the RREF of <span class="math notranslate nohighlight">\(A\)</span>, and the nullity of <span class="math notranslate nohighlight">\(A\)</span> is the same as the number of free variables. The sum of these must be the number of columns in <span class="math notranslate nohighlight">\(A\)</span>, which gives us a very important result called the <strong>rank-nullity theorem</strong>.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+The Rank-Nullity Theorem</div>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix. Then</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Rank}(A) + \mathrm{Nullity}(A) = n.\]</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -356,6 +541,20 @@ Definition</div>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="linear_independence.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">13. </span>Linear Independence and Bases</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="linear_maps.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Linear Transformations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Linear Algebra Problems 1 &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Composing Linear Functions &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -160,17 +160,17 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/echelon_form.html">
+  <a class="reference internal" href="echelon_form.html">
    10. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/vectors.html">
+  <a class="reference internal" href="vectors.html">
    11. Vectors
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/matrix_equations.html">
+  <a class="reference internal" href="matrix_equations.html">
    12. Matrix Equation
    <span class="math notranslate nohighlight">
     \(Ax = b\)
@@ -178,17 +178,17 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/linear_independence.html">
+  <a class="reference internal" href="linear_independence.html">
    13. Linear Independence and Bases
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/subspaces.html">
+  <a class="reference internal" href="subspaces.html">
    14. Linear Subspaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../linear_systems/linear_maps.html">
+  <a class="reference internal" href="linear_maps.html">
    15. Linear Transformations
   </a>
  </li>
@@ -265,7 +265,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/LinearAlgebra/problems/problems_1.md"
+        <a href="../../_sources/LinearAlgebra/linear_systems/composition.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -325,33 +325,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   Question 1
+  <a class="reference internal nav-link" href="#the-identity-matrix">
+   The identity matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
+  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
+   Composition of Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   Question 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-4">
-   Question 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-5">
-   Question 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-6">
-   Question 6
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
   </a>
  </li>
 </ul>
@@ -363,7 +348,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Linear Algebra Problems 1</h1>
+                <h1>Composing Linear Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -374,33 +359,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   Question 1
+  <a class="reference internal nav-link" href="#the-identity-matrix">
+   The identity matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
+  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
+   Composition of Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   Question 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-4">
-   Question 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-5">
-   Question 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-6">
-   Question 6
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
   </a>
  </li>
 </ul>
@@ -413,95 +383,107 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-problems-1">
-<h1>Linear Algebra Problems 1<a class="headerlink" href="#linear-algebra-problems-1" title="Permalink to this headline">#</a></h1>
-<section id="question-1">
-<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h2>
-<!-- Yutsumura 267 -->
-<p>Solve the following system of linear equations by transforming its augmented matrix to reduced echelon form. Which are the free variables and pivot variables? Write your answer in the form <span class="math notranslate nohighlight">\(v_0 + t_1v_1 + \cdots + t_kv_k\)</span> where <span class="math notranslate nohighlight">\(t_i \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(v_i\)</span> are vectors of length <span class="math notranslate nohighlight">\(5\)</span>. Describe the solution geometrically.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="composing-linear-functions">
+<h1>Composing Linear Functions<a class="headerlink" href="#composing-linear-functions" title="Permalink to this headline">#</a></h1>
+<section id="the-identity-matrix">
+<h2>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this headline">#</a></h2>
+<p>The identity matrix <span class="math notranslate nohighlight">\(I_n\)</span> is the unique <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix which has the property</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-x_1 - x_3 - 3x_5 &amp;= 1\\
-3x_1 + x_2 - x_3 + x_4 - 9x_5 &amp;= 3\\
-x_1 - x_3 + x_4 - 2x_5 &amp;= 1.
-\end{align}
-\end{split}\]</div>
-</section>
-<section id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h2>
-<!---
-Strang 3.2 Q1
--->
-<p>1. Reduce <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> to row echelon form. Which columns correspond to free variables?</p>
-<p>a) <span class="math notranslate nohighlight">\(A = \begin{pmatrix}
-1 &amp; 2 &amp; 2 &amp; 4 &amp; 6\\
-1 &amp; 2 &amp; 3 &amp; 6 &amp; 9\\
-0 &amp; 0 &amp; 1 &amp; 2 &amp; 3
-\end{pmatrix}\)</span>
-b) <span class="math notranslate nohighlight">\(B = \begin{pmatrix}
-2 &amp; 4 &amp; 2\\
-0 &amp; 4 &amp; 4\\
-0 &amp; 8 &amp; 8\\
-\end{pmatrix}\)</span></p>
-<p>2. For the matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, find a special solution for each free variable.</p>
-<p>3. Calculate the null space of each matrix.</p>
-<p>4. <em>True or false, with explanation</em>: The null space of a matrix is the same as the null space of its reduced echelon form.</p>
-</section>
-<section id="question-3">
-<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h2>
-<!---
-Strang 3.2 Q32
--->
-<p>Kirchoff’s Law states that at a junction of an electrical circuit <span class="math notranslate nohighlight">\(\mathrm{current~in}=\mathrm{current~out}\)</span>. At junction <span class="math notranslate nohighlight">\(1\)</span> this says that <span class="math notranslate nohighlight">\(y_3 = y_1+y_4\)</span>.</p>
-<a class="reference internal image-reference" href="../../_images/kirchoff.png"><img alt="Electrical circuit" class="align-center" src="../../_images/kirchoff.png" style="width: 300px;" /></a>
+\[I_n x = x \]</div>
+<p>for any <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>.</p>
+<p>The identity matrix transforms the vector <span class="math notranslate nohighlight">\(x\)</span> to itself. It plays the same role in matrix multiplication as the number 1 does for multiplication of real numbers.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>identity matrix</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n = \begin{pmatrix}1 &amp; 0 &amp; \cdots &amp; 0\\0 &amp; 1 &amp; \cdots &amp; 0\\\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\0&amp; 0 &amp; \cdots &amp; 1\end{pmatrix}.\end{split}\]</div>
+<p>We usually drop the subscript <span class="math notranslate nohighlight">\(n\)</span> when working with the identity matrix, because the order can be inferred.</p>
+</div>
+<div class="exercise admonition" id="q_matrix_identity">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
 <ol class="simple">
-<li><p>Write the four equations for Kirchoff’s Law at each of the four nodes.</p></li>
-<li><p>Reduce the resulting matrix to reduced row echelon form.</p></li>
-<li><p>Write down the three special solutions.</p></li>
-<li><p>Calculate the full solution to the system in vector form.</p></li>
+<li><p>Calculate <span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I\)</span>.</p></li>
+<li><p>Use the identify matrix to factorise <span class="math notranslate nohighlight">\(AB+\lambda B\)</span> where <span class="math notranslate nohighlight">\(\lambda\)</span> is a scalar and <span class="math notranslate nohighlight">\(A,B\)</span> are square matrices.</p></li>
 </ol>
 </section>
-<section id="question-4">
-<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
-<!-- Yutsumura 87 -->
-<p>Find a cubic polynomial</p>
-<div class="math notranslate nohighlight">
-\[p(x) = a + bx + cx^2 + dx^3\]</div>
-<p>such that <span class="math notranslate nohighlight">\(p(1) = 1, p'(1)=5, p(-1)=3\)</span> and <span class="math notranslate nohighlight">\(p'(-1)=1\)</span>.</p>
+</div>
 </section>
-<section id="question-5">
-<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">#</a></h2>
-<!-- Yutsumura 272 -->
-<p>Let</p>
+<section id="composition-of-linear-transformations">
+<h2>Composition of Linear Transformations<a class="headerlink" href="#composition-of-linear-transformations" title="Permalink to this headline">#</a></h2>
+<p>Given two linear transformations <span class="math notranslate nohighlight">\(T:\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span> and <span class="math notranslate nohighlight">\(U:\mathbb{R}^p\rightarrow\mathbb{R}^n\)</span>, the function <span class="math notranslate nohighlight">\(T \circ U:\mathbb{R}^p\rightarrow\mathbb{R}^m\)</span> is the composition of the two functions. That is, the function corresponding to applying first the function <span class="math notranslate nohighlight">\(U\)</span>, then the function <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix}1 &amp; 3\\ 2 &amp; 4\end{pmatrix}.\end{split}\]</div>
-<p>1. Find all matrices</p>
+\[(T\circ U)(x) = T(U(x))\]</div>
+<p>If <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(U\)</span> are linear transformations with matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> respectively, then the product matrix <span class="math notranslate nohighlight">\(AB\)</span> represents the composition function <span class="math notranslate nohighlight">\((T\circ U)\)</span>.</p>
+<p>For example, suppose matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> represent reflection in the <span class="math notranslate nohighlight">\(y\)</span>- and <span class="math notranslate nohighlight">\(x\)</span>-axis respectively:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}B = \begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}\end{split}\]</div>
-<p>such that <span class="math notranslate nohighlight">\(AB=BA\)</span>.</p>
-<p>2. Use your answer to part 1 to find a <span class="math notranslate nohighlight">\((2 \times 2)\)</span> matrix <span class="math notranslate nohighlight">\(C\)</span> such that <span class="math notranslate nohighlight">\(AC\neq CA\)</span>.</p>
+\[\begin{split}A = \begin{pmatrix}-1 &amp;0\\0&amp;1\end{pmatrix}, \quad B = \begin{pmatrix}1 &amp;0\\0&amp;-1\end{pmatrix}.\end{split}\]</div>
+<p>Then the matrix <span class="math notranslate nohighlight">\(AB\)</span> represents a rotation by <span class="math notranslate nohighlight">\(\pi\)</span> around the origin:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB = \begin{pmatrix}-1 &amp;0\\0&amp;1\end{pmatrix}\begin{pmatrix}1 &amp;0\\0&amp;-1\end{pmatrix}=\begin{pmatrix}-1 &amp;0\\0&amp;-1\end{pmatrix}.\end{split}\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>In <a class="reference internal" href="linear_maps.html#q_transformation_matrix"><span class="std std-numref">Exercise 15.3</span></a> we reflected a set of points in the line through the origin at angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis. An equivalent way to do this would be to rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>, reflect in the line <span class="math notranslate nohighlight">\(y=0\)</span> and then rotate back!</p>
+<figure class="align-default" id="three-step">
+<a class="reference internal image-reference" href="../../_images/three-step.png"><img alt="../../_images/three-step.png" src="../../_images/three-step.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Reflection in a line as a three-step process. Equivalent to a reflection in the dashed line, we can 1) rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span> 2) reflect in the horizontal axis 3) rotate anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#three-step" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The transformation matrix for reflection in the line <span class="math notranslate nohighlight">\(y=0\)</span> is just <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1 &amp; 0 \\0 &amp; -1 \\\end{array}\right)\)</span>, since <span class="math notranslate nohighlight">\(x\mapsto x \)</span>, <span class="math notranslate nohighlight">\(y\mapsto -y\)</span>.</p>
+<p>Therefore, in matrix terms, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+A &amp;=
+\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}
+\begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}
+\begin{pmatrix}\cos\theta&amp;\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
+&amp;=
+\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}
+\begin{pmatrix}\cos\theta&amp;\sin\theta\\\sin\theta&amp;-\cos\theta\end{pmatrix}\\
+&amp;=
+\begin{pmatrix}\cos 2\theta&amp;\sin 2\theta\\\sin 2\theta&amp;-\cos 2\theta\end{pmatrix}
+\end{align*}
+\end{split}\]</div>
+<p>which is the result given previously.</p>
+</div>
+<div class="exercise admonition" id="q_transformation_composition">
+
+<p class="admonition-title"></p>
+<section id="exercise-content">
+<p>Use a composition of three matrix transformations to calculate the 2-d transformation matrix for a stretch, scale factor <span class="math notranslate nohighlight">\(k\)</span> parallel to the line <span class="math notranslate nohighlight">\(y=\tan(\theta)x\)</span>.</p>
 </section>
-<section id="question-6">
-<h2>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">#</a></h2>
-<!-- https://people.math.carleton.ca/~kcheung/math/notes/MATH1107/wk05/05_elementary_matrices_example.html -->
-<p>Let</p>
+</div>
+</section>
+<section id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<div class="solution admonition" id="LinearAlgebra/linear_systems/composition-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_identity"> Exercise </a></p>
+<section id="solution-content">
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I = \begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(AB+\lambda B = (A+\lambda I)B\)</span>.</p></li>
+</ol>
+</section>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems/composition-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_composition"> Exercise </a></p>
+<section id="solution-content">
+<p>We can describe this transformation as a rotation by <span class="math notranslate nohighlight">\(\theta\)</span> followed by a scale 2 stretch parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis followed by a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}M = \begin{pmatrix}1 &amp; 0 &amp; 2\\-2 &amp; 0 &amp; -3\\0 &amp; 2 &amp; 0\end{pmatrix}.\end{split}\]</div>
-<p>We can reduce <span class="math notranslate nohighlight">\(M\)</span> to reduced row echelon form by performing a sequence of <em>elementary row operations</em>. The first elementary row operation is <span class="math notranslate nohighlight">\(r_2 + 2r_1 \rightarrow r_2\)</span>.</p>
-<p>An <em>elementary matrix</em> is a matrix which has the same effect as an elementary row operation. For example, left-multiplying by</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}E_1 = \begin{pmatrix}1 &amp; 0 &amp; 0\\2 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{pmatrix}\end{split}\]</div>
-<p>has the same effect as the elementary row operation <span class="math notranslate nohighlight">\(r_2 + 2r_1 \rightarrow r_2\)</span>.</p>
-<p>1. Calculate <span class="math notranslate nohighlight">\(E_1M\)</span> to show that left-multiplying by <span class="math notranslate nohighlight">\(E_1\)</span> has the same effect as the elementary row operation on the matrix <span class="math notranslate nohighlight">\(M\)</span>.</p>
-<p>2. Determine the elementary matrix <span class="math notranslate nohighlight">\(E_2\)</span> that has the same effect as the elementary row operation <span class="math notranslate nohighlight">\(r_2 \leftrightarrow r_3\)</span> which swaps row 2 and row 3, then calculate <span class="math notranslate nohighlight">\(E_2\left(E_1M\right)\)</span>.</p>
-<p>3. Determine the remaining two elementary row operations that reduce the matrix <span class="math notranslate nohighlight">\(M\)</span> to row reduced form and calculate the elementary matrices <span class="math notranslate nohighlight">\(E_3\)</span> and <span class="math notranslate nohighlight">\(E_4\)</span>.</p>
-<p>4. Calculate the matrix <span class="math notranslate nohighlight">\(A = E_4E_3E_2E_1\)</span> and check that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}AM = \begin{pmatrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{pmatrix}.\end{split}\]</div>
-<p>5. Use your answer to part 4 to solve the equation <span class="math notranslate nohighlight">\(Mx=b\)</span> where</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}b = \begin{pmatrix}4\\2\\-1\end{pmatrix}.\end{split}\]</div>
+\[\begin{split}
+\begin{align*}
+A &amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}2&amp;0\\0&amp;1\end{pmatrix}\begin{pmatrix}\cos\theta&amp;\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
+&amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}2\cos\theta&amp;2\sin\theta\\-\sin\theta&amp;\cos\theta\end{pmatrix}\\
+&amp;=\begin{pmatrix}k\cos^2\theta+\sin^2\theta &amp; \frac{k-1}{2}\sin 2\theta\\\frac{k-1}{2}\sin 2\theta &amp; k\cos^2\theta+\sin^2\theta\end{pmatrix}
+\end{align*}
+\end{split}\]</div>
+</section>
+</div>
 </section>
 </section>
 
@@ -518,7 +500,7 @@ Strang 3.2 Q32
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./LinearAlgebra\problems"
+            path: "./LinearAlgebra\linear_systems"
         },
         predefinedOutput: true
     }

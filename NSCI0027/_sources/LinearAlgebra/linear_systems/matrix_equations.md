@@ -20,7 +20,7 @@ $Ax$ is a vector in $\mathbb{R}^m$.
 
 In order for $Ax$ to make sense, the number of entries of $x$ has to be the same as the number of columns of $A$. We are using the entries of $x$ as the coefficients of the columns of $A$ in a linear combination. The resulting vector has the same number of entries as the number of rows of $A$, since each column of $A$ has that number of entries.
 
-Note that this definition of muliplication of a vector by a matrixaccords exactly with the definition you already studied for multiplying a matrix by a matrix.
+Note that this definition of muliplication of a vector by a matrix accords exactly with the definition you already studied for multiplying a matrix by a matrix.
 
 :::{admonition} Example
 :class: tip
