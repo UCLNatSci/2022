@@ -32,7 +32,19 @@ Don't get too stuck with this part! If you're not sure how to proceed then pleas
 
 ## Drosophila Connectome Data
 
-*Further Information will appear here*.
+The connectome data can be found [here](https://dvid.io/blog/release-v1.2/#downloads). Select the link 'a compact (44MB) data model' to download the dataset. First you'll need to uncompress the file - you may need to download a utility such as 7Zip to do this.
+
+Inside you will find three files `traced-neurons.csv`, `traced-roi-connections.csv` and `traced-total-connections.csv`. `traced-neurons.csv` contains information just about the neurons (the nodes of the graph) and the other two contain the graph connectivity data in edge list form. `traced-roi-connections.csv` contains additional information about each synapse (which are the graph edges) indicating which brain region it resides in.
+
+The Paper {cite:p}`xu2020connectome` describes how the data was collected. The researchers collected a huge amount of data by imaging brain slices, and from this they determined the connectivity data. The paper contains a lot of information about how the data was collected, most of which you do not need to read in any detail; however you should definitely read Section 1 (Introduction) which contains useful background.
+
+The complete graph is gigantic so I suggest that you pick a single brain region to analyse. The file `traced-roi-connections.csv` breaks down the graph by brain region.
+
+The data files are in `csv` ('comma separated values') format. You should open the files in a text editor to understand how they are formatted. Your computer might try to open then in Excel or another spreadsheet program --- avoid this and instead use a text editor so that you can view the raw data.
+
+The easiest way to import the data into Python is to use the `Pandas` Library. Use the function `Pandas.read_csv` to import the data as a DataFrame, then `NetworkX` has a function `from_pandas_dataframe` which will convert it to a graph.
+
+You will notice that the data contains a column called 'weight'. This column describes the strength of each synaptic connection, so you'll have to decide how best to handle this value (perhaps by setting a threshold).
 
 ## Schedule
 
