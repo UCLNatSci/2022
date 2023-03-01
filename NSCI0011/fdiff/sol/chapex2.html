@@ -59,6 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter exercise 4.3" href="chapex3.html" />
     <link rel="prev" title="Chapter exercise 1.3" href="chapex1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -160,6 +161,55 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Boundary Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/background.html">
+   7. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/fixed_point.html">
+   8. fixed point
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/heat.html">
+   9. Partial BVP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/cauchy-pde.html">
+   10. Non-steady BVPs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Other material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../old/multistage.html">
+   11. Multi-stage methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../old/pde_theory.html">
+   12. (some) PDE theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../old/junkyard.html">
+   13. Junkyard
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
@@ -172,6 +222,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Chapter exercise 3.5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex3.html">
+   Chapter exercise 4.3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex4.html">
+   Chapter exercise 5.4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex5.html">
+   Chapter exercise 6.4
   </a>
  </li>
 </ul>
@@ -453,8 +518,8 @@ title="Print to PDF"
 <section id="question">
 <h2>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h2>
 <p>The logistic function is given by the following expression in which parameters <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(r\)</span> are constants determining the location, scale and shape of the curve:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-422b59b3-390b-4f59-accc-308ae05ff511">
-<span class="eqno">(2)<a class="headerlink" href="#equation-422b59b3-390b-4f59-accc-308ae05ff511" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bf28be39-42f2-4c99-8e79-4410f5637037">
+<span class="eqno">(2)<a class="headerlink" href="#equation-bf28be39-42f2-4c99-8e79-4410f5637037" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x=\frac{C}{1+e^{-r(t-t_0)}}.
 \end{equation}\]</div>
 <p>Taking a step size <code class="docutils literal notranslate"><span class="pre">h=1e-3</span></code> and with paramater values <span class="math notranslate nohighlight">\(t_0=3\)</span>, <span class="math notranslate nohighlight">\(C=75\)</span>, <span class="math notranslate nohighlight">\(r=1.5\)</span>, numerically estimate the second derivative of the logistic function:</p>
@@ -462,8 +527,8 @@ x=\frac{C}{1+e^{-r(t-t_0)}}.
 (b) using the central difference formula.</p>
 <p>You will need to extend the function estimate at <em>two</em> exterior points to obtain a result for the derivative at each point in the interval.</p>
 <p>Plot the error in each of your estimates, given that the analytic result satisfies the equation below, and write a short explanation of your findings.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc85ddd3-3b01-4836-ab8b-28e11c784126">
-<span class="eqno">(3)<a class="headerlink" href="#equation-fc85ddd3-3b01-4836-ab8b-28e11c784126" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-771a0069-16e2-4fd7-bd0e-12fe0b6541ad">
+<span class="eqno">(3)<a class="headerlink" href="#equation-771a0069-16e2-4fd7-bd0e-12fe0b6541ad" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = \frac{r^2 x(C-x)(C-2x)}{C^2}.
 \end{equation}\]</div>
 <div class="admonition note">
@@ -553,6 +618,13 @@ y^{\prime\prime}_k = \frac{y_{k-1}-2y_k+y_{k+1}}{h^2} + \mathcal{O}(h^2)
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Chapter exercise 1.3</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="chapex3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter exercise 4.3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Chapter exercise 1.3
+# Chapter 1 exercise
 
 ## Question
 

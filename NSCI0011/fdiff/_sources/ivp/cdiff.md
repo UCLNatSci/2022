@@ -53,6 +53,13 @@ Application of the midpoint rule results in the following formula, which require
 \frac{x_{k+1}-x_{k-1}}{2h} = f(t_k,x_k) \qquad \implies \qquad x_{k+1}=x_{k-1}+2hf(t_k,x_k).
 \end{equation}
 
+An illustration of the algorithm is shown below:
+
+```{image} ../images/first_order_mid.png
+:alt: forward stepping
+:align: center
+```
+
 The IVP gives us only one starting point, but we can estimate a second starting point by using the explicit Euler formula for the first step only. Although this formula is an order of accuracy worse than the midpoint formula, we will only use it for a single step.
 
 The code below implements the algorithm for our example problem, using various step sizes to explore the effect on the error. The output is a table of the maximum errors for each step size, from which it can be seen that the errors scale with $h^2$. Decreasing the step size by a factor of two decreases the error by a factor of four:
@@ -170,6 +177,13 @@ Subsituting the second derivative midpoint formula into {eq}`6-6` gives
 \frac{x_{k+1}-2x_k+x_{k-1}}{h^2}=\sin\left(t_k+\frac{\pi}{4}\right) \qquad \implies \qquad x_{k+1}=2x_k-x_{k-1}+h^2 \sin\left(t_k+\frac{\pi}{4}\right)
 \end{equation}
 
+An illustration of the algorithm is shown below:
+
+```{image} ../images/second_order_mid1.png
+:alt: forward stepping
+:align: center
+```
+
 Again, we require two starting points and it is natural for us to try using the explicit Euler formula for the first step. Unfortunately, it turns out that doing so contaminates the accuracy of the entire solution and results in global accuracy no better than $\mathcal{O}(h)$, as demonstrated below:
 
 ```{code-cell}
@@ -209,9 +223,17 @@ The trick involves the introduction of a "ghost point" $x_{-1}$ outside the solu
 \frac{x_1-x_{-1}}{2h}=x_0^{\prime}.
 \end{equation}
 
+A graphical illustration of the method is shown below:
+
+```{image} ../images/second_order_mid2.png
+:alt: forward stepping
+:align: center
+```
+
+
 ```{exercise}
 
-By combining the equation above with the second differerence update rule and initial value $x_0$, obtain a result for $x_1$. Replace the explicit Euler step with your result, and show the the global error is reduced to $\mathcal{O}(h^2)$.
+By combining the boundary equation above with the second differerence update rule and initial value $x_0$, obtain a result for $x_1$.<br> Replace the explicit Euler step with your result, and show the the global error is reduced to $\mathcal{O}(h^2)$.
 ```
 
 ````{toggle}
@@ -254,7 +276,7 @@ Implement the midpoint method using the second derivative rule to solve the foll
 The analytic solution of this IVP is given by
 
 \begin{equation}
-x = e^{-3t}\cos(3t).
+x = e^{-t}\cos(3t).
 \end{equation}
 
 A plot of the analytic solution is shown below:

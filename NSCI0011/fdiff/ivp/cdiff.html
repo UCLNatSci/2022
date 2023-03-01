@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Chapter exercise 1.3" href="../sol/chapex1.html" />
+    <link rel="next" title="7. Preliminaries" href="../bvp/background.html" />
     <link rel="prev" title="5. Stability and stiffness" href="stability.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -161,18 +161,55 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Boundary Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/background.html">
+   7. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/fixed_point.html">
+   8. Fixed point method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/heat.html">
+   9. Multivariate example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sol/chapex1.html">
-   Chapter exercise 1.3
+   Chapter 1 exercise
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../sol/chapex2.html">
-   Chapter exercise 3.5
+  <a class="reference internal" href="../sol/chapex3.html">
+   Chapter 3 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex4.html">
+   Chapter 4 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex5.html">
+   Chapter 5 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex6.html">
+   Chapter 6 exercise
   </a>
  </li>
 </ul>
@@ -495,20 +532,22 @@ title="Print to PDF"
 <section id="first-order-problem">
 <h2><span class="section-number">6.1. </span>First order problem<a class="headerlink" href="#first-order-problem" title="Permalink to this heading">#</a></h2>
 <p>The general form of a (scalar) first order IVP is defined by a first order ODE together with the initial value of the variable:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aef99ca8-e17c-4837-8534-762f458b2798">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-aef99ca8-e17c-4837-8534-762f458b2798" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f9353354-d0f1-4e0b-8684-c9753a4529de">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-f9353354-d0f1-4e0b-8684-c9753a4529de" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}t} = f(t,x), \quad x(0)=x_0.
 \end{equation}\]</div>
 <p>We will demonstrate a quadratic order solution technique for this problem using the following example case:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-125a1962-ad9a-4802-a859-e9e36daeaf51">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-125a1962-ad9a-4802-a859-e9e36daeaf51" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c7a21efe-31eb-4c50-a073-f3e922dda0ee">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-c7a21efe-31eb-4c50-a073-f3e922dda0ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}{t}}=\cos\left(t+\frac{\pi}{4}\right), \quad x(0)=\frac{1}{\sqrt{2}}.
 \end{equation}\]</div>
 <p>Application of the midpoint rule results in the following formula, which requires two starting points:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c52ad22e-8e66-4f62-920d-d37fe3384c42">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-c52ad22e-8e66-4f62-920d-d37fe3384c42" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a5183694-773f-4ca1-8956-80250feb2e1f">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-a5183694-773f-4ca1-8956-80250feb2e1f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_{k+1}-x_{k-1}}{2h} = f(t_k,x_k) \qquad \implies \qquad x_{k+1}=x_{k-1}+2hf(t_k,x_k).
 \end{equation}\]</div>
+<p>An illustration of the algorithm is shown below:</p>
+<img alt="forward stepping" class="align-center" src="../_images/first_order_mid.png" />
 <p>The IVP gives us only one starting point, but we can estimate a second starting point by using the explicit Euler formula for the first step only. Although this formula is an order of accuracy worse than the midpoint formula, we will only use it for a single step.</p>
 <p>The code below implements the algorithm for our example problem, using various step sizes to explore the effect on the error. The output is a table of the maximum errors for each step size, from which it can be seen that the errors scale with <span class="math notranslate nohighlight">\(h^2\)</span>. Decreasing the step size by a factor of two decreases the error by a factor of four:</p>
 <div class="cell tag_hide-input docutils container">
@@ -579,14 +618,14 @@ title="Print to PDF"
 <section id="first-derivative-rule">
 <h3><span class="section-number">6.2.1. </span>First derivative rule<a class="headerlink" href="#first-derivative-rule" title="Permalink to this heading">#</a></h3>
 <p>The second order problem can be re-written as a first order IVP by definining <span class="math notranslate nohighlight">\(y=\dot{x}\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-041557af-da8f-49c6-a91b-5c4e06c596f2">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-041557af-da8f-49c6-a91b-5c4e06c596f2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e3738d47-ff3e-4010-b830-89a116ae2427">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-e3738d47-ff3e-4010-b830-89a116ae2427" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{F}(t,\underline{x}), \qquad \underline{x}(t_0)=\begin{bmatrix}\alpha\\\beta\end{bmatrix}, \qquad \underline{x}=\begin{bmatrix}x\\y\end{bmatrix}.
 \end{equation}\]</div>
 <p>Therefore it could be solved using the midpoint method with a single explicit Euler step at the start, as above for the scalar case. In general, a <span class="math notranslate nohighlight">\(n\)</span>th order IVP can be re-cast in this way as a first order IVP with <span class="math notranslate nohighlight">\(n\)</span> dependent variables.</p>
 <p>For our example problem we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93f3c21e-5b1e-4c67-9dfc-89c2901a4f47">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-93f3c21e-5b1e-4c67-9dfc-89c2901a4f47" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-62ea2111-6009-4db6-90bc-8be0f48da844">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-62ea2111-6009-4db6-90bc-8be0f48da844" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}y\\-\sin(t+\pi/4)\end{bmatrix}, \qquad \begin{bmatrix}x(0)\\y(0)\end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\end{bmatrix}.
 \end{equation}\]</div>
 <p>The code below implements the algorithm for our example problem, using various step sizes to explore the effect on the error. From the output table it can be again seen that the errors scale with <span class="math notranslate nohighlight">\(h^2\)</span>:</p>
@@ -632,10 +671,12 @@ title="Print to PDF"
 <h3><span class="section-number">6.2.2. </span>Second derivative rule<a class="headerlink" href="#second-derivative-rule" title="Permalink to this heading">#</a></h3>
 <p>For the partial differential equations that we will encounter later, it is not possible to rewrite them in the manner of a first order system. Therefore we will need to use the finite difference formulae for the higher derivatives. In preparation for this, we will demonstrate the basic technique using our example problem.</p>
 <p>Subsituting the second derivative midpoint formula into <a class="reference internal" href="#equation-6-6">(6.5)</a> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df215caf-4c23-4984-b2fc-12200ccdabd8">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-df215caf-4c23-4984-b2fc-12200ccdabd8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2e0df7ca-4b1b-43b0-b03f-0308bd3f338c">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-2e0df7ca-4b1b-43b0-b03f-0308bd3f338c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_{k+1}-2x_k+x_{k-1}}{h^2}=\sin\left(t_k+\frac{\pi}{4}\right) \qquad \implies \qquad x_{k+1}=2x_k-x_{k-1}+h^2 \sin\left(t_k+\frac{\pi}{4}\right)
 \end{equation}\]</div>
+<p>An illustration of the algorithm is shown below:</p>
+<img alt="forward stepping" class="align-center" src="../_images/second_order_mid1.png" />
 <p>Again, we require two starting points and it is natural for us to try using the explicit Euler formula for the first step. Unfortunately, it turns out that doing so contaminates the accuracy of the entire solution and results in global accuracy no better than <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>, as demonstrated below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,21 +720,23 @@ title="Print to PDF"
 <p>The error introduced by the explicit Euler formula in the first step is <span class="math notranslate nohighlight">\(E_1=\mathcal{O}(h^2)\)</span>. Applying the above formulae recursively with this error gives a global error of <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> in the first derivative approximation and a global error of <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> in the second derivative approximation.</p>
 <p>So, we need to use a result for the first step that has the same order of accuracy as the midpoint method. There are lots of ways to do this, but we will use a technique that is based on the midpoint formula. We will be able to implement the same method later to also solve partial differential equations.</p>
 <p>The trick involves the introduction of a “ghost point” <span class="math notranslate nohighlight">\(x_{-1}\)</span> outside the solution domain. Application of the midpoint rule to the initial condition for the derivative then gives the following result, which can be solved simultaneously with the update rule to obtain <span class="math notranslate nohighlight">\(x_1\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a295648-46f1-42bc-a5fd-fd119752e0c9">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-7a295648-46f1-42bc-a5fd-fd119752e0c9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-21488f11-d28a-47b2-8e5e-e4823bbb6775">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-21488f11-d28a-47b2-8e5e-e4823bbb6775" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_1-x_{-1}}{2h}=x_0^{\prime}.
 \end{equation}\]</div>
+<p>A graphical illustration of the method is shown below:</p>
+<img alt="forward stepping" class="align-center" src="../_images/second_order_mid2.png" />
 <div class="exercise admonition" id="ivp/cdiff-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 6.1 </span></p>
 <section id="exercise-content">
-<p>By combining the equation above with the second differerence update rule and initial value <span class="math notranslate nohighlight">\(x_0\)</span>, obtain a result for <span class="math notranslate nohighlight">\(x_1\)</span>. Replace the explicit Euler step with your result, and show the the global error is reduced to <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>.</p>
+<p>By combining the boundary equation above with the second differerence update rule and initial value <span class="math notranslate nohighlight">\(x_0\)</span>, obtain a result for <span class="math notranslate nohighlight">\(x_1\)</span>.<br> Replace the explicit Euler step with your result, and show the the global error is reduced to <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>.</p>
 </section>
 </div>
 <div class="toggle docutils container">
 <p>For this problem, we have the following rules</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7205671b-7db4-4182-a509-5cc011fdce42">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-7205671b-7db4-4182-a509-5cc011fdce42" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba915dd9-cec1-44de-a1b8-7d16532ab587">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-ba915dd9-cec1-44de-a1b8-7d16532ab587" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{1}=2x_0-x_{-1}+h^2 x_0^{\prime\prime}, \qquad x_1 = x_{-1}+2hx_0^{\prime}.
 \end{equation}\]</div>
 <p>Solving simultaneously gives</p>
@@ -719,9 +762,9 @@ x_1=x_0+hx_0^{\prime}+\frac{h^2}{2} x_0^{\prime\prime}.
 <div class="math notranslate nohighlight" id="equation-2order-cau">
 <span class="eqno">(6.11)<a class="headerlink" href="#equation-2order-cau" title="Permalink to this equation">#</a></span>\[\ddot{x} + 2\dot{x}+10 x = 0, \qquad x(0)=1, \quad \dot{x}(0)=-1.\]</div>
 <p>The analytic solution of this IVP is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-108dd70b-20c9-4fe5-84e5-261e2cc41838">
-<span class="eqno">(6.12)<a class="headerlink" href="#equation-108dd70b-20c9-4fe5-84e5-261e2cc41838" title="Permalink to this equation">#</a></span>\[\begin{equation}
-x = e^{-3t}\cos(3t).
+<div class="amsmath math notranslate nohighlight" id="equation-f3652de9-81c6-4778-bb0b-2bc52a3c68f0">
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-f3652de9-81c6-4778-bb0b-2bc52a3c68f0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x = e^{-t}\cos(3t).
 \end{equation}\]</div>
 <p>A plot of the analytic solution is shown below:</p>
 <div class="cell docutils container">
@@ -780,10 +823,10 @@ x = e^{-3t}\cos(3t).
             <p class="prev-next-title"><span class="section-number">5. </span>Stability and stiffness</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../sol/chapex1.html" title="next page">
+    <a class='right-next' id="next-link" href="../bvp/background.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter exercise 1.3</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Preliminaries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -80,9 +80,16 @@ The explicit Euler method can be interpreted graphically: We start from the give
 
 <br>
 
-```{image} images/forward1.png
+```{image} ../images/forward1.png
 :alt: forward stepping
 :scale: 100%
+:align: center
+```
+
+An illustration of how the method can be applied on the computer is shown below. We first define the independent variable grid $t$ and pre-allocate space for the dependent variable grid $x$. The first element in the solution grid is populated with the initial condition. Then we march forward using a loop-based technique to fill out the remaining values in the grid one-by-one.
+
+```{image} ../images/first_order1.png
+:alt: forward stepping
 :align: center
 ```
 
@@ -117,6 +124,8 @@ def eulerf(f,x0,tRange,h=1e-3,**kwargs):
   
   return t,x
 ```
+
+<br>
 
 We can use the function that we have defined to solve the IVP for the logistic curve. The demonstration below uses the parameters $r=1.5$ and $C=75$ that were selected in {numref}`chapex1`, with the initial value taken as $x(0)=C/2$.
 
@@ -275,7 +284,15 @@ Here, $\underline{x}=(x,y)$, $\underline{x}_0=(x_0,y_0)$ and $\underline{F}(t,\u
 
 ### Explicit Euler method 
 
-Application of the explicit Euler method to solve the array problem is given below. Only a minor modification of the previously defined `eulerf` is required to make it work arrays $\underline{F},\underline{x}$. The modified version can be used to solve an IVP involving an arbitrary number of dependent variables.
+Application of the explicit Euler method to solve the array problem is straightforward. The state of the dependent variable at each gridpoint fully determines the state at the next step, as defined by the function $\underline{F}(t_k,\underline{x}_k)$. We just need to store the state of all dependent variables in the solution grid, as illustrated below for the case of two dependent variables:
+
+
+```{image} ../images/first_order2.png
+:alt: forward stepping
+:align: center
+```
+
+Only a minor modification of the previously defined `eulerf` is required. The modified code below can be used to solve an IVP involving an arbitrary number of dependent variables:
 
 ```{code-cell}
 
@@ -295,6 +312,8 @@ def eulerf(F,X0,tRange,h=1e-3,**kwargs):
   
   return t,X
 ```
+
+<br>
 
 The definition for $\underline{F}(t,\underline{x})$ must return a numpy array as output. The code below provides an example of how this may be implemented for the Lotka-Volterra system with chosen paramters:
 

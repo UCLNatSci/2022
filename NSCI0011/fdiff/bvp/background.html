@@ -1,0 +1,987 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>7. Preliminaries &#8212; Finite Differences</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Fixed point method" href="fixed_point.html" />
+    <link rel="prev" title="6. Midpoint method" href="../ivp/cdiff.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Finite Differences</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Finite Differences
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introductory material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/background.html">
+   1. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/powers.html">
+   2. Infinite powers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dif/formulae.html">
+   3. Formulae
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Initial Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/background.html">
+   4. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/stability.html">
+   5. Stability and stiffness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ivp/cdiff.html">
+   6. Midpoint method
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Boundary Value Problems
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed_point.html">
+   8. Fixed point method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="heat.html">
+   9. Multivariate example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex1.html">
+   Chapter 1 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex3.html">
+   Chapter 3 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex4.html">
+   Chapter 4 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex5.html">
+   Chapter 5 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex6.html">
+   Chapter 6 exercise
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/bvp/background.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbvp/background.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/bvp/background.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/bvp/background.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-problem">
+   7.1. About the problem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discretisation">
+     7.1.1. Discretisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shooting-method">
+   7.2. Shooting method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-blasius-boundary-layer">
+     7.2.1. Example: Blasius boundary layer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-method">
+   7.3. Matrix method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2nd-order-ode">
+     7.3.1. Example: 2nd order ODE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-python-gurus">
+     7.3.2. For Python gurus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ghost-points">
+   7.4. Ghost points
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   7.5. Chapter exercises
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Preliminaries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-problem">
+   7.1. About the problem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discretisation">
+     7.1.1. Discretisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shooting-method">
+   7.2. Shooting method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-blasius-boundary-layer">
+     7.2.1. Example: Blasius boundary layer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-method">
+   7.3. Matrix method
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2nd-order-ode">
+     7.3.1. Example: 2nd order ODE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-python-gurus">
+     7.3.2. For Python gurus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ghost-points">
+   7.4. Ghost points
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   7.5. Chapter exercises
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="preliminaries">
+<h1><span class="section-number">7. </span>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h1>
+<p>This chapter adapts the finite difference methods that we have studied so far to deal with cases where the problem constraints are given in the form of boundary conditions instead of initial values. This poses a difficulty as our iterative approach requires the solution at each step to be computed from the initial values.</p>
+<p>In this chapter we will consider two techniques that can be used to tackle boundary value problems with finite difference methods:</p>
+<ul class="simple">
+<li><p>The “shooting” method makes repeated use of the explicit solution methods we developed in the previous chapters, with a root-finding algorithm used to “guess” the missing initial values</p></li>
+<li><p>The matrix (linear algebra) method solves for all nodes of the system at once by setting up the finite difference scheme in the form of a system of algebraic equations to be solved simultaneously.</p></li>
+</ul>
+<section id="about-the-problem">
+<h2><span class="section-number">7.1. </span>About the problem<a class="headerlink" href="#about-the-problem" title="Permalink to this heading">#</a></h2>
+<p>The term “boundary value problem” (BVP) refers to cases where the solution constraints for a differential equation are specified at the boundaries of the independent variable domain. This is in contrast to an IVP where all constraints are imposed at the same “initial” value of the independent variable.</p>
+<p>An example is the steady state equation for heat transer along a one-dimensional rod of length <span class="math notranslate nohighlight">\(L\)</span>, which is given by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6ee588c4-906f-4765-afe6-9b4aef9b0654">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-6ee588c4-906f-4765-afe6-9b4aef9b0654" title="Permalink to this equation">#</a></span>\[\begin{equation}
+T^{\prime\prime}(x)=0, \qquad T(0)=a, \quad T(L)=b.
+\end{equation}\]</div>
+<p>The boundary conditions here impose the temperature at each end of the rod. The solution exhibits a constant temperature gradient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c098936d-ba74-4b18-a156-dbc698760535">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-c098936d-ba74-4b18-a156-dbc698760535" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{T-a}{x}=\frac{b-a}{L}.
+\end{equation}\]</div>
+<p>Unlike IVPs, a boundary value problem (BVP) may have no solutions or infinitely many solutions. For example, the following problem is satisfied by <span class="math notranslate nohighlight">\(y=A\sin(x)\)</span> for all values of the constant <span class="math notranslate nohighlight">\(A\)</span> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bea5dec9-8725-4512-91cd-b753b93d3080">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-bea5dec9-8725-4512-91cd-b753b93d3080" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y^{\prime\prime}+y=0, \qquad y(0)=y(2\pi)=0.
+\end{equation}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To solve a boundary value problem numerically, it needs to be well-defined, with a unique solution. The problem given in <a class="reference internal" href="../ivp/cdiff.html#cauchy-example"><span class="std std-numref">Section 6.3</span></a> is not straightforward to define as a boundary value problem because its general solution decays as <span class="math notranslate nohighlight">\(t\to\infty\)</span> for all initial conditions:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x = e^{-t}(A\cos(3t)+B\sin(3t)),
+\end{equation*}\]</div>
+</div>
+<p>BVPs are also more tricky to attack by finite difference method, since information is communicated through the solution domain from <em>both</em> boundaries. For example, consider the manner in which the solution profile of the heated/cooled rod is influenced by the temperature at both ends of the domain. This prevents us from easily constructing a solution by forward stepping.</p>
+<section id="discretisation">
+<h3><span class="section-number">7.1.1. </span>Discretisation<a class="headerlink" href="#discretisation" title="Permalink to this heading">#</a></h3>
+<p>Before we go on to introduce these methods, we first revisit our method for discretising the domain. Up to now we have found it convenient to use <code class="docutils literal notranslate"><span class="pre">np.arange</span></code>, which allows us to set the step size <span class="math notranslate nohighlight">\(h\)</span>. However, if we do not choose a step size that accurately subdivides the domain, we will “miss” the endpoint where the boundary condition is to be imposed.</p>
+<p>We can ensure that the right-hand boundary is included in the discretised domain by using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>. The relationship between the number of steps <span class="math notranslate nohighlight">\(n\)</span> and the step size <span class="math notranslate nohighlight">\(h\)</span> on an interval <span class="math notranslate nohighlight">\([a,b]\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9cbdc537-66ff-4a84-b784-d8ca1d15af04">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-9cbdc537-66ff-4a84-b784-d8ca1d15af04" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h = \frac{b-a}{n-1}
+\end{equation}\]</div>
+<p>Therefore if we want to subdivide an interval with an approximate step size <span class="math notranslate nohighlight">\(h\)</span>, we can use a method like follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">discretise</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">h_appr</span><span class="p">):</span>
+    <span class="n">n</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">h_appr</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#steps required</span>
+    <span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>            <span class="c1">#discretised domain</span>
+    <span class="n">h</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                     <span class="c1">#computed step size</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">,</span><span class="n">h</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="shooting-method">
+<h2><span class="section-number">7.2. </span>Shooting method<a class="headerlink" href="#shooting-method" title="Permalink to this heading">#</a></h2>
+<p>The basic idea behind the shooting method is to “guess” the intial value required to implement an explicit forward-stepping technique. The solution can be compared to the boundary condition to evaluate how good the guess was. The guess can be repeatedly modified using a root-finding technique to obtain a value which works.</p>
+<p>An illustration of the rule is provided below for the case of a second order derivative scalar problem, involving dependent variable <span class="math notranslate nohighlight">\(x\)</span> with boundary values <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> :</p>
+<br>
+<a class="reference internal image-reference" href="../_images/shooting_idea.png"><img alt="secant" class="align-center" src="../_images/shooting_idea.png" style="width: 788.8000000000001px; height: 169.60000000000002px;" /></a>
+<br>
+<p>The algorithm is fairly straightforward to implement. However, it does not generalise well to solve PDE problems.</p>
+<section id="example-blasius-boundary-layer">
+<h3><span class="section-number">7.2.1. </span>Example: Blasius boundary layer<a class="headerlink" href="#example-blasius-boundary-layer" title="Permalink to this heading">#</a></h3>
+<p>To demonstrate the shooting technique, we will consider the following third order problem, which describes the velocity profile <span class="math notranslate nohighlight">\(f^{\prime}(y)\)</span> that forms over a flat plate in an oncoming stream of constant velocity fluid.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-638e69fd-2a37-46a1-83c1-bc33d7f47ca6">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-638e69fd-2a37-46a1-83c1-bc33d7f47ca6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f^{\prime\prime\prime}(y)+f(y)f^{\prime\prime}(y)=0, \quad f(0)=f^{\prime}(0)=0, \quad \lim_{y\to\infty}f^{\prime}(y)=1
+\end{equation}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In all of the previous problems we have used variables <span class="math notranslate nohighlight">\((t,x)\)</span>, but here we are using <span class="math notranslate nohighlight">\((y,f).\)</span> Try not to get confused by the change of notation!</p>
+</div>
+<p>Taking <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span> where <span class="math notranslate nohighlight">\(u=f(y)\)</span>, <span class="math notranslate nohighlight">\(v=f^{\prime}(y)\)</span>, <span class="math notranslate nohighlight">\(w=f^{\prime\prime}(y)\)</span> allows us to rewrite the problem as a first order system:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d8cef1bb-9a4c-447c-8ffa-4e58a225c7e2">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-d8cef1bb-9a4c-447c-8ffa-4e58a225c7e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\mathrm{d}\underline{u}}{\mathrm{d}y}=F(y,\underline{u}), \qquad 
+F(y,\underline{u})=\begin{bmatrix}v\\w\\-uw\end{bmatrix}, \qquad \underline{u}(0)=\begin{bmatrix}0\\0\\c\end{bmatrix}.
+\end{equation}\]</div>
+<p>The value <span class="math notranslate nohighlight">\(c\)</span> needs to be chosen such that <span class="math notranslate nohighlight">\(v_{\infty}=1\)</span>. In the following application we assume that the solution has converged by <span class="math notranslate nohighlight">\(y~10\)</span>, and take this to represent the domain boundary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the first order ODE system</span>
+<span class="k">def</span> <span class="nf">dUdy</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">U</span><span class="p">):</span>
+  <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="n">U</span>
+  <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">w</span><span class="p">])</span>
+
+<span class="n">y</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">discretise</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>  <span class="c1">#Domain (taking inf ~=10)</span>
+<span class="n">U</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="mi">3</span><span class="p">));</span>    <span class="c1">#Two-column solution array</span>
+<span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>                   <span class="c1">#Initial condition u0=f0</span>
+<span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>                   <span class="c1">#Initial condiiton v0=f0&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll use the modified Euler method, which is an explicit two stage method. It is based on the trapezoidal rule, with the explicit Euler method used to esimate <span class="math notranslate nohighlight">\(U_{k+1}\)</span> in the first stage:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-32805c70-0f03-4988-89cb-befabcf6f4eb">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-32805c70-0f03-4988-89cb-befabcf6f4eb" title="Permalink to this equation">#</a></span>\[\begin{align}
+\bar{U}_{k+1}&amp;=U_k+hF(y_k,U_k)\\
+U_{k+1}&amp;=U_k+\frac{h}{2}(F(y_k,U_k)+F(y_{k+1},\bar{U}_{k+1}))
+\end{align}\]</div>
+<p>The following function applies the method for a given initial condition <span class="math notranslate nohighlight">\(c\)</span> and computes the error in the estimate for <span class="math notranslate nohighlight">\(v_{\infty}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">shoot</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+  <span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">c</span>                      <span class="c1">#Guess for w0=f0&#39;&#39;</span>
+  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">Fk</span><span class="o">=</span><span class="n">dUdy</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>          <span class="c1">#F(t_k,U_k)</span>
+    <span class="n">Fe</span><span class="o">=</span><span class="n">dUdy</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">h</span><span class="o">*</span><span class="n">Fk</span><span class="p">)</span>   <span class="c1">#F(t_{k+1},U_k+hF_k)</span>
+    <span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">Fk</span><span class="o">+</span><span class="n">Fe</span><span class="p">)</span>     <span class="c1">#modified Euler</span>
+  <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">U</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>      <span class="c1">#error in f&#39;(inf)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Applying the method with initial guess <span class="math notranslate nohighlight">\(f^{\prime\prime}(0)=0.3\)</span> and plotting the result for the Blaius profile <span class="math notranslate nohighlight">\(f^{\prime}(y)\)</span> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find the root for f0&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span> 
+<span class="n">res</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">shoot</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">U</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$f^{\prime}(y)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/background_8_0.png" src="../_images/background_8_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="matrix-method">
+<span id="dirode"></span><h2><span class="section-number">7.3. </span>Matrix method<a class="headerlink" href="#matrix-method" title="Permalink to this heading">#</a></h2>
+<p>The shooting method can be an attractive and effective way to solve a BVP that involves a single independent variable. However, it is difficult to see how it might be adapted to solve a partial BVP.</p>
+<p>The method that we will introduce next can be used for both ODEs and PDEs. It involves labelling every node in the discretised solution domain and using the finite difference rules to write down their governing algebraic equations. Efficient linear algebra routines can be used to simultaneously solve these systems.</p>
+<section id="example-2nd-order-ode">
+<h3><span class="section-number">7.3.1. </span>Example: 2nd order ODE<a class="headerlink" href="#example-2nd-order-ode" title="Permalink to this heading">#</a></h3>
+<p>We will start by demonstating the technique for the following second order BVP:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\ddot{x}+\dot{x}-6x=0, \qquad x(0)=1,\quad x(1)=2.
+\end{equation*}\]</div>
+<p>Application of the midpoint difference rules gives the a system of linear equations:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2d23a668-8b04-4443-819c-903ece04c84c">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-2d23a668-8b04-4443-819c-903ece04c84c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+(1-h/2)x_{k-1}-(2+6h^2)x_k+(1+h/2)x_{k+1}=0.
+\end{equation}\]</div>
+<p>We can write this as a matrix system involving variables <span class="math notranslate nohighlight">\(x_0,\dots x_n\)</span>. The fixed value boundary conditions can be implemented in the first and last rows and we obtain the following matrix system to solve.</p>
+<div class="math notranslate nohighlight" id="equation-dirmatr1">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-dirmatr1" title="Permalink to this equation">#</a></span>\[\begin{split}\left[\begin{array}{cccccc}
+1 &amp;0 &amp; 0 &amp; 0 &amp; \dots &amp; 0\\
+1-h/2 &amp; -(2+6h^2) &amp; 1+h/2 &amp; 0 &amp; \ddots &amp;\vdots\\
+0 &amp; 1-h/2 &amp; -(2+6h^2) &amp; 1+h/2 &amp; \ddots&amp;\vdots\\
+\vdots&amp; \ddots &amp; \ddots &amp;\ddots &amp;\ddots &amp; 0\\
+0 &amp; \ddots &amp; 0&amp; 1-h/2 &amp; -(2+6h^2) &amp; 1+h/2\\
+0 &amp;\dots &amp; 0 &amp; 0 &amp; 0 &amp; 1\end{array}\right]
+\left[\begin{array}{cc} x_0\phantom{\vdots}&amp;\\y_1&amp;\phantom{\vdots}\\x_2\phantom{\vdots}&amp;\\ \vdots&amp;\\x_{n-1}\\x_n\end{array}\right]=\left[\begin{array}{cc}1&amp;\phantom{\vdots}\\0&amp;\phantom{\vdots}\\0&amp;\phantom{\vdots}\\\vdots&amp;\\0\\2\end{array}\right]\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\((n+1)\times(n+1)\)</span> tri-diagonal matrix has diagonal coefficients <span class="math notranslate nohighlight">\(\biggr[1-h/2,-(2+6h^2),1+h/2\biggr]\)</span>, except for the first and last rows which are used to implement the boundary conditions.</p>
+<p>You can solve the simultaneous system in Python by using the <code class="docutils literal notranslate"><span class="pre">solve</span></code> function from numpy’s linear algebra module (<code class="docutils literal notranslate"><span class="pre">linalg</span></code>). An implementation is shown below, in which matrix <span class="math notranslate nohighlight">\(A\)</span> is constructed using <code class="docutils literal notranslate"><span class="pre">numpy.diag</span></code>. This function  can be used to create an array with the given data on the <span class="math notranslate nohighlight">\(k\)</span>th diagonal and zeros everywhere else:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">diag</span><span class="p">,</span><span class="n">ones</span><span class="p">,</span><span class="n">zeros</span><span class="p">,</span><span class="n">linalg</span><span class="p">,</span><span class="n">arange</span>
+
+<span class="c1"># Define the nodes</span>
+<span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">discretise</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="c1">#---------------------------------------------------------------</span>
+<span class="c1"># Construct tridiagonal matrix A and vector b</span>
+<span class="c1"># Initially we ignore the BCs:</span>
+
+<span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">c3</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">6</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">diag</span><span class="p">([</span><span class="n">c1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> \
+    <span class="n">diag</span><span class="p">([</span><span class="n">c2</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span>    <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="o">+</span> \
+    <span class="n">diag</span><span class="p">([</span><span class="n">c3</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Now enforce the BCs: </span>
+<span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># x(0)</span>
+<span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># x(1)</span>
+
+<span class="c1">#---------------------------------------------------------------</span>
+<span class="c1"># Solve the matrix system numerically</span>
+<span class="n">x</span><span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/background_10_0.png" class="align-center" src="../_images/background_10_0.png" />
+</div>
+</div>
+<div class="exercise admonition" id="bvp/background-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.1 </span></p>
+<section id="exercise-content">
+<p>Other techniques could be used to create the tridiagonal matrix. Can you do it with a loop-based technique?</p>
+</section>
+</div>
+<div class="toggle docutils container">
+<p>Here is an example of how it could be done:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">([</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">M</span><span class="p">[</span><span class="n">k</span><span class="p">,[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span><span class="o">=</span><span class="p">[</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">c3</span><span class="p">]</span>
+<span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">M</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">M</span><span class="p">)</span> <span class="c1">#test</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="for-python-gurus">
+<h3><span class="section-number">7.3.2. </span>For Python gurus<a class="headerlink" href="#for-python-gurus" title="Permalink to this heading">#</a></h3>
+<p>The matrix calculations above are resource-intensive. The size of the coefficient matrix is quadratically dependent on the number of data points, and numerically solving the system requires a very large number of “flops” (floating point operations). I tried decreasing the step size to <code class="docutils literal notranslate"><span class="pre">h=0.0001</span></code> and the calculation took more than 10 seconds on my fairly standard three-year-old desktop computer.</p>
+<p>However, you may notice that matrix <span class="math notranslate nohighlight">\(A\)</span> in the above example is relatively “sparse”. Only three of the digaonals contain non-zero elements. Instead of recoding every element, we may therefore want to record only the indexed locations and values of the non-zero elements. This type of representation may require less memory to store, and can allow use of highly efficient algorithms designed for sparse matrices.</p>
+<p>An example implementation is given below. This code took less than two seconds to run on an fairly standard desktop computer and less than 3Mb of memory were required to store matrix <span class="math notranslate nohighlight">\(A\)</span>. The equivalent “dense” representation for this step size would have required around 75 Gigabytes!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># Define the nodes</span>
+<span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">discretise</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.00001</span><span class="p">);</span> <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">sparse</span>
+<span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">lil_matrix</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">lil_matrix</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">c3</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">6</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c2</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>  <span class="n">k</span><span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c3</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># x(0)</span>
+<span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># x(1)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">tocsr</span><span class="p">();</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">tocsr</span><span class="p">()</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">sparse</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">spsolve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Compuation time (s) : &#39;</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Memory (Mb) : &#39;</span><span class="p">,(</span><span class="n">A</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span><span class="o">*</span><span class="mf">1e-6</span><span class="p">)</span>    <span class="c1">#size of A in Mb</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compuation time (s) :  1.0492944717407227
+Memory (Mb) :  2.3999919999999997
+</pre></div>
+</div>
+<img alt="../_images/background_12_1.png" src="../_images/background_12_1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="ghost-points">
+<span id="matrix-cauchy"></span><h2><span class="section-number">7.4. </span>Ghost points<a class="headerlink" href="#ghost-points" title="Permalink to this heading">#</a></h2>
+<p>Some BVPs requre a derivative condtion to be imposed on one or both boundaries. Solving these problems will require the introduction of ghost points, as we did in the second derivative problems in the last chapter.</p>
+<p>The ghost point variables can be included in our matrix method, and these points can be removed from the solution array at the end.</p>
+<p>As an example, consider the following matrix representation of the problem given in <a class="reference internal" href="../ivp/cdiff.html#cauchy-example"><span class="std std-numref">Section 6.3</span></a> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5ded125d-8419-4669-9774-c3951c79da1f">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-5ded125d-8419-4669-9774-c3951c79da1f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left[\begin{array}{c|ccccc}-1 &amp;0 &amp;1 &amp; 0 &amp; \dots &amp; 0&amp;\\\hline0 &amp;1 &amp;0 &amp; 0 &amp; \ddots &amp;\vdots\\1-h &amp; -2+10h^2 &amp; 1+h &amp; 0 &amp; \ddots &amp;\vdots\\0 &amp; 1-h &amp; -2+10h^2 &amp; 1+h &amp; \ddots&amp;\vdots\\\vdots&amp; \vdots &amp; \ddots &amp;\ddots &amp;\ddots &amp; 0\\0 &amp; \dots &amp; 0&amp; 1-h &amp; -2+10h^2 &amp; 1+h\end{array}\right]\left[\begin{array}{cc}x_{-1}&amp;\\\hline x_0\vphantom{\ddots}&amp;\\x_1&amp;\vphantom{\ddots}\\x_2\vphantom{\ddots}&amp;\\ \vdots\vphantom{\ddots}&amp;\\x_N\vphantom{h^2}\end{array}\right]=\left[\begin{array}{cc}-2h&amp;\\\hline1&amp;\vphantom{\ddots}\\0&amp;\vphantom{\ddots}\\0&amp;\vphantom{\ddots}\\\vdots\vphantom{\ddots}&amp;\\0\vphantom{h^2}\end{array}\right]
+\end{equation}\]</div>
+<br>
+<div class="theorem admonition">
+<p class="admonition-title">Note</p>
+<p>The reason the coefficients are not centred on the main diagonal is because the first two rows are used to implement the boundary conditions.</p>
+</div>
+<p>If you are struggling to understand where the result comes from, write down the some of the simultaneous equations that you get by multipliying out the matrix product.</p>
+<div class="toggle docutils container">
+<p>The first row implements the derivative boundary condition: <br>
+<span class="math notranslate nohighlight">\(\qquad \qquad -x_{-1}+x_{1}=-2h\)</span></p>
+<p>The second row implements the fixed boundary condition: <br>
+<span class="math notranslate nohighlight">\(\qquad \qquad x_0=1\)</span></p>
+<p>The third row implements the central difference formula: <br>
+<span class="math notranslate nohighlight">\(\qquad \qquad (1-h)x_{-1}+(-2+10h^2)x_0+(1+h)x_1=0\)</span></p>
+<p>etc.</p>
+</div>
+<hr class="docutils" />
+<p>The result obtained by numerically solving this system is shown below.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the nodes</span>
+<span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">discretise</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.001</span><span class="p">);</span> <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">lil_matrix</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">lil_matrix</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">c3</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">+</span><span class="mi">10</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="n">h</span><span class="p">]</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c2</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>  <span class="n">k</span><span class="o">=-</span><span class="mi">1</span> <span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">setdiag</span><span class="p">([</span><span class="n">c3</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span> <span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span>  <span class="c1"># x&#39;(0)</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># x(0)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">tocsr</span><span class="p">();</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">tocsr</span><span class="p">()</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">sparse</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">spsolve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>                       <span class="c1">#remove ghost point</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/background_14_0.png" class="align-center" src="../_images/background_14_0.png" />
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It should be noted that the problem given in <a class="reference internal" href="../ivp/cdiff.html#cauchy-example"><span class="std std-numref">Section 6.3</span></a> is an IVP and therefore can be solved by iterative methods. We would not use a (less efficient) matrix method for such a problem! However, this example was used to illustrate how a derivative condition at a boundary can be implemented.</p>
+</div>
+</section>
+<section id="chapter-exercises">
+<h2><span class="section-number">7.5. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<p><strong>Question 1</strong><br></p>
+<p>The second derivative problem for the logistic function that we saw in <a class="reference internal" href="../dif/formulae.html#equation-ord2logist">(3.7)</a> could be written as a BVP by imposing the following conditions:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a3342ffd-e464-4244-be7b-b525841618d9">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-a3342ffd-e464-4244-be7b-b525841618d9" title="Permalink to this equation">#</a></span>\[\begin{equation}x(0)=C/2, \quad \lim_{t\to\infty}x = C.\end{equation}\]</div>
+<p>How easy do you think this problem would be to solve numerically, given what you know about the second derivative equation from the previous section?</p>
+<p><strong>Question 2</strong><br>
+Apply the matrix solution approach to solve following equation using a central finite difference scheme</p>
+<div class="math notranslate nohighlight" id="equation-cdiffsin">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-cdiffsin" title="Permalink to this equation">#</a></span>\[u^{\prime\prime}(x)=\sin(2\pi x), \qquad u(0)=0, \quad u(1)=0\]</div>
+<p><strong>Question 3</strong><br>
+The image below shows a cross-section of pipe insulation, which is subjected to temperatures <span class="math notranslate nohighlight">\(\phi=500K\)</span> on the inner boundary and <span class="math notranslate nohighlight">\(\phi=300K\)</span> on the outer boundary. The radial and axial directions are denoted by <span class="math notranslate nohighlight">\(r,\theta\)</span>, respectively.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/lagging.png"><img alt="secant" class="align-center" src="../_images/lagging.png" style="width: 400.0px; height: 328.0px;" /></a>
+<br>
+<p>Due to axial symmetry of the problem, the governing two-dimensional heat equation <span class="math notranslate nohighlight">\(\nabla^2\phi=0\)</span> for this problem can be reduced to</p>
+<div class="math notranslate nohighlight" id="equation-heateqn">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-heateqn" title="Permalink to this equation">#</a></span>\[\frac{\partial^2\phi}{\partial r^2}+\frac{1}{r}\frac{\partial \phi}{\partial r}=0.\]</div>
+<p>Express equation <a class="reference internal" href="#equation-heateqn">(7.13)</a> in finite difference form, using a central difference scheme, and use a matrix method to solve for <span class="math notranslate nohighlight">\(r\in[0.05,0.10]\)</span>.</p>
+<p>Graphically compare your answer to the analytic solution, which is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\phi = 200\frac{\ln(0.10)-\ln(r)}{\ln(2)} +300.\end{equation*}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./bvp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../ivp/cdiff.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Midpoint method</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="fixed_point.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Fixed point method</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
