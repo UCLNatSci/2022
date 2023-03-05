@@ -171,8 +171,10 @@ Let $A$ be an $(n \times n)$ matrix. Then the following statements are equivalen
 1. $A$ is invertible.
 2. $\mathrm{det}(A) \neq 0$.
 3. $A$ has $n$ pivots.
-4. The null space of $A$ is 0.
-5. $Ax=b$ has a unique solution for every $b \in \mathbb{R}^n$.
+4. The null space of $A$ is $\{0\}$.
+5. The column space of $A$ is $\mathbb{R}^n$.
+6. $Ax=b$ has a unique solution for every $b \in \mathbb{R}^n$.
+7. The columns of $A$ are linearly independent.
 
 ```
 

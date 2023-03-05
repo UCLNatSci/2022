@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Eigenvalues and Eigenvectors &#8212; Mathematics for Natural Sciences 2</title>
+    <title>20. Eigenvalues and Eigenvectors &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="21. Matrix Diagonalisation" href="../linear_systems/diagonalisation.html" />
+    <link rel="prev" title="19. Determinants" href="../linear_systems/determinants.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -190,6 +192,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems/linear_maps.html">
    15. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/composition.html">
+   16. Composing Linear Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/matrices.html">
+   17. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   20. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linear_systems/diagonalisation.html">
+   21. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -326,34 +358,34 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Eigenvalues and Eigenvectors
+   20.1. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eigenspaces">
-   Eigenspaces
+   20.2. Eigenspaces
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calculating-eigenspaces">
-     Calculating Eigenspaces
+     20.2.1. Calculating Eigenspaces
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-characteristic-polynomial">
-   The Characteristic Polynomial
+   20.3. The Characteristic Polynomial
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-eigenvalues">
-   Calculating Eigenvalues
+   20.4. Calculating Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   20.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -377,34 +409,34 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Eigenvalues and Eigenvectors
+   20.1. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eigenspaces">
-   Eigenspaces
+   20.2. Eigenspaces
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calculating-eigenspaces">
-     Calculating Eigenspaces
+     20.2.1. Calculating Eigenspaces
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-characteristic-polynomial">
-   The Characteristic Polynomial
+   20.3. The Characteristic Polynomial
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-eigenvalues">
-   Calculating Eigenvalues
+   20.4. Calculating Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   20.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -418,9 +450,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="eigenvalues-and-eigenvectors">
-<h1>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">20. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this headline">#</a></h1>
 <section id="id1">
-<h2>Eigenvalues and Eigenvectors<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.1. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>In this section we will study on of the most important concepts in linear algebra.</p>
 <div class="admonition-eigenvalues-and-eigenvectors admonition">
 <p class="admonition-title">Eigenvalues and Eigenvectors</p>
@@ -448,7 +480,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="q_check_eigenvector">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 20.1 </span></p>
 <section id="exercise-content">
 <p>Let the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix}0 &amp; 6 &amp; 8 \\ \frac{1}{2} &amp; 0 &amp;0 \\ 0 &amp; \frac{1}{2} &amp; 0\end{pmatrix}\)</span> and vectors <span class="math notranslate nohighlight">\(v_1 = \begin{pmatrix} 16 \\ 4 \\ 1 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(v_2 = \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix}\)</span>.</p>
 <ol class="simple">
@@ -459,7 +491,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="eigenspaces">
-<h2>Eigenspaces<a class="headerlink" href="#eigenspaces" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.2. </span>Eigenspaces<a class="headerlink" href="#eigenspaces" title="Permalink to this headline">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(v\)</span> is an eigenvector of <span class="math notranslate nohighlight">\(A\)</span>, it is easy to show that any scalar multiple <span class="math notranslate nohighlight">\(cv\)</span> is also an eigenvector:</p>
 <div class="math notranslate nohighlight">
 \[A(cv) = cAv = c\lambda v = \lambda(cv)\]</div>
@@ -478,12 +510,12 @@ title="Print to PDF"
 <p>Therefore <span class="math notranslate nohighlight">\(A\)</span> has a single eigenvalue <span class="math notranslate nohighlight">\(\lambda = 3\)</span> with eigenspace <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Note that this is true regardless of the value of <span class="math notranslate nohighlight">\(n\)</span>!</p>
 </div>
 <section id="calculating-eigenspaces">
-<h3>Calculating Eigenspaces<a class="headerlink" href="#calculating-eigenspaces" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">20.2.1. </span>Calculating Eigenspaces<a class="headerlink" href="#calculating-eigenspaces" title="Permalink to this headline">#</a></h3>
 <p>We have seen how to check if a given vector is an eigenvector of a square matrix <span class="math notranslate nohighlight">\(A\)</span>. It is then easy to find its corresponding eigenvalue.</p>
 <p>Next we will learn how can to check whether a given real number is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> and to find its corresponding eigenvector. This is slightly more complicated because there may be multiple eigenvectors corresponding to a single eigenvalue.</p>
 <p>Now suppose <span class="math notranslate nohighlight">\(A\)</span> is an (<span class="math notranslate nohighlight">\(n \times n\)</span>) square matrix and <span class="math notranslate nohighlight">\(\lambda\)</span> a real number. If <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue then there exists a non-zero vector <span class="math notranslate nohighlight">\(v\)</span> which solves the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-eqn-eigenvector">
-<span class="eqno">()<a class="headerlink" href="#equation-eqn-eigenvector" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(20.1)<a class="headerlink" href="#equation-eqn-eigenvector" title="Permalink to this equation">#</a></span>\[
 Av = \lambda v.
 \]</div>
 <p>We would like to solve this for <span class="math notranslate nohighlight">\(v\)</span>. To see how this is possible, let’s first examine a concrete example.</p>
@@ -511,7 +543,7 @@ x_1 &amp; {}+{} &amp; 2x_2 &amp; {}={} &amp;  \lambda x_1  \\
 <div class="math notranslate nohighlight">
 \[\left(A-\lambda I\right)v = 0\]</div>
 </div>
-<p>Thus, introducing the identity matrix <span class="math notranslate nohighlight">\(I\)</span> allows us to rearrange <a class="reference internal" href="#equation-eqn-eigenvector">()</a>:</p>
+<p>Thus, introducing the identity matrix <span class="math notranslate nohighlight">\(I\)</span> allows us to rearrange <a class="reference internal" href="#equation-eqn-eigenvector">(20.1)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\left(A - \lambda I\right)v = 0.\]</div>
 <p>Remember that this is an equation of vectors so the <span class="math notranslate nohighlight">\(0\)</span> on the right hand side is a zero vector of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
@@ -527,7 +559,7 @@ x_1 &amp; {}+{} &amp; 2x_2 &amp; {}={} &amp;  \lambda x_1  \\
 <p class="admonition-title">Example</p>
 <p>For each of the numbers <span class="math notranslate nohighlight">\(λ = 1, 3\)</span>, decide if <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of the matrix</p>
 <div class="math notranslate nohighlight" id="equation-eqn-eigenvector-example">
-<span class="eqno">()<a class="headerlink" href="#equation-eqn-eigenvector-example" title="Permalink to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix}2 &amp; -4 \\ -1 &amp; -1\end{pmatrix}\end{split}\]</div>
+<span class="eqno">(20.2)<a class="headerlink" href="#equation-eqn-eigenvector-example" title="Permalink to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix}2 &amp; -4 \\ -1 &amp; -1\end{pmatrix}\end{split}\]</div>
 <p>and calculate the corresponding eigenspace.</p>
 <p><strong>Answer</strong></p>
 <p><span class="math notranslate nohighlight">\(\lambda = 1\)</span> is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> if the equation <span class="math notranslate nohighlight">\(\left(A - I\right)v = 0\)</span> has non-zero solutions.</p>
@@ -548,15 +580,15 @@ x_1 &amp; {}+{} &amp; 2x_2 &amp; {}={} &amp;  \lambda x_1  \\
 </div>
 <div class="exercise admonition" id="q_check_eigenvalue">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 20.2 </span></p>
 <section id="exercise-content">
-<p>Show that <span class="math notranslate nohighlight">\(\lambda=-2\)</span> is an eigenvalue of the matrix <a class="reference internal" href="#equation-eqn-eigenvector-example">()</a> and calculate its eigenvector.</p>
+<p>Show that <span class="math notranslate nohighlight">\(\lambda=-2\)</span> is an eigenvalue of the matrix <a class="reference internal" href="#equation-eqn-eigenvector-example">(20.2)</a> and calculate its eigenvector.</p>
 </section>
 </div>
 </section>
 </section>
 <section id="the-characteristic-polynomial">
-<h2>The Characteristic Polynomial<a class="headerlink" href="#the-characteristic-polynomial" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.3. </span>The Characteristic Polynomial<a class="headerlink" href="#the-characteristic-polynomial" title="Permalink to this headline">#</a></h2>
 <p>In the previous section we discussed how to decide whether a given number
 <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of a matrix, and if so, how to find all of the associated eigenvectors. In this section, we will give a method for computing all of the eigenvalues of a matrix.</p>
 <p>We saw that <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of a matrix <span class="math notranslate nohighlight">\(A\)</span> if and only the equation <span class="math notranslate nohighlight">\(\left(A - \lambda I\right)=0\)</span> has non-zero solutions. But recall that this equation only has non-zero solutions if and only if the the matrix <span class="math notranslate nohighlight">\(A - \lambda I\)</span> is invertible, which is the case if and only if its determinant is zero. Therefore, we have the following important theorem.</p>
@@ -569,7 +601,7 @@ x_1 &amp; {}+{} &amp; 2x_2 &amp; {}={} &amp;  \lambda x_1  \\
 </div>
 </section>
 <section id="calculating-eigenvalues">
-<h2>Calculating Eigenvalues<a class="headerlink" href="#calculating-eigenvalues" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.4. </span>Calculating Eigenvalues<a class="headerlink" href="#calculating-eigenvalues" title="Permalink to this headline">#</a></h2>
 <p>We now have the necessary tool to calculate the eigenvalues and eigenvectors of any square matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="admonition-calculating-eigenvalues admonition">
 <p class="admonition-title">Calculating Eigenvalues</p>
@@ -603,8 +635,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 <div class="math notranslate nohighlight">
 \[\begin{split}A - \lambda_1 I = \begin{pmatrix}2-2\sqrt{2} &amp; 2 \\ 2 &amp; -2-\sqrt{2}\end{pmatrix}\end{split}\]</div>
 <p>Reduces to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-abbbeb8f-a2bb-4c43-a4d4-13502af67174">
-<span class="eqno">()<a class="headerlink" href="#equation-abbbeb8f-a2bb-4c43-a4d4-13502af67174" title="Permalink to this equation">#</a></span>\[\begin{pmatrix}1 &amp; -1-\sqrt{2}\\ 0 &amp; 0\end{pmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-41986c43-cfad-404f-b132-e482a532bf75">
+<span class="eqno">(20.3)<a class="headerlink" href="#equation-41986c43-cfad-404f-b132-e482a532bf75" title="Permalink to this equation">#</a></span>\[\begin{pmatrix}1 &amp; -1-\sqrt{2}\\ 0 &amp; 0\end{pmatrix}\]</div>
 <p>and the general solution to <span class="math notranslate nohighlight">\(\left(A - \lambda_1I\right)v=0\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} v = x_2\begin{pmatrix}1+\sqrt{2}  \\ 1\end{pmatrix}.\end{split}\]</div>
@@ -662,7 +694,7 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 <div class="exercise admonition" id="calculate_eigenvectors">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 20.3 </span></p>
 <section id="exercise-content">
 <p>Find the eigenvalues and eigenvectors of the matrix</p>
 <div class="math notranslate nohighlight">
@@ -671,10 +703,10 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 </section>
 <section id="solutions-to-exercises">
-<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_check_eigenvector"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_check_eigenvector"> Exercise 20.1</a></p>
 <section id="solution-content">
 <div class="math notranslate nohighlight">
 \[\begin{split}Av_1 =\begin{pmatrix}0 &amp; 6 &amp; 8 \\ \frac{1}{2} &amp; 0 &amp;0 \\ 0 &amp; \frac{1}{2} &amp; 0\end{pmatrix}\begin{pmatrix} 16 \\ 4 \\ 1 \end{pmatrix} = \begin{pmatrix} 32 \\ 8 \\ 2 \end{pmatrix} = 2v_1.\end{split}\]</div>
@@ -686,7 +718,7 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_check_eigenvalue"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_check_eigenvalue"> Exercise 20.2</a></p>
 <section id="solution-content">
 <p><span class="math notranslate nohighlight">\(\lambda = -2\)</span> is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> if the equation <span class="math notranslate nohighlight">\(\left(A + 2I\right)v = 0\)</span> has non-zero solutions.</p>
 <div class="math notranslate nohighlight">
@@ -702,7 +734,7 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#calculate_eigenvectors"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#calculate_eigenvectors"> Exercise 20.3</a></p>
 <section id="solution-content">
 <p>1. Calculate the characteristic polynomial.</p>
 <div class="math notranslate nohighlight">
@@ -774,6 +806,20 @@ f(\lambda) &amp;= \det(M-\lambda I)\\
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../linear_systems/determinants.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">19. </span>Determinants</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../linear_systems/diagonalisation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">21. </span>Matrix Diagonalisation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

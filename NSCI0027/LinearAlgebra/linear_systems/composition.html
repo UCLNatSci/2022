@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Composing Linear Functions &#8212; Mathematics for Natural Sciences 2</title>
+    <title>17. Composing Linear Functions &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="18. Inverses" href="inverses.html" />
+    <link rel="prev" title="16. Matrices" href="matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -190,6 +192,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="linear_maps.html">
    15. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrices.html">
+   16. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   17. Composing Linear Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diagonalisation.html">
+   21. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -326,17 +358,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-identity-matrix">
-   The identity matrix
+   17.1. The identity matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#composition-of-linear-transformations">
-   Composition of Linear Transformations
+   17.2. Composition of Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   17.3. Solutions
   </a>
  </li>
 </ul>
@@ -360,17 +392,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-identity-matrix">
-   The identity matrix
+   17.1. The identity matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#composition-of-linear-transformations">
-   Composition of Linear Transformations
+   17.2. Composition of Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   17.3. Solutions
   </a>
  </li>
 </ul>
@@ -384,9 +416,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="composing-linear-functions">
-<h1>Composing Linear Functions<a class="headerlink" href="#composing-linear-functions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">17. </span>Composing Linear Functions<a class="headerlink" href="#composing-linear-functions" title="Permalink to this headline">#</a></h1>
 <section id="the-identity-matrix">
-<h2>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.1. </span>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this headline">#</a></h2>
 <p>The identity matrix <span class="math notranslate nohighlight">\(I_n\)</span> is the unique <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix which has the property</p>
 <div class="math notranslate nohighlight">
 \[I_n x = x \]</div>
@@ -401,7 +433,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="q_matrix_identity">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 17.1 </span></p>
 <section id="exercise-content">
 <ol class="simple">
 <li><p>Calculate <span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I\)</span>.</p></li>
@@ -411,7 +443,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="composition-of-linear-transformations">
-<h2>Composition of Linear Transformations<a class="headerlink" href="#composition-of-linear-transformations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.2. </span>Composition of Linear Transformations<a class="headerlink" href="#composition-of-linear-transformations" title="Permalink to this headline">#</a></h2>
 <p>Given two linear transformations <span class="math notranslate nohighlight">\(T:\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span> and <span class="math notranslate nohighlight">\(U:\mathbb{R}^p\rightarrow\mathbb{R}^n\)</span>, the function <span class="math notranslate nohighlight">\(T \circ U:\mathbb{R}^p\rightarrow\mathbb{R}^m\)</span> is the composition of the two functions. That is, the function corresponding to applying first the function <span class="math notranslate nohighlight">\(U\)</span>, then the function <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[(T\circ U)(x) = T(U(x))\]</div>
@@ -428,7 +460,7 @@ title="Print to PDF"
 <figure class="align-default" id="three-step">
 <a class="reference internal image-reference" href="../../_images/three-step.png"><img alt="../../_images/three-step.png" src="../../_images/three-step.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Reflection in a line as a three-step process. Equivalent to a reflection in the dashed line, we can 1) rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span> 2) reflect in the horizontal axis 3) rotate anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#three-step" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17.1 </span><span class="caption-text">Reflection in a line as a three-step process. Equivalent to a reflection in the dashed line, we can 1) rotate clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span> 2) reflect in the horizontal axis 3) rotate anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#three-step" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The transformation matrix for reflection in the line <span class="math notranslate nohighlight">\(y=0\)</span> is just <span class="math notranslate nohighlight">\(\left(\begin{array}{cc}1 &amp; 0 \\0 &amp; -1 \\\end{array}\right)\)</span>, since <span class="math notranslate nohighlight">\(x\mapsto x \)</span>, <span class="math notranslate nohighlight">\(y\mapsto -y\)</span>.</p>
@@ -451,17 +483,17 @@ A &amp;=
 </div>
 <div class="exercise admonition" id="q_transformation_composition">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 17.2 </span></p>
 <section id="exercise-content">
 <p>Use a composition of three matrix transformations to calculate the 2-d transformation matrix for a stretch, scale factor <span class="math notranslate nohighlight">\(k\)</span> parallel to the line <span class="math notranslate nohighlight">\(y=\tan(\theta)x\)</span>.</p>
 </section>
 </div>
 </section>
 <section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.3. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/composition-solution-2">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_identity"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_identity"> Exercise 17.1</a></p>
 <section id="solution-content">
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I = \begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>.</p></li>
@@ -471,7 +503,7 @@ A &amp;=
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/composition-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_composition"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_composition"> Exercise 17.2</a></p>
 <section id="solution-content">
 <p>We can describe this transformation as a rotation by <span class="math notranslate nohighlight">\(\theta\)</span> followed by a scale 2 stretch parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis followed by a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -514,6 +546,20 @@ A &amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="matrices.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>Matrices</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="inverses.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>Inverses</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

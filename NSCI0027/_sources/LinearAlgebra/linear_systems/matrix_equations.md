@@ -350,6 +350,19 @@ $$A = \begin{pmatrix}1 & 1 \\ 0 & 0\end{pmatrix},$$
 3. Find the general solution to $Ax = b$  where $b = \begin{pmatrix}5 \\ 0\end{pmatrix}$. Describe the solution geometrically.
 ```
 
+
+```{exercise}
+:label: q_solve_system
+
+For the matrix
+
+$$A = \begin{pmatrix}1 & 1 \\ 0 & 0\end{pmatrix},$$
+
+1. What are the special solution(s) to the homogeneous equation $Ax=0$?
+2. What is the null space of $A$?
+3. Find the general solution to $Ax = b$  where $b = \begin{pmatrix}5 \\ 0\end{pmatrix}$. Describe the solution geometrically.
+```
+
 ## Solutions
 
 ```{solution} q_solve_system

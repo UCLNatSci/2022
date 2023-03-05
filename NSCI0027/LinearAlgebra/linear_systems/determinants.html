@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Determinants &#8212; Mathematics for Natural Sciences 2</title>
+    <title>19. Determinants &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="20. Eigenvalues and Eigenvectors" href="../eigenvectors/notes.html" />
+    <link rel="prev" title="18. Inverses" href="inverses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -190,6 +192,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="linear_maps.html">
    15. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="composition.html">
+   16. Composing Linear Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrices.html">
+   17. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diagonalisation.html">
+   21. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -326,12 +358,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-determinants">
-   Properties of Determinants
+   19.1. Properties of Determinants
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-   Cofactor Formula for the Determinant of an
+   19.2. Cofactor Formula for the Determinant of an
    <span class="math notranslate nohighlight">
     \(n \times n\)
    </span>
@@ -340,17 +372,17 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#areas-and-volumes">
-   Areas and Volumes
+   19.3. Areas and Volumes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vector-and-triple-products">
-   The Vector and Triple Products
+   19.4. The Vector and Triple Products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   19.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -374,12 +406,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-determinants">
-   Properties of Determinants
+   19.1. Properties of Determinants
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-   Cofactor Formula for the Determinant of an
+   19.2. Cofactor Formula for the Determinant of an
    <span class="math notranslate nohighlight">
     \(n \times n\)
    </span>
@@ -388,17 +420,17 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#areas-and-volumes">
-   Areas and Volumes
+   19.3. Areas and Volumes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vector-and-triple-products">
-   The Vector and Triple Products
+   19.4. The Vector and Triple Products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   19.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -412,11 +444,11 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="determinants">
-<h1>Determinants<a class="headerlink" href="#determinants" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">19. </span>Determinants<a class="headerlink" href="#determinants" title="Permalink to this headline">#</a></h1>
 <p>The determinant is a single number calculated from a square matrix. The determinant tells us whether the matrix is invertible, as well as a lot of other useful information about the matrix.</p>
 <p>We have already seen methods for calculating <span class="math notranslate nohighlight">\(\det(A)\)</span> for <span class="math notranslate nohighlight">\(2\times 2\)</span> and <span class="math notranslate nohighlight">\(3 \times 3\)</span> matrices. In this section we will study properties of the determinant and methods for calculating it for any <span class="math notranslate nohighlight">\(n \times n\)</span> matrix.</p>
 <section id="properties-of-determinants">
-<h2>Properties of Determinants<a class="headerlink" href="#properties-of-determinants" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.1. </span>Properties of Determinants<a class="headerlink" href="#properties-of-determinants" title="Permalink to this headline">#</a></h2>
 <p>The following three properties can be used to calculate the determinant of <em>any</em> square matrix. We therefore describe them as the ‘defining’ properties of the determinant.</p>
 <div class="admonition-defining-properties-of-the-determinant admonition">
 <p class="admonition-title">Defining Properties of the Determinant</p>
@@ -469,7 +501,7 @@ title="Print to PDF"
 \[\det(A) = -\det(A) \implies \det(A) = 0.\]</div>
 <div class="exercise admonition" id="prove_determinant_props">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 19.1 </span></p>
 <section id="exercise-content">
 <p>Prove properties 5, 6 and 7 from properties 1, 2, 3 and 4.</p>
 </section>
@@ -478,7 +510,7 @@ title="Print to PDF"
 <p>Note that every property for the rows can equally be applied to the columns (by transposing, since by property 10 <span class="math notranslate nohighlight">\(|A| = |A^T|\)</span>).</p>
 <div class="exercise admonition" id="determinant_operations">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 19.2 </span></p>
 <section id="exercise-content">
 <p>1. Use row operations to calculate the determinant of</p>
 <div class="math notranslate nohighlight">
@@ -488,7 +520,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-<h2>Cofactor Formula for the Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> Matrix<a class="headerlink" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.2. </span>Cofactor Formula for the Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> Matrix<a class="headerlink" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix" title="Permalink to this headline">#</a></h2>
 <div class="admonition-the-n-times-n-determinant admonition">
 <p class="admonition-title">The <span class="math notranslate nohighlight">\((n \times n)\)</span> Determinant</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with entries <span class="math notranslate nohighlight">\(a_{ij}\)</span> and <span class="math notranslate nohighlight">\(i\)</span> any row of <span class="math notranslate nohighlight">\(A\)</span>. Then</p>
@@ -530,7 +562,7 @@ title="Print to PDF"
 </div>
 <div class="exercise admonition" id="matrix_determinant">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 19.3 </span></p>
 <section id="exercise-content">
 <p>Calculate <span class="math notranslate nohighlight">\(\det(A)\)</span> where</p>
 <div class="math notranslate nohighlight">
@@ -539,14 +571,14 @@ title="Print to PDF"
 </div>
 </section>
 <section id="areas-and-volumes">
-<h2>Areas and Volumes<a class="headerlink" href="#areas-and-volumes" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.3. </span>Areas and Volumes<a class="headerlink" href="#areas-and-volumes" title="Permalink to this headline">#</a></h2>
 <p>The determinant has a useful and intuitive geometrical interpretation as an area or volume. Consider the parallelogram formed by the image of the unit square under a matrix transformation.</p>
 <figure class="align-default" id="la-fig-7" style="width: 400px">
 <div class="cell_output docutils container">
 <img alt="../../_images/linear_transformations_9_0.png" src="../../_images/linear_transformations_9_0.png" />
 </div>
 <figcaption>
-<p><span class="caption-text">The matrix <span class="math notranslate nohighlight">\(A\)</span> transforms the unit square to a parallelogram with area <span class="math notranslate nohighlight">\(\det(A)\)</span>.</span><a class="headerlink" href="#la-fig-7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19.1 </span><span class="caption-text">The matrix <span class="math notranslate nohighlight">\(A\)</span> transforms the unit square to a parallelogram with area <span class="math notranslate nohighlight">\(\det(A)\)</span>.</span><a class="headerlink" href="#la-fig-7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>It can be shown that the area of this parallelogram is exactly <span class="math notranslate nohighlight">\(\det(A)\)</span>. We will not prove this here, but it should be clear that this interpretation of the determinant is consistent with some of its properties. For example:</p>
@@ -562,7 +594,7 @@ title="Print to PDF"
 <p>We can think of the determinant as the factor by which volumes are stretched by the matrix. If the sign is negative then the matrix reverses orientation.</p>
 </section>
 <section id="the-vector-and-triple-products">
-<h2>The Vector and Triple Products<a class="headerlink" href="#the-vector-and-triple-products" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.4. </span>The Vector and Triple Products<a class="headerlink" href="#the-vector-and-triple-products" title="Permalink to this headline">#</a></h2>
 <p>The vector product is a special construction which is only valid in three dimensions. The vector product of two three-dimensional vectors is a vector perpendicular to both of them.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -610,10 +642,10 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="solutions-to-exercises">
-<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/determinants-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#prove_determinant_props"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#prove_determinant_props"> Exercise 19.1</a></p>
 <section id="solution-content">
 <p><strong>Property 5:</strong></p>
 <div class="math notranslate nohighlight">
@@ -632,7 +664,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/determinants-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#determinant_operations"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#determinant_operations"> Exercise 19.2</a></p>
 <section id="solution-content">
 <p>1.</p>
 <p>Use row operations to reduce to echelon form.</p>
@@ -648,7 +680,7 @@ title="Print to PDF"
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/determinants-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#matrix_determinant"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#matrix_determinant"> Exercise 19.3</a></p>
 <section id="solution-content">
 <p>Expand the <span class="math notranslate nohighlight">\((4\times 4)\)</span> matrix along the second row:</p>
 <div class="math notranslate nohighlight">
@@ -690,6 +722,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="inverses.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">18. </span>Inverses</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../eigenvectors/notes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Eigenvalues and Eigenvectors</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

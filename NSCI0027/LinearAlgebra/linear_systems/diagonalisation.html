@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Matrix Diagonalisation &#8212; Mathematics for Natural Sciences 2</title>
+    <title>21. Matrix Diagonalisation &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="20. Eigenvalues and Eigenvectors" href="../eigenvectors/notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
    1. Coordinate Systems
@@ -190,6 +191,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="linear_maps.html">
    15. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="composition.html">
+   16. Composing Linear Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrices.html">
+   17. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   21. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -326,12 +357,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   Motivation
+   21.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#diagonalisation-a-x-lambda-x-1">
-   Diagonalisation
+   21.2. Diagonalisation
    <span class="math notranslate nohighlight">
     \(A = X\Lambda X^{-1}\)
    </span>
@@ -339,27 +370,27 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about-diagonalisation">
-   About Diagonalisation
+   21.3. About Diagonalisation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-independence">
-   Linear Independence
+   21.4. Linear Independence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-eigenvalues">
-   More Eigenvalues
+   21.5. More Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#algebraic-and-geometric-multiplicity">
-   Algebraic and Geometric Multiplicity
+   21.6. Algebraic and Geometric Multiplicity
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-powers-a-k">
-   Matrix Powers
+   21.7. Matrix Powers
    <span class="math notranslate nohighlight">
     \(A^k\)
    </span>
@@ -367,24 +398,24 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complex-eigenvalues">
-   Complex Eigenvalues
+   21.8. Complex Eigenvalues
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rotations-in-2d">
-     Rotations in 2D
+     21.8.1. Rotations in 2D
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trace-and-determinant">
-   Trace and Determinant
+   21.9. Trace and Determinant
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   21.10. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -408,12 +439,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivation">
-   Motivation
+   21.1. Motivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#diagonalisation-a-x-lambda-x-1">
-   Diagonalisation
+   21.2. Diagonalisation
    <span class="math notranslate nohighlight">
     \(A = X\Lambda X^{-1}\)
    </span>
@@ -421,27 +452,27 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about-diagonalisation">
-   About Diagonalisation
+   21.3. About Diagonalisation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-independence">
-   Linear Independence
+   21.4. Linear Independence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-eigenvalues">
-   More Eigenvalues
+   21.5. More Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#algebraic-and-geometric-multiplicity">
-   Algebraic and Geometric Multiplicity
+   21.6. Algebraic and Geometric Multiplicity
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-powers-a-k">
-   Matrix Powers
+   21.7. Matrix Powers
    <span class="math notranslate nohighlight">
     \(A^k\)
    </span>
@@ -449,24 +480,24 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complex-eigenvalues">
-   Complex Eigenvalues
+   21.8. Complex Eigenvalues
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rotations-in-2d">
-     Rotations in 2D
+     21.8.1. Rotations in 2D
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trace-and-determinant">
-   Trace and Determinant
+   21.9. Trace and Determinant
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   Solutions to Exercises
+   21.10. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -480,9 +511,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="matrix-diagonalisation">
-<h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">21. </span>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">#</a></h1>
 <section id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
 <p>Recall that a diagonal matrix is a square matrix with zeros everywhere except the main diagonal. Multiplying a vector by a diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> is easy. Just multiply each entry of the vector by the the element in the corresponding position of the diagonal matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}d_{1}&amp;0&amp;\cdots&amp;0\\0&amp;d_{2}&amp;\cdots&amp;0\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\0&amp;0&amp;\cdots&amp;d_{n}\end{pmatrix}\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} = \begin{pmatrix}d_{1}x_1\\d_{2}x_2\\\vdots\\d_{n}x_n\end{pmatrix}.\end{split}\]</div>
@@ -508,7 +539,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <p>We just need to find the values <span class="math notranslate nohighlight">\(a_i\)</span>. It turns out that these are just the inverse of the matrix of eigenvectors, as we will see in the next section.</p>
 </section>
 <section id="diagonalisation-a-x-lambda-x-1">
-<h2>Diagonalisation <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span><a class="headerlink" href="#diagonalisation-a-x-lambda-x-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.2. </span>Diagonalisation <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span><a class="headerlink" href="#diagonalisation-a-x-lambda-x-1" title="Permalink to this headline">#</a></h2>
 <div class="admonition-matrix-diagonalisation admonition">
 <p class="admonition-title">Matrix Diagonalisation</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with <span class="math notranslate nohighlight">\(n\)</span> eigenvectors <span class="math notranslate nohighlight">\(v_i\)</span> and corresponding eigenvalues <span class="math notranslate nohighlight">\(\lambda_i\)</span>. Let</p>
@@ -563,22 +594,22 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 \[\begin{split}x = a_1v_1 + \cdots + a_nv_n = X\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}\end{split}\]</div>
 <p>then left-multiplying by <span class="math notranslate nohighlight">\(X^{-1}\)</span> gives the vector of coefficients <span class="math notranslate nohighlight">\(a_i\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-two-by-two-diag">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-two-by-two-diag" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}= X^{-1}x.\end{split}\]</div>
+<span class="eqno">(21.1)<a class="headerlink" href="#equation-eq-two-by-two-diag" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{pmatrix}a_1\\\vdots\\a_n\end{pmatrix}= X^{-1}x.\end{split}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Diagonalisation is not unique</strong></p>
-<p>1. If we write the eigenvalues and eigenvectors in a different order, we get a different matrix <span class="math notranslate nohighlight">\(X\)</span>. Swapping <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> we get another way to write <a class="reference internal" href="#equation-eq-two-by-two-diag">()</a>:</p>
+<p>1. If we write the eigenvalues and eigenvectors in a different order, we get a different matrix <span class="math notranslate nohighlight">\(X\)</span>. Swapping <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> we get another way to write <a class="reference internal" href="#equation-eq-two-by-two-diag">(21.1)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}1 &amp; 1\\1&amp;-1\end{pmatrix}\begin{pmatrix}-1&amp;0\\0&amp;1\end{pmatrix}\begin{pmatrix}\frac{1}{2}&amp;\frac{1}{2}\\\frac{1}{2}&amp;-\frac{1}{2}\end{pmatrix}.\end{split}\]</div>
 <p>However it is important that the order of the eigenvalues is the same as the order of the eigenvectors. If you swap the eigenvectors, you must remember to also swap the eigenvalues!</p>
-<p>2. Any eigenvector can be multiplied by a constant. For example replacing <span class="math notranslate nohighlight">\(v_1\)</span> by <span class="math notranslate nohighlight">\(2v_1\)</span> in <a class="reference internal" href="#equation-eq-two-by-two-diag">()</a>:</p>
+<p>2. Any eigenvector can be multiplied by a constant. For example replacing <span class="math notranslate nohighlight">\(v_1\)</span> by <span class="math notranslate nohighlight">\(2v_1\)</span> in <a class="reference internal" href="#equation-eq-two-by-two-diag">(21.1)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}2 &amp; 1\\-2&amp;1\end{pmatrix}\begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}\begin{pmatrix}\frac{1}{4}&amp;-\frac{1}{4}\\\frac{1}{2}&amp;\frac{1}{2}\end{pmatrix}.\end{split}\]</div>
 <p>3. The eigenvalues <em>are</em> unique, although different diagonalisations may result in a different order.</p>
 </div>
 <div class="exercise admonition" id="diagonalise_2_by_2">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21.1 </span></p>
 <section id="exercise-content">
 <p>Diagonalise the matrix</p>
 <div class="math notranslate nohighlight">
@@ -587,7 +618,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 </section>
 <section id="about-diagonalisation">
-<h2>About Diagonalisation<a class="headerlink" href="#about-diagonalisation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.3. </span>About Diagonalisation<a class="headerlink" href="#about-diagonalisation" title="Permalink to this headline">#</a></h2>
 <p>Not all matrices can be diagonalised. To diagonalise a matrix, the matrix of eigenvectors <span class="math notranslate nohighlight">\(X\)</span> must be invertible. In this section we will investigate conditions under which this is the case.</p>
 <p>Recall that if <span class="math notranslate nohighlight">\(v\)</span> is an eigenvector then so is any multiple <span class="math notranslate nohighlight">\(av\)</span>. Suppose a <span class="math notranslate nohighlight">\((2 \times 2)\)</span> matrix has eigenvector <span class="math notranslate nohighlight">\(v\)</span>. Then the vector <span class="math notranslate nohighlight">\(2v\)</span> is also an eigenvector, but the eigenvector matrix</p>
 <div class="math notranslate nohighlight">
@@ -599,7 +630,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <p>is not invertible. To extend this idea to the general case, we need to introduce the important concept of <em>linear independence</em>.</p>
 </section>
 <section id="linear-independence">
-<h2>Linear Independence<a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.4. </span>Linear Independence<a class="headerlink" href="#linear-independence" title="Permalink to this headline">#</a></h2>
 <p>A set of vectors is linearly dependent if one vector can be written as a linear sum of the other vectors.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -614,7 +645,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 <div class="exercise admonition" id="linear_dependence">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21.2 </span></p>
 <section id="exercise-content">
 <p>Show that a set of vectors is linearly dependent if (and only if) one of the vectors is a linear sum of the others.</p>
 </section>
@@ -638,7 +669,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 </section>
 <section id="more-eigenvalues">
-<h2>More Eigenvalues<a class="headerlink" href="#more-eigenvalues" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.5. </span>More Eigenvalues<a class="headerlink" href="#more-eigenvalues" title="Permalink to this headline">#</a></h2>
 <div class="admonition-theorem admonition">
 <p class="admonition-title">Theorem</p>
 <p>Eigenvectors <span class="math notranslate nohighlight">\(v_1, \ldots, v_n\)</span> corresponding to distinct eigenvalues are linearly independent.</p>
@@ -646,15 +677,15 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 <p>To prove this, suppose that <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> are linearly dependent eigenvectors of the matrix <span class="math notranslate nohighlight">\(A\)</span> with distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-indep">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-indep" title="Permalink to this equation">#</a></span>\[v_2 = av_1\]</div>
+<span class="eqno">(21.2)<a class="headerlink" href="#equation-eq-indep" title="Permalink to this equation">#</a></span>\[v_2 = av_1\]</div>
 <p>for some <span class="math notranslate nohighlight">\(a\neq 0\)</span>.</p>
 <p>Multiply by A:</p>
 <div class="math notranslate nohighlight">
 \[\lambda_2v_2 = a\lambda_1v_1\]</div>
 <p>then divide by <span class="math notranslate nohighlight">\(\lambda_2\)</span> (since they are distinct we can assume that at least one of the eigenvalues is nonzero).</p>
 <div class="math notranslate nohighlight" id="equation-eq-indep-2">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-indep-2" title="Permalink to this equation">#</a></span>\[v_2 = \frac{a\lambda_1}{\lambda_2}v_2.\]</div>
-<p>Comparing <a class="reference internal" href="#equation-eq-indep">()</a> and <a class="reference internal" href="#equation-eq-indep-2">()</a> we see that <span class="math notranslate nohighlight">\(\lambda_1/\lambda_2=1\)</span> and so</p>
+<span class="eqno">(21.3)<a class="headerlink" href="#equation-eq-indep-2" title="Permalink to this equation">#</a></span>\[v_2 = \frac{a\lambda_1}{\lambda_2}v_2.\]</div>
+<p>Comparing <a class="reference internal" href="#equation-eq-indep">(21.2)</a> and <a class="reference internal" href="#equation-eq-indep-2">(21.3)</a> we see that <span class="math notranslate nohighlight">\(\lambda_1/\lambda_2=1\)</span> and so</p>
 <p><span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2\)</span>.</p>
 <p>We have shown that two linearly dependent eigenvectors must have identical eigenvalues. We will not show it here, but it is not difficult to extend this to the general case: eigenvectors from distinct eigenvalues are linearly independent.</p>
 <p>We can conclude that if an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix has <span class="math notranslate nohighlight">\(n\)</span> distinct eigenvalues then it has <span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors. By the invertible matrix theorem  we can therefore can conclude that its matrix of eigenvectors <span class="math notranslate nohighlight">\(X\)</span> is invertible, and the matrix is invertible.</p>
@@ -664,7 +695,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}0&amp;-1\\-1&amp;0\end{pmatrix}, \quad B=\begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix}, \quad  C=\begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}.\end{split}\]</div>
 <p><strong>Solution</strong></p>
-<p><span class="math notranslate nohighlight">\(A\)</span> has characteristic polynomial <span class="math notranslate nohighlight">\(\lambda^2 - 1 = (\lambda-1)(\lambda+1)\)</span>. It has two distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1=1\)</span>,<span class="math notranslate nohighlight">\(\lambda_2=-1\)</span> and therefore two independent eigenvectors. It is diagonalisable and we already calculated <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span> <a class="reference internal" href="#equation-eq-two-by-two-diag">()</a>.</p>
+<p><span class="math notranslate nohighlight">\(A\)</span> has characteristic polynomial <span class="math notranslate nohighlight">\(\lambda^2 - 1 = (\lambda-1)(\lambda+1)\)</span>. It has two distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1=1\)</span>,<span class="math notranslate nohighlight">\(\lambda_2=-1\)</span> and therefore two independent eigenvectors. It is diagonalisable and we already calculated <span class="math notranslate nohighlight">\(A = X\Lambda X^{-1}\)</span> <a class="reference internal" href="#equation-eq-two-by-two-diag">(21.1)</a>.</p>
 <p><span class="math notranslate nohighlight">\(B\)</span> has characteristic polynomial <span class="math notranslate nohighlight">\(\lambda^2-2\lambda = \lambda(\lambda - 2)\)</span>. It has two distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1=0\)</span>,<span class="math notranslate nohighlight">\(\lambda_2=2\)</span> and therefore has two independent eigenvectors and is diagonalisable.</p>
 <p><span class="math notranslate nohighlight">\(C\)</span> has characteristic polynomial <span class="math notranslate nohighlight">\(\lambda^2-2\lambda+1 = (\lambda-1)^2\)</span>. It has a single eigenvalue <span class="math notranslate nohighlight">\(\lambda_1=1\)</span>. To determine if <span class="math notranslate nohighlight">\(C\)</span> is diagonalisable, we need to check if there are two independent eigenvectors in the eigenspace of <span class="math notranslate nohighlight">\(\lambda_1\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -673,7 +704,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 <div class="exercise admonition" id="q_diagonalise_matrix">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21.3 </span></p>
 <section id="exercise-content">
 <ol class="simple">
 <li><p>Diagonalise the matrix <span class="math notranslate nohighlight">\(B\)</span> in the example above.</p></li>
@@ -687,13 +718,13 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 </div>
 </section>
 <section id="algebraic-and-geometric-multiplicity">
-<h2>Algebraic and Geometric Multiplicity<a class="headerlink" href="#algebraic-and-geometric-multiplicity" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.6. </span>Algebraic and Geometric Multiplicity<a class="headerlink" href="#algebraic-and-geometric-multiplicity" title="Permalink to this headline">#</a></h2>
 <p>The eigenvalues of a <span class="math notranslate nohighlight">\((n \times n)\)</span> square matrix are the roots of its characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. We have already seen that if there are <span class="math notranslate nohighlight">\(n\)</span> distinct roots then there are <span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors and the matrix is diagonalisable. For example a <span class="math notranslate nohighlight">\((3 \times 3)\)</span> matrix with the following characteristic polynomial is diagonalisable.</p>
 <div class="math notranslate nohighlight">
 \[f(\lambda) = (\lambda-1)(\lambda-2)(\lambda-3)\]</div>
 <p>If there are fewer then <span class="math notranslate nohighlight">\(n\)</span> distinct roots then at least one of the roots must be <em>repeated</em>. For example, the characteristic polynomial</p>
 <div class="math notranslate nohighlight" id="equation-eq-repeated-root">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-repeated-root" title="Permalink to this equation">#</a></span>\[f(\lambda) =(\lambda-2)(\lambda-1)^2\]</div>
+<span class="eqno">(21.4)<a class="headerlink" href="#equation-eq-repeated-root" title="Permalink to this equation">#</a></span>\[f(\lambda) =(\lambda-2)(\lambda-1)^2\]</div>
 <p>results in two distinct eigenvalues <span class="math notranslate nohighlight">\(\lambda_1=2\)</span> and <span class="math notranslate nohighlight">\(\lambda_2=1\)</span>. <span class="math notranslate nohighlight">\(\lambda_2\)</span> is a repeated root with multiplicity <span class="math notranslate nohighlight">\(2\)</span> since the factor <span class="math notranslate nohighlight">\((\lambda-1)\)</span> divides the polynomial twice. To determine whether the matrix is diagonalisable, we need to determine how many independent eigenvectors there are in the eigenspace of each of the eigenvectors.</p>
 <div class="admonition-theorem admonition">
 <p class="admonition-title">Theorem</p>
@@ -701,7 +732,7 @@ Dx &amp;= D(x_1e_1 + \cdots + Dx_ne_n)\\
 <p><strong>geometric multiplicity of <span class="math notranslate nohighlight">\(\lambda\)</span> <span class="math notranslate nohighlight">\(\leq\)</span> algebraic multiplicity of <span class="math notranslate nohighlight">\(\lambda\)</span></strong></p>
 <p>where the <strong>algebraic multiplicity</strong> of <span class="math notranslate nohighlight">\(\lambda\)</span> is its multiplicity as a root of the characteristic polynomial of <span class="math notranslate nohighlight">\(A\)</span> and the <strong>geometric multiplicity</strong> of <span class="math notranslate nohighlight">\(\lambda\)</span> is the number of independent eigenvectors in the eigenspace of <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
 </div>
-<p>This means that for <a class="reference internal" href="#equation-eq-repeated-root">()</a> there could be one or two independent eigenvectors in the eigenspace of <span class="math notranslate nohighlight">\(\lambda_2\)</span>. If there are two, then the matrix is diagonalisable; if only one then it is not diagonalisable. To check, we have to calculate the null space of <span class="math notranslate nohighlight">\(A-\lambda_2I\)</span>.</p>
+<p>This means that for <a class="reference internal" href="#equation-eq-repeated-root">(21.4)</a> there could be one or two independent eigenvectors in the eigenspace of <span class="math notranslate nohighlight">\(\lambda_2\)</span>. If there are two, then the matrix is diagonalisable; if only one then it is not diagonalisable. To check, we have to calculate the null space of <span class="math notranslate nohighlight">\(A-\lambda_2I\)</span>.</p>
 <!--
 ```{admonition} Example
 :class: tip
@@ -713,7 +744,7 @@ matrix with repeated root and dimension 1 or 2 null space.
 -->
 </section>
 <section id="matrix-powers-a-k">
-<h2>Matrix Powers <span class="math notranslate nohighlight">\(A^k\)</span><a class="headerlink" href="#matrix-powers-a-k" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.7. </span>Matrix Powers <span class="math notranslate nohighlight">\(A^k\)</span><a class="headerlink" href="#matrix-powers-a-k" title="Permalink to this headline">#</a></h2>
 <p>The eigenvector matrix <span class="math notranslate nohighlight">\(X\)</span> produces <span class="math notranslate nohighlight">\(A=X\Lambda X^{-1}\)</span>. This factorisation is useful for computing powers because <span class="math notranslate nohighlight">\(X^{-1}\)</span> multiplies with <span class="math notranslate nohighlight">\(X\)</span> to get <span class="math notranslate nohighlight">\(I\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}A^2 &amp;= X\Lambda X^{-1}X\Lambda X^{-1} = X\Lambda I\Lambda X^{-1}=X\Lambda^2X^{-1}\\
@@ -727,7 +758,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 </div>
 </section>
 <section id="complex-eigenvalues">
-<h2>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.8. </span>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">#</a></h2>
 <p>We have seen that from a square matrix <span class="math notranslate nohighlight">\(A\)</span> we can calculate the characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. For an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix the polynomial is degree <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \cdots + a_1\lambda + a_0\]</div>
@@ -738,7 +769,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 <p>The roots <span class="math notranslate nohighlight">\(\lambda_i\)</span> are the eigenvalues of the matrix.</p>
 <p>In this section we consider the case where some of the roots are not real numbers.</p>
 <section id="rotations-in-2d">
-<h3>Rotations in 2D<a class="headerlink" href="#rotations-in-2d" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.8.1. </span>Rotations in 2D<a class="headerlink" href="#rotations-in-2d" title="Permalink to this headline">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix of an anticlockwise rotation <span class="math notranslate nohighlight">\(\pi/2\)</span> around the origin:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}0&amp;-1\\1&amp;0\end{pmatrix}.\end{split}\]</div>
@@ -775,7 +806,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 </div>
 <div class="exercise admonition" id="q_complex_eigenvector">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21.4 </span></p>
 <section id="exercise-content">
 <p>Find the complex eigenvectors corresponding to the two complex eigenvalues of</p>
 <div class="math notranslate nohighlight">
@@ -785,7 +816,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 </section>
 </section>
 <section id="trace-and-determinant">
-<h2>Trace and Determinant<a class="headerlink" href="#trace-and-determinant" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.9. </span>Trace and Determinant<a class="headerlink" href="#trace-and-determinant" title="Permalink to this headline">#</a></h2>
 <p>Calculating eigenvalues is (in general) a difficult problem. However, in some cases we can use some ‘tricks’ to help find them.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -817,17 +848,17 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 </div>
 <div class="exercise admonition" id="diagonal_eigenvalues">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21.5 </span></p>
 <section id="exercise-content">
 <p>Show that the eigenvalues of a triangular matrix are its diagonal entries.</p>
 </section>
 </div>
 </section>
 <section id="solutions-to-exercises">
-<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.10. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">#</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/diagonalisation-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#diagonalise_2_by_2"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#diagonalise_2_by_2"> Exercise 21.1</a></p>
 <section id="solution-content">
 <p>First find the eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\(A\)</span>. The characteristic polynomial is given by:</p>
 <div class="math notranslate nohighlight">
@@ -857,7 +888,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems/diagonalisation-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_diagonalise_matrix"> Exercise </a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_diagonalise_matrix"> Exercise 21.3</a></p>
 <section id="solution-content">
 <p>1. Eigenvalues are <span class="math notranslate nohighlight">\(\lambda_1 = 0\)</span>, <span class="math notranslate nohighlight">\(\lambda_2=1\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(B-\lambda_1I = \begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix}\underrightarrow{\mathrm{~RREF~}}\begin{pmatrix}1&amp;1\\0&amp;0\end{pmatrix}\)</span></p>
@@ -912,6 +943,13 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../eigenvectors/notes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">20. </span>Eigenvalues and Eigenvectors</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
