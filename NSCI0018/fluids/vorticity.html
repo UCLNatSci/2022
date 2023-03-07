@@ -340,6 +340,11 @@ const thebe_selector_output = ".output, .cell_output"
    40. Geophysical phenomena
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solutions.html">
+   41. Solutions
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -631,21 +636,21 @@ title="Print to PDF"
 <section id="the-vorticity-transport-equation">
 <h2><span class="section-number">35.1. </span>The vorticity transport equation<a class="headerlink" href="#the-vorticity-transport-equation" title="Permalink to this heading">#</a></h2>
 <p>Let us begin with the Navier-Stokes conservation of momentum equation for a conservative body force <span class="math notranslate nohighlight">\(\underline{F}=\nabla\phi\)</span>, and follow the same steps outlined in section <a class="reference internal" href="bernoulli.html#bernoulli-derivation"><span class="std std-numref">Section 34.2</span></a> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7904a0c2-2f47-4e76-a7b9-c2ec10ae2cdb">
-<span class="eqno">(35.1)<a class="headerlink" href="#equation-7904a0c2-2f47-4e76-a7b9-c2ec10ae2cdb" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{\omega}\times\underline{u}=-\nabla H +\nu \nabla^2\underline{u}. \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2,\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-78a71da6-3293-4947-84ce-34b25a030479">
+<span class="eqno">(35.1)<a class="headerlink" href="#equation-78a71da6-3293-4947-84ce-34b25a030479" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{\omega}\times\underline{u}=-\nabla H +\nu \nabla^2\underline{u}. \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2,\end{equation}\]</div>
 <p>Since “curlgrad”=0, we can eliminate the head by taking the curl:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dcf5795a-7287-4168-824c-1395af8280d8">
-<span class="eqno">(35.2)<a class="headerlink" href="#equation-dcf5795a-7287-4168-824c-1395af8280d8" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{\omega}}{\partial t}+\nabla\times(\underline{\omega}\times\underline{u})=\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-93fb5aed-22f4-4d39-88e4-b6811036cb24">
+<span class="eqno">(35.2)<a class="headerlink" href="#equation-93fb5aed-22f4-4d39-88e4-b6811036cb24" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{\omega}}{\partial t}+\nabla\times(\underline{\omega}\times\underline{u})=\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>The second term can be expanded using vector identities to obtain the following equation for the material derivative of the vorticity:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df941eb8-5747-4548-ae70-b26c66ce2312">
-<span class="eqno">(35.3)<a class="headerlink" href="#equation-df941eb8-5747-4548-ae70-b26c66ce2312" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}-\underline{\omega}(\nabla.\underline{u})+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-69f3c41a-b9d6-4e38-9f1b-3e6cdc68414d">
+<span class="eqno">(35.3)<a class="headerlink" href="#equation-69f3c41a-b9d6-4e38-9f1b-3e6cdc68414d" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}-\underline{\omega}(\nabla.\underline{u})+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>In an incompressible flow there is no divergence of the velocity field and so we obtain the vorticity transport equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f8c2689a-daa9-43c4-a311-efdc7f9091a6">
-<span class="eqno">(35.4)<a class="headerlink" href="#equation-f8c2689a-daa9-43c4-a311-efdc7f9091a6" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-979d5ddc-fa3b-4ac6-90d7-8872d5bd0cfe">
+<span class="eqno">(35.4)<a class="headerlink" href="#equation-979d5ddc-fa3b-4ac6-90d7-8872d5bd0cfe" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>The first term on the right is called the “vortex stretching” term. It gets its non-zero contribution from the component of the velocity gradient parallel to <span class="math notranslate nohighlight">\(\underline{\omega}\)</span>, in which case vortex lines are “stretched” by the velocity field, causing them to spin faster. This effect is involved in the formation of tornadoes.</p>
 <p>For two-dimensional flows the vortex stretching term is zero:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ab1211c-d33e-422a-b789-43c134a85749">
-<span class="eqno">(35.5)<a class="headerlink" href="#equation-7ab1211c-d33e-422a-b789-43c134a85749" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=(u(x,y),v(x,y)) \quad \Rightarrow \quad \underline{\omega}=(0,0,\omega), \quad \omega=\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y} \qquad \Rightarrow \quad (\underline{\omega}.\nabla)\underline{u}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-175bb3b1-5fcd-4940-9c16-d16d7e9839d8">
+<span class="eqno">(35.5)<a class="headerlink" href="#equation-175bb3b1-5fcd-4940-9c16-d16d7e9839d8" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=(u(x,y),v(x,y)) \quad \Rightarrow \quad \underline{\omega}=(0,0,\omega), \quad \omega=\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y} \qquad \Rightarrow \quad (\underline{\omega}.\nabla)\underline{u}=\underline{0}\end{equation}\]</div>
 <div class="theorem admonition">
 <p class="admonition-title">Tornado formation</p>
 <p>The presence of strong winds near to the ground creates a shear gradient, which can cause the formation of a vortex line as shown in the image below, which is taken from <a class="reference external" href="https://doi.org/10.1175/1520-0469(1984)041%3C2991:SVTOOU%3E2.0.CO;2">a 1984 research paper</a>. Thermal updrafts can then tilt the vortex tube upwards to form a vertical column of rotating air. The simultaneous stretching effect of the thermal updrafts can cause tornadoes to spin very fast.</p>
@@ -656,8 +661,8 @@ title="Print to PDF"
 <section id="vorticity-transport-in-inviscid-flows">
 <h2><span class="section-number">35.2. </span>Vorticity transport in inviscid flows<a class="headerlink" href="#vorticity-transport-in-inviscid-flows" title="Permalink to this heading">#</a></h2>
 <p>If the fluid is inviscid then the vorticity transport equation reduces to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68388903-751f-4e3d-83d2-e1f3b0c8d2fd">
-<span class="eqno">(35.6)<a class="headerlink" href="#equation-68388903-751f-4e3d-83d2-e1f3b0c8d2fd" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3e0507df-6906-42c4-99e7-ba26000df39c">
+<span class="eqno">(35.6)<a class="headerlink" href="#equation-3e0507df-6906-42c4-99e7-ba26000df39c" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}.\end{equation}\]</div>
 <p>If the fluid is initially irrotational then the vorticity will be zero along all fluid paths. The Euler equation cannot produce vorticity - it can only maintain it!</p>
 <p>For example, this is the case for flows that are started from rest. The implication is that irrotational flows are more common than you might expect. Recall, too that the combination of inviscid and irrotational flow satisfies Laplace’s equation <span class="math notranslate nohighlight">\(\nabla^2\phi=0.\)</span></p>
 <p>However, the assumption of inviscid flow can lead to a paradox, as discussed below.</p>
@@ -668,14 +673,14 @@ title="Print to PDF"
 <section id="potential-flow-derivation">
 <h3><span class="section-number">35.3.1. </span>Potential flow derivation<a class="headerlink" href="#potential-flow-derivation" title="Permalink to this heading">#</a></h3>
 <p>In accordance with the inviscid, irrotational assumptions, we begin with Laplace’s equation <span class="math notranslate nohighlight">\(\nabla^2\phi=0.\)</span> In cylindrical polars we obtain:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-867d10f6-a8ff-4916-8ea2-670bc24a436c">
-<span class="eqno">(35.7)<a class="headerlink" href="#equation-867d10f6-a8ff-4916-8ea2-670bc24a436c" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial \phi}{\partial r}\right)+\frac{1}{r}\frac{\partial}{\partial\theta}\left(\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)&amp;=0\\\Rightarrow \quad \frac{\partial^2\phi}{\partial r^2}+\frac{1}{r}\frac{\partial\phi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}&amp;=0.\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6c72eac4-8cdb-4814-8d16-4602004cd637">
+<span class="eqno">(35.7)<a class="headerlink" href="#equation-6c72eac4-8cdb-4814-8d16-4602004cd637" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial \phi}{\partial r}\right)+\frac{1}{r}\frac{\partial}{\partial\theta}\left(\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)&amp;=0\\\Rightarrow \quad \frac{\partial^2\phi}{\partial r^2}+\frac{1}{r}\frac{\partial\phi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}&amp;=0.\end{align}\]</div>
 <p>You may verify that the following result satisfies this equation, where <span class="math notranslate nohighlight">\(\Gamma\)</span> is an arbitrary constant representing the circulation, and <span class="math notranslate nohighlight">\(U\)</span> is the free stream velocity:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76da4540-7d93-4f00-8c89-73b980f216b0">
-<span class="eqno">(35.8)<a class="headerlink" href="#equation-76da4540-7d93-4f00-8c89-73b980f216b0" title="Permalink to this equation">#</a></span>\[\begin{equation}\phi=Ur\left(1+\frac{a^2}{r^2}\right)\cos(\theta)+\frac{\Gamma\theta}{2\pi},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ac799fdc-b710-46b3-8a94-e9bf743c02fc">
+<span class="eqno">(35.8)<a class="headerlink" href="#equation-ac799fdc-b710-46b3-8a94-e9bf743c02fc" title="Permalink to this equation">#</a></span>\[\begin{equation}\phi=Ur\left(1+\frac{a^2}{r^2}\right)\cos(\theta)+\frac{\Gamma\theta}{2\pi},\end{equation}\]</div>
 <p>The velocity components <span class="math notranslate nohighlight">\(\left(v_r,v_{\theta}\right)=\left(\frac{\partial\phi}{\partial r},\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)\)</span> are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b8d51b86-8eb1-45fc-9774-86373bbc2748">
-<span class="eqno">(35.9)<a class="headerlink" href="#equation-b8d51b86-8eb1-45fc-9774-86373bbc2748" title="Permalink to this equation">#</a></span>\[\begin{equation}v_r=U\left(1-\frac{a^2}{r^2}\right)\cos(\theta), \quad v_{\theta}=-U\left(1+\frac{a^2}{r^2}\right)\sin(\theta)+\frac{\Gamma}{2\pi r}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3865049c-aadf-40ab-986c-4ca7fa3f01d8">
+<span class="eqno">(35.9)<a class="headerlink" href="#equation-3865049c-aadf-40ab-986c-4ca7fa3f01d8" title="Permalink to this equation">#</a></span>\[\begin{equation}v_r=U\left(1-\frac{a^2}{r^2}\right)\cos(\theta), \quad v_{\theta}=-U\left(1+\frac{a^2}{r^2}\right)\sin(\theta)+\frac{\Gamma}{2\pi r}.\end{equation}\]</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Notice for this solution there is evidently <strong>slip</strong> on the surface of the cylinder, since</p>
@@ -683,8 +688,8 @@ title="Print to PDF"
 \[\begin{equation*}v_{\theta}(r=a)=-2U\sin(\theta)+\frac{\Gamma}{2\pi a}.\end{equation*}\]</div>
 </div>
 <p>The pattern of streamlines depends on the circulation. If <span class="math notranslate nohighlight">\(\Gamma=0\)</span> then the flow is symmetric, as shown in the top-left figure below, with stagnation points at the fore and aft of the cylinder. As the circulation in the clockwise direction increases, the stagnation points move towards the underside of the cylinder. Eventually, as the circulation is increased still further, the stagnation points coalesce and then move off the surface of the cylinder. The location of the stagnation points can be calculated:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af49342a-a302-40a8-95bd-d7e954cfb5b4">
-<span class="eqno">(35.10)<a class="headerlink" href="#equation-af49342a-a302-40a8-95bd-d7e954cfb5b4" title="Permalink to this equation">#</a></span>\[\begin{equation}v_{\theta}(r=a)=0 \quad \Rightarrow \sin(\theta)=-\frac{\Gamma}{4\pi U a}=-\frac{1}{2}B \quad \text{where }B=-\frac{\Gamma}{2\pi U a}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5a09d0c6-3b8f-46ec-bd2b-9dc7bb0e3893">
+<span class="eqno">(35.10)<a class="headerlink" href="#equation-5a09d0c6-3b8f-46ec-bd2b-9dc7bb0e3893" title="Permalink to this equation">#</a></span>\[\begin{equation}v_{\theta}(r=a)=0 \quad \Rightarrow \sin(\theta)=-\frac{\Gamma}{4\pi U a}=-\frac{1}{2}B \quad \text{where }B=-\frac{\Gamma}{2\pi U a}\end{equation}\]</div>
 <br>
 <a class="reference internal image-reference" href="../_images/stagnation.png" id="stagnation-point-on-cylinder"><img alt="stagnation point on cylinder" class="align-center" id="stagnation-point-on-cylinder" src="../_images/stagnation.png" style="width: 800.0px; height: 634.0px;" /></a>
 <br>
@@ -693,11 +698,11 @@ title="Print to PDF"
 <section id="bernoullis-theorem">
 <h3><span class="section-number">35.3.2. </span>Bernoulli’s theorem:<a class="headerlink" href="#bernoullis-theorem" title="Permalink to this heading">#</a></h3>
 <p>Since the cylinder is a streamline, and the motion is steady, <span class="math notranslate nohighlight">\(\frac{p}{\rho}+\frac{1}{2} v^2\)</span> is constant on <span class="math notranslate nohighlight">\(r=a\)</span>. Therefore on the surface of the cylinder</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4e51aa46-a410-417c-998b-04e7212a51db">
-<span class="eqno">(35.11)<a class="headerlink" href="#equation-4e51aa46-a410-417c-998b-04e7212a51db" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{p}{\rho}+\frac{1}{2}\left(-2U\sin(\theta)+\frac{\Gamma}{2\pi a}\right)^2=\mathrm{const}\\\Rightarrow\frac{p}{\rho}=\mathrm{const}-2U^2\sin^2(\theta)-\frac{U\Gamma\sin(\theta)}{\pi a}\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a1e9f91f-9118-4abd-95b0-6196f0c643dc">
+<span class="eqno">(35.11)<a class="headerlink" href="#equation-a1e9f91f-9118-4abd-95b0-6196f0c643dc" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{p}{\rho}+\frac{1}{2}\left(-2U\sin(\theta)+\frac{\Gamma}{2\pi a}\right)^2=\mathrm{const}\\\Rightarrow\frac{p}{\rho}=\mathrm{const}-2U^2\sin^2(\theta)-\frac{U\Gamma\sin(\theta)}{\pi a}\end{align}\]</div>
 <p>The pressure distribution is symmetric in the <span class="math notranslate nohighlight">\(y\)</span>-axis, so the net force must be perpendicular to the oncoming stream. The <span class="math notranslate nohighlight">\(y\)</span>-component of the force is <span class="math notranslate nohighlight">\(-p a\sin(\theta)\mathrm{d}\theta\)</span>, so the net force is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2554d48-24ea-4e9f-89af-a054283109dd">
-<span class="eqno">(35.12)<a class="headerlink" href="#equation-c2554d48-24ea-4e9f-89af-a054283109dd" title="Permalink to this equation">#</a></span>\[\begin{equation}F=\rho\int_0^{2\pi}\left(2U^2\sin^2(\theta)-\frac{U\Gamma}{\pi a}\sin(\theta)\right)a\sin(\theta)\mathrm{d}\theta=-\rho U \Gamma\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9e6ecb60-e35e-4e21-876d-81075eadf690">
+<span class="eqno">(35.12)<a class="headerlink" href="#equation-9e6ecb60-e35e-4e21-876d-81075eadf690" title="Permalink to this equation">#</a></span>\[\begin{equation}F=\rho\int_0^{2\pi}\left(2U^2\sin^2(\theta)-\frac{U\Gamma}{\pi a}\sin(\theta)\right)a\sin(\theta)\mathrm{d}\theta=-\rho U \Gamma\end{equation}\]</div>
 <p>We therefore obtain a lift force if there is positive circulation. The fact that there is no net force in the downstream direction (no drag) is known as <em>D’Alembert’s paradox</em>.</p>
 </section>
 <section id="resolving-the-paradox">

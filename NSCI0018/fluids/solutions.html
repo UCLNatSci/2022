@@ -585,6 +585,15 @@ title="Print to PDF"
    27
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapex3-28">
+   41.3.
+   <span class="xref std std-ref">
+    chapex3
+   </span>
+   28
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -620,6 +629,15 @@ title="Print to PDF"
     visuq
    </span>
    27
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapex3-28">
+   41.3.
+   <span class="xref std std-ref">
+    chapex3
+   </span>
+   28
   </a>
  </li>
 </ul>
@@ -725,6 +743,50 @@ title="Print to PDF"
 <p><span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\beta t}{\alpha} \quad \Rightarrow \quad y=\frac{\beta t}{\alpha}x+c\)</span></p>
 <p>However, we cannot use this treatment to solve for the particle paths since in that case <span class="math notranslate nohighlight">\(x=x(t)\)</span>, <span class="math notranslate nohighlight">\(y=y(t)\)</span> and so <span class="math notranslate nohighlight">\(t\)</span> must not be treated as constant.</p>
 </div>
+</section>
+<section id="chapex3-28">
+<h2><span class="section-number">41.3. </span><a class="reference internal" href="helmholtz.html#chapex3"><span class="std std-ref">Chapter exercises</span></a> 28<a class="headerlink" href="#chapex3-28" title="Permalink to this heading">#</a></h2>
+<p><strong>Question 1</strong><br></p>
+<p><span class="math notranslate nohighlight">\(\nabla.\underline{u}=\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}=4x(x^2+y^2-2)e^{-x^2-y^2}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">Z</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">X</span><span class="o">*</span><span class="p">(</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># options to prettify the plot</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([]),</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+<span class="c1"># The &quot;pcolormesh&quot; function can be used to make a density plot.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">,</span><span class="n">shading</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/solutions_7_0.png" src="../_images/solutions_7_0.png" />
+</div>
+</div>
+<p>Note: This picture matches with what we found in <a class="reference internal" href="mathideas.html#pot-fun"><span class="std std-ref">Chapter exercises</span></a> 26. From the plot of the vector field we could imply that there is a source in the left half plane and a sink in the right half plane.</p>
+<p><strong>Question 2</strong><br></p>
+<p><strong>Particle paths:</strong></p>
+<p><span class="math notranslate nohighlight">\(\frac{\mathrm{d}x}{\mathrm{d}t}=2x, \quad \frac{\mathrm{d}y}{\mathrm{d}t}=3y, \quad \frac{\mathrm{d}z}{\mathrm{d}t}=-5z\)</span></p>
+<p>Solution: <span class="math notranslate nohighlight">\(x=x_0e^{2t}, \quad y=y_0e^{3t}, \quad z=z_0e^{-5t}\)</span>.</p>
+<p>Fluid particles that initially lie on the ring <span class="math notranslate nohighlight">\(x_0=\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y_0=\sin(\theta)\)</span>, <span class="math notranslate nohighlight">\(z_0=1\)</span> are described in parametric form by</p>
+<p><span class="math notranslate nohighlight">\(x=\cos(\theta)e^{2t}, \quad y=\sin(\theta)e^{3t}, \quad z=e^{-5t}\)</span></p>
+<p>The equations can also be written as</p>
+<p><span class="math notranslate nohighlight">\(\left(\frac{x}{e^{2t}}\right)^2+\left(\frac{y}{e^{3t}}\right)^2=1, \quad z=e^{-5t}.\)</span></p>
+<p>The equations describe an ellipse parallel to the <span class="math notranslate nohighlight">\((x,y)\)</span> plane at height <span class="math notranslate nohighlight">\(z=e^{-5t}\)</span>. The ellipse has major axis <span class="math notranslate nohighlight">\(e^{3t}\)</span> parallel to <span class="math notranslate nohighlight">\(x\)</span> and minor axis <span class="math notranslate nohighlight">\(e^{2t}\)</span> parallel to <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Particles that initially lie on the ring are therefore swept towards the <span class="math notranslate nohighlight">\((x,y)\)</span> plane and away from the <span class="math notranslate nohighlight">\(z\)</span> axis. This type of motion is called a straining motion.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/straining.png" id="uniform-flow"><img alt="alternative description" class="align-center" id="uniform-flow" src="../_images/straining.png" style="width: 288.0px; height: 243.20000000000002px;" /></a>
+<br>
+<p>Irrotational: <span class="math notranslate nohighlight">\(\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x &amp; \underline{e}_y &amp; \underline{e}_z\\\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y}&amp; \frac{\partial}{\partial z}\\ 2x &amp; 3y &amp; -5z\end{vmatrix}=0\underline{e}_x+0\underline{e}_y+0\underline{e}_z\)</span></p>
+<p>Solenoidal: <span class="math notranslate nohighlight">\(\nabla.\underline{u} = \frac{\partial}{\partial x}\left(2x\right)+\frac{\partial}{\partial y}\left(3y\right)+\frac{\partial}{\partial z}\left(-5z\right)=0\)</span></p>
 </section>
 </section>
 

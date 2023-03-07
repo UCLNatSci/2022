@@ -340,6 +340,11 @@ const thebe_selector_output = ".output, .cell_output"
    40. Geophysical phenomena
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solutions.html">
+   41. Solutions
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -680,15 +685,15 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../_images/flux1.png" id="flux1"><img alt="alternative description" class="align-center" id="flux1" src="../_images/flux1.png" style="width: 274.40000000000003px; height: 345.6px;" /></a>
 <br>
 <p>Multiplying the normal component of the field by the area of the surface element gives the volume indicated by the shaded cylinder in the image below. It is a scalar quantity, which tells us the instantaneous rate of flow through the surface per unit time. Mathematically, the flow rate across the surface <span class="math notranslate nohighlight">\(S\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f99dd04b-74a2-40a9-b65d-4d546722c360">
-<span class="eqno">(28.1)<a class="headerlink" href="#equation-f99dd04b-74a2-40a9-b65d-4d546722c360" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1431e311-2bd9-40fa-8e80-978c627cdf0c">
+<span class="eqno">(28.1)<a class="headerlink" href="#equation-1431e311-2bd9-40fa-8e80-978c627cdf0c" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{\underline{n}}\)</span> is the unit normal to the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux2.png" id="flux2"><img alt="alternative description" class="align-center" id="flux2" src="../_images/flux2.png" style="width: 288.0px; height: 326.40000000000003px;" /></a>
 <br>
 <p>The quantity <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> gives the flow rate <em>per unit area</em>, which is called the flux. Integrating the flux over a given finite surface area <span class="math notranslate nohighlight">\(A\)</span> is equivalent to summing the individual surface element contributions to the flow rate, in the limit. The resulting flow rate <span class="math notranslate nohighlight">\(Q\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20914630-7662-42d1-ae8e-af520de20298">
-<span class="eqno">(28.2)<a class="headerlink" href="#equation-20914630-7662-42d1-ae8e-af520de20298" title="Permalink to this equation">#</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3886a739-2108-4d18-8f45-855059b84596">
+<span class="eqno">(28.2)<a class="headerlink" href="#equation-3886a739-2108-4d18-8f45-855059b84596" title="Permalink to this equation">#</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
 <p>Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per <strong>unit</strong> area. However, the intended meaning is almost always clear from the context and the surrounding text.</p>
 <p><strong>Examples</strong></p>
 <ul class="simple">
@@ -709,11 +714,11 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-divergence-thm">
 <span class="eqno">(28.3)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">#</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
 <p>where the <em>divergence</em> <span class="math notranslate nohighlight">\(\nabla.\underline{F}\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8be9f6e-c717-40b4-8185-97fb55594f71">
-<span class="eqno">(28.4)<a class="headerlink" href="#equation-d8be9f6e-c717-40b4-8185-97fb55594f71" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c9fc0a93-c3c4-45b1-ac00-5a125e9d691c">
+<span class="eqno">(28.4)<a class="headerlink" href="#equation-c9fc0a93-c3c4-45b1-ac00-5a125e9d691c" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
 <p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">(28.3)</a>, we obtain the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a0e1d0ff-b6ad-4b00-a3e5-dd1630e3c4a7">
-<span class="eqno">(28.5)<a class="headerlink" href="#equation-a0e1d0ff-b6ad-4b00-a3e5-dd1630e3c4a7" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5ba40bf8-ebb2-4a56-9eb6-d03c3d822218">
+<span class="eqno">(28.5)<a class="headerlink" href="#equation-5ba40bf8-ebb2-4a56-9eb6-d03c3d822218" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
 <p>Hence, divergence can be understood as the flux per unit volume through an infinitesimally-small closed surface surrounding a point. A point with positive divergence behaves like a source, and a point with negative divergence behaves like a sink.</p>
 <div class="readmore admonition">
 <p class="admonition-title">See also</p>
@@ -724,11 +729,11 @@ title="Print to PDF"
 <section id="what-is-vorticity">
 <h2><span class="section-number">28.3. </span>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this heading">#</a></h2>
 <p>Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector <span class="math notranslate nohighlight">\((u,v,w)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36a357ba-6367-45a6-9014-95c9dfd59a4e">
-<span class="eqno">(28.6)<a class="headerlink" href="#equation-36a357ba-6367-45a6-9014-95c9dfd59a4e" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f83fb76f-86c2-4a5c-8602-ab1f2d77246a">
+<span class="eqno">(28.6)<a class="headerlink" href="#equation-f83fb76f-86c2-4a5c-8602-ab1f2d77246a" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
 <p>An illustrated interpretation of vorticity is given below, looking only at the <span class="math notranslate nohighlight">\(z\)</span>-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(AC\)</span>, which are aligned with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, respectively. By the definition of the partial derivative, we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cd9cba6d-7e6e-4b0e-9c15-2f99d2b91b97">
-<span class="eqno">(28.7)<a class="headerlink" href="#equation-cd9cba6d-7e6e-4b0e-9c15-2f99d2b91b97" title="Permalink to this equation">#</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a72831fc-d954-42fc-b929-bfde004d2494">
+<span class="eqno">(28.7)<a class="headerlink" href="#equation-a72831fc-d954-42fc-b929-bfde004d2494" title="Permalink to this equation">#</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
 <p>so</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AB\)</span></p></li>
@@ -767,8 +772,8 @@ title="Print to PDF"
 </div>
 </div>
 <p>The vorticity of this flow is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c981d515-4774-4eab-bc04-c1c74b9112fa">
-<span class="eqno">(28.8)<a class="headerlink" href="#equation-c981d515-4774-4eab-bc04-c1c74b9112fa" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3868c0e4-4ac5-46f8-a1bd-11c948a47662">
+<span class="eqno">(28.8)<a class="headerlink" href="#equation-3868c0e4-4ac5-46f8-a1bd-11c948a47662" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
 <p>We see that the fluid elements rotate about the <span class="math notranslate nohighlight">\(z\)</span> axis. The negative sign indicates that the particles rotate in a clockwise direction, which agrees with intuition.</p>
 <p><strong>Example 2: Line vortex (‘potential vortex’)</strong></p>
 <p>Consider a flow described in cylindrical polars <span class="math notranslate nohighlight">\((r,\theta,z)\)</span>, by the velocity profile <span class="math notranslate nohighlight">\(\underline{u}=\left(0,\frac{k}{r},0\right)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is a positive constant.</p>
@@ -802,15 +807,15 @@ title="Print to PDF"
 </div>
 </div>
 <p>The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-be745ab4-5766-420f-ace4-bacaf3ae7fb1">
-<span class="eqno">(28.9)<a class="headerlink" href="#equation-be745ab4-5766-420f-ace4-bacaf3ae7fb1" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c70eeb41-8730-4dd3-8394-58600f3b0bb6">
+<span class="eqno">(28.9)<a class="headerlink" href="#equation-c70eeb41-8730-4dd3-8394-58600f3b0bb6" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
 <p>The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.</p>
 </section>
 <section id="helmhotz-decomposition">
 <h2><span class="section-number">28.4. </span>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this heading">#</a></h2>
 <p>The Helmholtz decomposition theorem is also known as the <strong>Fundamental Theorem of Vector Calculus</strong>. It states that any vector field that is smooth, defined everywhere in space and vanishes at infinity together with its first derivatives can be decomposed as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-768faa17-c9fc-4fb6-a4ef-96cf8fb7e2de">
-<span class="eqno">(28.10)<a class="headerlink" href="#equation-768faa17-c9fc-4fb6-a4ef-96cf8fb7e2de" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b6811cba-9224-4a73-9c8e-ff049fe0cf17">
+<span class="eqno">(28.10)<a class="headerlink" href="#equation-b6811cba-9224-4a73-9c8e-ff049fe0cf17" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
 <ul class="simple">
 <li><p>The first term is irrotational (curl-free) from the vector identity “curlgrad=<span class="math notranslate nohighlight">\(\underline{0}\)</span>”.</p></li>
 <li><p>The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.</p></li>
@@ -822,9 +827,9 @@ title="Print to PDF"
 </div>
 </section>
 <section id="chapter-exercises">
-<h2><span class="section-number">28.5. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<span id="chapex3"></span><h2><span class="section-number">28.5. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
 <p><strong>Question 1</strong><br>
-Calculate the divergence of the potential flow you looked at in <code class="xref std std-numref docutils literal notranslate"><span class="pre">pot-fun</span></code>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
+Calculate the divergence of the potential flow you looked at in <a class="reference internal" href="mathideas.html#pot-fun"><span class="std std-numref">Section 26.5</span></a>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
 <p><strong>Question 2</strong><br>
 For the steady flow <span class="math notranslate nohighlight">\(\underline{u}=(2x,3y,-5z)\)</span>, determine the trajectories of particles starting on the ring defined by <span class="math notranslate nohighlight">\(x=\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(\theta)\)</span>, <span class="math notranslate nohighlight">\(z=1\)</span>.</p>
 <p>Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.</p>
