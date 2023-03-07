@@ -212,6 +212,21 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 6 exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex9.html">
+   Chapter 9 exercise
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -587,8 +602,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-fdiff-basic">
 <span class="eqno">(4.3)<a class="headerlink" href="#equation-fdiff-basic" title="Permalink to this equation">#</a></span>\[\frac{\Delta x}{\Delta t}  =\frac{x_{k+1}-x_k}{h} +\mathcal{O}(h),\]</div>
 <p>where <span class="math notranslate nohighlight">\(h\)</span> is the step size of <span class="math notranslate nohighlight">\(t\)</span>. By using this formula to replace the continuous derivative in <a class="reference internal" href="#equation-ivp1">(4.1)</a> we obtain the following rearrangement, which defines the explicit Euler method:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b330601-881b-4c2f-b833-83318f7b24f6">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-1b330601-881b-4c2f-b833-83318f7b24f6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e0c174f2-d7c6-4eef-a010-d2a13e4474e6">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-e0c174f2-d7c6-4eef-a010-d2a13e4474e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{k+1} = x_k + h f(t_k,x_k) + \mathcal{O}(h^2).
 \end{equation}\]</div>
 <p>This iterative formula allows us to sequentially obtain the solution values at a given set of grid-points <span class="math notranslate nohighlight">\([t_1,t_2,\dots,t_n]\)</span>.</p>
@@ -843,15 +858,15 @@ year = 2022
 <section id="first-order-system">
 <h2><span class="section-number">4.2. </span>First order system<a class="headerlink" href="#first-order-system" title="Permalink to this heading">#</a></h2>
 <p>We can extend the explicit Euler method to solve an initial value problem involving a first order system of the following form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2bfe8c57-9272-4cae-85bc-fee54e5bcbd4">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-2bfe8c57-9272-4cae-85bc-fee54e5bcbd4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-359a2dee-449c-4643-bb2e-567281babf02">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-359a2dee-449c-4643-bb2e-567281babf02" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{F}(t,\underline{x}), \qquad \underline{x}(t_0)=\underline{x}_0.
 \end{equation}\]</div>
 <section id="id1">
 <h3><span class="section-number">4.2.1. </span>Example<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>The classic Lotka-Volterra predator prey model is given by the following pair of coupled ODEs, in which <span class="math notranslate nohighlight">\(x\)</span> represents the prey population and <span class="math notranslate nohighlight">\(y\)</span> represents the predator population. The parameters <span class="math notranslate nohighlight">\(a,b,p,q\)</span> are assumed to be constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65e3d5a6-b68c-43cc-ada9-020a27c0cca1">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-65e3d5a6-b68c-43cc-ada9-020a27c0cca1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-83348563-0591-4206-bcc7-8c7d2b2af0c1">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-83348563-0591-4206-bcc7-8c7d2b2af0c1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{x} &amp;= a x - p xy, \qquad  &amp; x(0)=x_0,\\
 \dot{y} &amp;= -b y + q xy, \qquad &amp; y(0)=y_0.
 \end{align}\]</div>
@@ -921,8 +936,8 @@ Apply the explicit Euler method to numerically solve the following non-autonomou
 \end{equation*}\]</div>
 <p><strong>Question 2</strong><br>
 Apply the explicit Euler method to numerically solve the following coupled ODE system for the case when <span class="math notranslate nohighlight">\(p=28\)</span>, <span class="math notranslate nohighlight">\(s=10\)</span>, <span class="math notranslate nohighlight">\(b=2.667\)</span> and use the code given below to make a parameteric plot of your solution</p>
-<div class="amsmath math notranslate nohighlight" id="equation-60864229-b402-4a8d-86b2-50a31ea83167">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-60864229-b402-4a8d-86b2-50a31ea83167" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e81d52f5-f7ff-4b7a-8b9d-bc27b6bc8c6d">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-e81d52f5-f7ff-4b7a-8b9d-bc27b6bc8c6d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{x} &amp; = s(y-x)\\
 \dot{y} &amp; = x(p-z)-y\\
 \dot{z} &amp; = xy-bz

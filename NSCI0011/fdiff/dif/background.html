@@ -161,18 +161,70 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Boundary Value Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/background.html">
+   7. Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/fixed_point.html">
+   8. Fixed point method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bvp/heat.html">
+   9. Multivariate example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sol/chapex1.html">
-   Chapter exercise 1.3
+   Chapter 1 exercise
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../sol/chapex2.html">
-   Chapter exercise 3.5
+  <a class="reference internal" href="../sol/chapex3.html">
+   Chapter 3 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex4.html">
+   Chapter 4 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex5.html">
+   Chapter 5 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex6.html">
+   Chapter 6 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex9.html">
+   Chapter 9 exercise
   </a>
  </li>
 </ul>
@@ -724,42 +776,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_imgb5dbd053fb44484a92324221b341efea">
+  <img id="_anim_img47130fe02f2b4de6badc11465c13e8e8">
   <div class="anim-controls">
-    <input id="_anim_sliderb5dbd053fb44484a92324221b341efea" type="range" class="anim-slider"
+    <input id="_anim_slider47130fe02f2b4de6badc11465c13e8e8" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="animb5dbd053fb44484a92324221b341efea.set_frame(parseInt(this.value));">
+           oninput="anim47130fe02f2b4de6badc11465c13e8e8.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="animb5dbd053fb44484a92324221b341efea.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim47130fe02f2b4de6badc11465c13e8e8.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="animb5dbd053fb44484a92324221b341efea.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim47130fe02f2b4de6badc11465c13e8e8.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="animb5dbd053fb44484a92324221b341efea.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim47130fe02f2b4de6badc11465c13e8e8.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="animb5dbd053fb44484a92324221b341efea.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim47130fe02f2b4de6badc11465c13e8e8.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="animb5dbd053fb44484a92324221b341efea.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim47130fe02f2b4de6badc11465c13e8e8.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="animb5dbd053fb44484a92324221b341efea.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim47130fe02f2b4de6badc11465c13e8e8.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="animb5dbd053fb44484a92324221b341efea.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim47130fe02f2b4de6badc11465c13e8e8.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="animb5dbd053fb44484a92324221b341efea.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim47130fe02f2b4de6badc11465c13e8e8.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="animb5dbd053fb44484a92324221b341efea.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim47130fe02f2b4de6badc11465c13e8e8.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectb5dbd053fb44484a92324221b341efea"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select47130fe02f2b4de6badc11465c13e8e8"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_b5dbd053fb44484a92324221b341efea"
+      <input type="radio" name="state" value="once" id="_anim_radio1_47130fe02f2b4de6badc11465c13e8e8"
              >
-      <label for="_anim_radio1_b5dbd053fb44484a92324221b341efea">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_b5dbd053fb44484a92324221b341efea"
+      <label for="_anim_radio1_47130fe02f2b4de6badc11465c13e8e8">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_47130fe02f2b4de6badc11465c13e8e8"
              checked>
-      <label for="_anim_radio2_b5dbd053fb44484a92324221b341efea">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_b5dbd053fb44484a92324221b341efea"
+      <label for="_anim_radio2_47130fe02f2b4de6badc11465c13e8e8">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_47130fe02f2b4de6badc11465c13e8e8"
              >
-      <label for="_anim_radio3_b5dbd053fb44484a92324221b341efea">Reflect</label>
+      <label for="_anim_radio3_47130fe02f2b4de6badc11465c13e8e8">Reflect</label>
     </form>
   </div>
 </div>
@@ -769,9 +821,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_imgb5dbd053fb44484a92324221b341efea";
-    var slider_id = "_anim_sliderb5dbd053fb44484a92324221b341efea";
-    var loop_select_id = "_anim_loop_selectb5dbd053fb44484a92324221b341efea";
+    var img_id = "_anim_img47130fe02f2b4de6badc11465c13e8e8";
+    var slider_id = "_anim_slider47130fe02f2b4de6badc11465c13e8e8";
+    var loop_select_id = "_anim_loop_select47130fe02f2b4de6badc11465c13e8e8";
     var frames = new Array(13);
 
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAEsCAYAAAAfPc2WAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -4430,7 +4482,7 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        animb5dbd053fb44484a92324221b341efea = new Animation(frames, img_id, slider_id, 200.0,
+        anim47130fe02f2b4de6badc11465c13e8e8 = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -4438,8 +4490,8 @@ IiIiIjFYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMBYsIiIiIgMjAWLiIiIyMD+H6k06bOF\
 </div></div>
 </div>
 <p>We can use the linear interpolation to estimate the slope of the curve at each datapoint. The formula can be written mathematically by labelling the points as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f889dd3-6a9d-42f3-b550-dae8b1a6d797">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-9f889dd3-6a9d-42f3-b550-dae8b1a6d797" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7fc791c9-df33-4d0d-8e1d-7d2638c3cf2d">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-7fc791c9-df33-4d0d-8e1d-7d2638c3cf2d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 (x_k,y_k), \qquad k=1,2,\dots n.
 \end{equation}\]</div>
 <p>The slope of a particular line segment is then given by</p>
@@ -4510,8 +4562,8 @@ y(x)=\sin(x)+x.
 <li><p>If a negative index is used this refers to the position counted from the end of the list instead of the start of the list. For instance, <code class="docutils literal notranslate"><span class="pre">x[0:-1]</span></code> gets everything except the last value.</p></li>
 </ul>
 <p>Slicing allows us to generate the array of differences without using a loop. We first note that formula <a class="reference internal" href="#equation-thebasic">(1.3)</a> can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e0b64bf2-d304-4566-b268-2899cb69f6bb">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-e0b64bf2-d304-4566-b268-2899cb69f6bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-03b95c14-71cb-466d-96cb-57ed012cb425">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-03b95c14-71cb-466d-96cb-57ed012cb425" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n]-[x_1,x_2,\dots,x_{n-1}]}
 \end{equation}\]</div>
 <p>This can be coded as follows:</p>
@@ -4535,8 +4587,8 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 <section id="id1">
 <h3><span class="section-number">1.2.1. </span>Example<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Taking <span class="math notranslate nohighlight">\(y=\sin(x)\)</span> in the finite difference formula <a class="reference internal" href="#equation-eq-fdiff1">(1.5)</a> gives us an approximation for the derivative of this function:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d58a5ff-f980-4d88-bd6e-d8d6a6f2f579">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-7d58a5ff-f980-4d88-bd6e-d8d6a6f2f579" title="Permalink to this equation">#</a></span>\[\begin{equation}y^{\prime}(x_k)\approx \frac{\sin\left(x_k+h\right)-\sin\left(x_k\right)}{h}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3618967e-4848-483d-b987-aa72ef1af9da">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-3618967e-4848-483d-b987-aa72ef1af9da" title="Permalink to this equation">#</a></span>\[\begin{equation}y^{\prime}(x_k)\approx \frac{\sin\left(x_k+h\right)-\sin\left(x_k\right)}{h}.\end{equation}\]</div>
 <p>We can estimate the error in this approximation at any given point by comparing to the known analytic result <span class="math notranslate nohighlight">\(y^{\prime}=\cos(x)\)</span>. For example, with <span class="math notranslate nohighlight">\(x_k=\pi/3\)</span> and <span class="math notranslate nohighlight">\(h=0.1\)</span> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4664,11 +4716,11 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 <p>A description of the issues and limitations can be found in the Python documentation on <a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html">Floating Point Arithmetic</a>. The terminology refers to the fact that there isn’t a fixed number of digits either side of the point separating the integer part of the number from its fractional part, so the point can “float” during calculation.</p>
 </div>
 <p>For this example, at step size <span class="math notranslate nohighlight">\(h=10^{-9}\)</span> the difference between the two sine terms can be accurately computed (using high precision arithmetic) as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-904f5ee2-0e8c-4300-bef4-d01e5fb5dbfc">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-904f5ee2-0e8c-4300-bef4-d01e5fb5dbfc" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 4.999999995669873\times 10^{-10}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8943c666-44b4-47e3-89fc-b3c50efe4de0">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-8943c666-44b4-47e3-89fc-b3c50efe4de0" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 4.999999995669873\times 10^{-10}\end{equation}\]</div>
 <p>However, with the precision available to <code class="docutils literal notranslate"><span class="pre">float</span></code> it is determined to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31fb15cd-5246-42d6-9cd0-ee4672b3502d">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-31fb15cd-5246-42d6-9cd0-ee4672b3502d" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 5.000000413701855\times 10^{-10}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0497e2fd-8732-442a-be74-58eaf637ae92">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-0497e2fd-8732-442a-be74-58eaf637ae92" title="Permalink to this equation">#</a></span>\[\begin{equation}\sin(x_k+10^{-9})-\sin(x_k) = 5.000000413701855\times 10^{-10}\end{equation}\]</div>
 <p>The difference occurs in the seventh significant figure and this explains why the error in the computed answer is around <span class="math notranslate nohighlight">\(10^{-7}\)</span></p>
 <p>We can eliminate roundoff errors by increasing the number of digits used in internal computations to obtain a graph like the one below, in which the errors are seen to continue decreasing linearly for smaller step sizes.</p>
 <div class="cell tag_remove-input docutils container">
@@ -4687,8 +4739,8 @@ y^{\prime}=\frac{[y_2,y_3,\dots,y_n]-[y_1,y_2,\dots,y_{n-1}]}{[x_2,x_3,\dots,x_n
 <section id="chapter-exercise">
 <span id="chapex1"></span><h2><span class="section-number">1.3. </span>Chapter exercise<a class="headerlink" href="#chapter-exercise" title="Permalink to this heading">#</a></h2>
 <p>The logistic function is given by the following expression in which parameters <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(r\)</span> are constants determining the location, scale and shape of the curve:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac79e14d-ff48-42ff-ba1e-b1aa97ba85d4">
-<span class="eqno">(1.9)<a class="headerlink" href="#equation-ac79e14d-ff48-42ff-ba1e-b1aa97ba85d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f2260c8-350e-4fc6-a1e6-e92e2467ddd2">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-2f2260c8-350e-4fc6-a1e6-e92e2467ddd2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x=\frac{C}{1+e^{-r(t-t_0)}}.
 \end{equation}\]</div>
 <p>Produce a plot of the function using a step size <code class="docutils literal notranslate"><span class="pre">h=1e-3</span></code> for the case where <span class="math notranslate nohighlight">\(t_0=3\)</span>, <span class="math notranslate nohighlight">\(C=75\)</span>, <span class="math notranslate nohighlight">\(r=1.5\)</span>, Use the difference formula to estimate the first and second derivatives numerically.</p>

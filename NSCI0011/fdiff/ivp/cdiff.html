@@ -212,6 +212,21 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 6 exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex9.html">
+   Chapter 9 exercise
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -532,18 +547,18 @@ title="Print to PDF"
 <section id="first-order-problem">
 <h2><span class="section-number">6.1. </span>First order problem<a class="headerlink" href="#first-order-problem" title="Permalink to this heading">#</a></h2>
 <p>The general form of a (scalar) first order IVP is defined by a first order ODE together with the initial value of the variable:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f9353354-d0f1-4e0b-8684-c9753a4529de">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-f9353354-d0f1-4e0b-8684-c9753a4529de" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3c173c9a-9e93-4fab-b9f6-34e28ae8e93a">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-3c173c9a-9e93-4fab-b9f6-34e28ae8e93a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}t} = f(t,x), \quad x(0)=x_0.
 \end{equation}\]</div>
 <p>We will demonstrate a quadratic order solution technique for this problem using the following example case:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c7a21efe-31eb-4c50-a073-f3e922dda0ee">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-c7a21efe-31eb-4c50-a073-f3e922dda0ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7d6cf840-33b2-4548-90ee-c18cbc3be9f4">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-7d6cf840-33b2-4548-90ee-c18cbc3be9f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}{t}}=\cos\left(t+\frac{\pi}{4}\right), \quad x(0)=\frac{1}{\sqrt{2}}.
 \end{equation}\]</div>
 <p>Application of the midpoint rule results in the following formula, which requires two starting points:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5183694-773f-4ca1-8956-80250feb2e1f">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-a5183694-773f-4ca1-8956-80250feb2e1f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-05e2a2b5-8824-48bc-8a06-f6cb68cb0381">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-05e2a2b5-8824-48bc-8a06-f6cb68cb0381" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_{k+1}-x_{k-1}}{2h} = f(t_k,x_k) \qquad \implies \qquad x_{k+1}=x_{k-1}+2hf(t_k,x_k).
 \end{equation}\]</div>
 <p>An illustration of the algorithm is shown below:</p>
@@ -618,14 +633,14 @@ title="Print to PDF"
 <section id="first-derivative-rule">
 <h3><span class="section-number">6.2.1. </span>First derivative rule<a class="headerlink" href="#first-derivative-rule" title="Permalink to this heading">#</a></h3>
 <p>The second order problem can be re-written as a first order IVP by definining <span class="math notranslate nohighlight">\(y=\dot{x}\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e3738d47-ff3e-4010-b830-89a116ae2427">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-e3738d47-ff3e-4010-b830-89a116ae2427" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-92d147fc-4792-4194-8305-923058748535">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-92d147fc-4792-4194-8305-923058748535" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{F}(t,\underline{x}), \qquad \underline{x}(t_0)=\begin{bmatrix}\alpha\\\beta\end{bmatrix}, \qquad \underline{x}=\begin{bmatrix}x\\y\end{bmatrix}.
 \end{equation}\]</div>
 <p>Therefore it could be solved using the midpoint method with a single explicit Euler step at the start, as above for the scalar case. In general, a <span class="math notranslate nohighlight">\(n\)</span>th order IVP can be re-cast in this way as a first order IVP with <span class="math notranslate nohighlight">\(n\)</span> dependent variables.</p>
 <p>For our example problem we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62ea2111-6009-4db6-90bc-8be0f48da844">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-62ea2111-6009-4db6-90bc-8be0f48da844" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1722603a-a440-4806-ba6a-635e9e4a7da4">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-1722603a-a440-4806-ba6a-635e9e4a7da4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}y\\-\sin(t+\pi/4)\end{bmatrix}, \qquad \begin{bmatrix}x(0)\\y(0)\end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\end{bmatrix}.
 \end{equation}\]</div>
 <p>The code below implements the algorithm for our example problem, using various step sizes to explore the effect on the error. From the output table it can be again seen that the errors scale with <span class="math notranslate nohighlight">\(h^2\)</span>:</p>
@@ -671,8 +686,8 @@ title="Print to PDF"
 <h3><span class="section-number">6.2.2. </span>Second derivative rule<a class="headerlink" href="#second-derivative-rule" title="Permalink to this heading">#</a></h3>
 <p>For the partial differential equations that we will encounter later, it is not possible to rewrite them in the manner of a first order system. Therefore we will need to use the finite difference formulae for the higher derivatives. In preparation for this, we will demonstrate the basic technique using our example problem.</p>
 <p>Subsituting the second derivative midpoint formula into <a class="reference internal" href="#equation-6-6">(6.5)</a> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2e0df7ca-4b1b-43b0-b03f-0308bd3f338c">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-2e0df7ca-4b1b-43b0-b03f-0308bd3f338c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d01d2545-4b95-4f77-a582-fbb3af2f8e68">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-d01d2545-4b95-4f77-a582-fbb3af2f8e68" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_{k+1}-2x_k+x_{k-1}}{h^2}=\sin\left(t_k+\frac{\pi}{4}\right) \qquad \implies \qquad x_{k+1}=2x_k-x_{k-1}+h^2 \sin\left(t_k+\frac{\pi}{4}\right)
 \end{equation}\]</div>
 <p>An illustration of the algorithm is shown below:</p>
@@ -720,8 +735,8 @@ title="Print to PDF"
 <p>The error introduced by the explicit Euler formula in the first step is <span class="math notranslate nohighlight">\(E_1=\mathcal{O}(h^2)\)</span>. Applying the above formulae recursively with this error gives a global error of <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> in the first derivative approximation and a global error of <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> in the second derivative approximation.</p>
 <p>So, we need to use a result for the first step that has the same order of accuracy as the midpoint method. There are lots of ways to do this, but we will use a technique that is based on the midpoint formula. We will be able to implement the same method later to also solve partial differential equations.</p>
 <p>The trick involves the introduction of a “ghost point” <span class="math notranslate nohighlight">\(x_{-1}\)</span> outside the solution domain. Application of the midpoint rule to the initial condition for the derivative then gives the following result, which can be solved simultaneously with the update rule to obtain <span class="math notranslate nohighlight">\(x_1\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21488f11-d28a-47b2-8e5e-e4823bbb6775">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-21488f11-d28a-47b2-8e5e-e4823bbb6775" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-762e8065-feda-4660-97f4-3a5cad9e17e6">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-762e8065-feda-4660-97f4-3a5cad9e17e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{x_1-x_{-1}}{2h}=x_0^{\prime}.
 \end{equation}\]</div>
 <p>A graphical illustration of the method is shown below:</p>
@@ -735,8 +750,8 @@ title="Print to PDF"
 </div>
 <div class="toggle docutils container">
 <p>For this problem, we have the following rules</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba915dd9-cec1-44de-a1b8-7d16532ab587">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-ba915dd9-cec1-44de-a1b8-7d16532ab587" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5aa53eca-4a66-4233-a725-ec879cd03c12">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-5aa53eca-4a66-4233-a725-ec879cd03c12" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{1}=2x_0-x_{-1}+h^2 x_0^{\prime\prime}, \qquad x_1 = x_{-1}+2hx_0^{\prime}.
 \end{equation}\]</div>
 <p>Solving simultaneously gives</p>
@@ -762,8 +777,8 @@ x_1=x_0+hx_0^{\prime}+\frac{h^2}{2} x_0^{\prime\prime}.
 <div class="math notranslate nohighlight" id="equation-2order-cau">
 <span class="eqno">(6.11)<a class="headerlink" href="#equation-2order-cau" title="Permalink to this equation">#</a></span>\[\ddot{x} + 2\dot{x}+10 x = 0, \qquad x(0)=1, \quad \dot{x}(0)=-1.\]</div>
 <p>The analytic solution of this IVP is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3652de9-81c6-4778-bb0b-2bc52a3c68f0">
-<span class="eqno">(6.12)<a class="headerlink" href="#equation-f3652de9-81c6-4778-bb0b-2bc52a3c68f0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-233df699-b0ef-4848-86bb-16b40a833282">
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-233df699-b0ef-4848-86bb-16b40a833282" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x = e^{-t}\cos(3t).
 \end{equation}\]</div>
 <p>A plot of the analytic solution is shown below:</p>

@@ -212,6 +212,21 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 6 exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex9.html">
+   Chapter 9 exercise
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -603,8 +618,8 @@ title="Print to PDF"
 <section id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
 <p>We can convert it to a first order system by introducing <span class="math notranslate nohighlight">\(y=\dot{x}\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-37d0696b-d1a1-47e1-bdc8-c0e07aa3cbde">
-<span class="eqno">(4)<a class="headerlink" href="#equation-37d0696b-d1a1-47e1-bdc8-c0e07aa3cbde" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0d69f075-d572-458e-9a26-7c94af1acb91">
+<span class="eqno">(4)<a class="headerlink" href="#equation-0d69f075-d572-458e-9a26-7c94af1acb91" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}y\\r^2 x(1-x/C)(1-2x/C)\end{bmatrix}
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -647,7 +662,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_7872\3599465400.py:22: RuntimeWarning: overflow encountered in double_scalars
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ella Metcalfe\AppData\Local\Temp\ipykernel_19844\3599465400.py:22: RuntimeWarning: overflow encountered in double_scalars
   dydt=r**2*x*(1-x/C)*(1-2*x/C)
 </pre></div>
 </div>
@@ -660,8 +675,8 @@ title="Print to PDF"
 <h2>Understanding stiffness<a class="headerlink" href="#understanding-stiffness" title="Permalink to this heading">#</a></h2>
 <p>Stiffness is a very difficult phenomenon to study, which depends on both the problem under consideration <em>and</em> the method. A problem that exhibits stiffness with respect to the explicit Euler method may not exhibit the same stiffness when tackled with the midpoint method.</p>
 <p>As we have seen, the logistic curve can be represented by either of the following equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-37b53acd-e182-489d-8bbd-647ba9c4f7ab">
-<span class="eqno">(5)<a class="headerlink" href="#equation-37b53acd-e182-489d-8bbd-647ba9c4f7ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-750ccd90-5e28-4e34-8b2d-06d28c480812">
+<span class="eqno">(5)<a class="headerlink" href="#equation-750ccd90-5e28-4e34-8b2d-06d28c480812" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\mathrm{d}x}{\mathrm{d}t}=r x (1-x/C), \qquad
 \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=\frac{r^2 x (C-x)(C-2x)}{C^2}.
 \end{equation}\]</div>
@@ -670,8 +685,8 @@ title="Print to PDF"
 <section id="first-order-problem">
 <h2>First order problem<a class="headerlink" href="#first-order-problem" title="Permalink to this heading">#</a></h2>
 <p>The explicit Euler formula corresponding to <span class="math notranslate nohighlight">\(\dot{x}=f(x)\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36b5f29e-83ad-450f-88ee-ee9914b36b05">
-<span class="eqno">(6)<a class="headerlink" href="#equation-36b5f29e-83ad-450f-88ee-ee9914b36b05" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d5541b28-0762-4877-8fb5-0d5e7c5b2c7f">
+<span class="eqno">(6)<a class="headerlink" href="#equation-d5541b28-0762-4877-8fb5-0d5e7c5b2c7f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x_{k+1} = x_k + h f(x_k).
 \end{equation}\]</div>
 <p>The solution trajectory takes forward steps along the vector direction defined by the slope <span class="math notranslate nohighlight">\(f(x_k)\)</span>. A streamplot of the vector field for our logistic problem is shown below, along with the solution curve. Notice that neighbouring solution trajectories converge towards the solution to the IVP for the given conditions:</p>
@@ -709,8 +724,8 @@ x_{k+1} = x_k + h f(x_k).
 <section id="second-derivative-problem">
 <h2>Second derivative problem<a class="headerlink" href="#second-derivative-problem" title="Permalink to this heading">#</a></h2>
 <p>The explicit Euler formula corresponding to <span class="math notranslate nohighlight">\(\dot{\underline{x}}=f(\underline{x})\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dcf2dbfe-23d2-462d-b0a2-ee5f74018c08">
-<span class="eqno">(7)<a class="headerlink" href="#equation-dcf2dbfe-23d2-462d-b0a2-ee5f74018c08" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2056f079-3e1b-431a-9ec9-62d461e4d145">
+<span class="eqno">(7)<a class="headerlink" href="#equation-2056f079-3e1b-431a-9ec9-62d461e4d145" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{x}_{k+1}=\underline{x}_k+hf(\underline{x}_k)
 \end{equation}\]</div>
 <p>The solution trajectory takes forward steps along the vector direction defined by the gradient vector <span class="math notranslate nohighlight">\(f(\underline{x}_k)\)</span>. We will look at the projection of this vector field in the <span class="math notranslate nohighlight">\((x,y)\)</span> plane, together with the solution curve, which satisfies <span class="math notranslate nohighlight">\(y=rx(1-x/C)\)</span>:</p>

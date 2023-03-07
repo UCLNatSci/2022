@@ -59,6 +59,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 8 exercise" href="chapex8.html" />
+    <link rel="prev" title="Chapter 6 exercise" href="chapex6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -184,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
   Solutions
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapex1.html">
    Chapter 1 exercise
@@ -208,6 +210,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="chapex6.html">
    Chapter 6 exercise
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapex9.html">
+   Chapter 9 exercise
   </a>
  </li>
 </ul>
@@ -441,7 +458,7 @@ title="Print to PDF"
 </div>
 <p><strong>Question 1</strong><br>
 The second derivative problem for the logistic function that we saw in <a class="reference internal" href="../dif/formulae.html#equation-ord2logist">(3.7)</a> cannot easily be implemented as a boundary value problems because the problem is stiff in the limit <span class="math notranslate nohighlight">\(t\to\infty\)</span>.</p>
-<p><strong>Question 2</strong>&gt;br&gt;
+<p><strong>Question 2</strong><br>
 The central difference formula gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -508,7 +525,7 @@ The equation can be written out using the central differences formula as:</p>
 <p>which rearranges to</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\phi_i=\frac{\left(r_i-\frac{h}{2}\right)\phi_{i-1}+\left(r_i+\frac{h}{2}\right)\phi_{i+1}}{2r_i}
+\left(r_i-\frac{h}{2}\right)\phi_{i-1}-2r_i \phi_i+\left(r_i+\frac{h}{2}\right)\phi_{i+1}=0
 \end{equation*}\]</div>
 <p>This can be applied as follows</p>
 <div class="cell docutils container">
@@ -574,6 +591,20 @@ The equation can be written out using the central differences formula as:</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="chapex6.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Chapter 6 exercise</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="chapex8.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 8 exercise</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

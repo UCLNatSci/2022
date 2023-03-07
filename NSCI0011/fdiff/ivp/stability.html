@@ -212,6 +212,21 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 6 exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex9.html">
+   Chapter 9 exercise
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -608,8 +623,8 @@ As we are integrating over <span class="math notranslate nohighlight">\(1/h\)</s
 <span class="eqno">(5.2)<a class="headerlink" href="#equation-implicitlyeuler" title="Permalink to this equation">#</a></span>\[x_{k+1}\simeq x_{k}+h f(t_{k+1},x_{k+1}).\]</div>
 <p>Here we encounter a complication, since the expression for <span class="math notranslate nohighlight">\(x_k\)</span> is given implicitly. Usually it is not possible to rearrange the expression to obtain an explicit result, so a root-finding algorithm is required, such as the Newton-Raphson technique or a bisection or fixed point algorithm.</p>
 <p>An example implementation is shown in the code below, using <code class="docutils literal notranslate"><span class="pre">fsolve</span></code> from the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> library. To use the root finding function <code class="docutils literal notranslate"><span class="pre">fsolve</span></code>, we need to collect all of the terms in the implicit Euler formula <a class="reference internal" href="#equation-implicitlyeuler">(5.2)</a> onto one side, which gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36b3a92c-0575-4678-a305-2021826f0b9f">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-36b3a92c-0575-4678-a305-2021826f0b9f" title="Permalink to this equation">#</a></span>\[\begin{equation}x_{k+1}-x_k-hf(t_{k+1},x_{k+1})=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1125aef7-bff8-41c2-9520-fd3f3360985a">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-1125aef7-bff8-41c2-9520-fd3f3360985a" title="Permalink to this equation">#</a></span>\[\begin{equation}x_{k+1}-x_k-hf(t_{k+1},x_{k+1})=0.\end{equation}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
@@ -729,8 +744,8 @@ As we are integrating over <span class="math notranslate nohighlight">\(1/h\)</s
 </div>
 <p><strong>Question 2</strong><br></p>
 <p>As an alternative to using Newton-Raphson algorithm to find the root of an algebraic relationship, we can use a fixed-point iteration technique, designed for problems of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c4a4fd27-6bf7-46b1-bfe4-85abc16902bd">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-c4a4fd27-6bf7-46b1-bfe4-85abc16902bd" title="Permalink to this equation">#</a></span>\[\begin{equation}x=F(x).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-07382cc3-a77f-41a8-b678-38840bf40fb8">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-07382cc3-a77f-41a8-b678-38840bf40fb8" title="Permalink to this equation">#</a></span>\[\begin{equation}x=F(x).\end{equation}\]</div>
 <p>Such techniques are an important numerical analysis tool, and we will use them more when we study applications to partial differential equations.</p>
 <p>The approach proceeds by taking an initial guess <span class="math notranslate nohighlight">\(x=x_g\)</span> and substituting it into the right hand side of the equation.</p>
 <ul class="simple">

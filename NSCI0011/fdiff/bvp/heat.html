@@ -212,6 +212,21 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 6 exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex7.html">
+   Chapter 7 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex8.html">
+   Chapter 8 exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sol/chapex9.html">
+   Chapter 9 exercise
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -511,8 +526,8 @@ title="Print to PDF"
 <section id="laplace-equation">
 <h2><span class="section-number">9.1. </span>Laplace equation<a class="headerlink" href="#laplace-equation" title="Permalink to this heading">#</a></h2>
 <p>The steady-state version of the two-dimensional heat equation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71acb7ae-9014-466e-990a-c30724a89f70">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-71acb7ae-9014-466e-990a-c30724a89f70" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-38a89e3a-a2e3-4f75-98d1-c2061f48fa56">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-38a89e3a-a2e3-4f75-98d1-c2061f48fa56" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla^2 u=f(x,y), \qquad \nabla^2 = \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}.
 \end{equation}\]</div>
 <p>Applying the second derivative central difference formula at the interior points gives</p>
@@ -564,8 +579,8 @@ u_{yy}(x_i,y_j) = \frac{u_{i,j+1}-2u_{i,j}+u_{i,j-1}}{h^2},
 <section id="iterative-approach">
 <h2><span class="section-number">9.3. </span>Iterative approach<a class="headerlink" href="#iterative-approach" title="Permalink to this heading">#</a></h2>
 <p>Instead of starting with the toy problem given above, we will illustrate for the case where:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-12f60a3d-3586-4d5d-aecf-680f72377e20">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-12f60a3d-3586-4d5d-aecf-680f72377e20" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6a08198b-35aa-40ec-9d73-d86dfb1824c4">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-6a08198b-35aa-40ec-9d73-d86dfb1824c4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x,y) = 2\cos(\pi y)-\pi^2(1+x)^2\cos(\pi y),
 \end{equation}\]</div>
 <p>subject to the conditions</p>
@@ -575,8 +590,8 @@ u(x,0)&amp;=(1+x)^2, \quad &amp;u(x,1)&amp;=-(1+x)^2,\\
 u(0,y)&amp;=\cos(\pi y), \quad &amp;u(1,y)&amp;=4\cos(\pi y).
 \end{align*}\]</div>
 <p>We will compare the solution to the analytic result, which is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a3160f5-e48c-4b2d-92ab-aebd1b5aff21">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-7a3160f5-e48c-4b2d-92ab-aebd1b5aff21" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-abc4242b-fea5-490a-8c20-67137809d4f3">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-abc4242b-fea5-490a-8c20-67137809d4f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(x,y)=(1+x)^2\cos(\pi y).
 \end{equation}\]</div>
 <p>As before, we begin by creating an mesh, this time in two dimensions <span class="math notranslate nohighlight">\((x,y)\)</span> by using meshgrid. We need to obtain <span class="math notranslate nohighlight">\(f(x,y)\)</span> at each point on the mesh.</p>
