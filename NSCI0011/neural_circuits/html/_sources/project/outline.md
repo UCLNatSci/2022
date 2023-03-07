@@ -46,6 +46,16 @@ The easiest way to import the data into Python is to use the `Pandas` Library. U
 
 You will notice that the data contains a column called 'weight'. This column describes the strength of each synaptic connection, so you'll have to decide how best to handle this value (perhaps by setting a threshold).
 
+## Null Models
+
+A *null model* serves as a reference to which we can compare the statistics calculated from the *drosophila* connectome. By comparing the motif frequency histograms of the connectome data and the null model, we can begin to establish which motifs appear more (or less) frequently than chance. The simplest null model is a random graph with the same number of nodes and edges as the graph derived from the connectome data. You should start off by constructing a [random graph](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) matched by number of nodes and edges, but could consider more sophisticated null models. Read Chapter 10 of {cite:p}`fornito2016fundamentals` for more details.
+
+
 ## Schedule
 
 You should expect to spend no more than 1 or 2 weeks developing code to calculate the motif frequency spectrum. Understanding how to convert the *drosophila* data into a graph might take another week, and the rest of the time should be spent generating results and writing your report.
+
+## References
+
+```{bibliography}
+```

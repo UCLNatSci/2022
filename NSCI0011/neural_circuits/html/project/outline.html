@@ -355,8 +355,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#null-models">
+   6.4. Null Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#schedule">
-   6.4. Schedule
+   6.5. Schedule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   6.6. References
   </a>
  </li>
 </ul>
@@ -394,8 +404,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#null-models">
+   6.4. Null Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#schedule">
-   6.4. Schedule
+   6.5. Schedule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   6.6. References
   </a>
  </li>
 </ul>
@@ -410,7 +430,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="outline">
 <h1><span class="section-number">6. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h1>
-<p>The aim of this project is to perform a ‘motif frequency analysis’ of the <em>Drosophila Melanogaster</em> connectome. Motif analysis is described in Chapter 8.1 of <span id="id1">[<a class="reference internal" href="neural_circuits_project_2.html#id9" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> and you should read this chapter carefully for essential background. Some of the cited articles may also prove useful.</p>
+<p>The aim of this project is to perform a ‘motif frequency analysis’ of the <em>Drosophila Melanogaster</em> connectome. Motif analysis is described in Chapter 8.1 of <span id="id1">[<a class="reference internal" href="#id7" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> and you should read this chapter carefully for essential background. Some of the cited articles may also prove useful.</p>
 <p>A motif is a small graph with a specific structure, and motif analysis involves counting the frequency that a particular set of motifs appear as a subgraph of a graph of interest (in our case, a graph representing a brain circuit). You should perform a motif analysis for the motifs of order 3 (as shown in the project brief).</p>
 <p>Motif analysis requires us to determine whether two graphs (a motif and a subgraph of the connectome) are ‘the same’. In graph theory, two graphs are the same if they are <em>isomorphic</em>. Graph isomorphisms are explained in <a class="reference internal" href="isomorphisms/graph_isomorphisms.html#graph-isomorphisms-section"><span class="std std-numref">Section 7</span></a> of these notes. Checking if two graphs are isomporphic is a <a class="reference external" href="https://en.wikipedia.org/wiki/Graph_isomorphism_problem">hard</a> computational problem, but fortunately you don’t need to write this algorithm yourself since you can make use of a Python library <a class="reference external" href="https://networkx.org/">NetworkX</a> which contains functions for checking graph isomorphism, as well as other useful functions.</p>
 <p>You’ll need to determine how to sample subgraphs from a connectome graph. If the connectome graph is small enough, it’s possible to sample <em>every</em> triplet of nodes but this may be infeasible for larger connectome graphs. In this case a strategy of random sampling might prove more effective.</p>
@@ -441,15 +461,35 @@ title="Print to PDF"
 <h2><span class="section-number">6.3. </span>Drosophila Connectome Data<a class="headerlink" href="#drosophila-connectome-data" title="Permalink to this headline">#</a></h2>
 <p>The connectome data can be found <a class="reference external" href="https://dvid.io/blog/release-v1.2/#downloads">here</a>. Select the link ‘a compact (44MB) data model’ to download the dataset. First you’ll need to uncompress the file - you may need to download a utility such as 7Zip to do this.</p>
 <p>Inside you will find three files <code class="docutils literal notranslate"><span class="pre">traced-neurons.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">traced-roi-connections.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">traced-total-connections.csv</span></code>. <code class="docutils literal notranslate"><span class="pre">traced-neurons.csv</span></code> contains information just about the neurons (the nodes of the graph) and the other two contain the graph connectivity data in edge list form. <code class="docutils literal notranslate"><span class="pre">traced-roi-connections.csv</span></code> contains additional information about each synapse (which are the graph edges) indicating which brain region it resides in.</p>
-<p>The Paper <span id="id2">[<a class="reference internal" href="neural_circuits_project_2.html#id8" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span> describes how the data was collected. The researchers collected a huge amount of data by imaging brain slices, and from this they determined the connectivity data. The paper contains a lot of information about how the data was collected, most of which you do not need to read in any detail; however you should definitely read Section 1 (Introduction) which contains useful background.</p>
+<p>The Paper <span id="id2">[<a class="reference internal" href="#id6" title="C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. BioRxiv, 2020.">3</a>]</span> describes how the data was collected. The researchers collected a huge amount of data by imaging brain slices, and from this they determined the connectivity data. The paper contains a lot of information about how the data was collected, most of which you do not need to read in any detail; however you should definitely read Section 1 (Introduction) which contains useful background.</p>
 <p>The complete graph is gigantic so I suggest that you pick a single brain region to analyse. The file <code class="docutils literal notranslate"><span class="pre">traced-roi-connections.csv</span></code> breaks down the graph by brain region.</p>
 <p>The data files are in <code class="docutils literal notranslate"><span class="pre">csv</span></code> (‘comma separated values’) format. You should open the files in a text editor to understand how they are formatted. Your computer might try to open then in Excel or another spreadsheet program — avoid this and instead use a text editor so that you can view the raw data.</p>
 <p>The easiest way to import the data into Python is to use the <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> Library. Use the function <code class="docutils literal notranslate"><span class="pre">Pandas.read_csv</span></code> to import the data as a DataFrame, then <code class="docutils literal notranslate"><span class="pre">NetworkX</span></code> has a function <code class="docutils literal notranslate"><span class="pre">from_pandas_dataframe</span></code> which will convert it to a graph.</p>
 <p>You will notice that the data contains a column called ‘weight’. This column describes the strength of each synaptic connection, so you’ll have to decide how best to handle this value (perhaps by setting a threshold).</p>
 </section>
+<section id="null-models">
+<h2><span class="section-number">6.4. </span>Null Models<a class="headerlink" href="#null-models" title="Permalink to this headline">#</a></h2>
+<p>A <em>null model</em> serves as a reference to which we can compare the statistics calculated from the <em>drosophila</em> connectome. By comparing the motif frequency histograms of the connectome data and the null model, we can begin to establish which motifs appear more (or less) frequently than chance. The simplest null model is a random graph with the same number of nodes and edges as the graph derived from the connectome data. You should start off by constructing a <a class="reference external" href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model">random graph</a> matched by number of nodes and edges, but could consider more sophisticated null models. Read Chapter 10 of <span id="id3">[<a class="reference internal" href="#id7" title="Alex Fornito, Andrew Zalesky, and Edward Bullmore. Fundamentals of brain network analysis. Academic Press, 2016.">1</a>]</span> for more details.</p>
+</section>
 <section id="schedule">
-<h2><span class="section-number">6.4. </span>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.5. </span>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">#</a></h2>
 <p>You should expect to spend no more than 1 or 2 weeks developing code to calculate the motif frequency spectrum. Understanding how to convert the <em>drosophila</em> data into a graph might take another week, and the rest of the time should be spent generating results and writing your report.</p>
+</section>
+<section id="references">
+<h2><span class="section-number">6.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id4">
+<dl class="citation">
+<dt class="label" id="id7"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>Alex Fornito, Andrew Zalesky, and Edward Bullmore. <em>Fundamentals of brain network analysis</em>. Academic Press, 2016.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">2</span></dt>
+<dd><p>Olaf Sporns and Rolf Kötter. Motifs in brain networks. <em>PLoS biology</em>, 2(11):e369, 2004.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dd><p>C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary Huang, Kazunori Shinomiya, Jeremy Maitin-Shepard, David Ackerman, Stuart Berg, and others. A connectome of the adult drosophila central brain. <em>BioRxiv</em>, 2020.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
