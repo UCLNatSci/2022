@@ -57,18 +57,18 @@ Our Hatree potential term can be found from electromagnetism (Gauss's law in pot
 This can be solve for $V_H$ using a greens function:
 
 ```{math}
-V_H = \iiint \frac{e^2\,\rho({\bf r})}{|{\bf r - r'}|}\,r'^2\,\sin(\theta)\,\mathrm{d}r'\,\mathrm{d}\theta\,\mathrm{d}\phi = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}
+V_H = \iiint \frac{e^2\,\rho({\bf r})}{|{\bf r - r'}|}\,\mathrm{d}^3r' = e^2\int_0^{\infty}\frac{\rho({\bf r})}{|r - r'|}\,\mathrm{d}r'
 ```
 
 One problem with solving this in one dimension is that it won't converge - there will be a some sort of divergence in each of the terms, so we modify this expression slightly:
 ```{math}
-V_H  = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}
+V_H  = e^2\int_0^{\infty}\frac{\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}\,\mathrm{d}r'
 ```
-by adding in a term $\epsilon \ll 1$.  This term is just here for *numerical stability*, it aboids infinities where we least want them.
+by adding in a term $\epsilon < 1$.  This term is just here for *numerical stability*, it aboids infinities where we least want them.
 
 In atomic units, this looks like:
 ```{math}
-V_H = \int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}
+V_H  = \int_0^{\infty}\frac{\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}
 ```
 
 
@@ -102,6 +102,5 @@ One we have solutions from the system, we can also calculate the different parts
 
 ```{math}
 E_H &= \frac{1}{2}\iint \frac{\rho(r)\,\rho(r')}{|r-r'|}\,\mathrm{d}r\,\mathrm{d}r' \\
-
-
+E_{XC} &= -\frac{3^{4/3}}{\pi^{1/3}}\,\int (\rho(r))^{4/3}\,\mathrm{d}r
 ```

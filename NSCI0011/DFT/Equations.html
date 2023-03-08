@@ -281,14 +281,14 @@ play a big role in the energies of outer electrons.</p>
 \[\nabla^2 V_H({\bf r}) = -4\pi e\,\rho({\bf r})\]</div>
 <p>This can be solve for <span class="math notranslate nohighlight">\(V_H\)</span> using a greens function:</p>
 <div class="math notranslate nohighlight">
-\[V_H = \iiint \frac{e^2\,\rho({\bf r})}{|{\bf r - r'}|}\,r'^2\,\sin(\theta)\,\mathrm{d}r'\,\mathrm{d}\theta\,\mathrm{d}\phi = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}\]</div>
+\[V_H = \iiint \frac{e^2\,\rho({\bf r})}{|{\bf r - r'}|}\,\mathrm{d}^3r' = e^2\int_0^{\infty}\frac{\rho({\bf r})}{|r - r'|}\,\mathrm{d}r'\]</div>
 <p>One problem with solving this in one dimension is that it won’t converge - there will be a some sort of divergence in each of the terms, so we modify this expression slightly:</p>
 <div class="math notranslate nohighlight">
-\[V_H  = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}\]</div>
-<p>by adding in a term <span class="math notranslate nohighlight">\(\epsilon \ll 1\)</span>.  This term is just here for <em>numerical stability</em>, it aboids infinities where we least want them.</p>
+\[V_H  = e^2\int_0^{\infty}\frac{\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}\,\mathrm{d}r'\]</div>
+<p>by adding in a term <span class="math notranslate nohighlight">\(\epsilon &lt; 1\)</span>.  This term is just here for <em>numerical stability</em>, it aboids infinities where we least want them.</p>
 <p>In atomic units, this looks like:</p>
 <div class="math notranslate nohighlight">
-\[V_H = \int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}\]</div>
+\[V_H  = \int_0^{\infty}\frac{\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}\]</div>
 <p>After we applied the local density approximation, the exchange term actually looks like:</p>
 <div class="math notranslate nohighlight">
 \[V_{XC} = -\left(\frac{3\,\rho}{\pi}\right)^{1/3}\]</div>
@@ -305,7 +305,8 @@ play a big role in the energies of outer electrons.</p>
 <p>If we use the KS to calculate the system initially, then reformulate the Hamiltonian operator here using the</p>
 <p>One we have solutions from the system, we can also calculate the different parts of the energy contribution:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}E_H &amp;= \frac{1}{2}\iint \frac{\rho(r)\,\rho(r')}{|r-r'|}\,\mathrm{d}r\,\mathrm{d}r' \\\end{split}\]</div>
+\[\begin{split}E_H &amp;= \frac{1}{2}\iint \frac{\rho(r)\,\rho(r')}{|r-r'|}\,\mathrm{d}r\,\mathrm{d}r' \\
+E_{XC} &amp;= -\frac{3^{4/3}}{\pi^{1/3}}\,\int (\rho(r))^{4/3}\,\mathrm{d}r\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">
