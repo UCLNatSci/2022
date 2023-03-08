@@ -45,8 +45,10 @@ The nuclear potential is the easiest term to consider:
 
 The electron charge density can be found as:
 ```{math}
-\rho({\bf r}) = e\,\sum_{i,\,occuped}^N |\phi_i({\bf r})|^2
+\rho({\bf r}) = e\,\sum_{i,\,occuped}^N |\phi_i({\bf r})|^2 = \sum_n f_n|\phi(r)|^2
 ```
+where $f_n$ is the occupation number of the electrons in each orbital.  When we have an even number of electrons in the atom, each orbital is fully filled so $f_n = 2$, whereas for an odd number there
+will be a partially filled orbital somewhere, so $f_n = 1$.
 
 Our Hatree potential term can be found from electromagnetism (Gauss's law in potentials):
 
