@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Density Functional Theory &#8212; Density Functional Theory</title>
+    <title>5. The Kohn-Sham equation &#8212; Density Functional Theory</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,7 +53,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Matrix Differential Equations" href="Solving_the_Schrodinger_Equation_Numerically.html" />
+    <link rel="next" title="6. Computational Methods" href="Methods.html" />
+    <link rel="prev" title="4. Homework" href="basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,8 +92,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Density Functional Theory
   </a>
  </li>
@@ -127,9 +130,9 @@
   Project Material
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Equations.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    5. The Kohn-Sham equation
   </a>
  </li>
@@ -179,7 +182,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Equations.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -199,7 +202,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEquations.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -227,7 +230,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Density Functional Theory</h1>
+                <h1>The Kohn-Sham equation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -238,13 +241,71 @@
             
               <div>
                 
-  <div class="section" id="density-functional-theory">
-<h1>Density Functional Theory<a class="headerlink" href="#density-functional-theory" title="Permalink to this headline">¶</a></h1>
-<p>Density-functional theory (DFT) is a computational quantum mechanical modelling method used in physics, chemistry and materials science to investigate the electronic structure (or nuclear structure) (principally the ground state) of many-body systems, in particular atoms, molecules, and the condensed phases. Using this theory, the properties of a many-electron system can be determined by using functionals, i.e. functions of another function. In the case of DFT, these are functionals of the spatially dependent electron density. DFT is among the most popular and versatile methods available in condensed-matter physics, computational physics, and computational chemistry.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="the-kohn-sham-equation">
+<h1><span class="section-number">5. </span>The Kohn-Sham equation<a class="headerlink" href="#the-kohn-sham-equation" title="Permalink to this headline">¶</a></h1>
+<p>Although we wish to solve the Schrodinger equation here:</p>
+<div class="math notranslate nohighlight">
+\[\left(-\frac{\hbar^2\,\nabla^2}{2m} + V_{ext}({\bf r}) \right)\,\Psi({\bf r}) = E\,\Psi({\bf r})\]</div>
+<p>where in Hydrogen actoms we pick <span class="math notranslate nohighlight">\(V_{ext} = -\frac{e^2}{r}\)</span>.  However once we move beyond one electron systems we find the system looking a little more complicated,
+there is a nucleus-electron attraction, electron-electron repulsion as well as electron spin considerations to add in also.</p>
+<p>Although we know from solving the Hydrogen atom Schrodinger equation analytically, electrons get arranged into <em>orbitals</em>, e.g. Hydrogen has an electronic configuration
+<span class="math notranslate nohighlight">\(1s^1\)</span> and Carbon has an electronic configuration <span class="math notranslate nohighlight">\(1s^2\,2s^2\,2p^2\)</span>.  The use of orbital wavefunctions <span class="math notranslate nohighlight">\(\phi({\bf r})\)</span> allows us to simplify the picture to solve for
+l;larger and larger atoms with many electrons.  This is known as the <strong>Hartree approximation</strong> and serves us well up to a point - it does not reflect the anti-symmetric
+nature of electrons (this is down to their spin).  The adjustment we make to the system is to consider the <em>Slater determinant</em>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Psi({\bf r_1},s_1;\, {\bf r_2}, s_2;\,\dots) = 
+\begin{vmatrix} 
+\phi_1({\bf r_1},s_1) &amp; \phi_1({\bf r_2},s_2) &amp; \dots &amp; \phi_1({\bf r_N},s_N) \\
+\phi_2({\bf r_1},s_1) &amp; \phi_2({\bf r_2},s_2) &amp; \dots &amp; \phi_2({\bf r_N},s_N) \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\phi_N({\bf r_1},s_1) &amp; \phi_N({\bf r_2},s_2) &amp; \dots &amp; \phi_N({\bf r_N},s_N) \
+\end{vmatrix}\end{split}\]</div>
+<p>The Hartree-Fock equation is essentially the Schrodinger equation for the ** orbital ** energy levels:</p>
+<div class="math notranslate nohighlight">
+\[\left(-\frac{\hbar^2\,\nabla^2}{2m} + V_N({\bf r}) + V_H({\bf r}) + V_{x}^i({\bf r})\right)\,\phi_i({\bf r}) = \mathcal{E}_i\,\phi_i({\bf r})\]</div>
+<p>wher <span class="math notranslate nohighlight">\(V_x^i({\bf r})\)</span> is an orbital dependent term.</p>
+<p>The issue is that solving these one by one and then finding the total energy contriution thanks to <em>every</em> electron is very time consuming and computational impractical, thus
+we need to simplify.</p>
+<p>We attempt to use an electron density field <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span> here to help solve these equations, this has the advantage of not treating the electgrons as separate entities,
+but rather as one large field that we can attempt to find - hence we will drop the individualk orbital exchange terms for one large overall exchange term
+<span class="math notranslate nohighlight">\(V_x^i \rightarrow V_{XC}\)</span>.  Another assumption is to think about only the <strong>outer</strong> electrons as the relevent ones, those in filled electrong shells (so called tight binding) do not really
+play a big role in the energies of outer electrons.</p>
+<p>The nuclear potential is the easiest term to consider:</p>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>The electron charge density can be found as:</p>
+<div class="math notranslate nohighlight">
+\[\rho({\bf r}) = e\,\sum_{i,\,occuped}^N |\phi_i({\bf r})|^2\]</div>
+<p>Our Hatree potential term can be found from electromagnetism (Gauss’s law in potentials):</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 V_H({\bf r}) = -4\pi e\,\rho({\bf r})\]</div>
+<p>This can be solve for <span class="math notranslate nohighlight">\(V_H\)</span> using a greens function:</p>
+<div class="math notranslate nohighlight">
+\[V_H = \iiint \frac{e^2\,\rho({\bf r})}{|{\bf r - r'}|}\,r'^2\,\sin(\theta)\,\mathrm{d}r'\,\mathrm{d}\theta\,\mathrm{d}\phi = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}\]</div>
+<p>One problem with solving this in one dimension is that it won’t converge - there will be a some sort of divergence in each of the terms, so we modify this expression slightly:</p>
+<div class="math notranslate nohighlight">
+\[V_H  = 4\pi\,e^2\int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{\sqrt{(r - r')^2+\epsilon}}\]</div>
+<p>by adding in a term <span class="math notranslate nohighlight">\(\epsilon \ll 1\)</span>.  This term is just here for <em>numerical stability</em>, it aboids infinities where we least want them.</p>
+<p>In atomic units, this looks like:</p>
+<div class="math notranslate nohighlight">
+\[V_H = \int_0^{\infty}\frac{r'^2\,\rho({\bf r})}{|r - r'|}\]</div>
+<p>After we applied the local density approximation, the exchange term actually looks like:</p>
+<div class="math notranslate nohighlight">
+\[V_{XC} = -\left(\frac{3\,\rho}{\pi}\right)^{1/3}\]</div>
+<p>this is nice and simple, before the approximation this expression would look VERY complicated.</p>
+<p>This leads us to the Kohn-Sham (KS) equations:</p>
+<div class="math notranslate nohighlight">
+\[\left(-\frac{\hbar^2}{2m} \nabla^2 + V_N + V_H + V_{xc}\right)\,\phi_i = \mathcal{E}_i\,\phi_i\]</div>
+<p>We aim to solve this system iteratively:</p>
+<div class="figure align-default" id="dftflow">
+<img alt="_images/DFTFlowChart.png" src="_images/DFTFlowChart.png" />
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">A schematic for following the <strong>self-consistent</strong> field approach to solve the KS equations.</span><a class="headerlink" href="#dftflow" title="Permalink to this image">¶</a></p>
 </div>
-<div class="toctree-wrapper compound">
-</div>
+<p>We call this the self-consistent field approach to solve the KS equations, where we iteratively solve this system to find energies and wavefunctions.</p>
+<p>If we use the KS to calculate the system initially, then reformulate the Hamiltonian operator here using the</p>
+<p>One we have solutions from the system, we can also calculate the different parts of the energy contribution:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_H &amp;= \frac{1}{2}\iint \frac{\rho(r)\,\rho(r')}{|r-r'|}\,\mathrm{d}r\,\mathrm{d}r' \\\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -271,11 +332,18 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="Solving_the_Schrodinger_Equation_Numerically.html" title="next page">
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="basics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Homework</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Methods.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Matrix Differential Equations</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Computational Methods</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
