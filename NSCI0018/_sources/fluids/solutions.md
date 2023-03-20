@@ -229,3 +229,73 @@ However, close to the boundary, $\displaystyle \frac{1}{R}\left(\frac{L}{\delta}
 Note: the equations of motion should be supplemented by boundary conditions. The appropriate conditions for this problem are "no slip" and no through-flow at the plate (see chapter {numref}`steady-soln`), and a requirement that the velocity must approach the free stream away from the boundary:
 
 \begin{equation*}u(y=0)=0, \quad v(y=0)=0, \quad \lim_{y \rightarrow \infty}\underline{u}=(U_{\infty},0)\end{equation*}
+
+## {ref}`steadyq` 32
+
+````{panels}
+:card: border-0
+**Euler:**
+
+$\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underline{u}$
+
+$\nabla.\underline{u} =0$
+
+Take $p=\mathrm{constant}$, $\underline{u}=(u(x),v(x),0)$
+---
+```{image} navstok_img/walls.png
+:align: center
+:scale: 60%
+```
+
+From the incompressibility condition, $\displaystyle \frac{\partial u}{\partial x}=0$, so $u$ is independent of $x$.
+Since we already assumed that $u$ is independent of $y$ this component must be constant, and since there is no flow through the boundaries $u=0$.
+
+From the conservation of momentum equation,
+\begin{equation*}\frac{\partial^2 v}{\partial x^2}=-\frac{g}{\nu} \quad \Rightarrow \quad v=-\frac{g}{\nu}\frac{x^2}{2}+kx +C\end{equation*}
+
+$v(0)=0 \quad \Rightarrow C=0$
+
+$v(x=a)=-V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}-\frac{V}{a}$
+
+\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}-\frac{Vx}{a}\end{equation*}
+
+````
+
+## {ref}`pottyq` 33
+
+**Question 1**<br>
+
+Irrotational: $\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x & \underline{e}_y & \underline{e}_z\\\frac{\partial}{\partial x} & \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\ 3x^2 & 3y^2 & 3z^2\end{vmatrix}=0\underline{e}_x+0\underline{e}_y+0\underline{e}_z$
+
+$\underline{u}=\nabla\phi \quad \Rightarrow (3x^2,3y^2,3z^2)=\left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right)$
+
+Equating components and integrating gives $\underline{u}=x^3+y^3+z^3 +\mathrm{const.}$
+
+Hence, $\displaystyle \int_{(1,2,1)}^{(3,2,1)}\underline{u}.\mathrm{d}\underline{s} = \phi(3,2,1)-\phi(1,2,1)=26$ (independent of the path)
+
+**Question 2**<br>
+This is simply an exercise in differentiation:
+
+$\frac{\partial^2\phi}{\partial x^2}=-k^2\phi, \qquad \frac{\partial^2\phi}{\partial z^2}=k^2\phi$
+
+Hence, $\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0$
+
+## {ref}`bernoq` 34
+
+Taking the speed of the fluid on a central streamline to be $u_A,u_B$ at $A,B$, mass conservation gives
+
+\begin{equation*}u_A=\frac{Q}{A}, \quad u_B=\frac{Q}{B}\end{equation*}
+
+Taking the pressure to be $p_A,p_B$ at $A,B$, Bernoulli's theorem for the central streamline gives
+
+\begin{equation*}p_B+\frac{1}{2}\rho u_B^2=p_A+\frac{1}{2}\rho u_A^2\end{equation*}
+
+And Bernoulli's equation for particles drawn from the reservoir gives
+
+$p_0=p_A+\rho g h$
+
+where $p_0$ is atmospheric pressure, and we also have $p_0=p_B$ since the pipe is open at $B$.
+
+Combining the equations gives the result
+
+\begin{equation*}h=\frac{Q^2}{2g}\left(\frac{1}{A^2}-\frac{1}{B^2}\right)\end{equation*}
