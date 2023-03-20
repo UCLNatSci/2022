@@ -232,8 +232,6 @@ Note: the equations of motion should be supplemented by boundary conditions. The
 
 ## {ref}`steadyq` 32
 
-````{panels}
-:card: border-0
 **Euler:**
 
 $\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underline{u}$
@@ -241,11 +239,13 @@ $\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underlin
 $\nabla.\underline{u} =0$
 
 Take $p=\mathrm{constant}$, $\underline{u}=(u(x),v(x),0)$
----
+
 ```{image} navstok_img/walls.png
 :align: center
 :scale: 60%
 ```
+
+<br>
 
 From the incompressibility condition, $\displaystyle \frac{\partial u}{\partial x}=0$, so $u$ is independent of $x$.
 Since we already assumed that $u$ is independent of $y$ this component must be constant, and since there is no flow through the boundaries $u=0$.
@@ -255,11 +255,9 @@ From the conservation of momentum equation,
 
 $v(0)=0 \quad \Rightarrow C=0$
 
-$v(x=a)=-V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}-\frac{V}{a}$
+$v(x=a)=V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}+\frac{V}{a}$
 
-\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}-\frac{Vx}{a}\end{equation*}
-
-````
+\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}+\frac{Vx}{a}\end{equation*}
 
 ## {ref}`pottyq` 33
 

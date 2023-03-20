@@ -903,8 +903,8 @@ title="Print to PDF"
 <p>b). Laplace’s equation, <span class="math notranslate nohighlight">\(\nabla^2\phi=0\)</span>, where <span class="math notranslate nohighlight">\(\underline{u}=\nabla\phi\)</span></p>
 <p>c). The condition for both types of flow is the same. Since incompressible flows must satisfy <span class="math notranslate nohighlight">\(\nabla.\underline{u}\)</span>, they are solenoidal. However, it may be possible for a compressible fluid to exhibit solenoidal flow.</p>
 <p><strong>Question 2</strong><br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-61205647-4565-4736-bf30-589b9dd00228">
-<span class="eqno">(41.1)<a class="headerlink" href="#equation-61205647-4565-4736-bf30-589b9dd00228" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aafd4414-0c3b-4101-ba5e-05ed8c3cab19">
+<span class="eqno">(41.1)<a class="headerlink" href="#equation-aafd4414-0c3b-4101-ba5e-05ed8c3cab19" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g\end{align}\]</div>
@@ -912,8 +912,8 @@ title="Print to PDF"
 <section id="navstoq-30">
 <h2><span class="section-number">41.5. </span><a class="reference internal" href="navstok.html#navstoq"><span class="std std-ref">Chapter exercises</span></a> 30<a class="headerlink" href="#navstoq-30" title="Permalink to this heading">#</a></h2>
 <p><strong>Question 2</strong><br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c6e958e-df57-4b59-8bad-e350c460b3c0">
-<span class="eqno">(41.2)<a class="headerlink" href="#equation-8c6e958e-df57-4b59-8bad-e350c460b3c0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-09034363-ec7e-4020-96e2-51cf8283af34">
+<span class="eqno">(41.2)<a class="headerlink" href="#equation-09034363-ec7e-4020-96e2-51cf8283af34" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
@@ -949,6 +949,21 @@ u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}&amp;=-\frac{1}{\rh
 </section>
 <section id="steadyq-32">
 <h2><span class="section-number">41.7. </span><a class="reference internal" href="steadysoln.html#steadyq"><span class="std std-ref">Chapter exercises</span></a> 32<a class="headerlink" href="#steadyq-32" title="Permalink to this heading">#</a></h2>
+<p><strong>Euler:</strong></p>
+<p><span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underline{u}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\nabla.\underline{u} =0\)</span></p>
+<p>Take <span class="math notranslate nohighlight">\(p=\mathrm{constant}\)</span>, <span class="math notranslate nohighlight">\(\underline{u}=(u(x),v(x),0)\)</span></p>
+<a class="reference internal image-reference" href="../_images/walls.png"><img alt="../_images/walls.png" class="align-center" src="../_images/walls.png" style="width: 216.0px; height: 177.6px;" /></a>
+<br>
+<p>From the incompressibility condition, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial x}=0\)</span>, so <span class="math notranslate nohighlight">\(u\)</span> is independent of <span class="math notranslate nohighlight">\(x\)</span>.
+Since we already assumed that <span class="math notranslate nohighlight">\(u\)</span> is independent of <span class="math notranslate nohighlight">\(y\)</span> this component must be constant, and since there is no flow through the boundaries <span class="math notranslate nohighlight">\(u=0\)</span>.</p>
+<p>From the conservation of momentum equation,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\frac{\partial^2 v}{\partial x^2}=-\frac{g}{\nu} \quad \Rightarrow \quad v=-\frac{g}{\nu}\frac{x^2}{2}+kx +C\end{equation*}\]</div>
+<p><span class="math notranslate nohighlight">\(v(0)=0 \quad \Rightarrow C=0\)</span></p>
+<p><span class="math notranslate nohighlight">\(v(x=a)=V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}+\frac{V}{a}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}+\frac{Vx}{a}\end{equation*}\]</div>
 </section>
 <section id="pottyq-33">
 <h2><span class="section-number">41.8. </span><a class="reference internal" href="potential.html#pottyq"><span class="std std-ref">Chapter exercises</span></a> 33<a class="headerlink" href="#pottyq-33" title="Permalink to this heading">#</a></h2>
@@ -963,7 +978,7 @@ This is simply an exercise in differentiation:</p>
 <p>Hence, <span class="math notranslate nohighlight">\(\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0\)</span></p>
 </section>
 <section id="bernoq-34">
-<h2><span class="section-number">41.9. </span><span class="xref std std-ref">bernoq</span> 34<a class="headerlink" href="#bernoq-34" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">41.9. </span><a class="reference internal" href="bernoulli.html#bernoq"><span class="std std-ref">Chapter exercises</span></a> 34<a class="headerlink" href="#bernoq-34" title="Permalink to this heading">#</a></h2>
 <p>Taking the speed of the fluid on a central streamline to be <span class="math notranslate nohighlight">\(u_A,u_B\)</span> at <span class="math notranslate nohighlight">\(A,B\)</span>, mass conservation gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}u_A=\frac{Q}{A}, \quad u_B=\frac{Q}{B}\end{equation*}\]</div>
