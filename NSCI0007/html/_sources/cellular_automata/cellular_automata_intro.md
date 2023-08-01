@@ -1,3 +1,4 @@
+(cellular-automata)=
 # Cellular Automata
 
 ```{admonition} What you'll learn
