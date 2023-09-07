@@ -27,13 +27,21 @@ If you have not taken A-level mathematics or equiavlent, then you will take [MAT
 	
 
 - **NSCI0006** 
-1. PYTHON BASICS = Introduction to the Python programming language and basic computational modelling skills. 
-2. DATA TRENDS = Investigating trends using data drawn from research and policy applications 
-3. RATES OF CHANGE = The concept of the derivative and results for some standard derivatives. Differential equations, their meaning and solutions. 
-4. DYNAMIC MODELS = Visualising and interpreting flow; finding equilibrium solutions. 
+1. Python Basics -  Introduction to the Python programming language and basic computational modelling skills. 
+2. Data Trends - Investigating trends using data drawn from research and policy applications 
+3. Rates of Change - The concept of the derivative and results for some standard derivatives. Differential equations, their meaning and solutions. 
+4. Dynamics Models - Visualising and interpreting flow; finding equilibrium solutions. 
 
 
 *Recommended readings:*
+
+We recommend that you start reading through our online mathematics books and attempt the problems:
+
+[Book 1](https://www.homepages.ucl.ac.uk/~ucqssjm/preu/book1/intro.html)
+
+[Book 2](coming soon!)
+
+[Book 3](coming soon!)
 
 For a full reading lists, **[click here for NSCI0005](https://rl.talis.com/3/ucl/lists/12842110-F58D-1240-E07A-C1605031B7FF.html?lang=en)** and **[click here for NSCI0006](https://rl.talis.com/3/ucl/lists/EA157102-9EA9-DE4D-EB4B-4A3985EE9A93.html?lang=en)**
 
