@@ -1,5 +1,7 @@
 # Welcome to the Natural Sciences Launchpad
 
+![image](launchpad.jpg)
+
 This is an all-in-one place for the essential information you will need to prepare for the start of term 
 and to the start of your undergraduate journey. For the **First Steps**, you will be able to find basic 
 introduction to UCL, the Natural Sciences programme and the programme tutors who are your go-to personnel 

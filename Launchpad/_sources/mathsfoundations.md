@@ -7,11 +7,11 @@ This pair of modules aims to provide the mathematical foundations and techniques
 These modules will give students an opportunity to further develop their mathematical and (to a lesser extent) their computing skills using Python. 
 
 *Prerequisites:*
-NSCI0005 is for students who are studying Physics streams - if you are taking PHAS0011 then you will *also* be studying NSCI0005 (irrespective of whether you decide not to take a physics stream after term 1).
+**NSCI0005** is for students who are studying Physics streams - if you are taking **PHAS0011** then you will *also* be studying **NSCI0005** (irrespective of whether you decide not to take a physics stream after term 1).  There is *some* overlap between the topics on this course and students who have taken further mathematics A-level or equivalent.
 
-Students taking all other foundation modules will take NSCI0006.
+Students who take all other foundation modules will be on **NSCI0006**, which is designed to get studnts thinking about data, trends and modelling.
 
-If you have not taken A-level mathematics or equiavlent, then you will take [MATH0039](https://www.ucl.ac.uk/module-catalogue/modules/differential-and-integral-calculus-MATH0039).
+If you have not taken A-level mathematics or equivalent, then you will take the course **[MATH0039](https://www.ucl.ac.uk/module-catalogue/modules/differential-and-integral-calculus-MATH0039)**, which is designed as an introduction to calculus taught by the mathematics department.  The syllabus can be found [here](https://www.ucl.ac.uk/maths/sites/maths/files/math0039.pdf).
 
 
 *Contents (indicative):*
