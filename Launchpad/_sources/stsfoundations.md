@@ -25,7 +25,7 @@ None!
 
 *Recommended readings:*
 
-For a full reading list, **[click here](https://rl.talis.com/3/ucl/lists/1B398614-FF8D-468A-C987-186344B93BFD.html?lang=en)**.
+For a full reading list, **[click here](https://rl.talis.com/3/ucl/lists/247ECA87-952C-8394-EBEE-04BD5A98073E.html?lang=en)**.
 
 *Teaching:*
 
