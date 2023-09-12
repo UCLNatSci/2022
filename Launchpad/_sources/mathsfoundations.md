@@ -39,7 +39,7 @@ We recommend that you start reading through our online mathematics books and att
 
 [Book 1](https://www.homepages.ucl.ac.uk/~ucqssjm/preu/book1/intro.html)
 
-[Book 2](coming soon!)
+[Book 2](https://www.homepages.ucl.ac.uk/~ucqssjm/preu/book2/intro.html)
 
 [Book 3](coming soon!)
 
