@@ -30,8 +30,8 @@ Victoria Atkins
 
 ````
 
-- [Induction Week Timetable](http://www.ucl.ac.uk)
-This timetable outlines the activities planned for year 1 students during induction week (25th - 29th September), COMING SOON!
+- [Induction Week Timetable](https://www.ucl.ac.uk/natural-sciences/sites/natural_sciences/files/inductiontt-y1.pdf)
+This timetable outlines the activities planned for year 1 students during induction week (25th - 29th September).
 
 - [Here to Support You Guide](https://www.ucl.ac.uk/students/sites/students/files/ucl_here_to_support_you_guide_2023-24_1.pdf) 
 This guide provides an overview of Student Support and Wellbeing services, alongside several other sources of health and wellbeing support. Do not hesitate to reach out if there is anything troubling your studies. 
